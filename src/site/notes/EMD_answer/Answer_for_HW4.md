@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer_for_HW4/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer_for_HW4/"}
 ---
 
 
