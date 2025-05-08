@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/3-D Laplace Equation And Spherical Harmonic Function/"}
+{"dg-publish":true,"permalink":"/EMD_answer/3-D Laplace Equation And Spherical Harmonic Function/","created":"2025-03-23T22:36:48.350+08:00"}
 ---
 
 
