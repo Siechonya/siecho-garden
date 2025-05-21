@@ -116,7 +116,7 @@ $$
 
 
 ## 3. Proca field
-### free field
+### 3.1 Free field
 与 Klein-Gordon 场十分类似, 只是此时的对象变为四维矢量场 $A^\mu$ (或者说自旋为 1 的粒子产生的场), 候选的标量有:
 $$
 A_\mu A^\mu \quad 
@@ -136,11 +136,11 @@ $$
 $$
 \frac{1}{2} \partial_\mu (\partial^\mu A^\nu - \partial^\nu A^\mu) = m^2 A^\nu
 $$
-一般记场强张量/电磁张量 $F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu A^\mu$, 对于光子 m=0, 可以从上式写成自由电磁场方程:
+这被称为 $proca$ 方程. 一般记场强张量/电磁张量 $F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu A^\mu$, 对于光子 m=0, 可以从上式写成自由电磁场方程:
 $$
 \partial_\mu F^{\mu\nu} = 0
 $$
-拉格朗日量也可以改写为地磁张量的形式:
+拉格朗日量也可以改写为:
 $$
 \begin{aligned}
 \mathcal{L} &= \frac{1}{2}(\partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu) \\
@@ -152,8 +152,45 @@ $$
 \frac{1}{4} F^{\mu\nu} F_{\mu\nu} {\color{grey}\ +\ m^2 A^\mu A_\mu}
 \end{aligned}
 $$
-### field with source/sink
-2
+### 3.2 Field with source/sink
+<font color="#00b0f0">这一部分会与电磁场的内容重合.</font>
+
+由上述已知, 自由电磁场的拉氏量是 $\mathcal{L}_{em}=- \frac{1}{4\mu_0 c} F^{\alpha\beta}F_{\alpha\beta}$, 对于场中存在电荷并且带有电荷运动(电流)场景, 需要引入电荷密度 $\rho$ 和电流密度 $\vec j$, 或者说四维电流 $j^\mu = \rho \frac{ d x^\mu }{ d t} =  (\rho c, \vec j )$,  这一项显然要添加到原有的拉氏量当中去, 那么如何添加?   
+
+假设大家已经在理论力学当中知道, 带电粒子在电磁场当中的拉氏量的三维形式:  
+$$
+L = -\frac{mc^2}{\gamma} - q\phi + q\vec v \cdot \vec A
+$$
+将其改写为四维形式是容易的, 约定 $u^\mu = (\gamma c, \gamma \vec v),\ A^\mu = \left( \frac{\phi}{c}, \vec A \right)$, 度规为(+---):  
+$$
+\begin{aligned} 
+S 
+&= \int L \mathrm{d}t \\
+&= \int(-mc^2 - q\gamma \phi + q\gamma \vec v \cdot \vec A)\mathrm{d}\tau \\
+&= \int (-mc^2 - qu^\mu A_\mu)\mathrm{d}\tau \\
+&=
+\int -\sum_i m_ic^2 \mathrm{d}\tau - \int  j^\mu A_\mu \mathrm{d}^3x\mathrm{d}t
+\end{aligned}
+$$
+最后一步将 m 改写为 $m_i$ 并求和(因为场当中运动的电荷不止一个), 并利用了狄拉克函数进行改写, 即 $\rho = \sum_i q_i \delta(\vec x - \vec x_i)$.  于是带电荷源的完整的电磁场作用量写作:  
+$$
+\begin{aligned} 
+S 
+&= \int L \mathrm{d}t \\
+&=
+\int -\sum_i m_ic^2 \mathrm{d}\tau +  \int  \left( - \frac{1}{4\mu_0 c} F^{\alpha\beta}F_{\alpha\beta} -\frac{{j^\mu A_\mu}}{c} \right) \mathrm{d}^4x
+\end{aligned}
+$$
+于是完整的拉格朗日密度可以写作:  
+$$
+\begin{aligned} 
+\mathcal{L}
+&=
+ -\sum_i \frac{m_ic^2}{\gamma}  - \frac{1}{4\mu_0 c} F^{\alpha\beta}F_{\alpha\beta} -\frac{{j^\mu A_\mu}}{c}
+\end{aligned}
+$$
+
+## 4. Gauge Theory  
 
 
 

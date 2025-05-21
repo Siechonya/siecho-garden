@@ -42,7 +42,7 @@ $$
 \nabla \times \vec B &= \frac{1}{c^2} \frac{ \partial \vec E }{ \partial t }
 \end{cases}
 $$
-由于 $F^{\mu\nu}$ 和 $\epsilon^{\mu\nu\rho\sigma}$ 均为反对称张量, 于是可以构造对偶张量 $\tilde F^{\mu\nu}=\frac{1}{2}\epsilon^{\mu\nu\rho\sigma}F_{\rho\sigma}$, 根据 $F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu A^\mu$ 得到:
+麦克斯韦方程组的另外两个方程, 实际上已经蕴含在电磁张量的定义$F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$当中. 由于 $F^{\mu\nu}$ 和 $\epsilon^{\mu\nu\rho\sigma}$ 均为反对称张量, 于是可以构造对偶张量 $\tilde F^{\mu\nu}=\frac{1}{2}\epsilon^{\mu\nu\rho\sigma}F_{\rho\sigma}$, 根据 $F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu A^\mu$ 得到:
 $$
 \partial_\mu \tilde F^{\mu\nu} = \epsilon^{\mu\nu\rho\sigma}(\partial_\mu\partial_\rho A_\sigma - \partial_\mu\partial_\sigma A_\rho )
 $$
