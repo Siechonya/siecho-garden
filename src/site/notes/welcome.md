@@ -3,4 +3,4 @@
 ---
 
 # Welcome to Siecho's Remote Vault/Garden
-This's `home` page. You can click on the menu key in the upper left corner to view all the published content.
+This's `home` page.
