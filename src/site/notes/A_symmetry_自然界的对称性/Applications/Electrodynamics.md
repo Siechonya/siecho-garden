@@ -5,7 +5,7 @@
 
 # 1. $Proca$ $field$ 普罗卡场
 ## 1.1 $From\ Proca\ Equation \ to \ Maxwell's\ Equations$ 从普罗卡方程到麦克斯韦方程组
-可跳转 [[A_symmetry_自然界的对称性/Applications/Quantum Field Theory#3. Proca field 普罗卡场\|Quantum Field Theory#3. Proca field]].  
+可跳转 [[A_symmetry_自然界的对称性/Applications/Quantum Field Theory#3. Proca field 普罗卡场\|Quantum Field Theory#3. Proca field]]. 本文采取的度规是(+---).
 
 $Proca$ 场是经典场论中描述有质量的矢量玻色子的重要模型, 其核心方程($Proca$ 方程)扩展了麦克斯韦方程组(即引入了质量项).
 
@@ -72,7 +72,7 @@ $$
 \begin{aligned} 
 \mathcal{L}
 &=
- -\sum_i \frac{m_ic^2}{\gamma}  - \frac{1}{4\mu_0 c} F^{\alpha\beta}F_{\alpha\beta} -\frac{{j^\mu A_\mu}}{c}
+ -\sum_i \frac{m_i\delta(\vec x-\vec x_i)c^2}{\gamma}  - \frac{1}{4\mu_0 c} F^{\alpha\beta}F_{\alpha\beta} -\frac{{j^\mu A_\mu}}{c}
 \end{aligned}
 $$
 这将为欧拉-拉格朗日方程引入新的项, 变成:  
@@ -139,7 +139,7 @@ T^{ij} = \frac{1}{2} \left( \epsilon_0 E^2 - \frac{B^2}{\mu_0} \right) \delta^{i
 \end{array}
 \right.
 $$
-其中 $S$ 是能流密度(波印廷矢量), $P$ 是场的动量密度.
+其中 $\vec S$ 是能流密度(波印廷矢量), $\vec P$ 是场的动量密度.
 # 4. $Continuity\ equations$ 连续性方程
 在非自由电磁场中, 由于场与粒子相互作用, 使得场的四维散度 $\partial_\mu T^{\mu\nu} \neq 0$, 利用有源 $maxwell$ 方程组
 $$
@@ -160,7 +160,17 @@ $$
 \partial_\mu T^{\mu i} = \frac{ \partial  }{ \partial t }\vec{S} - \nabla \cdot \boldsymbol{T} = -\left( \vec j \times \vec B + \rho\vec{E} \right)_i = -f^i
 \end{array}
 $$
-其中 $E_{em} = \frac{1}{2}(\epsilon_0 E^2 + \frac{B^2}{\mu_0})$ 为场的能量密度, $\boldsymbol{T}=-(T^{ij}) = -\frac{1}{2} \left( \epsilon_0 E^2 - \frac{B^2}{\mu_0} \right) \boldsymbol{I} + \left( \epsilon_0 \vec E \vec E + \frac{\vec B\vec B}{\mu_0} \right)$ 是 $maxwell$ 应力张量. $f^\mu = \left( \frac{1}{c} f^0, \vec f \right)$ 为四维洛伦兹力, 其时间部分 $f^0 = \vec j \cdot \vec E$ 是电磁场对粒子做的功(同时也是场的能量密度的损失速度), 空间部分 $\vec f = \vec j \times \vec B + \rho \vec E$ 是所谓的洛伦兹力(或者说场的动量密度损失).
+其中 $E_{em} = \frac{1}{2}(\epsilon_0 E^2 + \frac{B^2}{\mu_0})$ 为场的能量密度, $\boldsymbol{T}=-(T^{ij}) = -\frac{1}{2} \left( \epsilon_0 E^2 - \frac{B^2}{\mu_0} \right) \boldsymbol{I} + \left( \epsilon_0 \vec E \vec E + \frac{\vec B\vec B}{\mu_0} \right)$ 是 $maxwell$ 应力张量. $f^\mu = \left( \frac{1}{c} f^0, \vec f \right)$ 为四维洛伦兹力, 其时间部分 $f^0 = \vec j \cdot \vec E$ 是电磁场对粒子做的功(同时也是场的能量密度的损失速度), 空间部分 $\vec f = \vec j \times \vec B + \rho \vec E$ 是所谓的洛伦兹力(或者说场的动量密度损失).  
+
+上述关系也可以写成更简洁的形式:  
+$$
+\partial_\mu T^{\mu\nu}_{E.M.field} = -F^{\nu}_{~~\mu} j^\mu
+$$
+四维洛伦兹力因此也可以记作:
+$$
+f^\mu = F^{\mu}_{~~\nu} j^\nu = m\delta(\vec x - \vec x_0)\frac{ d u^\mu }{ d t}
+$$
+
 
 
 

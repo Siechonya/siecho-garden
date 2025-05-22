@@ -179,14 +179,16 @@ S
 &= \int L \mathrm{d}t \\
 &=
 \int -\sum_i m_ic^2 \mathrm{d}\tau +  \int  \left( - \frac{1}{4\mu_0 c} F^{\alpha\beta}F_{\alpha\beta} -\frac{{j^\mu A_\mu}}{c} \right) \mathrm{d}^4x
+\\&=
+\int \mathcal{L} \mathrm{d}^4x
 \end{aligned}
 $$
-于是完整的拉格朗日密度可以写作:  
+上式使用了 $\mathrm{d}^4x = c~\mathrm{d}t\mathrm{d}x\mathrm{d}y\mathrm{d}z$, 于是完整的拉格朗日密度可以写作:  
 $$
 \begin{aligned} 
 \mathcal{L}
 &=
- -\sum_i \frac{m_ic^2}{\gamma}  - \frac{1}{4\mu_0 c} F^{\alpha\beta}F_{\alpha\beta} -\frac{{j^\mu A_\mu}}{c}
+ -\sum_i \frac{m_i\delta(\vec x-\vec x_i)c^2}{\gamma}  - \frac{1}{4\mu_0 c} F^{\alpha\beta}F_{\alpha\beta} -\frac{{j^\mu A_\mu}}{c}
 \end{aligned}
 $$
 
