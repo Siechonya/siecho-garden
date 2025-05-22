@@ -3,8 +3,10 @@
 ---
 
 
-# 1. $Proca$ $field$
-## 1.1 $From\ Proca\ Equation \ to \ Maxwell\ Equation$
+# 1. $Proca$ $field$ 普罗卡场
+## 1.1 $From\ Proca\ Equation \ to \ Maxwell's\ Equations$ 从普罗卡方程到麦克斯韦方程组
+可跳转 [[A_symmetry_自然界的对称性/Applications/Quantum Field Theory#3. Proca field 普罗卡场\|Quantum Field Theory#3. Proca field]].  
+
 $Proca$ 场是经典场论中描述有质量的矢量玻色子的重要模型, 其核心方程($Proca$ 方程)扩展了麦克斯韦方程组(即引入了质量项).
 
 首先, 尝试构造满足洛伦兹不变性的拉格朗日密度函数(强约束), 注意到拉氏函数是标量函数, 因此其每一项都是 $Lorentz$ 标量. 可能的不超过二阶的洛伦兹标量包括:
@@ -65,7 +67,27 @@ $$
 \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}
 \end{cases}
 $$
-## 1.2 $Electromagnetic\ Field's\ U(1)\ Gauge\ Symmetry$
+当然, 如果考虑电荷的存在(非自由场), (参见 [[A_symmetry_自然界的对称性/Applications/Quantum Field Theory#3.2 Field with charge/current 非自由场\|Quantum Field Theory#3.2 Field with charge]])引入质点 $m_i$ 和四维电流 $j^\mu$, 也有:  
+$$
+\begin{aligned} 
+\mathcal{L}
+&=
+ -\sum_i \frac{m_ic^2}{\gamma}  - \frac{1}{4\mu_0 c} F^{\alpha\beta}F_{\alpha\beta} -\frac{{j^\mu A_\mu}}{c}
+\end{aligned}
+$$
+这将为欧拉-拉格朗日方程引入新的项, 变成:  
+$$
+\frac{ \partial  }{ \partial x^\mu }\frac{ \partial \mathcal{L} }{ \partial (\partial_\mu A^\nu) } - \frac{ \partial \mathcal{L} }{ \partial A^\nu } = 0
+\quad\to\quad
+\partial_\mu F^{\mu\nu} = \mu_0 j^\mu
+\quad\to\quad
+\begin{cases}
+\nabla \cdot \vec E = \frac{\rho}{\epsilon_0} \\
+\nabla \times \vec B = \frac{1}{c^2} \frac{ \partial \vec E }{ \partial t } + \mu_0 \vec j
+\end{cases}
+$$
+而另外一对方程对应着 $\partial_\mu \tilde F^{\mu\nu} = 0$, 与电荷无关, 所以依旧成立.
+## 1.2 $Electromagnetic\ Field's\ U(1)\ Gauge\ Symmetry$ 电磁场的 U(1) 规范
 $U(1)$ 规范对称性是指: 对电磁场的四维势 $A_\mu$ 做如下变换时, 物理观测结果 $\mathbf{E}$ 和 $\mathbf{B}$ 保持不变:
 $$
 A_\mu \to A_\mu + \partial_\mu f,
@@ -75,7 +97,7 @@ $$
 F_{\mu\nu} \to \partial_\mu (A_\nu + \partial_\nu \lambda) - \partial_\nu (A_\mu + \partial_\mu \lambda) = \partial_\mu A_\nu - \partial_\nu A_\mu = F_{\mu\nu}.
 $$
 保持不变, 因此拉格朗日量 $\mathcal{L}_{\text{em}}$ 也不变.
-# 2. $T^{\mu\nu}\ of\ Vacuum\ Free\ EMF$
+# 2. $T^{\mu\nu}\ of\ Vacuum\ Free\ EMF$ 真空自由场的能动张量
 电磁张量可以写作:
 $$
 F_{\mu\nu}= \partial_\mu A_\nu-\partial_\nu A_\mu
@@ -95,8 +117,8 @@ $$
 $$
 T^{\mu\nu} = -\frac{1}{\mu_0}F^{\mu\lambda}\partial^\nu A_\lambda + \frac{1}{4\mu_0}g^{\mu\nu}F^{\alpha\beta}F_{\alpha\beta}
 $$
-遗憾的是, 这个形式并不对称, 因而不能让诺特流满足 $\partial_\nu (J^\nu)^{\mu\sigma} = 0$, 需要对其加以修正.
-# 3. $Symmetric\ correction$
+遗憾的是, 这个形式并不对称, 因而不能让诺特流满足 $\partial_\nu (J^\nu)^{\mu\sigma} = 0$ (参见 [[A_symmetry_自然界的对称性/Tools/Nother's Theorem and Symmetry#诺特流\|Nother's Theorem and Symmetry#诺特流]]), 需要对其加以修正.
+# 3. $Symmetric\ correction$ 对称性修正
 注意到 $\partial_\mu T^{\mu\nu}=0$, 而由于 $F^{\mu\lambda}$ 是反对称张量, 使得 $\partial_\lambda (F^{\mu\lambda} A^\nu)$ 恰好也满足 $\partial_\mu\partial_\lambda (F^{\mu\lambda} A^\nu)=0$.
 
 于是可做修正 $T^{\mu\nu} \to T^{\mu\nu} + \frac{1}{\mu_0} \partial_\lambda (F^{\mu\lambda} A^\nu)$, 使得旧的 $T^{\mu\nu} = -\frac{1}{\mu_0}F^{\mu\lambda}\partial^\nu A_\lambda + \frac{1}{4\mu_0}g^{\mu\nu}F^{\alpha\beta}F_{\alpha\beta}$ 的第一项对称(进而 $T^{\mu\nu}$ 对称), 得到新的能动张量可以改写为:
@@ -118,7 +140,7 @@ T^{ij} = \frac{1}{2} \left( \epsilon_0 E^2 - \frac{B^2}{\mu_0} \right) \delta^{i
 \right.
 $$
 其中 $S$ 是能流密度(波印廷矢量), $P$ 是场的动量密度.
-# 4. $Continuity\ equations$
+# 4. $Continuity\ equations$ 连续性方程
 在非自由电磁场中, 由于场与粒子相互作用, 使得场的四维散度 $\partial_\mu T^{\mu\nu} \neq 0$, 利用有源 $maxwell$ 方程组
 $$
 \begin{aligned}
@@ -138,13 +160,7 @@ $$
 \partial_\mu T^{\mu i} = \frac{ \partial  }{ \partial t }\vec{S} - \nabla \cdot \boldsymbol{T} = -\left( \vec j \times \vec B + \rho\vec{E} \right)_i = -f^i
 \end{array}
 $$
-其中 $E_{em} = \frac{1}{2}(\epsilon_0 E^2 + \frac{B^2}{\mu_0})$ 为场的能量密度, $\boldsymbol{T}=-(T^{ij}) = -\frac{1}{2} \left( \epsilon_0 E^2 - \frac{B^2}{\mu_0} \right) \boldsymbol{I} + \left( \epsilon_0 \vec E \vec E + \frac{\vec B\vec B}{\mu_0} \right)$ 是 $maxwell$ 应力张量. $f^\mu = \left( \frac{1}{c} f^0, \vec f \right)$ 为四维洛伦兹力, 其时间部分 $f^0 = \vec j \cdot \vec E$ 是电磁场对粒子做的功(或者说场的能量密度损失率), 空间部分 $\vec f = \vec j \times \vec B + \rho \vec E$ 是所谓的洛伦兹力(或者说场的动量密度损失率).
-
-# 5. ED field with sources and particles
-拉格朗日量改写成:
-$$
-\mathcal{L}=-\sum_{i} \frac{m_{i} \delta\left(\mathbf{r}-\mathbf{r}_{i}(t)\right)}{\gamma}-\frac{1}{16 \pi} F^{\mu \nu} F_{\mu \nu}+A_{\mu} J^{\mu}
-$$
+其中 $E_{em} = \frac{1}{2}(\epsilon_0 E^2 + \frac{B^2}{\mu_0})$ 为场的能量密度, $\boldsymbol{T}=-(T^{ij}) = -\frac{1}{2} \left( \epsilon_0 E^2 - \frac{B^2}{\mu_0} \right) \boldsymbol{I} + \left( \epsilon_0 \vec E \vec E + \frac{\vec B\vec B}{\mu_0} \right)$ 是 $maxwell$ 应力张量. $f^\mu = \left( \frac{1}{c} f^0, \vec f \right)$ 为四维洛伦兹力, 其时间部分 $f^0 = \vec j \cdot \vec E$ 是电磁场对粒子做的功(同时也是场的能量密度的损失速度), 空间部分 $\vec f = \vec j \times \vec B + \rho \vec E$ 是所谓的洛伦兹力(或者说场的动量密度损失).
 
 
 
