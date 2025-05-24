@@ -55,12 +55,12 @@ E^2 = (Pc)^2 + (mc^2)^2
 $$
 将会得到
 $$
-\left( \boldsymbol{i}\hbar \frac{ \partial}{ \partial t } \right)^2 \psi =
+\left( \boldsymbol{i} \hbar \frac{ \partial}{ \partial t } \right)^2 \psi =
 \left( -\hbar^2 c^2 \nabla^2 + m^2 c^4 \right) \psi
 \quad \to \quad
 \left( \frac{1}{c^2} \frac{ \partial
 { #2}
- }{ \partial t^2 } - \nabla^2 + \frac{m^2 c^2}{\hbar} \right) \psi = 0
+ }{ \partial t^2 } - \nabla^2 + \frac{m^2 c^2}{\hbar^2} \right) \psi = 0
 $$
 这就是 $Klein$ - $Gordon$ 方程. 下面尝试用场的方式得到它.
 ### 1.2 Klein-Gordon equation 克莱恩-戈登方程
