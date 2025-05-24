@@ -53,10 +53,10 @@ $$
 $$
 E^2 = (Pc)^2 + (mc^2)^2
 $$
-将会得到
+将会得到  
 $$
-\left(  {i} \hbar \frac{ \partial}{ \partial t } \right)^2 \psi =
-\left( -\hbar^2 c^2 \nabla^2 + m^2 c^4 \right) \psi
+\left(  \boldsymbol{i} \hbar \frac{ \partial}{ \partial t } \right)^2 \psi =
+\left( - \hbar^2 c^2 \nabla^2 + m^2 c^4 \right) \psi
 \quad \to \quad
 \left( \frac{1}{c^2} \frac{ \partial
 { #2}
