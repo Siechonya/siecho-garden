@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Lie Group/","created":"2024-11-30T23:35:43.866+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Lie Group/","noteIcon":"","created":"2024-11-30T23:35:43.866+08:00","updated":"2025-05-24T12:51:52.231+08:00"}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","created":"2025-05-21T20:09:17.112+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-05-27T11:55:20.243+08:00"}
 ---
 
 
@@ -34,8 +34,8 @@ $$
 $$
 设  $\varphi=\frac{1}{r} u(r, t)$ 代入上式得:  
 $$
-\left(\frac{1}{c^{2}} \frac{\partial^{2}}{\partial t^{2}}-\frac{\partial^{2}}{\partial r^{2}}\right) u=0
-\varphi(r, t)=\frac{1}{r}[\underbrace{f(t-r / c}_{\text {会聚波 }})+\underbrace{g(t+r / c)}_{\text {发散波 }}]
+\left(\frac{1}{c^{2}} \frac{\partial^{2}}{\partial t^{2}}-\frac{\partial^{2}}{\partial r^{2}}\right) u=0 \to 
+\varphi(r, t)=\frac{1}{r}[\underbrace{f(t+r / c}_{\text {会聚波 }})+\underbrace{g(t-r / c)}_{\text {发散波 }}]
 $$  
 对于源，会聚波可略去.
 # 2. 反常色散
@@ -144,7 +144,7 @@ $$
 $$
 - <font color="#00b0f0">(3)</font> 由于 $\vec{S}=E \times H$, 对 $\vec{k} \times \vec{E}=\omega \vec{B}$ 叉乘 $\vec E$ 得到:
 $$
-\times E=(k \times E) \times E=\omega B \times E \Rightarrow E(k \cdot E)-\vec{k} E^{2}=\omega \vec{B} \times \vec{E} 
+(k \times E) \times E=\omega B \times E \Rightarrow E(k \cdot E)-\vec{k} E^{2}=\omega \vec{B} \times \vec{E} 
 $$
 $$
  \because k \cdot E \neq 0 \quad \therefore  可见  \vec{B} \times \vec{E}  一般不与  \vec{k}  同向
@@ -167,7 +167,7 @@ $$
 k_{x}^{2}+k_{y}^{2}+k_{z}^{2}=\frac{w^{2}}{c^{2}}
 \end{array}
 $$
-可以得到答案的前四式. 最后, 由 $\nabla \cdot E=0$ 得到:
+可以得到答案的前四式. 最后, 由 $\nabla \cdot \vec E=0$ 得到:
 $$
 A_{x} \frac{m \pi}{a}+A_{y} \frac{n \pi}{b}+A_{z} k_{z}=0
 $$
@@ -177,9 +177,9 @@ $$
 =\left\{\begin{array}{l}1.5 \times 10^{8} \cdot \sqrt{\frac{m^{2}}{4 p \times 10^{-6}}+\frac{n^{2}}{1.6 \times 10^{-6}}}=1.5 \times 10^{11} \sqrt{\frac{m^{2}}{49}+\frac{n^{2}}{16}}\mathrm{~Hz}\\
 1.5 \times 10^{8} \cdot \sqrt{\frac{m^{2}}{4 p \times 10^{-6}}+\frac{n^{2}}{36 \times 10^{-6}}}=1.5 \times 10^{11} \sqrt{\frac{m^{2}}{49}+\frac{n^{2}}{36}}\mathrm{~Hz}\end{array} \right.
 $$
-对于 $0.7 \times 0.4 \mathrm{~cm}^{2}: v_{01}=37.5 \times 10^{9} \mathrm{~Hz}>v_{0}=30 \times 10^{9} \mathrm{~Hz} ,\ \  v_{10}=21.4 \times 10^{P} \mathrm{~Hz}<v_{0}$.
+对于 $0.7 \times 0.4 \mathrm{~cm}^{2}: v_{01}=37.5 \times 10^{9} \mathrm{~Hz}>v_{0}=30 \times 10^{9} \mathrm{~Hz} ,\ \  v_{10}=21.4 \times 10^{9} \mathrm{~Hz}<v_{0}$.
    
-对于 $0.7 \times 0.6 \mathrm{~cm}^{2}: v_{01}=25 \times 10^{p} \mathrm{~Hz}<v_{0},\ \  v_{10}=21.4 \times 10^{p} \mathrm{~Hz}<v_{0}, \ \ v_{11}=32 . \mathrm{P} \times 10^{\mathrm{P}} H z>v_{0}$.
+对于 $0.7 \times 0.6 \mathrm{~cm}^{2}: v_{01}=25 \times 10^{9} \mathrm{~Hz}<v_{0},\ \  v_{10}=21.4 \times 10^{9} \mathrm{~Hz}<v_{0}, \ \ v_{11}=32 . \mathrm{9} \times 10^{\mathrm{9}} H z>v_{0}$.
 $$
  \Rightarrow (1) T E_{10} ,\ \  (2) T E_{10} \ and\  T E_{01} 
 $$
@@ -202,7 +202,7 @@ $$
 # 7. 三种介质中的 1D电磁波  
 在介质 2 中的相位变化记为 $\theta = \vec k \cdot \Delta \vec x = \frac{\omega}{c/n_2}d$, 假设波在介质 2 中反射 n 次(一个来回算一次), 那么:  
 $$
-\frac{E_{out}^n}{E_{in}} = TR^n
+\frac{E_{out,n} }{E_{in}} = TR^n
 $$
 其中, T 是完全透射 $1\to 2 \to 3$ 对应的衰减:  
 $$
@@ -215,11 +215,33 @@ $$
 于是  
 $$
 \begin{aligned} 
-\frac{E_{out}}{E_{in}} &= \sum_{n=0}^{+\infty} \frac{E_{out}^n}{E_{in}} \\
+\frac{E_{out}}{E_{in}} &= \sum_{n=0}^{+\infty} \frac{E_{out,n}}{E_{in}} \\
 &= \sum_{n=0}^{+\infty} TR^n = \frac{T}{1-R} \\
 &= \frac{{ 4 n_1 n_2 e^{i\theta} }}{(n_2+n_3)(n_1+n_2)-(n_2-n_3)(n_2 - n_1) e^{i2\theta}}
 \end{aligned}
 $$
+这里, 实际的 E 是上述的实部.  
+
+或者, 使用边界条件求解:  
+<style> .container {font-family: sans-serif; text-align: center;} .button-wrapper button {z-index: 1;height: 40px; width: 100px; margin: 10px;padding: 5px;} .excalidraw .App-menu_top .buttonList { display: flex;} .excalidraw-wrapper { height: 800px; margin: 50px; position: relative;} :root[dir="ltr"] .excalidraw .layer-ui__wrapper .zen-mode-transition.App-menu_bottom--transition-left {transform: none;} </style><script src="https://cdn.jsdelivr.net/npm/react@17/umd/react.production.min.js"></script><script src="https://cdn.jsdelivr.net/npm/react-dom@17/umd/react-dom.production.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@excalidraw/excalidraw@0/dist/excalidraw.production.min.js"></script><div id="Drawing_2025-05-27_1025.18.excalidraw.md1"></div><script>(function(){const InitialData={"type":"excalidraw","version":2,"source":"https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.11.1","elements":[{"id":"-WdWiMZ0sjWntlP9R7Pkq","type":"line","x":-142.60831788783764,"y":-126.89545035506711,"width":2.2969836202183274,"height":165.84698305070464,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"a0","roundness":{"type":2},"seed":873676591,"version":129,"versionNonce":1161396033,"isDeleted":false,"boundElements":[],"updated":1748312867557,"link":null,"locked":false,"points":[[0,0],[2.2969836202183274,165.84698305070464]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":null},{"id":"9qchUcGkI7HjZot0Du0NF","type":"line","x":41.286196879862246,"y":-126.89545035506711,"width":3.7371198710957287,"height":167.41593629496705,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"a1","roundness":{"type":2},"seed":316833647,"version":180,"versionNonce":888994017,"isDeleted":false,"boundElements":[],"updated":1748312874826,"link":null,"locked":false,"points":[[0,0],[3.7371198710957287,167.41593629496705]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":null},{"id":"2xaUQt5X2aYFM4I3T5xaR","type":"arrow","x":-298.05340201428464,"y":-3.739891105389347,"width":137.61352481320455,"height":0.7602807309870059,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"a2","roundness":null,"seed":1385082799,"version":98,"versionNonce":1748448495,"isDeleted":false,"boundElements":[],"updated":1748312814106,"link":null,"locked":false,"points":[[0,0],[137.61352481320455,0.7602807309870059]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":"arrow","elbowed":false},{"id":"-E9CNEpjypGeP_agicGEQ","type":"arrow","x":-117.48315849944879,"y":-0.12851866043439486,"width":137.61352481320455,"height":0.7602807309870059,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"a4","roundness":null,"seed":1941793089,"version":147,"versionNonce":1521535791,"isDeleted":false,"boundElements":[],"updated":1748312820324,"link":null,"locked":false,"points":[[0,0],[137.61352481320455,0.7602807309870059]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":"arrow","elbowed":false},{"id":"8h1LGpmHe7ff0S-y77fvP","type":"arrow","x":60.426086867825916,"y":0.6317620705525542,"width":137.61352481320455,"height":0.7602807309870059,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"a5","roundness":null,"seed":9243503,"version":156,"versionNonce":2127376385,"isDeleted":false,"boundElements":[],"updated":1748312823595,"link":null,"locked":false,"points":[[0,0],[137.61352481320455,0.7602807309870059]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":"arrow","elbowed":false},{"id":"P-XAmZ8dV69XAdFg-jtlu","type":"arrow","x":14.808245305780133,"y":-67.79484438144948,"width":135.33271379845667,"height":1.5206238184005656,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"a6","roundness":null,"seed":212853697,"version":339,"versionNonce":694935791,"isDeleted":false,"boundElements":[],"updated":1748312837391,"link":null,"locked":false,"points":[[0,0],[-135.33271379845667,-1.5206238184005656]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":"arrow","elbowed":false},{"id":"-X405Avy0ne-WjfIEQ6by","type":"arrow","x":-161.96046984126758,"y":-71.21617002731759,"width":135.33271379845667,"height":1.5206238184005656,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"a8","roundness":null,"seed":521016271,"version":403,"versionNonce":1683934401,"isDeleted":false,"boundElements":[],"updated":1748312849089,"link":null,"locked":false,"points":[[0,0],[-135.33271379845667,-1.5206238184005656]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":"arrow","elbowed":false},{"id":"hJgm1KEj","type":"image","x":-182.1336825632108,"y":-31.8381412689248,"width":31.820190720963343,"height":18.56177792056195,"angle":0,"strokeColor":"#000000","backgroundColor":"transparent","fillStyle":"hachure","strokeWidth":1,"strokeStyle":"solid","roughness":1,"opacity":100,"roundness":null,"seed":87543,"version":59,"versionNonce":825460001,"updated":1748312899074,"isDeleted":false,"groupIds":[],"boundElements":[],"link":null,"locked":false,"fileId":"58594df5f7e870effceb95515aeb7af23be8ffcd","scale":[1,1],"index":"a9","frameId":null,"status":"pending","crop":null},{"id":"4NAwttox","type":"image","x":-182.17486784358545,"y":-100.2647788991402,"width":25.82019072096328,"height":20.082370560749215,"angle":0,"strokeColor":"#000000","backgroundColor":"transparent","fillStyle":"hachure","strokeWidth":1,"strokeStyle":"solid","roughness":1,"opacity":100,"roundness":null,"seed":82447,"version":77,"versionNonce":352592687,"updated":1748312916219,"isDeleted":false,"groupIds":[],"boundElements":[],"link":null,"locked":false,"fileId":"b9b8a6fb81d5a03cce8ada0a63e4ede1375db833","scale":[1,1],"index":"aA","frameId":null,"status":"pending","crop":null},{"id":"pkgymN6d","type":"image","x":-126.3510998796666,"y":-26.51611379558915,"width":37.12349348469729,"height":18.561746742348646,"angle":0,"strokeColor":"#000000","backgroundColor":"transparent","fillStyle":"hachure","strokeWidth":1,"strokeStyle":"solid","roughness":1,"opacity":100,"roundness":null,"seed":94840,"version":96,"versionNonce":864464769,"updated":1748312998922,"isDeleted":false,"groupIds":[],"boundElements":[],"link":null,"locked":false,"fileId":"8df2f35ed237ec0714dad754aa208775abbf6dc3","scale":[1,1],"index":"aB","frameId":null,"status":"pending","crop":null},{"id":"xLjcHIwI","type":"image","x":-124.07035122134556,"y":-101.78537153932746,"width":35.60293202272306,"height":17.80146601136153,"angle":0,"strokeColor":"#000000","backgroundColor":"transparent","fillStyle":"hachure","strokeWidth":1,"strokeStyle":"solid","roughness":1,"opacity":100,"roundness":null,"seed":72687,"version":68,"versionNonce":1831364719,"updated":1748312994189,"isDeleted":false,"groupIds":[],"boundElements":[],"link":null,"locked":false,"fileId":"57b3c2e22a31557a881b785901c6848e4a01d8ce","scale":[1,1],"index":"aC","frameId":null,"status":"pending","crop":null},{"id":"ZR9umu7u","type":"image","x":54.35951796432971,"y":-22.714616606014204,"width":34.88758579537355,"height":16.280873371174323,"angle":0,"strokeColor":"#000000","backgroundColor":"transparent","fillStyle":"hachure","strokeWidth":1,"strokeStyle":"solid","roughness":1,"opacity":100,"roundness":null,"seed":33663,"version":94,"versionNonce":561020559,"updated":1748312988016,"isDeleted":false,"groupIds":[],"boundElements":[],"link":null,"locked":false,"fileId":"31d86569f8544d6d3710bb97df2a158d03f6fb17","scale":[1,1],"index":"aD","frameId":null,"status":"pending","crop":null},{"id":"XiofbelGOe5EgaslFciYy","type":"line","x":254.939161968574,"y":-45.662489895811916,"width":205.24034475115968,"height":5.105461838593101,"angle":0,"strokeColor":"#ffffff","backgroundColor":"#ffffff","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"aE","roundness":{"type":2},"seed":225316175,"version":30,"versionNonce":1686245199,"isDeleted":false,"boundElements":[],"updated":1748313038003,"link":null,"locked":false,"points":[[0,0],[205.24034475115968,5.105461838593101]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":null},{"id":"BQlqVldt2pvv-GXINi9lx","type":"arrow","x":-346.4863948951911,"y":-42.59922116727665,"width":171.54413749865364,"height":3.0633106016383067,"angle":0,"strokeColor":"#ffffff","backgroundColor":"#ffffff","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"aF","roundness":null,"seed":643286273,"version":85,"versionNonce":6194927,"isDeleted":false,"boundElements":[],"updated":1748313052985,"link":null,"locked":false,"points":[[0,0],[-171.54413749865364,3.0633106016383067]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":"arrow","elbowed":false},{"id":"S6skiZD8uel5Pvuv5Q1b2","type":"line","x":-458.44255281497374,"y":-28.64426476451223,"width":323.4419374942496,"height":5.216808318868914,"angle":0,"strokeColor":"#ffffff","backgroundColor":"#ffffff","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"aG","roundness":{"type":2},"seed":1633298209,"version":50,"versionNonce":1908025345,"isDeleted":false,"boundElements":null,"updated":1748317279228,"link":null,"locked":false,"points":[[0,0],[-323.4419374942496,-5.216808318868914]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":null}],"appState":{"theme":"light","viewBackgroundColor":"#ffffff","currentItemStrokeColor":"#ffffff","currentItemBackgroundColor":"#ffffff","currentItemFillStyle":"solid","currentItemStrokeWidth":2,"currentItemStrokeStyle":"solid","currentItemRoughness":0,"currentItemOpacity":100,"currentItemFontFamily":5,"currentItemFontSize":20,"currentItemTextAlign":"left","currentItemStartArrowhead":null,"currentItemEndArrowhead":"arrow","currentItemArrowType":"sharp","scrollX":824.175925569374,"scrollY":454.20792686772603,"zoom":{"value":0.85591},"currentItemRoundness":"round","gridSize":20,"gridStep":5,"gridModeEnabled":false,"gridColor":{"Bold":"rgba(217, 217, 217, 0.5)","Regular":"rgba(230, 230, 230, 0.5)"},"currentStrokeOptions":null,"frameRendering":{"enabled":true,"clip":true,"name":true,"outline":true},"objectsSnapModeEnabled":false,"activeTool":{"type":"selection","customType":null,"locked":false,"fromSelection":false,"lastActiveTool":null}},"files":{}};InitialData.scrollToContent=true;App=()=>{const e=React.useRef(null),t=React.useRef(null),[n,i]=React.useState({width:void 0,height:void 0});return React.useEffect(()=>{i({width:t.current.getBoundingClientRect().width,height:t.current.getBoundingClientRect().height});const e=()=>{i({width:t.current.getBoundingClientRect().width,height:t.current.getBoundingClientRect().height})};return window.addEventListener("resize",e),()=>window.removeEventListener("resize",e)},[t]),React.createElement(React.Fragment,null,React.createElement("div",{className:"excalidraw-wrapper",ref:t},React.createElement(ExcalidrawLib.Excalidraw,{ref:e,width:n.width,height:n.height,initialData:InitialData,viewModeEnabled:!0,zenModeEnabled:!0,gridModeEnabled:!1})))},excalidrawWrapper=document.getElementById("Drawing_2025-05-27_1025.18.excalidraw.md1");ReactDOM.render(React.createElement(App),excalidrawWrapper);})();</script>
+$$
+\begin{aligned} 
+E_{in} T_{12} + E_{2-} R_{21} &= E_{2+} \\
+E_{in} R_{12} + E_{2-} T_{21} &= E_r \\
+E_{2+}e^{i\theta} T_{23} &= E_{out} \\
+E_{2+} e^{i\theta} R_{23} &= E_{2-}e^{-i\theta}
+\end{aligned}
+$$
+重新记无量纲复振幅 $E_i' = \frac{E_i}{E_{in}}$, 上式给出:  
+$$
+\begin{bmatrix} -1 & \frac{{n_2-n_1}}{n_1+n_2} & 0 & 0 \\  0 & \frac{2n_2}{n_1+n_2} & -1 & 0 \\ e^{i\theta}  \frac{2n_2}{n_2+n_3} & 0 & 0 & -1 \\ e^{i\theta} \frac{{n_2-n_3}}{n_2+n_3} & -e^{-i\theta} & 0 & 0 \end{bmatrix}
+\begin{bmatrix} E_{2+}' \\ E_{2-}' \\ E_r \\E_{out} \end{bmatrix}
+=
+\begin{bmatrix} -\frac{2n_1}{n_1+n_2} \\ -\frac{{(n_1-n_2)}}{n_1+n_2} \\ 0 \\0 \end{bmatrix}
+$$
+MMA 给出一致的结果:
+![Pasted image 20250527113220.png](/img/user/Pasted%20image%2020250527113220.png)
+
 # 8. Drude 模型
 ##### (a)  
 注意到极化强度 $\vec P = N \vec p = N \alpha \vec E = (\epsilon_r - 1)\epsilon_0\vec E$, 得到:  
@@ -232,12 +254,12 @@ $$
 \frac{\alpha}{4\pi \epsilon_0} = \frac{e^2\hbar^2}{4\pi \epsilon_0 m_p (\hbar\omega_0)^2} \approx 5.93 \times 10^{-31} ~m^3
 $$
 ##### (c)  
-原子极化率可以写作 $\alpha = 4\pi \epsilon_0 a_0^3$ , 于是 $\frac{\alpha}{4\pi \epsilon_0}=a_0^3\approx 1.48\times 10^{-31}$ 与上式处于同一量级.  
+原子极化率可以写作 $\alpha = 4\pi \epsilon_0 a_0^3$ , 于是 $\frac{\alpha}{4\pi \epsilon_0}=a_0^3\approx 1.48\times 10^{-31}~m^3$ 与上式处于同一量级.  
 ##### (d)  
 对于实数 $\omega$:
 $$
 \begin{array}{l}
-k_{k}=\frac{n_{R}}{c} \omega=\frac{1}{c}\left[\omega+\frac{\omega_{p}^{2}}{2} \omega \frac{\omega_{0}^{2}-\omega^{2}}{\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+\gamma^{2} \omega^{2}}\right] \\
+k_{R}=\frac{n_{R}}{c} \omega=\frac{1}{c}\left[\omega+\frac{\omega_{p}^{2}}{2} \omega \frac{\omega_{0}^{2}-\omega^{2}}{\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+\gamma^{2} \omega^{2}}\right] \\
 \therefore \frac{\nu_{\text {group }}}{c}=\left[d k_{R} / d \omega\right]^{-1} / c=\left\{\left[\omega+\frac{\omega_{e}^{2}}{2} \omega \frac{\omega_{0}^{2}-\omega^{2}}{\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+\gamma^{2} \omega^{2}}\right]_{\omega}^{\prime}\right\}^{-1} \\
 ~~~~~~~~~~~~=\left\{\frac{\omega_{p}^{2}}{2} \frac{\omega_{0}^{2}-3 \omega^{2}}{\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+r^{2} \omega^{2}}-\frac{\omega_{p}^{2}}{2} \omega^{2} \frac{\left[2 \gamma^{2}-4\left(\omega_{0}^{2}-\omega^{2}\right)\right]\left(\omega_{0}^{2}-\omega^{2}\right)}{\left[\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+r^{2} \omega^{2}\right]^{2}}+1\right\}^{-1} \\
 \Rightarrow \quad \nu_{g} / c=\left\{1+0.003 \frac{1-3\left(\frac{\omega}{\omega_{0}}\right)^{2}}{\left[1-\left(\frac{\omega}{\omega_{0}}\right)^{2}\right]^{2}+0.01\left(\frac{\omega}{\omega_{0}}\right)^{2}}-0.003\left(\frac{\omega}{\omega_{0}}\right)^{2} \frac{\left[0.02-4\left(1-\left(\frac{\omega}{\omega_{0}}\right)^{2}\right)\right]\left(1-\left(\frac{\omega}{\omega_{0}}\right)^{2}\right)}{\left\{\left[1-\left(\frac{\omega}{\omega_{0}}\right)^{2}\right]^{2}+0.01\left(\frac{\omega}{\omega_{0}}\right)^{2}\right\}^{2}}\right\}^{-1} \\
@@ -301,7 +323,7 @@ $\omega\tau\gg 1$ 和 $\omega\gg \omega_{pe}$ 意味着, 电磁波的时间尺�
 $$
 \nabla \cdot \vec j_{p}+\partial \rho_{p} / \partial t=0\quad when\  \nabla \cdot \vec j_{f}+\partial \rho_{f} / \partial t=0
 $$
-而极化体电荷 $\rho_{\rho}=-\nabla \cdot \vec{\rho}$, 带入上式得到:
+而极化体电荷 $\rho_{\rho}=-\nabla \cdot \vec{P}$, 带入上式得到:
 $$
 \vec{j}_{p}=\partial \vec{P} / \partial t
 $$
@@ -327,5 +349,25 @@ $$
 \end{aligned}
 $$
 
+# 补充: 没有补充  
+本来想写点电磁场的拉氏量, 怎么按一般步骤推导得到的来着, 但是大家有期末考试, 助教也有, 所以......  
+
+结果放在这里, 拉氏量:
+$$
+\begin{aligned} 
+\mathcal{L}
+&=
+ -\sum_i \frac{m_i\delta(\vec x-\vec x_i)c^2}{\gamma}  - \frac{1}{4\mu_0 c} F^{\alpha\beta}F_{\alpha\beta} -\frac{{j^\mu A_\mu}}{c}
+\end{aligned}
+$$
+以及连续性方程:  
+$$
+\partial_\mu T^{\mu\nu}_{E.M.field} = -F^{\nu}_{~~\mu} j^\mu = -f^\mu
+$$
+课上讲的四维洛伦兹力:
+$$
+f^\mu = F^{\mu}_{~~\nu} j^\nu = m\delta(\vec x - \vec x_0)\frac{ d u^\mu }{ d t} = (\ \frac{1}{c} \vec{j} \cdot \vec E 
+,\ \ \vec j \times \vec B + \rho\vec{E}\ ) 
+$$
 
 

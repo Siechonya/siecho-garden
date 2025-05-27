@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Nother's Theorem and Symmetry/","created":"2025-01-28T14:11:05.348+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Nother's Theorem and Symmetry/","noteIcon":"","created":"2025-01-28T14:11:05.348+08:00","updated":"2025-05-21T13:16:20.177+08:00"}
 ---
 
 
