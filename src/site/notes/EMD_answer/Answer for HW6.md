@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-05-27T11:55:20.243+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-05-27T12:49:38.924+08:00"}
 ---
 
 
@@ -177,9 +177,9 @@ $$
 =\left\{\begin{array}{l}1.5 \times 10^{8} \cdot \sqrt{\frac{m^{2}}{4 p \times 10^{-6}}+\frac{n^{2}}{1.6 \times 10^{-6}}}=1.5 \times 10^{11} \sqrt{\frac{m^{2}}{49}+\frac{n^{2}}{16}}\mathrm{~Hz}\\
 1.5 \times 10^{8} \cdot \sqrt{\frac{m^{2}}{4 p \times 10^{-6}}+\frac{n^{2}}{36 \times 10^{-6}}}=1.5 \times 10^{11} \sqrt{\frac{m^{2}}{49}+\frac{n^{2}}{36}}\mathrm{~Hz}\end{array} \right.
 $$
-对于 $0.7 \times 0.4 \mathrm{~cm}^{2}: v_{01}=37.5 \times 10^{9} \mathrm{~Hz}>v_{0}=30 \times 10^{9} \mathrm{~Hz} ,\ \  v_{10}=21.4 \times 10^{9} \mathrm{~Hz}<v_{0}$.
+对于 $0.7 \times 0.4 \mathrm{~cm}^{2}: \nu_{01}=37.5 \times 10^{9} \mathrm{~Hz}>\nu_{0}=30 \times 10^{9} \mathrm{~Hz} ,\ \  \nu_{10}=21.4 \times 10^{9} \mathrm{~Hz}<\nu_{0}$.
    
-对于 $0.7 \times 0.6 \mathrm{~cm}^{2}: v_{01}=25 \times 10^{9} \mathrm{~Hz}<v_{0},\ \  v_{10}=21.4 \times 10^{9} \mathrm{~Hz}<v_{0}, \ \ v_{11}=32 . \mathrm{9} \times 10^{\mathrm{9}} H z>v_{0}$.
+对于 $0.7 \times 0.6 \mathrm{~cm}^{2}: \nu_{01}=25 \times 10^{9} \mathrm{~Hz}<\nu_{0},\ \  \nu_{10}=21.4 \times 10^{9} \mathrm{~Hz}<\nu_{0}, \ \ \nu_{11}=32 . \mathrm{9} \times 10^{\mathrm{9}} H z>\nu_{0}$.
 $$
  \Rightarrow (1) T E_{10} ,\ \  (2) T E_{10} \ and\  T E_{01} 
 $$
@@ -240,7 +240,7 @@ $$
 \begin{bmatrix} -\frac{2n_1}{n_1+n_2} \\ -\frac{{(n_1-n_2)}}{n_1+n_2} \\ 0 \\0 \end{bmatrix}
 $$
 MMA 给出一致的结果:
-![Pasted image 20250527113220.png](/img/user/Pasted%20image%2020250527113220.png)
+![z_figure/Pasted image 20250527113220.png](/img/user/z_figure/Pasted%20image%2020250527113220.png)
 
 # 8. Drude 模型
 ##### (a)  
@@ -274,7 +274,7 @@ $$
 ##### (e)
 对于 $\hat{\vec{E}}=\hat{\vec{E}}_{0} e^{-k_{I} x} e^{i\left(k_{k} x-\omega t\right)}$ :
 $$
-\left\{\begin{array}{l}k_{I} L \ll 1 ~~\text { 透明 } \\ k_{I} L>1 ~~~\text { 不透明 }\end{array}\right.
+\left\{\begin{array}{l}k_{I} L \ll 1 ~~\text { 透明 } \\ k_{I} L\gg1 ~~~\text { 不透明 }\end{array}\right.
 $$
 ##### (f)  
 $$
