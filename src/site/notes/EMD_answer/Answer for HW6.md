@@ -1,7 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-05-30T17:21:20.664+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-05-30T23:41:07.825+08:00"}
 ---
 
+网页版(需要代理访问): [url to HW6 Answer](https://siecho-garden-git-main-siecho-yins-projects.vercel.app/EMD_answer/Answer%20for%20HW6/)
 
 ```table-of-contents
 title: 
@@ -46,12 +47,11 @@ f^{\prime}(\omega)&=-2 \omega\left[\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+(\
 &=2 \omega\left[\left(\omega_{0}^{2}-\omega^{2}\right)^{2}-\omega_{0}^{2} \gamma^{2}\right] /  \tiny{没用的分母}^{2}
 \end{aligned}
 $$
- 
 对于 $f^{\prime}\left(\omega_{1}\right)=f^{\prime}\left(\omega_{2}\right)=0$:  
 $$
 \begin{aligned} 
 \left|\omega_{1}-\omega_{2}\right|
-&=\left(\omega_{0}^{2}+\omega_{0} r\right)^{1 / 2}-\left(\omega_{0}^{2}-\omega_{0} r\right)^{1 / 2} \\
+&=\left(\omega_{0}^{2}+\omega_{0} \gamma \right)^{1 / 2}-\left(\omega_{0}^{2}-\omega_{0} \gamma \right)^{1 / 2} \\
 &=\omega_{0}\left(1+\frac{\gamma}{\omega_{0}}\right)^{1 / 2}-\omega_{0}\left(1-\frac{\gamma}{\omega_{0}}\right)^{1 / 2} \approx {\gamma} \quad\left(\text { 当 } \gamma \ll \omega_{0} \text { 时 }\right)
 \end{aligned}
 $$
