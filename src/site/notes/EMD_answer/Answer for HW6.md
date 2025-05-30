@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-05-30T23:41:07.825+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-05-31T02:22:11.932+08:00"}
 ---
 
 网页版(需要代理访问): [url to HW6 Answer](https://siecho-garden-git-main-siecho-yins-projects.vercel.app/EMD_answer/Answer%20for%20HW6/)
@@ -174,8 +174,8 @@ $$
 ## 13. 波导管** 2
 $$
 \nu_{m n}=\frac{\omega_{m n}}{2 \pi}=\frac{1}{2} c \sqrt{\frac{m^{2}}{a^{2}}+\frac{n^{2}}{b^{2}}}
-=\left\{\begin{array}{l}1.5 \times 10^{8} \cdot \sqrt{\frac{m^{2}}{4 p \times 10^{-6}}+\frac{n^{2}}{1.6 \times 10^{-6}}}=1.5 \times 10^{11} \sqrt{\frac{m^{2}}{49}+\frac{n^{2}}{16}}\mathrm{~Hz}\\
-1.5 \times 10^{8} \cdot \sqrt{\frac{m^{2}}{4 p \times 10^{-6}}+\frac{n^{2}}{36 \times 10^{-6}}}=1.5 \times 10^{11} \sqrt{\frac{m^{2}}{49}+\frac{n^{2}}{36}}\mathrm{~Hz}\end{array} \right.
+=\left\{\begin{array}{l}1.5 \times 10^{8} \cdot \sqrt{\frac{m^{2}}{4 9 \times 10^{-6}}+\frac{n^{2}}{1.6 \times 10^{-6}}}=1.5 \times 10^{11} \sqrt{\frac{m^{2}}{49}+\frac{n^{2}}{16}}\mathrm{~Hz}\\
+1.5 \times 10^{8} \cdot \sqrt{\frac{m^{2}}{4 9 \times 10^{-6}}+\frac{n^{2}}{36 \times 10^{-6}}}=1.5 \times 10^{11} \sqrt{\frac{m^{2}}{49}+\frac{n^{2}}{36}}\mathrm{~Hz}\end{array} \right.
 $$
 对于 $0.7 \times 0.4 \mathrm{~cm}^{2}: \nu_{01}=37.5 \times 10^{9} \mathrm{~Hz}>\nu_{0}=30 \times 10^{9} \mathrm{~Hz} ,\ \  \nu_{10}=21.4 \times 10^{9} \mathrm{~Hz}<\nu_{0}$.
    
@@ -271,7 +271,7 @@ $$
 \begin{array}{l}
 k_{R}=\frac{n_{R}}{c} \omega=\frac{1}{c}\left[\omega+\frac{\omega_{p}^{2}}{2} \omega \frac{\omega_{0}^{2}-\omega^{2}}{\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+\gamma^{2} \omega^{2}}\right] \\
 \therefore \frac{\nu_{\text {group }}}{c}=\left[d k_{R} / d \omega\right]^{-1} / c=\left\{\left[\omega+\frac{\omega_{e}^{2}}{2} \omega \frac{\omega_{0}^{2}-\omega^{2}}{\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+\gamma^{2} \omega^{2}}\right]_{\omega}^{\prime}\right\}^{-1} \\
-~~~~~~~~~~~~=\left\{\frac{\omega_{p}^{2}}{2} \frac{\omega_{0}^{2}-3 \omega^{2}}{\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+r^{2} \omega^{2}}-\frac{\omega_{p}^{2}}{2} \omega^{2} \frac{\left[2 \gamma^{2}-4\left(\omega_{0}^{2}-\omega^{2}\right)\right]\left(\omega_{0}^{2}-\omega^{2}\right)}{\left[\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+r^{2} \omega^{2}\right]^{2}}+1\right\}^{-1} \\
+~~~~~~~~~~~~=\left\{\frac{\omega_{p}^{2}}{2} \frac{\omega_{0}^{2}-3 \omega^{2}}{\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+\gamma^{2} \omega^{2}}-\frac{\omega_{p}^{2}}{2} \omega^{2} \frac{\left[2 \gamma^{2}-4\left(\omega_{0}^{2}-\omega^{2}\right)\right]\left(\omega_{0}^{2}-\omega^{2}\right)}{\left[\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+\gamma^{2} \omega^{2}\right]^{2}}+1\right\}^{-1} \\
 \Rightarrow \quad \nu_{g} / c=\left\{1+0.003 \frac{1-3\left(\frac{\omega}{\omega_{0}}\right)^{2}}{\left[1-\left(\frac{\omega}{\omega_{0}}\right)^{2}\right]^{2}+0.01\left(\frac{\omega}{\omega_{0}}\right)^{2}}-0.003\left(\frac{\omega}{\omega_{0}}\right)^{2} \frac{\left[0.02-4\left(1-\left(\frac{\omega}{\omega_{0}}\right)^{2}\right)\right]\left(1-\left(\frac{\omega}{\omega_{0}}\right)^{2}\right)}{\left\{\left[1-\left(\frac{\omega}{\omega_{0}}\right)^{2}\right]^{2}+0.01\left(\frac{\omega}{\omega_{0}}\right)^{2}\right\}^{2}}\right\}^{-1} \\
 =\left\{\begin{array}{ll}
 1.00658^{-1} \approx 0.993 & \omega=0.5 \omega_{0} \\
@@ -307,7 +307,7 @@ n
 &=\left\{1-\frac{\sigma / \epsilon_{0}}{\omega(\omega \tau+i)}\right\}^{1 / 2} 
 =\left\{1-\frac{i \sigma / \epsilon_{0}}{\omega(1-i \omega \tau)}\right\}^{1 / 2} \\
 &\xlongequal[\omega \ll \sigma / \varepsilon_{0}]{\omega \tau \ll 1} \sqrt{\frac{\sigma}{\epsilon_{0} \omega}} \cdot e^{\left(i \frac{\pi}{4}+k \pi\right)}(1-i \omega \tau)^{-\frac{1}{2}} \\
-&\xlongequal[\omega \tau<c 1]{k=0} \sqrt{\frac{\sigma}{2 \epsilon_{0} \omega}}(1+i)\left(1+\frac{1}{2} i \omega \tau\right) \\ \\
+&\xlongequal[\omega \tau\ll 1]{k=0} \sqrt{\frac{\sigma}{2 \epsilon_{0} \omega}}(1+i)\left(1+\frac{1}{2} i \omega \tau\right) \\ \\
 \Rightarrow & n_{I}({\color{gray}虚部}) \approx \sqrt{\frac{\sigma}{2 \epsilon_{0} \omega}}\left(1+\frac{1}{2} \omega \tau\right) \approx \sqrt{\frac{\sigma}{2 \epsilon_{0} \omega}} \\
 \Rightarrow & k_{I}=\frac{n_{I} \omega}{c}=\sqrt{\mu_{0} \epsilon_{0}} \cdot \sqrt{\frac{\sigma \omega}{2 \epsilon_{0}}}=\sqrt{\mu_{0} \sigma \omega / 2} \\
 \Rightarrow & \delta=1 / k_{I}=\sqrt{2 / \mu_{0} \sigma \omega}
