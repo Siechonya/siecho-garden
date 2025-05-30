@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-05-27T12:49:38.924+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-05-30T17:21:20.664+08:00"}
 ---
 
 
@@ -242,6 +242,16 @@ $$
 MMA 给出一致的结果:
 ![z_figure/Pasted image 20250527113220.png](/img/user/z_figure/Pasted%20image%2020250527113220.png)
 
+当然, 也可以用最基本的边界条件:  
+$$
+\begin{array}c 
+E_{in}+ E_r = E_{2+} + E_{2-} \\
+n_1(E_{in}- E_r) = n_2 (E_{2+} - E_{2-}) \\
+E_{2+}e^{i\theta} + E_{2-}e^{-i\theta} = E_{out}\\
+n_2(E_{2+}e^{i\theta} - E_{2-}e^{-i\theta}) = n_3E_{out}
+\end{array}
+$$
+会得到一样的结果.
 # 8. Drude 模型
 ##### (a)  
 注意到极化强度 $\vec P = N \vec p = N \alpha \vec E = (\epsilon_r - 1)\epsilon_0\vec E$, 得到:  
@@ -251,7 +261,7 @@ $$
 ##### (b)
 当电场驱动和阻尼可以忽略时, $\omega = \gamma = 0$:  
 $$
-\frac{\alpha}{4\pi \epsilon_0} = \frac{e^2\hbar^2}{4\pi \epsilon_0 m_p (\hbar\omega_0)^2} \approx 5.93 \times 10^{-31} ~m^3
+\frac{\alpha}{4\pi \epsilon_0} = \frac{e^2\hbar^2}{4\pi \epsilon_0 m_e (\hbar\omega_0)^2} \approx 5.93 \times 10^{-31} ~m^3
 $$
 ##### (c)  
 原子极化率可以写作 $\alpha = 4\pi \epsilon_0 a_0^3$ , 于是 $\frac{\alpha}{4\pi \epsilon_0}=a_0^3\approx 1.48\times 10^{-31}~m^3$ 与上式处于同一量级.  
@@ -270,9 +280,12 @@ k_{R}=\frac{n_{R}}{c} \omega=\frac{1}{c}\left[\omega+\frac{\omega_{p}^{2}}{2} \o
 \end{array}\right.
 \end{array}
 $$
+在共振区域附近, 反常色散的群速度超过了光速(为什么? 可以查阅:  [反常色散的群速度](https://zhuanlan.zhihu.com/p/509148630)).  
+
+> 有些科普说群速度是能量传播的速度。这是错误的。要记住，群速度只是波包运动的一阶近似而已，并不能完全表述波包的演化。群速度超过光速，并不说明能量/信息超光速，而是在这种情况下，群速度已经失去了意义。
 
 ##### (e)
-对于 $\hat{\vec{E}}=\hat{\vec{E}}_{0} e^{-k_{I} x} e^{i\left(k_{k} x-\omega t\right)}$ :
+对于 $\hat{\vec{E}}=\hat{\vec{E}}_{0} e^{-k_{I} x} e^{i\left(k_{I} x-\omega t\right)}$ :
 $$
 \left\{\begin{array}{l}k_{I} L \ll 1 ~~\text { 透明 } \\ k_{I} L\gg1 ~~~\text { 不透明 }\end{array}\right.
 $$
@@ -316,7 +329,10 @@ $$
 $$
 n^2 = 1-\frac{\sigma}{\tau \epsilon_{0}} \frac{1}{\omega^2} = 1-\frac{\omega_{pe}^2}{\omega^2} \to 1
 $$
-$\omega\tau\gg 1$ 和 $\omega\gg \omega_{pe}$ 意味着, 电磁波的时间尺度 $\frac{1}{\omega}$ 远小于电子平均碰撞时间 $\tau$, 阻尼效应被忽略, 这导致电磁波的能量不能像课上那样迅速耗散到粒子中(其对应于 $\omega\ll \omega_{pe}$, 与这里不同), 因此波动得以维持和传播.
+$\omega\tau\gg 1$ 和 $\omega\gg \omega_{pe}$ 意味着, 电磁波的时间尺度 $\frac{1}{\omega}$ 远小于电子平均碰撞时间 $\tau$, 阻尼效应被忽略, 这导致电磁波的能量不能像课上那样迅速耗散到粒子中(其对应于 $\omega\ll \omega_{pe}$, 与这里不同), 因此波动得以维持和传播.  
+
+##### (k)  
+由 $(j)$ 可知, 一个条件是波的频率足够高.
 # 9. 介质中的 Maxwell's 方程组  
 ##### (a)
 由 $\nabla \cdot \vec j+\partial \rho/ \partial t=0$ 得到:  
