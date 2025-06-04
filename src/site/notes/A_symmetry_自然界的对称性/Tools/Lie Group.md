@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Lie Group/","noteIcon":"","created":"2024-11-30T23:35:43.866+08:00","updated":"2025-06-04T19:06:10.649+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Lie Group/","noteIcon":"","created":"2024-11-30T23:35:43.866+08:00","updated":"2025-06-04T19:16:52.593+08:00"}
 ---
 
 
@@ -893,7 +893,7 @@ K_2 & -J_3 & 0 & J_1 \\
 K_3 & J_2 & -J_1 & 0
 \end{bmatrix}_{(4\times 4)\times (4\times 4)}
 $$
-于是用 $M_{\mu \nu}$ 表示的 $Poincaré\ Lie$ 代数为：
+于是用 $M_{\mu \nu}$ 表示的 $Poincaré\ Lie$ 代数关系为：
 $$
 \begin{aligned}
 {\left[P_{\mu}, P_{\nu}\right] } & =0 \\
@@ -904,6 +904,11 @@ $$
 $$
 \left[M_{\mu \nu}, M_{\rho \sigma}\right]=i\left(\eta_{\mu \rho} M_{\nu \sigma}-\eta_{\mu \sigma} M_{\nu \rho}-\eta_{\nu \rho} M_{\mu \sigma}+\eta_{\nu \sigma} M_{\mu \rho}\right)
 $$
+如果在位置表象下写庞加莱群, 它是:  
+$$
+M_{\mu\nu}^{\infty} = \boldsymbol{i} (x_\mu \partial_\nu - x_\nu \partial_\mu)
+$$
+这也被称为 $Poincaré$ 群的无穷维表示, 和三维角动量算符 $\vec x\times\vec p$ 类似, 可以把它理解为四维的角动量算符.
 
 $Poincaré$ 群有两个 $Casimir$ 算符, 第一个是：
 $$
@@ -919,3 +924,4 @@ $$
 它对应的标量值是自旋, 记作 $j = j_1+j_2$, 例如对于洛伦兹群, 其两个 $SU(2)\ Lie$ 代数对应 $j_1$ 和 $j_2$. 即庞加莱群用两个标量予以标记: $m$ (质量, 可取任意值), $j$ (自旋, 取整数或者半整数).
 # 9. 基本粒子
 <font color="#ff0000">庞加莱群是描述所有基本粒子的数学工具.</font>
+
