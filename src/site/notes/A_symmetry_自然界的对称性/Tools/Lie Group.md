@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Lie Group/","noteIcon":"","created":"2024-11-30T23:35:43.866+08:00","updated":"2025-05-24T12:51:52.231+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Lie Group/","noteIcon":"","created":"2024-11-30T23:35:43.866+08:00","updated":"2025-06-04T19:06:10.649+08:00"}
 ---
 
 
@@ -878,7 +878,7 @@ $$
 {\left[K_{i}, P_{0}\right] } & =-i P_{i}
 \end{aligned}
 $$
-定义 $M_{\mu \nu}$ 为 :
+定义 Poincaré 群 $M_{\mu \nu}$ 为 :
 $$
 \left\{\begin{array}l
 J_{i}  =\frac{1}{2} \epsilon_{i j k} M_{j k} \\
