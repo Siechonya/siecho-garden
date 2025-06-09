@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Precession Of The Equinoxes/","noteIcon":"","created":"2025-06-07T23:17:32.021+08:00","updated":"2025-06-08T22:00:03.384+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Precession Of The Equinoxes/","noteIcon":"","created":"2025-06-07T23:17:32.021+08:00","updated":"2025-06-09T14:46:59.390+08:00"}
 ---
 
 
@@ -137,9 +137,9 @@ $$
 \Omega \approx
 \frac{3 G M}{d^{3}} \frac{C - A}{2C \omega} \cos \varepsilon
 =
-3 G \frac{C - A}{2C \omega}  \left( \frac{M_\odot}{d_\odot^3} + \frac{M_☾}{d_☾^3} \right) \cos \varepsilon
+3 G \frac{C - A}{2C \omega}  \left( \frac{M_\odot}{d_\odot^3}\cos \varepsilon_\odot + \frac{M_☾}{d_☾^3}  \cos \varepsilon_☾\right)
 $$
-通过计算(见[[#用 ipython 计算结果的代码]])得到它的结果是 51.98''/a, 对应的周期是两万五千年, 与天文观测的结果接近.
+通过计算(见[[#用 ipython 计算结果的代码]])得到它的结果是 50.45''/a, 对应的周期是两万五千七百年, 与天文观测的结果接近.
 
 # 参考  
 - https://en.m.wikipedia.org/wiki/Axial_precession
@@ -152,9 +152,12 @@ import math
 # 物理常数
 G = 6.674e-11  # 万有引力常数 (m^3 kg^-1 s^-2)
 omega = 7.272e-5  # 地球自转角速度 (rad/s)
-epsilon_deg = 23.4392  # 黄赤交角 (degrees)
-epsilon_rad = math.radians(epsilon_deg)  # 黄赤交角 (radians)
-cos_epsilon = math.cos(epsilon_rad)
+epsilon_deg_sun = 23.4392  # 黄赤交角 (degrees)
+epsilon_rad_sun = math.radians(epsilon_deg_sun)  # 黄赤交角 (radians)
+cos_epsilon_sun = math.cos(epsilon_rad_sun)
+epsilon_deg_moon = epsilon_deg_sun + 5.1453  # 白赤交角
+epsilon_rad_moon = math.radians(epsilon_deg_moon)  # 黄赤交角 (radians)
+cos_epsilon_moon = math.cos(epsilon_rad_moon)
 
 # 地球参数
 C = 8.034e37  # 地球绕极轴转动惯量 (kg·m^2)
@@ -168,15 +171,15 @@ d_sun = 1.496e11  # 日地平均距离 (m)
 d_moon = 3.844e8  # 地月平均距离 (m)
 
 # 计算太阳和月球的引力项
-sun_term = M_sun / (d_sun ** 3)
-moon_term = M_moon / (d_moon ** 3)
+sun_term = M_sun / (d_sun ** 3) * cos_epsilon_sun
+moon_term = M_moon / (d_moon ** 3)* cos_epsilon_moon
 sum_term = sun_term + moon_term
 
 # 计算转动惯量相关系数
 coefficient = (3 * G * C_minus_A) / (2 * C * omega)
 
 # 计算岁差角速度 (rad/s)
-omega_precession = coefficient * sum_term * cos_epsilon
+omega_precession = coefficient * sum_term
 
 # 单位转换
 seconds_per_year = 3.154e7  # 一年的秒数
@@ -189,14 +192,16 @@ print(f"引力项总和: {sum_term:.2e} kg/m³")
 print(f"转动惯量系数: {coefficient:.2e} m³/(kg·s)")
 print(f"岁差角速度: {omega_precession:.2e} rad/s")
 print(f"岁差速率: {omega_precession_arcsec_per_year:.2f} 角秒/年")
+print(f"岁差: {360 * 60 * 60 / omega_precession_arcsec_per_year:.2f} 年")
    
 --------------------------------
    
-太阳引力项: 5.94e-04 kg/m³
-月球引力项: 1.29e-03 kg/m³
-引力项总和: 1.89e-03 kg/m³
+太阳引力项: 5.45e-04 kg/m³
+月球引力项: 1.14e-03 kg/m³
+引力项总和: 1.68e-03 kg/m³
 转动惯量系数: 4.62e-09 m³/(kg·s)
-岁差角速度: 7.99e-12 rad/s
-岁差速率: 51.98 角秒/年
+岁差角速度: 7.75e-12 rad/s
+岁差速率: 50.45 角秒/年
+岁差: 25689.14 年
 
 ```
