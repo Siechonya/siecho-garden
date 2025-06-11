@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW8/","noteIcon":"","created":"2025-06-10T10:17:09.627+08:00","updated":"2025-06-11T00:11:52.637+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW8/","noteIcon":"","created":"2025-06-10T10:17:09.627+08:00","updated":"2025-06-11T09:44:01.243+08:00"}
 ---
 
 
@@ -64,7 +64,7 @@ t_2 = \int dt = \int_r^0 f(r) dr
 $$
 得到:  
 $$
-t_{e}=r_{0}^{3} \frac{4 \pi^{2} \epsilon_{0}^{2} m_{e}^{2} c^{3}}{e^{4}} \approx 10^{-11} s
+t_{2}=r_{0}^{3} \frac{4 \pi^{2} \epsilon_{0}^{2} m_{e}^{2} c^{3}}{e^{4}} \approx 10^{-11} s
 $$
 
 # 3. 极相对论粒子的角最大辐射  
@@ -214,7 +214,7 @@ $$
 0 = \int_{t-\epsilon}^{t+\epsilon} \tau \dot{a} d t = lim _{\epsilon \to 0}[a(t+\epsilon)-a(t-\epsilon)]
 $$
 得到 a 是连续的. 
-##### (2)  
+##### (b)  
 $t<0$ 时, 积分得到:
 $$
 a=\tau \dot{a} \quad\Rightarrow\quad a=e^{t / \tau} a(0) 
@@ -227,7 +227,7 @@ $t>T$ 时:
 $$
 a=\tau \dot{a} \quad\Rightarrow\quad a=e^{(t-T) / \tau} a(T)
 $$
-##### (3)  
+##### (c)  
 如果同时让 t < 0 和 t > T 时，a = 0, 那么 $a(T)=a(0)=0$, $0<t<T$ 时的通解将给出:
 $$
 \left[0-\frac{F}{m}\right]  = e^{-T / \tau}\left[0-\frac{F}{m}\right]
