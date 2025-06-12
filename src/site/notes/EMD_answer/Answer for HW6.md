@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-06-10T10:34:21.600+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-06-12T10:24:27.004+08:00"}
 ---
 
 
@@ -17,7 +17,7 @@ debugInConsole: false # Print debug info in Obsidian console
 
 
 # 1. 1D 电磁波解    
-- <font color="#00b0f0">(a) 平面波动方程:</font>
+- <font color="#00b0f0">(a) 平面波动方程:</font>  
 $$
 \left(\frac{1}{c^{2}} \frac{\partial^{2}}{\partial t^{2}}-\frac{\partial^{2}}{\partial x^{2}}\right) \varphi=\left(\frac{1}{c} \frac{\partial}{\partial t}+\frac{\partial}{\partial x}\right)\left(\frac{1}{c} \frac{\partial}{\partial t}-\frac{\partial}{\partial x}\right) \varphi=0
 $$
@@ -30,7 +30,7 @@ $$
 \Rightarrow
 \varphi(x, t)=\underbrace{f(x-c t)}_{\text {右行波 }}+\underbrace{g(x+c t)}_{\text {右行波 }}
 $$
-- <font color="#00b0f0">(b) 球面波动方程:</font>
+- <font color="#00b0f0">(b) 球面波动方程:</font>  
 $$
 \frac{1}{c^{2}} \frac{\partial^{2}}{\partial t^{2}} \varphi=\Delta_{3} \varphi=\left(\frac{\partial^{2}}{\partial r^{2}}+\frac{2}{r} \frac{\partial}{\partial r}\right) \varphi
 $$
@@ -235,7 +235,7 @@ $$
 重新记无量纲复振幅 $E_i' = \frac{E_i}{E_{in}}$, 上式给出:  
 $$
 \begin{bmatrix} -1 & \frac{{n_2-n_1}}{n_1+n_2} & 0 & 0 \\  0 & \frac{2n_2}{n_1+n_2} & -1 & 0 \\ e^{i\theta}  \frac{2n_2}{n_2+n_3} & 0 & 0 & -1 \\ e^{i\theta} \frac{{n_2-n_3}}{n_2+n_3} & -e^{-i\theta} & 0 & 0 \end{bmatrix}
-\begin{bmatrix} E_{2+}' \\ E_{2-}' \\ E_r \\E_{out} \end{bmatrix}
+\begin{bmatrix} E_{2+}' \\ E_{2-}' \\ E'_r \\E'_{out} \end{bmatrix}
 =
 \begin{bmatrix} -\frac{2n_1}{n_1+n_2} \\ -\frac{{(n_1-n_2)}}{n_1+n_2} \\ 0 \\0 \end{bmatrix}
 $$
@@ -266,7 +266,7 @@ $$
 ##### (c)  
 原子极化率可以写作 $\alpha = 4\pi \epsilon_0 a_0^3$ , 于是 $\frac{\alpha}{4\pi \epsilon_0}=a_0^3\approx 1.48\times 10^{-31}~m^3$ 与上式处于同一量级.  
 ##### (d)  
-对于实数 $\omega$:
+对于实数 $\omega$: 
 $$
 \begin{array}{l}
 k_{R}=\frac{n_{R}}{c} \omega=\frac{1}{c}\left[\omega+\frac{\omega_{p}^{2}}{2} \omega \frac{\omega_{0}^{2}-\omega^{2}}{\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+\gamma^{2} \omega^{2}}\right] \\
@@ -285,13 +285,13 @@ $$
 > 有些科普说群速度是能量传播的速度。这是错误的。要记住，群速度只是波包运动的一阶近似而已，并不能完全表述波包的演化。群速度超过光速，并不说明能量/信息超光速，而是在这种情况下，群速度已经失去了意义。
 
 ##### (e)
-对于 $\hat{\vec{E}}=\hat{\vec{E}}_{0} e^{-k_{I} x} e^{i\left(k_{I} x-\omega t\right)}$ :
+对于 $\hat{\vec{E}}=\hat{\vec{E}}_{0} e^{-k_{I} x} e^{i\left(k_{I} x-\omega t\right)}$ :  
 $$
 \left\{\begin{array}{l}k_{I} L \ll 1 ~~\text { 透明 } \\ k_{I} L\gg1 ~~~\text { 不透明 }\end{array}\right.
 $$
 ##### (f)  
 $$
-n^{2}=\varepsilon_{r} \mu_r =\left.\mu_{r}\left(1+\frac{N e^{2}}{m \epsilon_{0}} \frac{1}{\omega_{0}^{2}-\omega^{2}-i \omega r}\right)\right|_{\omega_{0}=0} = \mu_r\left(1- \frac{\omega_{pe}^2}{\omega^{2}+i \omega \gamma}\right) \approx 
+n^{2}=\varepsilon_{r} \mu_r =\left.\mu_{r}\left(1+\frac{N e^{2}}{m \epsilon_{0}} \frac{1}{\omega_{0}^{2}-\omega^{2}-i \omega \gamma}\right)\right|_{\omega_{0}=0} = \mu_r\left(1- \frac{\omega_{pe}^2}{\omega^{2}+i \omega \gamma}\right) \approx 
 1- \frac{\omega_{pe}^2}{\omega^{2}+i \omega \gamma}
 $$
 ##### (g)  
@@ -305,7 +305,7 @@ $$
 \begin{aligned}
 n
 &=\left\{1-\frac{\sigma / \epsilon_{0}}{\omega(\omega \tau+i)}\right\}^{1 / 2} 
-=\left\{1-\frac{i \sigma / \epsilon_{0}}{\omega(1-i \omega \tau)}\right\}^{1 / 2} \\
+=\left\{1+\frac{i \sigma / \epsilon_{0}}{\omega(1-i \omega \tau)}\right\}^{1 / 2} \\
 &\xlongequal[\omega \ll \sigma / \varepsilon_{0}]{\omega \tau \ll 1} \sqrt{\frac{\sigma}{\epsilon_{0} \omega}} \cdot e^{\left(i \frac{\pi}{4}+k \pi\right)}(1-i \omega \tau)^{-\frac{1}{2}} \\
 &\xlongequal[\omega \tau\ll 1]{k=0} \sqrt{\frac{\sigma}{2 \epsilon_{0} \omega}}(1+i)\left(1+\frac{1}{2} i \omega \tau\right) \\ \\
 \Rightarrow & n_{I}({\color{gray}虚部}) \approx \sqrt{\frac{\sigma}{2 \epsilon_{0} \omega}}\left(1+\frac{1}{2} \omega \tau\right) \approx \sqrt{\frac{\sigma}{2 \epsilon_{0} \omega}} \\
@@ -331,8 +331,10 @@ n^2 = 1-\frac{\sigma}{\tau \epsilon_{0}} \frac{1}{\omega^2} = 1-\frac{\omega_{pe
 $$
 $\omega\tau\gg 1$ 和 $\omega\gg \omega_{pe}$ 意味着, 电磁波的时间尺度 $\frac{1}{\omega}$ 远小于电子平均碰撞时间 $\tau$, 阻尼效应被忽略, 这导致电磁波的能量不能像课上那样迅速耗散到粒子中(其对应于 $\omega\ll \omega_{pe}$, 与这里不同), 因此波动得以维持和传播.  
 
+该式也适用于描述冷等离子体中电磁波的色散关系.  
+
 ##### (k)  
-由 $(j)$ 可知, 一个条件是波的频率足够高.
+由 $(j)$ 可知, 条件是波的频率足够高/金属足够薄.  
 # 9. 介质中的 Maxwell's 方程组  
 ##### (a)
 由 $\nabla \cdot \vec j+\partial \rho/ \partial t=0$ 得到:  
@@ -344,7 +346,7 @@ $$
 \vec{j}_{p}=\partial \vec{P} / \partial t
 $$
 ##### (b)
-同理 $\nabla \cdot \vec j_{m}+\partial \rho_{m} / \partial t=0$, 磁化电流  $\vec j_{m}=\nabla \times \vec m$, 得到:
+同理 $\nabla \cdot \vec j_{m}+\partial \rho_{m} / \partial t=0$, 磁化电流  $\vec j_{m}=\nabla \times \vec m$, 得到:  
 $$
 -\frac{\partial \rho_{m}}{\partial t}=\nabla \cdot \nabla \times \vec m=0 
 \Rightarrow
@@ -368,7 +370,7 @@ $$
 # 补充: 没有补充  
 本来想写点电磁场的拉氏量, 怎么按一般步骤推导得到的来着, 但是大家有期末考试, 助教也有, 所以......  
 
-结果放在这里, 拉氏量:
+结果放在这里, 拉氏量:  
 $$
 \begin{aligned} 
 \mathcal{L}

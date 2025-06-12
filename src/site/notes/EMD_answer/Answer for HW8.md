@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW8/","noteIcon":"","created":"2025-06-10T10:17:09.627+08:00","updated":"2025-06-11T09:44:01.243+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW8/","noteIcon":"","created":"2025-06-10T10:17:09.627+08:00","updated":"2025-06-12T11:47:28.645+08:00"}
 ---
 
 
@@ -14,8 +14,9 @@ includeLinks: true # Make headings clickable
 hideWhenEmpty: false # Hide TOC if no headings are found
 debugInConsole: false # Print debug info in Obsidian console
 ```
-# 1. 辐射功率交叉项 
-分解 $\dot{\vec{\beta}}=\dot{\vec{\beta}}_{\| }+\dot{\vec{\beta}}_{\perp}$, 其中 $\dot{\vec{\beta}}_{\| } || \vec \beta$, 根据讲义的(8.148)得到:  
+# 1. 辐射功率交叉项   
+ ![z_figure/Pasted image 20250612113453.png](/img/user/z_figure/Pasted%20image%2020250612113453.png)  
+<font color="#ff0000">分</font>解 $\dot{\vec{\beta}}=\dot{\vec{\beta}}_{\| }+\dot{\vec{\beta}}_{\perp}$, 其中 $\dot{\vec{\beta}}_{\| } || \vec \beta$, 根据讲义的(8.148)得到:  
 $$
 \begin{array}{rl}
 \left(\frac{d P}{ d \Omega}\right)_{cross } & \propto
@@ -37,12 +38,12 @@ $$
 $$
 \int\left(\frac{d P}{ d \Omega}\right)_{cross } d \Omega \propto \int_{0}^{2 \pi}\left(\dot{\beta}_{\perp x} cos \varphi+\dot{\beta}_{\perp y} sin \varphi\right) d \varphi=0
 $$
-# 2. 电子的生命周期(讲义  p154)
-加速度满足:
+# 2. 电子的生命周期(讲义  p154)  
+![z_figure/Pasted image 20250612113613.png](/img/user/z_figure/Pasted%20image%2020250612113613.png)
+<font color="#ff0000">加</font>速度满足:   
 $$
 \frac{e^{2}}{4 \pi \epsilon_{0} r^{2}}=m_{e} a_{\perp}
 $$
-
 根据拉莫公式有:  
 $$
 P_{\perp}=\frac{\mu_{0} e^{2}}{6 \pi c} a_{\perp}^{2}
@@ -66,9 +67,9 @@ $$
 $$
 t_{2}=r_{0}^{3} \frac{4 \pi^{2} \epsilon_{0}^{2} m_{e}^{2} c^{3}}{e^{4}} \approx 10^{-11} s
 $$
-
 # 3. 极相对论粒子的角最大辐射  
-讲义(8.133)给出:  
+![z_figure/Pasted image 20250612113626.png](/img/user/z_figure/Pasted%20image%2020250612113626.png)
+<font color="#ff0000">讲</font>义(8.133)给出:  
 $$
 \frac{d P}{ d \Omega}=\frac{q^{2} \mu_{0} c}{16 \pi^{2}} \frac{\dot{\beta}^{2} \sin ^{2} \theta}{(1-\beta \cos \theta)}
 $$
@@ -92,7 +93,8 @@ $$
 $$
 # 4. 课本题
 ## 7.1 零辐射的角度  
-为避免歧义, 将题目里面的角度 $\beta$ 记为 $\theta$, 根据讲义(8.114):  
+![z_figure/Pasted image 20250612113903.png](/img/user/z_figure/Pasted%20image%2020250612113903.png)
+<font color="#ff0000">为</font>避免歧义, 将题目里面的角度 $\beta$ 记为 $\theta$, 根据讲义(8.114):  
 $$
 \frac{d P}{ d \Omega} \propto\left|\hat{e}_{R} \times\left[\left(\hat{e}_{R}-\vec \beta \right) \times \vec a\right]\right|^{2}
 $$
@@ -110,15 +112,16 @@ $$
 \begin{aligned} 
 \hat{e}_{R} \times\left[\left(\hat{e}_{R}-\vec \beta\right) \times \vec a\right]
 &=\left(\hat{e}_{R} \cdot \vec a\right)\left(\hat{e}_{R}-\vec \beta \right)-\left[\hat{e}_{R} \cdot\left(\hat{e}_{R}-\vec \beta\right)\right] \vec a\\
-&=(a\left(\beta \sin \alpha-\sin\theta \right) \sin \beta,~  \cos\theta \left(\sin\theta -\beta \sin \alpha \right) )
+&=(a\left(\beta \sin \alpha-\sin\theta \right) \sin \theta,~  a\cos\theta \left(\sin\theta -\beta \sin \alpha \right) )
 =0
 \\ \\
 \quad&\to
-\beta sin \alpha=sin \theta
+\beta \sin \alpha=\sin \theta
 \end{aligned}
 $$
-
-## 7.2 同步辐射
+## 7.2 同步辐射  
+![z_figure/Pasted image 20250612113918.png](/img/user/z_figure/Pasted%20image%2020250612113918.png)
+<font color="#ff0000">由</font>讲义(8.155)可知:
 $$
 P_{\perp} =\frac{e^{2} \mu_{0}}{6 \pi c} \frac{\gamma^{2}}{m^{2}}\left(\frac{d \vec{p}}{ d t}\right)^{2}
 $$
@@ -130,9 +133,9 @@ $$
 得到:  
 $$
 P=38~ eV \cdot s^{-1} 
-$$ 
-
+$$
 ## 7.6 同步辐射 * 2  
+![z_figure/Pasted image 20250612113937.png](/img/user/z_figure/Pasted%20image%2020250612113937.png)
 ##### (1)
 根据讲义(8.164), 电子受力为辐射阻尼+洛伦兹力:  
 $$
@@ -177,8 +180,8 @@ $$
 $$
 \frac{ d W }{ d t} = \gamma m_e v_0^2 e^{-2\gamma t}
 $$
-
-## 7.9 同步辐射 * 3
+## 7.9 同步辐射 * 3  
+![z_figure/Pasted image 20250612113951.png](/img/user/z_figure/Pasted%20image%2020250612113951.png)
 ##### (1) 
 $$
 P=\frac{\mu_{0} q^{2}}{6 \pi c} \frac{\gamma^{2}}{m^{2}}\left(\frac{d \vec{p}}{ d t}\right)^{2}
@@ -186,7 +189,6 @@ P=\frac{\mu_{0} q^{2}}{6 \pi c} \frac{\gamma^{2}}{m^{2}}\left(\frac{d \vec{p}}{ 
 =\frac{q^{4} B^{2}}{6 \pi \epsilon_{0} m^{2} c}\left(\gamma^{2}-1\right)
 $$
 ##### (2)  
-
 $$
 P=-\frac{d E}{ d t}=-m c^{2} \frac{d \gamma}{d t} =\frac{q^{4} B^{2}}{6 \pi \epsilon_{0} m^{2} c}\left(\gamma^{2}-1\right)
 $$
@@ -200,22 +202,24 @@ $$
 $$
 T=T_{0} exp \left[-\frac{B^{2}q^{4} }{3 \pi \epsilon_{0} m^{3} c^{3}}\left(t-t_{0}\right)\right]
 $$
-# 5. 磁偶极辐射和电四极辐射
+# 5. 磁偶极辐射和电四极辐射  
+![z_figure/Pasted image 20250612114005.png](/img/user/z_figure/Pasted%20image%2020250612114005.png)
 见讲义 9.4 节.
-
 # 6. 辐射阻尼  
+![z_figure/Pasted image 20250612114020.png](/img/user/z_figure/Pasted%20image%2020250612114020.png)
 ##### (a)  
-对运动方程积分:  
+<font color="#ff0000">对</font>运动方程积分:  
 $$
 \int_{t-\epsilon}^{t+\epsilon} a d t=\int_{t-\epsilon}^{t+\epsilon} \tau \dot{a} d t+\int_{t-\epsilon}^{t+\epsilon} \frac{F}{m} d t
 $$
 当 $\varepsilon \to 0$, 由于 a 和 $\frac{F}{m}$ 是有限的, 所以左侧和右侧第二项=0, 于是右侧第一项=0:  
 $$
-0 = \int_{t-\epsilon}^{t+\epsilon} \tau \dot{a} d t = lim _{\epsilon \to 0}[a(t+\epsilon)-a(t-\epsilon)]
+0 = \int_{t-\epsilon}^{t+\epsilon} \tau \dot{a} d t = \tau ~ lim _{\epsilon \to 0}[a(t+\epsilon)-a(t-\epsilon)]
 $$
-得到 a 是连续的. 
+得到 a 是连续的.   
 ##### (b)  
-$t<0$ 时, 积分得到:
+![z_figure/Pasted image 20250612114032.png](/img/user/z_figure/Pasted%20image%2020250612114032.png)
+<font color="#ff0000">在</font> $t<0$ 时, 积分得到:
 $$
 a=\tau \dot{a} \quad\Rightarrow\quad a=e^{t / \tau} a(0) 
 $$
@@ -228,19 +232,21 @@ $$
 a=\tau \dot{a} \quad\Rightarrow\quad a=e^{(t-T) / \tau} a(T)
 $$
 ##### (c)  
-如果同时让 t < 0 和 t > T 时，a = 0, 那么 $a(T)=a(0)=0$, $0<t<T$ 时的通解将给出:
+![z_figure/Pasted image 20250612114043.png](/img/user/z_figure/Pasted%20image%2020250612114043.png)
+<font color="#ff0000">如</font>果同时让 t < 0 和 t > T 时，a = 0, 那么 $a(T)=a(0)=0$, $0<t<T$ 时的通解将给出:
 $$
 \left[0-\frac{F}{m}\right]  = e^{-T / \tau}\left[0-\frac{F}{m}\right]
 $$
 即 $T=0$ 这样一个平凡解.
 ##### (d)  
+![z_figure/Pasted image 20250612114110.png](/img/user/z_figure/Pasted%20image%2020250612114110.png)
 即 $a(T)=0$, 得到
 $$
 \left[a(0)-\frac{F}{m}\right]  = e^{-T / \tau}\left[0-\frac{F}{m}\right]
 \quad\to\quad
 a(0)=\frac{F_{0}}{m}\left(1-e^{-T / \tau}\right)
 $$
-于是通解是:  
+<font color="#ff0000">于</font>是通解是:  
 $$
 a=
 \left\{
@@ -283,7 +289,8 @@ y=0|x>1
 ```
 
 # 7. 辐射电阻  
-电流是:  
+![z_figure/Pasted image 20250612114122.png](/img/user/z_figure/Pasted%20image%2020250612114122.png)
+<font color="#ff0000">电</font>流是:  
 $$
 I=-2\frac{d q}{ d t}=2\omega q_{0} sin (\omega t)
 $$
@@ -305,8 +312,9 @@ $$
 R \approx 2 × 10^{-6}~ \Omega
 $$
 # 8. 电偶极子的辐射  
-##### (a)  
-本题可以视为两个在 x-y 平面以角速度 $\omega$ 匀速旋转的电荷的辐射: 
+![z_figure/Pasted image 20250612114137.png|750](/img/user/z_figure/Pasted%20image%2020250612114137.png)
+
+<font color="#ff0000">本</font>题可以视为两个在 x-y 平面以角速度 $\omega$ 匀速旋转的电荷的辐射: 
 $$
 \vec p = p_0 e^{-i\omega t}(\vec e_x + e^{-i\delta} \vec e_y) = \frac{\sqrt{2}}{2}p_0 e^{-i\omega t}(1 - i e^{-i\delta})\vec{e}_R + \frac{\sqrt{2}}{2}p_0 e^{-i\omega t}(1 + i e^{-i\delta})\vec{e}_L
 $$
@@ -335,8 +343,11 @@ $$
 (\vec{p} \cdot \vec{n})^2 = p_0^2 \sin^2\theta \left[ \cos\phi \cos \omega t + \sin\phi \cos (\omega t + \delta) \right]^2
 $$
 $$
-\langle (\vec{p} \cdot \vec{n})^2 \rangle = p_0^2 \sin^2\theta \left\langle \cos^2\phi \cos^2 \omega t + \sin^2\phi \cos^2 (\omega t + \delta) + 2 \cos\phi \sin\phi \cos \omega t \cos (\omega t + \delta) \right\rangle
-= \frac{p_0^2 \sin^2\theta}{2} (1 + \sin 2\phi \cos\delta)
+\begin{aligned} 
+\langle (\vec{p} \cdot \vec{n})^2 \rangle 
+&= p_0^2 \sin^2\theta \left\langle \cos^2\phi \cos^2 \omega t + \sin^2\phi \cos^2 (\omega t + \delta) + 2 \cos\phi \sin\phi \cos \omega t \cos (\omega t + \delta) \right\rangle \\
+&= \frac{p_0^2 \sin^2\theta}{2} (1 + \sin 2\phi \cos\delta)
+\end{aligned}
 $$
 即:  
 $$
@@ -349,4 +360,4 @@ $$
 $$
 <P> = \int <\frac{ d P }{ d \Omega}> \sin\theta\mathrm{d}\theta\mathrm{d}\phi = \frac{\mu_0\omega^4}{6\pi c}p_0^2
 $$
-与前述一致.
+与预期一致.  
