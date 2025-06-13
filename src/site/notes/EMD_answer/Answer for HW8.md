@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW8/","noteIcon":"","created":"2025-06-10T10:17:09.627+08:00","updated":"2025-06-12T11:47:28.645+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW8/","noteIcon":"","created":"2025-06-10T10:17:09.627+08:00","updated":"2025-06-13T12:47:22.695+08:00"}
 ---
 
 
@@ -21,9 +21,9 @@ $$
 \begin{array}{rl}
 \left(\frac{d P}{ d \Omega}\right)_{cross } & \propto
 \left\{\hat{e}_{R} \times\left[\left(\hat{e}_{R}-\vec{\beta}\right) × \dot{\vec{\beta}}_{\| }\right]\right\} \cdot\left\{\hat{e}_{R} \times\left[\left(\hat{e}_{R}-\vec{\beta}\right) × \dot{\vec{\beta}}_{\perp}\right]\right\} \\ 
-&\downarrow~~\small {\color{grey}(\vec A\times \vec B) \cdot (\vec A\times \vec C) = A^2(\vec B\cdot \vec C) - (\vec A \cdot\vec C) (\vec A \cdot \vec C)}  \\
+&\downarrow~~\small {\color{grey}(\vec A\times \vec B) \cdot (\vec A\times \vec C) = A^2(\vec B\cdot \vec C) - (\vec A \cdot\vec C) (\vec A \cdot \vec B)}  \\
 & =\left[\left(\hat{e}_{R}-\vec{\beta}\right) × \dot{\vec{\beta}}_{\| }\right] \cdot\left[\left(\hat{e}_{R}-\vec{\beta}\right) × \dot{\vec{\beta}}_{\perp}\right]-\left\{\hat{e}_{R} \cdot\left[\left(\hat{e}_{R}-\vec{\beta}\right) × \dot{\vec{\beta}}_{\perp}\right]\right\}\left\{\hat{e}_{R} \cdot\left[\left(\hat{e}_{R}-\vec{\beta}\right) × \dot{\vec{\beta}}_{\| }\right]\right\} \\ 
-& =\left(\hat{e}_{R} × \dot{\vec{\beta}}_{\| }\right) \cdot\left[\left(\hat{e}_{R}-\vec{\beta}\right) × \vec{\beta}_{\perp}\right] \\ 
+& =\left(\hat{e}_{R} × \dot{\vec{\beta}}_{\| }\right) \cdot\left[\left(\hat{e}_{R}-\vec{\beta}\right) × \dot{\vec{\beta}}_{\perp}\right] \\ 
 &= \dot{\vec{\beta}}_\perp \cdot \left[(\vec e_R \times \dot{\vec{\beta}}_\|) \times (\vec e_R - \vec \beta)\right] \\
 &\downarrow~~\small {\color{grey}(\vec A\times \vec B )\times \vec C = '先中间再外边'}  \\
 &= \hat e_R \cdot \dot{\vec{\beta}_\perp}(\vec \beta \cdot \dot{\vec{\beta}_\|} - \hat e_R \cdot \dot{\vec{\beta}_\|})
@@ -98,7 +98,6 @@ $$
 $$
 \frac{d P}{ d \Omega} \propto\left|\hat{e}_{R} \times\left[\left(\hat{e}_{R}-\vec \beta \right) \times \vec a\right]\right|^{2}
 $$
-
 假设:  
 $$
 \vec a = a\vec e_x
@@ -121,7 +120,7 @@ $$
 $$
 ## 7.2 同步辐射  
 ![z_figure/Pasted image 20250612113918.png](/img/user/z_figure/Pasted%20image%2020250612113918.png)
-<font color="#ff0000">由</font>讲义(8.155)可知:
+<font color="#ff0000">由</font>讲义(8.155)可知:  
 $$
 P_{\perp} =\frac{e^{2} \mu_{0}}{6 \pi c} \frac{\gamma^{2}}{m^{2}}\left(\frac{d \vec{p}}{ d t}\right)^{2}
 $$
@@ -148,7 +147,7 @@ $$
 $$
 \dot{v}_{y}=\frac{\mu_{0} e}{6 \pi m_{e^2} c} \ddot{v}_{y}+\frac{e B}{m_{e}} v_{x}
 $$
-假定 $\tilde{v}=v_{x}+i v_{y}$, 得到
+假定 $\tilde{v}=v_{x}+i v_{y}$, 得到  
 $$
 \dot{\tilde{v}}=\frac{\mu_{0} e^2}{6 \pi m_{e} c} \ddot{\tilde{v}}+i \frac{e B}{m_{e}} {\tilde{v}}
 $$
@@ -171,7 +170,7 @@ $$
 v_x = v_0 e^{-\gamma t}\cos \omega_0 t, \quad
 v_y = v_0 e^{-\gamma t}\sin \omega_0 t
 $$
-积分即可得到 x, y, z.
+积分即可得到 x, y, z.  
 ##### (2)  
 $$
 \frac{ d W }{ d t} = - \frac{ d \frac{1}{2}m_e v^2 }{ d t} = -\frac{ d \frac{1}{2}m_e v_0^2 e^{-2\gamma t} }{ d t}
@@ -194,7 +193,7 @@ P=-\frac{d E}{ d t}=-m c^{2} \frac{d \gamma}{d t} =\frac{q^{4} B^{2}}{6 \pi \eps
 $$
 可以解得 $\gamma(t)$ , $E(t) = \gamma(t) mc^2$.
 ##### (3)  
-对于非相对论性粒子, 有 $T= \frac{1}{2}mv^2$, 得到:
+对于非相对论性粒子, 有 $T= \frac{1}{2}mv^2$, 得到:  
 $$
 \frac{d T}{ d t}=-\frac{q^{4} B^{2}}{6 \pi \epsilon_{0} m^{2} c^{3}} v^{2}=-\frac{q^{4} B^{2}}{3 \pi \epsilon_{0} m^{3} c^{3}} T
 $$
@@ -204,7 +203,7 @@ T=T_{0} exp \left[-\frac{B^{2}q^{4} }{3 \pi \epsilon_{0} m^{3} c^{3}}\left(t-t_{
 $$
 # 5. 磁偶极辐射和电四极辐射  
 ![z_figure/Pasted image 20250612114005.png](/img/user/z_figure/Pasted%20image%2020250612114005.png)
-见讲义 9.4 节.
+见讲义 9.4 节.  
 # 6. 辐射阻尼  
 ![z_figure/Pasted image 20250612114020.png](/img/user/z_figure/Pasted%20image%2020250612114020.png)
 ##### (a)  
@@ -219,7 +218,7 @@ $$
 得到 a 是连续的.   
 ##### (b)  
 ![z_figure/Pasted image 20250612114032.png](/img/user/z_figure/Pasted%20image%2020250612114032.png)
-<font color="#ff0000">在</font> $t<0$ 时, 积分得到:
+<font color="#ff0000">在</font> $t<0$ 时, 积分得到:  
 $$
 a=\tau \dot{a} \quad\Rightarrow\quad a=e^{t / \tau} a(0) 
 $$
@@ -233,20 +232,20 @@ a=\tau \dot{a} \quad\Rightarrow\quad a=e^{(t-T) / \tau} a(T)
 $$
 ##### (c)  
 ![z_figure/Pasted image 20250612114043.png](/img/user/z_figure/Pasted%20image%2020250612114043.png)
-<font color="#ff0000">如</font>果同时让 t < 0 和 t > T 时，a = 0, 那么 $a(T)=a(0)=0$, $0<t<T$ 时的通解将给出:
+<font color="#ff0000">如</font>果同时让 t < 0 和 t > T 时，a = 0, 那么 $a(T)=a(0)=0$, $0<t<T$ 时的通解将给出:  
 $$
 \left[0-\frac{F}{m}\right]  = e^{-T / \tau}\left[0-\frac{F}{m}\right]
 $$
-即 $T=0$ 这样一个平凡解.
+即 $T=0$ 这样一个平凡解.  
 ##### (d)  
 ![z_figure/Pasted image 20250612114110.png](/img/user/z_figure/Pasted%20image%2020250612114110.png)
-即 $a(T)=0$, 得到
+<font color="#ff0000">即 </font>$a(T)=0$, 得到   
 $$
 \left[a(0)-\frac{F}{m}\right]  = e^{-T / \tau}\left[0-\frac{F}{m}\right]
 \quad\to\quad
 a(0)=\frac{F_{0}}{m}\left(1-e^{-T / \tau}\right)
 $$
-<font color="#ff0000">于</font>是通解是:  
+于是通解是:  
 $$
 a=
 \left\{
@@ -269,7 +268,7 @@ v(t>T)&=\frac{F_{0} T}{m}
 \end{aligned}
 $$
 
-速度曲线示意图(所有参量均取为 1):
+速度曲线示意图(所有参量均取为 1):   
   ```desmos-graph
   left=0-5; right=5;
   top=3; bottom=-3;
