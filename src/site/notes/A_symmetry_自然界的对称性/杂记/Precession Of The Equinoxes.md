@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Precession Of The Equinoxes/","noteIcon":"","created":"2025-06-07T23:17:32.021+08:00","updated":"2025-06-09T14:46:59.390+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Precession Of The Equinoxes/","noteIcon":"","created":"2025-06-07T23:17:32.021+08:00","updated":"2025-06-16T12:59:30.477+08:00"}
 ---
 
 
@@ -50,7 +50,7 @@ $$
 \int (\hat{r} \cdot \vec{r}') \vec{r}'  dm = \mathbf{I} \cdot \hat{r} = \begin{pmatrix} A r_x \\ A r_y \\ C r_z \end{pmatrix}
 $$
 $$
-r_z = \hat{r} \cdot \hat{z} = \cos \varepsilon
+r_z = \hat{r} \cdot \hat{z} = \sin \varepsilon
 $$
 于是原积分可以改写为:
 $$
@@ -61,13 +61,13 @@ $$
 = (C - A) r_z \begin{pmatrix} -r_y \\ r_x \\ 0 \end{pmatrix}
 \end{aligned}
 $$
-其中 $\begin{pmatrix} -r_y \\ r_x \\ 0 \end{pmatrix} = \hat{z} \times \hat{r}$, 所以:
+其中 $\begin{pmatrix} -r_y \\ r_x \\ 0 \end{pmatrix} = \hat{z} \times \hat{r}$, 所以:   
 $$
-\int (\hat{r} \cdot \vec{r}') (\vec{r}' \times \hat{r})  dm = (C - A) \cos \varepsilon  (\hat{z} \times \hat{r})
+\int (\hat{r} \cdot \vec{r}') (\vec{r}' \times \hat{r})  dm = (C - A) \sin \varepsilon  (\hat{z} \times \hat{r})
 $$
 最终得到:  
 $$
-\vec{\tau} = \frac{3 GM}{d^3} (C - A) \cos \varepsilon  (\hat{z} \times \hat{r})
+\vec{\tau} = \frac{3 GM}{d^3} (C - A) \sin \varepsilon  (\hat{z} \times \hat{r})
 $$
 $$
 {\tau} = \frac{3 GM}{2d^3} (C - A) \sin 2\varepsilon  

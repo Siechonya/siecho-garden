@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer_hw2/","noteIcon":"","created":"2025-03-15T10:31:55.174+08:00","updated":"2025-05-08T13:30:47.173+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer_hw2/","noteIcon":"","created":"2025-03-15T10:31:55.174+08:00","updated":"2025-06-16T16:58:31.347+08:00"}
 ---
 
 
@@ -115,10 +115,14 @@ $$
 \begin{aligned} 
 &(1)~\vec r_{\parallel} = \gamma\vec \beta ct' + \gamma \vec r_{\parallel}' = \frac{{\vec r \cdot \vec V}}{V} \vec V^0 \\
 &(2)~ct = \gamma ct' + \gamma\vec \beta \cdot \vec r_{\parallel}' \\
-&(3)~\vec r_{\bot} = \vec r_{\bot}' = \vec r - \gamma \vec r_{\parallel}' = \frac{{\vec r \cdot \vec V}}{V} \vec V^0
+&(3)~\vec r_{\bot} = \vec r_{\bot}' = \vec r' - \frac{{\vec r' \cdot \vec V}}{V} \vec V^0
 \end{aligned}
 $$
-$(1) + (3)$ 得到 $\vec r$ 的变换, $(1)$ 代入 $(2)$ 得到 $t$ 的变换.
+$(1)的第一个等号 + (3)的第二个等号$ 得到 $\vec r$ 的变换, 将(1): $\vec r'_{\parallel} = \frac{{\vec r' \cdot \vec V}}{V} \vec V^0$ 代入 $(2)$ 得到 $t$ 的变换:  
+$$
+\vec r = \gamma \vec V t' + (\gamma-1) \frac{{\vec r'\cdot \vec V}}{V}{\vec V}^0 + \vec r',\quad
+ct = \gamma\left( ct' + {\vec r' \cdot \vec \beta} \right)
+$$
 ## 4. 张量变换
 即计算 $A^{\alpha'\beta'} = \Lambda^\alpha_{~\rho} A^{\rho\sigma} \Lambda_{~\sigma}^{\beta}$, 注意对称张量只需要写 10 个上对角元, 反对称张量需要写 6 个严格上对角元. 注意到
 $$
@@ -374,7 +378,7 @@ D / c & C & & \\
 & & & 1
 \end{pmatrix}
 $$
-于是电磁张量在该变换下保持协变的性质可以表述为:
+于是电磁张量在该变换下保持协变的性质可以表述为:  
 $$
 \begin{array}{l}
 F^{\mu \nu}= \Lambda_{~\alpha}^{\mu} F^{'\alpha \beta} \Lambda_{~\beta}^{\nu} \\
