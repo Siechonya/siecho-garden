@@ -1,6 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/C++/C++ learner/","noteIcon":"","created":"2024-10-27T18:33:52.711+08:00","updated":"2025-06-14T16:39:09.351+08:00"}
+{"dg-publish":true,"permalink":"/C++/C++ learner/","noteIcon":"","created":"2024-10-27T18:33:52.711+08:00","updated":"2025-06-16T22:50:52.778+08:00"}
 ---
+
+
 
 # CH.1 pre.
 
