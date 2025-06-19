@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW8/","noteIcon":"","created":"2025-06-10T10:17:09.627+08:00","updated":"2025-06-14T11:11:21.008+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW8/","noteIcon":"","created":"2025-06-10T10:17:09.627+08:00","updated":"2025-06-19T17:06:25.201+08:00"}
 ---
 
 
@@ -136,7 +136,7 @@ $$
 ## 7.6 同步辐射 * 2  
 ![z_figure/Pasted image 20250612113937.png](/img/user/z_figure/Pasted%20image%2020250612113937.png)
 ##### (1)
-根据讲义(8.164), 电子受力为辐射阻尼+洛伦兹力:  
+根据讲义(8.164), 电子受力为辐射阻尼+洛伦兹力:  +
 $$
 m_e \vec{a}=\frac{\mu_{0} e^2}{6 \pi c} \dot{\vec{a}}-e \vec{v} \times \vec{B}
 $$
