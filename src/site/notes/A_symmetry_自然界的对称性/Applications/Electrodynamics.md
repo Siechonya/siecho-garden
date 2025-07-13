@@ -1,11 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Electrodynamics/","noteIcon":"","created":"2025-03-12T22:33:45.968+08:00","updated":"2025-05-22T16:53:54.003+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Electrodynamics/","noteIcon":"","created":"2025-03-12T22:33:45.968+08:00","updated":"2025-07-05T22:30:48.144+08:00"}
 ---
 
 
 # 1. $Proca$ $field$ 普罗卡场
 ## 1.1 $From\ Proca\ Equation \ to \ Maxwell's\ Equations$ 从普罗卡方程到麦克斯韦方程组
-可跳转 [[A_symmetry_自然界的对称性/Applications/Quantum Field Theory#3. Proca field 普罗卡场\|Quantum Field Theory#3. Proca field]]. 本文采取的度规是(+---).
+可跳转 [[A_symmetry_自然界的对称性/Applications/Quantum Field Theory - Field#3. Proca field 普罗卡场\|Quantum Field Theory#3. Proca field]]. 本文采取的度规是(+---).
 
 $Proca$ 场是经典场论中描述有质量的矢量玻色子的重要模型, 其核心方程($Proca$ 方程)扩展了麦克斯韦方程组(即引入了质量项).
 
@@ -67,7 +67,7 @@ $$
 \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}
 \end{cases}
 $$
-当然, 如果考虑电荷的存在(非自由场), (参见 [[A_symmetry_自然界的对称性/Applications/Quantum Field Theory#3.2 Field with charge/current 非自由场\|Quantum Field Theory#3.2 Field with charge]])引入质点 $m_i$ 和四维电流 $j^\mu$, 也有:  
+当然, 如果考虑电荷的存在(非自由场), (参见 [[A_symmetry_自然界的对称性/Applications/Quantum Field Theory - Field#3.2 Field with charge/current 非自由场\|Quantum Field Theory#3.2 Field with charge]])引入质点 $m_i$ 和四维电流 $j^\mu$, 也有:  
 $$
 \begin{aligned} 
 \mathcal{L}
