@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/C++/C++ learner/","noteIcon":"","created":"2024-10-27T18:33:52.711+08:00","updated":"2025-06-16T22:50:52.778+08:00"}
+{"dg-publish":true,"permalink":"/C++/C++ learner/","noteIcon":"","created":"2024-10-27T18:33:52.711+08:00","updated":"2025-08-07T16:44:44.422+08:00"}
 ---
 
 
@@ -156,16 +156,16 @@ const int toes = value;
 
 ## 2. operators(操作符)
 
-| type操作符类型               | 符号                                |
-| ---------------------------- | ----------------------------------- |
-| 运算                         | +, -, *, /, %                       |
-| 关系                         | ==, !=, >, <, >=, <=                |
-| 逻辑                         | &&, \|\|, !                         |
-| 位运算                       |                                     |
-| 自增自减                     | ++, --                              |
-| 运算赋值                     | =, +=, -=, /=, *=, %=               |
-| 位操作赋值                   |                                     |
-| 条件操作                     | ?=                                  |
+| type操作符类型      | 符号                                  |
+| -------------- | ----------------------------------- |
+| 运算             | +, -, *, /, %                       |
+| 关系             | ==, !=, >, <, >=, <=                |
+| 逻辑             | &&, \|\|, !                         |
+| 位运算            | 略                                   |
+| 自增自减           | ++, --                              |
+| 运算赋值           | =, +=, -=, /=, *=, %=               |
+| 位操作赋值          | 略                                   |
+| 条件操作           | ?=                                  |
 | 逗号（返回最右端操作数的值） | <expression_1>, <expression_2>, ... |
 
 ```c++
@@ -175,9 +175,7 @@ const int toes = value;
 //可以嵌套
 ```
 
-操作符优先级
-
-​	略(建议适当多使用括号)
+操作符优先级: 略(建议适当多使用括号)
 
 ```c++
 // attention：int/int = int, 解决方式:
@@ -193,7 +191,6 @@ bool\rightarrow char\rightarrow unsigned\ char\rightarrow\ short(wchar\_t)\right
 \\\rightarrow long\ int\rightarrow unsigned\ long\ int\rightarrow float\rightarrow double\rightarrow long\ double
 \end{array}
 $$
-
 ```c++
 //in general，转换方向是：低精度->高精度，短字节->长字节，signed->unsigned
 //while, there's some special case:
@@ -228,19 +225,14 @@ xxxxxxxxxxxxxxxx \
     xxxxxxxxxxxxxxxxxxx;
 ```
 
-
-
 # CH.4 statement(语句)
-
 ## 1. simple statement
-
 ```c++
 //空语句(NULL)
 ;
 ```
 
 ## 2. complex statement(复合语句)
-
 ### 2.1 条件语句
 #### if
 ```c++
@@ -299,7 +291,6 @@ for(int i=0; i<10; i++){
 ```
 
 ### 2.3 跳转语句
-
 ```c++
 //break：jump out of one loop body
 
@@ -313,14 +304,8 @@ if(<expression>){
 }
 ```
 
-
-
-
-
 # CH.5 (Complex) 复合数据类型
-
 ## 1. array (数组: 静态数据结构)
-
 ```c++
 typename arrayName[arraySize];	//declaration
 //attention: arraySize is necessary, which isn't a variable
@@ -338,7 +323,6 @@ int num_elements = sizeof inarray / sizeof(int);	//the number of elements
 inarray = iarray;	//copy, but arrayName's not a left-value, so it's wrong
 iarray = {3, 2, 1};	//assign all value instead of initializing
 ```
-
 ## 2. C-style string
 C 语言中的字符串
 
@@ -357,11 +341,8 @@ char str3[] = "0123";	//let the compiler count
 char str4[] = "0123";
 std::strlen(str4)	//return 4, char num before \0 (it's not arraySize)
 ```
-
 ## 3. vector (向量: 数组的替代, 动态数据结构)
-
 $\color{blue}{vector\ need\ header:\ \langle vector\rangle}$
-
 ```c++
 //initializing ex.
 #include<vector>
@@ -377,14 +358,10 @@ vec1.push_back(99);	//similar to list.append(99) in python
 vec1.pop_back();	//remove an element from the end
 cout << vec[1] << endl;	//access elements by index
 ```
-
-
 ## 4. C++ style string
-
 可以视为 $vector \langle char\rangle$
 
 $\color{blue}{C++\ style\ string\ need \ header:\ \langle string\rangle}$
-
 ```c++
 //initializing ex.
 #include<string>
@@ -396,12 +373,9 @@ string s3(s2);	//copy
 
 s1 = s1 + s2;	//concatenate
 ```
+## 5. struct (结构体)  
 
-
-## 5. struct (结构体)
 ## 6. class (类)
-
-
 
 # CH.6 (Derived) 派生数据类型
 ## 1. pointer(指针)
@@ -434,6 +408,14 @@ ptr1 - ptr; // == 1, Pointer subtraction 指针相减
 ptr - ptr1; // == -1
 
 //const pointer常指针
-
+const int num = 3;
+// int *ptr1 = &num, 错误, 普通指针不能指向const变量, 正确的定义方式:
+const int *ptr2 = &num;
+// const 指针可以指向普通变量:
+int num0 = 4;
+ptr2 = &num0;
+// *ptr2 = 4 , 错误, const指针不能修改解引用后的值, 但可以修改指向的地址:
+const int num1 = 5;
+ptr2 = &num2;
 ```
 
