@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-06-12T10:24:27.004+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-08-14T21:48:31.540+08:00"}
 ---
 
 
-网页版(需要代理访问): [url to HW6 Answer](https://siecho-garden-git-main-siecho-yins-projects.vercel.app/EMD_answer/Answer%20for%20HW6/)
+web版: [url to HW6 Answer](https://siecho.cn/EMD_answer/Answer%20for%20HW6/)
 
 ```table-of-contents
 title: 
