@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/C++/C++ learner/","noteIcon":"","created":"2024-10-27T18:33:52.711+08:00","updated":"2025-08-07T16:44:44.422+08:00"}
+{"dg-publish":true,"permalink":"/C++/C++ learner/","noteIcon":"","created":"2024-10-27T18:33:52.711+08:00","updated":"2025-08-16T23:12:29.240+08:00"}
 ---
 
 
@@ -208,7 +208,7 @@ typename(variable);	//C-style
 
 int_object = static_cast<int>(float_object);	//C++-style, 将float对象转为int并赋值给新的int对象
 
-//其他强制转换类型的函数: const_cast, dynamic_cast, reinterpret_cast
+//其他强制转换类型的函数: const_cast, dynamic_cast, reinterpret_cast     (见后文)
 ```
 
 ## 4. 注释与换行
@@ -382,7 +382,7 @@ s1 = s1 + s2;	//concatenate
 ```c++
 //definition ex.
 int *ptr1;	//unsafe declaration
-int *ptr = NULL; //safe declaration, null pointer, its value is 0(or said 0x00000000).
+int *ptr = NULL; //safe declaration, null pointer, its value is 0(or said 0x00000000). *跟着int被编译, 表明是一个int*对象.
 int arr[5]={0};	int *ptr2 = arr; //safe declaration
 int num = 0;  int *ptr = &num;
 //! After definition, ptr means &num (address), while *ptr means num (value which is pionted to). At this moment, * is called "dereference operator"(解引用运算符).
@@ -404,18 +404,50 @@ int *ptr = array;
 *(ptr + 2); // == *(array + 2) == array[2] == 2
 *(ptr - 2); //unsafe, program may crash
 int *ptr1 = array + 1;
-ptr1 - ptr; // == 1, Pointer subtraction 指针相减
-ptr - ptr1; // == -1
+ptr1 - ptr // = 1, Pointer subtraction 指针相减
+ptr - ptr1 // = -1
 
-//const pointer常指针
+//指向const对象的指针
 const int num = 3;
-// int *ptr1 = &num, 错误, 普通指针不能指向const变量, 正确的定义方式:
-const int *ptr2 = &num;
+// int *ptr1 = &num; 错误, 普通指针不能指向const变量, 正确的定义方式:
+const int *ptr2 = &num;  //初始化, 表示对象是const int*, 即指向const int的指针
 // const 指针可以指向普通变量:
 int num0 = 4;
 ptr2 = &num0;
-// *ptr2 = 4 , 错误, const指针不能修改解引用后的值, 但可以修改指向的地址:
+// *ptr2 = 4; 错误, const指针不能修改解引用后的值, 但可以修改指向的地址:
 const int num1 = 5;
 ptr2 = &num2;
-```
 
+//const 指针
+int num1 = 3;
+int num2 = 4;
+int *const ptr1 = &num1;  //const指针初始化, 指向int的const指针
+ptr1 = &num2; //错误, const指针不能修改指向的地址
+
+//指向const的const指针
+const int *const int ptr2 = num3;
+ptr2 = num4;  //错误, 不能修改值; 也不能修改地址
+
+//数组的指针和指针的数组
+int arr[5] = {0, 1, 2, 3, 4};
+int (*arrPtr)[5] = &arr; //数组指针, ()表示指针指向整个数组
+int *ptrArr[5] = {&arr[0], &arr[1], &arr[2], &arr[3], &arr[4]}; //指针数组, 数组的每个元素都是int*指针
+// (*arrPtr)[i] == arr[i] == *(ptrArr[i])
+//arrPtr和*arrPtr代表的地址一致, 但用[i]下表引用后, 发现元素长度不一致
+
+//指针的指针
+int num = 3;
+int *numPtr = &num;  //类型是int*
+int **numPtrPtr = &numPtr;  //类型是int**, 指针(的)指针 
+
+//用const_cast修改const属性(增加或去除)
+int intNum = 2;
+const int &constIntNum = const_cast<int&>(intNum);  //const_cast后面必须跟引用或指针类型, 因为const修饰的是对象的储存而非具体值, 此处跟的是强制转为int后的引用
+int &IntNum = const_cast<int&>(constIntNum);  //也可以用于去除const属性
+const int *ptr = &intNum;
+int *nonConstPtr = const_cast<int*>(ptr);  //const_cast后可以跟指针, 此处去除了*ptr的const属性, 存为新指针nonConstPtr
+int intNum1 = 10;
+nonConstPtr = &intNum1;  //然后就可以修改值
+
+//reinterpret_cast重新解读数据类型
+```
