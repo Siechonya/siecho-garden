@@ -1,0 +1,1284 @@
+---
+{"dg-publish":true,"permalink":"/C++/1_Cpp基础/","noteIcon":"","created":"2024-10-27T18:33:52.711+08:00","updated":"2025-08-26T23:45:30.064+08:00"}
+---
+
+
+# 1 pre.
+## 1.1 procedures of compiling
+
+​	editor：edit code
+
+​	compiler：翻译为机器语言 $\rightarrow$ object code（.o）
+
+​	linking：link with lib && your code $\rightarrow$ 可执行代码
+
+```c++
+cin.get(); // 读取下一次键击，防止.exe“一闪而过”
+```
+
+# 2 Start to Learn C++
+​	<font color="#ff0000">C++对大小写敏感</font>
+## 2.1 function definition && function prototype（函数原型）
+```c++
+//an example of function prototype
+double pow(double, double);
+//an example of function definition
+type function_name(arguments_type, arguments){
+    statements;
+    return xxx;
+}
+```
+
+​	函数定义不能嵌套；
+## 2.2 iostream: standard input && output stream header(标准输入输出流库)
+```c++
+// if
+using namepace std; //使用命名空间(少用, 以免冲突)
+// then
+cout << ... << endl; && cin >> variable; //(不推荐)
+// else:
+std::cout << ... << std::endl; && std::cin >> variable; //(推荐)
+
+//attention:
+cin >> s1 >> s2;
+// ">>" can be interrupted by (space), 空格符被视为cin输入流的分割点
+// means that if you input "hello world!", then s1="hello", and s2="world!"
+```
+## 2.3 关键字
+## 2.4 pre-processor directives (预处理器命令)
+### 2.4.1 header file && linking (头文件和链接)
+```c++
+//Declaration && Definition
+//必须在变量和函数的定义之前声明，注意不同文件的定义可能冲突，两种方案：
+extern int num;	//num在其他文件定义,且不是static(局部变量)
+#include "header"	//num在头文件中定义
+//同一文件中的同一作用域中，变量不能声明两次, 而const可以重复定义
+```
+### 2.4.2 Macro(宏)
+```c++
+#define PI 3.14	//声明常量自变量
+//相比于const，这只是一种文本替换，在此用途下是不安全的
+
+//支持参数的宏定义
+#define max(a, b) (a > b ? a : b)
+
+//当然，因为是文本替换，甚至可以用其“定义”函数而不“声明”：
+#define print_pointer_of_num \
+				int *ptr = &number; \
+				cout << ptr <<endl;
+int number = 10;
+print_pointer_of_num;
+
+//也可以做传递参数的版本：
+#define print_pointer_of_num(num) \
+				int *ptr = &num; \
+				cout << ptr <<endl;
+int number = 10;
+print_pointer_of_num(number);
+```
+### 2.4.3 条件编译
+```c++
+//#if ... #endif 条件编译段可以框住代码段：
+#if 0
+#include "header.h"
+#define PI  3.14
+int a = 1;
+#endif 	/// 中间三行代码相当于被注释了，但只需修改为 #if 1　就可以解除注释
+
+//判断是否已经有相关的宏定义
+#ifndef PI
+#define PI 3.14
+#endif
+//等同于：
+#if !defined(PI)
+#define PI 3.14
+#endif
+
+//#elif #else也是可用的，记得结尾的 #endif
+```
+# 3 Simple Figure Type && Operation (简单数据类型和操作符)
+## 3.1 basic variables
+variables name // 变量名命名规则采取标识符规则, 即 :
+
+- 包含字母, 数字, 下划线
+- 不能以数字开头
+### 3.1.1 basic variables
+基本变量类型主要包括(s.d. 表示 significant digits（有效位数）) :
+
+| 整型(bit)        | 符号前缀     | 字符&小整数    | 布尔类型 | 浮点数(bit&s.d.)       | 自动   |
+| ------------- | ------- | -------- | --- | ------------------ | ---- |
+| short(16)      | signed   | char      | bool | float(32&6)         | auto |
+| int(32)        | unsigned | wchar_t   |      | double(64)          |      |
+| long(>32)      |          | char16_t  |      | long double(80~128) |      |
+| long long(>64) |          | char_32_t |      |                     |      |
+> addition:
+> 单独的 unsigned 指 unsigned int
+> cin 和 cout 将输入和输出视作 char stream，对于 wchar_t stream 应当用 wcin 和 wcout
+### 3.1.2 sizeof && typedef
+```c++
+sizeof(类型名 or 变量名);	//内置函数sizeof()返回字节数(bytes)
+typedef typename newname;	//typedef, 定义变量的别名
+```
+
+### 3.1.3 const(常量)限定符
+```c++
+//supposed to initialize when declaring(建议在声明的同时进行初始化)，ex：
+const int toes = value;
+```
+## 3.2 operators(操作符)
+
+| type操作符类型      | 符号                                  |
+| -------------- | ----------------------------------- |
+| 运算             | +, -, *, /, %                       |
+| 关系             | ==, !=, >, <, >=, <=                |
+| 逻辑             | &&, \|\|, !                         |
+| 位运算            | 略                                   |
+| 自增自减           | ++, --                              |
+| 运算赋值           | =, +=, -=, /=, *=, %=               |
+| 位操作赋值          | 略                                   |
+| 条件操作           | ?=                                  |
+| 逗号（返回最右端操作数的值） | <expression_1>, <expression_2>, ... |
+
+```c++
+// ?= 条件操作符的运用
+<expression> ? <when expression True> : <when expression False>;
+//the result of <expression> is bool (表达式的值是布尔类型)
+//可以嵌套
+```
+
+操作符优先级: 略(建议适当多使用括号)
+
+```c++
+// attention：int/int = int, 解决方式:
+std::cout.setf(ios_base::fixed, ios_base::floatfield); // fixed-point,阻止科学计数法表示
+```
+## 3.3 type conversion
+### 3.3.1 implicit（隐式转换）
+$$
+\begin{array}c
+bool\rightarrow char\rightarrow unsigned\ char\rightarrow\ short(wchar\_t)\rightarrow\ unsigned short(wchar\_t)\rightarrow int\rightarrow unsigned\ int
+\\\rightarrow long\ int\rightarrow unsigned\ long\ int\rightarrow float\rightarrow double\rightarrow long\ double
+\end{array}
+$$
+```c++
+//in general，转换方向是：低精度->高精度，短字节->长字节，signed->unsigned
+//while, there's some special case:
+//(1)右值转换成左值的类型, 比如float运算赋值给int变量
+//(2)条件操作符 ||　条件语句　将<expression>转换成bool：0->False
+```
+### 3.3.2 forced/explicit（强制/显式转换）
+```c++
+// ex.
+typename(variable);	//C-style
+(typename)variable;
+//attention: 上述操作仅在表达式中暂时利用转换后的类型, 未改变原本对象的类型
+
+int_object = static_cast<int>(float_object);	//C++-style, 将float对象转为int并赋值给新的int对象
+
+//其他强制转换类型的函数: const_cast, dynamic_cast, reinterpret_cast     (见后文)
+```
+## 3.4 注释与换行
+```c++
+//双斜线表示单行注释
+
+/*
+成对或多行注释使用 /* ... */
+*/
+
+//用 "\" 对代码进行换行:
+xxxxxxxxxxxxxxxx \
+    xxxxxxxxxxxxxxxxxxx;
+```
+# 4 Statements (语句)
+## 4.1 simple statement
+```c++
+//空语句(NULL)
+;
+```
+## 4.2 complex statement(复合语句)
+### 4.2.1 条件语句
+#### a. if
+```c++
+//if
+if(<expression>){
+    //when <expression>'s True
+    xxxxxxx;
+} else if(<semi-expression>){	//when <expression>'s False
+    //when <semi-expression>'s True
+    xxxxxxx;
+}
+//.........
+else{
+    //when all of the expreesions' False
+    xxxxxx;
+}
+```
+#### b. switch
+```c++
+//switch:适合枚举
+switch(object){
+    case 0:	//if object==0
+        xxxxxxx;
+        break;	//否则，将依次执行后面case下的语句xxxxxxx;（无视case条件），称为"fall-through"
+    case 1:
+        xxxxxxx;
+        break;
+    //......
+    default:
+        xxxxxxxx;
+        break;
+}
+```
+
+### 4.2.2 循环语句
+#### a. while
+```c++
+//while
+while(<expression>){
+    xxxxxxxx;	//if <expression> is True
+}
+```
+#### b. do...while
+```c++
+//do...while
+do{
+    xxxxxx;	//if <expression> is True
+}while(<expression>);
+```
+#### c. for
+```c++
+//for
+for(int i=0; i<10; i++){
+    xxxx;
+}
+```
+### 4.2.3 跳转语句
+```c++
+//break：jump out of one loop body
+
+//continue：end this loop in advance，start to next loop straightly
+
+//goto
+label:
+	xxxxxxxx;
+if(<expression>){
+    goto label;
+}
+```
+# 5 Compound (复合数据类型)
+## 5.1 array (数组)
+### 5.1.1 静态数组
+大小是固定的.
+```c++
+typename arrayName[arraySize];	//declaration
+//attention: arraySize is necessary, which isn't a variable
+char week[7];	//create array of 7 short, the last index is std::strlen(week) - 1
+week[0] = 'm';	//assign value
+int iarray[3] = {1, 2, 3};	//initializing
+int iarray[3]{1, 2, 3};	//initializing, okay with c++11
+int iarray[3] = {1, 2};	//initializing, non-assigned elements' going to be set to 0
+int iarray[3] = {};	//initializing, all elements will be set to 0
+char week[7] = "mtwsfss";	//initializing
+int inarray[] = {2, 3, 4};	//initializing without arraySize, initialization is necessary
+int num_elements = sizeof inarray / sizeof(int);	//the number of elements
+
+// !not allowed operations
+inarray = iarray;	//copy, but arrayName's not a left-value, so it's wrong
+iarray = {3, 2, 1};	//assign all value instead of initializing
+```
+### 5.1.2 动态数组  
+> 内存分配
+- malloc()和 free(): 继承自 C 语言
+```C++
+// malloc() 在内存空间堆(Heap)中分配指定字节数的内存
+// 与作用域中在栈(Stack)分配内存的局部变量不同, 堆中的内存一旦分配, 就不会自动释放, 直到调用free()函数
+int *arr = (int*)malloc(5 * sizeof(int));  //malloc分配5 * sizeof(int)大小的内存(分配单位是字节), 由于malloc()返回 void*, 所以要转为所需的 int* 
+int *ptr = arr;
+for(int i = 0; i < 5; i++){
+	*ptr = i;
+	cout << *ptr <<"";
+	ptr++;  //可与上一行一同简写为: cout << *(ptr++) << "";
+}
+cout << endl;
+free(arr);  // 最后用free()函数释放内存, 否则发生内存泄漏(Memory Leak)
+arr = NULL; //释放后指针赋值为 NULL, 这是一个好习惯
+```
+- new 和 delete 操作符: C++
+```C++
+int *numPtr = new int(3);  //和malloc类似, 但直接分配了int: 3的内存, 并且无需类型转换, 但new操作符仍旧创建的是一个指针; 也可以用 int *numPtr = new int, 表示只分配空间但未赋值
+delte numPtr;  //释放
+
+int *arr = new int[5];  // 类似malloc, 分配了一段能放下5个int大小的内存
+int *ptr = arr;
+for(int i = 0; i < 5; i++){
+	*ptr = i;
+	cout << *ptr <<"";
+	ptr++;  //可与上一行一同简写为: cout << *(ptr++) << "";
+}
+cout << endl;
+delte [] arr;  // 加上方括号[]表示释放整个指针类型大小的空间, 而不是只删除数组的第一个int元素
+arr = NULL; //释放后指针赋值为 NULL, 这是一个好习惯
+```
+
+```C++
+// 动态分配二维数组
+#include <iostream>
+using namespace std;
+int main()  
+{  
+	const int dim = 3;  
+	// 动态分配一维数组:
+	int *ptr = new int[dim * dim];  
+	// 然后将指针转成二维数组的指针, 也就是指向一维数组的指针(数组指针):
+	int (*mat)[dim] = (int(*)[dim])ptr;  // int (*mat)[dim]声明一个dim大小的数组指针, ()表示*mat的优先级更高, 即声明一个名为mat的指针. (int(*)[dim])ptr 将 ptr转换为指向 int[dim] 的数组指针的类型, (*)表示明确为数组指针而不是指针数组.
+	for ( int i = 0; i < dim; i++ ) {
+		for ( int j = 0; j < dim; j++ ) {
+			mat[i][j] = i * dim + j;
+		}
+	}  
+	for ( int i = 0; i < dim; i++ ) {  
+		for ( int j = 0; j < dim; j++ ) {
+			cout << mat[i][j] << " ";
+		}
+		cout << endl;
+	}  
+	delete[] ptr;  	//释放内存时只需要操作一开始的一维数组指针就行, []的左右有没有空格都无所谓
+	return 0;  
+}
+---------------------------------------
+输出:
+0 1 2 
+3 4 5 
+6 7 8
+```
+### 5.1.3 多维数组
+```C++
+// 初始化
+int arr1[3][3] = { {0, 1, 2},
+						 {3, 4, 5},
+						 {6, 7, 8} };
+int arr2[3][3] = { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
+int arr3[2][2][2] = { { {0, 1},
+								{2, 3} },
+								{ {4, 5},
+								   {6, 7} } };
+								   
+// 遍历: 使用多个计数器实现
+int arr1[3][3] = { {0, 1, 2}, 
+                  		  {3, 4, 5}, 
+                   		  {6, 7, 8} };
+for ( int i = 0; i < 3; i++ ) {
+	for ( int j = 0; j < 3; j++ ) {
+		cout << arr1[i][j] << " ";
+	}
+	cout << endl;
+}
+```
+## 5.2 C-style string (C 语言风格字符串)
+'' refer to char(ASCII), while "" refer to str.
+
+$\color{blue}{C-style\ string\ need\ header:\ \langle cstring\rangle}$
+
+```c++
+#include<cstring>
+char str1[5] = {'0', '1', '2', '3', '\0'};	//a string must with '\0' at th end, otherwise called char array
+char str2[5] = "0123";	//the same, and the '\0' is understood
+char str3[] = "0123";	//let the compiler count itself
+//attention: as counting the arraySize, '\0' inclued
+"123""456";	//str concatenation
+
+char str4[] = "0123";
+std::strlen(str4)	//return 4, char num before \0 (it's not arraySize)
+```
+
+```C++
+// 结尾一定要有个"\0"
+const char *str1 = "Hello";
+cout << (int)str1[5] << endl;  //输出int:0, 由'\0'转换得到(ASCII码为0)
+```
+
+C 风格的字符串是一个指针, 只有开头字符地址的信息, 所以需要空字符'\0'判断 string 是否结束.
+## 5.3 vector (向量: 数组的替代, 动态数据结构)
+$\color{blue}{vector\ need\ header:\ \langle vector\rangle}$
+```c++
+//initializing ex.
+#include<vector>
+vector<int> vec0; //only declare, vec0 is null
+vector<int> vec00(3); //declare a int vector with length of 3, it's elements are default initial value
+vector<int> vec1(3, 100); //declare a int vector with length of 3, all of it's elements are 100
+
+//some operations
+vector<int> vec2(vec1);	//copy vec1 to vec2, 深拷贝deep copy
+vec1.size();	//similar to string.length()
+vec1.empty();	//return True when vec1's empty
+vec1.push_back(99);	//similar to list.append(99) in python
+vec1.pop_back();	//remove an element from the end
+cout << vec[1] << endl;	//access elements by index
+```
+## 5.4 C++ style string
+可以视为 $vector \langle char\rangle$
+
+$\color{blue}{C++\ style\ string\ need \ header:\ \langle string\rangle}$
+```c++
+//initializing ex.
+#include<string>
+string s1(3, 'a');
+string s2("s2's value");
+string s3(s2);	//copy
+
+//we can apply string, same as vector<char>
+
+s1 = s1 + s2;	//concatenate, 很方便
+```
+## 5.5 struct (结构体)  
+## 5.6 class (类)  
+见 [[C++/2_Cpp面向对象编程#1 类和继承\|C++面向对象编程]].
+# 6 Derived (派生数据类型)
+## 6.1 pointer(指针)
+```c++
+//definition ex.
+int *ptr1;	//unsafe declaration
+int *ptr = NULL; //safe declaration, null pointer, its value is 0(or said 0x00000000). *跟着int被编译, 表明是一个int*对象.
+int arr[5]={0};	int *ptr2 = arr; //safe declaration
+int num = 0;  int *ptr = &num;
+//! After definition, ptr means &num (address), while *ptr means num (value which is pionted to). At this moment, * is called "dereference operator"(解引用运算符).
+
+typename *type1_ptr, *type2_ptr; //right
+int* ptr1, ptr2; //prt1 is a pointer, while ptr2 is int
+
+void *ptr; //a pointer, but we don't kown type that it points to. Usually uesd in certain function which handles systemic memory.
+
+// basic operation 基本操作
+int num = 0;
+int *ptr = &num;
+&num; //Get address取地址 ==ptr
+*ptr; //dereference解引用 ==num
+
+// arithmetical operation 算术操作
+int array[5] = {0, 1, 2, 3, 4};
+int *ptr = array;
+*(ptr + 2); // == *(array + 2) == array[2] == 2
+*(ptr - 2); //unsafe, program may crash
+int *ptr1 = array + 1;
+ptr1 - ptr // = 1, Pointer subtraction 指针相减
+ptr - ptr1 // = -1
+
+//指向const对象的指针
+const int num = 3;
+// int *ptr1 = &num; 错误, 普通指针不能指向const变量, 正确的定义方式:
+const int *ptr2 = &num;  //初始化, 表示对象是const int*, 即指向const int的指针
+// const 指针可以指向普通变量:
+int num0 = 4;
+ptr2 = &num0;
+// *ptr2 = 4; 错误, const指针不能修改解引用后的值, 但可以修改指向的地址:
+const int num1 = 5;
+ptr2 = &num2;
+
+//const 指针
+int num1 = 3;
+int num2 = 4;
+int *const ptr1 = &num1;  //const指针初始化, 指向int的const指针
+ptr1 = &num2; //错误, const指针不能修改指向的地址
+
+//指向const的const指针
+const int *const int ptr2 = num3;
+ptr2 = num4;  //错误, 不能修改值; 也不能修改地址
+
+//数组的指针和指针的数组
+int arr[5] = {0, 1, 2, 3, 4};
+int (*arrPtr)[5] = &arr; //数组指针, ()表示指针指向整个数组
+int *ptrArr[5] = {&arr[0], &arr[1], &arr[2], &arr[3], &arr[4]}; //指针数组, 数组的每个元素都是int*指针
+// (*arrPtr)[i] == arr[i] == *(ptrArr[i])
+//arrPtr和*arrPtr代表的地址一致, 但用[i]下表引用后, 发现元素长度不一致
+
+//指针的指针
+int num = 3;
+int *numPtr = &num;  //类型是int*
+int **numPtrPtr = &numPtr;  //类型是int**, 即指针(的)指针 
+
+//用const_cast修改const属性(增加或去除)
+int intNum = 2;
+const int &constIntNum = const_cast<int&>(intNum);  //const_cast后面必须跟引用或指针类型, 因为const修饰的是对象的储存而非具体值, 此处跟的是强制引用为int
+int &IntNum = const_cast<int&>(constIntNum);  //也可以用于去除const属性
+const int *ptr = &intNum;
+int *nonConstPtr = const_cast<int*>(ptr);  //const_cast后可以跟指针, 此处去除了*ptr的const属性, 存为新指针nonConstPtr
+int intNum1 = 10;
+nonConstPtr = &intNum1;  //然后就可以修改值
+
+//reinterpret_cast重新解读数据类型
+int intNum = 0x00646362;
+int *intPtr = &intNum;
+char *str = reinterpret_cast<char*>(intPtr);  //将int*转换为了char*, 十六进制的64, 63, 62分别是b, c, d, 所以str是"bcd"
+
+// 函数指针
+// 见7.6
+```
+## 6.2 Alias(引用)  
+引用的本质是一个变量的别名(Alias), 因此一定要和某个变量绑定.
+```C++
+// 基本用法
+int num = 3;
+int &numRef = num;  // 引用的初始化. 此时 numRef = num = 3.
+numRef = 4; // 此时numRef = num = 4, num也被修改 (numRef只是num的别名)
+int num1 = 5;
+numRef = num1;  //只是将num的值改为num1的值, 没有让numRef指代num1, 而始终是num的引用/别名
+
+// const引用 (防止使用别名将const对象纂改)
+const float pi = 3.1415926f;
+const float &piConstRef = pi;  //const引用
+float &piRef = pi;  //错误, 不能将非const引用绑定到const变量
+```
+
+## 6.3 堆(Heap) & 栈(Stack)
+都是内存中一块有限区域, 可分配存放各种数据.
+
+| 堆                                                                                                                                                                                                                                                          | 栈                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| $\quad$ 由程序员在程序中指定分配的。在使用了 malloc（或 new 之后，系统会从堆中查找大小合适的空位，并将地址返回，数据就储存在那里。  <br>$\quad$ 这有点像酒店，前台找到一个空房间后将房间的钥匙交给顾客，顾客就可以入住；而根据顾客的人数不同，前台也会寻找不同的房间分配给客人入住，如单人顾客将会住进大床房，而同一家庭的顾客会住进家庭房或套房。  <br>$\quad$ 堆的内存分配不像栈，它是随机分配的。可能会出现小块的空缺，导致塞不下大块数据，这也就是碎片化的问题。 | $\quad$ 由系统自动分配给局部变量或函数参数的，并且紧密地朝着一个方向分配。  <br>$\quad$ 我们可以把栈看成一个盒子，在里面放各种东西时，东西只能往上放。也就是说在局部变量定义的时候，系统把局部变量放到现有的其他数据的上面，到了作用域结束的时候把变量拿出来以销毁变量，接下来的局部变量又可以使用这块空间了。 |
+除了栈和堆之外，C+＋程序还有别的内存分区，它们在程序运行前都是确定的。数据区用来存放全局变量、静态变量和字面常量，其中初始化和未初始化的变量分别放在两个区域，而只读的常量或字符串字面量等放在只读区域。代码区则是用来存放各个函数体的二进制代码，在程序执行的时候从中获取指令.
+# 7 Functions (函数)
+## 7.1 简介  
+### 7.1.1 定义  
+```C++
+// 函数定义ex.
+int max(int a, int b){
+	return ((a > b) ? a : b);
+}
+
+返回值类型 函数名(形参类型 形参1, 形参类型 形参2, ...){
+	...  // 函数体
+}
+
+ReturnType FunctionName(Parameter1Type Parameter1, ...){
+	...  // FunctionBody
+}
+
+// 函数签名(Function Signature)/接口(Interface): 函数体之外的函数名&形参&返回值这三者的整体, 用户可互动/看得见的部分(类似按钮/旋钮).
+```
+### 7.1.2 调用  
+```C++
+// 函数调用ex.
+# include <iostream>  // tips: include后面有没有空格都无所谓
+using namespace std
+
+int max(int a, int b){
+	return ((a > b) ? a : b);
+}
+
+int main(){
+	int a = 3;
+	int b = 4;
+	int c = max(a, b); //函数调用, 使用Function Call Operator "()" (函数调用操作符)
+}
+
+函数名(实参1, 实参2, ...)  // 实参(Argument)
+```
+### 7.1.3 作用域  
+- 函数中定义的变量作用域为函数本体(函数内使用的变量优先级: 函数中定义的 > main 等中定义的 > main 之外定义的全局变量)
+- 局部作用域块依旧会屏蔽块外定义的变量, 即代码使用块内往前最近定义的变量
+- 全局变量对函数内/作用域块内均可见
+```C++
+#include <iostream>
+#include<string>
+using namespace std;
+void printSomething() {
+	string something = "Function(outside block)";
+	{
+		string something = "Function(inside block)";
+		cout << "before printSomething, something is: " << something << endl;
+	}
+	cout << "after printSomething, something is: " << something << endl;
+}
+int main() {
+	// printSomething中变量something的定义不可见
+	string something = "main";
+	printSomething();
+	cout << "in main, something is: " << something << endl;
+	return 0;
+}
+-----------------------------------------
+输出:
+before printSomething, something is: Function(inside block)
+after printSomething, something is: Function(outside block)
+in main, something is: main
+```
+### 7.1.4 参数  
+- 实参的个数&类型需要与形参一一对应
+- 形参为 0 时, 调用时实参可以写 void 以明确不需要参数: `Function(void);`
+### 7.1.5 返回值  
+- 函数头和函数体的返回值类型需要一致
+- void 函数可以实现提前返回(因为可以用 `retur;`, 以及, 不是 void 函数也可以提前返回):
+```C++
+#include <iostream>
+using namespace std;
+void doNothingForOne(int num) {
+	if ( num == 1 ) {
+		return;  //提前返回
+	}
+	cout << "num is: " << num << endl;
+}
+
+int main() {
+	doNothingForOne(0);
+	doNothingForOne(1);
+	doNothingForOne(2);
+	return 0;
+}
+--------------------------------------
+输出:
+num is: 0
+num is: 2
+```
+### 7.1.6 静态局部对象
+和函数绑定的变量, 不会随着函数的返回而销毁, 同时作用域仍是局部的. (可用作计数器)  
+```C++
+void printAndCnt(int num) {
+	static int cnt = 0;  // 局部静态变量
+	cnt++;
+	cout << "打印数字：" << num << endl;
+	cout << "函数被调用了" << cnt << "次" << endl;
+}
+```
+## 7.2 Argument Passing(参数传递)
+将实参(argument)传递, 赋值给形参(parameter).
+### 7.2.1 按值传递  
+略  
+### 7.2.2 指针传递  
+形参为指针, 实参为指针.
+```C++
+// 指针传递实现swap
+include <iostream>
+using namespace std;
+void swap(int *pa, int *pb) {
+	int temp = *pa;
+	*pa = *pb;
+	*pb = temp;
+	cout << "at the end of swap(), a is " << *pa << ", b is " << *pb << endl;
+}
+
+int main() {
+	int a = 3;
+	int b = 4;
+	cout << "before swap, a is " << a << ", b is " << b << endl;
+	swap(&a, &b);
+	cout << "after swap, a is " << a << ", b is " << b << endl;
+	return 0;
+}
+---------------------------------------
+输出:
+before swap, a is 3, b is 4
+at the end of swap(), a is 4, b is 3
+after swap, a is 4, b is 3
+``` 
+### 7.2.3 引用传递  
+形参为引用, 实参为值.  
+```C++
+// 引用传递实现swap
+#include <iostream>
+using namespace std;
+void swap(int &a, int &b) {
+	int temp = a;
+	a = b;
+	b = temp;
+	cout << "at the end of swap(), a is " << a << ", b is" << b << endl;
+}
+int main() {
+	int a = 3;
+	int b = 4;
+	cout << "befor swap, a is " << a << ", b is " << b << endl;
+	swap(a, b);
+	cout << "after swap, a is " << a << ", b is " << b << endl;
+	return 0;
+}
+----------------------------------------
+输出:
+befor swap, a is 3, b is 4
+at the end of swap(), a is 4, b is3
+after swap, a is 4, b is 3
+```
+
+```C++
+#include <iostream>
+using namespace std;
+// 使用指针&引用 参数实现"额外的返回值"
+// 通过指针参数修改min, 通过引用参数修改max
+void getMinAndMax(int a, int b, int *min, int &max) {
+	*min = a < b ? a : b;
+	max = a > b ? a : b;
+}
+int main() {
+	int a = 3;
+	int b = 4;
+	int min = 0;
+	int max = 0;
+	getMinAndMax(a, b, &min, max);
+	cout << "max is " << max << endl;
+	cout << "min is " << min << endl;
+	return 0;
+}
+-------------------------------------
+输出:
+max is 4
+min is 3
+```
+
+### 7.2.4 const 参数  
+放置写函数实现时修改了参数, 常用于指针和引用参数(语义清晰和代码规范).  
+```C++
+#include <iostream>
+#include <string>
+using namespace std;
+// const引用参数
+char getLastChar(const string &str) {
+	// str[str.length() - 1] = 's';  // 把这行注释掉程序就能正常运行
+	return str[str.length() - 1];
+}
+
+int main() {
+	string str = "hello";
+	cout << "the last char of str is " << getLastChar(str) << endl;
+	return 0;
+}
+--------------------------------
+输出:
+the last char of str is o
+```
+
+注意, 如果采取 `return str[str.length()]`, 将返回空字符串 `\0`.
+### 7.2.5 数组参数  
+数组名自动转换为指向第一个元素的指针.  
+```C++
+#include <iostream>
+using namespace std;
+// 数组参数
+void printArrAddr(int arrParam[]) {  //最好加一个 int size 参数(编译器忽略了数组的大小)
+	cout << "the address of arrParam is " << arrParam << endl;
+}
+int main() {
+	int arr[5] = { 0, 1, 2, 3, 4 };
+	cout << "the address of arr is " << arr << endl;
+	printArrAddr(arr);
+	return 0;
+}
+--------------------------------
+输出:
+the address of arr is 0x7ffcb576a130
+the address of arrParam is 0x7ffcb576a130
+```
+### 7.2.6 main() 函数的参数  
+`int main(int argc, char**argv)` 中, argc 是命令行中输入参数的个数, argv 才是参数字符串的数组, argv[0]是项目名. 例如 `./program 10 20 --help` 中，`"./program"`、`"10"`、`"20"`、`"--help"` 都是参数.
+```C++
+#include <iostream>
+#include <cstring>  // For strcmp function
+using namespace std;
+
+int main(int argc, char**argv) { // 第二个参数等同于 char* argv[], 即字符串数组, 外层的 '*/'[]' 表示可以指向任意数量的 'char*' 元素(即参数数量可变); 内层的 'char*' 表示每个参数可以是任意长度的字符串(只要以 `\0` 结尾).
+    // Check for --help parameter
+    for (int i = 1; i < argc; i++) {  // Start from 1, skip program name (argv[0])
+        if (strcmp(argv[i], "--help") == 0) {  // Compare C-style strings with strcmp
+            cout << "Program function: Calculate the sum of all input numbers" << endl;
+            cout << "Usage:" << endl;
+            cout << "  " << argv[0] << " [number1] [number2] ..." << endl;
+            cout << "  " << argv[0] << " --help  display this help information" << endl;
+            return 0;  // Exit after showing help
+        }
+    }
+    // Calculate sum if no --help parameter
+    int sum = 0;
+    for (int i = 1; i < argc; i++) {  // Start from 1, skip program name
+        sum += atoi(argv[i]);  // atoi() convert C-style string to integer
+    }
+    cout << "The sum of all input numbers is: " << sum << endl;
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------------
+使用的运行命令是:
+cd ./C++\ code/build
+cmake ../..
+make
+echo -e "run case\n-----------------------\n-----------------------\n"
+./case --help  // 使用--help参数
+./case 1 2 3 4 5
+echo -e "\n\n-----------------------\n-----------------------\n end case"
+----------------------------------------------------------------------------------------------------------------------
+输出:
+(tf_env) siecho@siecho-book:~/Desktop/zj_obsidian/C++$ ./build.sh 
+-- C++ Compiler: GNU
+-- C++ Compiler Path: /usr/bin/c++
+-- C++ Compiler Version: 13.3.0  //这几行输出来自CMakeLists的设置
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/siecho/Desktop/zj_obsidian/C++/C++ code/build
+[100%] Built target case  // 这几行是make的过程
+run case
+-----------------------
+-----------------------
+
+Program function: Calculate the sum of all input numbers
+Usage:
+  ./case [number1] [number2] ...
+  ./case --help  display this help information
+The sum of all input numbers is: 15
+
+
+-----------------------
+-----------------------
+ end case
+```
+## 7.3 函数返回值  
+### 7.3.1 返回值或对象  
+和参数传递是一样的赋值操作, 只不过是从内赋值到外. 
+> 一般对于函数返回值有两层的拷贝, 而传参只有一层. 如, 用 `int a = func(b)` 时, `func() ` 函数的 return 语句先把要返回的变量拷贝到 `func(b)` 所代表的返回值中, 再把 `func(b)` 拷贝到a.  
+> 
+
+> 函数调用端 `int func()` 将返回值赋给变量 `float variable` 时, 会有隐式转换; 类型完全不匹配(无法隐式转换时)会报错.  
+### 7.3.2 返回引用  
+函数的返回值可以是引用类型.  
+```C++
+// 返回局部对象的引用
+#include <iostream>
+#include <string>
+using namespace std;
+string &retLocal() {
+	string ret = "Hello";
+	string &retRef = ret;
+	return retRef;
+}
+
+int main() {
+	cout << "the return of retLocal() is " <<  retLocal() << endl;
+	return 0;
+}
+-------------------------------------------------------
+输出:
+the return of retLocal() is Hello
+```
+
+### 7.3.3 返回指针  
+```C++
+#include <iostream>
+using namespace std;
+int *allocIntArr(int size) {
+	// 给一个int数组分配空间
+	int *ret = (int*)malloc(size * sizeof(int));
+	return ret;
+}
+
+void releaseIntArr(int *intArr) {
+	// 清理数组占用的空间
+	delete intArr;
+}
+
+int main() {
+	int size = 5;
+	int *intArr = allocIntArr(size);
+	// 给数组赋值
+	for ( int i = 0; i < size; i++ ) {
+		intArr[i] = i;
+	}
+	// 打印查看数组元素
+	for ( int i = 0; i < size; i++ ) {
+		cout<< "print the " << i << "-th element of array: " << intArr[i] << endl;
+	}
+	releaseIntArr(intArr); // 与分配空间的allocIntArr(size)函数成对调用
+	return 0;
+}
+------------------------------------------------------
+输出:
+print the 0-th element of array: 0
+print the 1-th element of array: 1
+print the 2-th element of array: 2
+print the 3-th element of array: 3
+print the 4-th element of array: 4
+```
+
+### 7.3.4 main() 函数的返回值  
+`main()` 函数的调用端是操作系统, 一般用 `return 0;` 作为 `main()` 的返回值表示程序运行状态正常.  
+## 7.4 函数声明  
+### 7.4.1 函数声明和函数定义  
+和变量一样, 函数的声明和定义可以分离. 一般将包含函数原型(或函数签名)的函数声明集中放在头文件 `.h`, 作为用户需要查看的接口集合. 一个头文件只要存在函数声明, 编译器就知道在这个文件 `.h` 中的这个函数是可用的, 然后在链接时会去其他文件 `.cc / .cpp / ...` 找有没有这样的函数.
+
+注意: 在同一个作用域中相同的函数的定义只能出现一次, 否则报错"重定义(<font color="#ff0000">error: </font>redefinition)". 但是重复声明是可行的, 函数声明也可以省略形参的名字, 只保留形参类型.
+```C++
+#include <iostream>
+using namespace std;
+// 函数重复声明
+int max(int a, int b) {
+	return a > b ? a : b;
+}
+int max(int a, int b);
+int max(int, int);  // 重复声明
+int main() {
+	cout << "the maximum between a and b: " << max(3, 4) << endl;
+	return 0;
+}
+----------------------------------------------------------------------
+输出:
+the maximum between a and b: 4
+```
+
+更常见的, 我们常常把函数声明 && 函数定义 && 主函数分别放在三个文件:  
+```C++
+7.4.3.h:
+#pragma once  //头文件也可以放一些常量
+int max(int a, int b);
+---------------------------------------------------------------------------------------------
+7.4.3.cpp:
+#include "7.4.3.h"  // 设置自动查找的路径后, 若路径内有该.h文件, 就可将该行注释掉
+int max(int a, int b) {
+	return a > b ? a : b;
+}
+---------------------------------------------------------------------------------------------
+7.4.3_main.cpp:
+#include <iostream>
+#include "7.4.3.h"
+using namespace std;
+// 函数定义和声明不在一个文件中
+int main() {
+	cout << "the maximum between a and b: " << max(3, 4) << endl;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------
+两个.cpp文件都要编译
+--------------------------------------------------------------------------------------------------------------------------
+输出:
+the maximum between a and b: 4
+```
+### 7.4.2 默认参数
+函数定义时可以预先给定一些 default 参数, default 形参在参数列表的末尾(变量形参之后), 实参与形参的顺序依旧是一一对应.  
+```C++
+#include <iostream>
+using namespace std;
+void printDate(int day, int month = 12, int year = 2018) {  // default 形参放在后面
+	cout << "today is " << year << "/" << month << "/" << day << endl;
+}
+int main() {
+	printDate(30, 11);  // 实参与形参(含default)按顺序一一对应
+	printDate(24);
+	return 0;
+--------------------------------------------------------------
+输出:
+today is 2018/11/30
+today is 2018/12/24
+```
+### 7.4.3 内联函数  
+在函数定义前加上关键字 `inline`, 这样的函数叫内联函数(inline function).   
+
+|**维度**|**普通函数**|**内联函数**|
+|---|---|---|
+|**声明方式**|无需特殊关键字（如`void func();`）|需用`inline`关键字声明（如`inline void func();`）|
+|**编译后形式**|生成独立的函数代码块（有固定地址）|不生成独立代码块，函数体被 “复制” 到每个调用处|
+|**调用开销**|有明显开销（上下文保存、跳转、恢复，约几个 CPU 时钟周期）|无调用开销（直接执行展开的代码）|
+|**编译器态度**|严格按照 “独立函数” 处理，调用流程固定|`inline`是 “建议” 而非 “强制”—— 编译器可忽略（如函数体大、有递归时，会自动按普通函数处理）|
+|**头文件放置**|声明放头文件（`.h`），定义放源文件（`.cpp`）（避免多重定义）|定义需放头文件（`.h`）—— 因为编译器需在调用处看到函数体才能展开|
+|**适用场景**|函数体大（如超过 10 行代码）、调用不频繁、有递归 / 循环、需动态绑定（虚函数）|函数体小（如 1-5 行代码）、调用频繁（如循环内调用）、简单逻辑（如 getter/setter）|
+|**与虚函数的关系**|虚函数可以是普通函数（支持动态绑定）|虚函数通常不能内联（因为虚函数调用需运行时确定地址，编译器无法提前展开）|
+## 7.5 Overloading (函数重载)
+两个函数的功能相近, 只是形参的类型不一致, 则可以合法声明两个名称相同的函数. <font color="#ff0000">函数重载即同一作用域中, 形参表不同的函数</font>.
+```C++
+#include <iostream>
+using namespace std;
+
+bool isEqual(int a, int b) {
+	return a == b;
+}
+
+bool isEqual(float a, float b) {  //重载
+	return abs(a - b) < 0.00001; //随意指定一个判断阈值
+}
+
+int main() {
+	int a = 3;
+	int b = 3;
+	float fa = 3.0f;
+	float fb = 3.001f;
+	cout << "two intergers ";
+	if ( !isEqual(a, b) ) {
+		cout << "aren't ";
+	}
+	cout << "equal." << endl;
+
+	cout << "two float ";
+	if ( !isEqual(fa, fb) ) {
+		cout << "aren't ";
+	}
+	cout << "equal." << endl;
+	return 0;
+}
+--------------------------------------------------------------------------
+输出:
+two intergers equal.
+two float aren't equal.
+```
+### 7.5.1 函数重载的定义  
+内层作用域的重名函数的定义/声明会屏蔽外层函数的定义, 编译器不会搜寻外层的同名函数定义. 例如:
+```C++
+// 函数屏蔽
+#include <iostream>
+using namespace std;
+int add(int a, int b) {
+	return a + b;
+}
+
+int main() {
+	{ 		// 内层作用域的函数声明屏蔽了外层可用的函数定义
+		int add(int a, int b, int c);
+		int a = 4;
+		int b = 5;
+		cout << "a + b = " << add(a, b) << endl;
+	}
+	return 0;
+}
+
+int add(int a, int b, int c) {
+	return a + b + c;
+}
+```
+<span style="line-height:2;">会报错:</span>  
+![z_figure/Pasted image 20250824205109.png](/img/user/z_figure/Pasted%20image%2020250824205109.png)
+<span style="line-height:2;">所以只有相同作用域中的函数才存在函数重载. 为区分函数重载与重定义(报错), 给出一些例子:  </span>
+```C++
+// 似是而非的函数重复定义
+#include <iostream>
+using namespace std;
+
+// 默认实参不改变形参的性质(重定义)
+int add(int a, int b) { return 0; };
+int add(int a, int b = 0) { return 0; };
+// typedef不改变类型的实质(重定义)
+typedef int num;
+int rcp(num a) { return 0; };
+int rcp(int a) { return 0; };
+// 非引用或指针类型的形参加const(重定义)
+int neg(const int a) { return 0; };
+int neg(int a) { return 0; };
+// 引用和指针类型的加上const(重载)
+int neg(const int* a) { return 0; };
+int neg(int *a) { return 0; };
+
+int main() {
+	return 0;
+}
+```
+此外, main()函数不可重载.
+### 7.5.2 重载解析简介
+重载解析指的是, 在函数调用时, 编译器会寻找一个和实参列表匹配的重载版本. 重载解析的步骤:
+<style> .container {font-family: sans-serif; text-align: center;} .button-wrapper button {z-index: 1;height: 40px; width: 100px; margin: 10px;padding: 5px;} .excalidraw .App-menu_top .buttonList { display: flex;} .excalidraw-wrapper { height: 800px; margin: 50px; position: relative;} :root[dir="ltr"] .excalidraw .layer-ui__wrapper .zen-mode-transition.App-menu_bottom--transition-left {transform: none;} </style><script src="https://cdn.jsdelivr.net/npm/react@17/umd/react.production.min.js"></script><script src="https://cdn.jsdelivr.net/npm/react-dom@17/umd/react-dom.production.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@excalidraw/excalidraw@0/dist/excalidraw.production.min.js"></script><div id="Drawing_2025-08-24_2139.00.excalidraw.md1"></div><script>(function(){const InitialData={"type":"excalidraw","version":2,"source":"https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.15.0","elements":[{"id":"jGvXMo0p","type":"text","x":-269.3432715329609,"y":-263.5930305939568,"width":163.43739318847656,"height":48,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":1,"opacity":100,"groupIds":[],"frameId":null,"index":"a0","roundness":null,"seed":1337923090,"version":148,"versionNonce":1593888594,"isDeleted":false,"boundElements":[{"id":"MzaLv76makGIBbnvV2HBn","type":"arrow"}],"updated":1756043219810,"link":null,"locked":false,"text":"寻找候选函数\n(所有重名的函数)","rawText":"寻找候选函数\n(所有重名的函数)","fontSize":20,"fontFamily":3,"textAlign":"center","verticalAlign":"top","containerId":null,"originalText":"寻找候选函数\n(所有重名的函数)","autoResize":true,"lineHeight":1.2},{"id":"MzaLv76makGIBbnvV2HBn","type":"arrow","x":-104.66597478545651,"y":-247.38609531364327,"width":107.69810979522214,"height":74.40293666877861,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"a1","roundness":{"type":2},"seed":1244263186,"version":172,"versionNonce":1421322898,"isDeleted":false,"boundElements":[],"updated":1756043213014,"link":null,"locked":false,"points":[[0,0],[107.69810979522214,-74.40293666877861]],"lastCommittedPoint":null,"startBinding":{"elementId":"jGvXMo0p","focus":0.6414333091703834,"gap":7.817418207465324},"endBinding":null,"startArrowhead":null,"endArrowhead":"arrow","elbowed":false},{"id":"BKfZzEfI","type":"text","x":-74.83944702148438,"y":-306.7614440917969,"width":19.999984741210938,"height":25,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":1,"opacity":100,"groupIds":[],"frameId":null,"index":"a2","roundness":null,"seed":355122706,"version":34,"versionNonce":1618089810,"isDeleted":false,"boundElements":[],"updated":1756042788042,"link":null,"locked":false,"text":"无","rawText":"无","fontSize":20,"fontFamily":5,"textAlign":"left","verticalAlign":"top","containerId":null,"originalText":"无","autoResize":true,"lineHeight":1.25},{"id":"5hZFOtwx","type":"text","x":11.766082763671875,"y":-343.697265625,"width":222.03114318847656,"height":24,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":1,"opacity":100,"groupIds":[],"frameId":null,"index":"a3","roundness":null,"seed":2146222226,"version":86,"versionNonce":1729955282,"isDeleted":false,"boundElements":[],"updated":1756043061876,"link":null,"locked":false,"text":"找不到匹配函数(error)","rawText":"找不到匹配函数(error)","fontSize":20,"fontFamily":3,"textAlign":"left","verticalAlign":"top","containerId":null,"originalText":"找不到匹配函数(error)","autoResize":true,"lineHeight":1.2},{"id":"AIt_IxhJyrmplicNUm1lW","type":"arrow","x":-105.07912231311202,"y":-229.93259151354425,"width":112.73406982421875,"height":59.88995361328125,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"a4","roundness":{"type":2},"seed":1472671634,"version":340,"versionNonce":1328728718,"isDeleted":false,"boundElements":[],"updated":1756042915378,"link":null,"locked":false,"points":[[0,0],[112.73406982421875,59.88995361328125]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":"arrow","elbowed":false},{"id":"HO6z1HUR","type":"text","x":-75.23391723632812,"y":-201.11920166015625,"width":19.999984741210938,"height":24,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":1,"opacity":100,"groupIds":[],"frameId":null,"index":"a5","roundness":null,"seed":1162673874,"version":74,"versionNonce":1569701582,"isDeleted":false,"boundElements":[],"updated":1756042920258,"link":null,"locked":false,"text":"有","rawText":"有","fontSize":20,"fontFamily":3,"textAlign":"left","verticalAlign":"top","containerId":null,"originalText":"有","autoResize":true,"lineHeight":1.2},{"id":"nmaURlZg","type":"text","x":8.226719555580075,"y":-184.2482906321594,"width":475.15606689453125,"height":48,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":1,"opacity":100,"groupIds":[],"frameId":null,"index":"a6","roundness":null,"seed":677211086,"version":191,"versionNonce":1860009422,"isDeleted":false,"boundElements":[],"updated":1756043303471,"link":null,"locked":false,"text":"寻找可行函数\n(参数个数一致,参数类型一致或者可隐式转换的函数)","rawText":"寻找可行函数\n(参数个数一致,参数类型一致或者可隐式转换的函数)","fontSize":20,"fontFamily":3,"textAlign":"center","verticalAlign":"top","containerId":null,"originalText":"寻找可行函数\n(参数个数一致,参数类型一致或者可隐式转换的函数)","autoResize":true,"lineHeight":1.2},{"id":"LgTqyzEmaWwef-Pmh1t7H","type":"arrow","x":495.84062313643307,"y":-164.89505194861,"width":106.86248779296875,"height":75.156005859375,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"a7","roundness":{"type":2},"seed":792582866,"version":222,"versionNonce":2100258894,"isDeleted":false,"boundElements":[],"updated":1756043315138,"link":null,"locked":false,"points":[[0,0],[106.86248779296875,-75.156005859375]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":"arrow","elbowed":false},{"id":"VDuvYPq9","type":"text","x":524.8315288981519,"y":-225.02346991736005,"width":19.999984741210938,"height":25,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":1,"opacity":100,"groupIds":[],"frameId":null,"index":"a8","roundness":null,"seed":1813950610,"version":195,"versionNonce":1140403854,"isDeleted":false,"boundElements":[],"updated":1756043315138,"link":null,"locked":false,"text":"无","rawText":"无","fontSize":20,"fontFamily":5,"textAlign":"left","verticalAlign":"top","containerId":null,"originalText":"无","autoResize":true,"lineHeight":1.25},{"id":"-msX_CHleXiDJFD1klWNB","type":"arrow","x":494.5918536065242,"y":-148.19461733910737,"width":112.73406982421875,"height":59.88995361328125,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"a9","roundness":{"type":2},"seed":165596754,"version":501,"versionNonce":305147086,"isDeleted":false,"boundElements":[],"updated":1756043315138,"link":null,"locked":false,"points":[[0,0],[112.73406982421875,59.88995361328125]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":"arrow","elbowed":false},{"id":"0syD043L","type":"text","x":524.4370586833081,"y":-119.38122748571936,"width":19.999984741210938,"height":24,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":1,"opacity":100,"groupIds":[],"frameId":null,"index":"aA","roundness":null,"seed":1028994066,"version":235,"versionNonce":1970103054,"isDeleted":false,"boundElements":[],"updated":1756043315138,"link":null,"locked":false,"text":"有","rawText":"有","fontSize":20,"fontFamily":3,"textAlign":"left","verticalAlign":"top","containerId":null,"originalText":"有","autoResize":true,"lineHeight":1.2},{"id":"WAGsnWHT","type":"text","x":608.3103823540828,"y":-255.4439130129993,"width":222.03114318847656,"height":24,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":1,"opacity":100,"groupIds":[],"frameId":null,"index":"aB","roundness":null,"seed":1539691218,"version":223,"versionNonce":1613353294,"isDeleted":false,"boundElements":[],"updated":1756043315138,"link":null,"locked":false,"text":"找不到匹配函数(error)","rawText":"找不到匹配函数(error)","fontSize":20,"fontFamily":3,"textAlign":"left","verticalAlign":"top","containerId":null,"originalText":"找不到匹配函数(error)","autoResize":true,"lineHeight":1.2},{"id":"FxNL4xE2","type":"text","x":615.7754168389461,"y":-100.7649579348743,"width":403.43731689453125,"height":48,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"aC","roundness":null,"seed":1164734290,"version":193,"versionNonce":1996878990,"isDeleted":false,"boundElements":[],"updated":1756043359430,"link":null,"locked":false,"text":"寻找最佳匹配函数\n(匹配度由需要多少参数进行隐式转换来决定)","rawText":"寻找最佳匹配函数\n(匹配度由需要多少参数进行隐式转换来决定)","fontSize":20,"fontFamily":3,"textAlign":"center","verticalAlign":"top","containerId":null,"originalText":"寻找最佳匹配函数\n(匹配度由需要多少参数进行隐式转换来决定)","autoResize":true,"lineHeight":1.2},{"id":"96tbYwqI3FbfsyPeUoCtk","type":"arrow","x":1025.5379136779304,"y":-83.73421052912829,"width":106.86248779296875,"height":75.156005859375,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"aD","roundness":{"type":2},"seed":1521973070,"version":344,"versionNonce":688344206,"isDeleted":false,"boundElements":[],"updated":1756043365754,"link":null,"locked":false,"points":[[0,0],[106.86248779296875,-75.156005859375]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":"arrow","elbowed":false},{"id":"wtSSYk7u","type":"text","x":1054.5288194396492,"y":-143.86262849787835,"width":19.999984741210938,"height":25,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":1,"opacity":100,"groupIds":[],"frameId":null,"index":"aE","roundness":null,"seed":1940348302,"version":317,"versionNonce":734694094,"isDeleted":false,"boundElements":[],"updated":1756043365754,"link":null,"locked":false,"text":"无","rawText":"无","fontSize":20,"fontFamily":5,"textAlign":"left","verticalAlign":"top","containerId":null,"originalText":"无","autoResize":true,"lineHeight":1.25},{"id":"zcpJQ7gsviKxi73FFYhSs","type":"arrow","x":1024.2891441480215,"y":-67.03377591962567,"width":112.73406982421875,"height":59.88995361328125,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"aF","roundness":{"type":2},"seed":708869070,"version":623,"versionNonce":1745617166,"isDeleted":false,"boundElements":[],"updated":1756043365754,"link":null,"locked":false,"points":[[0,0],[112.73406982421875,59.88995361328125]],"lastCommittedPoint":null,"startBinding":null,"endBinding":null,"startArrowhead":null,"endArrowhead":"arrow","elbowed":false},{"id":"AvLvIVs2","type":"text","x":1054.1343492248054,"y":-38.220386066237666,"width":19.999984741210938,"height":24,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":1,"opacity":100,"groupIds":[],"frameId":null,"index":"aG","roundness":null,"seed":1687933454,"version":357,"versionNonce":21278542,"isDeleted":false,"boundElements":[],"updated":1756043365754,"link":null,"locked":false,"text":"有","rawText":"有","fontSize":20,"fontFamily":3,"textAlign":"left","verticalAlign":"top","containerId":null,"originalText":"有","autoResize":true,"lineHeight":1.2},{"id":"VwSn7vQC","type":"text","x":1141.8856712476309,"y":-180.00897048981727,"width":263.43731689453125,"height":48,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"aH","roundness":null,"seed":1173933266,"version":286,"versionNonce":545406030,"isDeleted":false,"boundElements":[],"updated":1756043546094,"link":null,"locked":false,"text":"报二义性(Ambiguity)错误\n(存在多个匹配度相近的函数)","rawText":"报二义性(Ambiguity)错误\n(存在多个匹配度相近的函数)","fontSize":20,"fontFamily":3,"textAlign":"center","verticalAlign":"top","containerId":null,"originalText":"报二义性(Ambiguity)错误\n(存在多个匹配度相近的函数)","autoResize":true,"lineHeight":1.2},{"id":"X4TUGDVK","type":"text","x":1146.9497429029043,"y":-16.90688140797073,"width":119.99990844726562,"height":24,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":0,"opacity":100,"groupIds":[],"frameId":null,"index":"aI","roundness":null,"seed":1403062930,"version":283,"versionNonce":148878286,"isDeleted":false,"boundElements":[],"updated":1756043365754,"link":null,"locked":false,"text":"寻找可行函数","rawText":"寻找可行函数","fontSize":20,"fontFamily":3,"textAlign":"left","verticalAlign":"top","containerId":null,"originalText":"寻找可行函数","autoResize":true,"lineHeight":1.2}],"appState":{"theme":"light","viewBackgroundColor":"#ffffff","currentItemStrokeColor":"#1e1e1e","currentItemBackgroundColor":"transparent","currentItemFillStyle":"solid","currentItemStrokeWidth":2,"currentItemStrokeStyle":"solid","currentItemRoughness":0,"currentItemOpacity":100,"currentItemFontFamily":3,"currentItemFontSize":20,"currentItemTextAlign":"center","currentItemStartArrowhead":null,"currentItemEndArrowhead":"arrow","currentItemArrowType":"round","currentItemFrameRole":null,"scrollX":313.41342521050603,"scrollY":952.0894587830527,"zoom":{"value":1},"currentItemRoundness":"round","gridSize":20,"gridStep":5,"gridModeEnabled":false,"gridColor":{"Bold":"rgba(217, 217, 217, 0.5)","Regular":"rgba(230, 230, 230, 0.5)"},"currentStrokeOptions":null,"frameRendering":{"enabled":true,"clip":true,"name":true,"outline":true,"markerName":true,"markerEnabled":true},"objectsSnapModeEnabled":false,"activeTool":{"type":"selection","customType":null,"locked":false,"fromSelection":false,"lastActiveTool":null}},"files":{}};InitialData.scrollToContent=true;App=()=>{const e=React.useRef(null),t=React.useRef(null),[n,i]=React.useState({width:void 0,height:void 0});return React.useEffect(()=>{i({width:t.current.getBoundingClientRect().width,height:t.current.getBoundingClientRect().height});const e=()=>{i({width:t.current.getBoundingClientRect().width,height:t.current.getBoundingClientRect().height})};return window.addEventListener("resize",e),()=>window.removeEventListener("resize",e)},[t]),React.createElement(React.Fragment,null,React.createElement("div",{className:"excalidraw-wrapper",ref:t},React.createElement(ExcalidrawLib.Excalidraw,{ref:e,width:n.width,height:n.height,initialData:InitialData,viewModeEnabled:!0,zenModeEnabled:!0,gridModeEnabled:!1})))},excalidrawWrapper=document.getElementById("Drawing_2025-08-24_2139.00.excalidraw.md1");ReactDOM.render(React.createElement(App),excalidrawWrapper);})();</script>  
+## 7.6 函数指针  
+### 7.6.1 创建和初始化  
+程序的指令也是一种储存在内存中的数据, 用户函数会作为独立的模块, 放在 `main()` 函数指令的不同位置, 所以调用函数时需要知道存放函数的起始地址, 并让程序跳转到该位置. 这个函数开始的位置就是函数的地址/函数入口, 函数指针就指向函数入口.
+```C++
+// 函数指针的创建
+#include <iostream>
+using namespace std;
+int min(int a, int b) {
+	return a < b ? a : b;
+}
+
+int main() {
+	int (*fpIntInt)(int, int);  // 函数指针声明, 第一个括号是防止被编译器解读为"int*", 相当于只是声明了一个返回值为"int*"的函数fpIntInt(). 第二个括号内的形参个数和类型要匹配正确.
+	fpIntInt = min;  // 函数指针赋值
+	return 0;
+}
+```
+需要定义多个相似的函数指针时, 可以使用 `typedef` 来简化函数指针的定义:  
+```C++
+// 用typedef简化函数指针的定义
+#include <iostream>
+using namespace std;
+int min(int a, int b) {
+	return a < b ? a : b;
+}
+int max(int a, int b) {
+	return a > b ? a : b;
+}
+
+int main() {
+	typedef int (*fpIntInt)(int, int);  // 定义了一个叫fpIntInt的类型名, 他是一个有两个int参数, 返回值为int的函数指针类型.
+	fpIntInt fpMin = min;
+	fpIntInt fpMax = max;  // 简化了重复定义
+	return 0;
+}
+```
+### 7.6.2 应用  
+虽然函数指针是指针, 但在使用时不需要解引用操作符.
+```C++
+#include <iostream>
+#include <string>
+using namespace std;
+int min(int a, int b) {
+	return a < b ? a : b;
+}
+int max(int a, int b) {
+	return a > b ? a : b;
+}
+
+int main() {
+	int a = 0;
+	int b = 0;
+	cout << "please input two number separated by [space]: " << endl;
+	cin >> a >> b;
+
+	string cmd = "";
+	cout << "please input your command (max or min):" << endl;
+	cin >> cmd;
+
+	typedef int (*fpIntInt)(int, int);
+	fpIntInt fp = min;
+	if ( "min" == cmd ) {
+		fp = min;  // 使用函数指针, 切换到用户所选择的命令对应的函数
+	} else if ( "max" == cmd ) {
+		fp = max;
+	} else {
+		cout << "wrong command!" << endl;
+	}
+	cout << "the result is: " << fp(a, b) << endl;
+	return 0;
+}
+--------------------------------------------------------------------
+输出:
+please input two number separated by [space]: 
+1 2
+please input your command (max or min):
+max
+the result is: 2
+```
+### 7.6.3 作为参数  
+函数指针作为一种数据类型, 所以也可以作为其他函数的参数. 例子:  
+```C++
+#include <iostream>
+#include <string>
+using namespace std;
+typedef int(*binaryFp)(int, int);  // 预先定义一个通用的函数指针类型名
+int binaryOp(int a, int b, binaryFp binFp) {  // 接受函数指针作为第三个形参
+	return binFp(a, b);  // 决定调用的二元运算函数是哪一个(add, sub or mul)
+}
+int add(int a, int b) {
+	return a + b;
+}
+int sub(int a, int b) {
+	return a - b;
+}
+int mul(int a, int b) {
+	return a * b;
+}
+int main() {
+	int a = 0;
+	int b = 0;
+	cout << "please input two number separated by [space]: " << endl;
+	cin >> a >> b;
+ 
+	string cmd = "";
+	cout << "please input your command (add, sub or mul): " << endl;
+	cin >> cmd;
+ 
+	typedef int (*fpIntInt)(int, int);  // 定义一个通用的函数指针类型名, main()内使用
+	fpIntInt fp = NULL;
+	if ( cmd == "add" ) {
+		fp = add;
+	} else if ( cmd == "sub" ) {
+		fp = sub;
+	} else if ( cmd == "mul" ) {
+		fp = mul;  // 使用函数指针, 切换到用户所选择的命令对应的函数
+	} else {
+		cout << "wrong command!" << endl;
+	}
+	cout << "the result is: " << binaryOp(a, b, fp) << endl;  // 第三个实参为函数指针
+	return 0;
+}
+--------------------------------------------------------------------
+输出:
+please input two number separated by [space]: 
+2 3
+please input your command (add, sub or mul): 
+sub
+the result is: -1
+```
+### 7.6.4 作为返回值  
+```C++
+#include <iostream>
+using namespace std;
+int (*funcRetFp(int a, int b))(int, int) {  // funcRetFp(int a, int b)是函数名和参数, int(* )(int, int)是返回值的类型
+	int(*fp)( int, int ) = NULL;
+	return fp;
+}
+typedef int(*binaryFp)(int, int);
+binaryFp funcRetFpTypedef(int a, int b) {  // 和前面一个函数等价, 但通过使用typedef, 程序变得更可读
+	binaryFp fp = NULL;
+	return fp;
+}
+int main() {
+	cout << funcRetFp(1, 2) << " " << funcRetFpTypedef(1, 2) << endl;
+	return 0;
+}
+----------------------------------------------------
+输出:
+0 0
+```
+## 7.7 递归函数  
+一个函数可以循环调用自身, 称为递归(Recursion). 核心思路是"分而治之", 即把一个问题分解成许多小问题, 然后解决.  
+
+在每一次进入更深一层的递归函数时, 当前函数都会"放下手中的工作", 将本地变量 && 计算结果 && 函数状态存进栈里, 当所有内层函数都执行完毕后再返回. 由于栈是有限的, 所以递归函数中一定要有终止条件, 否则造成栈溢出(Stack Overflow).
+
+```C++
+#include <iostream>
+using namespace std;
+
+// 递归函数例子: 爬楼梯
+int countWays(int n) {
+	if ( n == 1 ) return 1;
+	if ( n == 0 ) return 1;
+	return countWays(n - 1) + countWays(n - 2);  // 走一个台阶, 就有n-1个台阶要走; 走两个台阶, 就还有n-2个要走, 于是 countWays(n) = countWays(n - 1) + countWays(n - 2).
+}
+int main() {
+	int stairNum = 0;
+	cout << "小强走台阶可以走一级，也可以走两级，" << endl;
+	cout << "请输入台阶数量：" << endl;
+	cin >> stairNum;
+	cout << "小强走台阶有"<< countWays(stairNum) << "种方法。" << endl;
+	return 0;
+}
+--------------------------------------------------
+输出:
+小强走台阶可以走一级，也可以走两级，
+请输入台阶数量：
+6
+小强走台阶有13种方法。
+```
+## 7.8 可变参数  
+包含 header `<stdrag.h>` (没错, 继承自 C 语言), 就可以定义一种函数, 其参数个数可变.  
+```C++
+#include <iostream>
+#include <stdarg.h>  // header needed
+using namespace std;
+
+// 形参表中, size为参数个数, 三点代表可变参数
+float avg(int size, ...){
+    float sum = 0.0;
+	va_list valist;  // 创建可变参数列表
+    va_start(valist, size);  // 初始化可变参数列表
+    for ( int i = 0; i < size; i++ ) {
+       sum += va_arg(valist, int);  // 用va_arg宏依次取得参数, 可变参数可以是不同类型的参数, 此处都是int (必须自己知道每一个参数的类型)
+    }
+    va_end(valist);  // 清理内存
+    return (sum / size);
+}
+
+int main(){
+    cout << "求1 2 3 4 5的平均数：" << avg(5, 1, 2, 3, 4, 5) << endl;
+    return 0;
+}
+-----------------------------------------------------------------------
+输出:
+求1 2 3 4 5的平均数：3
+```
+
+
+
+
+
+
+
+
+
+
