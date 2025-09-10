@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW8/","noteIcon":"","created":"2025-06-10T10:17:09.627+08:00","updated":"2025-06-19T17:06:25.201+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW8/","noteIcon":"","created":"2025-06-10T10:17:09.627+08:00","updated":"2025-09-08T12:29:28.777+08:00"}
 ---
 
 
@@ -14,7 +14,7 @@ includeLinks: true # Make headings clickable
 hideWhenEmpty: false # Hide TOC if no headings are found
 debugInConsole: false # Print debug info in Obsidian console
 ```
-# 1. 辐射功率交叉项   
+# 1 辐射功率交叉项   
  ![z_figure/Pasted image 20250612113453.png](/img/user/z_figure/Pasted%20image%2020250612113453.png)  
 <font color="#ff0000">分</font>解 $\dot{\vec{\beta}}=\dot{\vec{\beta}}_{\| }+\dot{\vec{\beta}}_{\perp}$, 其中 $\dot{\vec{\beta}}_{\| } || \vec \beta$, 根据讲义的(8.148)得到:  
 $$
@@ -38,7 +38,7 @@ $$
 $$
 \int\left(\frac{d P}{ d \Omega}\right)_{cross } d \Omega \propto \int_{0}^{2 \pi}\left(\dot{\beta}_{\perp x} cos \varphi+\dot{\beta}_{\perp y} sin \varphi\right) d \varphi=0
 $$
-# 2. 电子的生命周期(讲义  p154)  
+# 2 电子的生命周期(讲义  p154)  
 ![z_figure/Pasted image 20250612113613.png](/img/user/z_figure/Pasted%20image%2020250612113613.png)
 <font color="#ff0000">加</font>速度满足:   
 $$
@@ -67,7 +67,7 @@ $$
 $$
 t_{2}=r_{0}^{3} \frac{4 \pi^{2} \epsilon_{0}^{2} m_{e}^{2} c^{3}}{e^{4}} \approx 10^{-11} s
 $$
-# 3. 极相对论粒子的角最大辐射  
+# 3 极相对论粒子的角最大辐射  
 ![z_figure/Pasted image 20250612113626.png](/img/user/z_figure/Pasted%20image%2020250612113626.png)
 <font color="#ff0000">讲</font>义(8.133)给出:  
 $$
@@ -91,8 +91,8 @@ $$
 $$
 \theta=\sqrt{\frac{1-\beta}{2}}
 $$
-# 4. 课本题
-## 7.1 零辐射的角度  
+# 4 课本题
+## 4.1 零辐射的角度  
 ![z_figure/Pasted image 20250612113903.png](/img/user/z_figure/Pasted%20image%2020250612113903.png)
 <font color="#ff0000">为</font>避免歧义, 将题目里面的角度 $\beta$ 记为 $\theta$, 根据讲义(8.114):  
 $$
@@ -118,7 +118,7 @@ $$
 \beta \sin \alpha=\sin \theta
 \end{aligned}
 $$
-## 7.2 同步辐射  
+## 4.2 同步辐射  
 ![z_figure/Pasted image 20250612113918.png](/img/user/z_figure/Pasted%20image%2020250612113918.png)
 <font color="#ff0000">由</font>讲义(8.155)可知:  
 $$
@@ -133,7 +133,7 @@ $$
 $$
 P=38~ eV \cdot s^{-1} 
 $$
-## 7.6 同步辐射 * 2  
+## 4.3 同步辐射 * 2  
 ![z_figure/Pasted image 20250612113937.png](/img/user/z_figure/Pasted%20image%2020250612113937.png)
 ##### (1)
 根据讲义(8.164), 电子受力为辐射阻尼+洛伦兹力:  +
@@ -179,7 +179,7 @@ $$
 $$
 \frac{ d W }{ d t} = \gamma m_e v_0^2 e^{-2\gamma t}
 $$
-## 7.9 同步辐射 * 3  
+## 4.4 同步辐射 * 3  
 ![z_figure/Pasted image 20250612113951.png](/img/user/z_figure/Pasted%20image%2020250612113951.png)
 ##### (1) 
 $$
@@ -201,10 +201,10 @@ $$
 $$
 T=T_{0} exp \left[-\frac{B^{2}q^{4} }{3 \pi \epsilon_{0} m^{3} c^{3}}\left(t-t_{0}\right)\right]
 $$
-# 5. 磁偶极辐射和电四极辐射  
+# 5 磁偶极辐射和电四极辐射  
 ![z_figure/Pasted image 20250612114005.png](/img/user/z_figure/Pasted%20image%2020250612114005.png)
 见讲义 9.4 节.  
-# 6. 辐射阻尼  
+# 6 辐射阻尼  
 ![z_figure/Pasted image 20250612114020.png](/img/user/z_figure/Pasted%20image%2020250612114020.png)
 ##### (a)  
 <font color="#ff0000">对</font>运动方程积分:  
@@ -287,7 +287,7 @@ y=1-e^{x-1}|0<x<1
 y=0|x>1
 ```
 
-# 7. 辐射电阻  
+# 7 辐射电阻  
 ![z_figure/Pasted image 20250612114122.png](/img/user/z_figure/Pasted%20image%2020250612114122.png)
 <font color="#ff0000">电</font>流是:  
 $$
@@ -310,7 +310,7 @@ $$
 $$
 R \approx 2 × 10^{-6}~ \Omega
 $$
-# 8. 电偶极子的辐射  
+# 8 电偶极子的辐射  
 ![z_figure/Pasted image 20250612114137.png|750](/img/user/z_figure/Pasted%20image%2020250612114137.png)
 
 <font color="#ff0000">本</font>题可以视为两个在 x-y 平面以角速度 $\omega$ 匀速旋转的电荷的辐射: 

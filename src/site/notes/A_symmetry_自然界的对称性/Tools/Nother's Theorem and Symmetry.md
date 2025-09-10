@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Nother's Theorem and Symmetry/","noteIcon":"","created":"2025-01-28T14:11:05.348+08:00","updated":"2025-05-21T13:16:20.177+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Nother's Theorem and Symmetry/","noteIcon":"","created":"2025-01-28T14:11:05.348+08:00","updated":"2025-09-10T13:09:28.070+08:00"}
 ---
 
 
@@ -14,12 +14,12 @@ includeLinks: true # Make headings clickable
 hideWhenEmpty: false # Hide TOC if no headings are found
 debugInConsole: false # Print debug info in Obsidian console
 ```
-# 1. Halmilton 最小作用量原理
+# 1 Halmilton 最小作用量原理
 拉格朗日密度函数 $\mathcal{L}=L/V$ 是一个洛伦兹标量, 具有洛伦兹协变性, 即在所有惯性参考系中具有相同的形式. 作用量 $S$ 是一个泛函, 具有洛伦兹不变性, 即其极小值对应的路径 $q(t)$ 在所有惯性参考系中不变. 两者的关系如下:
 $$
 S[q(t)] = \int \mathcal{L}\left( q(t), \dot q(t), t \right) \,dt
 $$
-##  Fermat 原理
+## 1.1 Fermat 原理
 关于最小作用量的一个简单的例子就是 $fermat$ 原理, 即光沿着光程取极值的路径(测地线)传播:
 $$
 \min\ S 
@@ -29,7 +29,7 @@ $$
 \ \ \propto\  \min\int dt
 $$
 
-# 2. Euler-Lagrange 方程
+# 2 Euler-Lagrange 方程
 对于位形空间中固定的两个端点, $Euler-Lagrange$ 方程可以找到一条路径 $q(t)$, 使得作用量取得极值(极大 $or$ 极小), 推导步骤如下:
 
 已知:
@@ -72,7 +72,7 @@ $$
 $$
 \frac{ \partial  }{ \partial x^\mu }\frac{ \partial \mathcal{L} }{ \partial (\partial_\mu A^\nu) } - \frac{ \partial \mathcal{L} }{ \partial A^\nu } = 0
 $$
-# 3. Nother 定理
+# 3 Nother 定理
 诺特定理描述了系统在某种变换下的对称性, 即在这些变换下作用量的变分(或者说作用量的极值与其对应的系统演化路径)保持不变时, 可以找到一些守恒量.
 ## 3.1 自由粒子
 ### 3.1.1 守恒量的一般形式

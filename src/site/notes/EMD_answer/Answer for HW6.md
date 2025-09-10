@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-08-14T21:48:31.540+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-09-08T12:28:08.313+08:00"}
 ---
 
 
@@ -16,7 +16,7 @@ debugInConsole: false # Print debug info in Obsidian console
 ```
 
 
-# 1. 1D 电磁波解    
+# 1 1D 电磁波解    
 - <font color="#00b0f0">(a) 平面波动方程:</font>  
 $$
 \left(\frac{1}{c^{2}} \frac{\partial^{2}}{\partial t^{2}}-\frac{\partial^{2}}{\partial x^{2}}\right) \varphi=\left(\frac{1}{c} \frac{\partial}{\partial t}+\frac{\partial}{\partial x}\right)\left(\frac{1}{c} \frac{\partial}{\partial t}-\frac{\partial}{\partial x}\right) \varphi=0
@@ -40,7 +40,7 @@ $$
 \varphi(r, t)=\frac{1}{r}[\underbrace{f(t+r / c}_{\text {会聚波 }})+\underbrace{g(t-r / c)}_{\text {发散波 }}]
 $$  
 对于源，会聚波可略去.
-# 2. 反常色散
+# 2 反常色散
 此时 $n_{r}-1=  Const  \cdot \frac{\omega_{0}^{2}-\omega^{2}}{\left(\omega_{0}^{2}-\omega^{2}\right)^{2}+(\omega \gamma)^{2}}=  Const  \cdot f(\omega)$ :
 $$  
 \begin{aligned}
@@ -56,7 +56,7 @@ $$
 &=\omega_{0}\left(1+\frac{\gamma}{\omega_{0}}\right)^{1 / 2}-\omega_{0}\left(1-\frac{\gamma}{\omega_{0}}\right)^{1 / 2} \approx {\gamma} \quad\left(\text { 当 } \gamma \ll \omega_{0} \text { 时 }\right)
 \end{aligned}
 $$
-# 3. 介质边界的电磁波
+# 3 介质边界的电磁波
 - <font color="#00b0f0">(a)</font> 假设 xoz 为入射面. 设入射波 $\left\{\begin{array}{l}\vec{B}=B_{0} \vec{e}_{y}+0 \cdot \vec{e}_{x} \\ \vec{E}=E_{0} \vec{e}_{x}+0 \cdot \vec{e}_{y} \end{array}\right.$,  反射波 $E_{R}=\left(E_{R x}, E_{R y}\right)$, 透射波 $E_{T}=\left(E_{T x}, E_{T y}\right)$.
 
 由 $\nabla \times E=-\frac{\partial B}{\partial t}$ 和 $\nabla \times \frac{B}{\mu}=\frac{\partial \varepsilon E}{\partial t} k_{0}, \ \vec{B}=\frac{\vec{n}}{c} \times \vec{E}=\sqrt{\mu \varepsilon} \hat{h} \times \vec{E}$ 得到如下边界条件:  
@@ -86,7 +86,7 @@ $$
 \frac{E_{I}}{E_{0}}&=\frac{{n_{I} \cos \theta_{I}-\frac{\mu}{\mu^{\prime}} \sqrt{n_{I I}^{2}-n_{I}^{2} \sin ^{2} \theta_{I}}}}{n_{I} \cos \theta_{I}+\frac{\mu}{\mu^{\prime}} \sqrt{n_{I I}^{2}-n_{I}^{2} \sin ^{2} \theta_{I}}}
 \end{aligned}\right.
 $$
-# 4. TM 模
+# 4 TM 模
 假设方形波导管的轴向是 z 方向, 波动方程是:  
 $$
 \left( \frac{ \partial^2  }{ \partial^2 x }  + \frac{ \partial^2  }{ \partial^2 y } + (\mu\epsilon\omega^2 - k^2)\right) E_z = 0
@@ -109,8 +109,8 @@ $$
 \omega_{mn} = \pi c \sqrt{\frac{m^2}{a^2} + \frac{n^2}{b^2}}
 $$
 注意, 如果 $m=0\ or\ n=0$ 会使得 $E_z = 0$, 波模不存在. 所以对应的最低截止频率是 $\omega_{11}$.
-# 5. 课本题  
-## 1. 窄带双色波  
+# 5 课本题  
+## 5.1 窄带双色波  
 - <font color="#00b0f0">(1)</font> 
 $$
 \begin{array}{l}
@@ -124,7 +124,7 @@ $$
 $$
 \nu_{\text {phase }}=\omega / k, \nu_{\text {group }}=d \omega / d k 
 $$
-## 4. 各向异性介质
+## 5.2 各向异性介质
 - <font color="#00b0f0">(1)</font> 对于 $\rho_{f}=J_{f}=0$ 的线性磁介质:
 $$   
 \nabla \cdot B=0 \Rightarrow \vec{k} \cdot \vec{B}=0
@@ -150,7 +150,7 @@ $$
 $$
  \because\vec k \cdot\vec E \neq 0 \quad \therefore  可见  \vec{B} \times \vec{E}  一般不与  \vec{k}  同向
 $$
-## 9. 半无界波导管
+## 5.3 半无界波导管
 求解 $\left[\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}+\frac{\omega^{2}}{c^{2}}\right]\binom{E}{B}=0$ , 边界条件: 
 $$
 \left\{\begin{array}{ll}
@@ -172,7 +172,7 @@ $$
 $$
 A_{x} \frac{m \pi}{a}+A_{y} \frac{n \pi}{b}+A_{z} k_{z}=0
 $$
-## 13. 波导管** 2
+## 5.4 波导管** 2
 $$
 \nu_{m n}=\frac{\omega_{m n}}{2 \pi}=\frac{1}{2} c \sqrt{\frac{m^{2}}{a^{2}}+\frac{n^{2}}{b^{2}}}
 =\left\{\begin{array}{l}1.5 \times 10^{8} \cdot \sqrt{\frac{m^{2}}{4 9 \times 10^{-6}}+\frac{n^{2}}{1.6 \times 10^{-6}}}=1.5 \times 10^{11} \sqrt{\frac{m^{2}}{49}+\frac{n^{2}}{16}}\mathrm{~Hz}\\
@@ -184,7 +184,7 @@ $$
 $$
  \Rightarrow (1) T E_{10} ,\ \  (2) T E_{10} \ and\  T E_{01} 
 $$
-# 6. 波动物理量的时间平均  
+# 6 波动物理量的时间平均  
 - <font color="#00b0f0">(1)</font> 
 $$
 A B=\frac{\hat{A}+\hat{A}^{*}}{2} \frac{\hat{B}+\hat{B}^{*}}{2}
@@ -199,7 +199,7 @@ A B=\operatorname{Re}\left[\hat{A} e^{i \omega t}\right] \cdot \operatorname{Re}
 \end{aligned}
 $$
 可见当 A, B 的变化时间尺度 $\tau \gg t$ 时, $\langle A B\rangle=\frac{1}{2} \operatorname{Re}\left[A B^{*}\right]$. 
-# 7. 三种介质中的 1D电磁波  
+# 7 三种介质中的 1D电磁波  
 在介质 2 中的相位变化记为 $\theta = \vec k \cdot \Delta \vec x = \frac{\omega}{c/n_2}d$, 假设波在介质 2 中反射 n 次(一个来回算一次), 那么:  
 $$
 \frac{E_{out,n} }{E_{in}} = TR^n
@@ -252,7 +252,7 @@ n_2(E_{2+}e^{i\theta} - E_{2-}e^{-i\theta}) = n_3E_{out}
 \end{array}
 $$
 会得到一样的结果.
-# 8. Drude 模型
+# 8 Drude 模型
 ##### (a)  
 注意到极化强度 $\vec P = N \vec p = N \alpha \vec E = (\epsilon_r - 1)\epsilon_0\vec E$, 得到:  
 $$
@@ -335,7 +335,7 @@ $\omega\tau\gg 1$ 和 $\omega\gg \omega_{pe}$ 意味着, 电磁波的时间尺�
 
 ##### (k)  
 由 $(j)$ 可知, 条件是波的频率足够高/金属足够薄.  
-# 9. 介质中的 Maxwell's 方程组  
+# 9 介质中的 Maxwell's 方程组  
 ##### (a)
 由 $\nabla \cdot \vec j+\partial \rho/ \partial t=0$ 得到:  
 $$
@@ -367,7 +367,7 @@ $$
 \end{aligned}
 $$
 
-# 补充: 没有补充  
+# 10 补充: 没有补充  
 本来想写点电磁场的拉氏量, 怎么按一般步骤推导得到的来着, 但是大家有期末考试, 助教也有, 所以......  
 
 结果放在这里, 拉氏量:  

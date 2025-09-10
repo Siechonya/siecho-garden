@@ -1,16 +1,16 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Lie Group/","noteIcon":"","created":"2024-11-30T23:35:43.866+08:00","updated":"2025-06-04T19:16:52.593+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Lie Group/","noteIcon":"","created":"2024-11-30T23:35:43.866+08:00","updated":"2025-09-10T13:11:30.945+08:00"}
 ---
 
 
-# 1. $Group$ (群)
+# 1 $Group$ (群)
 一个 $group$ (称 "$G$") 是一个集合，加上一个群乘法 “$\circ$”，且满足以下公理：
 - *封闭性*。$\forall g_1, g_2 \in G,\ g_1\circ g_2 \in G$.
 - *单位元（恒等变换）*。$\exists e\in G,\ s.t. \forall g \in G,\ g=e\circ g=g\circ e$.
 - *逆元（逆变换）*。$\forall g\in G,\ \exists g^{-1}\in G,\ s.t.\ e=g^{-1}\circ g=g\circ g^{-1}$.
 - *结合律*。$\forall g_1, g_2, g_3\in G,\ (g_1\circ g_2)\circ g_3=g_1\circ( g_2\circ g_3)$.
 
-# 2. $2D\ Rotation$ (二维旋转群)
+# 2 $2D\ Rotation$ (二维旋转群)
 ## 2.1 $O(2)$ 和 $SO(2)$
 考虑让二维平面的向量长度不变的变换($G^TG=I$)：包括旋转和反演。或者严格讲是保持内积不变的变换。
 
@@ -25,21 +25,19 @@ $$
 $$
 P_x = diag(-1,1),\ P_y = diag(1,-1)
 $$
-此时矩阵乘法可以作为群乘法的一种表示方式。
+此时矩阵乘法可以作为群乘法的一种表示方式。  
 
-```col
-> $O(2)$: 满足 $O^TO=I$
-```
-```col
+> [!note]
+> $O(2)$: 满足 $O^TO=I$  
+> 
 > $SO(2)$: 满足 $det(O)=1$ 的 $O(2)$群
-```
 
 "$O$"即"$orthogonal$"(正交), "$S$"即 $special$.
 
 ## 2.2 $U(1)$
-```col
-> $U(1)$: 单位复数构成的群, 或者说 $U^*U=I$，或者说 $U=e^{i\theta}$
-```
+> [!note]
+>  $U(1)$: 单位复数构成的群, 或者说 $U^*U=I$，或者说 $U=e^{i\theta}$  
+
 "$U$"即"$unitary$"(幺正,单位的,酉).
 
 $U(1)$ 可以将二维平面的复数进行旋转，$e$ 指数上的 $\theta$ 就是上一节的二维实旋转的 $\theta$。即：
@@ -79,7 +77,7 @@ SU(1)={1}
 $$
 即 $SU(1)$ 只包含单位元，是一个平凡群。
 
-# 3. $3 D\ Rotation$ (三维旋转群)
+# 3 $3 D\ Rotation$ (三维旋转群)
 ## 3.1 $O(3)$ 和 $SO(3)$
 ```col
 > $O(3)$: 满足 $O^TO=I$
@@ -156,7 +154,7 @@ $$
 
 >  $\mathcal{S U}(2)$： $\forall$ 单位四元数都唯一对应 $\mathcal{S U}(2)$ 群中的一个群元。
 
-## 3.2 $SO(3)$ 和 $SU(2)$
+## 3.3 $SO(3)$ 和 $SU(2)$
 将三维向量 $\vec{v}=(x, y, z)$ 定义为如下四元数：
 $$
 v \equiv x \mathbf{i}+y \mathbf{j}+z \mathbf{k}
@@ -177,7 +175,7 @@ $$
 >  $SU(2)$ 称为 $SO(3)$ 群的双覆盖，因为可以找到两个 $SU(2)$ 群元对应一个 $SO(3)$ 群元。这是因为 $SO(3)$ 的旋转角只有 $SU(2)$ 的一半，而旋转角有 $2\pi$ 的周期。
 ```
 
-# 4. $Lie\ Algebra$ (李代数)
+# 4 $Lie\ Algebra$ (李代数)
 *Lie 代数研究连续对称性*
 ## 4.1 $Simple\ Definition$ (简要定义)
 无限小变换根据 $Taylor$ 展开表示为：
@@ -338,7 +336,7 @@ S^3=SU(2)\ \ \underset{覆盖}{\underbrace{\longrightarrow} }\ \ SO(3)
 \end{array}
 $$
 
-# 5. 表示论
+# 5 表示论
 ```col
 > [!info] 群的表示
 >群 G 的一个表示 R 指的是从 *G* 到*某个向量空间 V 上的全体线性变换组成的集合*的映射：$R:\underset{\in G}{\underbrace{g} } \to R(g)$
@@ -381,7 +379,7 @@ $R(g)$表示某个矩阵变换，比如矩阵乘法。称 $R$ 为同态映射，
 > 给定一个不可约群表示 $R: \mathfrak{g} \rightarrow   G L(V)$，如果某个线性变换 $T: V \rightarrow V$（即 $T \in G L(V)$ ）与所有 $R(g), \forall g \in G$ 对易，则 $T$ 必为恒等变换的常数倍。其中 $G L(V)$ 表示向量空间 V 上所有线性变换的集合。
 ```
 
-# 6. $SU(2)$ 的深入讨论
+# 6 $SU(2)$ 的深入讨论
 ## 6.1 $SU(2)$ 的不可约表示
 回顾 $4.4$ 节, 已经得到：
 
@@ -464,7 +462,7 @@ $$
 J_1 = \frac{1}{\sqrt 2}\begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 &  1 \\ 0 & 1 & 0 \end{pmatrix},\ \ 
 J_1 = \frac{1}{\sqrt 2}\begin{pmatrix} 0 & -i & 0 \\ i & 0 &  -i \\ 0 & i & 0 \end{pmatrix}
 $$
-# 7. $O(1,3)$: $Lorentz\ Group$ (洛伦兹群)
+# 7 $O(1,3)$: $Lorentz\ Group$ (洛伦兹群)
 ## 7.1 $Definition$
 ```col
 > [!info] Lorentz 群 $\Lambda$
@@ -620,10 +618,10 @@ $$
 至此我们将 $SO(1,3)^\uparrow$ 拆成了两个 $SU(2)$ 的 $Lie\ Algebra$.
 
 ## 7.5 $SO(1,3)^\uparrow$ 的群表示
-### (1). $(0,0)$ 表示
+### 7.5.1 (1). $(0,0)$ 表示
 所谓 $(0,0)$ 表示, 就是 $N^+$ 和 $N^-$ 都是 $1$ 维表示, 而这两者都是 $SU(2)$ 的生成元, 因此自然都是 $0$, 对应的 $Lie$ 群元是单位元 $e^0=1$, 作用对象是洛伦兹标量(1-分量).
 
-### (2). $\left( \frac{1}{2},0 \right)$ 表示
+### 7.5.2 (2). $\left( \frac{1}{2},0 \right)$ 表示
 所谓 $\left( \frac{1}{2},0 \right)$ 表示, 就是 $N^+$ 是 $2$ 维表示, 而 $N^-$ 是 $1$ 维表示, 显然:
 $$
 N_i^+ = \frac{1}{2} (J_i + \mathrm{i} K_i) = \frac{\sigma_i}{2},
@@ -652,7 +650,7 @@ B_1(\phi) = e^{i\phi K_1} = e^{\phi \sigma_1/2}
   sh\left( \frac{\phi}{2} \right) & ch\left( \frac{\phi}{2} \right)
   \end{pmatrix}
 $$
-### (3). $\left( 0, \frac{1}{2} \right)$ 表示
+### 7.5.3 (3). $\left( 0, \frac{1}{2} \right)$ 表示
 类似的, 所谓 $\left(0, \frac{1}{2} \right)$ 表示, 就是 $N^+$ 是 $1$ 维表示, 而 $N^-$ 是 $2$ 维表示, 同样:
 $$
 N_i^+ = \frac{1}{2} (J_i + \mathrm{i} K_i) = 0 ,
@@ -664,7 +662,7 @@ J_i = \frac{1}{2}\sigma_i,\quad K_i = \frac{i}{2}\sigma_i
 $$
 这里的 $K_i$ 与 $\left( \frac{1}{2},0 \right)$ 表示的结果相差一个负号, 隐含有宇称变换的意味.
 
-### (4). $Van\ der\ Waerden$ 符号
+### 7.5.4 (4). $Van\ der\ Waerden$ 符号
 ####  $Weyl$ 旋量
 $\left( \frac{1}{2},0 \right)$ 表示所作用的 $2$ 分量对象称为左手旋量, $\left( 0, \frac{1}{2} \right)$ 表示所作用的 $2$ 分量对象称为右手旋量, 它们统称为 $Weyl$ 旋量 :
 $$
@@ -790,7 +788,7 @@ $$
 $$
 $\Psi$ 和 $\Psi^C$ 是 $Dirac$ 旋量, 满足相同的 $Lorentz$ 变换关系.
 
-### (5). $\left( \frac{1}{2}, \frac{1}{2} \right)$ 表示与 $4-tendor$
+### 7.5.5 (5). $\left( \frac{1}{2}, \frac{1}{2} \right)$ 表示与 $4-tendor$
 所谓 $\left( \frac{1}{2}, \frac{1}{2} \right)$ 表示, 就是 $N^+$ 和 $N^-$ 都是 $2$ 维表示. 其作用的对象记作 $v_a^{\dot b}$, 每个指标在独立的 $SU(2)$ $Lie$ 代数下变换.
 
 采用 $Van\ der\ Waerden$ 符号组成任意的<font color="#ff0000">厄密矩阵</font> $v_{a\dot b}$, 其可以在泡利矩阵和单位矩阵下展开:
@@ -826,7 +824,7 @@ v_{a\dot b} \ \overset{\Delta}{=}
 $$
 证明思路如下: 由上面得到的 $v_{a\dot b}$ 在 $Lorentz$ 变换下的形式, 取 **boost** 为 $x,y,z$ 方向, 可以验证, 结果与 $4-tendor$ 的 $Lorentz$ 变换形式一致.
 
-# 8. $Poincaré \ Group$ (庞加莱群)
+# 8 $Poincaré \ Group$ (庞加莱群)
 ## 8.1 无限小平移变换
 考虑一个简单的平移变换 :
 $$
@@ -922,6 +920,6 @@ $$
 W^{\mu}=\frac{1}{2} \epsilon^{\mu \nu \rho \sigma} P_{\nu} M_{\rho \sigma}
 $$
 它对应的标量值是自旋, 记作 $j = j_1+j_2$, 例如对于洛伦兹群, 其两个 $SU(2)\ Lie$ 代数对应 $j_1$ 和 $j_2$. 即庞加莱群用两个标量予以标记: $m$ (质量, 可取任意值), $j$ (自旋, 取整数或者半整数).
-# 9. 基本粒子
+# 9 基本粒子
 <font color="#ff0000">庞加莱群是描述所有基本粒子的数学工具.</font>
 
