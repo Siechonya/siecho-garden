@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Lie Group/","noteIcon":"","created":"2024-11-30T23:35:43.866+08:00","updated":"2025-09-10T13:11:30.945+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Lie Group/","noteIcon":"","created":"2024-11-30T23:35:43.866+08:00","updated":"2025-09-10T13:16:43.584+08:00"}
 ---
 
 
@@ -61,13 +61,11 @@ $$
 $$
 其对应二维实旋转，当视为 $x,y\to a,b$.
 
-```col
 > [!info] 同构
 > 如果映射 $\Pi: G \rightarrow G^{\prime}$ 一一映射, 并且满足: 
-> $ \forall g_{1}, g_{2} \in G,\ \Pi\left(g_{1}\right) \circ\Pi\left(g_{2}\right)=\Pi\left(g_{1} \circ g_{2}\right) 
-> $
+> $$ \forall g_{1}, g_{2} \in G,\ \Pi\left(g_{1}\right) \circ\Pi\left(g_{2}\right)=\Pi\left(g_{1} \circ g_{2}\right) 
+> $$
 > 则 $\Pi$ 就是同构映射, 并且称 $G, G^{\prime}$ 是同构的。
-```
 
 显然 $U(1),SO(2)$ 是同构的。
 
@@ -76,15 +74,13 @@ $$
 SU(1)={1}
 $$
 即 $SU(1)$ 只包含单位元，是一个平凡群。
-
 # 3 $3 D\ Rotation$ (三维旋转群)
 ## 3.1 $O(3)$ 和 $SO(3)$
-```col
-> $O(3)$: 满足 $O^TO=I$
-```
-```col
+> [!note]
+> $O(3)$: 满足 $O^TO=I$  
+> 
 > $SO(3)$: 满足 $det(O)=1$ 的 $O(3)$群
-```
+
 $SO(3)$ 群的基：
 $$
 R_x=\begin{pmatrix} 1 & &  \\ & cos\theta &  -sin\theta \\  & sin\theta & cos\theta \end{pmatrix},
@@ -110,7 +106,6 @@ $$
 \mathbf{
 ij}=\mathbf{k},\ \mathbf{jk}=\mathbf{i},\ \mathbf{ki}=\mathbf{j},\ \mathbf{jki}=-1,\cdots
 $$
-
 定义单位四元数满足：
 $$
 q^\dagger q=1
@@ -141,17 +136,15 @@ a+d i & b+c i \\
 -b+c i & a-d i
 \end{array}\right)
 $$
-
 由上式可见
 $$
 \operatorname{det}(q)=a^{2}+b^{2}+c^{2}+d^{2}=q^\dagger q=1
 $$
-
 单位四元数对应的 $2 \times 2$ 复数矩阵 $\mathcal{U}$ 满足：
 $$
 \mathcal{U}^{\dagger} \mathcal{U}=1, \ \operatorname{det}(\mathcal{U})=1
 $$
-
+> [!note]
 >  $\mathcal{S U}(2)$： $\forall$ 单位四元数都唯一对应 $\mathcal{S U}(2)$ 群中的一个群元。
 
 ## 3.3 $SO(3)$ 和 $SU(2)$
@@ -170,11 +163,9 @@ U_z(\theta) = \mathbf{1}cos\theta + \mathbf{k}sin\theta = \begin{bmatrix} cos\th
 \end{array}
 $$
 注意，这导致的旋转角将是 $SO(3)$ 的两倍。
-```col
+
 > [!info] <font color="#ff0000">双覆盖</font>
 >  $SU(2)$ 称为 $SO(3)$ 群的双覆盖，因为可以找到两个 $SU(2)$ 群元对应一个 $SO(3)$ 群元。这是因为 $SO(3)$ 的旋转角只有 $SU(2)$ 的一半，而旋转角有 $2\pi$ 的周期。
-```
-
 # 4 $Lie\ Algebra$ (李代数)
 *Lie 代数研究连续对称性*
 ## 4.1 $Simple\ Definition$ (简要定义)
@@ -190,13 +181,11 @@ R(\theta) = \left[ g\left( \frac{\theta}{N} \right) \right]^N =
 $$
 即有限旋转都可以由 $e$ 指数表示。
 
-```col
 > [!info] Lie 代数
 >  群元是 $n \times n$ 矩阵 $Lie$群 $G$ 对应的的 $Lie$代数 $\mathfrak{g}$ 是满足如下条件的 $n \times n$ 矩阵 $X$ 的集合:
-> $
+> $$
 > \mathrm{e}^{t \mathfrak{g}} \in G,\ t \in \mathbb{R}
-> $
-```
+> $$
 
 $Lie$ 群 $G$ 的乘法与 $Lie$ 代数 $\mathfrak{g}$ 结合法则由 $Baker-Campbell-Hausdorff$ 公式描述：
 $$
@@ -247,13 +236,11 @@ $$
 $$
 
 ## 4.3 $Abstract\ Definition$ (李代数的抽象定义)
-```col
 > [!info] Lie 代数
 > $Lie$ 代数是一个向量空间 $\mathfrak{g}$， 并配备一个二元运算 $[...]$: $\mathfrak{g} \times \mathfrak{g} \rightarrow \mathfrak{g}$, [...] 满足如下公理:
 > - 双线性:  $\forall a, b \in \mathbb{R},\ \forall X, Y, Z \in \mathfrak{g},\ [a X+b Y, Z]=a[X, Z]+   b[Y, Z],\ [Z, a X+b Y]=a[Z, X]+b[Z, Y]$;
 > - 反交换律:  $\forall X, Y \in \mathfrak{g},\ [X, Y]=-[Y, X]$;
 > - Jacobi 恒等式:  $\forall X, Y, Z \in \mathfrak{g},\ [X,[Y, Z]]+[Z,[X, Y]]+[Y,[Z, X]]=  0$.
-```
 
 对易子、$Poisson$ 括号满足上述二元运算的定义。
 
@@ -313,34 +300,26 @@ $$
 \vec v = v_x\mathbf{i}+v_y \mathbf{j}+v_z \mathbf{k} = \begin{bmatrix} iv_z & v_x+iv_y \\  -v_x+iv_y & -iv_z \end{bmatrix}
 $$
 ## 4.5 李群的抽象定义
-```col
 > [!info] $Lie$ 群
 > $Lie$ 群是一个群, 也是一个微分流形。这个流形满足如下条件:
 > - 群乘法。诱导出的从流形到流形自身的映射必须是可微的。这称为相容性条件，它保证了群定义与流形定义的兼容。例如，群 $G$ 的任意群元 $a$ 诱导出了从 $G$ 到 $G$ 的映射：给定 $\forall b \in G  ，  c \equiv a \circ b \in G$ ，映射 $a: b\in G \rightarrow c\in G$ 必须是可微的。
 > - 流形中的任意点都有相应的坐标, 可以用坐标的语言表示上述内容: $c=a b$ 对应的坐标必须是 $b$ 的坐标的可微函数。
-```
 
-```col
 > [!info] 覆盖群
 > 任一 $Lie$ 代数仅对应一个单连通 $Lie$ 群，该群称为覆盖群。（单连通： 流形上任意闭合曲线可以平滑地收缩为流形中的一点）
-```
 
 比如满足 $[J_i,J_j]=i\hbar\epsilon_{ijk}J_k$ 的 Lie 代数对应的覆盖群是 $SU(2)$，其流形是一个三维单位超球面 $S^3$（四维球面），是单连通的，而 $SO(3)$ 是单位超球面的一半，是 $SU(2)$ 的商空间，非单连通。
 
 总结：
-
 $$
 \begin{array}{c}
 S^1=U(1)\ \ \underset{同构}{\underbrace{\longleftrightarrow} }\ \ SO(2) \\
 S^3=SU(2)\ \ \underset{覆盖}{\underbrace{\longrightarrow} }\ \ SO(3)
 \end{array}
 $$
-
 # 5 表示论
-```col
 > [!info] 群的表示
 >群 G 的一个表示 R 指的是从 *G* 到*某个向量空间 V 上的全体线性变换组成的集合*的映射：$R:\underset{\in G}{\underbrace{g} } \to R(g)$
-```
 
 $R(g)$表示某个矩阵变换，比如矩阵乘法。称 $R$ 为同态映射，当：
  - $R(e)=I$，恒等群元对应恒等变换。
@@ -349,36 +328,29 @@ $R(g)$表示某个矩阵变换，比如矩阵乘法。称 $R$ 为同态映射，
 
 例如，对于三维向量空间 $\mathbb{R}^3$，旋转矩阵是 $SO(3)$ 的一种表示，或者说是 $SO(3)$ 到 $\mathbb{R}^3$ 上全体旋转变换的同态映射。
 
-下面给出一些定义，为下一节做铺垫：
+下面给出一些定义：
 
-```col
 >[!info] 不变子空间 V'
-> $
+> $$
 > \exists V'\subset V,\ s.t.\forall v\in V',g\in G,\ 满足\ R(g)v\in V'
-> $
-```
-```col
+> $$
+
 >[!info] 子表示 R'
-> $
+> $$
 > R(g)v=R'(g)v,\ \forall v\in V',g\in G
-> $
-```
-```col
+> $$
+
 >[!info] <font color="#ff0000">不可约表示 R</font>
 > R 不能分解为子表示，V 也不能分解成不变子空间
-```
-```col
+
 > [!info] Casimir 元
 > Casimir 元（记作 C）对任意生成元 $X$ 都有
-> $
+> $$
 > [C, X]=0
->$
-```
-```col
+>$$
+
 > [!info] Schur 引理
 > 给定一个不可约群表示 $R: \mathfrak{g} \rightarrow   G L(V)$，如果某个线性变换 $T: V \rightarrow V$（即 $T \in G L(V)$ ）与所有 $R(g), \forall g \in G$ 对易，则 $T$ 必为恒等变换的常数倍。其中 $G L(V)$ 表示向量空间 V 上所有线性变换的集合。
-```
-
 # 6 $SU(2)$ 的深入讨论
 ## 6.1 $SU(2)$ 的不可约表示
 回顾 $4.4$ 节, 已经得到：
@@ -464,21 +436,17 @@ J_1 = \frac{1}{\sqrt 2}\begin{pmatrix} 0 & -i & 0 \\ i & 0 &  -i \\ 0 & i & 0 \e
 $$
 # 7 $O(1,3)$: $Lorentz\ Group$ (洛伦兹群)
 ## 7.1 $Definition$
-```col
 > [!info] Lorentz 群 $\Lambda$
 > 洛伦兹群的作用对象是四维 $Minkowski$ 空间, 并且保持其内积不变: $x^\mu \to x'^\mu = \Lambda^\mu_\nu x^\nu   \ \Rightarrow\     x'^\mu\eta_{\mu\nu}x'^{\nu}=x^\mu\eta_{\mu\nu}x^{\nu}$
-```
 
 上述定义等价于:
 $$
 \Lambda_{\mu}^{\sigma} \eta_{\sigma \rho} \Lambda_{\nu}^{\rho} = \eta_{\mu \nu}
 $$
-
 或者写成矩阵形式 :
 $$
 \Lambda^{T} \eta \Lambda = \eta
 $$
-
 对上式取行列式可得：
 $$
 \begin{aligned}
@@ -487,7 +455,6 @@ $$
 & \rightarrow \operatorname{det}(\Lambda) = \pm 1
 \end{aligned}
 $$
-
 取度规的 $\mu=\nu=0$ 分量 :
 $$
 \begin{array}{l}
@@ -499,10 +466,9 @@ $$
 
 根据上述两个约束的正负可以把 $Lorentz$ 群分成 $4$ 个分支。不涉及坐标反演的两个分支满足 $\operatorname{det}(\Lambda)=+1$. 
 
-```col
 > [!info] $SO(1,3)^\uparrow$
 > 满足 $\operatorname{det}(\Lambda) = 1$ 和 $\Lambda^0_0\geq 0$ 称为正规 $Lorentz$ 群 $SO(1,3)^\uparrow$.
-```
+
 引入宇称变换和时间反演变换 :
 $$
 \Lambda_P = diag(1,-1,-1,-1),\ \ \Lambda_T=diag(-1,1,1,1)
@@ -602,7 +568,6 @@ K_x = \begin{pmatrix} 0 & i & 0 & 0 \\ i & 0 &  0 & 0\\ 0 & 0 & 0 & 0 \\  0 & 0 
 K_y = \begin{pmatrix} 0 & 0 & i & 0 \\ 0 & 0 &  0 & 0\\ i & 0 & 0 & 0 \\  0 & 0 & 0 & 0 \end{pmatrix}, \quad
 K_z = \begin{pmatrix} 0 & 0 & 0 & i \\ 0 & 0 &  0 & 0\\ 0 & 0 & 0 & 0 \\  i & 0 & 0 & 0 \end{pmatrix}
 $$
-
 注意上述六个矩阵都已乘以 $i$, $J$ 为厄密矩阵, 而 $K$ 为对称矩阵. 可以得到其 $Lie\ Algebra$ 是：
 $$
 [J_i,J_j]=i~\epsilon_{ijk}J_k,\quad [J_i,K_j]=i~\epsilon_{ijk}K_k, \quad [K_i,K_j]=-i~\epsilon_{ijk}J_k
@@ -620,7 +585,6 @@ $$
 ## 7.5 $SO(1,3)^\uparrow$ 的群表示
 ### 7.5.1 (1). $(0,0)$ 表示
 所谓 $(0,0)$ 表示, 就是 $N^+$ 和 $N^-$ 都是 $1$ 维表示, 而这两者都是 $SU(2)$ 的生成元, 因此自然都是 $0$, 对应的 $Lie$ 群元是单位元 $e^0=1$, 作用对象是洛伦兹标量(1-分量).
-
 ### 7.5.2 (2). $\left( \frac{1}{2},0 \right)$ 表示
 所谓 $\left( \frac{1}{2},0 \right)$ 表示, 就是 $N^+$ 是 $2$ 维表示, 而 $N^-$ 是 $1$ 维表示, 显然:
 $$
@@ -661,7 +625,6 @@ $$
 J_i = \frac{1}{2}\sigma_i,\quad K_i = \frac{i}{2}\sigma_i
 $$
 这里的 $K_i$ 与 $\left( \frac{1}{2},0 \right)$ 表示的结果相差一个负号, 隐含有宇称变换的意味.
-
 ### 7.5.4 (4). $Van\ der\ Waerden$ 符号
 ####  $Weyl$ 旋量
 $\left( \frac{1}{2},0 \right)$ 表示所作用的 $2$ 分量对象称为左手旋量, $\left( 0, \frac{1}{2} \right)$ 表示所作用的 $2$ 分量对象称为右手旋量, 它们统称为 $Weyl$ 旋量 :
@@ -750,8 +713,6 @@ $$
 
 - 加上旋转变换后, $Lorentz$ 变换矩阵不再对称.
 - 上述变换的作用量是 2-分量, 不是四维时空的 4-分量, 后者对应的 $\left( \frac{1}{2}, \frac{1}{2} \right)$ 表示可跳转至 [[#(5). $ left( frac{1}{2}, frac{1}{2} right)$ 表示与 $4-tendor$]].
-
-
 #### 旋量与宇称
 根据 $7.3$ 节, 在宇称变换下, $J_i\to J_i, K_i \to -K_i$, 而 :
 $$
@@ -823,7 +784,6 @@ v_{a\dot b} \ \overset{\Delta}{=}
 = (v_0, v_1, v_2, v_3)^T
 $$
 证明思路如下: 由上面得到的 $v_{a\dot b}$ 在 $Lorentz$ 变换下的形式, 取 **boost** 为 $x,y,z$ 方向, 可以验证, 结果与 $4-tendor$ 的 $Lorentz$ 变换形式一致.
-
 # 8 $Poincaré \ Group$ (庞加莱群)
 ## 8.1 无限小平移变换
 考虑一个简单的平移变换 :
@@ -849,7 +809,6 @@ $$
 \Phi(\vec x + \vec a) = e^{\mathbf{i}a^iP_i}\Phi(\vec x) = e^{a^i\partial_i} \Phi(\vec x)
 $$
 ## 8.2 庞加莱群
-
 洛伦兹群加上平移变换后, 就变成了的庞加莱群, 即: 
 $$
 Poincaré \ Group = Lorentz\ Group \ +\  Translation(平移) = rotation\ +\ boost\ +\ translation
