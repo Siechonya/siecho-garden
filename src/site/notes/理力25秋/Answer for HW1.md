@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-11T21:12:53.579+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-11T21:14:29.474+08:00"}
 ---
 
 
@@ -119,7 +119,7 @@ $$
 $$
 取一周 $\Delta \varphi = 2\pi$ 得到近地点在公转一周后的进动角度：
 $$
-\Delta = 6\pi \left( \frac{GM}{hc} \right)^2 \approx 0.1034'' \approx 5.014 ~ rad
+\Delta = 6\pi \left( \frac{GM}{hc} \right)^2 \approx 0.1034'' \approx 5.014\times 10^{-7} ~ rad
 $$
 它给出的结果是 $\Delta \approx 43.03''/ century$，幸好对水星的观测能一直追溯到 1765 年，Clemence 在 1943 年分析了这些数据，得出 $\Delta = 43.11 \pm0.45''/century$，证实了这一预言。
 
