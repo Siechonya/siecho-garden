@@ -1,11 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-11T20:59:53.230+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-11T21:05:48.134+08:00"}
 ---
 
 
 # 1 球坐标  
 ## 1.1 
-![[z_figure/Pasted image 20250911160120.png#pic_center|350]]  
+![z_figure/Pasted image 20250911160120.png](/img/user/z_figure/Pasted%20image%2020250911160120.png)  
 首先注意到，球坐标系 $(r, \theta, \phi)$ 与直角坐标系 $(x, y, z)$ 的转换关系为：  
 $$
 \left\{
@@ -58,7 +58,7 @@ $$
 其中，M 是中心天体质量，L 是运动天体的角动量。  
 # 3 双曲线轨道  
 ## 3.1 
-![[z_figure/Pasted image 20250911164445.png#pic_center|425]]
+![z_figure/Pasted image 20250911164445.png](/img/user/z_figure/Pasted%20image%2020250911164445.png)
 如图，构造步骤：
 
 1. 给定一个圆，圆心 $F_1$ ​，半径 $R$；取圆外一点 $F_2​$。
@@ -69,9 +69,8 @@ $$
 > 和椭圆轨道一样，这里的中垂线也是双曲线轨道在 Q 点的切线。
 ## 3.2 
 因为角动量守恒依旧成立，所以第二问的结论依旧是可用的，于是 $\Delta v \propto \Delta \theta$，可以画出速度图：  
-$$
+![Pasted image 20250911210406.png](/img/user/Pasted%20image%2020250911210406.png)  
 
-$$
 ## 3.3 
 此时，金原子核可视为固定不变，而库仑力和万有引力均为平方反比力，性质相似，所以上述讨论也成立，$\alpha$ 粒子轨迹为双曲线。  
 # 4 进动  
