@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-11T21:14:29.474+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-12T16:57:01.812+08:00"}
 ---
 
 
@@ -69,7 +69,7 @@ $$
 > 和椭圆轨道一样，这里的中垂线也是双曲线轨道在 Q 点的切线。
 ## 3.2 
 因为角动量守恒依旧成立，所以第二问的结论依旧是可用的，于是 $\Delta v \propto \Delta \theta$，得到的速度图仍然是一个圆（左图）。 
-![Pasted image 20250911210406.png](/img/user/Pasted%20image%2020250911210406.png)  
+![z_figure/Pasted image 20250911210406.png](/img/user/z_figure/Pasted%20image%2020250911210406.png)  
 将速度图旋转 90 度，方向与中垂线平行，同时也是双曲线的切线。随着 $\theta$ 变化，将得到的一系列切线连接，就得到轨道为双曲线。
 ## 3.3 
 此时，金原子核可视为固定不变，而库仑力和万有引力均为平方反比力，性质相似，所以上述讨论也成立，$\alpha$ 粒子轨迹为双曲线，原子核位于 $F_2$。  
