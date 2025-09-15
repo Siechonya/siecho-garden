@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/words/qld words- Calculation of pitch angle and energy diffusion coefficients with the PADIE code/","noteIcon":"","created":"2025-08-05T23:27:42.886+08:00","updated":"2025-08-14T21:49:51.797+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/words/qld words- Calculation of pitch angle and energy diffusion coefficients with the PADIE code/","noteIcon":"","created":"2025-08-05T23:27:42.886+08:00","updated":"2025-09-15T18:43:59.346+08:00"}
 ---
 
-### Calculation of pitch angle and energy diffusion coefficients with the PADIE code  
+### 0.1.1 Calculation of pitch angle and energy diffusion coefficients with the PADIE code  
 
-```col
+
 > [!info] note
 > 
 > <span style="background:#fff88f">yellow highlight</span>:  significant/notable viewpoints, some relatively important facts
@@ -16,7 +16,7 @@
 >  <u>underline text</u>:  unfamiliar words
 > 
 > <span style="background:#fff88f">squiggle text with yellow highlight</span>:  very important viewpoints, facts, etc.
-```
+
 
 - predominantly 绝大多数地, 主要地
 - astrophysical 天体物理的

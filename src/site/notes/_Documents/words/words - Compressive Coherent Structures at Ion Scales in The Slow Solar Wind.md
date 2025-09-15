@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/words/words - Compressive Coherent Structures at Ion Scales in The Slow Solar Wind/","noteIcon":"","created":"2025-08-13T20:50:41.776+08:00","updated":"2025-08-14T22:34:15.333+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/words/words - Compressive Coherent Structures at Ion Scales in The Slow Solar Wind/","noteIcon":"","created":"2025-08-13T20:50:41.776+08:00","updated":"2025-09-15T18:44:18.439+08:00"}
 ---
 
-### Perrone et al_2016_Compressive Coherent Structures at Ion Scales in The Slow Solar Wind 
-```col
+### 0.1.1 Perrone et al_2016_Compressive Coherent Structures at Ion Scales in The Slow Solar Wind 
+
 > [!info] 注意
 > 
 > <span style="background:#fff88f">yellow highlight</span>:  significant/notable viewpoints, some relatively important facts
@@ -13,7 +13,7 @@
 > squiggle text:  specific terms
 >
 >  <u>underline text</u>:  unfamiliar words
-```
+
 
 - fluctuation 波动, 起伏
 - intermittency 间歇性; 间歇现象

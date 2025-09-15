@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/words/qld words- Event-specific chorus wave and electron seed population models in DREAM3D using the Van Allen Probes/","noteIcon":"","created":"2025-08-01T23:51:07.622+08:00","updated":"2025-08-14T21:49:57.612+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/words/qld words- Event-specific chorus wave and electron seed population models in DREAM3D using the Van Allen Probes/","noteIcon":"","created":"2025-08-01T23:51:07.622+08:00","updated":"2025-09-15T18:44:08.257+08:00"}
 ---
 
-### Event-specific chorus wave and electron seed population models in DREAM 3 D using the Van Allen Probes  
+### 0.1.1 Event-specific chorus wave and electron seed population models in DREAM 3 D using the Van Allen Probes  
 
-```col
+
 > [!info] note
 > 
 > <span style="background:#fff88f">yellow highlight</span>:  significant/notable viewpoints, some relatively important facts
@@ -16,7 +16,7 @@
 >  <u>underline text</u>:  unfamiliar words
 > 
 > <span style="background:#fff88f">squiggle text with yellow highlight</span>:  very important viewpoints, facts, etc.
-```
+
 
 - Event-specific 特定时间
 - population (熟词生义) 种群

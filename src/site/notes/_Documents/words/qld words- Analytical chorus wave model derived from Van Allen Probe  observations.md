@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/words/qld words- Analytical chorus wave model derived from Van Allen Probe  observations/","noteIcon":"","created":"2025-07-20T20:31:24.097+08:00","updated":"2025-08-14T21:49:44.315+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/words/qld words- Analytical chorus wave model derived from Van Allen Probe  observations/","noteIcon":"","created":"2025-07-20T20:31:24.097+08:00","updated":"2025-09-15T18:44:36.818+08:00"}
 ---
 
-### Wang et al. - 2019 - Analytical Chorus Wave Model Derived from Van Allen Probe Observation  
-```col
+### 0.1.1 Wang et al. - 2019 - Analytical Chorus Wave Model Derived from Van Allen Probe Observation  
+
 > [!info] 注意
 > 
 > <span style="background:#fff88f">yellow highlight</span>:  significant/notable viewpoints, some relatively important facts
@@ -13,7 +13,7 @@
 > squiggle text:  specific terms
 >
 >  <u>underline text</u>:  unfamiliar words
-```
+
 
 - gyrofrequency 回旋频率
 - root mean square amplitudes 均方根振幅
