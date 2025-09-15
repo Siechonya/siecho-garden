@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-12T16:57:01.812+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-15T13:22:20.747+08:00"}
 ---
 
 
@@ -77,7 +77,7 @@ $$
 ## 4.1 
 根据广义相对论修正 $F^{(GR)} = - \frac{{3(GM)^2 p}}{r^4 c^2}$,   行星在公转一周后，位矢和速度方向都会发生偏转，这个偏转就是每运行轨道一圈的进动角，记为 $\Delta$。题目缺少一个说明：广义相对论修正力 $F^{(GR)}$ 的方向和牛顿万有引力一致，加上这个说明，就得到：  
 $$
-\frac{\Delta}{ 2\pi} = \frac{\delta \Delta v}{ \Delta v} = \frac{{F^{(GR)}}}{F^{(classic)}} 
+\frac{\Delta}{ 2\pi} = \frac{\delta \Delta v}{ \Delta v} = \frac{{F^{(GR)}}}{F^{(Newton)}} 
 =
 \frac{{3(GM)^2p}}{r^4 c^2}/ \frac{{GM}}{r^2}
 = 
@@ -95,7 +95,15 @@ $$
 > [!info]
 > hw1作业答案到此结束。如果感兴趣，可以往后阅读。
 # Appendix 稍微严格一点的水星进动计算过程%
-使用变量替换 $u = \frac{GM}{r}$，可以得到：
+一般描述**单位质量**天体的运动的比耐公式是这样的：  
+$$
+\vec{F} = -h^2\mu^2\left(\frac{d^2\mu}{d\varphi^2} + \mu\right)\vec{e_r},\quad \mu = \frac{1}{r}
+$$
+已知 $F^{(GR)} = - \frac {{3(GM)^2 p}} {r^4 c^2}$ ，而 $h=\sqrt {GMp}​$，得到：  
+$$
+\vec{F} = \vec F^{(Newton)} + \vec F^{(GR)} =  -G \frac{M}{r^2} \left( 1 + \frac{3h^2}{r^2c^2} \right) \vec{e_r}
+$$
+使用变量替换 $u = \frac{\color{blue}GM}{r}$，可以得到：
 $$
 \boxed{
 \frac{ d^2 u }{ d^2 \varphi} + u = \frac{G^2M^2}{h^2} + {\color{red} \frac{3u^2}{c^2}} 
