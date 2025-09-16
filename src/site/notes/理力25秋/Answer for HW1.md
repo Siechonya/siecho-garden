@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-16T12:33:27.999+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-16T12:34:33.960+08:00"}
 ---
 
 
@@ -73,35 +73,33 @@ $$
 将速度图旋转 90 度，方向与中垂线平行，同时也是双曲线的切线。随着 $\theta$ 变化，将得到的一系列切线连接，就得到轨道为双曲线。  
 
 > [!info] 更严格一点来说
-> 
-
-记 $AF_1=C$，速度圆半径为 $R$，那么根据速度圆，可以假设：  
-$$
-\vec v  =  \begin{bmatrix} v_x  \\  v_y  \end{bmatrix} = \begin{bmatrix} -R\sin\theta \\  R\cos\theta +C  \end{bmatrix}
-$$
-将坐标系转到极坐标，得到：
-$$
-\vec v  
-= 
-\begin{bmatrix} v_r  \\  v_\theta  \end{bmatrix}
-=
-\begin{bmatrix} \dot r  \\  r \dot \theta  \end{bmatrix}
-=
-\begin{bmatrix} \cos\theta & \sin\theta \\  -\sin\theta & \cos\theta \end{bmatrix}
-\begin{bmatrix} v_x  \\  v_y  \end{bmatrix} 
-= 
-\begin{bmatrix} -C\sin\theta \\  C\cos\theta +R  \end{bmatrix}
-$$
-得到：  
-$$
-\frac{ \mathrm{d} r }{ \mathrm{d} \theta} 
-=
-\frac{{{ \mathrm{d} r }/{ \mathrm{d} t}}}{{ \mathrm{d} \theta }/{ \mathrm{d} t}} = r \frac{\dot r}{r\dot\theta}
-= r \frac{C\sin\theta}{R+C\cos\theta}
-$$
-这个方程容易通过分离 $r$ 和 $\theta$ 来求解，最后的到其满足圆锥曲线方程 $r = \frac{p}{1+e\cos\theta}$，其中 $e=\frac{C}{R}$，p 是积分常数，也就是说  
-- C < R 时，也就是 A 点在圆内时，e<1，对应椭圆；
-- 圆、双曲线、抛物线完全类似。
+> 记 $AF_1=C$，速度圆半径为 $R$，那么根据速度圆，可以假设：  
+> $$
+> \vec v  =  \begin{bmatrix} v_x  \\  v_y  \end{bmatrix} = \begin{bmatrix} -R\sin\theta \\  R\cos\theta +C  \end{bmatrix}
+> $$
+> 将坐标系转到极坐标，得到：
+> $$
+> \vec v  
+> = 
+> \begin{bmatrix} v_r  \\  v_\theta  \end{bmatrix}
+> =
+> \begin{bmatrix} \dot r  \\  r \dot \theta  \end{bmatrix}
+> =
+> \begin{bmatrix} \cos\theta & \sin\theta \\  -\sin\theta & \cos\theta \end{bmatrix}
+> \begin{bmatrix} v_x  \\  v_y  \end{bmatrix} 
+> = 
+> \begin{bmatrix} -C\sin\theta \\  C\cos\theta +R  \end{bmatrix}
+> $$
+> 得到：  
+> $$
+> \frac{ \mathrm{d} r }{ \mathrm{d} \theta} 
+> =
+> \frac{{{ \mathrm{d} r }/{ \mathrm{d} t}}}{{ \mathrm{d} \theta }/{ \mathrm{d} t}} = r \frac{\dot r}{r\dot\theta}
+> = r \frac{C\sin\theta}{R+C\cos\theta}
+> $$
+> 这个方程容易通过分离 $r$ 和 $\theta$ 来求解，最后的到其满足圆锥曲线方程 $r = \frac{p}{1+e\cos\theta}$，其中 $e=\frac{C}{R}$，p 是积分常数，也就是说  
+> - C < R 时，也就是 A 点在圆内时，e<1，对应椭圆；
+> - 圆、双曲线、抛物线完全类似。
 
 ## 3.3 
 此时，金原子核可视为固定不变，而库仑力和万有引力均为平方反比力，性质相似，所以上述讨论也成立，$\alpha$ 粒子轨迹为双曲线，原子核位于 $F_2$。  
