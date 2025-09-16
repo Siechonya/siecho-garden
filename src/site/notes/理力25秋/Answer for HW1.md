@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-16T11:03:47.789+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-16T11:06:25.016+08:00"}
 ---
 
 
@@ -131,3 +131,4 @@ $$
 $$
 它给出的结果是 $\Delta \approx 43.03''/ century$，幸好对水星的观测能一直追溯到 1765 年，Clemence 在 1943 年分析了这些数据，得出 $\Delta = 43.11 \pm0.45''/century$，证实了这一预言。
 
+![figure: Simulation of precessional motion](z_figure/Simulation_of_precessional_motion.png#pic_center)
