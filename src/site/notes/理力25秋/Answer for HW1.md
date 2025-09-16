@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-15T13:22:20.747+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-16T11:01:16.379+08:00"}
 ---
 
 
@@ -115,9 +115,9 @@ $$
 $$
 \frac{ d^2 u }{ d^2 \varphi} + u = \frac{G^2M^2}{h^2} +  3\frac{{G^4M^4}}{h^4c^2} (1+2e\cos\varphi)
 $$
-第一项 $\frac{G^2M^2}{h^2}$ 是带有初始位移的简谐振动项，得到的正是零阶解（轨道为圆锥曲线）；后两项虽然都带有高阶小量 $\frac{G^4M^4}{h^4c^2}$，但由于 $\cos\varphi$ 是共振项，因此两项当中只有它被保留，得到的解是：
+右侧第一项 $\frac{G^2M^2}{h^2}$ 是带有初始位移的简谐振动项，对应的正是零阶解（轨道为圆锥曲线）；后两项虽然都带有高阶小量 $\frac{G^4M^4}{h^4c^2}$，但由于 $\cos\varphi$ 是共振项(回忆力学的受迫振动：共振)，因此括号两项当中只有 $2e\cos\varphi$ 项被保留，得到的解是<font color="blue">圆锥曲线</font>+<font color="#ff0000">共振</font>：
 $$
-u =  \frac{{G^2M^2}}{h^2}\left[ 1+e\cos\varphi + 3\left( \frac{GM}{hc} \right)^2 e\varphi\sin\varphi \right]
+u =  \frac{{G^2M^2}}{h^2}\left[ {\color{blue}1+e\cos\varphi} + {\color{red}3\left( \frac{GM}{hc} \right)^2 e\varphi\sin\varphi }\right]
 \approx
 \frac{{G^2M^2}}{h^2}\left[ 1+ e\cos \left(1-3\left( \frac{GM}{hc} \right)^2\right) \varphi \right]
 $$
