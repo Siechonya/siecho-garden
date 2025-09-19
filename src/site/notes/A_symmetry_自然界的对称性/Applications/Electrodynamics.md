@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Electrodynamics/","noteIcon":"","created":"2025-03-12T22:33:45.968+08:00","updated":"2025-07-05T22:30:48.144+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Electrodynamics/","noteIcon":"default","created":"2025-03-12T22:33:45.968+08:00","updated":"2025-07-05T22:30:48.144+08:00"}
 ---
 
 

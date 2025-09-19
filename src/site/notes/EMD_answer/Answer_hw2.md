@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer_hw2/","noteIcon":"","created":"2025-03-15T10:31:55.174+08:00","updated":"2025-06-16T16:58:31.347+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer_hw2/","noteIcon":"default","created":"2025-03-15T10:31:55.174+08:00","updated":"2025-06-16T16:58:31.347+08:00"}
 ---
 
 

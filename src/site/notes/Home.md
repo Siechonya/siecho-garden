@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Home/","tags":["gardenEntry"],"noteIcon":"","created":"2025-05-08T13:56:22.821+08:00","updated":"2025-09-07T23:37:50.141+08:00"}
+{"dg-publish":true,"permalink":"/Home/","tags":["gardenEntry"],"noteIcon":"default","created":"2025-05-08T13:56:22.821+08:00","updated":"2025-09-07T23:37:50.141+08:00"}
 ---
 
 # Welcome to Siecho's Remote Vault %

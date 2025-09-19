@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/words/qld words- Calculation of pitch angle and energy diffusion coefficients with the PADIE code/","noteIcon":"","created":"2025-08-05T23:27:42.886+08:00","updated":"2025-09-15T18:43:59.346+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/words/qld words- Calculation of pitch angle and energy diffusion coefficients with the PADIE code/","noteIcon":"default","created":"2025-08-05T23:27:42.886+08:00","updated":"2025-09-15T18:43:59.346+08:00"}
 ---
 
 ### 0.1.1 Calculation of pitch angle and energy diffusion coefficients with the PADIE code  

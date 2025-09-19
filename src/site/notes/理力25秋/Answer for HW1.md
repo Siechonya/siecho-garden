@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-16T12:34:33.960+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"default","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-16T12:34:33.960+08:00"}
 ---
 
 
