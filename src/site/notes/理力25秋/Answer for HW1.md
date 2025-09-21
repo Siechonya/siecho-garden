@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"default","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-21T20:32:43.355+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"default","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-21T21:54:25.065+08:00"}
 ---
 
 
@@ -129,7 +129,7 @@ $$
 $$
 \vec{F} = -h^2\mu^2\left(\frac{d^2\mu}{d\varphi^2} + \mu\right)\vec{e_r},\quad \mu = \frac{1}{r}
 $$
-已知 $F^{(GR)} = - \frac {{3(GM)^2 p}} {r^4 c^2}$ ，而 $h=\sqrt {GMp}​$，得到：  
+已知 $F^{(GR)} = - \frac {{3(GM)^2 p}} {r^4 c^2}$ ，而 $h=\sqrt {GMp}​$ 是单位质量的角动量，得到：  
 $$
 \vec{F} = \vec F^{(Newton)} + \vec F^{(GR)} =  -G \frac{M}{r^2} \left( 1 + \frac{3h^2}{r^2c^2} \right) \vec{e_r}
 $$
