@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"default","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-21T20:06:19.585+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"default","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-21T20:32:43.355+08:00"}
 ---
 
 
@@ -77,7 +77,7 @@ $$
 > $$
 > \vec v  =  \begin{bmatrix} v_x  \\  v_y  \end{bmatrix} = \begin{bmatrix} -R\sin\theta \\  R\cos\theta +C  \end{bmatrix}
 > $$
-> 将坐标系转到极坐标，得到：
+> 将坐标系旋转到极坐标，得到：
 > $$
 > \vec v  
 > = 
