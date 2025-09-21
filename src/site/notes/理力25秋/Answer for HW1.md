@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"default","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-16T12:34:33.960+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"default","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-21T20:06:19.585+08:00"}
 ---
 
 
@@ -55,7 +55,7 @@ $$
 $$
 \frac{ \mathrm{d} v }{ \mathrm{d} \theta} = \frac{GM}{L}
 $$
-其中，M 是中心天体质量，L 是运动天体的角动量。  
+其中，M 是中心天体质量，L 是运动天体的(单位质量)角动量。  
 # 3 双曲线轨道  
 ## 3.1 
 ![z_figure/Pasted image 20250911164445.png](/img/user/z_figure/Pasted%20image%2020250911164445.png)
