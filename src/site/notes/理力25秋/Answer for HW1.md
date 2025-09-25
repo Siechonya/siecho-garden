@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"default","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-25T13:14:17.345+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"default","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-25T13:16:20.465+08:00"}
 ---
 
-![[理力25秋/作业/hw1-2025 (1).pdf|hw1-2025 (1)]]
+
 # 1 球坐标  
 ## 1.1 
 ![z_figure/Pasted image 20250911160120.png](/img/user/z_figure/Pasted%20image%2020250911160120.png)  
