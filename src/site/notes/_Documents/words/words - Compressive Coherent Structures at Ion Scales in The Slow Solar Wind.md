@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/words/words - Compressive Coherent Structures at Ion Scales in The Slow Solar Wind/","noteIcon":"default","created":"2025-08-13T20:50:41.776+08:00","updated":"2025-09-24T20:51:16.862+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/words/words - Compressive Coherent Structures at Ion Scales in The Slow Solar Wind/","noteIcon":"default","created":"2025-08-13T20:50:41.776+08:00","updated":"2025-10-09T20:44:31.494+08:00"}
 ---
 
 ### 0.1.1 Perrone et al_2016_Compressive Coherent Structures at Ion Scales in The Slow Solar Wind 
@@ -62,7 +62,9 @@
 - modulus 模
 - hump 驼峰，隆起
 - inspection 视察；检查，审视
-- 
+- perturb 扰乱
+- cylinder 圆柱体
+- cigar 雪茄
 
 
 
