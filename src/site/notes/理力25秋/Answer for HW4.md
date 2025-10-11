@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW4/","noteIcon":"default","created":"2025-10-11T17:37:34.001+08:00","updated":"2025-10-11T20:54:46.209+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW4/","noteIcon":"default","created":"2025-10-11T17:37:34.001+08:00","updated":"2025-10-11T21:07:48.377+08:00"}
 ---
 
 # 1 讲义后面的两题  
@@ -15,7 +15,7 @@
 
 至于运动方程，可以参考鞠国兴：  
 
-<iframe src="https://wds-service-1258344699.file.myqcloud.com/20/17594/pdf/17029151887250cc58a884b1eaa1da7e42ccf84fdded3.pdf#page=43&t=123" width="100%" height="800px" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://cdn.jsdelivr.net/gh/Siechonya/book@main/%E6%9C%97%E9%81%93%E3%80%8A%E5%8A%9B%E5%AD%A6%E3%80%8B%E8%A7%A3%E8%AF%BB%20by%20%E9%9E%A0%E5%9B%BD%E5%85%B4%20(1).pdf#page=31" width="100%" height="800px" frameborder="0" allowfullscreen></iframe>
 
 
 
