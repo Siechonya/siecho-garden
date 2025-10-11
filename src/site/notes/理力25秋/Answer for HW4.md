@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW4/","noteIcon":"default","created":"2025-10-11T17:37:34.001+08:00","updated":"2025-10-11T20:14:25.487+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW4/","noteIcon":"default","created":"2025-10-11T17:37:34.001+08:00","updated":"2025-10-11T20:18:53.274+08:00"}
 ---
 
 # 1 讲义后面的两题  
@@ -11,15 +11,9 @@
 # 2 Landau  
 ## 2.1 
 
+<iframe src="https://cdn.jsdelivr.net/gh/Mister-Hope/physics@master/%E4%B8%93%E4%B8%9A%E5%BF%85%E4%BF%AE%E8%AF%BE/%E5%8A%9B%E5%AD%A6/%E6%95%99%E6%9D%90/%E5%8A%9B%E5%AD%A6(%E7%AC%AC%E4%BA%94%E7%89%88)-%E6%9C%97%E9%81%93.pdf" width="100%" height="800px" frameborder="0" allowfullscreen></iframe>  
 
-<!-- 嵌入PDF的HTML代码，可直接写在Obsidian的Markdown中 -->
-<iframe 
-  src="https://cdn.jsdelivr.net/gh/Mister-Hope/physics@master/%E4%B8%93%E4%B8%9A%E5%BF%85%E4%BF%AE%E8%AF%BE/%E5%8A%9B%E5%AD%A6/%E6%95%99%E6%9D%90/%E5%8A%9B%E5%AD%A6(%E7%AC%AC%E4%BA%94%E7%89%88)-%E6%9C%97%E9%81%93.pdf" 
-  width="100%"  <!-- 宽度占满网页，可改为固定值如"800px" -->
-  height="800px"  <!-- 高度，根据需要调整（如"600px"） -->
-  frameborder="0"  <!-- 去除边框 -->
-  allowfullscreen  <!-- 允许全屏查看 -->
-></iframe>
+
 
 
 
