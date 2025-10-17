@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Electrodynamics/","noteIcon":"default","created":"2025-03-12T22:33:45.968+08:00","updated":"2025-07-05T22:30:48.144+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Electrodynamics/","noteIcon":"default","created":"2025-03-12T22:33:45.968+08:00","updated":"2025-10-17T15:06:01.367+08:00"}
 ---
 
 
@@ -117,7 +117,7 @@ $$
 $$
 T^{\mu\nu} = -\frac{1}{\mu_0}F^{\mu\lambda}\partial^\nu A_\lambda + \frac{1}{4\mu_0}g^{\mu\nu}F^{\alpha\beta}F_{\alpha\beta}
 $$
-遗憾的是, 这个形式并不对称, 因而不能让诺特流满足 $\partial_\nu (J^\nu)^{\mu\sigma} = 0$ (参见 [[A_symmetry_自然界的对称性/Tools/Nother's Theorem and Symmetry#诺特流\|Nother's Theorem and Symmetry#诺特流]]), 需要对其加以修正.
+遗憾的是, 这个形式并不对称, 因而不能让诺特流满足 $\partial_\nu (J^\nu)^{\mu\sigma} = 0$ (参见 [[A_symmetry_自然界的对称性/Tools/Noether's Theorem and Symmetry#诺特流\|Noether's Theorem and Symmetry]]), 需要对其加以修正.
 # 3. $Symmetric\ correction$ 对称性修正
 注意到 $\partial_\mu T^{\mu\nu}=0$, 而由于 $F^{\mu\lambda}$ 是反对称张量, 使得 $\partial_\lambda (F^{\mu\lambda} A^\nu)$ 恰好也满足 $\partial_\mu\partial_\lambda (F^{\mu\lambda} A^\nu)=0$.
 
