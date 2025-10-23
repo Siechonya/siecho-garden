@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/words/words - Compressive Coherent Structures at Ion Scales in The Slow Solar Wind/","noteIcon":"default","created":"2025-08-13T20:50:41.776+08:00","updated":"2025-10-16T14:15:02.192+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/words/words - Compressive Coherent Structures at Ion Scales in The Slow Solar Wind/","noteIcon":"default","created":"2025-10-23T14:36:51.411+08:00","updated":"2025-10-20T19:12:12.915+08:00"}
 ---
 
 ### 0.1.1 Perrone et al_2016_Compressive Coherent Structures at Ion Scales in The Slow Solar Wind 
@@ -35,7 +35,7 @@
 > 在空间科学中，特别是太阳风湍流等离子体系统中，** 相干结构（Coherent Structures）** 指的是在时间和空间上具有显著有序性的动态等离子体和磁场结构。这些结构虽然嵌入在高度无序的湍流背景中，但仍保持其独特的物理特性，并对能量耗散、粒子加速和等离子体输运等过程起到关键作用。
 - indication 指示，标示；象征，暗示，迹象
 - Alfvén vortex   参见：
-![[_Documents/docs/Magnetospheric Multiscale Observation of Kinetic Signatures in the Alfvén Vortex.pdf#page=6|Wang2019APJL]]
+![[_Documents/docs/2.3 Magnetospheric Multiscale Observation of Kinetic Signatures in the Alfvén Vortex.pdf#page=6|Wang2019APJL]]
 > [!info] Alfvén vortex 
 > 阿尔芬涡旋是理想不可压缩磁流体动力学方程的非线性解之一，其特征在于磁场和速度的波动大多垂直于背景磁场。
 - proton inertial lengths  $\lambda_p = \frac{c}{\omega_{pp}}$，$\omega_{pp}$ 是质子等离子体频率
