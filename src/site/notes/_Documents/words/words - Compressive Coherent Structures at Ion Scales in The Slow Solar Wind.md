@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/words/words - Compressive Coherent Structures at Ion Scales in The Slow Solar Wind/","noteIcon":"default","created":"2025-10-23T14:36:51.411+08:00","updated":"2025-10-20T19:12:12.915+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/words/words - Compressive Coherent Structures at Ion Scales in The Slow Solar Wind/","noteIcon":"default","created":"2025-08-13T20:50:41.776+08:00","updated":"2025-10-20T19:12:12.915+08:00"}
 ---
 
 ### 0.1.1 Perrone et al_2016_Compressive Coherent Structures at Ion Scales in The Slow Solar Wind 

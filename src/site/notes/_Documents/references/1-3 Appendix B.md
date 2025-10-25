@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/references/1-3 Appendix B/","noteIcon":"default","created":"2025-10-23T14:23:37.937+08:00","updated":"2025-08-14T21:49:20.323+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/references/1-3 Appendix B/","noteIcon":"default","created":"2025-08-10T23:26:29.788+08:00","updated":"2025-08-14T21:49:20.323+08:00"}
 ---
 
 For $k_\perp = k_\perp (\omega, X) = k\sin\psi$ and $k_\parallel = k_\parallel(\omega, X) =k \cos\psi$, the Jacobian is given by  

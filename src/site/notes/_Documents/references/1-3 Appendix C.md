@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/references/1-3 Appendix C/","noteIcon":"default","created":"2025-10-23T14:23:37.490+08:00","updated":"2025-08-14T21:49:25.009+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/references/1-3 Appendix C/","noteIcon":"default","created":"2025-08-09T21:45:19.054+08:00","updated":"2025-08-14T21:49:25.009+08:00"}
 ---
 
 The momentum diffusion rate can be transformed into an energy diffusion rate and thus used to obtain the timescale for energization. The conversion can be obtained from the definition of the diffusion coefficients in the Fokker-Planck equation  

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/words/qld words- Event-specific chorus wave and electron seed population models in DREAM3D using the Van Allen Probes/","noteIcon":"default","created":"2025-10-23T14:27:10.969+08:00","updated":"2025-09-15T18:44:08.257+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/words/qld words- Event-specific chorus wave and electron seed population models in DREAM3D using the Van Allen Probes/","noteIcon":"default","created":"2025-08-01T23:51:07.622+08:00","updated":"2025-09-15T18:44:08.257+08:00"}
 ---
 
 ### 0.1.1 Event-specific chorus wave and electron seed population models in DREAM 3 D using the Van Allen Probes  

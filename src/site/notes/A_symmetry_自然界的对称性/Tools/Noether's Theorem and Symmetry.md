@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Noether's Theorem and Symmetry/","noteIcon":"default","created":"2025-10-23T14:36:45.381+08:00","updated":"2025-09-10T13:09:28.070+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Noether's Theorem and Symmetry/","noteIcon":"default","created":"2025-01-28T14:11:05.348+08:00","updated":"2025-10-25T23:09:42.372+08:00"}
 ---
 
 
@@ -80,7 +80,7 @@ $$
 $$
 \Delta S = \int dt\, \Delta\mathcal{L} = \left.G(q(t),t)\right|_{t_1}^{t_2} = const.
 $$
-即变换前后, 作用量 $S$ 只相差一个常数项, 那么变分 $\delta S = \delta (S+\Delta S)$, 将得到相同的运动方程(欧拉-拉格朗日方程). 因此, 对于无限小变换 $q(t) \to q(t) +\delta q(t)$, 仍有 $\delta q(t_1)=\delta q(t_2)=0$ 和 $\delta \dot q=\frac{ d }{ d t} \delta q$, 我们只需要:
+即变换前后, 作用量 $S$ 只相差一个常数项, 那么变分 $\delta S = \delta (S+\Delta S)$, 将得到相同的运动方程(欧拉-拉格朗日方程). 因此, 对于无限小变换 $q(t) \to q(t) +\delta q(t)$, 仍有 $\delta q(t_1)=\delta q(t_2)=0$ 和 $\delta \dot q=\frac{ d }{ d t} \delta q$。但是注意，
 $$
 \delta \mathcal{L} = \Delta \mathcal{L} = \frac{dG}{dt}
 $$
@@ -110,9 +110,11 @@ $$
 + \frac{ \partial \mathcal{L} }{ \partial t }
 \right) \delta t
 = \frac{ d \mathcal{L} }{ d t} \delta t
+\\
+= \frac{ \mathrm{d} \mathcal{L}\epsilon }{ \mathrm{d} x}
 = \frac{ d G }{ d t}
 $$
-由于 $\delta t = \epsilon = const.$, 故可取 $G = \mathcal{\epsilon L}$, 再若 $\mathcal{L}$ 不显含 $t$, 就得到哈密顿量 $\mathcal{H}$ 是守恒量:
+故可取 $G = \mathcal{\epsilon L}$，进一步地，若 $\mathcal{L}$ 不显含 $t$, 就得到哈密顿量 $\mathcal{H}$ 是守恒量:
 $$
 \frac{ \partial \mathcal{L} }{ \partial \dot q }  \delta q - \epsilon \mathcal L =const.
 \quad\to\quad
@@ -318,6 +320,44 @@ L_{orbit}^i
 = \frac{1}{2}\epsilon_{ijk} \int d^3x~ \left(T^{j 0}  x^k - T^{k 0} x^j \right)
 =  \int  \epsilon_{ijk} T^{j0}  x^k ~d^3x
 = \int d^3x~ (\vec x \times \vec p)^i
+$$
+在这里，如果加入带电粒子，就会有 $T^{\mu \nu} = T^{\mu \nu}_{field} + T^{\mu \nu}_{particles}$，其中  
+$$
+T^{\mu\nu}_{field} = \frac{\partial \mathcal{L}}{\partial (\partial_\mu \Phi)} \partial^\nu \Phi - g^{\mu\nu} \mathcal{L}
+$$
+是前面证明过的，而  
+$$
+T_{\text{particle}}^{\mu\nu} = \rho U^\mu U^\nu =  m \int d\tau~ \frac{dx^\mu}{d\tau} \frac{dx^\nu}{d\tau} \delta^{4}(x - x(\tau))
+$$
+现在，我们将这个连续的 $T_{\text{particle}}^{\mu\nu}$ 代入场论守恒荷公式 $Q^{\mu\sigma}$ 中：
+$$
+\begin{aligned} 
+Q^{\mu\sigma}_{\text{particle}} &= \int d^3x~ \left(T_{\text{particle}}^{\mu 0} x^\sigma - T_{\text{particle}}^{\sigma 0} x^\mu\right)\\
+&= \int d^3x~ \left[ \left( m \int d\tau~ \dot{x}^\mu \dot{x}^0 \delta^{4}(x - x(\tau)) \right) x^\sigma - \left( m \int d\tau~ \dot{x}^\sigma \dot{x}^0 \delta^{4}(x - x(\tau)) \right) x^\mu \right]
+\end{aligned}
+$$
+由于积分变量 $\dot{ x}\left( =\frac{ \mathrm{d} x }{ \mathrm{d} \tau} \right)$， $x$ 和 $\tau$ 是独立的，我们可以交换积分顺序：
+$$
+Q^{\mu\sigma}_{\text{particle}} = m \int d\tau~ \dot{x}^0 \left[ \dot{x}^\mu \left(\int d^3x~ x^\sigma \delta^{3}(\mathbf{x} - \mathbf{x}(\tau))\right) - \dot{x}^\sigma \left(\int d^3x~ x^\mu \delta^{3}(\mathbf{x} - \mathbf{x}(\tau))\right) \right]
+$$
+得到
+$$
+Q^{\mu\sigma}_{\text{particle}} = m \left[ \dot{x}^\mu x^\sigma - \dot{x}^\sigma x^\mu \right]
+$$
+这个结果正是自由粒子在粒子理论中的轨道角动量部分。当然，我们一般考虑在电磁场中运动的带电粒子，这样 $T_{\text{particle}}^{\mu\nu}$ 就不只是包含 $m$ 项，还会多出一个因为与电磁场相互作用的含电荷 $e$ 的项，变成：  
+$$
+T_{\text{particle}}^{\mu\nu} = \int \mathrm{d}\tau ~ p^\mu \frac{dx^\nu}{d\tau} \delta^{4}(x - x(\tau))
+$$
+此处 $p^\mu = \frac{ \partial L }{ \partial \dot{x}_\mu }$ 为粒子的广义动量，代入一般的单个带电粒子在电磁场运动的拉氏量 ${L_{3D}}(\vec{x}, \vec{v}, t) = - \frac{mc^2}{\gamma(v)} - e \phi + e \vec{v} \cdot \vec{A}$，或者等价的：$L_{4D}(x^\mu, \dot{x}^\mu, \tau) = -mc \sqrt{\dot{x}^\mu \dot{x}_\mu} - e \dot{x}^\mu A_\mu(x^\mu)$，可以得到：  
+$$
+p^\mu = \frac{ \partial L_{4D} }{ \partial \dot{x}_\mu } = -m {\dot{x}^\mu} - e A^\mu
+$$
+或者等价的：  
+$$
+\begin{aligned} 
+E &= -cp^0 =  \gamma mc^2 + e\varphi  \\
+\vec{p}&=\frac{ \partial L_{3D} }{ \partial \vec{v} } =  - (p^i) = \gamma m\vec{v} + e\vec{A}
+\end{aligned}
 $$
 ##### 自旋角动量
 这里先插入一个题外话, 已知 $M_{\mu\nu}=x_\mu \partial_\nu - x_\mu \partial_\nu$ 是庞加莱群中旋转和 $boost$ 在无穷维表示下的生成元(当然不意外, $M$ 长得像个四维形式的角动量算符). 我们先说明一下旋转变换对应的变分: $\delta \Phi = \underbrace{\epsilon^{ij} S_{ij} \Phi}_{\text{自旋部分}} + \frac{\epsilon^{ij}}{2} \underbrace{(x_i \partial_j - x_j \partial_i)}_{\text{轨道部分}} \Phi$ (视为 $\delta x^\mu = 0$, 主动观点, 变换的是场) 与上面一直用的 $\delta \Phi = \underbrace{\Psi}_{自旋}  \underbrace{ -\delta x^i~ \partial_i \Phi}_{轨道} =  \epsilon^{ij} S_{ij} \Phi - \epsilon^{ij} x_j \partial_i \Phi$ ($\delta x^i = \epsilon^{ij}x_j$, 被动观点, 变换的是坐标系) 的等价性(前者的 $\frac{1}{2}$ 因子是由于庞加莱群的旋转子群是 $SO(3)$ 的双覆盖),  即在庞加莱对称性的框架下, 通过两种变分推导出的轨道角动量是同一个物理概念. 这点容易证明, 只需要注意到旋转参数 $\epsilon^{ij}反对称 \to \frac{\epsilon^{ij}}{2}(x_i \partial_j - x_j \partial_i)\Phi = - \epsilon^{ij} x_j \partial_i \Phi$, 即两者的轨道部分相同即可.

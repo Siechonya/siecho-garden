@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW3/","noteIcon":"default","created":"2025-10-23T14:36:21.395+08:00","updated":"2025-10-11T17:50:12.385+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW3/","noteIcon":"default","created":"2025-09-23T17:32:56.105+08:00","updated":"2025-10-11T17:50:12.385+08:00"}
 ---
 
 # 1 引力透镜  
