@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Noether's Theorem and Symmetry/","noteIcon":"default","created":"2025-01-28T14:11:05.348+08:00","updated":"2025-10-25T23:09:42.372+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Noether's Theorem and Symmetry/","noteIcon":"default","created":"2025-01-28T14:11:05.348+08:00","updated":"2025-10-25T23:16:57.364+08:00"}
 ---
 
 
@@ -352,7 +352,7 @@ $$
 $$
 p^\mu = \frac{ \partial L_{4D} }{ \partial \dot{x}_\mu } = -m {\dot{x}^\mu} - e A^\mu
 $$
-或者等价的：  
+前面所说的“多出一个因为与电磁场相互作用的含电荷 $e$ 的项”指的就是上式的第二项。上式也可以等价为：  
 $$
 \begin{aligned} 
 E &= -cp^0 =  \gamma mc^2 + e\varphi  \\
