@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/words/words - Compressive Coherent Structures at Ion Scales in The Slow Solar Wind/","noteIcon":"default","created":"2025-08-13T20:50:41.776+08:00","updated":"2025-10-20T19:12:12.915+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/words/words - Compressive Coherent Structures at Ion Scales in The Slow Solar Wind/","noteIcon":"default","created":"2025-08-13T20:50:41.776+08:00","updated":"2025-10-28T19:38:10.928+08:00"}
 ---
 
 ### 0.1.1 Perrone et al_2016_Compressive Coherent Structures at Ion Scales in The Slow Solar Wind 
@@ -70,8 +70,12 @@
 - ambient 环境的，周围的
 - ripple 涟漪，波纹
 - compatible 兼容的，与...一致的
-
-
+- histogram 直方图，柱状图
+- Taylor hypothesis 泰勒假设
+- time lags 时间滞后
+- wave-tensor anisotropy 波矢各向异性 
+- discrepancy 拦截，截断，截距
+- lilac 淡紫色，(紫)丁香花
 
 
 
