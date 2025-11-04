@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer_hw2/","noteIcon":"default","created":"2025-03-15T10:31:55.174+08:00","updated":"2025-06-16T16:58:31.347+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer_hw2/","noteIcon":"default","created":"2025-03-15T10:31:55.174+08:00","updated":"2025-11-01T11:57:00.464+08:00"}
 ---
 
 
@@ -439,7 +439,7 @@ $$
 ### (b) 相位
 显然 $p_\alpha x^\alpha = \left( \frac{ \hbar\omega}{c},  -\hbar\vec k \right)\cdot (ct, \vec x) = -\hbar (\vec k \cdot \vec x - \omega t)$ 也是洛伦兹标量.
 ## 8. 双生子佯谬
-![[Capture_20250320_225944.jpg#pic_center|825]]
+![[zz_figure/Capture_20250320_225944.jpg#pic_center|825]]
 
 # 二. 补充阅读
 ## 1. $Lorentz\ Group$
@@ -637,7 +637,7 @@ $$
 朗道, 格里菲斯, 费曼等的教材都采用了四维描述, $ict$ 似乎是一种更为小众的选择.
 
 所以:
-![[1742564912998.jpg#pic_center|550]]
+![[zz_figure/1742564912998.jpg#pic_center|550]]
 
 
 

@@ -1,12 +1,12 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW2/","noteIcon":"default","created":"2025-09-18T15:40:26.057+08:00","updated":"2025-09-28T08:17:06.905+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW2/","noteIcon":"default","created":"2025-09-18T15:40:26.057+08:00","updated":"2025-11-01T11:57:00.759+08:00"}
 ---
 
 
 # 1 
 - <font color="#ff0000">方法一：最小势能原理</font>
 
-![z_figure/5d462ccb8e30f1fb6629cbdba906a0a4.jpg](/img/user/z_figure/5d462ccb8e30f1fb6629cbdba906a0a4.jpg)  
+![zz_figure/5d462ccb8e30f1fb6629cbdba906a0a4.jpg](/img/user/zz_figure/5d462ccb8e30f1fb6629cbdba906a0a4.jpg)  
 - <font color="#ff0000">方法二：虚功原理</font>
 
 以圆锥顶点为原点，竖直向下为 z 轴正方向，所以弹性圈的半径为 $r = z\tan\alpha$，弹性圈上的质点坐标是：  
@@ -81,7 +81,7 @@ $$
 $$
 这是质心的运动方程，圆柱上质点只需要多加一个向心加速度。
 # 3 
-![z_figure/Pasted image 20250918200705.png](/img/user/z_figure/Pasted%20image%2020250918200705.png)
+![zz_figure/Pasted image 20250918200705.png](/img/user/zz_figure/Pasted%20image%2020250918200705.png)
 
 当系统处于稳定状态时，在圆盘的旋转参考系中，  
 $$

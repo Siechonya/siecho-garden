@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW3/","noteIcon":"default","created":"2025-09-23T17:32:56.105+08:00","updated":"2025-10-11T17:50:12.385+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW3/","noteIcon":"default","created":"2025-09-23T17:32:56.105+08:00","updated":"2025-11-01T11:57:00.765+08:00"}
 ---
 
 # 1 引力透镜  
@@ -150,7 +150,7 @@ $$
 # 4 圆滚线  
 ## 4.1 （a）  
 选取参量如下图所示
-![z_figure/Pasted image 20250926185631.png](/img/user/z_figure/Pasted%20image%2020250926185631.png)
+![zz_figure/Pasted image 20250926185631.png](/img/user/zz_figure/Pasted%20image%2020250926185631.png)
 那么拉格朗日量可以写作：  
 $$
 L = T - V = \frac{1}{2}m {\dot x}^2 - \frac{1}{2} \frac{g}{R} (x^2 + d^2)
@@ -176,7 +176,7 @@ $$
 积分得到(2)式。取 $\Delta \theta = 2 \cdot \theta|_{r=R^-}$ 得到(3)式。  
 ## 4.3 （c）  
 把（4）代入（2）就得到（6），反解（4）得到（5）。接下来看为什么（5）和（6）描述圆内滚轮线（现在变成了纯几何问题）。首先命名参量如下图：  
-![z_figure/Pasted image 20251011152228.png](/img/user/z_figure/Pasted%20image%2020251011152228.png)
+![zz_figure/Pasted image 20251011152228.png](/img/user/zz_figure/Pasted%20image%2020251011152228.png)
 根据几何关系，有：  
 $$
 r^2

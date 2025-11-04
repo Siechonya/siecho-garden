@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW8/","noteIcon":"default","created":"2025-06-10T10:17:09.627+08:00","updated":"2025-09-08T12:29:28.777+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW8/","noteIcon":"default","created":"2025-06-10T10:17:09.627+08:00","updated":"2025-11-01T11:57:00.461+08:00"}
 ---
 
 
@@ -15,7 +15,7 @@ hideWhenEmpty: false # Hide TOC if no headings are found
 debugInConsole: false # Print debug info in Obsidian console
 ```
 # 1 辐射功率交叉项   
- ![z_figure/Pasted image 20250612113453.png](/img/user/z_figure/Pasted%20image%2020250612113453.png)  
+ ![zz_figure/Pasted image 20250612113453.png](/img/user/zz_figure/Pasted%20image%2020250612113453.png)  
 <font color="#ff0000">分</font>解 $\dot{\vec{\beta}}=\dot{\vec{\beta}}_{\| }+\dot{\vec{\beta}}_{\perp}$, 其中 $\dot{\vec{\beta}}_{\| } || \vec \beta$, 根据讲义的(8.148)得到:  
 $$
 \begin{array}{rl}
@@ -39,7 +39,7 @@ $$
 \int\left(\frac{d P}{ d \Omega}\right)_{cross } d \Omega \propto \int_{0}^{2 \pi}\left(\dot{\beta}_{\perp x} cos \varphi+\dot{\beta}_{\perp y} sin \varphi\right) d \varphi=0
 $$
 # 2 电子的生命周期(讲义  p154)  
-![z_figure/Pasted image 20250612113613.png](/img/user/z_figure/Pasted%20image%2020250612113613.png)
+![zz_figure/Pasted image 20250612113613.png](/img/user/zz_figure/Pasted%20image%2020250612113613.png)
 <font color="#ff0000">加</font>速度满足:   
 $$
 \frac{e^{2}}{4 \pi \epsilon_{0} r^{2}}=m_{e} a_{\perp}
@@ -68,7 +68,7 @@ $$
 t_{2}=r_{0}^{3} \frac{4 \pi^{2} \epsilon_{0}^{2} m_{e}^{2} c^{3}}{e^{4}} \approx 10^{-11} s
 $$
 # 3 极相对论粒子的角最大辐射  
-![z_figure/Pasted image 20250612113626.png](/img/user/z_figure/Pasted%20image%2020250612113626.png)
+![zz_figure/Pasted image 20250612113626.png](/img/user/zz_figure/Pasted%20image%2020250612113626.png)
 <font color="#ff0000">讲</font>义(8.133)给出:  
 $$
 \frac{d P}{ d \Omega}=\frac{q^{2} \mu_{0} c}{16 \pi^{2}} \frac{\dot{\beta}^{2} \sin ^{2} \theta}{(1-\beta \cos \theta)}
@@ -93,7 +93,7 @@ $$
 $$
 # 4 课本题
 ## 4.1 零辐射的角度  
-![z_figure/Pasted image 20250612113903.png](/img/user/z_figure/Pasted%20image%2020250612113903.png)
+![zz_figure/Pasted image 20250612113903.png](/img/user/zz_figure/Pasted%20image%2020250612113903.png)
 <font color="#ff0000">为</font>避免歧义, 将题目里面的角度 $\beta$ 记为 $\theta$, 根据讲义(8.114):  
 $$
 \frac{d P}{ d \Omega} \propto\left|\hat{e}_{R} \times\left[\left(\hat{e}_{R}-\vec \beta \right) \times \vec a\right]\right|^{2}
@@ -119,7 +119,7 @@ $$
 \end{aligned}
 $$
 ## 4.2 同步辐射  
-![z_figure/Pasted image 20250612113918.png](/img/user/z_figure/Pasted%20image%2020250612113918.png)
+![zz_figure/Pasted image 20250612113918.png](/img/user/zz_figure/Pasted%20image%2020250612113918.png)
 <font color="#ff0000">由</font>讲义(8.155)可知:  
 $$
 P_{\perp} =\frac{e^{2} \mu_{0}}{6 \pi c} \frac{\gamma^{2}}{m^{2}}\left(\frac{d \vec{p}}{ d t}\right)^{2}
@@ -134,7 +134,7 @@ $$
 P=38~ eV \cdot s^{-1} 
 $$
 ## 4.3 同步辐射 * 2  
-![z_figure/Pasted image 20250612113937.png](/img/user/z_figure/Pasted%20image%2020250612113937.png)
+![zz_figure/Pasted image 20250612113937.png](/img/user/zz_figure/Pasted%20image%2020250612113937.png)
 ##### (1)
 根据讲义(8.164), 电子受力为辐射阻尼+洛伦兹力:  +
 $$
@@ -180,7 +180,7 @@ $$
 \frac{ d W }{ d t} = \gamma m_e v_0^2 e^{-2\gamma t}
 $$
 ## 4.4 同步辐射 * 3  
-![z_figure/Pasted image 20250612113951.png](/img/user/z_figure/Pasted%20image%2020250612113951.png)
+![zz_figure/Pasted image 20250612113951.png](/img/user/zz_figure/Pasted%20image%2020250612113951.png)
 ##### (1) 
 $$
 P=\frac{\mu_{0} q^{2}}{6 \pi c} \frac{\gamma^{2}}{m^{2}}\left(\frac{d \vec{p}}{ d t}\right)^{2}
@@ -202,10 +202,10 @@ $$
 T=T_{0} exp \left[-\frac{B^{2}q^{4} }{3 \pi \epsilon_{0} m^{3} c^{3}}\left(t-t_{0}\right)\right]
 $$
 # 5 磁偶极辐射和电四极辐射  
-![z_figure/Pasted image 20250612114005.png](/img/user/z_figure/Pasted%20image%2020250612114005.png)
+![zz_figure/Pasted image 20250612114005.png](/img/user/zz_figure/Pasted%20image%2020250612114005.png)
 见讲义 9.4 节.  
 # 6 辐射阻尼  
-![z_figure/Pasted image 20250612114020.png](/img/user/z_figure/Pasted%20image%2020250612114020.png)
+![zz_figure/Pasted image 20250612114020.png](/img/user/zz_figure/Pasted%20image%2020250612114020.png)
 ##### (a)  
 <font color="#ff0000">对</font>运动方程积分:  
 $$
@@ -217,7 +217,7 @@ $$
 $$
 得到 a 是连续的.   
 ##### (b)  
-![z_figure/Pasted image 20250612114032.png](/img/user/z_figure/Pasted%20image%2020250612114032.png)
+![zz_figure/Pasted image 20250612114032.png](/img/user/zz_figure/Pasted%20image%2020250612114032.png)
 <font color="#ff0000">在</font> $t<0$ 时, 积分得到:  
 $$
 a=\tau \dot{a} \quad\Rightarrow\quad a=e^{t / \tau} a(0) 
@@ -231,14 +231,14 @@ $$
 a=\tau \dot{a} \quad\Rightarrow\quad a=e^{(t-T) / \tau} a(T)
 $$
 ##### (c)  
-![z_figure/Pasted image 20250612114043.png](/img/user/z_figure/Pasted%20image%2020250612114043.png)
+![zz_figure/Pasted image 20250612114043.png](/img/user/zz_figure/Pasted%20image%2020250612114043.png)
 <font color="#ff0000">如</font>果同时让 t < 0 和 t > T 时，a = 0, 那么 $a(T)=a(0)=0$, $0<t<T$ 时的通解将给出:  
 $$
 \left[0-\frac{F}{m}\right]  = e^{-T / \tau}\left[0-\frac{F}{m}\right]
 $$
 即 $T=0$ 这样一个平凡解.  
 ##### (d)  
-![z_figure/Pasted image 20250612114110.png](/img/user/z_figure/Pasted%20image%2020250612114110.png)
+![zz_figure/Pasted image 20250612114110.png](/img/user/zz_figure/Pasted%20image%2020250612114110.png)
 <font color="#ff0000">即 </font>$a(T)=0$, 得到   
 $$
 \left[a(0)-\frac{F}{m}\right]  = e^{-T / \tau}\left[0-\frac{F}{m}\right]
@@ -288,7 +288,7 @@ y=0|x>1
 ```
 
 # 7 辐射电阻  
-![z_figure/Pasted image 20250612114122.png](/img/user/z_figure/Pasted%20image%2020250612114122.png)
+![zz_figure/Pasted image 20250612114122.png](/img/user/zz_figure/Pasted%20image%2020250612114122.png)
 <font color="#ff0000">电</font>流是:  
 $$
 I=-2\frac{d q}{ d t}=2\omega q_{0} sin (\omega t)
@@ -311,7 +311,7 @@ $$
 R \approx 2 × 10^{-6}~ \Omega
 $$
 # 8 电偶极子的辐射  
-![z_figure/Pasted image 20250612114137.png|750](/img/user/z_figure/Pasted%20image%2020250612114137.png)
+![zz_figure/Pasted image 20250612114137.png|750](/img/user/zz_figure/Pasted%20image%2020250612114137.png)
 
 <font color="#ff0000">本</font>题可以视为两个在 x-y 平面以角速度 $\omega$ 匀速旋转的电荷的辐射: 
 $$

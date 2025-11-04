@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"default","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-09-08T12:28:08.313+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer for HW6/","noteIcon":"default","created":"2025-05-21T20:09:17.112+08:00","updated":"2025-11-01T11:57:00.459+08:00"}
 ---
 
 
@@ -240,7 +240,7 @@ $$
 \begin{bmatrix} -\frac{2n_1}{n_1+n_2} \\ -\frac{{(n_1-n_2)}}{n_1+n_2} \\ 0 \\0 \end{bmatrix}
 $$
 MMA 给出一致的结果:
-![z_figure/Pasted image 20250527113220.png](/img/user/z_figure/Pasted%20image%2020250527113220.png)
+![zz_figure/Pasted image 20250527113220.png](/img/user/zz_figure/Pasted%20image%2020250527113220.png)
 
 当然, 也可以用最基本的边界条件:  
 $$

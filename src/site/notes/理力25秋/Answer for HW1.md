@@ -1,11 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"default","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-09-25T13:16:20.465+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"default","created":"2025-09-11T12:48:06.590+08:00","updated":"2025-11-04T12:11:22.038+08:00"}
 ---
 
 
 # 1 球坐标  
 ## 1.1 
-![z_figure/Pasted image 20250911160120.png](/img/user/z_figure/Pasted%20image%2020250911160120.png)  
+![zz_figure/Pasted image 20250911160120.png](/img/user/zz_figure/Pasted%20image%2020250911160120.png)  
 首先注意到，球坐标系 $(r, \theta, \phi)$ 与直角坐标系 $(x, y, z)$ 的转换关系为：  
 $$
 \left\{
@@ -58,7 +58,7 @@ $$
 其中，M 是中心天体质量，L 是运动天体的(单位质量)角动量。  
 # 3 双曲线轨道  
 ## 3.1 
-![z_figure/Pasted image 20250911164445.png](/img/user/z_figure/Pasted%20image%2020250911164445.png)
+![zz_figure/Pasted image 20250911164445.png](/img/user/zz_figure/Pasted%20image%2020250911164445.png)
 如图，构造步骤：
 
 1. 给定一个圆，圆心 $F_1$ ​，半径 $R$；取圆外一点 $F_2​$。
@@ -69,7 +69,7 @@ $$
 > 和椭圆轨道一样，这里的中垂线也是双曲线轨道在 Q 点的切线。
 ## 3.2 
 因为角动量守恒依旧成立，所以第二问的结论依旧是可用的，于是 $\Delta v \propto \Delta \theta$，得到的速度图仍然是一个圆（左图）。 
-![z_figure/Pasted image 20250911210406.png](/img/user/z_figure/Pasted%20image%2020250911210406.png)  
+![zz_figure/Pasted image 20250911210406.png](/img/user/zz_figure/Pasted%20image%2020250911210406.png)  
 将速度图旋转 90 度，方向与中垂线平行，同时也是双曲线的切线。随着 $\theta$ 变化，将得到的一系列切线连接，就得到轨道为双曲线。  
 
 > [!info] 更严格一点来说
@@ -141,7 +141,7 @@ $$
 $$
 上式的红色项正是广义相对论所带来的一阶修正。去掉该项，就是在力学中学过的、求解开普勒运动所得到的方程，我们可以发现解为 $r=  \frac{h^2/GM}{1+e\cos\varphi}$，这正是圆锥曲线。现在我们好奇，引入的项显然是一个小量，会让原轨道偏离圆锥曲线，这个偏离的曲线是什么形状？
 
-这个方程是非线性的，不便于解析处理，考虑到 $r\gg r_g = \frac{2GM}{c^2}$，可以求其微扰解，也就是直接将零阶解 $r=  \frac{h^2/GM}{1+e\cos\varphi}$ 带入方程，注意到 $u^2 \approx \frac{1+2e\cos\varphi}{h^4/G^4M^4}$，取 $e\ll1$（尽管对于水星 $e=0.2056$ 不算特别小，但近似仍是有效的），得到：
+这个方程是非线性的，不便于解析处理，考虑到 $r\gg r_g = \frac{2GM}{c^2}$，可以求其微扰解，也就是直接将零阶解 $r=  \frac{h^2/GM}{1+e\cos\varphi}$ 带入方程，注意到 $u^2 \approx \frac{1+2e\cos\varphi}{h^4/G^4M^4}$，取 $e\ll1$（例如，对于水星 $e=0.2056$ 不算特别小，但近似仍是有效的），得到：
 $$
 \frac{ d^2 u }{ d^2 \varphi} + u = \frac{G^2M^2}{h^2} +  3\frac{{G^4M^4}}{h^4c^2} (1+2e\cos\varphi)
 $$
@@ -161,5 +161,5 @@ $$
 $$
 它给出的结果是 $\Delta \approx 43.03''/ century$，幸好对水星的观测能一直追溯到 1765 年，Clemence 在 1943 年分析了这些数据，得出 $\Delta = 43.11 \pm0.45''/century$，证实了这一预言。
 
-![z_figure/Simulation_of_precessional_motion.png](/img/user/z_figure/Simulation_of_precessional_motion.png)   
+![zz_figure/Simulation_of_precessional_motion.png](/img/user/zz_figure/Simulation_of_precessional_motion.png)   
 

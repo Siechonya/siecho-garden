@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/words/qld words- Event-specific chorus wave and electron seed population models in DREAM3D using the Van Allen Probes/","noteIcon":"default","created":"2025-08-01T23:51:07.622+08:00","updated":"2025-09-15T18:44:08.257+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/words/qld words- Event-specific chorus wave and electron seed population models in DREAM3D using the Van Allen Probes/","noteIcon":"default","created":"2025-08-01T23:51:07.622+08:00","updated":"2025-11-01T11:57:00.627+08:00"}
 ---
 
 ### 0.1.1 Event-specific chorus wave and electron seed population models in DREAM 3 D using the Van Allen Probes  
@@ -23,7 +23,7 @@
 - utility 实用, 有用
 - unprecedented 前所未有的
 - double-dip” storm
-![[z_figure/double-dip” storm event.png#pic_center]]  
+![[zz_figure/double-dip” storm event.png#pic_center]]  
 - phase space density (PSD)
 - wipe out 彻底摧毁(wipe: 用布、手等擦干净，抹掉)
 - highly resolved, comprehensive measurements 高分辨率且全面的测量
