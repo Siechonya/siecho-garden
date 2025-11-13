@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW5/","noteIcon":"default","created":"2025-10-17T11:42:39.564+08:00","updated":"2025-10-30T09:40:28.947+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW5/","noteIcon":"default","created":"2025-10-17T11:42:39.564+08:00","updated":"2025-11-10T19:24:24.597+08:00"}
 ---
 
 # 1 相互作用的守恒量（注意使用 Noether 定理）  
@@ -186,11 +186,11 @@ $$
 于是守恒荷是：  
 $$
 \begin{aligned} 
-J &=\sum_\alpha \frac{ \partial \mathcal{L} }{ \partial \dot q_\alpha }  \delta q_\alpha  \\[4pt]
+J &=\sum_\alpha \frac{ \partial \mathcal{L} }{ \partial \dot q_\alpha }  \delta q_\alpha - G  \\[4pt]
 &=
-p_x\delta x + p_t \delta t \\[4pt]
+p_x\delta x + p_t \delta t -G \\[4pt]
 &
-= m ( -\dot{x}t + \dot{t}x) - e (t A - x \phi)
+= m ( -\dot{x}t + \dot{t}x) - e (t A - x \phi) - G
 \end{aligned}
 $$
 

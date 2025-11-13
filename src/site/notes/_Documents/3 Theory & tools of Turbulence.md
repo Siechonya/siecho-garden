@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools of Turbulence/","noteIcon":"default","created":"2025-10-20T19:17:19.143+08:00","updated":"2025-11-04T12:13:25.526+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools of Turbulence/","noteIcon":"default","created":"2025-10-20T19:17:19.143+08:00","updated":"2025-11-08T20:37:18.244+08:00"}
 ---
 
 
@@ -27,15 +27,29 @@ WFT(Windowed Fourier transform ) 是一种从信号中提取局部频率信息�
 - 一般选取指数尺度集 $s_j = s_{min} 2^{j\delta j}$，对于莫雷小波 $\delta j \leq 0.5$，$s_0$ 应选择使等效傅立叶周期近似为 $2\delta t$ (section 3f & 3h);
 - 重构(section 3i)
 $$
-x_{n}=\frac{\delta j \delta t^{1 / 2}}{C_{\delta} \psi_{0}(0)} \sum_{j=0}^{J} \frac{\Re\left\{W_{n}\left(s_{j}\right)\right\}}{s_{j}^{1 / 2}} .
+x_{n}=\frac{\delta j \delta t^{1 / 2}}{C_{\delta} \psi_{0}(0)} \sum_{j=0}^{J} \frac{\Re\left\{W_{n}\left(s_{j}\right)\right\}}{s_{j}^{1 / 2}} \tag{1}
 $$
 $x_n$ 的方差是(类似于 Fourier 变换的 Parseval 等式)：  
 $$
 \sigma^{2}=\frac{\delta j \delta t}{C_{\delta} N} \sum_{n=0}^{N-1} \sum_{j=0}^{J} \frac{\left|W_{n}\left(s_{j}\right)\right|^{2}}{s_{j}}
+\tag{2}
 $$
+### 2.1.2 理论功率谱和显著性检验水平  
+> [!tips] 红噪声和白噪声
+> To determine significance levels for either Fourier or wavelet spectra, one first needs to choose an appropriate background spectrum. It is then assumed that different realizations of the geophysical process will be randomly distributed about this mean or expected background, and the actual spectrum can be compared against this random distribution. For many geophysical phenomena, an appropriate background spectrum is either white noise (with a flat Fourier spectrum) or red noise (increasing power with decreasing frequency).
 
+一个红噪声的简单模型是单变量滞后自回归(univariate lag-1 autoregressive)：  
+$$
+x_n = \alpha x_{n-1} + z_n,\quad x_0 = 0, \quad z_n \in \{\text {Guassian \ white \ noise}\} \tag{3}
+$$
+$\alpha$ 決定序列中相邻数据点之间的关联程度(“红”度)。除以 $\frac{N}{2\sigma^2}$ 归一化得到噪声谱：  
+$$
+P_{k}=\frac{1-\alpha^{2}}{1+\alpha^{2}-2 \alpha \cos (2 \pi k / N)} \tag{4}
+$$
+lag-2 红噪同理。若上述噪声回归方程是全局的，则是傅里叶红噪声。可以使局域/很小的垂直切片满足(3)式，得到小波红噪声谱。  
 
-
+> [!tips] 零假设和显著性水平
+> The null hypothesis is defined for the wavelet power spectrum as follows: It is assumed that the time series has a mean power spectrum, possibly given by (4); if a peak in the wavelet power spectrum is significantly above this background spectrum, then it can be assumed to be a true feature with a certain percent confidence. For definitions, “significant at the 5% level” is equivalent to “the 95% confidence level,” and implies a test against a certain background level, while the “95% confidence interval” refers to the range of confidence about a given value.
 
 
 
