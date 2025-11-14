@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Notes for General Relativity/","noteIcon":"default","created":"2025-03-12T22:28:08.600+08:00","updated":"2025-11-14T18:15:28.699+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Notes for General Relativity/","noteIcon":"default","created":"2025-03-12T22:28:08.600+08:00","updated":"2025-11-14T18:21:55.610+08:00"}
 ---
 
 # 1 Convention  
@@ -24,12 +24,13 @@ $$
 g_{\alpha\beta;\mu} = 0
 $$
 # 2 $f(R)$ Gravity & Field Eqn.  
-> [F(R) theories of gravitation - Scholarpedia](http://www.scholarpedia.org/article/F%28R%29_theories_of_gravitation)  
+> refer to [F(R) theories of gravitation - Scholarpedia](http://www.scholarpedia.org/article/F%28R%29_theories_of_gravitation)  
 
+The total action of the known gravitational system is:
 $$
 S = \int \left[ f(R) + 16\pi G \cdot \mathcal{L}_m \right] \sqrt{-g} ~\mathrm{d}^4 x 
 $$
-In  $f(R)$ gravity, the field equations are obtained by varying with respect to the metric and not treating the connection independently. The main steps are the same as in the case of the variation of the Hilbert-Einstein action but there are also some important differences.
+In $f(R)$ gravity, the field equations are obtained by varying with respect to the metric and not treating the connection independently. The main steps are the same as in the case of the variation of the Hilbert-Einstein action but there are also some important differences.
 
 The variation of the determinant is
 $$
@@ -62,7 +63,7 @@ $$
 &=\int d^{4} x \sqrt{-g}\left[f^{\prime}(R) R_{\mu \nu}-\frac{1}{2} g_{\mu \nu} f(R)\right] \delta g^{\mu \nu}+\int d^{4} x \sqrt{-g} f^{\prime}(R) g^{\mu \nu} \delta R_{\mu \nu}
 \end{align}
 $$
-For the second item, performing integration by parts ($\int \mathrm{d}^4x \sqrt{-g} A^\mu_{;\mu}B = \underset{divergence term}{\underbrace{\int \mathrm{d}^4x \sqrt{-g} (A^\mu B)_{;\mu}} }  - \int \mathrm{d}^4x \sqrt{-g} A^\mu B_{;\mu}$, $\because A^\mu_{;\mu} =  \frac{1}{\sqrt{-g}}(\sqrt{-g} A^\mu)_{,\mu}$) and *ignoring the divergence term* will lead to
+For the second item, performing integration by parts ($\int \mathrm{d}^4x \sqrt{-g} A^\mu_{;\mu}B = \underset{divergence \ term}{\underbrace{\int \mathrm{d}^4x \sqrt{-g} (A^\mu B)_{;\mu}} }  - \int \mathrm{d}^4x \sqrt{-g} A^\mu B_{;\mu}$, $\because A^\mu_{;\mu} =  \frac{1}{\sqrt{-g}}(\sqrt{-g} A^\mu)_{,\mu}$) and *ignoring the divergence term* will lead to
 $$
 \begin{aligned} 
 \int d^{4} x \sqrt{-g} f^{\prime}(R) g^{\mu \nu} \delta R_{\mu \nu}
