@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW7/","noteIcon":"default","created":"2025-10-30T17:54:01.251+08:00","updated":"2025-11-18T22:23:29.909+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW7/","noteIcon":"default","created":"2025-10-30T17:54:01.251+08:00","updated":"2025-11-18T22:27:46.027+08:00"}
 ---
 
 # 1 HW 7-1    
@@ -74,9 +74,7 @@ $$
 $$
 同时能量守恒给出：  
 $$
-\frac{1}{2}\mu \dot{r}^2 = \frac{1}{8} \frac{h^2}{u\mu} \left( \frac{ \mathrm{d} u }{ \mathrm{d} \phi} \right)
-{ #2}
-
+\frac{1}{2}\mu \dot{r}^2 = \frac{1}{8} \frac{h^2}{u\mu} \left( \frac{ \mathrm{d} u }{ \mathrm{d} \phi} \right)^2
 =
 E - \frac{h^2}{2\mu} u - \frac{k}{2u}
 $$
