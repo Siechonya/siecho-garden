@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/1 Plasma Waves/","noteIcon":"default","created":"2025-07-31T13:43:21.487+08:00","updated":"2025-11-08T16:21:40.142+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/1 Plasma Waves/","noteIcon":"default","created":"2025-07-31T13:43:21.487+08:00","updated":"2025-11-20T10:21:00.264+08:00"}
 ---
 
 # 总览%
@@ -51,17 +51,7 @@ $$
 频率 model 是 MLT 和 $\lambda$ 的函数, 但是仅仅区分了日侧($MLTs\in [6,18)$)和夜侧(其他 MLTs), 以及低纬度($|\lambda|<10^\circ$)和中纬度($|\lambda|\in[10^\circ, 20^\circ)$). 拟合形式是:   
 $$
 \begin{aligned}
-B^2_w ( f ) &= c_0 + c_1f + c_2 f
-{ #2}
- + c_3 f
-{ #3}
- + c_4 f
-{ #4}
- + c_5 f
-{ #5}
- + c_6 f
-{ #6}
- + c_7f^7.
+B^2_w ( f ) &= c_0 + c_1f + c_2 f^2 + c_3 f^3 + c_4 f^4 + c_5 f^5 + c_6 f^6 + c_7f^7.
 \\
 &here,~ f ~is~ the~ frequency~ normalized~ by~ the~ equatorial ~gyrofrequency. 
 \end{aligned}

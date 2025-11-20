@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW7/","noteIcon":"default","created":"2025-10-30T17:54:01.251+08:00","updated":"2025-11-18T22:27:46.027+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW7/","noteIcon":"default","created":"2025-10-30T17:54:01.251+08:00","updated":"2025-11-19T19:53:21.747+08:00"}
 ---
 
 # 1 HW 7-1    
@@ -105,7 +105,7 @@ $$
 
 ![zz_figure/Capture_20251115_140716.jpg](/img/user/zz_figure/Capture_20251115_140716.jpg)
 
-另外注意，$V_1 > 0$ 时，若从球外入射，则必定可以穿出球势阱。只有初始便在球内，才可能被束缚。
+
 #### (c) 反比力  
 见 [[理力25秋/Answer for HW6#1.3 T2\|HW6的T2]]，根据 $E$ 和 $\frac{h^2}{2 \mu} - k$ 的正负可确定轨道形状。通过 $V_{eff}$ 作图可以进一步确认轨道是否有界。
 
