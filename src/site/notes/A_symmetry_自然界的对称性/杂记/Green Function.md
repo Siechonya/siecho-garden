@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Green Function/","noteIcon":"default","created":"2025-11-19T12:10:15.473+08:00","updated":"2025-11-21T21:32:02.353+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Green Function/","noteIcon":"default","created":"2025-11-19T12:10:15.473+08:00","updated":"2025-11-21T21:44:44.139+08:00"}
 ---
 
 # 1 格林函数的引入  
@@ -12,9 +12,8 @@ $$
 \mathbf{L} G(x^\sigma, x'^\sigma) = \delta^n(x^\sigma - x'^\sigma)
 $$
 从中得到的基本解一般称为格林函数，容易证明，  
-
 $$
-u(x^\sigma) = \int_{\mathbb{R}^n} G(x^\sigma, x'^\sigma) f(x'^\sigma) ~\mathrm{d}^nx' 
+u(x^\sigma) = \int_{\mathbb{R}^n} G(x^\sigma, x'^\sigma) f(x'^\sigma) ~\mathrm{d}^nx' \tag{1}
 $$
 { #f56309}
 
@@ -69,7 +68,7 @@ G(\bar x, \bar y, \bar z)
 -\frac{1}{4\pi r}
 \end{aligned}
 $$
-于是根据式 [[#^f56309]] 得到势函数为
+于是根据式 [[#^f56309|(1)]] 得到势函数为
 $$
 \begin{aligned} 
 \varphi(x,y,z) &=
