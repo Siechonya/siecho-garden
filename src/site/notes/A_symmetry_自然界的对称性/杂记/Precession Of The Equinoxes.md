@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Precession Of The Equinoxes/","noteIcon":"default","created":"2025-06-07T23:17:32.021+08:00","updated":"2025-06-16T12:59:30.477+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Precession Of The Equinoxes/","noteIcon":"default","created":"2025-06-07T23:17:32.021+08:00","updated":"2025-11-24T15:33:28.674+08:00"}
 ---
 
 
