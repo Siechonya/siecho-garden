@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Green Function/","noteIcon":"default","created":"2025-11-19T12:10:15.473+08:00","updated":"2025-11-22T14:29:15.413+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Green Function/","noteIcon":"default","created":"2025-11-19T12:10:15.473+08:00","updated":"2025-11-28T16:27:57.530+08:00"}
 ---
 
 格林函数是场论中点源产生的基本解，这篇文章简单写一下它的应用。
@@ -17,9 +17,6 @@ $$
 u(x^\sigma) = \int_{\mathbb{R}^n} G(x^\sigma, x'^\sigma) f(x'^\sigma) ~\mathrm{d}^nx' 
 \tag{1}
 $$
-{ #f56309}
-
-
 为原方程的解。
 # 2 实例  
 ## 2.1 真空静电场  
@@ -70,7 +67,7 @@ G(\bar x, \bar y, \bar z)
 -\frac{1}{4\pi r}
 \end{aligned}
 $$
-于是根据式 [[#^f56309|(1)]] 得到势函数为
+于是根据式 (1) 得到势函数为
 $$
 \begin{aligned} 
 \varphi(x,y,z) &= -\iiint_{\mathbb{R}^3} \frac{\rho(\boldsymbol{x'})}{4\pi\epsilon_0 |\boldsymbol{x} - \boldsymbol{x'}|}  \mathrm{d}x'\mathrm{d}y'\mathrm{d}z'
@@ -178,7 +175,7 @@ G(\boldsymbol{x}, t; \boldsymbol{x'}, t') =
 \end{aligned}
 \right.
 $$
-于是根据式 [[#^f56309|(1)]] 得到势函数为  
+于是根据式 (1) 得到势函数为  
 $$
 \varphi(\boldsymbol{x},t) = \int \frac{\rho(\boldsymbol{x'}, t)}{\epsilon_0} \frac{1}{4\pi} \frac{\delta(t'-t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x \mathrm{d} t'
 $$
@@ -203,7 +200,7 @@ $$
 $$
 \bar h_{\mu\nu} = h_{\mu\nu} - \frac{1}{2} \eta_{\mu\nu} h, \quad h = \eta^{\mu\nu}h_{\mu\nu}
 $$
-在谐和规范条件下，弱引力场的引力波方程为
+若采用谐和规范，弱引力场的引力波方程写作： 
 $$
 \square^2 \bar h_{\mu\nu} = \bar h_{\mu\nu,\alpha}^{~~~~~~,\alpha} = -16\pi GT_{\mu\nu}
 $$
@@ -303,7 +300,7 @@ $$
 $$
 G(\bar{\boldsymbol{x}}, \bar t) = i \frac{m}{8 \pi \tau } J_1(m\tau) - \frac{m}{8 \pi \tau } N_1(m\tau)
 $$
-该解作为费曼传播子。最终的 $\psi(x)$ 依照(1)式即可。
+该解作为费曼传播子。最终的 $\psi(x)$ 依照(1)式即可。  
 # 3 补充  
 ## 3.1 通解和特解  
 以上使用格林函数所得到的都是非齐次方程组的特解，比如对于 2.2 节的推迟势，  
