@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Green Function/","noteIcon":"default","created":"2025-11-19T12:10:15.473+08:00","updated":"2025-11-28T16:27:57.530+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Green Function/","noteIcon":"default","created":"2025-11-19T12:10:15.473+08:00","updated":"2025-12-01T14:36:37.324+08:00"}
 ---
 
 格林函数是场论中点源产生的基本解，这篇文章简单写一下它的应用。
@@ -262,9 +262,7 @@ i\left[  s\left( \omega - \frac{{\bar t+i\epsilon s}}{2s}  \right)^2 - \frac{(\b
 $$
 记固有时  
 $$
--\tau^2 = -\bar t
-{ #2}
- + \bar x^2
+-\tau^2 = -\bar {t}^2 + \bar x^2
 $$
 舍去高阶小量 $\epsilon^2$，积分变为：  
 $$
@@ -322,3 +320,6 @@ $$
 (\nabla^2 - m^2) \psi(r) = 0
 $$
 则 $\psi(r) = A \frac{e^{-mr}}{r}$ 为熟知的 Yukawa 势。  
+
+
+
