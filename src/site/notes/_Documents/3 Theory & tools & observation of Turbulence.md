@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2025-12-01T12:32:08.975+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2025-12-03T22:44:59.432+08:00"}
 ---
 
 
@@ -62,3 +62,32 @@ lag-2 红噪同理。若上述噪声回归方程是全局的，则是傅里叶�
 
 # 3 Characterization of turbulence in the Mars plasma environment with MAVEN observations  
 Ruhunusiri, S., et al. (2017), Characterization of turbulence in the Mars plasma environment with MAVEN observations, _J. Geophys. Res. Space Physics_, 122, 656–674, doi:10.1002/2016JA023456.
+## 3.1 简介  
+> [!info] 摘要  
+> 我们首次通过计算磁场波动(magnetic field fluctuations)的谱指数(slopes in the magnetic field power spectra)并确定它们随频率和在不同区域的变化，来表征火星等离子体环境中的湍流。
+> 
+> 与太阳风不同，在磁鞘中，我们发现惯性区缺失(an absence of the inertial range)，该区域的谱指数值等于科尔莫戈罗夫定标值 $-5/3$。相反，正如在其他行星的磁鞘中观察到的那样，我们发现谱指数从低频(低于质子回旋频率(gyrofrequency))的接近 $-0.5$ 的低负值过渡到高频(高于质子回旋频率)的远低于 $-5/3$ 的值。这表明原始太阳风(pristine solar wind)在火星弓激波处被改变，并且波动主要由磁鞘中局部产生的波动主导。
+> 
+> 缺乏具有科尔莫戈罗夫定标值的谱指数表明，磁鞘中的波动没有足够的时间相互作用，从而未能导致充分发展的能量级联(a fully developed energy cascade)。
+> 
+> 在磁场堆积边界(magnetic pileup boundary, MPB)附近，低频范围观察到接近科尔莫戈罗夫定标值的谱指数，这表明存在充分发展的能量级联。
+> 
+> 在磁尾(magnetic tail，原文为 wake)中，我们发现低频和高频范围的谱指数大致相同，通常接近 $-2$。
+> 
+> 我们观察到谱指数的季节性变化，主要在上游区域，这表明质子回旋波(proton cyclotron waves)存在季节性变化。  
+> 
+
+## 3.2 背景介绍
+## 3.3 方法
+- 使用小波变换得到幂律谱(power spectral densities (PSDs) for the magnetic field fluctuations)
+$$
+\operatorname{PSD}(f)=\frac{2 \Delta t}{N} \sum_{j=1}^{N}\left|W_{x}\left(t_{j}, f\right)\right|^{2}+\left|W_{y}\left(t_{j}, f\right)\right|^{2}+\left|W_{z}\left(t_{j}, f\right)\right|^{2}
+$$
+- refer to the lower frequency range ($<f_{H^+}$) as <font color="#ff0000">the MHD range</font> and the higher frequency range ($ >f_{H^+}$) as<font color="#ff0000"> the kinetic range</font>.
+
+- the spectral index value 的分布
+![zz_figure/Pasted image 20251203224423.png](/img/user/zz_figure/Pasted%20image%2020251203224423.png)  
+
+
+
+

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Notes for General Relativity/","noteIcon":"default","created":"2025-03-12T22:28:08.600+08:00","updated":"2025-11-14T18:21:55.610+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Notes for General Relativity/","noteIcon":"default","created":"2025-03-12T22:28:08.600+08:00","updated":"2025-12-03T18:47:51.317+08:00"}
 ---
 
 # 1 Convention  
@@ -10,7 +10,7 @@ $$
 $$
 - Curvature
 $$
-R_{\mu\nu\lambda}^\rho = -\Gamma_{\mu\nu,\lambda}^\rho + \Gamma_{\mu\lambda,\nu}^\rho + \Gamma_{\mu\lambda}^\sigma \Gamma_{\sigma\nu}^\rho - \Gamma_{\mu\nu}^\sigma \Gamma_{\sigma\lambda}^\rho
+R_{\mu\nu\lambda}^\rho(this\ document) = -\Gamma_{\mu\nu,\lambda}^\rho + \Gamma_{\mu\lambda,\nu}^\rho + \Gamma_{\mu\lambda}^\sigma \Gamma_{\sigma\nu}^\rho - \Gamma_{\mu\nu}^\sigma \Gamma_{\sigma\lambda}^\rho
 = -R_{\mu\nu\lambda}^\rho (Weinberg)
 $$
 $$
