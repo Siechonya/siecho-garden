@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2025-12-03T22:44:59.432+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2025-12-04T21:40:24.471+08:00"}
 ---
 
 
@@ -58,7 +58,7 @@ lag-2 红噪同理。若上述噪声回归方程是全局的，则是傅里叶�
 ## 2.2 链接
 本地 [[_Documents/docs/3.2 A Practical Guide to Wavelet Analysis.pdf|2.2 A Practical Guide to Wavelet Analysis]]
 ## 2.3 补充
-词汇 [[_Documents/words/words - A practical guide to wavelet analysis\|words - A practical guide to wavelet analysis]]
+词汇 [[_Documents/words/Part.3 words#2 A practical guide to wavelet analysis\|_Documents/words/Part.3 words#2 A practical guide to wavelet analysis]]
 
 # 3 Characterization of turbulence in the Mars plasma environment with MAVEN observations  
 Ruhunusiri, S., et al. (2017), Characterization of turbulence in the Mars plasma environment with MAVEN observations, _J. Geophys. Res. Space Physics_, 122, 656–674, doi:10.1002/2016JA023456.
@@ -72,13 +72,13 @@ Ruhunusiri, S., et al. (2017), Characterization of turbulence in the Mars plasma
 > 
 > 在磁场堆积边界(magnetic pileup boundary, MPB)附近，低频范围观察到接近科尔莫戈罗夫定标值的谱指数，这表明存在充分发展的能量级联。
 > 
-> 在磁尾(magnetic tail，原文为 wake)中，我们发现低频和高频范围的谱指数大致相同，通常接近 $-2$。
+> 在尾迹(wake，不是磁尾 magnetic tail)中，我们发现低频和高频范围的谱指数大致相同，通常接近 $-2$。
 > 
 > 我们观察到谱指数的季节性变化，主要在上游区域，这表明质子回旋波(proton cyclotron waves)存在季节性变化。  
 > 
 
-## 3.2 背景介绍
-## 3.3 方法
+### 3.1.1 背景介绍
+### 3.1.2 方法
 - 使用小波变换得到幂律谱(power spectral densities (PSDs) for the magnetic field fluctuations)
 $$
 \operatorname{PSD}(f)=\frac{2 \Delta t}{N} \sum_{j=1}^{N}\left|W_{x}\left(t_{j}, f\right)\right|^{2}+\left|W_{y}\left(t_{j}, f\right)\right|^{2}+\left|W_{z}\left(t_{j}, f\right)\right|^{2}
@@ -87,7 +87,11 @@ $$
 
 - the spectral index value 的分布
 ![zz_figure/Pasted image 20251203224423.png](/img/user/zz_figure/Pasted%20image%2020251203224423.png)  
+- 谱噪声估计
+> we verified that the PSDs used for computing the median lie above the MAG noise level, shown by the black curves in Figures 3c–3f. <font color="#ff0000">The MAG noise level was estimated as the minimum PSD value when MAVEN was upstream of the bow shock</font> during the time interval from November 2014 to April 2016.
 
 
 
+## 3.2 补充  
+词汇 [[_Documents/words/Part.3 words#3 Characterization of turbulence in the Mars plasma environment with MAVEN observations\|Part.3 words]]
 
