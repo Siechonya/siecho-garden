@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2025-12-10T17:33:24.794+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2025-12-10T17:45:11.082+08:00"}
 ---
 
 
@@ -25,7 +25,7 @@ $$
 + \frac{1}{r^2 \sin^2\theta} \frac{ \partial^2 u }{ \partial^2 \varphi }
 \end{aligned}
 $$
-分离变量 $u(r,\theta,\varphi) = R(r)Y(\theta,\varphi)$, 得到
+对其分离变量 $u(r,\theta,\varphi) = R(r)Y(\theta,\varphi)$, 容易得到
 $$
 \frac{1}{R} \frac{d}{d r}\left(r^{2} \frac{d R}{d r}\right)
 = - \frac{1}{Y}  \left(\frac{1}{\sin \theta } \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial Y}{\partial \theta}\right)-\frac{1}{\sin ^{2} \theta} \frac{\partial^{2} Y}{\partial \phi^{2}}\right)
@@ -40,7 +40,7 @@ $$
 $$
 R(r) = A r^l + B r^{-(l+1)}, \quad l\geq 0
 $$
-通常情况下, 场不会传播到无穷远处, 也就是在解 $R(r)$ 的定义域包含 $r=\infty$ 时因为 $r^l \to \infty$, 通常取 $A=0$. 同理, 在解的定义域包含 $r=0$ 时, 通常取 $B=0$.
+通常情况下, 场不会传播到无穷远处, 也就是在解 $R(r)$ 的定义域包含 $r=\infty$ 时因为 $r^l \to \infty$ 导致 $R(r)\to\infty$ 而不满足物理意义, 所以通常取 $A=0$. 同理, 在解的定义域包含 $r=0$ 时, 通常取 $B=0$.
 ## 1.2 球面谐波
 由上述已知
 $$
