@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2025-12-10T18:48:05.427+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2025-12-10T18:51:11.341+08:00"}
 ---
 
 
@@ -183,9 +183,9 @@ $$
    $$
 $$
 \begin{aligned}
-   \varphi' &= \arctan 2(y',\ x') = \arctan 2(y,\ x \cos\beta + z \sin\beta) \\
+   \varphi' &= \arctan \frac{y'}{x'}= \arctan \frac{y}{x \cos\beta + z \sin\beta} \\[6pt]
    &= 
-   \arctan 2( \sin\theta\sin\varphi,\ \sin\theta\cos\varphi \cos\beta + \cos\theta \sin\beta)
+   \arctan \frac{\sin\theta\sin\varphi}{\sin\theta\cos\varphi \cos\beta + \cos\theta \sin\beta}
  \end{aligned}
    $$
 如果取 $\beta=\frac{\pi}{2}$, 就有
@@ -230,7 +230,6 @@ B_\varphi = 0
 \end{array}
 $$
 关于球谐系数 $g_l^m$ 的具体拟合值, 可在第 $14$ 版[国际参考地磁场(IGRF)的官方文件](https://www.ngdc.noaa.gov/IAGA/vmod/coeffs/igrf14coeffs.txt) 中查阅. 对于 $m\ne 0$ 的球谐函数, 同样选取他们的实数线性组合, 可以得到他们表示的四极场只是 $Y_2^0(\theta)$ 的旋转, 但是形式更加复杂.
-
 # 4 球谐系数
 现在需要确定系数 $B_{lm}$, 假设 $A=0$, 通解写成:
 $$
