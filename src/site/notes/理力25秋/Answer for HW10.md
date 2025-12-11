@@ -1,6 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW10/","noteIcon":"default","created":"2025-11-30T19:15:05.685+08:00","updated":"2025-12-11T10:17:28.632+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW10/","noteIcon":"default","created":"2025-11-30T19:15:05.685+08:00","updated":"2025-12-11T14:17:05.831+08:00"}
 ---
+
 
 # 1 正则变换
 > 本题其实可以看作第二类正则变换，母函数是  
