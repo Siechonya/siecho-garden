@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW/","noteIcon":"default","created":"2025-09-26T16:13:45.829+08:00","updated":"2025-12-11T10:19:59.211+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW/","noteIcon":"default","created":"2025-09-26T16:13:45.829+08:00","updated":"2025-12-11T14:20:18.245+08:00"}
 ---
 
 
@@ -14,7 +14,7 @@
 - [[理力25秋/Answer for HW7\|Answer for HW7]]
 - [[理力25秋/Answer for HW8\|Answer for HW8]]
 - [[理力25秋/Answer for HW9\|Answer for HW9]]
-- [[理力25秋/Answer for HW10\|Answer for HW10]]
+- [[理力25秋/Answer for HW_10\|Answer for HW_10]]
 - [[理力25秋/Answer for HW11\|Answer for HW11]]
 - [[理力25秋/Answer for HW12\|Answer for HW12]]
 
