@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Notes for General Relativity/","noteIcon":"default","created":"2025-03-12T22:28:08.600+08:00","updated":"2025-12-03T18:47:51.317+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Notes for General Relativity/","noteIcon":"default","created":"2025-03-12T22:28:08.600+08:00","updated":"2025-12-12T18:27:54.122+08:00"}
 ---
 
 # 1 Convention  
-- natural unit system, Einstein's summation convention
-- Minkowski metric $(-+++)$
+- Natural unit system, Einstein's summation convention
+- In the case of flat  spacetime, Minkowski metric $(-+++)$ is adopted
 $$
 \eta_{\mu\nu} = \begin{bmatrix} -1 &   &   &   \\    & 1 &   &   \\   &   & 1 &   \\   &   &   & 1 \end{bmatrix}
 $$

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-10-23T14:37:00.814+08:00","updated":"2025-11-24T16:37:00.358+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-10-23T14:37:00.814+08:00","updated":"2025-12-15T13:27:56.202+08:00"}
 ---
 
 
@@ -142,7 +142,7 @@ $\vec v_{sw}$ 是 solar wind 的局地平均速度。
 ## 1.2 链接  
 [[_Documents/docs/2.1 Perrone et al_2016_COMPRESSIVE COHERENT STRUCTURES AT ION SCALES IN THE SLOW SOLAR WIND.pdf|Perrone et al_2016_COMPRESSIVE COHERENT STRUCTURES AT ION SCALES IN THE SLOW SOLAR WIND]]
 ## 1.3 补充
-文章阅读中遇到的生词以及**一些关键概念**在在: [[_Documents/words/words - Compressive Coherent Structures at Ion Scales in The Slow Solar Wind\|words - Compressive Coherent Structures at Ion Scales in The Slow Solar Wind]]
+文章阅读中遇到的生词以及**一些关键概念**在在: [[_Documents/words/part.2 words#1 Coherent Structures at Ion Scales in Fast Solar Wind - Cluster Observations\|part.2 words]]
 
 
 # 2 Coherent Structures at Ion Scales in Fast Solar Wind: Cluster Observations (partially)  
@@ -190,7 +190,7 @@ title Structure Distribution [101]
 ## 2.2 链接
 本地 [[_Documents/docs/2.2 Perrone et al_2017_Coherent Structures at Ion Scales in Fast Solar Wind.pdf|2.3 Perrone et al_2017_Coherent Structures at Ion Scales in Fast Solar Wind]]
 ## 2.3 补充
-[[_Documents/words/words - Coherent Structures at Ion Scales in Fast Solar Wind - Cluster Observations\|words - Coherent Structures at Ion Scales in Fast Solar Wind - Cluster Observations]]
+[[_Documents/words/part.2 words#2 Compressive Coherent Structures at Ion Scales in The Slow Solar Wind\|part.2 words]]
 # 3 Magnetospheric multiscale observation of kinetic signatures in the Alfvén vortex  
 Wang, T., Alexandrova, O., Perrone, D., Dunlop, M., Dong, X., Bingham, R., Khotyaintsev, Y. V., Russell, C. T., Giles, B. L., Torbert, R. B., Ergun, R. E., & Burch, J. L. (2019). Magnetospheric multiscale observation of kinetic signatures in the Alfvén vortex. _The Astrophysical Journal Letters,871_(2), L 22. [https://doi.org/10.3847/2041-8213/aafe0d](https://doi.org/10.3847/2041-8213/aafe0d)  
 # 4 Soliton approach to magnetic holes
