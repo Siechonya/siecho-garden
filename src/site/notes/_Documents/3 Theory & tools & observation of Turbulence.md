@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2025-12-09T15:47:09.383+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2025-12-15T23:09:37.727+08:00"}
 ---
 
 
@@ -79,7 +79,7 @@ Ruhunusiri, S., et al. (2017), Characterization of turbulence in the Mars plasma
 
 ### 3.1.1 背景介绍
 ### 3.1.2 方法  
-- refer to the lower frequency range ($<f_{H^+}$) as <font color="#ff0000">the MHD range</font> and the higher frequency range ($>f_{H^+}$) as<font color="#ff0000"> the kinetic range</font>.
+- refer to the lower fre quency range ($<f_{H^+}$) as <font color="#ff0000">the MHD range</font> and the higher frequency range ($>f_{H^+}$) as<font color="#ff0000"> the kinetic range</font>.
 
 - 使用小波变换得到幂律谱(power spectral densities (PSDs) for the magnetic field fluctuations)
 $$
