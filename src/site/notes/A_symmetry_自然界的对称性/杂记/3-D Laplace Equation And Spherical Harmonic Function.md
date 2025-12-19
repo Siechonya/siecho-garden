@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2025-12-19T11:33:09.396+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2025-12-19T11:42:25.870+08:00"}
 ---
 
 
@@ -40,7 +40,7 @@ $$
 $$
 R(r) = A r^l + B r^{-(l+1)}, \quad l\geq 0
 $$
-通常情况下, 场不会传播到无穷远处, 也就是在解 $R(r)$ 的定义域包含 $r=\infty$ 时因为 $r^l \to \infty$ 导致 $R(r)\to\infty$ 而不满足物理意义, 所以通常取 $A=0$. 同理, 在解的定义域包含 $r=0$ 时, 通常取 $B=0$.
+通常情况下, 场不会传播到无穷远处, 也就是在解 $R(r)$ 的定义域包含 $r=\infty$ 时因为 $r^l \to \infty$ 导致 $R(r)\to\infty$ 而不满足物理意义, 所以通常取 $A=0$, 这将只剩下 $r^{-l-1}$ 的项, 表明场随着 $r$ 增加而逐渐衰减. 同理, 在解的定义域包含 $r=0$ 时, 通常取 $B=0$.
 # 3 球面谐波  
 ## 3.1 球谐函数的引出
 由上述已知, 拉普拉斯方程的球面偏导部分是
