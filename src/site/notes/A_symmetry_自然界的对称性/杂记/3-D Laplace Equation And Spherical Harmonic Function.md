@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2025-12-10T20:15:00.414+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2025-12-19T11:33:09.396+08:00"}
 ---
 
 
@@ -28,7 +28,7 @@ $$
 对其分离变量 $u(r,\theta,\varphi) = R(r)Y(\theta,\varphi)$, 容易得到
 $$
 \frac{1}{R} \frac{d}{d r}\left(r^{2} \frac{d R}{d r}\right)
-= - \frac{1}{Y}  \left(\frac{1}{\sin \theta } \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial Y}{\partial \theta}\right)-\frac{1}{\sin ^{2} \theta} \frac{\partial^{2} Y}{\partial \phi^{2}}\right)
+= - \frac{1}{Y}  \left(\frac{1}{\sin \theta } \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial Y}{\partial \theta}\right)+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2} Y}{\partial \phi^{2}}\right)
 = \lambda
 $$
 # 2 径向衰减
@@ -46,7 +46,7 @@ $$
 由上述已知, 拉普拉斯方程的球面偏导部分是
 $$
 \frac{1}{\sin \theta } \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial Y}{\partial \theta}\right)
--\frac{1}{\sin ^{2} \theta} \frac{\partial^{2} Y}{\partial \phi^{2}} 
++\frac{1}{\sin ^{2} \theta} \frac{\partial^{2} Y}{\partial \phi^{2}} 
 + l(l+1)Y
 = 0
 $$
