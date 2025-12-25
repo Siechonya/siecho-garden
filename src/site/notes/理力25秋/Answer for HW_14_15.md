@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_14_15/","noteIcon":"default","created":"2025-12-25T10:08:52.296+08:00","updated":"2025-12-25T16:02:52.233+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_14_15/","noteIcon":"default","created":"2025-12-25T10:08:52.296+08:00","updated":"2025-12-25T16:06:19.354+08:00"}
 ---
 
 
@@ -218,15 +218,14 @@ $$
 
 另一道类似的：
 
-> (2021) 五、(25 分）拉格朗日陀螺为在重力场中的对称刚体  $\left (I_{1}=I_{2} \neq I_{3}\right)$  。它的拉格朗日量为:  
-> $$
+(2021) 五、(25 分）拉格朗日陀螺为在重力场中的对称刚体  $\left (I_{1}=I_{2} \neq I_{3}\right)$  。它的拉格朗日量为:    
+ $$
  \mathcal L=   \frac{I_{1}}{2}\left (\dot{\theta}^{2}+\dot{\varphi}^{2} \sin ^{2} \theta\right)+\frac{I_{3}}{2}(\dot{\psi}+\dot{\varphi} \cos \theta)^{2}-m g l \cos \theta
  $$
-> (1)根据 $\mathcal L$ 的对称性，找出系统的三个守恒量并说明理由;  
-> (2)根据刚体的欧拉动力学方程, 证明广义动量  $p_{\varphi}$  和 $p_{\psi}$  为运动积分。
-> 
-> *(1)* 
-> 拉格朗日量  $L$  不显含时间, 因此哈密顿量  $H=E$  为守恒量。另外,  $\psi, \varphi$  为循环坐标, 因此正则动量  $p_{\psi}, p_{\varphi}$ 为运动积分, 即:$$
+(1)根据 $\mathcal L$ 的对称性，找出系统的三个守恒量并说明理由;  
+(2)根据刚体的欧拉动力学方程, 证明广义动量  $p_{\varphi}$  和 $p_{\psi}$  为运动积分。
+
+ *(1)* 拉格朗日量  $L$  不显含时间, 因此哈密顿量  $H=E$  为守恒量。另外,  $\psi, \varphi$  为循环坐标, 因此正则动量  $p_{\psi}, p_{\varphi}$ 为运动积分, 即:$$
  \boxed{
  \begin{array}{c}
  \frac{I_{1}}{2}\left(\dot{\theta}^{2}+\dot{\varphi}^{2} \sin ^{2} \theta\right)+\frac{I_{3}}{2}(\dot{\psi}+\dot{\varphi} \cos \theta)^{2}-m g l \cos \theta=E=\text { const } . \\
@@ -235,23 +234,30 @@ $$
  \end{array}
  }
  $$
-> *(2)* 
-> 力矩的方向显然同时垂直于刚体的 $z$ 轴和实验室系的 $z^{\prime}$ 方向, 因此,$$
- N_{3}=0,\quad N_{3'}=0
- $$
-> 根据欧拉动力学公式有:$$I_{3} \dot{\omega}_{3}-\left(I_{1}-I_{2}\right) \omega_{1} \omega_{2}=I_{3} \dot{\omega}_{3}=0$$
-> 即：$$
- p_{\psi}=L_{3}=I_{3} \omega_{3}=I_{3}(\dot{\psi}+\dot{\varphi} \cos \theta)=\text { const } .
- $$
-> 另外, $$
- \frac{d}{d t}\left(L_{3^{\prime}}\right)=N_{3^{\prime}}=0
- $$
-> 易得：$$
- p_{\varphi}=L_{3 \prime}=\left(I_{3} \cos ^{2} \theta+I_{1} \sin ^{2} \theta\right) \dot{\varphi}+I_{3} \dot{\psi} \cos \theta=\text { const. }
- $$
-> 其中刚体绕实验室系的  $z^{\prime}$  轴的转动惯量为:$$
- I_{3 \prime}=I_{3} \cos ^{2} \theta+I_{1} \sin ^{2} \theta
- $$
+*(2)* 力矩的方向显然同时垂直于刚体的 $z$ 轴和实验室系的 $z^{\prime}$ 方向, 因此,  
+$$
+N_{3}=0,\quad N_{3'}=0
+$$
+根据欧拉动力学公式有:  
+$$
+I_{3} \dot{\omega}_{3}-\left(I_{1}-I_{2}\right) \omega_{1} \omega_{2}=I_{3} \dot{\omega}_{3}=0
+$$
+即  
+$$
+p_{\psi}=L_{3}=I_{3} \omega_{3}=I_{3}(\dot{\psi}+\dot{\varphi} \cos \theta)=\text { const } .
+$$
+另外,  
+$$
+\frac{d}{d t}\left(L_{3^{\prime}}\right)=N_{3^{\prime}}=0
+$$
+易得：  
+$$
+p_{\varphi}=L_{3 \prime}=\left(I_{3} \cos ^{2} \theta+I_{1} \sin ^{2} \theta\right) \dot{\varphi}+I_{3} \dot{\psi} \cos \theta=\text { const. }
+$$
+其中刚体绕实验室系的  $z^{\prime}$  轴的转动惯量为:  
+$$
+I_{3 \prime}=I_{3} \cos ^{2} \theta+I_{1} \sin ^{2} \theta
+$$
 
 ## 2.5 这也是一道考试原题 
  
