@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_14_15/","noteIcon":"default","created":"2025-12-25T10:08:52.296+08:00","updated":"2025-12-25T16:12:03.449+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_14_15/","noteIcon":"default","created":"2025-12-25T10:08:52.296+08:00","updated":"2025-12-25T16:12:48.562+08:00"}
 ---
 
 
@@ -295,7 +295,7 @@ $$
 $$
 \frac{ \mathrm{d} V_{eff} }{ \mathrm{d} \theta} = 0
 $$
-应当有解。
+必须有解。
 
 
 
