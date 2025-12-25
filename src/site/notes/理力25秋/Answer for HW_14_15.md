@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_14_15/","noteIcon":"default","created":"2025-12-25T10:08:52.296+08:00","updated":"2025-12-25T16:06:19.354+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_14_15/","noteIcon":"default","created":"2025-12-25T10:08:52.296+08:00","updated":"2025-12-25T16:09:14.787+08:00"}
 ---
 
 
@@ -225,15 +225,16 @@ $$
 (1)根据 $\mathcal L$ 的对称性，找出系统的三个守恒量并说明理由;  
 (2)根据刚体的欧拉动力学方程, 证明广义动量  $p_{\varphi}$  和 $p_{\psi}$  为运动积分。
 
- *(1)* 拉格朗日量  $L$  不显含时间, 因此哈密顿量  $H=E$  为守恒量。另外,  $\psi, \varphi$  为循环坐标, 因此正则动量  $p_{\psi}, p_{\varphi}$ 为运动积分, 即:$$
- \boxed{
- \begin{array}{c}
- \frac{I_{1}}{2}\left(\dot{\theta}^{2}+\dot{\varphi}^{2} \sin ^{2} \theta\right)+\frac{I_{3}}{2}(\dot{\psi}+\dot{\varphi} \cos \theta)^{2}-m g l \cos \theta=E=\text { const } . \\
- p_{\psi}=\frac{\partial L}{\partial \dot{\psi}}=I_{3}(\dot{\psi}+\dot{\varphi} \cos \theta)=\text { const } . \\
- p_{\varphi}=\frac{\partial L}{\partial \dot{\varphi}}=\left(I_{3} \cos ^{2} \theta+I_{1} \sin ^{2} \theta\right) \dot{\varphi}+I_{3} \dot{\psi} \cos \theta=\text { const }
- \end{array}
- }
- $$
+*(1)* 拉格朗日量  $L$  不显含时间, 因此哈密顿量  $H=E$  为守恒量。另外,  $\psi, \varphi$  为循环坐标, 因此正则动量  $p_{\psi}, p_{\varphi}$ 为运动积分, 即:  
+$$
+\boxed{
+\begin{array}{c}
+\frac{I_{1}}{2}\left(\dot{\theta}^{2}+\dot{\varphi}^{2} \sin ^{2} \theta\right)+\frac{I_{3}}{2}(\dot{\psi}+\dot{\varphi} \cos \theta)^{2}-m g l \cos \theta=E=\text { const } . \\
+p_{\psi}=\frac{\partial L}{\partial \dot{\psi}}=I_{3}(\dot{\psi}+\dot{\varphi} \cos \theta)=\text { const } . \\
+p_{\varphi}=\frac{\partial L}{\partial \dot{\varphi}}=\left(I_{3} \cos ^{2} \theta+I_{1} \sin ^{2} \theta\right) \dot{\varphi}+I_{3} \dot{\psi} \cos \theta=\text { const }
+\end{array}
+}
+$$
 *(2)* 力矩的方向显然同时垂直于刚体的 $z$ 轴和实验室系的 $z^{\prime}$ 方向, 因此,  
 $$
 N_{3}=0,\quad N_{3'}=0
@@ -259,8 +260,8 @@ $$
 I_{3 \prime}=I_{3} \cos ^{2} \theta+I_{1} \sin ^{2} \theta
 $$
 
-## 2.5 这也是一道考试原题 
- 
+
+## 2.5 这也是一道考试原题      
 ![zz_figure/例题_8_1735188880970_edit_2610390595185489.png](/img/user/zz_figure/%E4%BE%8B%E9%A2%98_8_1735188880970_edit_2610390595185489.png)
 
 也可以由角动量的进动角速度 $\Omega = \omega_0 = \frac{N}{J \sin \theta} = \frac{N}{I_3\omega_0}$ 得到, 
