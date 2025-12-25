@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_14_15/","noteIcon":"default","created":"2025-12-25T10:08:52.296+08:00","updated":"2025-12-25T16:09:14.787+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_14_15/","noteIcon":"default","created":"2025-12-25T10:08:52.296+08:00","updated":"2025-12-25T16:12:03.449+08:00"}
 ---
 
 
@@ -274,8 +274,10 @@ $$
 > 
 > 对于 $z$ 方向力矩，不需要考虑，它只对角动量的自转起作用。只考虑垂直于 $z$ 方向的力矩 $M$。
 > ![zz_figure/Pasted image 20251225153320.png](/img/user/zz_figure/Pasted%20image%2020251225153320.png)
-> 如图，角动量守恒:$$\Delta J = Jsin\theta \Delta \varphi = M \Delta t\quad\to\quad\Omega = \frac{\Delta\varphi}{\Delta t} = \frac{M}{J \sin \theta}$$
-> 可以发现有效力矩指向 $x$ 方向。进动周期: $$T_p = \frac{2\pi}{\Omega}$$
+> 如图，角动量守恒:  
+> $$\Delta J = Jsin\theta \Delta \varphi = M \Delta t\quad\to\quad\Omega = \frac{\Delta\varphi}{\Delta t} = \frac{M}{J \sin\theta}$$
+> 可以发现有效力矩指向 $x$ 方向。进动周期:   
+> $$T_p = \frac{2\pi}{\Omega}$$
 
 ## 2.6 这题作为第三小问考过  
 注意到  
