@@ -1,6 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_10/","noteIcon":"default","created":"2025-11-30T19:15:05.685+08:00","updated":"2025-12-11T14:17:05.831+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_10/","noteIcon":"default","created":"2025-11-30T19:15:05.685+08:00","updated":"2025-12-30T11:55:06.870+08:00"}
 ---
+
 
 
 # 1 正则变换
@@ -80,7 +81,8 @@ $$
 \frac{ \partial H }{ \partial q_\alpha }=-\dot p_\alpha
 \tag{5}
 $$
-成立，反之同理。
+成立，反之同理。  
+
 # 2 球面摆  
 #### (1)  
 拉氏量
@@ -93,7 +95,7 @@ p_\theta = \frac{ \partial L }{ \partial \dot\theta } = ml^2\dot{\theta}
 ,\quad
 p_\phi = \frac{ \partial L }{ \partial \dot\phi } = ml^2\sin^2\theta\dot{\phi}
 $$
-勒让德变换得到  
+勒让德变换得到    
 $$
 H(\theta, \phi; p_\theta, p_\phi) = \theta p_\theta + \phi p_\phi - L
 =

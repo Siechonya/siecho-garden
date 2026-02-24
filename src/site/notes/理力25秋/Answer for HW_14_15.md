@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_14_15/","noteIcon":"default","created":"2025-12-25T10:08:52.296+08:00","updated":"2025-12-25T16:12:48.562+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_14_15/","noteIcon":"default","created":"2025-12-25T10:08:52.296+08:00","updated":"2026-01-10T12:31:44.885+08:00"}
 ---
 
-
+ 
 
 # 1 HW 14  
 ## 1.1 规则运动  
@@ -13,16 +13,16 @@ $$
 \begin{bmatrix} a\sin\theta_0\sin(\psi_0+ct) \\ -a\sin\theta_0\cos(\psi_0+ct) \\ a\cos\theta_0 + c  \end{bmatrix}
 $$
 
-## 1.2 这是一道微改的考试原题  
-(2016) 五、(15 分) 质量为 $m$ , 半长轴 $a$ 、半短轴为 $b$ 的椭圆形匀质盘绕通过其中心且在盘平面内的固定轴 $e_{A O}$ 作匀速转动, 角速度为 $\omega_{0}$。转轴与㮋圆半长轴的夹角为 $\alpha$, 转轴质量可以忽略。
+## 1.2 -
+质量为 $m$ , 半长轴 $a$ 、半短轴为 $b$ 的椭圆形匀质盘绕通过其中心且在盘平面内的固定轴 $e_{A O}$ 作匀速转动, 角速度为 $\omega_{0}$。转轴与㮋圆半长轴的夹角为 $\alpha$, 转轴质量可以忽略。
 (1) 求主转动惯量;
 (2) 写出角速度在主轴系中的分量;  
-本题：(3) 写出匀质盘的转动动能.
-原题：(3)' 求该椭圆盘所受到力矩。   
+(3) 写出匀质盘的转动动能.
+(3)' 求该椭圆盘所受到力矩。   
 ![zz_figure/Pasted image 20251225115402.png](/img/user/zz_figure/Pasted%20image%2020251225115402.png)
 [[zz_Excalidraw/Drawing 2024-11-14 11.23.13.excalidraw\|Drawing 2024-11-14 11.23.13.excalidraw]]
 
-解：以椭圆盘中心 O 为原点，建立如图所示的主轴坐标系 (右手系)，  $e_{1}$  沿短轴方向，  $e_{3}$  沿长轴方向,  $e_{2}$  垂直纸面向里。转动角速度在此主轴系的分量为 $\omega_{1}=-\omega_{0} \sin \alpha, \omega_{2}=0, \omega_{3}=\omega_{0} \cos \alpha$. 因为匀速转动, 所以  $\dot{\omega}_{1}=\dot{\omega}_{2}=\dot{\omega}_{3}=0$ 
+解：以椭圆盘中心 O 为原点，建立如图所示的主轴坐标系 (右手系)， $e_{1}$ 沿短轴方向， $e_{3}$ 沿长轴方向,  $e_{2}$ 垂直纸面向里。转动角速度在此主轴系的分量为 $\omega_{1}=-\omega_{0} \sin \alpha, \omega_{2}=0, \omega_{3}=\omega_{0} \cos \alpha$. 因为匀速转动, 所以  $\dot{\omega}_{1}=\dot{\omega}_{2}=\dot{\omega}_{3}=0$ 
 
 *(1)* 直接计算给出
 $$
@@ -122,7 +122,7 @@ $$
 # 2 HW 15   
 ## 2.1 欧拉陀螺   
 #### (1)
-回忆，在推导题目给定的(1)式时，假定了惯性系的 z 轴为守恒角动量 $\vec{L}$ 的方向，所以，在本体系中  
+回忆，在推导题目给定的(1)式时，假定了惯性系的 z' 轴为守恒角动量 $\vec{L}$ 的方向，所以，在本体系中  
 $$
 \vec{L} = R_\psi R_\theta R_\varphi \begin{bmatrix} 0 \\ 0 \\ L  \end{bmatrix}
 = \begin{bmatrix} L\sin\theta\sin\psi \\ L\sin\theta\cos\psi \\ L\cos\theta  \end{bmatrix}
@@ -149,10 +149,10 @@ $$
 $$
 \omega_z = \frac{\vec{\omega} \cdot \vec{L}}{L} = \frac{I_1 \omega_1^2 + I_1 \omega_2^2 + I_3 \omega_3^2}{L} = \frac{I_1 \omega_0^2 + I_3 \omega_{30}^2}{L}  = L \left( \frac{\sin^2\theta_0}{I_1} + \frac{\cos^2\theta_0}{I_3} \right)
 $$
-或者直接计算
+或者直接计算得到
 $$
 \vec{\omega}_{Lab} = \begin{bmatrix} \dot{\psi}\sin\theta\sin\varphi+\dot{\theta}\cos\varphi \\ -\dot{\psi}\sin\theta\cos\varphi + \dot{\theta}\sin\varphi \\ \dot{\psi}\cos\theta + \dot{\varphi}  \end{bmatrix}
-= \begin{bmatrix} L \sin\theta_0 \cos\theta_0 (\frac{1}{I_3} - \frac{1}{I_1}) \sin\varphi(t) \\ -L \sin\theta_0 \cos\theta_0 (\frac{1}{I_3} - \frac{1}{I_1}) \cos\varphi(t) \\ L (\frac{\sin^2\theta_0}{I_1} + \frac{\cos^2\theta_0}{I_3}) \end{bmatrix}
+= \begin{bmatrix} L \sin\theta_0 \cos\theta_0 \left( \frac{1}{I_3} - \frac{1}{I_1} \right) \sin\left( \frac{L}{I_1}t+\varphi_0 \right) \\ -L \sin\theta_0 \cos\theta_0 \left( \frac{1}{I_3} - \frac{1}{I_1} \right) \cos\left( \frac{L}{I_1}t+\varphi_0 \right)\\ L \left( \frac{\sin^2\theta_0}{I_1} + \frac{\cos^2\theta_0}{I_3} \right) \end{bmatrix}
 $$
 ## 2.2 共面性质
 本体系中  
@@ -165,7 +165,7 @@ $$
 ,\quad \alpha = \alpha(t)
 $$
 
-所以  
+所以三重积  
 $$
 (\vec{\omega}\times \vec{e_z}) \cdot \vec{L} 
 =  \begin{bmatrix} \omega_0 \sin\alpha \\ -\omega_0 \cos\alpha \\ 0 \end{bmatrix} \cdot \begin{bmatrix} I_1 \omega_0 \cos\alpha \\ I_1 \omega_0 \sin \alpha \\ I_3 \omega_{30}  \end{bmatrix}
@@ -175,14 +175,18 @@ $$
 ## 2.3 均质盘旋转  
 ![zz_figure/Pasted image 20251225144045.png](/img/user/zz_figure/Pasted%20image%2020251225144045.png)
 
-## 2.4 这是一道真题  
+## 2.4 -
 ![zz_figure/Pasted image 20251225145044.png](/img/user/zz_figure/Pasted%20image%2020251225145044.png)
 [[zz_Excalidraw/Drawing 2024-11-14 14.15.10.excalidraw\|Drawing 2024-11-14 14.15.10.excalidraw]]
 
-(1)    
+(1) jy：   
 $$
+\boxed{
 H = \frac{p_\theta^2}{2I_1} + V_{eff} (\theta), \quad V_{eff} (\theta) = \frac{(p_\varphi - p_\psi\cos\theta)^2}{2I_1 \sin^2\theta} + \frac{p_\psi^2}{2I_3} + mgl\cos\theta
+}
 $$
+ps：拉格朗日量也很重要，但是只需看图就可以快速写出。
+
 根据循环坐标得到运动积分  
 $$
 p_\psi = const, \quad p_\varphi = const.
@@ -215,15 +219,16 @@ Q_\psi = \frac{\partial S}{\partial p_\psi} = \psi - \int \frac{\frac{I_1 p_\psi
 \Rightarrow 
 \psi(\theta)
 $$
+最后还要补上 $p_\theta = \frac{ \partial S }{ \partial \theta } =\int一长串$，或者简单点用 $p_\theta = I_1 \dot{{\theta} }=2I_1(E-V_{eff})$，但是都应当用广义动量而不是广义速度表示。
 
 另一道类似的：
 
-(2021) 五、(25 分）拉格朗日陀螺为在重力场中的对称刚体  $\left (I_{1}=I_{2} \neq I_{3}\right)$  。它的拉格朗日量为:    
+> 拉格朗日陀螺为在重力场中的对称刚体  $\left (I_{1}=I_{2} \neq I_{3}\right)$  。它的拉格朗日量为:    
  $$
  \mathcal L=   \frac{I_{1}}{2}\left (\dot{\theta}^{2}+\dot{\varphi}^{2} \sin ^{2} \theta\right)+\frac{I_{3}}{2}(\dot{\psi}+\dot{\varphi} \cos \theta)^{2}-m g l \cos \theta
  $$
-(1)根据 $\mathcal L$ 的对称性，找出系统的三个守恒量并说明理由;  
-(2)根据刚体的欧拉动力学方程, 证明广义动量  $p_{\varphi}$  和 $p_{\psi}$  为运动积分。
+> (1)根据 $\mathcal L$ 的对称性，找出系统的三个守恒量并说明理由;  
+> (2)根据刚体的欧拉动力学方程, 证明广义动量  $p_{\varphi}$ 和 $p_{\psi}$ 为运动积分。
 
 *(1)* 拉格朗日量  $L$  不显含时间, 因此哈密顿量  $H=E$  为守恒量。另外,  $\psi, \varphi$  为循环坐标, 因此正则动量  $p_{\psi}, p_{\varphi}$ 为运动积分, 即:  
 $$
@@ -261,25 +266,28 @@ I_{3 \prime}=I_{3} \cos ^{2} \theta+I_{1} \sin ^{2} \theta
 $$
 
 
-## 2.5 这也是一道考试原题      
+
+## 2.5 -
 ![zz_figure/例题_8_1735188880970_edit_2610390595185489.png](/img/user/zz_figure/%E4%BE%8B%E9%A2%98_8_1735188880970_edit_2610390595185489.png)
 
-也可以由角动量的进动角速度 $\Omega = \omega_0 = \frac{N}{J \sin \theta} = \frac{N}{I_3\omega_0}$ 得到, 
+也可以由角动量的进动角速度 $\Omega = \omega_0 = \frac{lN}{J \sin \theta} = \frac{lN}{I_3\omega}$ 得到,  
 $$
-N = \omega_0 \cdot I_3 \omega_0 = \frac{1}{2}mr\omega_0^2 = N_{水平面对圆盘支持力} - mg
+N = \omega_0 \cdot I_3 \omega/l = \frac{1}{2}mr\omega_0^2 = N_{水平面对圆盘支持力} - mg
 $$
+根据力矩判断 $N$ 竖直朝上。
+
 附 :  
 
 > [!info] 角动量进动和外力力矩的关系  
 > 
 > 对于 $z$ 方向力矩，不需要考虑，它只对角动量的自转起作用。只考虑垂直于 $z$ 方向的力矩 $M$。
 > ![zz_figure/Pasted image 20251225153320.png](/img/user/zz_figure/Pasted%20image%2020251225153320.png)
-> 如图，角动量守恒:  
+> 如图:  
 > $$\Delta J = Jsin\theta \Delta \varphi = M \Delta t\quad\to\quad\Omega = \frac{\Delta\varphi}{\Delta t} = \frac{M}{J \sin\theta}$$
 > 可以发现有效力矩指向 $x$ 方向。进动周期:   
 > $$T_p = \frac{2\pi}{\Omega}$$
 
-## 2.6 这题作为第三小问考过  
+## 2.6 -
 注意到  
 $$
 H = \frac{p_\theta^2}{2I_1} + V_{eff} (\theta), \quad V_{eff} (\theta) = \frac{(p_\varphi - p_\psi\cos\theta)^2}{2I_1 \sin^2\theta} + \frac{p_\psi^2}{2I_3} + mgl\cos\theta
@@ -295,8 +303,9 @@ $$
 $$
 \frac{ \mathrm{d} V_{eff} }{ \mathrm{d} \theta} = 0
 $$
-必须有解。
+必须有解。  
 
+> 均匀进动 & 势能最低点 & 动能极值 & ...
 
 
 一个圆锥密度均匀为 $\rho$ , 总质量 $M$, 底部的圆半径为 $R$ , 高为 $h$ 。
@@ -304,7 +313,7 @@ $$
 (2). 以圆雉顶点为固定点, 求重力场中, 该重对称陀螺的拉氏量及三个守恒量方程.
 (3). 重对称陀螺也能均匀进动 (章动角 $\theta$ 和进动角速度 $\dot{\phi}$ 保持不变)。以圆锥顶点为固定点, 求该重对称陀螺可以均匀进动的角速度  $\dot{\phi}$ , 并给出均匀进动的存在性条件
 
-(1) 选取 $z$ 轴为垂直于底面的对称轴的坐标系, 原点在底面中心。得：
+(1) 选取 $z$ 轴为垂直于底面的对称轴的坐标系, 原点在圆雉顶点。得：
 $$
 I_{1}=I_{2}=\frac{3}{20} M\left(R^{2}+4 h^{2}\right), \quad I_{3}=\frac{3}{10} M R^{2}
 $$
@@ -312,7 +321,7 @@ tips : 积分时使用平行轴定理
 $$
 \begin{array}{c}
 I_{1}=\int_{0}^{h}\left[\frac{1}{4} d m \cdot r^{2}+d m \cdot z^{2}\right] \\
-d m=\rho \pi r^{2} d z, \quad r=\frac{R}{h} z, \quad M=\frac{1}{3}\pi R^2h
+d m=\rho \pi r^{2} d z, \quad r=\frac{R}{h} z, \quad M=\frac{1}{3}\pi R^2h\rho
 \end{array}
 $$
 (2) 刚体的质心高度 : 
@@ -337,13 +346,13 @@ $$
 根据欧拉-拉格朗日方程, 得到 $\theta$ 方向的运动方程为:
 $$
 I_{1} \ddot{\theta}=\left(I_{1} \cos \theta \dot{\phi}^{2}-I_{3} \omega_{3} \dot{\phi}+3 M g h / 4\right) \sin \theta
-= \frac{ \mathrm{d} V_{eff} }{ \mathrm{d} \theta}
+=- \frac{ \mathrm{d} V_{eff} }{ \mathrm{d} \theta}
 $$
 均匀进动时,  $\ddot{\theta}=0, \theta=\theta_{0}$, 因此,
 $$
 I_{1} \cos \theta \dot{\phi}^{2}-I_{3} \omega_{3} \dot{\phi}+3 M g h / 4=0
 $$
-这是关于  $\dot{\phi}$  的二次方程，方程有解的条件：
+这是关于 $\dot{\phi}$ 的二次方程，方程有解的条件：
 $$
 \Delta=\left(I_{3} \omega_{3}\right)^{2}-3 M g h I_{1} \cos \theta_{0} \geq 0
 $$

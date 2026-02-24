@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_13/","noteIcon":"default","created":"2025-12-18T10:56:36.074+08:00","updated":"2025-12-25T20:14:53.908+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_13/","noteIcon":"default","created":"2025-12-18T10:56:36.074+08:00","updated":"2025-12-25T20:24:40.836+08:00"}
 ---
 
 # 1 三维各向同性谐振子  
@@ -132,7 +132,7 @@ $$
 $$
 \frac{1}{2 m}\left(\frac{\mathrm{~d} S_{r}}{d r}\right)^{2}+\frac{1}{2}m\omega^2r^2+\frac{L^2}{2 m r^{2}}=E
 $$
-作用量  
+作用量   
 $$
 J_\varphi =  \frac{1}{2\pi} \oint p_\varphi \mathrm{d}\varphi = p_\varphi
 $$
