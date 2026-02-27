@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW5/","noteIcon":"default","created":"2025-10-17T11:42:39.564+08:00","updated":"2025-11-10T19:24:24.597+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW5/","noteIcon":"default","created":"2025-12-01T13:38:11.788+08:00","updated":"2025-11-10T19:24:24.597+08:00"}
 ---
 
 # 1 相互作用的守恒量（注意使用 Noether 定理）  

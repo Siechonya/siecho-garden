@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-10-23T14:37:00.814+08:00","updated":"2025-12-15T13:27:56.202+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-12-01T13:41:33.089+08:00","updated":"2025-12-15T13:27:56.202+08:00"}
 ---
 
 
@@ -58,7 +58,7 @@ $$
 ,\quad
 i = x,y,z,\perp,\| 
 $$
-此处 $j$ 是尺度 $\tau$ 的索引，$\delta j$ 是尺度的常数步长，$\psi_0(0)=\pi^{1/4},~ C_\delta =0.776$（可见[[_Documents/docs/3.2 A Practical Guide to Wavelet Analysis.pdf|小波教程_en]]），采取 $\tau(j_1)=0.5s,~\tau(j_2)=10s$.  
+此处 $j$ 是尺度 $\tau$ 的索引，$\delta j$ 是尺度的常数步长，$\psi_0(0)=\pi^{1/4},~ C_\delta =0.776$（可见[小波教程_en](/img/user/_Documents/docs/3.2%20A%20Practical%20Guide%20to%20Wavelet%20Analysis.pdf)），采取 $\tau(j_1)=0.5s,~\tau(j_2)=10s$.  
 
 ![zz_figure/Pasted image 20250923224602.png](/img/user/zz_figure/Pasted%20image%2020250923224602.png)
 上图(b)的非高斯分布尾部特征表明，湍流存在某种间歇性或不均匀性。图(c)的磁波动能量的包络线由蓝色实线表示，是包裹振荡信号极值的平滑曲线，垂直的红色实线表示高斯函数拟合结果的三个标准差的位置($\delta b_{\|}^2 = 3.9 \times 10^{-2} \text{nT}^2$)，这一范围包含了高斯函数贡献的 99.7%，所有超出此限值的事件都会贡献于 PDF 的非高斯部分。该数值将被用作筛选非高斯压缩间断事件的阈值。  
@@ -140,7 +140,7 @@ $\vec v_{sw}$ 是 solar wind 的局地平均速度。
 
 
 ## 1.2 链接  
-[[_Documents/docs/2.1 Perrone et al_2016_COMPRESSIVE COHERENT STRUCTURES AT ION SCALES IN THE SLOW SOLAR WIND.pdf|Perrone et al_2016_COMPRESSIVE COHERENT STRUCTURES AT ION SCALES IN THE SLOW SOLAR WIND]]
+[Perrone et al_2016_COMPRESSIVE COHERENT STRUCTURES AT ION SCALES IN THE SLOW SOLAR WIND](/img/user/_Documents/docs/2.1%20Perrone%20et%20al_2016_COMPRESSIVE%20COHERENT%20STRUCTURES%20AT%20ION%20SCALES%20IN%20THE%20SLOW%20SOLAR%20WIND.pdf)
 ## 1.3 补充
 文章阅读中遇到的生词以及**一些关键概念**在在: [[_Documents/words/part.2 words#1 Coherent Structures at Ion Scales in Fast Solar Wind - Cluster Observations\|part.2 words]]
 
@@ -188,7 +188,7 @@ title Structure Distribution [101]
 
 
 ## 2.2 链接
-本地 [[_Documents/docs/2.2 Perrone et al_2017_Coherent Structures at Ion Scales in Fast Solar Wind.pdf|2.3 Perrone et al_2017_Coherent Structures at Ion Scales in Fast Solar Wind]]
+本地 [2.3 Perrone et al_2017_Coherent Structures at Ion Scales in Fast Solar Wind](/img/user/_Documents/docs/2.2%20Perrone%20et%20al_2017_Coherent%20Structures%20at%20Ion%20Scales%20in%20Fast%20Solar%20Wind.pdf)
 ## 2.3 补充
 [[_Documents/words/part.2 words#2 Compressive Coherent Structures at Ion Scales in The Slow Solar Wind\|part.2 words]]
 # 3 Magnetospheric multiscale observation of kinetic signatures in the Alfvén vortex  

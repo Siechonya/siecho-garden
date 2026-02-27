@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_12/","noteIcon":"default","created":"2025-12-11T10:17:36.985+08:00","updated":"2025-12-25T10:09:53.689+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_12/","noteIcon":"default","created":"2025-12-12T14:48:02.868+08:00","updated":"2025-12-25T10:09:53.689+08:00"}
 ---
 
 # 1 三维各向同性谐振子：球坐标  

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Lie Group/","noteIcon":"default","created":"2025-10-23T14:26:27.333+08:00","updated":"2025-09-10T13:16:43.584+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Lie Group/","noteIcon":"default","created":"2025-12-01T12:17:53.103+08:00","updated":"2025-09-10T13:16:43.584+08:00"}
 ---
 
 
@@ -712,7 +712,7 @@ $$
 它们分别对应于左手旋量和右手旋量的 $Lorentz$ 变换. 注意:
 
 - 加上旋转变换后, $Lorentz$ 变换矩阵不再对称.
-- 上述变换的作用量是 2-分量, 不是四维时空的 4-分量, 后者对应的 $\left( \frac{1}{2}, \frac{1}{2} \right)$ 表示可跳转至 [[#(5). $ left( frac{1}{2}, frac{1}{2} right)$ 表示与 $4-tendor$]].
+- 上述变换的作用量是 2-分量, 不是四维时空的 4-分量, 后者对应的 $\left( \frac{1}{2}, \frac{1}{2} \right)$ 表示可跳转至 [[A_symmetry_自然界的对称性/Tools/Lie Group#(5). $ left( frac{1}{2}, frac{1}{2} right)$ 表示与 $4-tendor$\|#(5). $ left( frac{1}{2}, frac{1}{2} right)$ 表示与 $4-tendor$]].
 #### 旋量与宇称
 根据 $7.3$ 节, 在宇称变换下, $J_i\to J_i, K_i \to -K_i$, 而 :
 $$

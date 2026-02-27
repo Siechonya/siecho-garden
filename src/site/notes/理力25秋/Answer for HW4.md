@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW4/","noteIcon":"default","created":"2025-10-23T14:37:04.389+08:00","updated":"2025-10-23T08:42:02.623+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW4/","noteIcon":"default","created":"2025-12-01T12:16:17.902+08:00","updated":"2025-10-23T08:42:02.623+08:00"}
 ---
 
 # 1 讲义后面的两题  

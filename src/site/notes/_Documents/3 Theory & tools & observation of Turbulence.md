@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2025-12-15T23:09:37.727+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-12-01T13:43:23.606+08:00","updated":"2025-12-15T23:09:37.727+08:00"}
 ---
 
 
@@ -56,7 +56,7 @@ lag-2 红噪同理。若上述噪声回归方程是全局的，则是傅里叶�
 
 
 ## 2.2 链接
-本地 [[_Documents/docs/3.2 A Practical Guide to Wavelet Analysis.pdf|2.2 A Practical Guide to Wavelet Analysis]]
+本地 [2.2 A Practical Guide to Wavelet Analysis](/img/user/_Documents/docs/3.2%20A%20Practical%20Guide%20to%20Wavelet%20Analysis.pdf)
 ## 2.3 补充
 词汇 [[_Documents/words/Part.3 words#2 A practical guide to wavelet analysis\|_Documents/words/Part.3 words#2 A practical guide to wavelet analysis]]
 
@@ -133,4 +133,4 @@ $\theta=\langle B,X_{MSE} \rangle$, When $B_{XMSE} > 0$ or when $0^\circ < θ < 
 ## 3.2 补充  
 词汇 [[_Documents/words/Part.3 words#3 Characterization of turbulence in the Mars plasma environment with MAVEN observations\|Part.3 words]]
 ## 3.3 链接
-本地 [[_Documents/docs/3.3 Ruhunusiri et al_2017_Characterization of turbulence in the Mars plasma environment with MAVEN.pdf|3.3 Ruhunusiri et al_2017_Characterization of turbulence in the Mars plasma environment with MAVEN]]
+本地 [3.3 Ruhunusiri et al_2017_Characterization of turbulence in the Mars plasma environment with MAVEN](/img/user/_Documents/docs/3.3%20Ruhunusiri%20et%20al_2017_Characterization%20of%20turbulence%20in%20the%20Mars%20plasma%20environment%20with%20MAVEN.pdf)

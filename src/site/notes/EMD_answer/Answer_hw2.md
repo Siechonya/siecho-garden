@@ -1,22 +1,22 @@
 ---
-{"dg-publish":true,"permalink":"/EMD_answer/Answer_hw2/","noteIcon":"default","created":"2025-10-23T14:23:44.419+08:00","updated":"2025-11-01T11:57:00.464+08:00"}
+{"dg-publish":true,"permalink":"/EMD_answer/Answer_hw2/","noteIcon":"default","created":"2025-12-01T13:33:23.759+08:00","updated":"2025-11-01T11:57:00.464+08:00"}
 ---
 
 
 
  $yry0204@mail.ustc.edu.cn$
 
-- [[#一. hw solution]]
-- [[#1.]]
-- [[#2. 洛伦兹标量]] <font color="#ff0000">(建议阅读其中的 tips)</font>
-- [[#3. 洛伦兹变换]]
-- [[#4. 张量变换]]
-- [[#5. 速度变换]]
-- [[#6. 麦克斯韦方程组的近似]]
-- [[#7. QFT 的洛伦兹不变量]]
-- [[#二. 补充阅读]]
-- [[#1. $Lorentz Group$]]
-- [[#2. '邪教' $ict$]] <font color="#ff0000">(建议阅读)</font>
+- [[EMD_answer/Answer_hw2#一. hw solution\|#一. hw solution]]
+- [[EMD_answer/Answer_hw2#1.\|#1.]]
+- [[EMD_answer/Answer_hw2#2. 洛伦兹标量\|#2. 洛伦兹标量]] <font color="#ff0000">(建议阅读其中的 tips)</font>
+- [[EMD_answer/Answer_hw2#3. 洛伦兹变换\|#3. 洛伦兹变换]]
+- [[EMD_answer/Answer_hw2#4. 张量变换\|#4. 张量变换]]
+- [[EMD_answer/Answer_hw2#5. 速度变换\|#5. 速度变换]]
+- [[EMD_answer/Answer_hw2#6. 麦克斯韦方程组的近似\|#6. 麦克斯韦方程组的近似]]
+- [[EMD_answer/Answer_hw2#7. QFT 的洛伦兹不变量\|#7. QFT 的洛伦兹不变量]]
+- [[EMD_answer/Answer_hw2#二. 补充阅读\|#二. 补充阅读]]
+- [[EMD_answer/Answer_hw2#1. $Lorentz Group$\|#1. $Lorentz Group$]]
+- [[EMD_answer/Answer_hw2#2. '邪教' $ict$\|#2. '邪教' $ict$]] <font color="#ff0000">(建议阅读)</font>
 
 # 一. HW solution
 ## 1. 

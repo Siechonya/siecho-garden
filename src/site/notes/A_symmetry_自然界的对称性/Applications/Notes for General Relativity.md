@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Notes for General Relativity/","noteIcon":"default","created":"2025-03-12T22:28:08.600+08:00","updated":"2025-12-12T18:27:54.122+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Notes for General Relativity/","noteIcon":"default","created":"2025-12-01T13:38:27.436+08:00","updated":"2025-12-12T18:27:54.122+08:00"}
 ---
 
 # 1 Convention  

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Precession Of The Equinoxes/","noteIcon":"default","created":"2025-10-23T14:23:39.940+08:00","updated":"2026-02-13T18:25:47.048+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Precession Of The Equinoxes/","noteIcon":"default","created":"2025-12-01T13:40:41.161+08:00","updated":"2026-02-13T18:25:47.048+08:00"}
 ---
 
 
@@ -139,7 +139,7 @@ $$
 =
 3 G \frac{C - A}{2C \omega}  \left( \frac{M_\odot}{d_\odot^3}\cos \varepsilon_\odot + \frac{M_☾}{d_☾^3}  \cos \varepsilon_☾\right)
 $$
-通过计算(见[[#用 ipython 计算结果的代码]])得到它的结果是 50.45''/a, 对应的周期是两万五千七百年, 与天文观测的结果接近.
+通过计算(见[[A_symmetry_自然界的对称性/杂记/Precession Of The Equinoxes#用 ipython 计算结果的代码\|#用 ipython 计算结果的代码]])得到它的结果是 50.45''/a, 对应的周期是两万五千七百年, 与天文观测的结果接近.
 
 # 3 参考  
 - https://en.m.wikipedia.org/wiki/Axial_precession

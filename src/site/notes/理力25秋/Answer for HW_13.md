@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_13/","noteIcon":"default","created":"2025-12-18T10:56:36.074+08:00","updated":"2025-12-25T20:24:40.836+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_13/","noteIcon":"default","created":"2025-12-24T14:59:50.377+08:00","updated":"2025-12-25T20:24:40.836+08:00"}
 ---
 
 # 1 三维各向同性谐振子  
@@ -95,7 +95,7 @@ J_\rho &= \frac{1}{2\pi} \oint p_\rho \mathrm{d} \rho \\[4pt]
 \frac{E_\rho}{2\omega} - \frac{|J_\theta|}{2}
 \end{align}
 $$
-最后一个积分其实可以与 $\rho_{min,max}$ 无关，详见[[#附录%]]。于是  
+最后一个积分其实可以与 $\rho_{min,max}$ 无关，详见[[理力25秋/Answer for HW_13#附录%\|#附录%]]。于是  
 $$
 H = E_\rho + E_z = \omega (2J_\rho + |J_\theta| + J_z)
 $$
