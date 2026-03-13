@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-10-23T14:37:00.814+08:00","updated":"2025-12-15T13:27:56.202+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-10-23T14:37:00.814+08:00","updated":"2026-03-05T13:46:57.215+08:00"}
 ---
 
 
@@ -154,7 +154,7 @@ Perrone, D., Alexandrava, O., Roberts, O. W., Lion, S., Lacombe, C., Walsh, A., 
 
 - the parallel and perpendicular magnetic energy  
 $$
-I_{\|, \perp}(\tau, t)=\frac{\left|\mathcal{W}_{\|, \perp}(\tau, t)\right|^{2}}{\left.\left.\langle | \mathcal{W}_{\|, \perp}(\tau, t)\right|^{2}\right\rangle_{t}}
+I_{\|, \perp}(\tau, t)=\frac{\left|\mathcal{W}_{\|, \perp}(\tau, t)\right|^{2}}{\left\langle \left| \mathcal{W}_{\|, \perp}(\tau, t)\right|^{2}\right\rangle_{t}}
 $$
 - the phase coupling between the i-th & j-th magnetic components
 $$
@@ -167,6 +167,7 @@ $$
 $$
 if $\mathcal{F}_{i}(\tau)>3$, the PDF is not a Gaussian distribution, showing fat tails.
 - since the automatic method for the selection of intermittent events recovers the most energetic peaks, it is possible that if there are few of them very close they refer to <font color="#ff0000">the same event</font>.
+### 2.1.1 间歇性事件的识别
 
 ```mermaid
 pie showData

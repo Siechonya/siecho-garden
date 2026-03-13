@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2025-12-15T23:09:37.727+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2026-03-13T11:03:48.853+08:00"}
 ---
 
 
@@ -79,7 +79,7 @@ Ruhunusiri, S., et al. (2017), Characterization of turbulence in the Mars plasma
 
 ### 3.1.1 背景介绍
 ### 3.1.2 方法  
-- refer to the lower fre quency range ($<f_{H^+}$) as <font color="#ff0000">the MHD range</font> and the higher frequency range ($>f_{H^+}$) as<font color="#ff0000"> the kinetic range</font>.
+- refer to the lower frequency range ($<f_{H^+}$) as <font color="#ff0000">the MHD range</font> and the higher frequency range ($>f_{H^+}$) as<font color="#ff0000"> the kinetic range</font>.
 
 - 使用小波变换得到幂律谱(power spectral densities (PSDs) for the magnetic field fluctuations)
 $$
@@ -133,4 +133,14 @@ $\theta=\langle B,X_{MSE} \rangle$, When $B_{XMSE} > 0$ or when $0^\circ < θ < 
 ## 3.2 补充  
 词汇 [[_Documents/words/Part.3 words#3 Characterization of turbulence in the Mars plasma environment with MAVEN observations\|Part.3 words]]
 ## 3.3 链接
-本地 [3.3 Ruhunusiri et al_2017_Characterization of turbulence in the Mars plasma environment with MAVEN](/img/user/_Documents/docs/3.3%20Ruhunusiri%20et%20al_2017_Characterization%20of%20turbulence%20in%20the%20Mars%20plasma%20environment%20with%20MAVEN.pdf)
+本地 [3.3 Ruhunusiri et al_2017_Characterization of turbulence in the Mars plasma environment with MAVEN](/img/user/_Documents/docs/3.3%20Ruhunusiri%20et%20al_2017_Characterization%20of%20turbulence%20in%20the%20Mars%20plasma%20environment%20with%20MAVEN.pdf)  
+
+# 4 The solar wind interaction with Mars  Locations and shapes of the bow shock  
+Vigne. D., et al. (2017), The solar wind interaction with Mars  Locations and shapes of the bow shock, _GEOPHYSICAL RESEARCH LETTERS_, 27(1), 49-52.
+
+# 5 Quantitative Prediction of High-Energy Electron Integral Flux at Geostationary Orbit Based on Deep Learning
+Wei, L., Zhong, Q., Lin, R., Wang, J., Liu, S., & Cao, Y. (2018). Quantitative prediction of high-energy electron integral flux at geostationary orbit based on deep learning. _Space Weather, 16_, 903–916. https://doi.org/10.1029/2018SW001829
+
+
+
+
