@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2026-03-13T11:03:48.853+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2026-03-20T15:15:18.992+08:00"}
 ---
 
 
@@ -142,5 +142,75 @@ Vigne. D., et al. (2017), The solar wind interaction with Mars  Locations and sh
 Wei, L., Zhong, Q., Lin, R., Wang, J., Liu, S., & Cao, Y. (2018). Quantitative prediction of high-energy electron integral flux at geostationary orbit based on deep learning. _Space Weather, 16_, 903–916. https://doi.org/10.1029/2018SW001829
 
 
+## 5.1 简介  
+### 5.1.1 recurrent neural network (RNN)  
+![zz_figure/Pasted image 20260317163734.png](/img/user/zz_figure/Pasted%20image%2020260317163734.png)
+- Unlike traditional feed-forward neural networks, RNNs add loops in themselves, allowing information to be retained from a previous time to the next by iterative function loops
+- The back-propagation trough time algorithm is used to adjust and renew the network parameters during the training process (residual calculation). 
+- equation:
+$$
+h_t = \sigma(W_{xh}x_t + W_{hh}h_{t-1} + b)
+$$
+-  a gradient vanishing and explosion problem exists if the input sequence is too long
+### 5.1.2 Long Short-Term Memory (LSTM)
+
+| LSTM repeating module architecture                  | Meaning                                                                                                                                                                                                                                                                                                                                        | Formulas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![[zz_figure/Pasted image 20260318163135.png\|401]] | $x_t$: Input at moment $t$  <br>$h_t$: Output<br>$C_t$: Cell state<br>$\widetilde{C}_t$: Candidate values  <br>$f_t$: Forget gate function  <br>$i_t$: Input gate function  <br>$o_t$: Output gate function  <br>$\sigma,\tanh$: Activation function  <br>Blue circles: Neural network layers<br>$\times$: Element-wise Multiplication ' $*$ ' | $$\begin{array}c\begin{array}c f_t = \sigma(W_f \cdot [h_{t-1},x_t] + b_f)\\      i_t = \sigma(W_i\cdot [h_{t-1},x_t] + b_i) \\      \widetilde{C}_t = \tanh(W_c\cdot [h_{t-1},x_t] + b_C) \\      C_t = f_t * C_{t-1} + i_t * \widetilde{C}_t \\      o_t = \sigma(W_o \cdot [h_t-1,x_t] + b_o) \\      h_t = o_t * \tanh(C_t)       \end{array}       \\[8pt]     \begin{cases}      \sigma(x) = \frac{1}{1+e^{-x}} \\[3pt]     \tanh(x) = \frac{{1-e^{-2x}}}{1+e^{-2x}}      \end{cases}\end{array}$$ |
+
+### 5.1.3 Calibration  
+
+
+### 5.1.4 Model Result  
+#### Spearman’s rank correlation analysis
+Unlike the more common **Pearson correlation**, which looks for linear relationships (straight lines), Spearman looks for **monotonic relationships**. This means it checks if, as one variable increases, the other tends to increase (corr>0) or decrease(corr<0), even if that change isn't a perfectly straight line.  
+
+For a dataset without many tied ranks, the formula is:
+$$
+r_s = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}  = 1- \frac{2\sum d_i^2}{\sum i^2} \in [-1,1]
+$$  
+-  $d_i$ is the difference between the ranks of each observation.
+-  $n$ is the number of observations.
+
+How to Calculate it in Python:
+
+```python
+# Offset Time: Shifting 'sales' back by 2 periods
+df['sales_lagged'] = df['sales'].shift(-2)
+
+# Using scipy
+from scipy import stats
+x = [10, 20, 30, 40, 50]
+y = [2, 2.4, 10, 8, 25]
+coef, p_value = stats.spearmanr(x, y)
+print(f"Spearman Correlation Coefficient: {coef:.3f}")
+print(f"P-value: {p_value:.3f}")
+
+# Using pandas for DataFrame
+import pandas as pd
+df = pd.DataFrame({'study_hours': [1, 5, 2, 8, 4], 'test_scores': [50, 88, 60, 95, 78]})
+correlation_matrix = df.corr(method='spearman')
+print(correlation_matrix)
+```
+
+- result:
+![[zz_figure/Pasted image 20260320084822.png#pic_center|696]]
+According to the correlation, the ﬂux itself, solar wind velocity, Dst, and Kp indices are considered to be better input factors for modeling. The remaining parameters, with the exception of IMF, are also used as inputs for modeling.  
+
+The feature of offset time is an important factor of setting the time step in modeling to determine the number of consecutive days to be used as inputs to the model.  
+
+### 5.1.5 Daily-Based Model  
+
+
+
+
+### 5.1.6 Hourly-Based Model
+
+
+
+## 5.2 补充  
+[[_Documents/words/Part.3 words#4 Quantitative Prediction of High-Energy Electron Integral Flux at Geostationary Orbit Based on Deep Learning\|Part.3 words]]
+## 5.3 链接  
+本地 [3.5 Wei et al. - 2018 - Quantitative Prediction of High-Energy Electron Integral Flux at Geostationary Orbit Based on Deep Learning](/img/user/_Documents/docs/3.5%20Wei%20et%20al.%20-%202018%20-%20Quantitative%20Prediction%20of%20High-Energy%20Electron%20Integral%20Flux%20at%20Geostationary%20Orbit%20Based%20on%20Deep%20Learning.pdf) 
 
 
