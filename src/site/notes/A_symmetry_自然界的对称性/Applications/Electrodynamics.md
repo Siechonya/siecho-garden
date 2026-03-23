@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Electrodynamics/","noteIcon":"default","created":"2025-03-12T22:33:45.968+08:00","updated":"2025-10-17T15:06:01.367+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Electrodynamics/","noteIcon":"default","created":"2025-10-23T14:36:44.735+08:00","updated":"2026-03-20T21:41:48.657+08:00"}
 ---
 
 
-# 1. $Proca$ $field$ 普罗卡场
+# 1 $Proca$ $field$ 普罗卡场
 ## 1.1 $From\ Proca\ Equation \ to \ Maxwell's\ Equations$ 从普罗卡方程到麦克斯韦方程组
 可跳转 [[A_symmetry_自然界的对称性/Applications/Quantum Field Theory - Field#3. Proca field 普罗卡场\|Quantum Field Theory#3. Proca field]]. 本文采取的度规是(+---).
 
@@ -97,7 +97,7 @@ $$
 F_{\mu\nu} \to \partial_\mu (A_\nu + \partial_\nu \lambda) - \partial_\nu (A_\mu + \partial_\mu \lambda) = \partial_\mu A_\nu - \partial_\nu A_\mu = F_{\mu\nu}.
 $$
 保持不变, 因此拉格朗日量 $\mathcal{L}_{\text{em}}$ 也不变.
-# 2. $T^{\mu\nu}\ of\ Vacuum\ Free\ EMF$ 真空自由场的能动张量
+# 2 $T^{\mu\nu}\ of\ Vacuum\ Free\ EMF$ 真空自由场的能动张量
 电磁张量可以写作:
 $$
 F_{\mu\nu}= \partial_\mu A_\nu-\partial_\nu A_\mu
@@ -118,7 +118,7 @@ $$
 T^{\mu\nu} = -\frac{1}{\mu_0}F^{\mu\lambda}\partial^\nu A_\lambda + \frac{1}{4\mu_0}g^{\mu\nu}F^{\alpha\beta}F_{\alpha\beta}
 $$
 遗憾的是, 这个形式并不对称, 因而不能让诺特流满足 $\partial_\nu (J^\nu)^{\mu\sigma} = 0$ (参见 [[A_symmetry_自然界的对称性/Tools/Noether's Theorem and Symmetry#诺特流\|Noether's Theorem and Symmetry]]), 需要对其加以修正.
-# 3. $Symmetric\ correction$ 对称性修正
+# 3 $Symmetric\ correction$ 对称性修正
 注意到 $\partial_\mu T^{\mu\nu}=0$, 而由于 $F^{\mu\lambda}$ 是反对称张量, 使得 $\partial_\lambda (F^{\mu\lambda} A^\nu)$ 恰好也满足 $\partial_\mu\partial_\lambda (F^{\mu\lambda} A^\nu)=0$.
 
 于是可做修正 $T^{\mu\nu} \to T^{\mu\nu} + \frac{1}{\mu_0} \partial_\lambda (F^{\mu\lambda} A^\nu)$, 使得旧的 $T^{\mu\nu} = -\frac{1}{\mu_0}F^{\mu\lambda}\partial^\nu A_\lambda + \frac{1}{4\mu_0}g^{\mu\nu}F^{\alpha\beta}F_{\alpha\beta}$ 的第一项对称(进而 $T^{\mu\nu}$ 对称), 得到新的能动张量可以改写为:
@@ -140,7 +140,7 @@ T^{ij} = \frac{1}{2} \left( \epsilon_0 E^2 - \frac{B^2}{\mu_0} \right) \delta^{i
 \right.
 $$
 其中 $\vec S$ 是能流密度(波印廷矢量), $\vec P$ 是场的动量密度.
-# 4. $Continuity\ equations$ 连续性方程
+# 4 $Continuity\ equations$ 连续性方程
 在非自由电磁场中, 由于场与粒子相互作用, 使得场的四维散度 $\partial_\mu T^{\mu\nu} \neq 0$, 利用有源 $maxwell$ 方程组
 $$
 \begin{aligned}

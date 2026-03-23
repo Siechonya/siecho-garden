@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW1 Answer/","noteIcon":"default","created":"2026-03-06T20:22:11.221+08:00","updated":"2026-03-11T09:59:23.443+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW1 Answer/","noteIcon":"default","created":"2026-03-06T20:38:09.216+08:00","updated":"2026-03-21T11:28:56.548+08:00"}
 ---
 
-
+[[电动26春/EMD_answer_phj/HW2 Answer\|HW2 Answer]]
 # 1.1~1.7 %
 
 ![zz_figure/Pasted image 20260308164658.png](/img/user/zz_figure/Pasted%20image%2020260308164658.png)  

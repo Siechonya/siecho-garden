@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Noether's Theorem and Symmetry/","noteIcon":"default","created":"2025-01-28T14:11:05.348+08:00","updated":"2025-10-25T23:16:57.364+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Noether's Theorem and Symmetry/","noteIcon":"default","created":"2025-10-23T14:36:45.381+08:00","updated":"2025-10-25T23:16:57.364+08:00"}
 ---
 
 

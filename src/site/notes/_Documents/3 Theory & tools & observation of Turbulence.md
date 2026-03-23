@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2026-03-20T15:15:18.992+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2026-03-22T22:53:52.857+08:00"}
 ---
 
-
+  
 # 1 Turbulence: The legacy of A.N. Kolmogorov
 Frisch, U. (1995). _Turbulence: The legacy of A.N. Kolmogorov_. Cambridge University Press. [https://doi.org/10.1017/CBO9780511623343](https://doi.org/10.1017/CBO9780511623343)  
 
@@ -159,7 +159,9 @@ $$
 | ![[zz_figure/Pasted image 20260318163135.png\|401]] | $x_t$: Input at moment $t$  <br>$h_t$: Output<br>$C_t$: Cell state<br>$\widetilde{C}_t$: Candidate values  <br>$f_t$: Forget gate function  <br>$i_t$: Input gate function  <br>$o_t$: Output gate function  <br>$\sigma,\tanh$: Activation function  <br>Blue circles: Neural network layers<br>$\times$: Element-wise Multiplication ' $*$ ' | $$\begin{array}c\begin{array}c f_t = \sigma(W_f \cdot [h_{t-1},x_t] + b_f)\\      i_t = \sigma(W_i\cdot [h_{t-1},x_t] + b_i) \\      \widetilde{C}_t = \tanh(W_c\cdot [h_{t-1},x_t] + b_C) \\      C_t = f_t * C_{t-1} + i_t * \widetilde{C}_t \\      o_t = \sigma(W_o \cdot [h_t-1,x_t] + b_o) \\      h_t = o_t * \tanh(C_t)       \end{array}       \\[8pt]     \begin{cases}      \sigma(x) = \frac{1}{1+e^{-x}} \\[3pt]     \tanh(x) = \frac{{1-e^{-2x}}}{1+e^{-2x}}      \end{cases}\end{array}$$ |
 
 ### 5.1.3 Calibration  
+The logarithm of the daily electron integral flux from the three pairs of GOES satellites during the overlapped period has strong. linear correlations. Based on this, <font color="#ff0000">the values from different satellites are calibrated using the data of GOES-11 by using the method of linear fitting</font> that covers the time period from January 1999 to December 2016.   
 
+In addition, piecewise linear fitting is used to calibrate the data from GOES-13 to GOES-11. 
 
 ### 5.1.4 Model Result  
 #### Spearman’s rank correlation analysis

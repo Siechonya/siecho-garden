@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/words/qld words- Analytical chorus wave model derived from Van Allen Probe  observations/","noteIcon":"default","created":"2025-07-20T20:31:24.097+08:00","updated":"2025-09-15T18:44:36.818+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/words/qld words- Analytical chorus wave model derived from Van Allen Probe  observations/","noteIcon":"default","created":"2025-10-23T14:27:11.422+08:00","updated":"2025-09-15T18:44:36.818+08:00"}
 ---
 
 ### 0.1.1 Wang et al. - 2019 - Analytical Chorus Wave Model Derived from Van Allen Probe Observation  
