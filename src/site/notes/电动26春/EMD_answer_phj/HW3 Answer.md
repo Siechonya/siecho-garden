@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW3 Answer/","noteIcon":"default","created":"2026-03-20T16:22:04.713+08:00","updated":"2026-03-25T11:15:53.246+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW3 Answer/","noteIcon":"default","created":"2026-03-20T16:22:04.713+08:00","updated":"2026-03-25T11:19:14.623+08:00"}
 ---
 
 
@@ -12,6 +12,7 @@
 ![zz_figure/Pasted image 20260320160912.png](/img/user/zz_figure/Pasted%20image%2020260320160912.png)  
 
 > [!info] Hidden Momentum
+
 我们考察构成稳恒电流 $\boldsymbol{j}$ 的微观电荷。设每个载流子电荷为 $q$，静止质量为 $m$，载流子数密度 $n$， 运动速度为 $\boldsymbol{v}$。系统的总机械动量为：
 $$\boldsymbol{P}_{mech} = \sum \gamma n m \boldsymbol{v}$$
 对于在静电场（势为 $\varphi$）中作稳恒流动的电荷，假设没有耗散（或由某种机制维持稳态），单粒子 i 的总能量 $E_i$ 守恒：  
@@ -27,7 +28,7 @@ $$- \frac{1}{c^2} \sum nq\varphi \boldsymbol{v} = - \frac{1}{c^2} \iiint \varphi
 $$\begin{align} \nabla \cdot  (\boldsymbol{j} \boldsymbol{x} E)  &=  \boldsymbol{j} \cdot \nabla (\boldsymbol{x}E) \\[4pt]    &= \boldsymbol{j}E + \underset{=0,\ \because\ \text{沿着电流 j 流线，电荷的能量 E 不变}}{\underbrace{\boldsymbol{x} \boldsymbol{j}\cdot \nabla E}}\end{align}$$
 于是系统物质部分的机械动量：
 $$\boldsymbol{P}_{mech} = - \frac{1}{c^2} \iiint \varphi \boldsymbol{j} \, dV$$
-> 这就是著名的隐藏动量。它是一个纯粹的相对论效应：在电势较高的地方，电荷的势能高，动能（及 $\gamma$ 因子）小，动量小；在电势较低的地方反之。这种相对论质量的非对称分布导致了宏观上稳恒的电流环路具有了非零的机械动量。
+这就是著名的隐藏动量。它是一个纯粹的相对论效应：在电势较高的地方，电荷的势能高，动能（及 $\gamma$ 因子）小，动量小；在电势较低的地方反之。这种相对论质量的非对称分布导致了宏观上稳恒的电流环路具有了非零的机械动量。
 
 
 ![zz_figure/Pasted image 20260320160939.png](/img/user/zz_figure/Pasted%20image%2020260320160939.png)  
