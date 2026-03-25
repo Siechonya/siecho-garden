@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW3 Answer/","noteIcon":"default","created":"2026-03-20T16:22:04.713+08:00","updated":"2026-03-25T11:19:14.623+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW3 Answer/","noteIcon":"default","created":"2026-03-20T16:22:04.713+08:00","updated":"2026-03-25T12:10:29.846+08:00"}
 ---
 
 
@@ -11,7 +11,7 @@
 ![zz_figure/Pasted image 20260320160901.png](/img/user/zz_figure/Pasted%20image%2020260320160901.png)  
 ![zz_figure/Pasted image 20260320160912.png](/img/user/zz_figure/Pasted%20image%2020260320160912.png)  
 
-> [!info] Hidden Momentum
+#### 关于题目 1.15 的Hidden Momentum
 
 我们考察构成稳恒电流 $\boldsymbol{j}$ 的微观电荷。设每个载流子电荷为 $q$，静止质量为 $m$，载流子数密度 $n$， 运动速度为 $\boldsymbol{v}$。系统的总机械动量为：
 $$\boldsymbol{P}_{mech} = \sum \gamma n m \boldsymbol{v}$$
