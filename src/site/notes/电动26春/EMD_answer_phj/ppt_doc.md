@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/ppt_doc/","noteIcon":"default","created":"2026-03-25T16:42:46.509+08:00","updated":"2026-03-25T17:21:22.387+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/ppt_doc/","noteIcon":"default","created":"2026-03-25T16:42:46.509+08:00","updated":"2026-03-25T17:36:38.739+08:00"}
 ---
 
 # 1 
@@ -8,7 +8,7 @@
 
 ## 1.2 
 
-<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH1%E5%9C%BA%E8%AE%BA%E5%92%8C%E5%BC%A0%E9%87%8F%E5%88%86%E6%9E%90/ED01B.pdf" width="100%" height="900px" title="ED01B" style="border:1px solid #ccc;"></iframe>  
+<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH1%E5%9C%BA%E8%AE%BA%E5%92%8C%E5%BC%A0%E9%87%8F%E5%88%86%E6%9E%90/ED01B.pdf" width="100%" height="900px" title="ED01B" style="border:1px solid #ccc;"></iframe>
 ## 1.3 
 <iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH1%E5%9C%BA%E8%AE%BA%E5%92%8C%E5%BC%A0%E9%87%8F%E5%88%86%E6%9E%90/ED01C.pdf" width="100%" height="900px" title="ED01C" style="border:1px solid #ccc;"></iframe>
 
@@ -26,11 +26,13 @@
 
 # 3 
 ## 3.1 
+
 <iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH3%E7%8B%AD%E7%9B%B8/ED03A.pdf" width="100%" height="900px" title="ED03A" style="border:1px solid #ccc;"></iframe>  
+
 
 ## 3.2 
 
-<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH3%E7%8B%AD%E7%9B%B8/ED03B.pdf" width="100%" height="900px" title="ED03B" style="border:1px solid #ccc;"></iframe>  
+<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH3%E7%8B%AD%E7%9B%B8/ED03B.pdf" width="100%" height="900px" title="ED03B" style="border:1px solid #ccc;"></iframe>
 
 ## 3.3 
 
@@ -38,7 +40,7 @@
 
 # 4 
 ## 4.1 
-<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH4%E7%94%B5%E7%A3%81%E8%A7%84%E5%BE%8B%E7%9A%84%E5%8D%8F%E5%8F%98%E6%80%A7/ED04A(1).pdf" width="100%" height="900px" title="ED04A(1)" style="border:1px solid #ccc;"></iframe>  
+<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH4%E7%94%B5%E7%A3%81%E8%A7%84%E5%BE%8B%E7%9A%84%E5%8D%8F%E5%8F%98%E6%80%A7/ED04A(1).pdf" width="100%" height="900px" title="ED04A(1)" style="border:1px solid #ccc;"></iframe>
 
 ## 4.2 
 
