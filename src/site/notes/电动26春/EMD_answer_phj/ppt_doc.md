@@ -1,16 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/ppt_doc/","noteIcon":"default","created":"2026-03-25T16:42:46.509+08:00","updated":"2026-03-25T16:46:37.163+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/ppt_doc/","noteIcon":"default","created":"2026-03-25T16:42:46.509+08:00","updated":"2026-03-25T16:53:56.808+08:00"}
 ---
 
 
 
 
 
-| CH 1 场论和张量分析   | ![[电动26春/EMD_answer_phj/ppt/CH1场论和张量分析/ED01A.pdf\|ED01A]]<br>![[电动26春/EMD_answer_phj/ppt/CH1场论和张量分析/ED01B.pdf\|ED01B]]  <br>![[电动26春/EMD_answer_phj/ppt/CH1场论和张量分析/ED01C.pdf\|ED01C]]                                                                                                                                        |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CH 2 电磁现象的基本规律 | ![[电动26春/EMD_answer_phj/ppt/CH2电磁现象的基本规律/ED02A.pdf\|ED02A]]  <br>![[电动26春/EMD_answer_phj/ppt/CH2电磁现象的基本规律/ED02B.pdf\|ED02B]]  <br>![[电动26春/EMD_answer_phj/ppt/CH2电磁现象的基本规律/ED02C.pdf\|ED02C]]  <br>![[电动26春/EMD_answer_phj/ppt/CH2电磁现象的基本规律/ED02D.pdf\|ED02D]]  <br>![[电动26春/EMD_answer_phj/ppt/CH2电磁现象的基本规律/更新内容.pdf\|更新内容]] |
-
-
-
-
-
+| CH 1 场论和张量分析   | ![[电动26春/EMD_answer_phj/ppt/CH1场论和张量分析/ED01A.pdf\|ED01A]]<br>[ED01B](/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH1%E5%9C%BA%E8%AE%BA%E5%92%8C%E5%BC%A0%E9%87%8F%E5%88%86%E6%9E%90/ED01B.pdf)  <br>[ED01C](/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH1%E5%9C%BA%E8%AE%BA%E5%92%8C%E5%BC%A0%E9%87%8F%E5%88%86%E6%9E%90/ED01C.pdf)                                                                                                                                      |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| CH 2 电磁现象的基本规律 | [ED02A](/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH2%E7%94%B5%E7%A3%81%E7%8E%B0%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%BE%8B/ED02A.pdf)  <br>[ED02B](/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH2%E7%94%B5%E7%A3%81%E7%8E%B0%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%BE%8B/ED02B.pdf)  <br>[ED02C](/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH2%E7%94%B5%E7%A3%81%E7%8E%B0%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%BE%8B/ED02C.pdf)  <br>[ED02D](/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH2%E7%94%B5%E7%A3%81%E7%8E%B0%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%BE%8B/ED02D.pdf)  <br>[更新内容](/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/ppt/CH2%E7%94%B5%E7%A3%81%E7%8E%B0%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%BE%8B/%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9.pdf) |
