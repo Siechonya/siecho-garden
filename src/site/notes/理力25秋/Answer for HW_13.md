@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_13/","noteIcon":"default","created":"2025-12-20T11:45:35.646+08:00","updated":"2025-12-25T20:24:40.836+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW_13/","noteIcon":"default","created":"2025-12-24T14:59:50.377+08:00","updated":"2025-12-25T20:24:40.836+08:00"}
 ---
 
 # 1 三维各向同性谐振子  

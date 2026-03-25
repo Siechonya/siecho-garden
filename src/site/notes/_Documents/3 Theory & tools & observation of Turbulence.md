@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2026-03-22T22:53:52.857+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-12-01T13:43:23.606+08:00","updated":"2026-03-23T16:43:36.962+08:00"}
 ---
 
   
@@ -157,6 +157,23 @@ $$
 | LSTM repeating module architecture                  | Meaning                                                                                                                                                                                                                                                                                                                                        | Formulas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![[zz_figure/Pasted image 20260318163135.png\|401]] | $x_t$: Input at moment $t$  <br>$h_t$: Output<br>$C_t$: Cell state<br>$\widetilde{C}_t$: Candidate values  <br>$f_t$: Forget gate function  <br>$i_t$: Input gate function  <br>$o_t$: Output gate function  <br>$\sigma,\tanh$: Activation function  <br>Blue circles: Neural network layers<br>$\times$: Element-wise Multiplication ' $*$ ' | $$\begin{array}c\begin{array}c f_t = \sigma(W_f \cdot [h_{t-1},x_t] + b_f)\\      i_t = \sigma(W_i\cdot [h_{t-1},x_t] + b_i) \\      \widetilde{C}_t = \tanh(W_c\cdot [h_{t-1},x_t] + b_C) \\      C_t = f_t * C_{t-1} + i_t * \widetilde{C}_t \\      o_t = \sigma(W_o \cdot [h_t-1,x_t] + b_o) \\      h_t = o_t * \tanh(C_t)       \end{array}       \\[8pt]     \begin{cases}      \sigma(x) = \frac{1}{1+e^{-x}} \\[3pt]     \tanh(x) = \frac{{1-e^{-2x}}}{1+e^{-2x}}      \end{cases}\end{array}$$ |
+> [!info] LSTM layer principle ex.
+> 1. Data Structure and Batch Processing
+> For time series `[1,2,3,4,5]`, splitting to ` X=[[1,2],[2,3],[3,4],[4,5]]` and ` y=[3,4,5,6]`:
+> 
+>  	- `X` contains 4 samples (`batch_size=4`), each sample is a sequence of length 2(`time_step=2`), and `input_size=1` for 1D data series
+> 	- The model processes these samples in batches, performing forward propagation independently for each sample
+> 	- Taking the first sample `[1, 2]` as an example, the LSTM processing steps:
+> 		1. Time step 1: Process input `1`, update hidden state `h1`
+> 		2. Time step 2: Process input `2`, combine with `h1` to update hidden state `h2`
+> 		3. Extract features: Take the hidden state from the last time step `h2`
+>  		4. Prediction: Map `h2` to a predicted value through a linear layer, compare with target value `3`
+> 
+> 2. Parallelism in Batch Processing
+> 	- The model processes multiple samples simultaneously (depending on `batch_size`)
+> 	- For all 4 samples in `X`, the LSTM executes the above processing steps in parallel
+> 	- The processing of each sample is independent, and ultimately each sample yields a predicted value
+
 
 ### 5.1.3 Calibration  
 The logarithm of the daily electron integral flux from the three pairs of GOES satellites during the overlapped period has strong. linear correlations. Based on this, <font color="#ff0000">the values from different satellites are calibrated using the data of GOES-11 by using the method of linear fitting</font> that covers the time period from January 1999 to December 2016.   

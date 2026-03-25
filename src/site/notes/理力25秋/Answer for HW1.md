@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"default","created":"2025-10-23T14:27:31.162+08:00","updated":"2025-12-29T13:18:00.106+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW1/","noteIcon":"default","created":"2025-12-01T13:37:27.536+08:00","updated":"2025-12-29T13:18:00.106+08:00"}
 ---
 
 # 1 球坐标  
