@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2025-12-19T11:42:25.870+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2026-03-28T22:30:18.474+08:00"}
 ---
 
 
@@ -141,6 +141,7 @@ P_3^0(x) &= \frac{1}{2}(5 x^3 - 3 x), \quad P_3^1(x) = -\frac{3}{2}(5 x^2 - 1)\s
 P_3^2(x) = 15 x(1 - x^2), \quad P_3^3(x) = -15(1 - x^2)^{3/2}.
 \end{aligned}
 $$
+
 ## 3.2 $Y_1^m$ 和偶极场
 在静磁学中, 如果场点不存在电流($\nabla \times \vec B = 0$), 那么磁感应强度 $\vec B$ 可以表示成磁标势 $\Phi_m$ 的梯度 $\vec B = -\nabla \Phi_m$, 并且由于 $\nabla \cdot \vec B=0$, 所以磁标势自动满足拉普拉斯方程 $\nabla^2 \Phi_m = 0$. 在其通解形式中, 前几项球谐函数有显著的物理意义.
 
@@ -230,7 +231,40 @@ B_\varphi = 0
 \end{array}
 $$
 关于球谐系数 $g_l^m$ 的具体拟合值, 可在第 $14$ 版[国际参考地磁场(IGRF)的官方文件](https://www.ngdc.noaa.gov/IAGA/vmod/coeffs/igrf14coeffs.txt) 中查阅. 对于 $m\ne 0$ 的球谐函数, 同样选取他们的实数线性组合, 可以得到他们表示的四极场只是 $Y_2^0(\theta)$ 的旋转, 但是形式更加复杂.
-# 4 球谐系数
+# 4 球谐系数  
+
+## 4.1 函数 $\frac{1}{|\vec{r}-\vec{a}|}$ 的勒让德系数  
+处理电磁场的问题中常常遇到函数 $f(\boldsymbol{r}) = \frac{1}{|\boldsymbol{r}-\boldsymbol{a}|}$，出于简洁，首先假设 $\boldsymbol{r}=(r,\theta,\varphi)$，$\boldsymbol{a}=(a,0,0)$，那么可见函数 $f(\boldsymbol{r})$ 是轴对称的（即与 $\varphi$ 无关），可展开为：  
+$$
+\frac{1}{|\boldsymbol{r}-\boldsymbol{a}|} = \sum_{l=0}^\infty A_l(r,a) P_l(\cos\theta)
+$$
+当 $\theta=0$：  
+$$
+\frac{1}{|\boldsymbol{r}-\boldsymbol{a}|} = \frac{1}{|r-a|} = 
+\left\{
+\begin{align}
+\frac{1}{r} \frac{1}{1-(a/r)} = \frac{1}{r} \sum_{l=0}^{\infty} \left(\frac{a}{r}\right)^l = \sum_{l=0}^{\infty} \frac{a^l}{r^{l+1}} , \quad r>a
+\\[4pt]
+\frac{1}{a} \frac{1}{1-(r/a)} = \frac{1}{a} \sum_{l=0}^{\infty} \left(\frac{r}{a}\right)^l = \sum_{l=0}^{\infty} \frac{r^l}{a^{l+1}},\quad r<a
+\end{align}\right.
+$$
+简记为  
+$$
+\frac{1}{|r-a|} = \sum_{l=0}^\infty \frac{r_<^l}{r^{l+1}_>}, \quad r_< = \min(r,a), \ r_> = \max(r,a)
+$$
+由 $P_l(\cos0) = P_l(1) =1$ 和对比系数：
+$$
+\frac{1}{|\boldsymbol{r}-\boldsymbol{a}|} = \sum_{l=0}^\infty A_l(r,a) P_l(\cos0) = \sum_{l=0}^\infty \frac{r_<^l}{r^{l+1}_>}
+$$
+可知 $A_l(r,a) P_l(\cos0) =  \frac{r_<^l}{r^{l+1}_>}$：  
+$$
+\frac{1}{|\boldsymbol{r}-\boldsymbol{a}|} = \sum_{l=0}^\infty  \frac{r_<^l}{r^{l+1}_>} P_l(\cos\theta)
+$$
+现在旋转得到 $\boldsymbol{a} = (a,\theta',\varphi')$，由于 $|\boldsymbol{r}-\boldsymbol{a}|$ 只取决于两个矢量之间的相对夹角 $\gamma=\arccos\frac{\boldsymbol{r}\cdot\boldsymbol{a}}{|\boldsymbol{r}\cdot\boldsymbol{a}|}$，所以对于一般情形，有  
+$$
+\frac{1}{|\boldsymbol{r}-\boldsymbol{a}|} = \sum_{l=0}^\infty  \frac{r_<^l}{r^{l+1}_>} P_l(\cos\gamma), \quad \gamma=\arccos\frac{\boldsymbol{r}\cdot\boldsymbol{a}}{|\boldsymbol{r}\cdot\boldsymbol{a}|},\  \quad r_< = \min(r,a), \ r_> = \max(r,a)
+$$
+## 4.2 已知球对称边界条件
 现在需要确定系数 $B_{lm}$, 假设 $A=0$, 通解写成:
 $$
 u(r, \theta, \varphi)=\sum_{l=0}^{\infty} \sum_{m=-l}^{l} \frac{B_{l m}}{r^{l+1}} Y_{l}^{m}(\theta, \varphi)
@@ -241,16 +275,33 @@ $$
 $$
 将通解两边乘以 $Y_{l^{\prime}}^{m^{\prime} *}(\theta, \varphi)$, 然后积分:
 $$
-\int_{0}^{2 \pi} \int_{0}^{\pi} u(r, \theta, \varphi) Y_{l^{\prime}}^{m^{\prime} *}(\theta, \varphi) \sin \theta \mathrm{d} \theta \mathrm{d} \varphi =
-\sum_{l=0}^{\infty} \sum_{m=-l}^{l}  \frac{B_{l m}}{r^{l+1}} \int_{0}^{2 \pi} \int_{0}^{\pi} Y_{l}^{m}(\theta, \varphi) Y_{l^{\prime}}^{m^{\prime} *}(\theta, \varphi) \sin \theta \mathrm{d} \theta \mathrm{d} \varphi
+\int_{0}^{2 \pi} \int_{0}^{\pi} u(a, \theta, \varphi) Y_{l^{\prime}}^{m^{\prime} *}(\theta, \varphi) \sin \theta \mathrm{d} \theta \mathrm{d} \varphi 
+=
+\sum_{l=0}^{\infty} \sum_{m=-l}^{l}  \frac{B_{l m}}{a^{l+1}} \int_{0}^{2 \pi} \int_{0}^{\pi} Y_{l}^{m}(\theta, \varphi) Y_{l^{\prime}}^{m^{\prime} *}(\theta, \varphi) \sin \theta \mathrm{d} \theta \mathrm{d} \varphi
 $$
-
-利用正交归一关系, 右边只剩下 $l=l^{\prime}$ 且 $m=m^{\prime}$ 时的项：
+得到上式需要假定边界条件为 $r=a$ 时 $u(r,\theta,\varphi) =u(a,\theta,\varphi)$ 已知。利用正交归一关系, 右边只剩下 $l=l^{\prime}$ 且 $m=m^{\prime}$ 时的项：
 $$
-\int_{0}^{2 \pi} \int_{0}^{\pi} u(r, \theta, \varphi) Y_{l^{\prime}}^{m^{\prime} *}(\theta, \varphi) \sin \theta \mathrm{d} \theta \mathrm{d} \varphi = \frac{B_{l^{\prime} m^{\prime}}}{r^{l^{\prime}+1}}
+\int_{0}^{2 \pi} \int_{0}^{\pi} u(a, \theta, \varphi) Y_{l^{\prime}}^{m^{\prime} *}(\theta, \varphi) \sin \theta \mathrm{d} \theta \mathrm{d} \varphi = \frac{B_{l^{\prime} m^{\prime}}}{a^{l^{\prime}+1}}
 $$
 从而可解出:
 $$
-B_{l^{\prime} m^{\prime}}= \int_{0}^{2 \pi} \int_{0}^{\pi} u(r, \theta, \varphi) Y_{l^{\prime}}^{m^{\prime} *}(\theta, \varphi) \sin \theta \mathrm{d} \theta \mathrm{d} \varphi 
+B_{l^{\prime} m^{\prime}}= a^{l'+1} \int_{0}^{2 \pi} \int_{0}^{\pi} u(a, \theta, \varphi) Y_{l^{\prime}}^{m^{\prime} *}(\theta, \varphi) \sin \theta \mathrm{d} \theta \mathrm{d} \varphi 
 $$
+同理，假设 $B=0$，可以得到：  
+$$
+A_{l^{\prime} m^{\prime}}= a^{-l'} \int_{0}^{2 \pi} \int_{0}^{\pi} u(a, \theta, \varphi) Y_{l^{\prime}}^{m^{\prime} *}(\theta, \varphi) \sin \theta \mathrm{d} \theta \mathrm{d} \varphi 
+$$
+### 4.2.1 反解偶极场  
+举个例子，假设已知边界电势 $\varphi(a, \theta, \varphi) = V_0 \cos \theta$，求解这是一个什么场。 由于分布与 $\varphi$ 无关，只有 $m=0$ 的项贡献。根据球谐函数的定义：
+$$Y_0^0 = \frac{1}{\sqrt{4\pi}}, \quad Y_1^0 = \sqrt{\frac{3}{4\pi}} \cos \theta$$
+由此可见，我们的边界分布可以写为：
+$$\varphi(a, \theta) = V_0 \sqrt{\frac{4\pi}{3}} Y_1^0(\theta, \varphi)$$
+所以球谐系数根据前面提到的公式计算：
+$$B_{lm} = a^{l+1} \cdot V_0 \sqrt{\frac{4\pi}{3}} \int_{\Omega} Y_1^0 Y_l^{m *} \mathrm{d}\Omega$$
+得到 $B_{10} = V_0 a^2 \sqrt{\frac{4\pi}{3}}$，即 $\varphi(r, \theta) = V_0 \frac{a^2}{r^2} \cos \theta \ \  (r \ge a)$，这恰好是电偶极矩为 $p = 4\pi \epsilon_0 V_0 a^2$ 的点电偶极子的电势（或者前面提过的磁偶极子）。  
+
+
+
+
+
 

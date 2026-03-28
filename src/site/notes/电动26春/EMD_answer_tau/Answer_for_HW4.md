@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_tau/Answer_for_HW4/","noteIcon":"default","created":"2025-04-19T20:32:55.625+08:00","updated":"2025-05-08T13:30:37.597+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_tau/Answer_for_HW4/","noteIcon":"default","created":"2025-04-19T20:32:55.625+08:00","updated":"2026-03-28T21:02:26.372+08:00"}
 ---
 
 
@@ -15,7 +15,7 @@ debugInConsole: false # Print debug info in Obsidian console
 ```
 
 
-# 1. 带电半球受力
+# 1 带电半球受力
 带电球电场:
 $$
 \vec E(r) = 
@@ -46,7 +46,7 @@ $$
 \frac{3Q^2}{64 \pi \epsilon_0 R^2} \vec e_z
 \end{aligned}
 $$
-# 2. 磁矢势的洛伦茨规范
+# 2 磁矢势的洛伦茨规范
 已知 $\vec A = \frac{\mu_0}{4\pi}\int \frac{{\vec j(\vec x')}}{|\vec r|}dV'$, 其中 $\vec r = \vec x - \vec x'$. 记 $\nabla' = \frac{ \partial  }{ \partial \vec x' }$, 有:
 $$
 \begin{aligned} 
@@ -70,8 +70,8 @@ $$
 $$
 \Box \cdot  \vec A  = 0
 $$
-# 3. 静电场多极展开
-## (1) 零阶和一阶场
+# 3 静电场多极展开
+## 3.1 (1) 零阶和一阶场
 已知离散形式的电场: $\vec E(\vec x - \vec x') = \frac{1}{4\pi\epsilon_0} \sum q(x') \frac {{\vec x - \vec x'}} {|\vec x - \vec x'|^3} = \vec E^0 + \vec E^1 + \cdots$, 记 $r = |\vec x| \gg |\vec x'|$, $\hat r = \frac{\vec x}{r}$, 偶极矩 $\vec p = \sum q\vec x'$, 则根据泰勒展开有:
 $$
 \vec E^0 = \vec E(\vec x) = \frac{1}{4\pi\epsilon_0} \sum q \frac {\hat r} {r^2}
@@ -91,7 +91,7 @@ $$
 \frac{1}{4\pi\epsilon_0}  \frac{{-\vec p + 3\vec p \cdot \hat r \hat r}}{r^3}
 \end{aligned}
 $$
-## (2) 小电荷体系受力矩
+## 3.2 (2) 小电荷体系受力矩
 小电荷体系位于 $\vec r'$, 所受力矩可写作:
 $$
 \vec N(\vec r') = \sum\vec r'\times q\vec E(\vec r') = \sum \vec p\times \vec E(\vec r') = \vec N^0 + \vec N^1 + \cdots
@@ -123,7 +123,7 @@ $$
 \vec p \times \vec E(0)
 \end{aligned}
 $$
-# 4. 均匀带电球的全空间能量
+# 4 均匀带电球的全空间能量
 电荷分布
 $$
 \rho(r) = \left\{
@@ -169,7 +169,7 @@ $$
 W = \frac{1}{2}\epsilon_0\int_0^{\color{red}+\infty} E^2 ~r^2 \mathrm{d} r \int_0^\pi \sin\theta\mathrm{d}\theta \int_0^{2\pi}\mathrm{d}\varphi
 = \frac{3Q^2}{20\pi \epsilon_0 R}
 $$
-# 5. 线性介质的静电场能量密度
+# 5 线性介质的静电场能量密度
 已知:
 $$
 \begin{aligned} 
@@ -196,8 +196,8 @@ $$
 $$
 w = \frac{1}{2} \vec E \cdot \vec D
 $$
-# 6. 课本题
-## 1.7
+# 6 课本题
+## 6.1 1.7
 -  (1)
 易知:
 $$
@@ -220,7 +220,7 @@ $$
 \rho_{p}=-\nabla \cdot \vec{P}\left(r_{1}<r<r_{2}\right)
 =-\left(1-\frac{\varepsilon_{0}}{\varepsilon}\right) \frac{\rho_{f}}{3}\left[\nabla \cdot \vec{r}-r_1^{3} \nabla \cdot  \frac{{\vec r}}{r^3} \right]=-\left(1-\frac{\varepsilon_{0}}{\varepsilon}\right) \rho_{f} \quad r_{1}<r<r_{2}
 $$
-## 1.9
+## 6.2 1.9
 $$
 \begin{aligned}
 \rho_f 
@@ -231,7 +231,7 @@ $$
 -\left(1-\frac{\varepsilon_{0}}{\varepsilon}\right) \rho_{f}
 \end{aligned}
 $$
-## 2.1
+## 6.3 2.1
 -  (1)
 $$
  \rho_{p}(r<R)=-\nabla \cdot \vec{p}=-k \nabla \cdot \frac{\vec{r}}{r^{2}}=-k\left[\frac{3 r^{2}-2\left(x^{2}+y^{2}+z^{2}\right)}{r^{4}}\right]=-k / r^{2} 
@@ -262,8 +262,8 @@ w=\frac{1}{2} \int \rho_{f} \varphi & =\frac{1}{2} \int_{0}^{R} \rho_{f}(r<R) \v
 & =\frac{2 \pi \varepsilon\left(\varepsilon+\varepsilon_{0}\right) k^{2}}{\varepsilon_{0}\left(\varepsilon-\varepsilon_{0}\right)^{2}}R
 \end{aligned}
 $$
-# 7. 场源不分离的极化场的电势
-## (a)
+# 7 场源不分离的极化场的电势
+## 7.1 (a)
 记源点 $\vec r$, 场点 $\vec r'$, 相对位移 $\vec R = \vec r - \vec r'$, 于是单个电荷 $q,\vec r$ 在 $R_0$ 球内产生的平均电场可以写作
 $$
 \begin{aligned}  
@@ -290,7 +290,7 @@ $$
 $$
 \vec E_{ave} = - \frac{\vec{P}}{3\epsilon_0}
 $$
-## (b)
+## 7.2 (b)
 设 $\vec P = P\vec e_z$, $\vec p = \vec P V$ 则 $\sigma_p = \vec P\cdot \vec n = P\cos\theta$, 求解:
 $$
 \nabla^2 \varphi = 0
@@ -318,7 +318,7 @@ $$
 \vec E(r<R_0) &=  -\nabla \varphi (r<R_0) = - \frac{\vec{P}}{3\epsilon_0}
 \end{aligned}
 $$
-## (c)
+## 7.3 (c)
 由于 $\vec r' \gg \vec r$, 球外电荷 $\vec r', q$ 在球内(遍历 $\vec r$)的平均电场, 与场点 $\vec r$ 处的电场相同, 即球内电场近似均匀, 同时
 $$
 \begin{aligned}  
@@ -331,7 +331,7 @@ $$
 \end{aligned}
 $$
 第二个等号只保留了零阶项, 即等于外部电荷在球心处的电场.
-# 8. poison 方程猜想解
+# 8 poison 方程猜想解
 - (1)
 $$
 \mathcal{L} = \sum \frac{1}{2}(\partial_i \varphi)^2 - \frac{\rho\varphi}{\epsilon_0} = \frac{1}{2} (\nabla \varphi)^2 + \varphi \nabla^2 \varphi = -\frac{1}{2} (\nabla \varphi)^2 + \frac{1}{2}\nabla^2 \varphi^2
@@ -340,7 +340,7 @@ $$
 $$
 \nabla^2 \varphi + \frac{\rho}{\epsilon_0}  = 0
 $$
-# 9. 静电势的球谐展开
+# 9 静电势的球谐展开
 数理方程中提到, 勒让德函数的母函数表示是:
 $$
 (1-2xt + t^2) ^{-\frac{1}{2}} = \sum_0^{+\infty} P_n(x)t^n \quad |t|<1
@@ -364,7 +364,7 @@ $$
 
 ~~# 补充 1. 电磁场的拉氏量是猜出来的吗?~~
 
-# 补充 2. 球谐函数
+# 10 补充 2. 球谐函数
 第九题的泊松方程课上已经用 green 函数求解讲过. 来看更简单的 Laplace 方程. 三维拉普拉斯方程方程在球坐标下:
 $$
 \begin{aligned}
@@ -381,7 +381,7 @@ $$
 = - \frac{1}{Y}  \left(\frac{1}{\sin \theta } \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial Y}{\partial \theta}\right)-\frac{1}{\sin ^{2} \theta} \frac{\partial^{2} Y}{\partial \phi^{2}}\right)
 = \lambda
 $$
-## 1. 径向衰减
+## 10.1 径向衰减
 常常选取 $\lambda = l(l+1)$, 于是
 $$
 \frac{d}{d r}\left(r^{2} \frac{d R}{d r}\right) - l(l+1)R = 0
@@ -391,7 +391,7 @@ $$
 R(r) = A r^l + B r^{-(l+1)}, \quad l\geq 0
 $$
 通常情况下, 场不会传播到无穷远处, 也就是说, 在解 $R(r)$ 的定义域中包含 $r=\infty$ 时, 因为 $r^l \to \infty$ 不合适, 所以通常取 $A=0$. 同理, 在解的定义域包含 $r=0$ 时, 通常取 $B=0$.
-## 2. 球面谐波
+## 10.2 球面谐波
 由上述已知
 $$
 \frac{1}{\sin \theta } \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial Y}{\partial \theta}\right)
@@ -480,7 +480,7 @@ P_3^0(x) &= \frac{1}{2}(5 x^3 - 3 x), \quad P_3^1(x) = -\frac{3}{2}(5 x^2 - 1)\s
 P_3^2(x) = 15 x(1 - x^2), \quad P_3^3(x) = -15(1 - x^2)^{3/2}.
 \end{aligned}
 $$
-### 2.1 $Y_1^m$ 和偶极场
+### 10.2.1 $Y_1^m$ 和偶极场
 在静磁学中, 如果场点不存在电流, 那么磁感应强度可以表示成磁标势的梯度 $\vec B = -\nabla \Phi_m$, 并且 $\nabla^2 \Phi_m = 0$.
 
 归一化球谐函数中, $Y_1^0(\theta) = \sqrt{\frac{3}{4\pi}}\cos\theta \propto \cos\theta = \frac{z}{r}$, $R_1(r)=Ar+\frac{B}{r^2} = \frac{B}{r^2}$ (取 $A=0$). 于是 $\Phi_m$ 的一个解可以写作
@@ -557,7 +557,7 @@ Y_1^0 (\theta)
 \end{aligned}
 $$
 因此, $Y_1^x$ 描述沿 $x$ 轴方向的磁偶极子, 类似的知道 $Y_1^y$ 描述沿 $y$ 轴方向的磁偶极子. 在量子力学里面(量C不讲这个东西), 上面的旋转操作可以用 $Winger-D$ 矩阵作用于球谐函数得到, 这个矩阵的数值形状很丑, 可以在在 $MMA$ ($Mathematica$)中直接调用 $Winger-D$ 函数快速完成.
-### 2.2 $Y_2^m$ 和四极场
+### 10.2.2 $Y_2^m$ 和四极场
 同理, 对于归一化球谐函数 $Y_2^0(\theta) = \sqrt{\frac{5}{16\pi}} \left(3\cos^2\theta - 1\right)$, 磁标势 $\Phi_{\text{quad}}(r, \theta) = R \cdot g_2^0 \left(\frac{R}{r}\right)^3 \sqrt{\frac{5}{16\pi}} \left(3\cos^2\theta - 1\right)$, $g_2^0$ 为常数, 计算得到
 $$
 \begin{array}c
@@ -570,7 +570,7 @@ B_\varphi = 0
 $$
 关于球谐系数 $g_l^m$ 的具体拟合值, 可在第 $14$ 版[国际参考地磁场(IGRF)的官方文件](https://www.ngdc.noaa.gov/IAGA/vmod/coeffs/igrf14coeffs.txt) 中查阅. 对于 $m\ne 0$ 的球谐函数, 同样选取他们的实数线性组合, 可以得到他们表示的四极场只是 $Y_2^0(\theta)$ 的旋转, 但是形式更加复杂.
 
-##  3. 球谐系数
+## 10.3 3. 球谐系数
 现在需要确定系数 $B_{lm}$, 假设 $A=0$, 通解写成:
 $$
 u(r, \theta, \varphi)=\sum_{l=0}^{\infty} \sum_{m=-l}^{l} \frac{B_{l m}}{r^{l+1}} Y_{l}^{m}(\theta, \varphi)

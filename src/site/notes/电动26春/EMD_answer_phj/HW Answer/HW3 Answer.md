@@ -1,8 +1,14 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW3 Answer/","noteIcon":"default","created":"2026-03-20T16:07:46.783+08:00","updated":"2026-03-28T12:39:35.447+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW3 Answer/","noteIcon":"default","created":"2026-03-20T16:07:46.783+08:00","updated":"2026-03-28T18:33:05.009+08:00"}
 ---
 
-[[电动26春/EMD_answer_phj/HW Answer/HW4 Answer\|HW4 Answer]]
+[[电动26春/EMD_answer_phj/HW Answer/HW4 Answer\|HW4 Answer]]  
+
+###### 改作业发现有问题的  
+- 1.15 补充说明
+- 4.1 直接上偏振度, 书上和课本上定义不一样, 光学看 t 变, 课上看 z 变
+- 补 1, 电磁势演化方程
+- 思考题, 不用交
 
 # 1 《电磁学与电动力学》（下册）
 ![zz_figure/Pasted image 20260320160834.png](/img/user/zz_figure/Pasted%20image%2020260320160834.png)  
@@ -30,7 +36,6 @@ $$\begin{align} \nabla \cdot  (\boldsymbol{j} \boldsymbol{x} E)  &=  \boldsymbol
 $$\boldsymbol{P}_{mech} = - \frac{1}{c^2} \iiint \varphi \boldsymbol{j} \, dV$$
 这就是著名的隐藏动量。它是一个纯粹的相对论效应：在电势较高的地方，电荷的势能高，动能（及 $\gamma$ 因子）小，动量小；在电势较低的地方反之。这种相对论质量的非对称分布导致了宏观上稳恒的电流环路具有了非零的机械动量。
 
-
 ![zz_figure/Pasted image 20260320160939.png](/img/user/zz_figure/Pasted%20image%2020260320160939.png)  
 
 # 2 补充题  
@@ -54,6 +59,14 @@ $$
 \nabla \cdot &\boldsymbol{A} = 0 \implies \boldsymbol{k} \cdot \boldsymbol{A_0} = 0
 \end{align}
 $$
+$$
+\begin{align} 
+\boldsymbol{E}&=
+-\nabla \varphi - \frac{ \partial \boldsymbol{A} }{ \partial t } = \mathrm{i} \omega \boldsymbol{A}_0 e^\sim \\[4pt]
+\boldsymbol{B} &= \nabla \times  \boldsymbol{A} = \mathrm{i} \boldsymbol{k} \times \boldsymbol{A}_0 e^\sim
+\end{align}
+$$
+
 对于洛伦茨规范 $\mathsf{L}= 0$, 得到 
 $$
 \begin{align} 
@@ -64,6 +77,14 @@ $$
 \mathsf{L}~ &= 0 \quad\Longrightarrow\quad \varphi_0 = \frac{c^2}{\omega} (\boldsymbol{k} \cdot \boldsymbol{A}_0)
 \end{align}
 $$
+$$
+\begin{align} 
+\boldsymbol{E}&=
+-\nabla \varphi - \frac{ \partial \boldsymbol{A} }{ \partial t } = \mathrm{i}(-\boldsymbol{k}\varphi_0 + \omega \boldsymbol{A}_0) e^\sim \\[4pt]
+\boldsymbol{B} &= \nabla \times  \boldsymbol{A} = \mathrm{i} \boldsymbol{k} \times \boldsymbol{A}_0 e^\sim
+\end{align}
+$$
+
 ## 2.2 能量中心平动定理  
 在诺特定律里面，这个定理和 boost 对称性有关，虽然没什么卵用(refer to [[A_symmetry_自然界的对称性/Tools/Noether's Theorem and Symmetry\|Noether's Theorem and Symmetry]], boost 不变量是 $\int (w \boldsymbol{x} - c^2 t \boldsymbol{g}) dV$，题后提示所指的就是这个守恒量)。很显然，这个东西成立需要系统是孤立的，也就是散度的体积分为 0.
 $$

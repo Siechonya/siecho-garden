@@ -1,8 +1,14 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW2 Answer/","noteIcon":"default","created":"2026-03-14T13:33:00.117+08:00","updated":"2026-03-25T17:55:17.948+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW2 Answer/","noteIcon":"default","created":"2026-03-14T13:33:00.117+08:00","updated":"2026-03-28T16:17:31.607+08:00"}
 ---
 
-[[电动26春/EMD_answer_phj/HW Answer/HW3 Answer\|HW3 Answer]] 
+[[电动26春/EMD_answer_phj/HW Answer/HW3 Answer\|HW3 Answer]]   
+
+###### 改作业发现有问题的  
+- 1.10(3)  
+- 补 1, A 的散度公式
+- 补 3: 其他解法
+- 思考题: 不用交
 # 1 1.8~1.10
 ![zz_figure/Pasted image 20260314133436.png](/img/user/zz_figure/Pasted%20image%2020260314133436.png)  
 ![zz_figure/Pasted image 20260314134231.png](/img/user/zz_figure/Pasted%20image%2020260314134231.png)  
