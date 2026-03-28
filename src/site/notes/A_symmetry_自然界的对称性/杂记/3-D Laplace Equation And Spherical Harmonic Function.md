@@ -1,18 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2026-03-28T22:30:18.474+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2026-03-28T23:49:04.290+08:00"}
 ---
 
-
-
-```table-of-contents
-title: 
-style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
-minLevel: 0 # Include headings from the specified level
-maxLevel: 6 # Include headings up to the specified level
-includeLinks: true # Make headings clickable
-hideWhenEmpty: false # Hide TOC if no headings are found
-debugInConsole: false # Print debug info in Obsidian console
-```
 
 # 1 3D Laplace Equation    
 三维拉普拉斯方程方程可记成多种形式:
@@ -173,7 +162,7 @@ $$
    0 & 1 & 0 \\
    -\sin\beta & 0 & \cos\beta
    \end{pmatrix}
-   $$
+$$
 变换导致 $(x,y,z)\to(x',y',z'),(r,\theta,\varphi)\to(r',\theta',\varphi')$, 即:
 $$
 \begin{aligned}
@@ -181,27 +170,27 @@ $$
    & =
    \arccos\left( -\sin\theta\cos\varphi \sin\beta + \cos\theta \cos\beta \right)
    \end{aligned}
-   $$
+$$
 $$
 \begin{aligned}
    \varphi' &= \arctan \frac{y'}{x'}= \arctan \frac{y}{x \cos\beta + z \sin\beta} \\[6pt]
    &= 
    \arctan \frac{\sin\theta\sin\varphi}{\sin\theta\cos\varphi \cos\beta + \cos\theta \sin\beta}
  \end{aligned}
-   $$
+$$
 如果取 $\beta=\frac{\pi}{2}$, 就有
 $$
 \begin{aligned}
    \theta' =
    \arccos\left( -\sin\theta\cos\varphi \right)
    \end{aligned}
-   $$
+$$
 $$
 \begin{aligned}
    \varphi'  =
    \arctan \left(  \frac{{\sin\theta\sin\varphi}}{\cos\theta} \right)
  \end{aligned}
-   $$
+$$
 也就是说, 在绕 $y$ 轴旋转 $90^\circ$ 后, $Y_1^x$ 变成了描述朝向 $z$ 轴的偶极子 $Y_1^0$ :   
 $$
 \begin{aligned}
@@ -293,11 +282,17 @@ A_{l^{\prime} m^{\prime}}= a^{-l'} \int_{0}^{2 \pi} \int_{0}^{\pi} u(a, \theta, 
 $$
 ### 4.2.1 反解偶极场  
 举个例子，假设已知边界电势 $\varphi(a, \theta, \varphi) = V_0 \cos \theta$，求解这是一个什么场。 由于分布与 $\varphi$ 无关，只有 $m=0$ 的项贡献。根据球谐函数的定义：
-$$Y_0^0 = \frac{1}{\sqrt{4\pi}}, \quad Y_1^0 = \sqrt{\frac{3}{4\pi}} \cos \theta$$
+$$
+Y_0^0 = \frac{1}{\sqrt{4\pi}}, \quad Y_1^0 = \sqrt{\frac{3}{4\pi}} \cos \theta
+$$
 由此可见，我们的边界分布可以写为：
-$$\varphi(a, \theta) = V_0 \sqrt{\frac{4\pi}{3}} Y_1^0(\theta, \varphi)$$
+$$
+\varphi(a, \theta) = V_0 \sqrt{\frac{4\pi}{3}} Y_1^0(\theta, \varphi)
+$$
 所以球谐系数根据前面提到的公式计算：
-$$B_{lm} = a^{l+1} \cdot V_0 \sqrt{\frac{4\pi}{3}} \int_{\Omega} Y_1^0 Y_l^{m *} \mathrm{d}\Omega$$
+$$
+B_{lm} = a^{l+1} \cdot V_0 \sqrt{\frac{4\pi}{3}} \int_{\Omega} Y_1^0 Y_l^{m *} \mathrm{d}\Omega
+$$
 得到 $B_{10} = V_0 a^2 \sqrt{\frac{4\pi}{3}}$，即 $\varphi(r, \theta) = V_0 \frac{a^2}{r^2} \cos \theta \ \  (r \ge a)$，这恰好是电偶极矩为 $p = 4\pi \epsilon_0 V_0 a^2$ 的点电偶极子的电势（或者前面提过的磁偶极子）。  
 
 
