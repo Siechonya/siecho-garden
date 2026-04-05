@@ -1,6 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW4 Answer/","noteIcon":"default","created":"2026-03-25T17:55:21.378+08:00","updated":"2026-03-28T23:40:54.516+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW4 Answer/","noteIcon":"default","created":"2026-03-25T17:55:21.378+08:00","updated":"2026-04-04T20:15:55.608+08:00"}
 ---
+
+[[电动26春/EMD_answer_phj/HW Answer/HW5 Answer\|HW5 Answer]]
 
 # 1 教材
 ![zz_figure/Pasted image 20260328123830.png](/img/user/zz_figure/Pasted%20image%2020260328123830.png)  
@@ -9,7 +11,7 @@
 
 # 2 补充题  
 ## 2.1 
-已知能量和动量密度满足  
+已知能量和动量密度满足   
 $$
 \begin{align} 
 w&= \frac{1}{2}\left( \epsilon_0E^2 + \frac{B^2}{\mu_0} \right) \geq \sqrt{\frac{\epsilon_0}{\mu_0}} EB, \quad{仅当\epsilon_0E^2 + \frac{B^2}{\mu_0}时取等号}
@@ -113,7 +115,7 @@ $$F_z = F_{z}^{in} + F_{z}^{out} = {-\frac{\pi}{4} \mu_0 \sigma_0^2 a^4 \omega^2
 负号代表方向朝下（南半球方向），即两半球之间相互吸引。
 ## 3.2 电子经典球壳模型
 ### 3.2.1 3.2.1
-对于半径为 $a$、电量为 $e$ 的均匀带电球壳，球内电场为 $0$，球外电场为 $E = \frac{e}{4\pi\epsilon_0 r^2}$，$\sigma_0=\frac{e}{4\pi a^2}$
+对于半径为 $a$、电量为 $e$ 的均匀带电球壳，球内电场为 $0$，球外电场为 $E = \frac{e}{4\pi\epsilon_0 r^2}$，$\sigma_0=\frac{e}{4\pi a^2}$，
 $$W_E = \int_{a}^{\infty} \frac{1}{2}\epsilon_0 E^2 (4\pi r^2) \mathrm{d}r = \frac{e^2}{8\pi\epsilon_0 a}$$
 利用上一题结论，内部磁场 $B_{in} = \frac{\mu_0 e \omega}{6\pi a}$，外部为偶极场。
 
@@ -124,7 +126,8 @@ $$W_E = \int_{a}^{\infty} \frac{1}{2}\epsilon_0 E^2 (4\pi r^2) \mathrm{d}r = \fr
 > 对于局域分布的源，无穷远处的表面积分为 0。代入安培环路定理 $\nabla \times \boldsymbol{B} = \mu_0 \boldsymbol{J}$：
 > $$\int_{all} \frac{B^2}{2\mu_0} \mathrm{d}V = \frac{1}{2\mu_0} \int \boldsymbol{A} \cdot (\mu_0 \boldsymbol{J}) \mathrm{d}V = \frac{1}{2} \int \boldsymbol{A} \cdot \boldsymbol{J} \mathrm{d}V$$
 
-已知球面上的矢量势为 $\boldsymbol{A}(a) ={\frac{\mu_0 \sigma_0 a}{3} (\boldsymbol{\omega} \times \boldsymbol{x})}= \frac{\mu_0 e \omega a \sin\theta}{12\pi} \hat{\boldsymbol{\phi}}$，面电流密度为 $\boldsymbol{K} =\sigma_0 \boldsymbol{v} = \sigma_0 a\sin\theta \omega= \frac{e \omega \sin\theta}{4\pi a} \hat{\boldsymbol{\phi}}$。所以磁能：    $$W_M = \frac{1}{2} \int_0^\pi \left( \frac{\mu_0 e \omega a \sin\theta}{12\pi} \right) \left( \frac{e \omega \sin\theta}{4\pi a} \right) (2\pi a^2 \sin\theta) \mathrm{d}\theta = \frac{\mu_0 e^2 \omega^2 a}{36\pi}$$  
+已知球面上的矢量势为 $\boldsymbol{A}(a) ={\frac{\mu_0 \sigma_0 a}{3} (\boldsymbol{\omega} \times \boldsymbol{x})}= \frac{\mu_0 e \omega a \sin\theta}{12\pi} \hat{\boldsymbol{\phi}}$，面电流密度为 $\boldsymbol{K} =\sigma_0 \boldsymbol{v} = \sigma_0 a\sin\theta \omega= \frac{e \omega \sin\theta}{4\pi a} \hat{\boldsymbol{\phi}}$。所以磁能：    
+$$W_M = \frac{1}{2} \int_0^\pi \left( \frac{\mu_0 e \omega a \sin\theta}{12\pi} \right) \left( \frac{e \omega \sin\theta}{4\pi a} \right) (2\pi a^2 \sin\theta) \mathrm{d}\theta = \frac{\mu_0 e^2 \omega^2 a}{36\pi}$$  
 总能量
 $$W = \frac{e^2}{8\pi\epsilon_0 a} + \frac{\mu_0 e^2 \omega^2 a}{36\pi}$$
 
@@ -162,11 +165,11 @@ $$
 ### 3.2.3 
 通常在经典模型中，由于 $\omega a \ll c$ 的预期，磁能项 $W_M$ 远小于静电能 $W_E$。我们先忽略 $W_M$：
 
-由 $W \approx \frac{e^2}{8\pi\epsilon_0 a} = m_e c^2$ 得 $a = \frac{e^2}{8\pi\epsilon_0 m_e c^2}$；由角动量公式 $\frac{\mu_0 e^2 a \omega}{18\pi} = \frac{\hbar}{2}$ 得 $\omega = \frac{9\pi \hbar}{\mu_0 e^2 a}$。以及
+由 $W \approx \frac{e^2}{8\pi\epsilon_0 a} = m_e c^2$ 得 $a = \frac{e^2}{8\pi\epsilon_0 m_e c^2}$ (即经典电子半径)；由角动量公式 $\frac{\mu_0 e^2 a \omega}{18\pi} = \frac{\hbar}{2}$ 得 $\omega = \frac{9\pi \hbar}{\mu_0 e^2 a}$。以及
 $$v = \omega a = \frac{9\pi \hbar}{\mu_0 e^2} = \frac{9\pi \hbar \epsilon_0 c^2}{e^2}$$
 利用精细结构常数 $\alpha = \frac{e^2}{4\pi\epsilon_0 \hbar c} \approx \frac{1}{137}$，上式可改写为：
 $$v = \frac{9}{4 \alpha} c \approx \frac{9 \times 137}{4} c \approx {308 c}$$
-
+这个速度远远超越了光速，是没有意义的，回过头来再用 $W\approx W_M =  \frac{\mu_0 e^2 \omega^2 a}{36\pi} = m_e c^2$ 也没什么意义。另外，据说将电子视为刚体，通过转动惯量来计算角动量，也会得到类似的结论（得到赤道角速度为一百多倍光速）。
 
 
 

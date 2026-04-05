@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2026-03-28T12:40:26.293+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2026-04-01T12:10:20.566+08:00"}
 ---
 
 
@@ -15,8 +15,10 @@ WFT(Windowed Fourier transform) 是一种从信号中提取局部频率信息的
 
 对 $f(t )$ 做小波变换:
 $$
-\mathcal{W}(\tau, t)=\sum_{i=0}^{N-1} f\left(t_{i}\right) \psi^{*}\left[\left(t_{i}-t\right) / \tau\right] = \frac{1}{\sqrt{|\tau|}}\int_{-\infty}^\infty f(x) \psi^* ({t-x})\,\mathrm{d}x, \quad 
-\psi(u)=2^{1 / 2} \pi^{-1 / 4} \cos \left(\omega_{0} u\right) \exp \left(-u^{2} / 2\right),\quad 
+\mathcal{W}(\tau, t)=\sum_{i=0}^{N-1} f\left(t_{i}\right) \psi^{*}\left[\left(t_{i}-t\right) / \tau\right] = \int_{-\infty}^\infty f(x) \psi^* \left( \frac{{t-x}}{\tau} \right)\,\mathrm{d}x
+$$
+$$
+\psi(u)=2^{1 / 2} \pi^{-1 / 4} e^{\mathrm{i}\omega_{0}u} e^{-u^{2} / 2}
 $$
 可见尺度 $\tau$ 影响母函数, 进而调制 $\psi$, 动态调整窗口大小, $\tau$ 小 $\psi$ 被压缩为高频小波: 高频窄窗高时间分辨率，低频宽窗高频率分辨率. 而 $WFT$ 固定窗口大小 $T$，时频分辨率固定不可调:  
 $$
@@ -25,10 +27,22 @@ $$
 note: 
 - 在时间序列两端进行零填充，可以一定程度上减小影响锥(Cone of influence (COI))范围(section 3g);
 - 一般选取指数尺度集 $s_j = s_{min} 2^{j\delta j}$，对于莫雷小波 $\delta j \leq 0.5$，$s_0$ 应选择使等效傅立叶周期近似为 $2\delta t$ (section 3f & 3h);
-- 重构(section 3i)
+- 重构(section 3i)  
+$$
+x_{n}=\frac{\delta j \delta t^{1 / 2}}{C_{\delta} \psi_{0}(0)} \sum_{j=0}^{J} \frac{\Re\left\{\mathcal{W}\left(\tau_{j}, t_n\right)\right\}}{\tau_{j}^{1 / 2}}
+,\quad \tau_j: \text{j-th}\ scale
+\tag{1}
+$$
 $$
 x_{n}=\frac{\delta j \delta t^{1 / 2}}{C_{\delta} \psi_{0}(0)} \sum_{j=0}^{J} \frac{\Re\left\{W_{n}\left(s_{j}\right)\right\}}{s_{j}^{1 / 2}} \tag{1}
 $$
+
+> [!info] 为什么要加这个 $1/\sqrt{\tau}$？
+> 我们希望无论尺度 $\tau$ 如何变化，小波包所包含的**总能量**保持不变。数学上即要求子小波的 $L^2$ 范数恒等于母小波：
+> $$\int_{-\infty}^{\infty} |\psi_{\tau, b}(t)|^2 dt = \int_{-\infty}^{\infty} \left| \frac{1}{\sqrt{\tau}} \psi\left(\frac{t - b}{\tau}\right) \right|^2 dt$$
+> 所以，我们通过对母小波 $\psi(t)$ 进行伸缩和平移来得到子小波 $\psi_{\tau, b}(t)$：
+> $$\psi_{\tau, b}(t) = \frac{1}{\sqrt{\tau}} \psi\left(\frac{t - b}{\tau}\right)$$
+
 $x_n$ 的方差是(类似于 Fourier 变换的 Parseval 等式)：  
 $$
 \sigma^{2}=\frac{\delta j \delta t}{C_{\delta} N} \sum_{n=0}^{N-1} \sum_{j=0}^{J} \frac{\left|W_{n}\left(s_{j}\right)\right|^{2}}{s_{j}}

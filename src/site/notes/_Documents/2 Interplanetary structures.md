@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-10-23T14:37:00.814+08:00","updated":"2026-03-05T13:46:57.215+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-10-23T14:37:00.814+08:00","updated":"2026-03-31T22:09:20.108+08:00"}
 ---
 
 
@@ -109,7 +109,7 @@ title Structure Distribution [109]
 #### Timing Method 确定结构法向 
 使用 timing method [Schwartz, 1998] 和四颗卫星确定结构的法向 $\vec{n}$ 和法向速度 $\mathcal{V}$：  
 $$
-\vec{D_{ij}} \cdot \frac{\vec{n}}{\mathcal{V}} = \Delta t_{ij} ,\quad  i,j \in \{1,2,3,4\}; ~i\neq j
+\vec{D_{ij}} \cdot {\vec{n}} = \mathcal{V}\Delta t_{ij} ,\quad  i,j \in \{1,2,3,4\}; ~i\neq j
 $$
 其中 $\vec{D_{ij}} = \vec{D_j} - \vec{D_i}$ 是两颗卫星之间的位矢，$\Delta t_{ij} = t_j  - t_i$ 是卫星测量时间间隔，$|D|\approx 0.1 \text{km}$，而 $\Delta t_{ij}$ 由互相关函数(the cross-correlation function)的最大值计算确定：  
 $$
@@ -159,6 +159,7 @@ $$
 - the phase coupling between the i-th & j-th magnetic components
 $$
 R_{i j}^{2}(\tau, t)=\frac{\left|\mathcal{S}\left(\tau \mathcal{W}_{i}(\tau, t) \mathcal{W}_{j}^{*}(\tau, t)\right)\right|^{2}}{\mathcal{S}\left(\tau\left|\mathcal{W}_{i}(\tau, t)\right|^{2}\right) \cdot \mathcal{S}\left(\tau\left|\mathcal{W}_{j}^{*}(\tau, t)\right|^{2}\right)}
+,\quad i,j = x,y,z,\parallel,\perp,tot
 $$
 the values of $R_{ij} (\tau, t )$ are between 0 (no coherence) and 1 (full coherence)
 - the flatness (or kurtosis) of $\boldsymbol{B}_i$
@@ -176,14 +177,14 @@ title Structure Distribution [101]
 "Isolated vortices" : 19
 "Current sheets" : 18
 "Vortex chains" : 32
-"Strongly compressive structures( solitons, magnetic holes, or shocks)" : 0
+"Strongly compressive structures (solitons, magnetic holes, or shocks)" : 0
 ```
 
 | Structrue         | diagram                                        | remark                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Current sheets    | ![zz_figure/Pasted image 20251118143028.png](/img/user/zz_figure/Pasted%20image%2020251118143028.png) | In the panels (e) and (f),<br>the arrows display the directions of the normal of the structures,  <br> $\boldsymbol{n}$ (black), determined by using the timing method,   <br>of $\boldsymbol{v_0}$ (red), and of $\boldsymbol{b_0}$ (blue)  <br><br>  <br>$\delta b_y$ changes sign and is perpendicular to the local magnetic field.   <br>The other two components have fluctuations of very small amplitude.   <br>The reversal of the component of maximum   <br>variation is in the middle of the structure, where the large-<br>scale magnetic field has its local minimum (panel (a)) and a<br>peak in the current is recovered (panel (c)).  <br> in the center of the structure, a peak in the density is<br>found (panel (d)), meaning that the plasma is confined inside<br>the structure.<br><br>      <br>MVA(minimum variance analysis) $\to$ planar geometry |
-| Isolated vortices | ![zz_figure/Pasted image 20251118170228.png](/img/user/zz_figure/Pasted%20image%2020251118170228.png) | a modulated fluctuation;  <br>a local maximum in the middle of the structure;<br>the current density $\boldsymbol{J}$ is mainly in the direction parallel to $\boldsymbol{b_0}$;  <br>the electron density $n_e$ exhibits a fluctuating behavior<br>and is anti-correlated with $\boldsymbol{B}$, <br>with a local minimum in the center of the structure $\to$  pressure balance. <br><br>  <br>MVA $\to$ the intermediate component is not negligible,   <br>i.e., the event is a bi-dimensional structure.  <br><br>  <br>Quasi-mono-polar Alfvén vortex model <br>compared with the observation:   <br>![zz_figure/Pasted image 20251118174055.png](/img/user/zz_figure/Pasted%20image%2020251118174055.png)<br>                                                                                                                                                                                                                |
-| Vortex chain      | ![zz_figure/Pasted image 20251124152403.png](/img/user/zz_figure/Pasted%20image%2020251124152403.png) |  the electron density is anti-correlated  to   <br>the large-scale magnetic field, meaning that   <br>this event is also in pressure balance.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Isolated vortices | ![zz_figure/Pasted image 20251118170228.png](/img/user/zz_figure/Pasted%20image%2020251118170228.png) | a modulated fluctuation;  <br>a local maximum in the middle of the structure;<br>the current density $\boldsymbol{J}$ is mainly in the direction parallel to $\boldsymbol{b_0}$;  <br>the electron density $n_e$ exhibits a fluctuating behavior<br>and is anti-correlated with $\boldsymbol{B}$, <br>with a local minimum in the center of the structure $\to$  pressure balance. <br><br>  <br>MVA $\to$ the intermediate component is not negligible,   <br>i.e., the event is a bi-dimensional structure.  <br><br><br>Quasi-mono-polar Alfvén vortex model <br>compared with the observation:   <br>![zz_figure/Pasted image 20251118174055.png](/img/user/zz_figure/Pasted%20image%2020251118174055.png)<br>                                                                                                                                                                                                                  |
+| Vortex chain      | ![zz_figure/Pasted image 20251124152403.png](/img/user/zz_figure/Pasted%20image%2020251124152403.png) | the electron density is anti-correlated  to   <br>the large-scale magnetic field, meaning that   <br>this event is also in pressure balance.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 
 
@@ -206,3 +207,19 @@ Soucek, J., E. Lucek, and I. Dandouras (2008), Properties of magnetosheath 
 
 # 8 Fluid theory of coherent magnetic vortices in high-space plasmas  
 Jovanović, D.,  O. Alexandrova, M. Maksimović, and M. Belić,  (2020). Fluid theory of coherent magnetic vortices in high-β. _space plasmas_. arXiv. [https://doi.org/10.48550/arXiv.1705.02913v5](https://doi.org/10.48550/arXiv.1705.02913v5)
+
+# 9 Alfven vortex filaments observed in magnetosheath downstream of a quasi-perpendicular bow shock  
+[2.9 Journal of Geophysical Research  Space Physics - 2006 - Alexandrova - Alfv n vortex filaments observed in magnetosheath](/img/user/_Documents/docs/2.9%20Journal%20of%20Geophysical%20Research%20%20Space%20Physics%20-%202006%20-%20Alexandrova%20-%20Alfv%20n%20vortex%20filaments%20observed%20in%20magnetosheath.pdf)  
+
+## 9.1 Alfven vortex model [Petviashvili and Pokhotelov, 1992]  
+
+
+
+
+
+
+
+
+
+
+
