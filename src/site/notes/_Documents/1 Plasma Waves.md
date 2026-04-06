@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/1 Plasma Waves/","noteIcon":"default","created":"2025-07-31T13:43:21.487+08:00","updated":"2026-02-12T16:31:42.546+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/1 Plasma Waves/","noteIcon":"default","created":"2025-12-01T13:39:24.269+08:00","updated":"2026-02-12T16:31:42.546+08:00"}
 ---
 
 # 总览%

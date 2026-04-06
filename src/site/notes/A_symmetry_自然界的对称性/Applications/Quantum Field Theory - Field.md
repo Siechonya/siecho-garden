@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Quantum Field Theory - Field/","noteIcon":"default","created":"2025-03-11T22:03:00.295+08:00","updated":"2025-11-18T22:30:07.227+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Quantum Field Theory - Field/","noteIcon":"default","created":"2025-12-01T13:39:20.973+08:00","updated":"2025-11-18T22:30:07.227+08:00"}
 ---
 
 
