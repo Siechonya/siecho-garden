@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW4 Answer/","noteIcon":"default","created":"2026-03-25T17:55:21.378+08:00","updated":"2026-04-04T20:15:55.608+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW4 Answer/","noteIcon":"default","created":"2026-03-25T17:55:21.378+08:00","updated":"2026-04-06T12:40:18.699+08:00"}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW5 Answer\|HW5 Answer]]
@@ -114,7 +114,7 @@ $$F_{z}^{out} = -\int_a^\infty \left( \frac{\mu_0 \sigma_0^2 a^8 \omega^2}{18 r^
 $$F_z = F_{z}^{in} + F_{z}^{out} = {-\frac{\pi}{4} \mu_0 \sigma_0^2 a^4 \omega^2}$$
 负号代表方向朝下（南半球方向），即两半球之间相互吸引。
 ## 3.2 电子经典球壳模型
-### 3.2.1 3.2.1
+### 3.2.1 
 对于半径为 $a$、电量为 $e$ 的均匀带电球壳，球内电场为 $0$，球外电场为 $E = \frac{e}{4\pi\epsilon_0 r^2}$，$\sigma_0=\frac{e}{4\pi a^2}$，
 $$W_E = \int_{a}^{\infty} \frac{1}{2}\epsilon_0 E^2 (4\pi r^2) \mathrm{d}r = \frac{e^2}{8\pi\epsilon_0 a}$$
 利用上一题结论，内部磁场 $B_{in} = \frac{\mu_0 e \omega}{6\pi a}$，外部为偶极场。
@@ -142,20 +142,20 @@ $$\boldsymbol{E} \times \boldsymbol{B} = \left( \frac{e}{4\pi\epsilon_0 r^2} \ha
 $$\hat{\boldsymbol{r}} \times (\boldsymbol{m} \times \hat{\boldsymbol{r}}) = \boldsymbol{m}(\hat{\boldsymbol{r}} \cdot \hat{\boldsymbol{r}}) - \hat{\boldsymbol{r}}(\hat{\boldsymbol{r}} \cdot \boldsymbol{m}) = \boldsymbol{m} - \hat{\boldsymbol{r}}(\hat{\boldsymbol{r}} \cdot \boldsymbol{m})$$
 代入到求解角动量的积分得到
 $$
-\boldsymbol{L} = \frac{\mu_0 e}{16\pi^2} \int_{a}^{\infty} \frac{1}{r^4} r^2 \mathrm{d}r \int_{\Omega} [\boldsymbol{m} - \hat{\boldsymbol{r}}(\hat{\boldsymbol{r}} \cdot \boldsymbol{m})] \mathrm{d}\Omega
+\boldsymbol{L} = \frac{\mu_0 e}{16\pi^2} \int_{a}^{\infty} \frac{1}{r^4} r^2\, \mathrm{d}r \int_{\Omega} [\boldsymbol{m} - \hat{\boldsymbol{r}}(\hat{\boldsymbol{r}} \cdot \boldsymbol{m})]\, \mathrm{d}\Omega
 $$
 拆解该积分当中的每一项有：  
 $$
-\int_{a}^{\infty} r^{-2} \mathrm{d}r = \frac{1}{a}
+\int_{a}^{\infty} r^{-2} \, \mathrm{d}r = \frac{1}{a}
 $$
 $$
-\int \boldsymbol{m} \mathrm{d}\Omega = 4\pi \boldsymbol{m}
+\int \boldsymbol{m} \,\mathrm{d}\Omega = 4\pi \boldsymbol{m}
 $$
 $$
-设\ \boldsymbol{m}\parallel \hat{z} \implies
-\int \hat{\boldsymbol{r}}(\hat{\boldsymbol{r}} \cdot \boldsymbol{m}) \mathrm{d}\Omega = m\int \hat{\boldsymbol{r}}(\cos\theta) \mathrm{d}\Omega = \boldsymbol{m} \int_0^{2\pi} \mathrm{d}\phi \int_0^\pi \cos^2\theta \sin\theta \mathrm{d}\theta = 2\pi \cdot \frac{2}{3} \boldsymbol{m} = \frac{4\pi}{3} \boldsymbol{m}
+\int \hat{\boldsymbol{r}}(\hat{\boldsymbol{r}} \cdot \boldsymbol{m})\,\mathrm{d}\Omega =\int (\mathsf{I} \cdot \boldsymbol{m}) \,\mathrm{d}\Omega
+= \frac{4\pi}{3} \boldsymbol{m}
 $$
-最终得到旋转球壳的场角动量为：
+所以最终得到旋转球壳的场角动量为：
 $$
 \boldsymbol{L} = \frac{\mu_0 e}{16\pi^2} \cdot \frac{1}{a} \cdot \frac{8\pi}{3} \boldsymbol{m} = \frac{\mu_0 e}{6\pi a} \boldsymbol{m}
 ={\frac{\mu_0 e^2 a}{18\pi} \boldsymbol{\omega}}
