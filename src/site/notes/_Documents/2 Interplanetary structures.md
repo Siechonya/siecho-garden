@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-12-01T13:41:33.089+08:00","updated":"2026-04-05T21:01:57.267+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-10-23T14:37:00.814+08:00","updated":"2026-04-06T17:57:52.853+08:00"}
 ---
 
 
@@ -213,8 +213,8 @@ Jovanović, D.,  O. Alexandrova, M. Maksimović, and M. Belić,  (2020). Fluid 
 [2.9 Journal of Geophysical Research  Space Physics - 2006 - Alexandrova - Alfv n vortex filaments observed in magnetosheath](/img/user/_Documents/docs/2.9%20Journal%20of%20Geophysical%20Research%20%20Space%20Physics%20-%202006%20-%20Alexandrova%20-%20Alfv%20n%20vortex%20filaments%20observed%20in%20magnetosheath.pdf)  
 
 ## 9.1 Alfven vortex model [Petviashvili and Pokhotelov, 1992]  
-
-
+给出了Alfven vortex 的物理模型（理想，不可压缩 2D MHD）
+ 
 
 
 

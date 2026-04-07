@@ -1,16 +1,15 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW4 Answer/","noteIcon":"default","created":"2026-03-27T23:31:18.902+08:00","updated":"2026-04-06T15:25:37.690+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW4 Answer/","noteIcon":"default","created":"2026-04-06T15:26:40.156+08:00","updated":"2026-04-07T16:45:02.966+08:00"}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW5 Answer\|HW5 Answer]]
 
-# 1 教材
 ![zz_figure/Pasted image 20260328123830.png](/img/user/zz_figure/Pasted%20image%2020260328123830.png)  
 ![zz_figure/Pasted image 20260328123845.png](/img/user/zz_figure/Pasted%20image%2020260328123845.png)  
 ![zz_figure/Pasted image 20260328123900.png](/img/user/zz_figure/Pasted%20image%2020260328123900.png)  
 
-# 2 补充题  
-## 2.1 
+# 1 补充题  
+## 1.1 
 已知能量和动量密度满足   
 $$
 \begin{align} 
@@ -19,8 +18,8 @@ w&= \frac{1}{2}\left( \epsilon_0E^2 + \frac{B^2}{\mu_0} \right) \geq \sqrt{\frac
 cg&= \frac{P}{c} = \sqrt{\frac{\epsilon_0}{\mu_0}} |\boldsymbol{E} \times \boldsymbol{B} | \leq  \sqrt{\frac{\epsilon_0}{\mu_0}} EB, \quad{仅当\boldsymbol{E} \perp \boldsymbol{B}时取等号}
 \end{align}
 $$
-所以当局部每一点均成立 $\boldsymbol{E} \perp \boldsymbol{B}$ 且 $E=cB$ 时，对全空间积分得到 $W = cG$。  
-## 2.2 
+所以当局部每一点均成立 $\boldsymbol{E} \perp \boldsymbol{B}$, $E=cB$, 且 $\boldsymbol{g}$ 方向不变时, 对全空间积分得到 $W = cG$。  
+## 1.2 
 以中点为原点，连线为z轴建立柱坐标系，电荷坐标 $(0,0,\pm a)$，则中垂面上任意一点的电场沿着柱坐标 $\hat{s}$ 方向
 $$
 E_s = 2 \cdot \frac{q}{4\pi\epsilon_0 {s^2+a^2}} \cdot \frac{s}{\sqrt{s^2+a^2}} = \frac{q}{2\pi\epsilon_0} \frac{s}{ ({s^2+a^2})^{3/2}}
@@ -44,9 +43,9 @@ F_z  &= \int_0^{+\infty}  \frac{q^2}{4\pi\epsilon_0} \frac{s^3}{ ({s^2+a^2})^{3}
 \end{align}
 $$
 
-# 3 思考题  
-## 3.1 磁偶极子/带电旋转球
-### 3.1.1 
+# 2 思考题  
+## 2.1 磁偶极子/带电旋转球
+### 2.1.1 
 球壳上的面电流密度 $\boldsymbol{K}(\boldsymbol{x}')$ 是由表面电荷随球壳转动产生的，其表达式为：
 $$
 \boldsymbol{K}(\boldsymbol{x}') = \sigma_0 \boldsymbol{v} = \sigma_0 (\boldsymbol{\omega} \times \boldsymbol{x}')
@@ -81,7 +80,7 @@ $$
 $$
 \boldsymbol{A}_{out}(\boldsymbol{x}) = \frac{\mu_0 \sigma_0 a^3}{3} \frac{a}{r^2} (\boldsymbol{\omega} \times \frac{\boldsymbol{x}}{r}) = {\frac{\mu_0 \sigma_0 a^4}{3 r^3} (\boldsymbol{\omega} \times \boldsymbol{x})}, \quad r>a
 $$
-### 3.1.2 
+### 2.1.2 
 磁感应强度由 $\boldsymbol{B} = \nabla \times \boldsymbol{A}$ 给出。利用 $\nabla \times (\boldsymbol{\omega} \times \boldsymbol{x}) = \boldsymbol{\omega}(\nabla \cdot \boldsymbol{x}) - (\boldsymbol{\omega} \cdot \nabla)\boldsymbol{x} = 3\boldsymbol{\omega} - \boldsymbol{\omega} = 2\boldsymbol{\omega}$，可得：
 $$
 \boldsymbol{B}_{in} = \nabla \times \left[ \frac{\mu_0 \sigma_0 a}{3} (\boldsymbol{\omega} \times \boldsymbol{x}) \right] = {\frac{2}{3} \mu_0 \sigma_0 a \boldsymbol{\omega}}  
@@ -93,7 +92,7 @@ $$\nabla \times \left( \frac{\boldsymbol{\omega} \times \boldsymbol{x}}{r^3} \ri
 代入系数，得到球外的磁场分布：
 $$\boldsymbol{B}_{out} = {\frac{\mu_0 \sigma_0 a^4}{3 r^3} [3(\boldsymbol{\omega} \cdot \hat{\boldsymbol{r}})\hat{\boldsymbol{r}} - \boldsymbol{\omega}]}$$
 显然这是一个磁偶极子场，其磁矩为 $\boldsymbol{m} = \frac{4\pi}{3}\sigma_0 \boldsymbol{\omega} a^4$。
-### 3.1.3 
+### 2.1.3 
 和课上带电球受力的求解类似，我们选择包围整个上半空间（$z > 0$）的闭合曲面 $S$。这个闭合曲面包括无穷远处的半球面（$r \to \infty, z > 0$）和赤道平面（$z = 0$）。
 
 由于在无穷远处，偶极子磁场 $B \propto 1/r^3$，所以张量分量 $T \propto 1/r^6$。而无穷远半球面的面积元 $\mathrm{d}a \propto r^2$，因此当 $r \to \infty$ 时，无穷远半球面上的积分项趋近于 $0$。
@@ -113,8 +112,8 @@ $$F_{z}^{out} = -\int_a^\infty \left( \frac{\mu_0 \sigma_0^2 a^8 \omega^2}{18 r^
 最终得到
 $$F_z = F_{z}^{in} + F_{z}^{out} = {-\frac{\pi}{4} \mu_0 \sigma_0^2 a^4 \omega^2}$$
 负号代表方向朝下（南半球方向），即两半球之间相互吸引。
-## 3.2 电子经典球壳模型
-### 3.2.1 
+## 2.2 电子经典球壳模型
+### 2.2.1 
 对于半径为 $a$、电量为 $e$ 的均匀带电球壳，球内电场为 $0$，球外电场为 $E = \frac{e}{4\pi\epsilon_0 r^2}$，$\sigma_0=\frac{e}{4\pi a^2}$，
 $$W_E = \int_{a}^{\infty} \frac{1}{2}\epsilon_0 E^2 (4\pi r^2) \mathrm{d}r = \frac{e^2}{8\pi\epsilon_0 a}$$
 利用上一题结论，内部磁场 $B_{in} = \frac{\mu_0 e \omega}{6\pi a}$，外部为偶极场。
@@ -131,7 +130,7 @@ $$W_M = \frac{1}{2} \int_0^\pi \left( \frac{\mu_0 e \omega a \sin\theta}{12\pi} 
 总能量
 $$W = \frac{e^2}{8\pi\epsilon_0 a} + \frac{\mu_0 e^2 \omega^2 a}{36\pi}$$
 
-### 3.2.2 
+### 2.2.2 
 磁矩 $\boldsymbol{m} = \frac{4\pi}{3}\sigma_0 \boldsymbol{\omega} a^4=\frac{1}{3}e\boldsymbol{\omega}a^2$，电磁场角动量  
 $$
 \boldsymbol{L} = \int \boldsymbol{r} \times \boldsymbol{g} \,\mathrm{d}V =  \int \boldsymbol{r} \times (\epsilon_0 \boldsymbol{E} \times \boldsymbol{B}) \,\mathrm{d}V
@@ -162,7 +161,7 @@ $$
 $$
 
 
-### 3.2.3 
+### 2.2.3 
 通常在经典模型中，由于 $\omega a \ll c$ 的预期，磁能项 $W_M$ 远小于静电能 $W_E$。我们先忽略 $W_M$：
 
 由 $W \approx \frac{e^2}{8\pi\epsilon_0 a} = m_e c^2$ 得 $a = \frac{e^2}{8\pi\epsilon_0 m_e c^2}$ (即经典电子半径)；由角动量公式 $\frac{\mu_0 e^2 a \omega}{18\pi} = \frac{\hbar}{2}$ 得 $\omega = \frac{9\pi \hbar}{\mu_0 e^2 a}$。以及
