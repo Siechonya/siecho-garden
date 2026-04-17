@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW5 Answer/","noteIcon":"default","created":"2026-04-06T15:26:37.081+08:00","updated":"2026-04-14T14:59:39.843+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW5 Answer/","noteIcon":"default","created":"2026-04-06T15:26:37.081+08:00","updated":"2026-04-14T16:00:52.418+08:00"}
 ---
 
 # 1 《电磁学与电动力学》（下册）
@@ -42,15 +42,16 @@ $$
 t(\tau) = \frac{c}{a} \sinh\left(\frac{a\tau}{c}\right)
 }
 $$
-同理
+同理按4速度的定义得到
 $$
 \frac{\mathrm{d}x}{\mathrm{d}\tau} = U^1 = c \sinh \phi = c \sinh\left(\frac{a\tau}{c}\right)
 $$
-对 $\tau$ 积分：
+直接对 $\tau$ 积分得到：
 $$
-x(\tau) = \frac{c^2}{a} \cosh\left(\frac{a\tau}{c}\right) + \frac{c^2}{a}
+\boxed
+{x(\tau) = \frac{c^2}{a} \cosh\left(\frac{a\tau}{c}\right) + \frac{c^2}{a}}
 $$
-绘制运动的bro.的世界线：  
+这样就给出了bro的参数化世界线。下面给一个例子，绘制了运动的bro的世界线：  
 ![zz_figure/Pasted image 20260414145843.png](/img/user/zz_figure/Pasted%20image%2020260414145843.png)
 ```desmos-graph 
 left=-1;right=10
@@ -260,7 +261,6 @@ x^2y^2 - 2xy +1
 (xy-1)^2
 \end{align}
 $$
-
 所以总是有 $xy \ge \sqrt{x^2 - 1}\sqrt{y^2 - 1} + 1$，因此 $\Lambda^0{}_0 \ge 1$。
 
 
