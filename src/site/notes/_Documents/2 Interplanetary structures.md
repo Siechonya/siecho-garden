@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-10-23T14:37:00.814+08:00","updated":"2026-04-06T17:57:52.853+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-10-23T14:37:00.814+08:00","updated":"2026-04-22T16:07:40.273+08:00"}
 ---
 
 
 # 1 Compressive Coherent Structures at Ion Scales in The Slow Solar Wind (have read)   
-Perrone, D., Alexandrova, O., Mangeney, A., Maksimovic, M., Lacombe, C., Rakoto, V., Kasper, J. C., & Jovanovic, D. (2016). Compressive coherent structures at ion scales in the slow solar wind. _The Astrophysical Journal_, 826(2), 196. [https://doi.org/10.3847/0004-637X/826/2/196](https://doi.org/10.3847/0004-637X/826/2/196)
+Perrone, D., Alexandrova, O., Mangeney, A., Maksimovic, M., Lacombe, C., Rakoto, V., Kasper, J. C., & Jovanovic, D. (2016). Compressive coherent structures at ion scales in the slow solar 0wind. _The Astrophysical Journal_, 826(2), 196. [https://doi.org/10.3847/0004-637X/826/2/196](https://doi.org/10.3847/0004-637X/826/2/196)
 ## 1.1 主要内容  
 ### 1.1.1 简介
 > [!摘要]
@@ -196,6 +196,8 @@ title Structure Distribution [101]
 [[_Documents/words/part.2 words#2 Compressive Coherent Structures at Ion Scales in The Slow Solar Wind\|part.2 words]]
 # 3 Magnetospheric multiscale observation of kinetic signatures in the Alfvén vortex  
 Wang, T., Alexandrova, O., Perrone, D., Dunlop, M., Dong, X., Bingham, R., Khotyaintsev, Y. V., Russell, C. T., Giles, B. L., Torbert, R. B., Ergun, R. E., & Burch, J. L. (2019). Magnetospheric multiscale observation of kinetic signatures in the Alfvén vortex. _The Astrophysical Journal Letters,871_(2), L 22. [https://doi.org/10.3847/2041-8213/aafe0d](https://doi.org/10.3847/2041-8213/aafe0d)  
+
+[2.3 Magnetospheric Multiscale Observation of Kinetic Signatures in the Alfvén Vortex](/img/user/_Documents/docs/2.3%20Magnetospheric%20Multiscale%20Observation%20of%20Kinetic%20Signatures%20in%20the%20Alfv%C3%A9n%20Vortex.pdf)
 # 4 Soliton approach to magnetic holes
 Baumgärtel, K. (1999), Soliton approach to magnetic holes, _J. Geophys. Res._, 104(A12), 28295–28308, doi:[10.1029/1999JA900393](https://doi.org/10.1029/1999JA900393 "Link to external resource: 10.1029/1999JA900393").
 # 5 Magnetic Holes in the Solar Wind  
@@ -217,7 +219,8 @@ Jovanović, D.,  O. Alexandrova, M. Maksimović, and M. Belić,  (2020). Fluid 
  
 
 
-
+# 10 Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath  
+[2.10 Wu_2021_ApJ_Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath](/img/user/_Documents/docs/2.10%20Wu_2021_ApJ_Statistical%20Properties%20of%20Small-scale%20Linear%20Magnetic%20Holes%20in%20the%20Martian%20Magnetosheath.pdf)
 
 
 

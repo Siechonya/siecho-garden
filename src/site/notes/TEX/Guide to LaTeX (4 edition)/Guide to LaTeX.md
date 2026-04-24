@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/TEX/Guide to LaTeX (4 edition)/Guide to LaTeX/","noteIcon":"default","created":"2026-02-23T14:24:51.846+08:00","updated":"2026-02-23T14:45:04.503+08:00"}
+{"dg-publish":true,"permalink":"/TEX/Guide to LaTeX (4 edition)/Guide to LaTeX/","noteIcon":"default","created":"2026-02-23T14:24:34.104+08:00","updated":"2026-02-23T14:45:04.503+08:00"}
 ---
 
 
