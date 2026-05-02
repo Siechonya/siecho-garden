@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW6 Answer/","noteIcon":"default","created":"2026-04-17T12:55:27.273+08:00","updated":"2026-04-24T17:45:13.958+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW6 Answer/","noteIcon":"default","created":"2026-04-17T12:55:27.273+08:00","updated":"2026-04-28T11:32:20.242+08:00"}
 ---
 
 # 1 《电磁学与电动力学》(下册)  
