@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-05T22:59:56.629+08:00","updated":"2026-05-05T20:09:00.080+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-05T22:59:56.629+08:00","updated":"2026-05-06T12:25:09.068+08:00"}
 ---
 
 
@@ -40,7 +40,7 @@ $$
 \quad  \epsilon_{ijk} \epsilon_{ij n} = 2\delta_{kn},
 \quad  \epsilon_{ijk} \epsilon_{ijk} = 3! = 6 
 $$
-> [!info] More particularly,
+> [!info] More generally*
 > $$
 \epsilon_{ijk} \epsilon_{lmn} = \det\begin{pmatrix}
 \delta_{il} & \delta_{im} & \delta_{in} \\
@@ -268,7 +268,7 @@ $$
 ,\quad
 \boldsymbol{x}:\text{field}; ~ \boldsymbol{x}':\text{source}
 $$
-for static electric field, Coulomb's Law:  
+for static electric field, Coulomb's Law  
 $$
 \implies
 \boldsymbol{E}(\boldsymbol{x}) 
@@ -688,7 +688,7 @@ $$
 for $\tilde{E}_1 = A_1 e^{\mathrm{i} \phi} ,  \tilde E_2 = A_2 e^{\mathrm{i} (\phi +\delta)}$, if $A_{1,2}$ is independent with $(t,\boldsymbol{x})$,
 $$
 \nabla \longrightarrow \mathrm{i}\boldsymbol{k}, \quad
-\nabla \cdot \longrightarrow \mathrm{i}\boldsymbol{k} \cdot, \quad
+\nabla \cdot \longrightarrow \mathrm{i}\boldsymbol{k} ~\cdot, \quad
 \nabla \times \longrightarrow \mathrm{i}\boldsymbol{k} \times, \quad
 \frac{\partial}{\partial t} \longrightarrow -\mathrm{i}\omega
 $$
@@ -772,7 +772,107 @@ $$
 \boldsymbol{f}_{total} = \boldsymbol{f}_f - \frac{1}{2} E^2 \nabla \epsilon - \frac{1}{2} H^2 \nabla \mu
 $$
 # 3 Special Relativity & Tensor analysis (Minkowski spacetime)   
-## 3.1 Lorentz transformation  
+## 3.1 Fundamental definition  
+$$
+(g)_{\alpha\beta} = (g)^{\alpha\beta} = diag(-1,+1,+1,+1)_{\alpha\beta}
+$$
+- Primary 4-vector
+$$
+x^\alpha = (ct, \boldsymbol{x}), \quad 
+u^\alpha = \frac{ \mathrm{d} x^\alpha }{ \mathrm{d} \tau} = \gamma (c, \boldsymbol{v}),\quad 
+a^\alpha = \frac{ \mathrm{d} u^\alpha }{ \mathrm{d} \tau} 
+= \left( {\gamma^4} (\boldsymbol{\beta} \cdot \boldsymbol{a}), \gamma^2 \boldsymbol{a} + {\gamma^4} (\boldsymbol{\beta} \cdot \boldsymbol{a}) \boldsymbol{\beta} \right)
+$$
+$$
+u^\alpha u_\alpha = -c^2,\quad a^\mu u_\mu =0
+$$
+The accelerated speed in the instantaneous co-moving frame is $\boldsymbol{a}_{in}$, 
+$$
+a^\mu a_\mu = |\boldsymbol{a}_{in}|^2 = \gamma^4 \left[ |\boldsymbol{a}|^2 + \gamma^2 (\boldsymbol{\beta} \cdot \boldsymbol{a})^2\right]
+\implies
+|\boldsymbol{a}_{in}| = 
+\begin{cases} 
+\gamma^2 a, \boldsymbol{\beta} \perp \boldsymbol{a} \\[4pt]
+\gamma^3 a, \boldsymbol{\beta} \parallel \boldsymbol{a}
+\end{cases}
+$$
+- Primary characteristics of metric
+$$
+g_{\alpha\beta}g^{\beta\gamma} = \delta_\alpha^\gamma
+$$
+- Lorentz transformation  
+$$
+\mathrm{d} s^2 = g_{\alpha\beta} \mathrm{d}x^\alpha \mathrm{d}x^\beta = \mathrm{d}x_\alpha\mathrm{d}x^\beta = -c^2\mathrm{d}t^2 + |\mathrm{d}\boldsymbol{x}|^2 = -c^2\mathrm{d}\tau^2
+$$
+Christoffel symbols (the first kind)*
+$$
+\Gamma_{\rho\mu\nu} = \frac{1}{2} \left( \frac{\partial g_{\rho\mu}}{\partial x^\nu} + \frac{\partial g_{\rho\nu}}{\partial x^\mu} - \frac{\partial g_{\mu\nu}}{\partial x^\rho} \right)
+= g_{\alpha\beta} \frac{ \partial^2 x'^\alpha }{ \partial x^\nu \partial x^\mu } \frac{ \partial x'^\beta }{ \partial x^\rho } = 0
+$$
+$$
+\implies
+x'^\alpha = \Lambda^{\alpha}_{~~\beta} x^\beta + a^\alpha
+$$
+the inverse of the matrix $\Lambda^\alpha_{~~\beta}$ is $\Lambda_{\beta}^{~~\alpha}$:  
+$$
+(\Lambda^{-1})^\mu_{~~\alpha} = g_{\alpha\beta} \Lambda^\beta_{~~\nu}g^{\nu\mu} = \Lambda_\alpha^{~~\mu}
+$$
+$$
+\Lambda^\alpha_{~~\beta} \Lambda_\alpha^{~~\gamma} = \delta_\beta^\gamma \quad \text{or} \quad \Lambda^\alpha_{~~\gamma} \Lambda_\beta^{~~\gamma} = \delta_\beta^\alpha
+$$
+for $x$-axis boost:  
+$$
+\Lambda^\alpha_{~~\beta} = \begin{bmatrix} \gamma & \gamma\beta &  &  \\  \gamma\beta & \gamma &  &  \\  &  &  1 &  \\  &  &  & 1 \end{bmatrix},\quad
+\Lambda^{~~\alpha}_{\beta} = \begin{bmatrix} \gamma & -\gamma\beta &  &  \\  -\gamma\beta & \gamma &  &  \\  &  &  1 &  \\  &  &  & 1 \end{bmatrix}
+$$
+for general boost   
+$$
+
+$$
+Metric invariance condition   
+$$
+\boxed{g_{\alpha\beta} \Lambda^{\alpha}_{~~\mu} \Lambda^{\beta}_{~~\nu} = g_{\mu\nu}}
+$$
+$$
+\implies
+g^{\mu\nu} \Lambda^{\alpha}_{~~\mu} \Lambda^{\beta}_{~~\nu} = g^{\alpha\beta},\quad
+g_{\alpha\beta} \Lambda_{\mu}^{~~\alpha}\Lambda_\nu^{~~\beta} = g_{\mu\nu},\quad
+g^{\mu\nu} \Lambda_{\mu}^{~~\alpha}\Lambda_\nu^{~~\beta} = g^{\alpha\beta}
+$$
+
+
+
+- The Proper Orthochronous Lorentz Group*
+The Full Lorentz Group $O(1,3)$ consists of all transformations that preserve the Minkowski metric. From the property $\Lambda^T \eta \Lambda = \eta$ above, it follows that $|\det(\Lambda)|=1, |\Lambda^0_{~~0}|\geq 1$.  $O(1,3)$ is a Lie group that possesses four disjoint, connected components. It can be expressed as the union of the Proper Orthochronous Lorentz Group $SO(1,3)^\uparrow$ (the identity component) and its cosets:
+$$
+\mathcal{P} = diag(1,-1,-1,-1),~~\mathcal{T}=diag(-1,1,1,1)
+$$
+$$
+O(1,3) = \{SO(1,3)^\uparrow,\ \mathcal{P} SO(1,3)^\uparrow,\ \mathcal{T} SO(1,3)^\uparrow,\ \mathcal{P} \mathcal{T} SO(1,3)^\uparrow \}
+$$
+Infinitesimal Lorentz transformation  
+$$
+\Lambda^\mu_{~~\nu} = \delta^\mu_{\nu} + \omega^\mu_{~~\nu}
+,\quad
+\text{with}~
+\omega^\mu_{~~\nu} = \begin{pmatrix} 0 & \beta_x & \beta_y & \beta_z \\ \beta_x & 0 & \theta_z & -\theta_y \\ \beta_y & -\theta_z & 0 & \theta_x \\ \beta_z & \theta_y & -\theta_x & 0 \end{pmatrix}
+$$
+$$
+K' \to K:\quad x^\alpha = \Lambda^\alpha_{~~\beta}x'^\beta = \begin{bmatrix} ct' + \boldsymbol{\beta}\cdot\boldsymbol{x}' \\  \boldsymbol{x}' + \boldsymbol{\beta}ct' - \boldsymbol{\theta}\times\boldsymbol{x}' \end{bmatrix}
+$$
+For infinite transformation $\Omega = \lim_{ n \to \infty } n\omega$, 
+$$
+\Lambda = \\lim_{ n \to \infty } \left( 1+\frac{\Omega}{n} \right)^n = e^\Omega = \sum_{k=0}^{\infty} \frac{\Omega^k}{k!}
+=
+\begin{cases}
+\begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & \cos\theta & \sin\theta & 0 \\ 0 & -\sin\theta & \cos\theta & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix}, &\text{z-axis rotation} \\[4pt]
+\begin{bmatrix} ~~\mathrm{ch} \phi & ~~\mathrm{sh} \phi & &\\
+~~\mathrm{sh} \phi & ~~\mathrm{ch} \phi & & \\
+& & ~1 & \\
+& & & ~1 \end{bmatrix}, &\text{x-axis boost} ,\text{ with }\tanh \phi = \beta
+\end{cases}
+$$
+![Pasted image 20260506122206.png](/img/user/Pasted%20image%2020260506122206.png)
 
 # 4 Lagrangian Formulation of the EM Field  
 
