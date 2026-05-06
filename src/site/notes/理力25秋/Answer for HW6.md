@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW6/","noteIcon":"default","created":"2025-10-23T20:07:19.910+08:00","updated":"2025-11-13T21:08:38.648+08:00"}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW6/","noteIcon":"default","created":"2025-12-01T13:38:25.796+08:00","updated":"2025-11-13T21:08:38.648+08:00"}
 ---
 
 前三题的解析是鞠国兴解读的教材原内容。注意，它采用了一个奇怪的记号，即用 M 来表示角动量。

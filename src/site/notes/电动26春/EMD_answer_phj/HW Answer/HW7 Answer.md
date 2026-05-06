@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW7 Answer/","noteIcon":"default","created":"2026-04-24T17:44:57.258+08:00","updated":"2026-05-02T23:40:55.606+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW7 Answer/","noteIcon":"default","created":"2026-04-26T23:16:37.044+08:00","updated":"2026-05-06T09:42:30.351+08:00"}
 ---
 
 
@@ -42,7 +42,7 @@ $$
 The photon energy $Q$ is slightly less than the lost rest energy $Q_0$ because a small portion of the energy must go into the kinetic energy of the recoiling atom.
 # 2 Photon Rocket
 ## 2.1 
-Use subscript ' $p$ ' to indicate the photons emitted, refer tor the energy and momentum conservation,  
+Use subscript ' $p$ ' to indicate the photons emitted, refer to the energy and momentum conservation,  
 $$
 mc^2 = \gamma fm c^2 + E_{p},\quad P_p = \gamma fm v, \quad \text{with}~ E_p = P_p c
 $$
@@ -74,7 +74,7 @@ $$
 \Delta P^2 = 0 \quad \text{and} \quad \Delta P^3 = 0
 $$
 # 4 Energy-Momentum Tensor of Pure Radiation
-For free E.D. field in the problem, the energy-momentum tensor is  
+For free electromagnetic field in the problem, the energy-momentum tensor is  
 $$
 T^{\mu\nu} = \begin{bmatrix} \frac{1}{2}\epsilon_0(E^2 + c^2B^2) & \frac{1}{\mu_0 c} \boldsymbol{E} \times \boldsymbol{B} \\  \frac{1}{\mu_0 c} \boldsymbol{E} \times \boldsymbol{B} & \frac{1}{2}\epsilon_0(E^2 + c^2B^2)\delta_{ij} - \epsilon_0 (\boldsymbol{E}\boldsymbol{E} + c^2 \boldsymbol{B}\boldsymbol{B}) \end{bmatrix}
 $$
@@ -83,7 +83,7 @@ $$
 T^{\mu\nu} =  \begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 1 \end{pmatrix} \epsilon_0 E_0^2 \cos^2 k(z - ct)
 $$
 For a wave traveling in the $z$ -direction, the momentum flux is also only in the $z$ -direction, so only $T^{zz}$ is none-zero in the maxwell stress tensor. 
-# 5 Particle in the E.D. Field
+# 5 Particle in the EM Field
 ## 5.1 
 Since for $H = \int L_t \,\mathrm{d}t = \int L_\tau \,\mathrm{d}\tau$, where 
 $$

@@ -1,12 +1,12 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW3 Answer/","noteIcon":"default","created":"2026-03-27T23:31:17.934+08:00","updated":"2026-04-06T15:25:37.686+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW3 Answer/","noteIcon":"default","created":"2026-03-27T23:31:17.934+08:00","updated":"2026-05-06T09:40:18.666+08:00"}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW4 Answer\|HW4 Answer]]  
 
 ###### 改作业发现有问题的  
 - 1.15 补充说明
-- 4.1 直接上偏振度, 书上和课本上定义不一样, 光学看 t 变, 课上看 z 变
+- 4.1 直接上偏振度, 书上和课本上定义不一样
 - 补 1, 电磁势演化方程
 - 思考题, 不用交
 

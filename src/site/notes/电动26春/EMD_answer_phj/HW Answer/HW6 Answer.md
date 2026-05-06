@@ -1,7 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW6 Answer/","noteIcon":"default","created":"2026-04-17T12:55:27.273+08:00","updated":"2026-04-28T11:32:20.242+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW6 Answer/","noteIcon":"default","created":"2026-04-17T18:25:13.613+08:00","updated":"2026-05-06T09:41:41.495+08:00"}
 ---
 
+[[电动26春/EMD_answer_phj/HW Answer/HW7 Answer\|HW7 Answer]]
 # 1 《电磁学与电动力学》(下册)  
 - 8.5,8.7~8.12
 ![zz_figure/Pasted image 20260417153115.png](/img/user/zz_figure/Pasted%20image%2020260417153115.png)  
