@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-05T22:59:56.629+08:00","updated":"2026-05-06T12:25:09.068+08:00"}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-06T21:42:30.161+08:00","dg-note-properties":{}}
 ---
 
 
@@ -776,42 +776,44 @@ $$
 $$
 (g)_{\alpha\beta} = (g)^{\alpha\beta} = diag(-1,+1,+1,+1)_{\alpha\beta}
 $$
-- Primary 4-vector
 $$
-x^\alpha = (ct, \boldsymbol{x}), \quad 
-u^\alpha = \frac{ \mathrm{d} x^\alpha }{ \mathrm{d} \tau} = \gamma (c, \boldsymbol{v}),\quad 
-a^\alpha = \frac{ \mathrm{d} u^\alpha }{ \mathrm{d} \tau} 
-= \left( {\gamma^4} (\boldsymbol{\beta} \cdot \boldsymbol{a}), \gamma^2 \boldsymbol{a} + {\gamma^4} (\boldsymbol{\beta} \cdot \boldsymbol{a}) \boldsymbol{\beta} \right)
-$$
-$$
-u^\alpha u_\alpha = -c^2,\quad a^\mu u_\mu =0
-$$
-The accelerated speed in the instantaneous co-moving frame is $\boldsymbol{a}_{in}$, 
-$$
-a^\mu a_\mu = |\boldsymbol{a}_{in}|^2 = \gamma^4 \left[ |\boldsymbol{a}|^2 + \gamma^2 (\boldsymbol{\beta} \cdot \boldsymbol{a})^2\right]
-\implies
-|\boldsymbol{a}_{in}| = 
-\begin{cases} 
-\gamma^2 a, \boldsymbol{\beta} \perp \boldsymbol{a} \\[4pt]
-\gamma^3 a, \boldsymbol{\beta} \parallel \boldsymbol{a}
-\end{cases}
+x^\alpha = (ct, \boldsymbol{x})
 $$
 - Primary characteristics of metric
+
+Normalization
 $$
 g_{\alpha\beta}g^{\beta\gamma} = \delta_\alpha^\gamma
 $$
-- Lorentz transformation  
+Metric invariance condition   
+$$
+\boxed{g_{\alpha\beta} \Lambda^{\alpha}_{~~\mu} \Lambda^{\beta}_{~~\nu} = g_{\mu\nu}}
+$$
+$$
+\implies
+g^{\mu\nu} \Lambda^{\alpha}_{~~\mu} \Lambda^{\beta}_{~~\nu} = g^{\alpha\beta},\quad
+g_{\alpha\beta} \Lambda_{\mu}^{~~\alpha}\Lambda_\nu^{~~\beta} = g_{\mu\nu},\quad
+g^{\mu\nu} \Lambda_{\mu}^{~~\alpha}\Lambda_\nu^{~~\beta} = g^{\alpha\beta}
+$$
+## 3.2 Lorentz transformation  
+Invariant interval
 $$
 \mathrm{d} s^2 = g_{\alpha\beta} \mathrm{d}x^\alpha \mathrm{d}x^\beta = \mathrm{d}x_\alpha\mathrm{d}x^\beta = -c^2\mathrm{d}t^2 + |\mathrm{d}\boldsymbol{x}|^2 = -c^2\mathrm{d}\tau^2
+\begin{cases} 
+<0, &\text{timelike} \\[4pt]
+=0, &\text{lightlike} \\[4pt]
+<0, &\text{spacelike} \\[4pt]
+\end{cases}
 $$
 Christoffel symbols (the first kind)*
 $$
 \Gamma_{\rho\mu\nu} = \frac{1}{2} \left( \frac{\partial g_{\rho\mu}}{\partial x^\nu} + \frac{\partial g_{\rho\nu}}{\partial x^\mu} - \frac{\partial g_{\mu\nu}}{\partial x^\rho} \right)
-= g_{\alpha\beta} \frac{ \partial^2 x'^\alpha }{ \partial x^\nu \partial x^\mu } \frac{ \partial x'^\beta }{ \partial x^\rho } = 0
+= g_{\alpha\beta} \frac{ \partial^2 x^\alpha }{ \partial x'^\nu \partial x'^\mu } \frac{ \partial x^\beta }{ \partial x'^\rho } = 0
 $$
 $$
 \implies
-x'^\alpha = \Lambda^{\alpha}_{~~\beta} x^\beta + a^\alpha
+K'\to K:\quad
+x^\alpha = \Lambda^{\alpha}_{~~\beta} x'^\beta + a^\alpha
 $$
 the inverse of the matrix $\Lambda^\alpha_{~~\beta}$ is $\Lambda_{\beta}^{~~\alpha}$:  
 $$
@@ -827,22 +829,26 @@ $$
 $$
 for general boost   
 $$
-
+\Lambda^\alpha_{~~\beta} = \begin{pmatrix} 
+\gamma & \gamma \boldsymbol{\beta} \\ \gamma \boldsymbol{\beta} & \mathsf{I} + (\gamma-1) \hat{\beta}\hat{{\beta}}
+\end{pmatrix}
 $$
-Metric invariance condition   
+Velocity transformation: Suppose frame $K'$ moves with velocity $\mathbf{v}=v\hat{e}_x$ relative to frame $K$ along the positive x-axis. An object has velocity $\boldsymbol{u} = (u_x, u_y, u_z)$ in frame $K$ and $\boldsymbol{u}' = (u'_x, u'_y, u'_z)$ in frame $K'$, then the velocity $\boldsymbol{u}$ transforms as: 
 $$
-\boxed{g_{\alpha\beta} \Lambda^{\alpha}_{~~\mu} \Lambda^{\beta}_{~~\nu} = g_{\mu\nu}}
+u_x = \frac{u'_x + v}{1 + \frac{v u'_x}{c^2}},\quad
+u_y = \frac{u'_y}{\gamma \left( 1 + \frac{v u'_x}{c^2} \right)},\quad
+u_z = \frac{u'_z}{\gamma \left( 1 + \frac{v u'_x}{c^2} \right)}
 $$
+If the boost is in an arbitrary direction $\boldsymbol{\beta} = \mathbf{v}/c$ *
 $$
-\implies
-g^{\mu\nu} \Lambda^{\alpha}_{~~\mu} \Lambda^{\beta}_{~~\nu} = g^{\alpha\beta},\quad
-g_{\alpha\beta} \Lambda_{\mu}^{~~\alpha}\Lambda_\nu^{~~\beta} = g_{\mu\nu},\quad
-g^{\mu\nu} \Lambda_{\mu}^{~~\alpha}\Lambda_\nu^{~~\beta} = g^{\alpha\beta}
+\boldsymbol{u} = \frac{1}{1 + \frac{\mathbf{v} \cdot \mathbf{u}'}{c^2}} \left[ \boldsymbol{u}' + \frac{1}{\gamma} \boldsymbol{u}_\perp + \mathbf{v} \right]
 $$
-
-
-
+Where $\boldsymbol{u}_\perp$ represents the component of $\boldsymbol{u}'$ perpendicular to the boost direction. Assuming $\theta = \langle \boldsymbol{u},\mathbf{v} \rangle,\theta' = \langle \boldsymbol{u'},\mathbf{v} \rangle$,*  
+$$
+\tan\theta = \frac{u' \sin\theta'}{\gamma_{\mathbf{v}} (u' \cos\theta' + v)}
+$$
 - The Proper Orthochronous Lorentz Group*
+
 The Full Lorentz Group $O(1,3)$ consists of all transformations that preserve the Minkowski metric. From the property $\Lambda^T \eta \Lambda = \eta$ above, it follows that $|\det(\Lambda)|=1, |\Lambda^0_{~~0}|\geq 1$.  $O(1,3)$ is a Lie group that possesses four disjoint, connected components. It can be expressed as the union of the Proper Orthochronous Lorentz Group $SO(1,3)^\uparrow$ (the identity component) and its cosets:
 $$
 \mathcal{P} = diag(1,-1,-1,-1),~~\mathcal{T}=diag(-1,1,1,1)
@@ -872,7 +878,62 @@ $$
 & & & ~1 \end{bmatrix}, &\text{x-axis boost} ,\text{ with }\tanh \phi = \beta
 \end{cases}
 $$
-![Pasted image 20260506122206.png](/img/user/Pasted%20image%2020260506122206.png)
+![zz_figure/Pasted image 20260506122206.png](/img/user/zz_figure/Pasted%20image%2020260506122206.png)
+## 3.3 Tensor analysis (Minkowski spacetime)   
+- Primary 4-vector
+$$
+u^\alpha = \frac{ \mathrm{d} x^\alpha }{ \mathrm{d} \tau} = \gamma (c, \boldsymbol{v}),\quad 
+a^\alpha = \frac{ \mathrm{d} u^\alpha }{ \mathrm{d} \tau} 
+= \left( {\gamma^4} (\boldsymbol{\beta} \cdot \boldsymbol{a}), \gamma^2 \boldsymbol{a} + {\gamma^4} (\boldsymbol{\beta} \cdot \boldsymbol{a}) \boldsymbol{\beta} \right)
+$$
+$$
+u^\alpha u_\alpha = -c^2,\quad a^\mu u_\mu =0
+$$
+The accelerated speed in the instantaneous co-moving frame is $\boldsymbol{a}_{in}$, 
+$$
+a^\mu a_\mu = |\boldsymbol{a}_{in}|^2 = \gamma^4 \left[ |\boldsymbol{a}|^2 + \gamma^2 (\boldsymbol{\beta} \cdot \boldsymbol{a})^2\right]
+\implies
+|\boldsymbol{a}_{in}| = 
+\begin{cases} 
+\gamma^2 a, \boldsymbol{\beta} \perp \boldsymbol{a} \\[4pt]
+\gamma^3 a, \boldsymbol{\beta} \parallel \boldsymbol{a}
+\end{cases}
+$$
+- 4-momentum
+$$
+p^\alpha = mu^\alpha = (\gamma m c, \gamma m \boldsymbol{v}) = \left( \frac{\mathcal{E}}{c}, \boldsymbol{p} \right)
+$$
+$$
+\mathcal{E}^2 = (|\boldsymbol{p}|c)^2 + (mc^2)^2
+$$
+- The recursion formula of decomposition  
+$$
+T^{(\alpha_1\alpha_2\cdots\alpha_s)} = \frac{1}{s}\sum_{k=1}^s T^{\alpha_k(\alpha_1\alpha_2\cdots\alpha_{k-1}\alpha_{k+1}\cdots\alpha_s)}
+$$
+$$
+T^{[\alpha_1\alpha_2\cdots\alpha_s]} = \frac{1}{s}\sum_{k=1}^s (-1)^{k-1} T^{\alpha_k[\alpha_1\alpha_2\cdots\alpha_{k-1}\alpha_{k+1}\cdots,\alpha_s]}
+$$
+with base case is $T^{(\alpha)} = T^{[\alpha]} = T^{\alpha}$. for ex.,  
+
+$$
+T^{(\alpha\beta)} = \frac{{T^{\alpha\beta}+T^{\beta\alpha}}}{2}, T^{[\alpha\beta]} = \frac{{T^{\alpha\beta}-T^{\beta\alpha}}}{2}
+$$
+$$
+T^{[\alpha\beta]} \triangleq \begin{pmatrix} 0 & \boldsymbol{p} \\  -\boldsymbol{p} & \mathsf{a} \end{pmatrix} \triangleq \{\boldsymbol{p}, \boldsymbol{a}\},\quad
+\text{with} \, a_{ij} = \epsilon_{ijk}a_k ~(\text{or } \mathsf{a}=-\mathsf{I}\times\boldsymbol{a})
+$$
+$$
+\begin{aligned}
+T^{(\alpha\beta\gamma)} &= \frac{1}{3}\left[T^{\alpha(\beta\gamma)} + T^{\beta(\alpha\gamma)} + T^{\gamma(\alpha\beta)}\right] \\
+&= \frac{1}{6}\left[T^{\alpha\beta\gamma} + T^{\alpha\gamma\beta} + T^{\beta\alpha\gamma} + T^{\beta\gamma\alpha} + T^{\gamma\alpha\beta} + T^{\gamma\beta\alpha}\right]
+\end{aligned}
+$$
+$$
+\begin{aligned}
+T^{[\alpha\beta\gamma]} &= \frac{1}{3}\left[(-1)^0 T^{\alpha[\beta\gamma]} + (-1)^1 T^{\beta[\alpha\gamma]} + (-1)^2 T^{\gamma[\alpha\beta]}\right] \\
+&= \frac{1}{6}\left[T^{\alpha\beta\gamma} - T^{\alpha\gamma\beta} - T^{\beta\alpha\gamma} + T^{\beta\gamma\alpha} + T^{\gamma\alpha\beta} - T^{\gamma\beta\alpha}\right]
+\end{aligned}
+$$
 
 # 4 Lagrangian Formulation of the EM Field  
 

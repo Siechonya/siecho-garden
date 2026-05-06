@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW6 Answer/","noteIcon":"default","created":"2026-04-17T18:25:13.613+08:00","updated":"2026-05-06T09:41:41.495+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW6 Answer/","noteIcon":"default","created":"2026-04-17T12:55:27.273+08:00","updated":"2026-05-06T09:41:41.495+08:00","dg-note-properties":{}}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW7 Answer\|HW7 Answer]]
@@ -19,7 +19,7 @@
 
 # 2 补充题  
 ## 2.1 
-![zz_figure/Pasted image 20260417125943.png|548](/img/user/zz_figure/Pasted%20image%2020260417125943.png)  
+![zz_figure/Pasted image 20260417125943.png\|548](/img/user/zz_figure/Pasted%20image%2020260417125943.png)  
 
 ### 2.1.1 
 利用电磁张量的两个不变量，有如下结论

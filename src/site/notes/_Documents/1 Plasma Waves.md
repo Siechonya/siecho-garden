@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/1 Plasma Waves/","noteIcon":"default","created":"2025-12-01T13:39:24.269+08:00","updated":"2026-02-12T16:31:42.546+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/1 Plasma Waves/","noteIcon":"default","created":"2025-07-31T13:43:21.487+08:00","updated":"2026-05-06T13:48:05.297+08:00","dg-note-properties":{}}
 ---
 
 # 总览%
@@ -18,14 +18,14 @@ debugInConsole: false # Print debug info in Obsidian console
 # 约定格式说明%
 本文件后续的文献整理满足以下格式, 以方便查阅/回忆:
 
-|           | 含义                                                                          |
-| --------- | --------------------------------------------------------------------------- |
-| 文件名       | 论文研究方向                                                                      |
-| 一 级标题     | 论文索引和论文标题  <br>后缀：<br>- 无标记. 未读<br>- have read.已读<br>- read partially. 部分已读 |
-| 一级标题后面直接跟 | 论文的基本信息，采用 JGR 引用格式(见 [[_Documents/AGU引用格式\|AGU引用格式]]).                     |
-| 简述        | 论文的主要技术实现和结果.                                                               |
-| 链接        | 论文的本地链接                                                                     |
-| 补充        | 其他说明, 包括生词本等等                                                               |
+|           | 含义                            |
+| --------- | ----------------------------- |
+| 文件名       | 论文研究方向                        |
+| 一 级标题     | 论文索引和论文标题                     |
+| 一级标题后面直接跟 | 1. bibtex 引用格式<br>2. JGR 引用格式 |
+| 简述        | 论文的主要技术实现和结果.                 |
+| 链接        | 论文的本地链接                       |
+| 补充        | 其他说明, 包括生词本等等                 |
 
 # 1 Analytical chorus wave model derived from Van Allen Probe  observations. (have read)
 Wang, D., Shprits, Y. Y., Zhelavskaya, I. S., Agapitov, O. V., Drozdov, A. Y., & Aseev, N. A. (2019). Analytical chorus wave model derived from Van Allen Probe  observations. _Journal of Geophysical Research: Space Physics_, 124, 1063–1084. https://doi.org/10.1029/2018JA026183

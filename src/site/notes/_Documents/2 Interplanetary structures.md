@@ -1,9 +1,25 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-12-01T13:41:33.089+08:00","updated":"2026-04-22T16:07:40.273+08:00"}
+{"dg-publish":true,"permalink":"/_Documents/2 Interplanetary structures/","noteIcon":"default","created":"2025-10-23T14:37:00.814+08:00","updated":"2026-05-06T13:46:20.532+08:00","dg-note-properties":{}}
 ---
 
 
 # 1 Compressive Coherent Structures at Ion Scales in The Slow Solar Wind (have read)   
+```bib
+@article{Perrone2016,
+doi = {10.3847/0004-637X/826/2/196},
+url = {https://doi.org/10.3847/0004-637X/826/2/196},
+year = {2016},
+month = {jul},
+publisher = {The American Astronomical Society},
+volume = {826},
+number = {2},
+pages = {196},
+author = {Perrone, D. and Alexandrova, O. and Mangeney, A. and Maksimovic, M. and Lacombe, C. and Rakoto, V. and Kasper, J.~C. and Jovanovic, D.},
+title = {COMPRESSIVE COHERENT STRUCTURES AT ION SCALES IN THE SLOW SOLAR WIND},
+journal = {The Astrophysical Journal}
+}
+```
+
 Perrone, D., Alexandrova, O., Mangeney, A., Maksimovic, M., Lacombe, C., Rakoto, V., Kasper, J. C., & Jovanovic, D. (2016). Compressive coherent structures at ion scales in the slow solar 0wind. _The Astrophysical Journal_, 826(2), 196. [https://doi.org/10.3847/0004-637X/826/2/196](https://doi.org/10.3847/0004-637X/826/2/196)
 ## 1.1 主要内容  
 ### 1.1.1 简介
@@ -147,6 +163,22 @@ $\vec v_{sw}$ 是 solar wind 的局地平均速度。
 
 
 # 2 Coherent Structures at Ion Scales in Fast Solar Wind: Cluster Observations (partially)  
+```bib
+@article{Perrone2017,
+doi = {10.3847/1538-4357/aa9022},
+url = {https://doi.org/10.3847/1538-4357/aa9022},
+year = {2017},
+month = {oct},
+publisher = {The American Astronomical Society},
+volume = {849},
+number = {1},
+pages = {49},
+author = {Perrone, D. and Alexandrova, O. and Roberts, O.~`W. and Lion, S. and Lacombe, C. and Walsh, A. and Maksimovic, M. and Zouganelis, I.},
+title = {Coherent Structures at Ion Scales in Fast Solar Wind: Cluster Observations},
+journal = {The Astrophysical Journal}
+}
+```
+
 Perrone, D., Alexandrava, O., Roberts, O. W., Lion, S., Lacombe, C., Walsh, A., Maksimovic, M., & Zouganelis, I. (2017). Coherent structures at ion scales in fast solar wind: Cluster observations. _The Astrophysical Journal_ , 849(1), 49. https://doi.org/10.3847/1538-4357/aa9022
 ## 2.1 主要内容  
 > [!info] 摘要

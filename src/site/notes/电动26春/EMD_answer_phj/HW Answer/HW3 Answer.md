@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW3 Answer/","noteIcon":"default","created":"2026-03-27T23:31:17.934+08:00","updated":"2026-05-06T09:40:18.666+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW3 Answer/","noteIcon":"default","created":"2026-03-27T23:31:17.934+08:00","updated":"2026-05-06T09:40:18.666+08:00","dg-note-properties":{}}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW4 Answer\|HW4 Answer]]  

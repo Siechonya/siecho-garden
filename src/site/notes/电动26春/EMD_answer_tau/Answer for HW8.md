@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_tau/Answer for HW8/","noteIcon":"default","created":"2026-03-09T12:46:52.025+08:00","updated":"2025-11-01T11:57:00.461+08:00"}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_tau/Answer for HW8/","noteIcon":"default","created":"2026-03-09T12:46:52.025+08:00","updated":"2025-11-01T11:57:00.461+08:00","dg-note-properties":{}}
 ---
 
 
@@ -311,7 +311,7 @@ $$
 R \approx 2 × 10^{-6}~ \Omega
 $$
 # 8 电偶极子的辐射  
-![zz_figure/Pasted image 20250612114137.png|750](/img/user/zz_figure/Pasted%20image%2020250612114137.png)
+![zz_figure/Pasted image 20250612114137.png\|750](/img/user/zz_figure/Pasted%20image%2020250612114137.png)
 
 <font color="#ff0000">本</font>题可以视为两个在 x-y 平面以角速度 $\omega$ 匀速旋转的电荷的辐射: 
 $$
