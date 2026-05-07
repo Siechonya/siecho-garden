@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-07T16:27:01.300+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-07T16:47:16.525+08:00","dg-note-properties":{}}
 ---
 
 
@@ -8,13 +8,23 @@
 	- Scalars and components for vectors or tensors are represented by lightface italic type ($a, \phi, a_i, T_{ij}$).
 	- Vectors are represented by boldface italic type ($\boldsymbol{a}, \boldsymbol{\omega}$).
 	- Second-order tensors are represented by boldface sans-serif type ($\mathsf{T}, \mathsf{I}$).
-- Operators & Constants: Roman (upright) type is used for fixed mathematical constants (e.g., Pi $\mathrm{\pi}$, the imaginary unit $\mathrm{i}$) and differential operators (e.g., the differential $\mathrm{d}$ in $\mathrm{d}x$).
-- Calculus Notation: For integrals, a thin space (`\,`) is used to separate the integrand from the differential operator, e.g., $\int f(x) \, \mathrm{d}x$.
+	- Operators & Constants: Roman (upright) type is used for fixed mathematical constants (e.g., Pi $\mathrm{\pi}$, the imaginary unit $\mathrm{i}$) and differential operators (e.g., the differential $\mathrm{d}$ in $\mathrm{d}x$).
+	- Calculus Notation: For integrals, a thin space (`\,`) is used to separate the integrand from the differential operator, e.g., $\int f(x) \, \mathrm{d}x$.
+
 - Minkowski Metric: The Minkowski metric tensor $\eta_{\mu\nu}$ is defined using the _mostly-plus_ signature convention:
 $$
 \eta_{\mu\nu} = \operatorname{diag}(-1, +1, +1, +1)
 $$
-Consequently, the invariant spacetime interval is given by $\mathrm{d}s^2 = -c^2\mathrm{d}t^2 + \mathrm{d}x^2 + \mathrm{d}y^2 + \mathrm{d}z^2$.
+Consequently, the invariant spacetime interval is given by $\mathrm{d}s^2 = -c^2\mathrm{d}t^2 + \mathrm{d}x^2 + \mathrm{d}y^2 + \mathrm{d}z^2$.  
+- Lorentz transformation
+$$
+K'\to K:\quad
+x^\alpha = \Lambda^{\alpha}_{~~\beta} x'^\beta
+$$
+For $x$-axis boost (where $K'$ moves with velocity $v\hat{e}_x$ relative to $K$), the transformation matrix $\Lambda$ is:
+$$
+\Lambda^\alpha_{~~\beta} = \begin{bmatrix} \gamma & \gamma\beta &  &  \\  \gamma\beta & \gamma &  &  \\  &  &  1 &  \\  &  &  & 1 \end{bmatrix}
+$$
 
 # 1 Preparatory Math.   
 ## 1.1 Vector and tensor analysis (Euclidean geometry)  
@@ -1059,8 +1069,7 @@ $$
 (\text{4-form elctromagnetic potential equation})
 $$
 ### 4.1.3 Lorentz transformation of EM field  
-from Lorentz transformation of $F^{\alpha\beta}$:
-![zz_figure/Pasted image 20260506122206.png\|422](/img/user/zz_figure/Pasted%20image%2020260506122206.png)
+from Lorentz transformation of $F^{\alpha\beta}$:  
 $$
 K'\to K:\quad
 F^{\alpha\beta} = \Lambda^\alpha_{~~\mu} \Lambda^\beta_{~~\nu} F'^{\mu\nu},\quad
@@ -1076,7 +1085,7 @@ $$
 &c\boldsymbol{B}_\perp' = \gamma (c\boldsymbol{B}_\perp - \boldsymbol{\beta}\times \boldsymbol{E})
 \end{cases}
 $$
-or more neatly ($\mathcal{B}_\perp \triangleq \hat{\beta}\times c\boldsymbol{B},~~ \mathcal{B}_\parallel \triangleq c\boldsymbol{B}_\parallel$), 
+or more neatly (define $\mathcal{B}_\perp \triangleq \hat{\beta}\times c\boldsymbol{B},~~ \mathcal{B}_\parallel \triangleq c\boldsymbol{B}_\parallel$), 
 $$
 \begin{cases} 
 \boldsymbol{E}_\parallel' = \boldsymbol{E}_\parallel,
@@ -1085,10 +1094,9 @@ $$
 &\mathcal{B}_\perp' = \gamma (\mathcal{B}_\perp + \beta\boldsymbol{E}_\perp )
 \end{cases}
 $$
+#### Electric-like / Magnetic-like / Light-like field  
 
 
-$$
-$$
 # 5 Static Electric Field
 # 6 Static Magnetic Field  
 # 7 EM Wave
