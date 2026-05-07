@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW7 Answer/","noteIcon":"default","created":"2026-04-24T17:44:57.258+08:00","updated":"2026-05-06T09:42:30.351+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW7 Answer/","noteIcon":"default","created":"2026-04-24T17:44:57.258+08:00","updated":"2026-05-07T16:19:53.698+08:00","dg-note-properties":{}}
 ---
 
 
@@ -78,7 +78,7 @@ For free electromagnetic field in the problem, the energy-momentum tensor is
 $$
 T^{\mu\nu} = \begin{bmatrix} \frac{1}{2}\epsilon_0(E^2 + c^2B^2) & \frac{1}{\mu_0 c} \boldsymbol{E} \times \boldsymbol{B} \\  \frac{1}{\mu_0 c} \boldsymbol{E} \times \boldsymbol{B} & \frac{1}{2}\epsilon_0(E^2 + c^2B^2)\delta_{ij} - \epsilon_0 (\boldsymbol{E}\boldsymbol{E} + c^2 \boldsymbol{B}\boldsymbol{B}) \end{bmatrix}
 $$
-where one find obviously 
+where one finds obviously 
 $$
 T^{\mu\nu} =  \begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 1 \end{pmatrix} \epsilon_0 E_0^2 \cos^2 k(z - ct)
 $$
@@ -93,7 +93,7 @@ One obtain that
 $$
 L_t = \frac{L_\tau}{\gamma} = -mc^2\sqrt{1-\frac{v^2}{c^2} } + e\boldsymbol{A}\cdot\boldsymbol{v} - e\varphi
 $$
-substitute to the Euler-Lagrange equation $\frac{d}{dt} \frac{\partial L}{\partial \boldsymbol{v}} - \frac{\partial L}{\partial \boldsymbol{r}} =0$, one find  
+substitute to the Euler-Lagrange equation $\frac{d}{dt} \frac{\partial L}{\partial \boldsymbol{v}} - \frac{\partial L}{\partial \boldsymbol{r}} =0$, one finds  
 $$
 \frac{\mathrm{d}}{\mathrm{d}t} \gamma m \boldsymbol{v} = e \left( -\nabla \varphi - \frac{\partial \boldsymbol{A}}{\partial t} \right) + e\boldsymbol{v} \times \boldsymbol{B} = e\boldsymbol{E} + e\boldsymbol{v} \times \boldsymbol{B}
 $$

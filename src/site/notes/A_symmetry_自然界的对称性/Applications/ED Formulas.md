@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-07T14:35:10.865+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-07T16:27:01.300+08:00","dg-note-properties":{}}
 ---
 
 
@@ -227,7 +227,7 @@ $$
 \nabla \times \boldsymbol{F} &= \lim_{ V \to 0 } \left[ \frac{1}{V} \oint_{\partial V}  \mathrm{d}\boldsymbol{\sigma} \,\times \boldsymbol{F} \right]
 \end{align}\right.
 $$
-In Gauss's Divergence Theorem $\iiint_V \mathrm{d}V\, \nabla \cdot \boldsymbol{F}= \oint_{\partial V} \mathrm{d}\boldsymbol{\sigma}  \cdot \boldsymbol{F}$, if $\boldsymbol{F} = \varphi\nabla \psi$, one find the Green's first identity:
+In Gauss's Divergence Theorem $\iiint_V \mathrm{d}V\, \nabla \cdot \boldsymbol{F}= \oint_{\partial V} \mathrm{d}\boldsymbol{\sigma}  \cdot \boldsymbol{F}$, if $\boldsymbol{F} = \varphi\nabla \psi$, one finds the Green's first identity:
 $$
 \int_V \mathrm{d}V [\varphi\nabla^2 \psi + \nabla \varphi \cdot \nabla \psi] = \oint_{\partial V} \mathrm{d}\boldsymbol{\sigma} \cdot \varphi\nabla \psi
 $$
@@ -434,7 +434,7 @@ $$
 $$
 x\delta(x) = 0,\quad x^n \delta^{(n)}(x) = (-1)^n n! \delta(x),\quad x_i\delta^3(\boldsymbol{x}) = 0,\quad x_i\partial_j \delta^3(\boldsymbol{x}) = - \delta_{ij} \delta^3(\boldsymbol{x})
 $$
-for $f(x) : \mathbb{R} \to \mathbb{R}$, one find
+for $f(x) : \mathbb{R} \to \mathbb{R}$, one finds
 $$
 \delta(f(x)) = \sum_n \frac{\delta(x-x_i)}{\left| f'(x_i) \right|}, \quad \text{with}~ f(x_i)=0, f'(x_i)\neq 0
 $$
@@ -532,6 +532,7 @@ $$
 - \underset{\text{inertial term}}{\underbrace{\frac{m_e}{ne^2} \frac{\partial \boldsymbol{j}}{\partial t}}}
 +\underset{\text{more and more}}{\underbrace{\cdots}} \right)
 $$
+In most cases of electrodynamics, it suffices to retain the first term $\boldsymbol{j}=\sigma \boldsymbol{E}$. Don't be curious about exploring how many more terms are left behind.
 ## 2.2 Polarization and magnetization
 - Polarization and magnetization intensity
 $$
@@ -687,7 +688,7 @@ $$
 E_\pm = \hat{e}_\pm^* \cdot \boldsymbol{E}_0
 $$
 ### 2.5.3 Complex description  
-for $\tilde{E}_1 = A_1 e^{\mathrm{i} \phi} ,  \tilde E_2 = A_2 e^{\mathrm{i} (\phi +\delta)}$, if $A_{1,2}$ is independent with $(t,\boldsymbol{x})$,
+for $\tilde{E}_1 = A_1 e^{\mathrm{i} \phi} ,  \tilde E_2 = A_2 e^{\mathrm{i} (\phi +\delta)}$, if $A_{1,2}$ is independent with $(t,\boldsymbol{x})$, 
 $$
 \nabla \longrightarrow \mathrm{i}\boldsymbol{k}, \quad
 \nabla \cdot \longrightarrow \mathrm{i}\boldsymbol{k} ~\cdot, \quad
@@ -827,7 +828,7 @@ $$
 \Lambda^\alpha_{~~\beta} = \begin{bmatrix} \gamma & \gamma\beta &  &  \\  \gamma\beta & \gamma &  &  \\  &  &  1 &  \\  &  &  & 1 \end{bmatrix},\quad
 \Lambda^{~~\alpha}_{\beta} = \begin{bmatrix} \gamma & -\gamma\beta &  &  \\  -\gamma\beta & \gamma &  &  \\  &  &  1 &  \\  &  &  & 1 \end{bmatrix}
 $$
-for general boost   
+for general $\boldsymbol{\beta}$ boost:   
 $$
 \Lambda^\alpha_{~~\beta} = \begin{pmatrix} 
 \gamma & \gamma \boldsymbol{\beta} \\ \gamma \boldsymbol{\beta} & \mathsf{I} + (\gamma-1) \hat{\beta}\hat{{\beta}}
@@ -981,7 +982,7 @@ $$
 # 4 Lagrangian Formulation of the EM Field  
 ## 4.1 Covariant EM equation
 ### 4.1.1 Continuity equation  
-#### 4-current and charge conservation
+#### 4-current & charge conservation
 $$
 j^\alpha = \rho_0 u^\alpha = (\rho c , \boldsymbol{j}),\quad
 \text{with}~
@@ -1052,7 +1053,42 @@ $$
 A'^{\alpha} = A^\alpha + \partial^\alpha \psi
 $$
 - 4-form Maxwell's equation under the Lorenz gauge $\partial_\alpha A^{\alpha} = 0$
+$$
+\partial_\alpha \partial^\alpha A^\beta = - \mu_0 J^\beta
+\quad
+(\text{4-form elctromagnetic potential equation})
+$$
+### 4.1.3 Lorentz transformation of EM field  
+from Lorentz transformation of $F^{\alpha\beta}$:
+![zz_figure/Pasted image 20260506122206.png\|422](/img/user/zz_figure/Pasted%20image%2020260506122206.png)
+$$
+K'\to K:\quad
+F^{\alpha\beta} = \Lambda^\alpha_{~~\mu} \Lambda^\beta_{~~\nu} F'^{\mu\nu},\quad
+\text{with}~
+\Lambda^\alpha_{~~\beta} = \begin{bmatrix} \gamma & \gamma\beta &  &  \\  \gamma\beta & \gamma &  &  \\  &  &  1 &  \\  &  &  & 1 \end{bmatrix}
+$$
+one finds  
+$$
+\begin{cases} 
+\boldsymbol{E}_\parallel' = \boldsymbol{E}_\parallel,
+&\boldsymbol{E}_\perp' = \gamma (\boldsymbol{E}_\perp + \boldsymbol{\beta}\times c\boldsymbol{B}) \\[4pt]
+\boldsymbol{B}_\parallel' = \boldsymbol{B}_\parallel,
+&c\boldsymbol{B}_\perp' = \gamma (c\boldsymbol{B}_\perp - \boldsymbol{\beta}\times \boldsymbol{E})
+\end{cases}
+$$
+or more neatly ($\mathcal{B}_\perp \triangleq \hat{\beta}\times c\boldsymbol{B},~~ \mathcal{B}_\parallel \triangleq c\boldsymbol{B}_\parallel$), 
+$$
+\begin{cases} 
+\boldsymbol{E}_\parallel' = \boldsymbol{E}_\parallel,
+&\boldsymbol{E}_\perp' = \gamma (\boldsymbol{E}_\perp+ \beta \mathcal{B}_\perp) \\[4pt]
+\mathcal{B}_\parallel' = \mathcal{B}_\parallel,
+&\mathcal{B}_\perp' = \gamma (\mathcal{B}_\perp + \beta\boldsymbol{E}_\perp )
+\end{cases}
+$$
 
+
+$$
+$$
 # 5 Static Electric Field
 # 6 Static Magnetic Field  
 # 7 EM Wave
