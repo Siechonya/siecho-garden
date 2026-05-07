@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-06T21:42:30.161+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-07T14:35:10.865+08:00","dg-note-properties":{}}
 ---
 
 
@@ -14,7 +14,7 @@
 $$
 \eta_{\mu\nu} = \operatorname{diag}(-1, +1, +1, +1)
 $$
-Consequently, the invariant spacetime interval is given by $ds^2 = -c^2dt^2 + dx^2 + dy^2 + dz^2$.
+Consequently, the invariant spacetime interval is given by $\mathrm{d}s^2 = -c^2\mathrm{d}t^2 + \mathrm{d}x^2 + \mathrm{d}y^2 + \mathrm{d}z^2$.
 
 # 1 Preparatory Math.   
 ## 1.1 Vector and tensor analysis (Euclidean geometry)  
@@ -430,7 +430,7 @@ $$
 \implies
 \int_{\mathbb{R}^3} [\nabla^2 \delta^3(\boldsymbol{x}-\boldsymbol{a})] \varphi(\boldsymbol{x}) \, \mathrm{d}^3x = \nabla^2 \varphi(\boldsymbol{a})
 $$
-### 1.2.2 Fundamental characteristics
+### 1.2.2 Fundamental characteristics of $\delta$
 $$
 x\delta(x) = 0,\quad x^n \delta^{(n)}(x) = (-1)^n n! \delta(x),\quad x_i\delta^3(\boldsymbol{x}) = 0,\quad x_i\partial_j \delta^3(\boldsymbol{x}) = - \delta_{ij} \delta^3(\boldsymbol{x})
 $$
@@ -456,7 +456,6 @@ $\implies$ for the orthogonal curvilinear coordinates
 $$
 \delta^3(\boldsymbol{x}-\boldsymbol{x}') = \frac{1}{H} \delta^3(\boldsymbol{u} - \boldsymbol{u}')
 $$
-
 ### 1.2.3 Cases  
 - the point dipole (Electric dipole or magnetic dipole)  
 Let the point dipole be at the origin, and its charge density distribution is: 
@@ -613,9 +612,11 @@ $$
 with $\square \triangleq \nabla^2 - \frac{1}{c^2} \frac{ \partial^2 }{ \partial t^2 }~\text{(d'Alembert operator)}$.  
 ## 2.5 EM Wave  
 ### 2.5.1 Wave equation
-- Wave equation for free time-varying field
+- Wave equation for time-varying field
 $$
-\square \boldsymbol{E} = 0,\quad \square \boldsymbol{B} = 0
+\begin{aligned} 
+\square \boldsymbol{E}  = \left( \nabla^2 - \frac{1}{c^2} \frac{\partial^2}{\partial t^2} \right) \boldsymbol{E} &= \frac{1}{\epsilon_0} \nabla \rho + \mu_0 \frac{\partial \boldsymbol{J}}{\partial t} \\[10pt] 
+\square \boldsymbol{B} = \left( \nabla^2 - \frac{1}{c^2} \frac{\partial^2}{\partial t^2} \right) \boldsymbol{B} &= -\mu_0 (\nabla \times \boldsymbol{J}) \end{aligned}
 $$
 - Definition: phase of monochromatic wave
 $$
@@ -630,7 +631,7 @@ $$
 v_g = \frac{ \mathrm{d} \omega }{ \mathrm{d} k} = c
 $$
 ### 2.5.2 Polarization  
-- Real description
+#### Real description
 $$
 E_1 = A_1 \cos\phi,\quad E_2 = A_2 \cos(\phi + \delta)
 $$
@@ -649,7 +650,7 @@ $$
 \sin\delta < 0, \quad \text{Left-hand}
 \end{cases}
 $$
-- Complex description
+#### Complex description
 $$
 \tilde{E}_1 = A_1 e^{\mathrm{i} \phi} , \quad  \tilde E_2 = A_2 e^{\mathrm{i} (\phi +\delta)}
 $$
@@ -668,7 +669,8 @@ $$
 \operatorname{Im}\tilde R < 0, \quad \text{Left-hand}
 \end{cases}
 $$
-- Circularly polarized basis vectors
+Note: $\boldsymbol{k} \to -\boldsymbol{k}$ indicates that the wave vector undergoes inversion. According to the principle that the thumb points in the direction of the wave vector, the polarization also experiences inversion at this time. If $\boldsymbol{k}\to-\boldsymbol{k}$ and $\omega t \to -\omega t$, the polarization handedness remains unchanged.
+#### Circularly polarized basis vectors
 $$
 \begin{cases}
 \hat{e}_+ \triangleq \frac{{\hat{e}_1 + \mathrm{i} \hat{e}_2}}{\sqrt{2}}, \quad \text{Right-hand} \\[5pt]
@@ -703,11 +705,11 @@ $$
 \langle \Re[\tilde{\boldsymbol{f}}] \times \Re[\tilde{\boldsymbol{g}}] \rangle = \frac{1}{2} \Re[\tilde{\boldsymbol{f}} \times \tilde{\boldsymbol{g}}^*]
 $$
 ## 2.6 Conservation / Continuity equation
-- Charge conservation
+#### Charge conservation
 $$
 \nabla \cdot \boldsymbol{j} + \frac{\partial \rho}{\partial t} = 0
 $$
-- Energy conservation
+#### Energy conservation
 $$
 -\frac{ \partial \varepsilon }{ \partial t } = \nabla \cdot \boldsymbol{S} + \boldsymbol{f} \cdot \boldsymbol{v}
 $$
@@ -717,7 +719,7 @@ $$
 \boldsymbol{S} = \frac{1}{\mu_0} \boldsymbol{E} \times \boldsymbol{B},~~
 \boldsymbol{f} = \rho_e \boldsymbol{E} + \boldsymbol{J} \times \boldsymbol{B}
 $$
-- Momentum conservation
+#### Momentum conservation & Maxwell stress tensor
 $$
 -\frac{ \partial \boldsymbol{g} }{ \partial t } = \nabla \cdot \mathsf{T} + \boldsymbol{f}
 $$
@@ -730,17 +732,17 @@ In a steady state where the electromagnetic momentum is constant over time, the 
 $$
 \boldsymbol{F} =  \iiint_V \boldsymbol{f}\,\mathrm{d}V = -\oint_{\partial V} \mathrm{d}\boldsymbol{\sigma}\cdot \mathsf{T}
 $$
-- Angular momentum conservation
+#### Angular momentum conservation
 $$
 -\frac{ \partial  }{ \partial t } (\boldsymbol{r}\times \boldsymbol{g} ) = \underset{=\boldsymbol{r} \times (\nabla \cdot \mathsf{T})}{\underbrace{\nabla \cdot (\boldsymbol{r} \times \mathsf{T}) }}+ \boldsymbol{r}\times \boldsymbol{f}
 $$
-- In linear homogeneous media
-	- Charge conservation
+#### Conservation / Continuity equation in the linear homogeneous media  
+- Charge conservation
 $$
 \nabla \cdot \boldsymbol{j}_f + \frac{\partial \rho_f}{\partial t} = 0, \quad
 \nabla \cdot (\boldsymbol{j}_P +\boldsymbol{j}_M) + \frac{\partial \rho_p}{\partial t} = 0
 $$
-Energy conservation (Poynting's Theorem in Media)
+- Energy conservation (Poynting's Theorem in Media)
 $$
 \frac{ \partial \varepsilon }{ \partial t } = \nabla \cdot \boldsymbol{S} + \boldsymbol{j}_f \cdot \boldsymbol{E}
 $$
@@ -749,7 +751,7 @@ $$
 \varepsilon = \frac{1}{2}(\boldsymbol{E} \cdot \boldsymbol{D} + \boldsymbol{B} \cdot \boldsymbol{H}),~~
 \boldsymbol{S} = \boldsymbol{E} \times \boldsymbol{H}
 $$
-Momentum conservation  
+- Momentum conservation  
 $$
 \frac{ \partial \boldsymbol{g} }{ \partial t } = \nabla \cdot \mathsf{T} + \boldsymbol{f}_f
 $$
@@ -763,11 +765,11 @@ In a steady state where the electromagnetic momentum is constant over time, the 
 $$
 \boldsymbol{F}_f = \iiint_V \boldsymbol{f}_f \,\mathrm{d}V = -\oint_{\partial V} \mathrm{d}\boldsymbol{\sigma} \cdot \mathsf{T}
 $$
-Angular momentum conservation
+- Angular momentum conservation
 $$
 \frac{ \partial }{ \partial t } (\boldsymbol{r} \times \boldsymbol{g}) = \nabla \cdot (\boldsymbol{r} \times \mathsf{T}) + \boldsymbol{r} \times \boldsymbol{f}_f
 $$
-For inhomogeneous media  
+- For inhomogeneous media, $\boldsymbol{f}_f$ above becomes,  
 $$
 \boldsymbol{f}_{total} = \boldsymbol{f}_f - \frac{1}{2} E^2 \nabla \epsilon - \frac{1}{2} H^2 \nabla \mu
 $$
@@ -779,9 +781,7 @@ $$
 $$
 x^\alpha = (ct, \boldsymbol{x})
 $$
-- Primary characteristics of metric
-
-Normalization
+Normalization of metric
 $$
 g_{\alpha\beta}g^{\beta\gamma} = \delta_\alpha^\gamma
 $$
@@ -880,7 +880,9 @@ $$
 $$
 ![zz_figure/Pasted image 20260506122206.png](/img/user/zz_figure/Pasted%20image%2020260506122206.png)
 ## 3.3 Tensor analysis (Minkowski spacetime)   
-- Primary 4-vector
+### 3.3.1 4-description of vector / tensor
+#### Primary 4-vector / tensor   
+- 4-velocity / accelerated velocity
 $$
 u^\alpha = \frac{ \mathrm{d} x^\alpha }{ \mathrm{d} \tau} = \gamma (c, \boldsymbol{v}),\quad 
 a^\alpha = \frac{ \mathrm{d} u^\alpha }{ \mathrm{d} \tau} 
@@ -906,7 +908,16 @@ $$
 $$
 \mathcal{E}^2 = (|\boldsymbol{p}|c)^2 + (mc^2)^2
 $$
-- The recursion formula of decomposition  
+- 4-operator
+$$
+\partial_\mu = \frac{ \partial  }{ \partial x^\mu } = \left( \frac{1}{c}\frac{ \partial  }{ \partial t },\nabla \right), \quad 
+\partial_\mu \partial^\mu = \square = -\frac{1}{c^2} \frac{ \partial  }{ \partial t^2 } + \nabla^2
+$$
+- Three fundamental invariant tensor in the Minkowski space
+$$
+g^{\alpha\beta}, \quad \delta^\alpha_\beta, \quad \epsilon^{\alpha\beta\mu\nu}
+$$
+#### The recursion formula of decomposition  
 $$
 T^{(\alpha_1\alpha_2\cdots\alpha_s)} = \frac{1}{s}\sum_{k=1}^s T^{\alpha_k(\alpha_1\alpha_2\cdots\alpha_{k-1}\alpha_{k+1}\cdots\alpha_s)}
 $$
@@ -914,9 +925,8 @@ $$
 T^{[\alpha_1\alpha_2\cdots\alpha_s]} = \frac{1}{s}\sum_{k=1}^s (-1)^{k-1} T^{\alpha_k[\alpha_1\alpha_2\cdots\alpha_{k-1}\alpha_{k+1}\cdots,\alpha_s]}
 $$
 with base case is $T^{(\alpha)} = T^{[\alpha]} = T^{\alpha}$. for ex.,  
-
 $$
-T^{(\alpha\beta)} = \frac{{T^{\alpha\beta}+T^{\beta\alpha}}}{2}, T^{[\alpha\beta]} = \frac{{T^{\alpha\beta}-T^{\beta\alpha}}}{2}
+T^{(\alpha\beta)} = \frac{{T^{\alpha\beta}+T^{\beta\alpha}}}{2},\quad T^{[\alpha\beta]} = \frac{{T^{\alpha\beta}-T^{\beta\alpha}}}{2}
 $$
 $$
 T^{[\alpha\beta]} \triangleq \begin{pmatrix} 0 & \boldsymbol{p} \\  -\boldsymbol{p} & \mathsf{a} \end{pmatrix} \triangleq \{\boldsymbol{p}, \boldsymbol{a}\},\quad
@@ -934,8 +944,114 @@ T^{[\alpha\beta\gamma]} &= \frac{1}{3}\left[(-1)^0 T^{\alpha[\beta\gamma]} + (-1
 &= \frac{1}{6}\left[T^{\alpha\beta\gamma} - T^{\alpha\gamma\beta} - T^{\beta\alpha\gamma} + T^{\beta\gamma\alpha} + T^{\gamma\alpha\beta} - T^{\gamma\beta\alpha}\right]
 \end{aligned}
 $$
-
+#### Dual tensor of asymmetric matrix 
+Dual tensor of asymmetric matrix $A^{\alpha\beta} \triangleq \begin{pmatrix} 0 & \boldsymbol{p} \\  -\boldsymbol{p} & \mathsf{a} \end{pmatrix} \triangleq \{\boldsymbol{p}, \boldsymbol{a}\}$ is
+$$
+\mathcal{A}^{\alpha\beta} \triangleq \frac{1}{2}\epsilon^{\alpha\beta\mu\nu} A_{\mu\nu}
+,\quad \text{with }
+\epsilon^{\alpha\beta\mu\nu}
+=\begin{cases} 
++1, & (\alpha\beta\mu\nu)\text{ is an even permutation of 0123} \\[4pt]
+-1, & (\alpha\beta\mu\nu)\text{ is an odd permutation of 0123} \\[4pt]
+0, & (\alpha\beta\mu\nu)\text{ is in other case} \\[4pt]
+\end{cases}
+$$
+$$
+A^{\alpha\beta} 
+\implies
+\mathcal{A}^{\alpha\beta} = \begin{pmatrix} 0 & \boldsymbol{a} \\  -\boldsymbol{a} & -\mathsf{p} \end{pmatrix} \triangleq \{\boldsymbol{a}, -\boldsymbol{p}\}
+$$
+#### Eigenvalue equation of second-order tensors
+$$
+A^{\alpha\beta}X_\beta = \lambda X^\alpha \implies (A^{\alpha\beta} - \lambda g^{\alpha\beta}) X_\beta = 0
+$$
+the Principal Invariants
+$$
+\implies \
+\sum_\alpha \lambda_\alpha, \quad \sum_{\alpha<\beta}\lambda_\alpha\lambda_\beta,\quad
+\sum_{\alpha<\beta<\mu}\lambda_\alpha\lambda_\beta\lambda_\mu,\quad
+\sum_{\alpha<\beta<\mu<\nu}\lambda_\alpha\lambda_\beta\lambda_\mu\lambda_\nu
+$$
+for asymmetric matrix $A^{\alpha\beta} \triangleq \begin{pmatrix} 0 & \boldsymbol{p} \\  -\boldsymbol{p} & \mathsf{a} \end{pmatrix} \triangleq \{\boldsymbol{p}, \boldsymbol{a}\}$ ,    
+$$
+I_1 = a^2 - p^2 = -\frac{1}{2} A^{\alpha\beta}A_{\alpha\beta}
+,\quad 
+I_2 = \boldsymbol{p}\cdot\boldsymbol{a} = -\frac{1}{4}\mathcal{A}^{\alpha\beta}A_{\alpha\beta}
+$$
 # 4 Lagrangian Formulation of the EM Field  
+## 4.1 Covariant EM equation
+### 4.1.1 Continuity equation  
+#### 4-current and charge conservation
+$$
+j^\alpha = \rho_0 u^\alpha = (\rho c , \boldsymbol{j}),\quad
+\text{with}~
+\rho = \gamma \rho_0, \
+\boldsymbol{j} = \rho \boldsymbol{v} = \gamma\rho_0 \boldsymbol{v} 
+$$
+$$
+\partial_\alpha j^\alpha = 
+\nabla \cdot \boldsymbol{j} + \frac{\partial \rho}{\partial t} = 0
+$$
+A 4-vector $J^\alpha$ is referred to as a conserved current if $\partial_\alpha J^\alpha = 0$. The corresponding conserved charge, defined as $Q = \frac{1}{c} \iiint_{\mathbb{R}^3} J^0 \, \mathrm{d}^3x$, is a Lorentz invariant.  
+
+### 4.1.2 Maxwell's equation  
+#### Electromagnetic Field Tensor
+$$
+A^\mu = \left( \frac{\varphi}{c}, \boldsymbol{A} \right)
+\implies
+F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu A^\mu 
+=\begin{bmatrix} 0 & E_x/c & E_y/c & E_z/c \\ -E_x/c & 0 & B_z & -B_y \\ -E_y/c & -B_z & 0 & B_x \\ -E_z/c & B_y & -B_x & 0 \end{bmatrix}
+$$
+or simply  
+$$
+F^{\mu\nu} = \begin{pmatrix} 0 & \frac{\boldsymbol{E}}{c} \\  -\frac{\boldsymbol{E}}{c} & \mathsf{B} \end{pmatrix}
+=\left\{ \frac{\boldsymbol{E}}{c}, \boldsymbol{B} \right\}, \quad
+B_{ij} = \epsilon_{ijk}B_k
+$$
+and two invariants  
+$$
+I_1 = \frac{E^2}{c^2} - B^2 = -\frac{1}{2} F^{\alpha\beta}F_{\alpha\beta}
+,\quad 
+I_2 = \frac{\boldsymbol{E}\cdot\boldsymbol{B}}{c} = -\frac{1}{4}\mathcal{F}^{\alpha\beta}F_{\alpha\beta}
+$$
+#### 4-form Maxwell's equation
+$$
+\left\{
+\begin{array}{rll}
+\left.
+\begin{aligned}
+\nabla \cdot \boldsymbol{E} &= \frac{\rho}{\epsilon_0} \\[4pt]
+\nabla \times \boldsymbol{B} - \frac{1}{c^2} \frac{\partial \boldsymbol{E}}{\partial t} &= \mu_0 \boldsymbol{J}
+\end{aligned}
+\right\} 
+& \Longleftrightarrow& \partial_\alpha F^{\alpha\beta} = -\mu_0 J^\beta & \\[15pt]
+\left.
+\begin{aligned}
+\nabla \cdot \boldsymbol{B} &= 0 \\[4pt]
+\nabla \times \boldsymbol{E} + \frac{\partial \boldsymbol{B}}{\partial t} &= 0
+\end{aligned}
+\right\} 
+& \Longleftrightarrow& \partial_{[\mu} F_{\nu\rho]} = 0
+~~\Longleftrightarrow~~ \partial_\alpha \mathcal{F}^{\alpha\beta} = 0 &
+\end{array}
+\right.
+$$
+Differential 2-form of electromagnetic field tensor $F$ *
+$$
+F = \frac{1}{2} F_{\mu\nu} \,\mathrm{d}x^\mu \wedge \mathrm{d}x^\nu
+\implies
+\mathrm{d}F = 0,~~
+\mathrm{d}{\star}F = J
+$$
+#### Gauge invariance
+$$
+\exists A^\alpha = \partial^\alpha \psi, \ \text{if } \operatorname{curl}(A) = \partial^\alpha A^\beta - \partial^\beta A^\alpha = 0
+$$
+Thus, the field strength tensor $F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu A^\mu$ remains invariant under the gauge transformation $A'^{\alpha} = A^\alpha + \partial^\alpha \psi$
+$$
+A'^{\alpha} = A^\alpha + \partial^\alpha \psi
+$$
+- 4-form Maxwell's equation under the Lorenz gauge $\partial_\alpha A^{\alpha} = 0$
 
 # 5 Static Electric Field
 # 6 Static Magnetic Field  
