@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-07T16:47:16.525+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-08T20:53:08.390+08:00","dg-note-properties":{}}
 ---
 
 
@@ -50,23 +50,23 @@ $$
 \quad  \epsilon_{ijk} \epsilon_{ij n} = 2\delta_{kn},
 \quad  \epsilon_{ijk} \epsilon_{ijk} = 3! = 6 
 $$
-> [!info] More generally*
-> $$
+More generally*
+$$
 \epsilon_{ijk} \epsilon_{lmn} = \det\begin{pmatrix}
 \delta_{il} & \delta_{im} & \delta_{in} \\
 \delta_{jl} & \delta_{jm} & \delta_{jn} \\
 \delta_{kl} & \delta_{km} & \delta_{kn}
 \end{pmatrix}
-> $$
-> High-dimensional case:  
-> $$  
-> \epsilon_{i_1i_2\cdots i_n} \epsilon_{j_1j_2\cdots j_n} = \det\begin{pmatrix}
+$$
+and for high-dimensional case, we have generalized kronecker delta  
+$$  
+\epsilon_{i_1i_2\cdots i_n} \epsilon_{j_1j_2\cdots j_n} = \det\begin{pmatrix}
 \delta_{i_1j_1} & \delta_{i_1j_2} & \cdots & \delta_{i_1j_n} \\
 \delta_{i_2j_1} & \delta_{i_2j_2} & \cdots & \delta_{i_2j_n} \\
 \vdots & \vdots & \ddots & \vdots \\
 \delta_{i_nj_1} & \delta_{i_nj_2} & \cdots & \delta_{i_nj_n}
-\end{pmatrix} \triangleq \delta_{i_1 i_2 \dots i_n}^{j_1 j_2 \dots j_n} \,\text{(Generalized Kronecker delta)}
-> $$
+\end{pmatrix} \triangleq \delta_{i_1 i_2 \dots i_n}^{j_1 j_2 \dots j_n} 
+$$
 - Axial Vector / Pseudovector
 $$
 A_{i}' = \det(\mathsf{R}) R_{ij} A_i, \quad \mathsf{R} \in O(3)
@@ -77,7 +77,7 @@ T_{ij} = T_{(ij)} + T_{[ij]} = \frac{{T_{ij} + T_{ji}}}{2} +  \frac{{T_{ij} - T_
 $$
 - Double Contraction (adopt to the proximity rule)
 $$
-\mathsf{A} : \mathsf{B} \triangleq A_{ij} B_{ji} = \operatorname{tr}(\mathsf{A} : \mathsf{B})
+\mathsf{A} : \mathsf{B} \triangleq A_{ij} B_{ji} = \operatorname{tr}(\mathsf{A}\mathsf{B})
 $$
 ### 1.1.2 Cross & dot product
 - Scalar Triple product
@@ -308,8 +308,14 @@ $$
 $$
 - Double Contraction (adopt to the proximity rule)
 $$
-\mathsf{I}: \boldsymbol{a}\boldsymbol{b} = \boldsymbol{a} \cdot \boldsymbol{b}, \quad
+\mathsf{I}: \boldsymbol{a}\boldsymbol{b} = \operatorname{tr}(\boldsymbol{a}\boldsymbol{b})= \boldsymbol{a} \cdot \boldsymbol{b}
+\implies
 \mathsf{I}: \nabla \boldsymbol{a} = \nabla \cdot \boldsymbol{a}
+$$
+$$
+\mathsf{T}:\mathsf{I} = \operatorname{tr}(\mathsf{T})
+\implies
+\mathsf{I}:\mathsf{I} = 3
 $$
 - $\nabla$
 $$
@@ -854,9 +860,12 @@ If the boost is in an arbitrary direction $\boldsymbol{\beta} = \mathbf{v}/c$ *
 $$
 \boldsymbol{u} = \frac{1}{1 + \frac{\mathbf{v} \cdot \mathbf{u}'}{c^2}} \left[ \boldsymbol{u}' + \frac{1}{\gamma} \boldsymbol{u}_\perp + \mathbf{v} \right]
 $$
-Where $\boldsymbol{u}_\perp$ represents the component of $\boldsymbol{u}'$ perpendicular to the boost direction. Assuming $\theta = \langle \boldsymbol{u},\mathbf{v} \rangle,\theta' = \langle \boldsymbol{u'},\mathbf{v} \rangle$,*  
+Where $\boldsymbol{u}_\perp$ represents the component of $\boldsymbol{u}'$ perpendicular to the boost direction. Assuming $\theta = \langle \boldsymbol{u},\mathbf{v} \rangle,\theta' = \langle \boldsymbol{u'},\mathbf{v} \rangle$, * 
 $$
 \tan\theta = \frac{u' \sin\theta'}{\gamma_{\mathbf{v}} (u' \cos\theta' + v)}
+\overset{\text{if }u'=c}{\implies}
+\tan\theta = \frac{\sin\theta'}{\gamma_{\mathbf{v}} (\cos\theta' + \beta_{\mathbf{v}})}
+\quad\text{(Aberration of Light Formula)}
 $$
 - The Proper Orthochronous Lorentz Group*
 
@@ -991,21 +1000,8 @@ I_2 = \boldsymbol{p}\cdot\boldsymbol{a} = -\frac{1}{4}\mathcal{A}^{\alpha\beta}A
 $$
 # 4 Lagrangian Formulation of the EM Field  
 ## 4.1 Covariant EM equation
-### 4.1.1 Continuity equation  
-#### 4-current & charge conservation
-$$
-j^\alpha = \rho_0 u^\alpha = (\rho c , \boldsymbol{j}),\quad
-\text{with}~
-\rho = \gamma \rho_0, \
-\boldsymbol{j} = \rho \boldsymbol{v} = \gamma\rho_0 \boldsymbol{v} 
-$$
-$$
-\partial_\alpha j^\alpha = 
-\nabla \cdot \boldsymbol{j} + \frac{\partial \rho}{\partial t} = 0
-$$
-A 4-vector $J^\alpha$ is referred to as a conserved current if $\partial_\alpha J^\alpha = 0$. The corresponding conserved charge, defined as $Q = \frac{1}{c} \iiint_{\mathbb{R}^3} J^0 \, \mathrm{d}^3x$, is a Lorentz invariant.  
 
-### 4.1.2 Maxwell's equation  
+### 4.1.1 Maxwell's equation  
 #### Electromagnetic Field Tensor
 $$
 A^\mu = \left( \frac{\varphi}{c}, \boldsymbol{A} \right)
@@ -1062,13 +1058,13 @@ Thus, the field strength tensor $F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu 
 $$
 A'^{\alpha} = A^\alpha + \partial^\alpha \psi
 $$
-- 4-form Maxwell's equation under the Lorenz gauge $\partial_\alpha A^{\alpha} = 0$
+- 4-form Maxwell's equation under the Lorenz gauge $\partial_\alpha A^{\alpha} = 0$,
 $$
 \partial_\alpha \partial^\alpha A^\beta = - \mu_0 J^\beta
 \quad
-(\text{4-form elctromagnetic potential equation})
+(\text{covariant elctromagnetic potential equation})
 $$
-### 4.1.3 Lorentz transformation of EM field  
+### 4.1.2 Lorentz transformation of EM field  
 from Lorentz transformation of $F^{\alpha\beta}$:  
 $$
 K'\to K:\quad
@@ -1095,6 +1091,219 @@ $$
 \end{cases}
 $$
 #### Electric-like / Magnetic-like / Light-like field  
+$$
+E^2 - c^2 B^2\text{ is ivariant}
+\implies
+\begin{cases} 
+E>cB, &(\text{Electric-like}) \\[4pt]
+E=cB, &(\text{Light-like}) \\[4pt]
+E<cB, &(\text{Magnetic-like})
+\end{cases}
+$$
+In the lab frame $K$, if  
+- $\boldsymbol{E}\cdot \boldsymbol{B} = 0$ and $E>cB$, $\implies$ $\boldsymbol{B}' = 0$ in the inertial frame with speed $\boldsymbol{\beta} = \frac{{\boldsymbol{E\times \boldsymbol{cB}}}}{E^2}$. The cycloidal motion will transform into a hyperbolic motion.
+- $\boldsymbol{E}\cdot \boldsymbol{B} = 0$ and $E<cB$, $\implies$ $\boldsymbol{E}' = 0$ in the inertial frame with speed $\boldsymbol{\beta} = \frac{{\boldsymbol{E\times \boldsymbol{cB}}}}{(cB)^2}$, which is precisely the electric field drift velocity.
+- $\boldsymbol{E}\cdot \boldsymbol{B} = 0$ and $E=cB$, $\implies$ $\boldsymbol{E}' = \infty\cdot0,\boldsymbol{B}' = \infty\cdot0$ in the photon frame with speed $\boldsymbol{\beta} = 1$ (well, at present, this cannot be achieved).
+- $\boldsymbol{E}\cdot \boldsymbol{B} \neq 0$, $\implies$ $\boldsymbol{E}'\cdot \boldsymbol{B}' = 0$ in the inertial frame with speed satisfy $\frac{\boldsymbol{\beta}}{1+\beta^2}  = \frac{{\boldsymbol{E\times \boldsymbol{cB}}}}{E^2+c^2B^2}$.
+### 4.1.3 4-wave vector  
+4-form Wave equation for the field strength tensor can be derived from 4-form Maxwell's equation,  
+$$
+\begin{rcases} 
+\partial_\alpha F^{\alpha\beta} = -\mu_0 J^\beta\\[6pt]
+\partial_{[\mu} F_{\nu\rho]} = 0
+\to
+\partial^\alpha (\partial_{[\alpha}F_{\mu\nu]}) = 0
+\end{rcases}
+\implies
+\partial_\alpha \partial^\alpha F^{\mu\nu} = -\mu_0 (\partial^\mu J^\nu - \partial^\nu J^\mu)
+$$
+Thus, the monochromatic plane wave satisfies $F^{\mu\nu} = F_0^{\mu\nu} e^{\mathrm{i} (\boldsymbol{k}\cdot\boldsymbol{x}-\omega t)}\triangleq F_0^{\mu\nu} e^{\mathrm{i}k^\alpha x_\alpha}$ with the definition of 4-wave vector,  
+$$
+k^\alpha \triangleq \left( \frac{\omega}{c}, \boldsymbol{k} \right)
+$$
+$$
+k^\alpha k_\alpha = \frac{\omega^2}{c^2} - |\boldsymbol{k}|^2 \text{ is invariant}
+\implies
+kc\equiv\omega ~\text{ in any inertial frame}
+$$
+- Lorentz transformation of $k^\alpha$. assuming $\theta = \langle \boldsymbol{k},\boldsymbol{\beta}\rangle$, 
+$$
+K\to K':\quad
+k'^\alpha = \Lambda^\alpha_{~~\beta}k^\beta \Longleftrightarrow
+\begin{array}l
+\begin{cases} 
+\frac{\omega'}{c} = \gamma \left( \frac{\omega}{c} - \boldsymbol{\beta}\cdot\boldsymbol{k} \right) 
+&\Longleftrightarrow&
+\omega' = \gamma \omega (1-\beta \cos\theta)  &\text{(doppler frequency shift)}
+\\[10pt]
+\begin{rcases} 
+\boldsymbol{k}'_\parallel =  \gamma \left( \boldsymbol{k}_\parallel - \boldsymbol{\beta} \frac{\omega}{c} \right) \\[5pt]
+\boldsymbol{k}'_\perp = \boldsymbol{k}_\perp
+\end{rcases}
+&\Longleftrightarrow&
+\tan\theta' = \frac{\sin\theta}{\gamma(\cos\theta-\beta)} &\text{(Aberration of Light Formula)}
+\end{cases}
+\end{array}
+$$
+The relativistic Doppler formula demonstrates that whether the observer approaches the source or the source approaches the observer, as long as their relative velocity $\boldsymbol{\beta}$ and the rest frequency $\omega_0$ of the source are identical, the observed frequency remains the same. This differs from the classical case; the observed frequency is always,
+$$
+\omega_{obs} = \omega_0\sqrt{\frac{1+\beta}{1-\beta}} 
+$$
+### 4.1.4 Conservation / Continuity equation  
+#### 4-current & charge conservation
+$$
+j^\alpha = \rho_0 u^\alpha = (\rho c , \boldsymbol{j}),\quad
+\text{with}~
+\rho = \gamma \rho_0, \
+\boldsymbol{j} = \rho \boldsymbol{v} = \gamma\rho_0 \boldsymbol{v} 
+$$
+$$
+\partial_\alpha j^\alpha = 
+\nabla \cdot \boldsymbol{j} + \frac{\partial \rho}{\partial t} = 0
+$$
+A 4-vector $J^\alpha$ is referred to as a conserved current if $\partial_\alpha J^\alpha = 0$. The corresponding conserved charge, defined as $Q = \frac{1}{c} \iiint_{\mathbb{R}^3} J^0 \, \mathrm{d}^3x$, is a Lorentz invariant.  
+#### Mass conservation  
+$$
+j_m^\alpha = \rho_{m0} u^\alpha = (\rho_m c , \boldsymbol{j}_m),\quad
+\text{with}~
+\rho_m = \gamma \rho_{m0}, \
+\boldsymbol{j}_m = \rho_m \boldsymbol{v} = \gamma\rho_{m0} \boldsymbol{v} 
+$$
+$$
+\partial_\alpha j_m^\alpha = 
+\nabla \cdot \boldsymbol{j}_m + \frac{\partial \rho_m}{\partial t} = 0
+$$
+#### Energy-momentum tensor conservation  
+- 4-Lorentz force
+$$
+f^\alpha = F^{\alpha\beta}J_\beta = (f^0,\boldsymbol{f}) = \left( \frac{1}{c} \boldsymbol{E}\cdot\boldsymbol{J}, ~~\rho_e \boldsymbol{E}+\boldsymbol{J}\times\boldsymbol{E} \right)
+$$
+- Energy-momentum tensor of EM field
+$$
+T^{\mu\nu}_f \triangleq -\frac{1}{4\mu_0}g^{\mu\nu} F^{\alpha\beta}F_{\alpha\beta} - \frac{1}{\mu_0} F^{\mu\alpha}F_{\alpha}^{~~\nu}
+=
+\begin{pmatrix} w & \frac{\boldsymbol{S}}{c} \\  \frac{\boldsymbol{S}}{c} & \mathsf{T} \end{pmatrix}
+$$
+- Energy-momentum tensor of particles
+$$
+T^{\mu\nu}_p = \rho_{m0} u^\mu u^\nu 
+=
+\gamma\rho_m\begin{pmatrix} c^2 & c\boldsymbol{v} \\  c\boldsymbol{v} & \boldsymbol{v}\boldsymbol{v} \end{pmatrix}
+\implies
+f^\nu = \rho_m\frac{ \mathrm{d} u^\nu }{ \mathrm{d} \tau} = \partial_\mu T^{\mu\nu}_p
+$$
+
+- Energy-momentum conservation 
+$$
+\partial_\mu T^{\mu\nu}_f = - f^\nu = -\partial_\mu T^{\mu\nu}_p
+$$
+or
+$$
+\partial_\mu T^{\mu\nu} = 0\quad\text{with}\  T^{\mu\nu} = T^{\mu\nu}_f+ T^{\mu\nu}_p
+$$
+relevant conserved charges are  
+$$
+P^\nu = \frac{1}{c}\iiint_{\mathbb{R}^3} T^{0\nu}\,\mathrm{d}^3x
+=\left( \frac{\mathcal{E}}{c}, \boldsymbol{P} \right)
+=\left( \iiint \frac{{w+\gamma \rho_m c^2}}{c}, \iiint c\boldsymbol{g}+\gamma\rho_m \boldsymbol{v} \right)
+$$
+#### Angular energy-momentum conservation*  
+- 4-angular momentum conservation 
+$$
+M^{\mu\alpha\beta} \triangleq x^\alpha T^{\mu\beta} - x^\beta T^{\mu\alpha}
+\implies
+\partial_\mu M^{\mu\alpha\beta} = 0
+$$
+- 4-moment of force
+$$
+\tau^{\alpha\beta} \triangleq x^\alpha f^\beta - x^\beta f^\alpha
+\implies
+\partial_\mu M^{\mu\alpha\beta}_f = -\tau^{\alpha\beta} = -\partial_\mu M^{\mu\alpha\beta}_p
+$$
+relevant conserved charges are  
+$$
+L^{ij}= \frac{1}{c}\iiint_{\mathbb{R}^3} M^{0ij}\,\mathrm{d}^3x
+\implies
+\boldsymbol{L} = \iiint [\boldsymbol{r}\times (\boldsymbol{g} + \gamma\rho_m\boldsymbol{v})] \,\mathrm{d}^3x
+$$
+$$
+K^i = L^{0i}= \frac{1}{c}\iiint_{\mathbb{R}^3} M^{00i}\,\mathrm{d}^3x
+=
+ct\iiint \underset{\text{total momentum}}{\underbrace{(\boldsymbol{g}+\gamma\rho_m\boldsymbol{v})}} \,\mathrm{d}^3x-
+\frac{1}{c}\iiint \underset{\text{total energy}}{\underbrace{[w+\gamma\rho_m c^2]}}\boldsymbol{x} \,\mathrm{d}^3x
+$$
+the second term in the right side of $K^i$ is the velocity of total energy, which is proportional to $t$, namely energy center moving in a straight line.
+### 4.1.5 Maxwell's equation in the media* 
+#todo   
+
+## 4.2 Lagrangian Formulation  
+### 4.2.1 Lagrange equation  
+#### Lagrange equation for Particles
+For the action $S=\int_{t_1}^{t_2} L(q_\alpha (t), \dot{q}_\alpha (t), t)\,\mathrm{d}t$, provided that the boundaries $t_1$, $t_2$ are fixed and $\delta q_\alpha=0$ at the boundaries, then the principle of least action $\delta S=0$ yields the Lagrange equation of particles as follows:
+$$
+\frac{\delta L}{\delta q_\alpha} \triangleq \frac{ \partial L }{ \partial q_\alpha } - \frac{ \mathrm{d}  }{ \mathrm{d} t} \frac{ \partial L }{ \partial \dot{q}_\alpha } = 0
+$$
+Gauge transformation  
+$$
+\Delta L = \tilde{L} - L = \frac{ \mathrm{d} f(q_\alpha, t) }{ \mathrm{d} t}
+$$
+#### Covariant Lagrange equation (Relativistic Particle)
+For the action $S = \int_{\tau_1}^{\tau_2} L(x^\mu(\tau), \dot{x}^\mu(\tau)) \, \mathrm{d}\tau$, provided that the endpoints $\tau_1, \tau_2$ are fixed and $\delta x^\mu = 0$ at the boundaries, then
+$$
+\frac{\delta L}{\delta x^\mu} \triangleq \frac{\partial L}{\partial x^\mu} - \frac{\mathrm{d}}{\mathrm{d}\tau} \frac{\partial L}{\partial \dot{x}^\mu} = 0
+$$
+Gauge transformation is $\Delta L  = \frac{ \mathrm{d} f(x^\mu, \tau) }{ \mathrm{d} \tau}$.
+#### Lagrange equation for Scalar Field
+For the action $S = \int_{\Omega} \mathcal{L}(\varphi(x^\mu), \partial_\mu \varphi(x^\mu), x^\mu) \, \mathrm{d}^4x$, provided that the boundary of the spacetime region $\Omega$ is fixed and $\delta \varphi = 0$ on the boundary, then
+$$
+\frac{\delta \mathcal{L}}{\delta \varphi} \triangleq \frac{\partial \mathcal{L}}{\partial \varphi} - \partial_\mu \left( \frac{\partial \mathcal{L}}{\partial (\partial_\mu \varphi)} \right) = 0
+$$
+Gauge transformation is $\Delta \mathcal{L}  = \partial_\alpha C^\alpha (\varphi, x^\mu)$.
+#### Lagrange equation for Vector Field
+For the action $S = \int_{\Omega} \mathcal{L}(A^\alpha(x^\mu), \partial_\mu A^\alpha(x^\mu), x^\mu) \, \mathrm{d}^4x$, provided that the boundary of the spacetime region $\Omega$ is fixed and $\delta A^\alpha = 0$ on the boundary, then
+$$
+\frac{\delta \mathcal{L}}{\delta A^\alpha} \triangleq \frac{\partial \mathcal{L}}{\partial A^\alpha} - \partial_\mu \left( \frac{\partial \mathcal{L}}{\partial (\partial_\mu A^\alpha)} \right) = 0
+$$
+Gauge transformation is $\Delta \mathcal{L} = \partial_\alpha C^\alpha (A^\mu, x^\mu)$.
+### 4.2.2 Particles 
+$$
+L(\boldsymbol{x}, \boldsymbol{v}) = -mc^2 \sqrt{1-\frac{v^2}{c^2}} - e\varphi + e\boldsymbol{v}\cdot \boldsymbol{A} ,\quad \boldsymbol{p} = \frac{ \partial L }{ \partial \boldsymbol{v} } = \gamma m \boldsymbol{v} + e\boldsymbol{A}
+$$
+$$
+L(x^\mu, u^\mu) = -mc \sqrt{-u^\alpha u_\alpha} + eA^\alpha u_\alpha, \quad
+p^\alpha = \frac{ \partial L }{ \partial u_\alpha } = mu^\alpha + eA^\alpha
+$$
+Substituting into the Lagrange equation yields $\frac{ \mathrm{d} \boldsymbol{p} }{ \mathrm{d} t} = e\boldsymbol{E}+e\boldsymbol{v}\times \boldsymbol{B}$ and $\frac{ \mathrm{d} p^\alpha }{ \mathrm{d} \tau} = eF^{\alpha\beta}u_\beta$, respectively.
+### 4.2.3 Field  
+- Klein-Gordon field*
+$$
+\mathcal{L} = -\frac{1}{2}(\partial^\mu\varphi \partial_\mu\varphi + \kappa^2\varphi^2) + \rho(x^\mu)\varphi(x^\mu)
+$$
+Substituting into the Lagrange equation yields Klein-Gordon equation $(\partial^\mu \partial_\mu - \kappa^2)\varphi (x^\mu) = -\rho(x^\mu)$, which has a monochromatic plane solution $\varphi(x^\mu) = \varphi_0 e^{\mathrm{i}k_\alpha x^\alpha} = \varphi_0 e^{\mathrm{i}(\boldsymbol{k}\cdot \boldsymbol{x}-\omega t)}$ without the mass source $\rho$, and  
+$$
+(\mathrm{i}k^\mu)(\mathrm{i}k_\mu) - \kappa^2 = 0 \implies
+\omega = c\sqrt{\kappa^2 + k^2}
+\implies
+\begin{cases} 
+v_p = \frac{\omega}{k} = c\sqrt{\frac{\kappa^2}{k^2} + 1} > c \\[5pt]
+v_g = \frac{ \mathrm{d} \omega }{ \mathrm{d} k} = c/\sqrt{\frac{\kappa^2}{k^2} + 1} < c
+\end{cases}
+$$
+For a static, spherically symmetric source, the field equation reduces to $\frac{1}{r}(\frac{ \partial^2 }{ \partial r^2 }-\kappa^2)\varphi(r) = 0$. The physically meaningful solution (vanishing at infinity) is the Yukawa potential,
+$$
+\varphi(r) \propto \frac{1}{r} e^{- \kappa r}
+$$
+- EM field
+$$
+\mathcal{L} = \mathcal{L}_f + \mathcal{L}_p = -\frac{1}{4\mu_0} F_{\alpha\beta}F^{\alpha\beta} + A^\alpha J_\alpha
+\equiv
+\frac{1}{2}\left( \epsilon_0 E^2 - \frac{1}{\mu_0} B^2 \right) - (\rho \varphi - \boldsymbol{J}\cdot\boldsymbol{A})
+$$
+Substituting into the Lagrange equation yields the covariant Maxwell's equations with a source term,
+$$
+\partial_\alpha F^{\alpha\beta} = -\mu_0J^\beta
+$$
+## 4.3 Covariant Single particle motion equation   
 
 
 # 5 Static Electric Field
