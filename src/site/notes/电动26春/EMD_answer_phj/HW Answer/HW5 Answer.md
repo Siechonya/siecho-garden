@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW5 Answer/","noteIcon":"default","created":"2026-04-04T20:23:03.688+08:00","updated":"2026-05-09T17:21:08.718+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW5 Answer/","noteIcon":"default","created":"2026-04-04T20:23:03.688+08:00","updated":"2026-05-09T17:32:02.980+08:00","dg-note-properties":{}}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW6 Answer\|HW6 Answer]]  
@@ -7,8 +7,11 @@
 <iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/HW/electrodynamics05.pdf" width="100%" height="900px" title="electrodynamics05" style="border:1px solid #ccc;"></iframe>
 # 1 《电磁学与电动力学》（下册）
 ![zz_figure/Pasted image 20260404212053.png](/img/user/zz_figure/Pasted%20image%2020260404212053.png)  
-![zz_figure/Pasted image 20260404212116.png](/img/user/zz_figure/Pasted%20image%2020260404212116.png)
+
+![zz_figure/Pasted image 20260404212116.png](/img/user/zz_figure/Pasted%20image%2020260404212116.png)  
+
 ![zz_figure/Pasted image 20260404212137.png](/img/user/zz_figure/Pasted%20image%2020260404212137.png)  
+
 
 ###### 8.4 可以借助最后一个思考题来解决  
 四维速度 $U^\mu$ 和四维加速度 $A^\mu$ 定义为 $U^\mu = \frac{\mathrm{d}x^\mu}{\mathrm{d}\tau} = (\gamma c, \gamma \boldsymbol{v}) \implies U^\mu U_\mu = -c^2$，$A^\mu = \frac{\mathrm{d} U^\mu}{\mathrm{d} \tau} = \gamma \frac{\mathrm{d}}{\mathrm{d} t} (\gamma c, \gamma \boldsymbol{v}) = (\gamma \beta a, \gamma\boldsymbol{a}) \implies A^\mu A_\mu = a^2$。
