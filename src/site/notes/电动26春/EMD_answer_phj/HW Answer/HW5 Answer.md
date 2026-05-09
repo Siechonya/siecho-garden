@@ -1,8 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW5 Answer/","noteIcon":"default","created":"2026-04-04T20:23:03.688+08:00","updated":"2026-05-06T09:41:28.779+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW5 Answer/","noteIcon":"default","created":"2026-04-04T20:23:03.688+08:00","updated":"2026-05-09T17:21:08.718+08:00","dg-note-properties":{}}
 ---
 
-[[电动26春/EMD_answer_phj/HW Answer/HW6 Answer\|HW6 Answer]]
+[[电动26春/EMD_answer_phj/HW Answer/HW6 Answer\|HW6 Answer]]  
+
+<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/HW/electrodynamics05.pdf" width="100%" height="900px" title="electrodynamics05" style="border:1px solid #ccc;"></iframe>
 # 1 《电磁学与电动力学》（下册）
 ![zz_figure/Pasted image 20260404212053.png](/img/user/zz_figure/Pasted%20image%2020260404212053.png)  
 ![zz_figure/Pasted image 20260404212116.png](/img/user/zz_figure/Pasted%20image%2020260404212116.png)

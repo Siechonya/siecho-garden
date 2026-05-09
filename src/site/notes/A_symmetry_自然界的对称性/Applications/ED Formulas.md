@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-08T20:53:08.390+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-09T17:00:08.580+08:00","dg-note-properties":{}}
 ---
 
 
@@ -185,10 +185,10 @@ $$
 \varphi(\boldsymbol{x}+\boldsymbol{\epsilon}) = e^{\boldsymbol{\epsilon}\cdot\nabla} \varphi(\boldsymbol{x})
 = \left[ 1 + (\boldsymbol{\epsilon}\cdot\nabla) + \frac{1}{2!}(\boldsymbol{\epsilon}\cdot\nabla)^2 + \frac{1}{3!}(\boldsymbol{\epsilon}\cdot\nabla)^3 + \cdots \right] \varphi(\boldsymbol{x})
 $$
-here:  
+Here, the terms in the parentheses are
 $$
-\frac{1}{2} (\boldsymbol{\epsilon}\cdot\nabla)(\boldsymbol{\epsilon}\cdot\nabla) \varphi(\boldsymbol{x}) = \frac{1}{2} \epsilon_i \epsilon_j \frac{\partial^2 \varphi}{\partial x_i \partial x_j},\quad
-\frac{1}{6} (\boldsymbol{\epsilon}\cdot\nabla)^3 \varphi(\boldsymbol{x}) = \frac{1}{6} \epsilon_i \epsilon_j \epsilon_k \frac{\partial^3 \varphi}{\partial x_i \partial x_j \partial x_k},\quad
+\frac{1}{2} (\boldsymbol{\epsilon}\cdot\nabla)(\boldsymbol{\epsilon}\cdot\nabla)  = \frac{1}{2} \epsilon_i \epsilon_j \frac{\partial^2 }{\partial x_i \partial x_j},\quad
+\frac{1}{6} (\boldsymbol{\epsilon}\cdot\nabla)^3  = \frac{1}{6} \epsilon_i \epsilon_j \epsilon_k \frac{\partial^3}{\partial x_i \partial x_j \partial x_k},\quad
 \cdots
 $$
 $T(\boldsymbol{\epsilon}) = e^{\boldsymbol{\epsilon}\cdot\nabla}$ is so-called "Translation Operator" in quantum mechanics or lie group ($\hat{T}(\boldsymbol{\epsilon}) = e^{\frac{\mathrm{i}}{\hbar} \boldsymbol{\epsilon} \cdot \hat{\boldsymbol{p}}}$).  
@@ -1064,6 +1064,11 @@ $$
 \quad
 (\text{covariant elctromagnetic potential equation})
 $$
+$$
+\implies 
+\square \varphi = -\frac{\rho}{\epsilon_0},\quad
+\square \boldsymbol{A} = -\mu_0  \boldsymbol{J}
+$$
 ### 4.1.2 Lorentz transformation of EM field  
 from Lorentz transformation of $F^{\alpha\beta}$:  
 $$
@@ -1232,7 +1237,7 @@ K^i = L^{0i}= \frac{1}{c}\iiint_{\mathbb{R}^3} M^{00i}\,\mathrm{d}^3x
 ct\iiint \underset{\text{total momentum}}{\underbrace{(\boldsymbol{g}+\gamma\rho_m\boldsymbol{v})}} \,\mathrm{d}^3x-
 \frac{1}{c}\iiint \underset{\text{total energy}}{\underbrace{[w+\gamma\rho_m c^2]}}\boldsymbol{x} \,\mathrm{d}^3x
 $$
-the second term in the right side of $K^i$ is the velocity of total energy, which is proportional to $t$, namely energy center moving in a straight line.
+The second term in the right side of $K^i$ is the velocity of total energy, which is proportional to $t$, namely energy center moving in a straight line.
 ### 4.1.5 Maxwell's equation in the media* 
 #todo   
 
@@ -1303,7 +1308,9 @@ Substituting into the Lagrange equation yields the covariant Maxwell's equations
 $$
 \partial_\alpha F^{\alpha\beta} = -\mu_0J^\beta
 $$
-## 4.3 Covariant Single particle motion equation   
+## 4.3 Covariant single particle motion equation 
+
+## 4.4 Noether's theorem of field  
 
 
 # 5 Static Electric Field
@@ -1311,7 +1318,7 @@ $$
 # 7 EM Wave
 
 # 8 Electromagnetic Radiation
-## 8.1 Fields of a Moving Point Charge
+## 8.1 Fields of a moving point charge
 
 
 

@@ -1,8 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW4 Answer/","noteIcon":"default","created":"2026-03-27T23:31:18.902+08:00","updated":"2026-04-07T16:45:02.966+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW4 Answer/","noteIcon":"default","created":"2026-03-27T23:31:18.902+08:00","updated":"2026-05-09T17:20:55.220+08:00","dg-note-properties":{}}
 ---
 
-[[电动26春/EMD_answer_phj/HW Answer/HW5 Answer\|HW5 Answer]]
+[[电动26春/EMD_answer_phj/HW Answer/HW5 Answer\|HW5 Answer]]  
+
+<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/HW/electrodynamics04.pdf" width="100%" height="900px" title="electrodynamics04" style="border:1px solid #ccc;"></iframe>
 
 ![zz_figure/Pasted image 20260328123830.png](/img/user/zz_figure/Pasted%20image%2020260328123830.png)  
 ![zz_figure/Pasted image 20260328123845.png](/img/user/zz_figure/Pasted%20image%2020260328123845.png)  
