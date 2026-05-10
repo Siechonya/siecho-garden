@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW7 Answer/","noteIcon":"default","created":"2026-04-24T17:44:57.258+08:00","updated":"2026-05-09T17:21:52.883+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW7 Answer/","noteIcon":"default","created":"2026-04-24T17:44:57.258+08:00","updated":"2026-05-10T15:49:47.872+08:00","dg-note-properties":{}}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW8 Answer\|HW8 Answer]]  
 
-<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/HW/electrodynamics07(1).pdf" width="100%" height="900px" title="electrodynamics07(1)" style="border:1px solid #ccc;"></iframe>
+
 # 1 Relativistic Collision
 ## 1.1 
 Refer to the total momentum conservation, one yield  

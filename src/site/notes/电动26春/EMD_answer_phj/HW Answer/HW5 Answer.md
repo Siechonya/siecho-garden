@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW5 Answer/","noteIcon":"default","created":"2026-04-04T20:23:03.688+08:00","updated":"2026-05-09T17:32:02.980+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW5 Answer/","noteIcon":"default","created":"2026-04-04T20:23:03.688+08:00","updated":"2026-05-10T14:23:03.723+08:00","dg-note-properties":{}}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW6 Answer\|HW6 Answer]]  
 
-<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/HW/electrodynamics05.pdf" width="100%" height="900px" title="electrodynamics05" style="border:1px solid #ccc;"></iframe>
+
 # 1 《电磁学与电动力学》（下册）
 ![zz_figure/Pasted image 20260404212053.png](/img/user/zz_figure/Pasted%20image%2020260404212053.png)  
 
@@ -117,6 +117,7 @@ $$
 ## 3.1 
 $$
 \Delta s'^2 = g^{\alpha\beta}\mathrm{d}x'_\alpha\mathrm{d}x'_\beta 
+= \Delta s^2
 = g^{\rho\sigma} \mathrm{d}x_\rho\mathrm{d}x_\sigma 
 = g^{\rho\sigma}\Lambda_\rho{}^\alpha \Lambda_\sigma{}^\beta \mathrm{d}x_\alpha\mathrm{d}x_\beta
 $$
@@ -126,7 +127,7 @@ $$
 $$
 \Lambda^\gamma{}_\beta \Lambda_\gamma{}^\alpha =g^{\gamma\mu} g_{\beta\nu} \Lambda_\mu{}^{\nu} \Lambda_\gamma{}^\alpha = g_{\beta\nu}g^{\nu\alpha} = \delta^\alpha_\beta
 $$
-## 3.2 SO(3)
+## 3.2 $SO(3)$
 令矩阵为 $J = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$，注意到 $J^2 = \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix} = -I_{2 \times 2}$，$J^3 = -J$，$J^4 = I_{2 \times 2}$，所以利用泰勒级数展开：
 $$
 e^{-\theta J} = I - \theta J + \frac{\theta^2}{2!} J^2 - \frac{\theta^3}{3!} J^3 + \dots = (\cos\theta) I - (\sin\theta) J = \begin{pmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{pmatrix}

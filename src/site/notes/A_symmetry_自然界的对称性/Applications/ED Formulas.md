@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-09T17:00:08.580+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-10T13:45:49.678+08:00","dg-note-properties":{}}
 ---
 
 
@@ -58,7 +58,7 @@ $$
 \delta_{kl} & \delta_{km} & \delta_{kn}
 \end{pmatrix}
 $$
-and for high-dimensional case, we have generalized kronecker delta  
+and for high-dimensional case, we have generalized Kronecker delta  
 $$  
 \epsilon_{i_1i_2\cdots i_n} \epsilon_{j_1j_2\cdots j_n} = \det\begin{pmatrix}
 \delta_{i_1j_1} & \delta_{i_1j_2} & \cdots & \delta_{i_1j_n} \\
@@ -116,7 +116,7 @@ $$
 $$
 ### 1.1.3 $\nabla$  
 #### Differential operations 
-- Coordinate Component Expansion of Differential Operators
+- Coordinate Component Expansion of Differential Operators 
 $$
 \operatorname{grad} \Phi \triangleq \hat{e}_i \partial_i \Phi
 $$
@@ -130,7 +130,7 @@ $$
 $$
 \nabla^2  \Phi =  \nabla \cdot \nabla  \Phi = \sum_i \partial_i^2 \Phi
 $$
-- Two critical indentities
+- Two critical identities
 $$
 \nabla \times\nabla  \varphi = 0,\quad \nabla \cdot (\nabla \times \boldsymbol{a}) = 0
 $$
@@ -170,9 +170,9 @@ $$
 $$
 $$
 \begin{align} 
-\nabla \cdot (\boldsymbol{a}\boldsymbol{b}) &= (\nabla \cdot \boldsymbol{a}) \boldsymbol{b} + (\boldsymbol{a} \cdot \nabla) \boldsymbol{b}
+\nabla \cdot (\boldsymbol{a}\boldsymbol{b}) &= (\nabla \cdot \boldsymbol{a}) \boldsymbol{b} + \boldsymbol{a} \cdot \nabla \boldsymbol{b}
 \\[5pt]
-\nabla \cdot (\boldsymbol{a}\boldsymbol{b}\boldsymbol{c}) &= (\nabla \cdot \boldsymbol{a}) \boldsymbol{b}\boldsymbol{c} + (\boldsymbol{a} \cdot \nabla\boldsymbol{b}) \boldsymbol{c} + \boldsymbol{b}\boldsymbol{a}\cdot \nabla \boldsymbol{c}
+\nabla \cdot (\boldsymbol{a}\boldsymbol{b}\boldsymbol{c}) &= (\nabla \cdot \boldsymbol{a}) \boldsymbol{b}\boldsymbol{c} + (\boldsymbol{a} \cdot \nabla\boldsymbol{b}) \boldsymbol{c} + \boldsymbol{b}(\boldsymbol{a}\cdot \nabla \boldsymbol{c})
 \end{align} 
 $$
 $$
@@ -454,7 +454,7 @@ for $f(x) : \mathbb{R} \to \mathbb{R}$, one finds
 $$
 \delta(f(x)) = \sum_n \frac{\delta(x-x_i)}{\left| f'(x_i) \right|}, \quad \text{with}~ f(x_i)=0, f'(x_i)\neq 0
 $$
-for $f(\boldsymbol{x}):\mathbb{R}^n\to \mathbb{R}$ 
+for $f(\boldsymbol{x}):\mathbb{R}^n\to \mathbb{R}$ *
 $$
 \int_{\mathbb{R}^n} g(\boldsymbol{x}) \delta(f(\boldsymbol{x})) \, \mathrm{d}^n\boldsymbol{x} = \int_{f(\boldsymbol{x})=0} \frac{g(\boldsymbol{x})}{|\nabla f(\boldsymbol{x})|} \, \mathrm{d}S
 , \quad \text{with}~ \nabla f(\boldsymbol{x}_i)\neq 0
@@ -687,7 +687,7 @@ $$
 \end{cases}
 $$
 Note: $\boldsymbol{k} \to -\boldsymbol{k}$ indicates that the wave vector undergoes inversion. According to the principle that the thumb points in the direction of the wave vector, the polarization also experiences inversion at this time. If $\boldsymbol{k}\to-\boldsymbol{k}$ and $\omega t \to -\omega t$, the polarization handedness remains unchanged.
-#### Circularly polarized basis vectors
+#### Circularly polarized basis vectors*
 $$
 \begin{cases}
 \hat{e}_+ \triangleq \frac{{\hat{e}_1 + \mathrm{i} \hat{e}_2}}{\sqrt{2}}, \quad \text{Right-hand} \\[5pt]
@@ -715,7 +715,7 @@ $$
 $$
 \langle \Re[\tilde{f}] \cdot \Re[\tilde{g}] \rangle = \frac{1}{2} \Re[\tilde{f}_0 \tilde{g}_0^*]
 $$
-In the vector scenario,
+In the vector scenario,  
 $$
 \langle \Re[\tilde{\boldsymbol{f}}] \cdot \Re[\tilde{\boldsymbol{g}}] \rangle = \frac{1}{2} \Re[\tilde{\boldsymbol{f}} \cdot \tilde{\boldsymbol{g}}^*]
 ,\quad
@@ -748,6 +748,7 @@ $$
 In a steady state where the electromagnetic momentum is constant over time, the total force acting on the particles within volume $V$ can be expressed as
 $$
 \boldsymbol{F} =  \iiint_V \boldsymbol{f}\,\mathrm{d}V = -\oint_{\partial V} \mathrm{d}\boldsymbol{\sigma}\cdot \mathsf{T}
+= \oint_{\partial V} \mathrm{d}\boldsymbol{\sigma}\cdot \mathsf{T}_M
 $$
 #### Angular momentum conservation
 $$
@@ -926,14 +927,30 @@ $$
 p^\alpha = mu^\alpha = (\gamma m c, \gamma m \boldsymbol{v}) = \left( \frac{\mathcal{E}}{c}, \boldsymbol{p} \right)
 $$
 $$
+p^\alpha p_\alpha = -m^2c^2 \implies
 \mathcal{E}^2 = (|\boldsymbol{p}|c)^2 + (mc^2)^2
+$$
+- 4-force
+$$
+F^\alpha =\frac{ \mathrm{d} p^\alpha }{ \mathrm{d} \tau} =  ma^\alpha = \left( {\gamma^4} m(\boldsymbol{\beta} \cdot \boldsymbol{a}), \gamma^2 m\boldsymbol{a} + {\gamma^4}m (\boldsymbol{\beta} \cdot \boldsymbol{a}) \boldsymbol{\beta} \right)
+$$
+Since $\boldsymbol{F} = \frac{ \mathrm{d} \boldsymbol{p} }{ \mathrm{d} t},\boldsymbol{F}\cdot\boldsymbol{\beta} = \frac{ \mathrm{d} \mathcal{E}/c }{ \mathrm{d} t} \longrightarrow F^\alpha={\gamma}(\boldsymbol{F}\cdot\boldsymbol{\beta},\boldsymbol{F})$,
+$$
+\implies
+\boldsymbol{F} = \gamma m\boldsymbol{a} + {\gamma^3}m (\boldsymbol{\beta} \cdot \boldsymbol{a}) \boldsymbol{\beta}
+\implies
+\boldsymbol{F}= 
+\begin{cases} 
+\gamma m a, \boldsymbol{\beta} \perp \boldsymbol{a} \\[4pt]
+\gamma^3 m a, \boldsymbol{\beta} \parallel \boldsymbol{a}
+\end{cases}
 $$
 - 4-operator
 $$
 \partial_\mu = \frac{ \partial  }{ \partial x^\mu } = \left( \frac{1}{c}\frac{ \partial  }{ \partial t },\nabla \right), \quad 
 \partial_\mu \partial^\mu = \square = -\frac{1}{c^2} \frac{ \partial  }{ \partial t^2 } + \nabla^2
 $$
-- Three fundamental invariant tensor in the Minkowski space
+- Three fundamental invariant tensor in the Minkowski space 
 $$
 g^{\alpha\beta}, \quad \delta^\alpha_\beta, \quad \epsilon^{\alpha\beta\mu\nu}
 $$
@@ -992,7 +1009,7 @@ $$
 \sum_{\alpha<\beta<\mu}\lambda_\alpha\lambda_\beta\lambda_\mu,\quad
 \sum_{\alpha<\beta<\mu<\nu}\lambda_\alpha\lambda_\beta\lambda_\mu\lambda_\nu
 $$
-for asymmetric matrix $A^{\alpha\beta} \triangleq \begin{pmatrix} 0 & \boldsymbol{p} \\  -\boldsymbol{p} & \mathsf{a} \end{pmatrix} \triangleq \{\boldsymbol{p}, \boldsymbol{a}\}$ ,    
+for an asymmetric matrix $A^{\alpha\beta} \triangleq \begin{pmatrix} 0 & \boldsymbol{p} \\  -\boldsymbol{p} & \mathsf{a} \end{pmatrix} \triangleq \{\boldsymbol{p}, \boldsymbol{a}\}$ ,    
 $$
 I_1 = a^2 - p^2 = -\frac{1}{2} A^{\alpha\beta}A_{\alpha\beta}
 ,\quad 
@@ -1131,7 +1148,7 @@ k^\alpha k_\alpha = \frac{\omega^2}{c^2} - |\boldsymbol{k}|^2 \text{ is invarian
 \implies
 kc\equiv\omega ~\text{ in any inertial frame}
 $$
-- Lorentz transformation of $k^\alpha$. assuming $\theta = \langle \boldsymbol{k},\boldsymbol{\beta}\rangle$, 
+- Lorentz transformation of $k^\alpha$. assuming $\theta = \langle \boldsymbol{k},\boldsymbol{\beta}\rangle, \theta' = \langle \boldsymbol{k}',\boldsymbol{\beta}\rangle$, 
 $$
 K\to K':\quad
 k'^\alpha = \Lambda^\alpha_{~~\beta}k^\beta \Longleftrightarrow
@@ -1197,7 +1214,6 @@ T^{\mu\nu}_p = \rho_{m0} u^\mu u^\nu
 \implies
 f^\nu = \rho_m\frac{ \mathrm{d} u^\nu }{ \mathrm{d} \tau} = \partial_\mu T^{\mu\nu}_p
 $$
-
 - Energy-momentum conservation 
 $$
 \partial_\mu T^{\mu\nu}_f = - f^\nu = -\partial_\mu T^{\mu\nu}_p
@@ -1252,7 +1268,7 @@ Gauge transformation
 $$
 \Delta L = \tilde{L} - L = \frac{ \mathrm{d} f(q_\alpha, t) }{ \mathrm{d} t}
 $$
-#### Covariant Lagrange equation (Relativistic Particle)
+#### Covariant Lagrange equation for Relativistic Particle
 For the action $S = \int_{\tau_1}^{\tau_2} L(x^\mu(\tau), \dot{x}^\mu(\tau)) \, \mathrm{d}\tau$, provided that the endpoints $\tau_1, \tau_2$ are fixed and $\delta x^\mu = 0$ at the boundaries, then
 $$
 \frac{\delta L}{\delta x^\mu} \triangleq \frac{\partial L}{\partial x^\mu} - \frac{\mathrm{d}}{\mathrm{d}\tau} \frac{\partial L}{\partial \dot{x}^\mu} = 0
@@ -1270,7 +1286,7 @@ $$
 \frac{\delta \mathcal{L}}{\delta A^\alpha} \triangleq \frac{\partial \mathcal{L}}{\partial A^\alpha} - \partial_\mu \left( \frac{\partial \mathcal{L}}{\partial (\partial_\mu A^\alpha)} \right) = 0
 $$
 Gauge transformation is $\Delta \mathcal{L} = \partial_\alpha C^\alpha (A^\mu, x^\mu)$.
-### 4.2.2 Particles 
+### 4.2.2 Particles' motion 
 $$
 L(\boldsymbol{x}, \boldsymbol{v}) = -mc^2 \sqrt{1-\frac{v^2}{c^2}} - e\varphi + e\boldsymbol{v}\cdot \boldsymbol{A} ,\quad \boldsymbol{p} = \frac{ \partial L }{ \partial \boldsymbol{v} } = \gamma m \boldsymbol{v} + e\boldsymbol{A}
 $$
@@ -1279,8 +1295,8 @@ L(x^\mu, u^\mu) = -mc \sqrt{-u^\alpha u_\alpha} + eA^\alpha u_\alpha, \quad
 p^\alpha = \frac{ \partial L }{ \partial u_\alpha } = mu^\alpha + eA^\alpha
 $$
 Substituting into the Lagrange equation yields $\frac{ \mathrm{d} \boldsymbol{p} }{ \mathrm{d} t} = e\boldsymbol{E}+e\boldsymbol{v}\times \boldsymbol{B}$ and $\frac{ \mathrm{d} p^\alpha }{ \mathrm{d} \tau} = eF^{\alpha\beta}u_\beta$, respectively.
-### 4.2.3 Field  
-- Klein-Gordon field*
+### 4.2.3 Field equation 
+- Klein-Gordon field *
 $$
 \mathcal{L} = -\frac{1}{2}(\partial^\mu\varphi \partial_\mu\varphi + \kappa^2\varphi^2) + \rho(x^\mu)\varphi(x^\mu)
 $$
@@ -1308,7 +1324,8 @@ Substituting into the Lagrange equation yields the covariant Maxwell's equations
 $$
 \partial_\alpha F^{\alpha\beta} = -\mu_0J^\beta
 $$
-## 4.3 Covariant single particle motion equation 
+## 4.3 Covariant single particle motion equation   
+
 
 ## 4.4 Noether's theorem of field  
 

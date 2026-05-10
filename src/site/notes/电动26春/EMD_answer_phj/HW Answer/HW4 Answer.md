@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW4 Answer/","noteIcon":"default","created":"2026-03-27T23:31:18.902+08:00","updated":"2026-05-09T17:20:55.220+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW4 Answer/","noteIcon":"default","created":"2026-03-27T23:31:18.902+08:00","updated":"2026-05-10T14:11:57.587+08:00","dg-note-properties":{}}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW5 Answer\|HW5 Answer]]  
 
-<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/HW/electrodynamics04.pdf" width="100%" height="900px" title="electrodynamics04" style="border:1px solid #ccc;"></iframe>
+
 
 ![zz_figure/Pasted image 20260328123830.png](/img/user/zz_figure/Pasted%20image%2020260328123830.png)  
 ![zz_figure/Pasted image 20260328123845.png](/img/user/zz_figure/Pasted%20image%2020260328123845.png)  
@@ -102,7 +102,7 @@ $$\boldsymbol{B}_{out} = {\frac{\mu_0 \sigma_0 a^4}{3 r^3} [3(\boldsymbol{\omega
 所以，我们只需要计算在赤道平面（$z=0$）上的积分。对于上半空间，面元向量为 $\mathrm{d}\boldsymbol{a} = -\hat{\boldsymbol{z}} \,\mathrm{d}a$。
 
 由于对称性，赤道面上的磁力只可能有 $z$ 分量（径向受力相互抵消）：
-$$F_z = \int_{z=0} (\mathsf{T} \cdot \mathrm{d}\boldsymbol{a})_z = \int_{z=0} T_{zz} (-\mathrm{d}a) = -\int_{z=0} T_{zz} \,\mathrm{d}a$$
+$$F_z = \int_{z=0} (\mathsf{T} \cdot \mathrm{d}\boldsymbol{a})_z = -\int_{z=0} T_{zz} \,\mathrm{d}a$$
 麦克斯韦应力张量的纯磁场部分定义为 $T_{ij} = \frac{1}{\mu_0} \left( B_i B_j - \frac{1}{2}\delta_{ij}B^2 \right)$：
 $$T_{zz}^{in} = \frac{1}{2\mu_0} \left( \frac{2}{3} \mu_0 \sigma_0 a \omega \right)^2 = \frac{2}{9} \mu_0 \sigma_0^2 a^2 \omega^2$$
 所以
@@ -127,10 +127,14 @@ $$W_E = \int_{a}^{\infty} \frac{1}{2}\epsilon_0 E^2 (4\pi r^2) \mathrm{d}r = \fr
 > 对于局域分布的源，无穷远处的表面积分为 0。代入安培环路定理 $\nabla \times \boldsymbol{B} = \mu_0 \boldsymbol{J}$：
 > $$\int_{all} \frac{B^2}{2\mu_0} \mathrm{d}V = \frac{1}{2\mu_0} \int \boldsymbol{A} \cdot (\mu_0 \boldsymbol{J}) \mathrm{d}V = \frac{1}{2} \int \boldsymbol{A} \cdot \boldsymbol{J} \mathrm{d}V$$
 
-已知球面上的矢量势为 $\boldsymbol{A}(a) ={\frac{\mu_0 \sigma_0 a}{3} (\boldsymbol{\omega} \times \boldsymbol{x})}= \frac{\mu_0 e \omega a \sin\theta}{12\pi} \hat{\boldsymbol{\phi}}$，面电流密度为 $\boldsymbol{K} =\sigma_0 \boldsymbol{v} = \sigma_0 a\sin\theta \omega= \frac{e \omega \sin\theta}{4\pi a} \hat{\boldsymbol{\phi}}$。所以磁能：    
-$$W_M = \frac{1}{2} \int_0^\pi \left( \frac{\mu_0 e \omega a \sin\theta}{12\pi} \right) \left( \frac{e \omega \sin\theta}{4\pi a} \right) (2\pi a^2 \sin\theta) \mathrm{d}\theta = \frac{\mu_0 e^2 \omega^2 a}{36\pi}$$  
+已知球面上的矢量势为 $\boldsymbol{A}(a) ={\frac{\mu_0 \sigma_0 a}{3} (\boldsymbol{\omega} \times \boldsymbol{x})}= \frac{\mu_0 e \omega a \sin\theta}{12\pi} \hat{\boldsymbol{\phi}}$，面电流密度为 $\boldsymbol{K} =\sigma_0 \boldsymbol{v} = \sigma_0 a\sin\theta \omega\hat{\boldsymbol{\phi}}= \frac{e \omega \sin\theta}{4\pi a} \hat{\boldsymbol{\phi}}$。所以磁能：    
+$$
+W_M = \frac{1}{2} \int_0^\pi \left( \frac{\mu_0 e \omega a \sin\theta}{12\pi} \right) \left( \frac{e \omega \sin\theta}{4\pi a} \right) (2\pi a^2 \sin\theta) \mathrm{d}\theta = \frac{\mu_0 e^2 \omega^2 a}{36\pi}
+$$
 总能量
-$$W = \frac{e^2}{8\pi\epsilon_0 a} + \frac{\mu_0 e^2 \omega^2 a}{36\pi}$$
+$$
+W = \frac{e^2}{8\pi\epsilon_0 a} + \frac{\mu_0 e^2 \omega^2 a}{36\pi}
+$$
 
 ### 2.2.2 
 磁矩 $\boldsymbol{m} = \frac{4\pi}{3}\sigma_0 \boldsymbol{\omega} a^4=\frac{1}{3}e\boldsymbol{\omega}a^2$，电磁场角动量  
@@ -153,7 +157,7 @@ $$
 \int \boldsymbol{m} \,\mathrm{d}\Omega = 4\pi \boldsymbol{m}
 $$
 $$
-\int \hat{\boldsymbol{r}}(\hat{\boldsymbol{r}} \cdot \boldsymbol{m})\,\mathrm{d}\Omega =\int (\mathsf{I} \cdot \boldsymbol{m}) \,\mathrm{d}\Omega
+\int \hat{\boldsymbol{r}}(\hat{\boldsymbol{r}} \cdot \boldsymbol{m})\,\mathrm{d}\Omega = \boldsymbol{m}\cdot\int \hat{\boldsymbol{r}}\hat{\boldsymbol{r}}   \,\mathrm{d}\Omega
 = \frac{4\pi}{3} \boldsymbol{m}
 $$
 所以最终得到旋转球壳的场角动量为：
@@ -162,14 +166,15 @@ $$
 ={\frac{\mu_0 e^2 a}{18\pi} \boldsymbol{\omega}}
 $$
 
-
 ### 2.2.3 
 通常在经典模型中，由于 $\omega a \ll c$ 的预期，磁能项 $W_M$ 远小于静电能 $W_E$。我们先忽略 $W_M$：
 
 由 $W \approx \frac{e^2}{8\pi\epsilon_0 a} = m_e c^2$ 得 $a = \frac{e^2}{8\pi\epsilon_0 m_e c^2}$ (即经典电子半径)；由角动量公式 $\frac{\mu_0 e^2 a \omega}{18\pi} = \frac{\hbar}{2}$ 得 $\omega = \frac{9\pi \hbar}{\mu_0 e^2 a}$。以及
-$$v = \omega a = \frac{9\pi \hbar}{\mu_0 e^2} = \frac{9\pi \hbar \epsilon_0 c^2}{e^2}$$
+$$
+v = \omega a = \frac{9\pi \hbar}{\mu_0 e^2} = \frac{9\pi \hbar \epsilon_0 c^2}{e^2}
+$$
 利用精细结构常数 $\alpha = \frac{e^2}{4\pi\epsilon_0 \hbar c} \approx \frac{1}{137}$，上式可改写为：
-$$v = \frac{9}{4 \alpha} c \approx \frac{9 \times 137}{4} c \approx {308 c}$$
+$$v = \frac{9}{4 \alpha} c \approx \frac{9 \times 137}{4} c \approx {308\ c}$$
 这个速度远远超越了光速，是没有意义的，回过头来再用 $W\approx W_M =  \frac{\mu_0 e^2 \omega^2 a}{36\pi} = m_e c^2$ 也没什么意义。另外，据说将电子视为刚体，通过转动惯量来计算角动量，也会得到类似的结论（得到赤道角速度为一百多倍光速）。
 
 

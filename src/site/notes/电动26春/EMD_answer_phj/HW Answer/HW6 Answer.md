@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW6 Answer/","noteIcon":"default","created":"2026-04-17T12:55:27.273+08:00","updated":"2026-05-09T17:21:20.522+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW6 Answer/","noteIcon":"default","created":"2026-04-17T12:55:27.273+08:00","updated":"2026-05-10T12:09:54.854+08:00","dg-note-properties":{}}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW7 Answer\|HW7 Answer]]  
 
-<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/EMD_answer_phj/HW/electrodynamics06(1).pdf" width="100%" height="900px" title="electrodynamics06(1)" style="border:1px solid #ccc;"></iframe>
+
 
 # 1 《电磁学与电动力学》(下册)  
 - 8.5,8.7~8.12
