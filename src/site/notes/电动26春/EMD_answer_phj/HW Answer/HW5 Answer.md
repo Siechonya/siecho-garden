@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW5 Answer/","noteIcon":"default","created":"2026-04-04T20:23:03.688+08:00","updated":"2026-05-10T14:23:03.723+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW5 Answer/","noteIcon":"default","created":"2026-04-04T20:23:03.688+08:00","updated":"2026-05-10T21:01:41.761+08:00","dg-note-properties":{}}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW6 Answer\|HW6 Answer]]  
@@ -119,7 +119,7 @@ $$
 \Delta s'^2 = g^{\alpha\beta}\mathrm{d}x'_\alpha\mathrm{d}x'_\beta 
 = \Delta s^2
 = g^{\rho\sigma} \mathrm{d}x_\rho\mathrm{d}x_\sigma 
-= g^{\rho\sigma}\Lambda_\rho{}^\alpha \Lambda_\sigma{}^\beta \mathrm{d}x_\alpha\mathrm{d}x_\beta
+= g^{\rho\sigma}\Lambda_\rho{}^\alpha \Lambda_\sigma{}^\beta \mathrm{d}x'_\alpha\mathrm{d}x'_\beta
 $$
 $$
 \implies  g^{\alpha\beta} = g^{\rho\sigma}\Lambda_\rho{}^\alpha \Lambda_\sigma{}^\beta 
@@ -176,14 +176,14 @@ $$
 $$
 这也反映了沿同一方向的两个洛伦兹提升，其快度是直接相加的。
 
-## 3.4 
+## 3.4 Lorentz Group 的数学定义
 对于 $O(1,3)$ 群元 $\Lambda_1, \Lambda_2$： 
 $$
 \Lambda^T g \Lambda = g
 $$
 - 验证群的封闭性。
 $$
-\Lambda^T g \Lambda = (\Lambda_1 \Lambda_2)^T g (\Lambda_1 \Lambda_2) 
+(\Lambda_1 \Lambda_2)^T g (\Lambda_1 \Lambda_2) 
 = \Lambda_2^T (\Lambda_1^T g \Lambda_1) \Lambda_2
 =\Lambda_2^T g \Lambda_2
 =g
@@ -211,13 +211,13 @@ $$
 ### 3.5.1 
 成立
 
-1. 封闭性（乘法）：
+1. 封闭性：
     - 如果 $\Lambda_1, \Lambda_2 \in SO(1,3)^\uparrow$，那么他们的行列式均为 1，则 $\det(\Lambda_1\Lambda_2) = \det\Lambda_1 \det\Lambda_2 = 1 \times 1 = 1$。
     - 对于性质 $\Lambda^0{}_0 \ge 1$，两个正规变换的乘积依然是正规的（这可以通过柯西-施瓦茨不等式证明，见后续 [[电动26春/EMD_answer_phj/HW Answer/HW5 Answer#3.5.3 若 $ Lambda_1, Lambda_2$ 满足 $( Lambda_1) 0_0 ge 1$ 且 $( Lambda_2) 0_0 ge 1$，则它们的乘积 $ Lambda = Lambda_1 Lambda_2$ 的分量 $ Lambda 0_0$ 也必然满足 $ Lambda 0_0 ge 1$。\|#3.5.3 若 $ Lambda_1, Lambda_2$ 满足 $( Lambda_1) 0_0 ge 1$ 且 $( Lambda_2) 0_0 ge 1$，则它们的乘积 $ Lambda = Lambda_1 Lambda_2$ 的分量 $ Lambda 0_0$ 也必然满足 $ Lambda 0_0 ge 1$。]]）。
     - 因此，乘积依然属于该子集。
 2. 逆元存在性：
     - 如果 $\det\Lambda = 1$，则 $\det(\Lambda^{-1}) = 1$。
-    - 对于性质 $\Lambda^0{}_0 \ge 1$，$\Lambda_0{}^0 = g_{0\alpha}g^{0\beta}\Lambda^\alpha{}_\beta=g_{00}g^{00}\Lambda^0{}_0=\Lambda^0{}_0\geq1$。
+    - 如果 $\Lambda^0{}_0 \ge 1$，$\Lambda_0{}^0 = g_{0\alpha}g^{0\beta}\Lambda^\alpha{}_\beta=g_{00}g^{00}\Lambda^0{}_0=\Lambda^0{}_0\geq1$。
     - 因此，逆元依然属于该子集。
 
 ### 3.5.2 
@@ -240,7 +240,7 @@ $$
 ,\quad
 |\vec{b}|^2 = \sum_{i=1}^3 ((\Lambda_2)^i{}_0)^2 = ((\Lambda_2)^0{}_0)^2 - 1
 $$
-又，乘积矩阵 $\Lambda = \Lambda_1 \Lambda_2$ 的左上角元素为：
+又，乘积矩阵 $\Lambda = \Lambda_1 \Lambda_2$ 的 00 分量为：
 $$
 \Lambda^0{}_0 = (\Lambda_1)^0{}_\mu (\Lambda_2)^\mu{}_0 = (\Lambda_1)^0{}_0 (\Lambda_2)^0{}_0 + \sum_{i=1}^3 (\Lambda_1)^0{}_i (\Lambda_2)^i{}_0=(\Lambda_1)^0{}_0 (\Lambda_2)^0{}_0 + \vec{a} \cdot \vec{b}
 $$
@@ -250,7 +250,6 @@ $$
 \implies
 \Lambda^0{}_0 \ge (\Lambda_1)^0{}_0 (\Lambda_2)^0{}_0 - |\vec{a}| |\vec{b}|
 $$
-
 代入刚才的模长公式：  
 $$
 \Lambda^0{}_0 \ge (\Lambda_1)^0{}_0 (\Lambda_2)^0{}_0 - \sqrt{((\Lambda_1)^0{}_0)^2 - 1} \sqrt{((\Lambda_2)^0{}_0)^2 - 1}

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW4 Answer/","noteIcon":"default","created":"2026-03-27T23:31:18.902+08:00","updated":"2026-05-10T14:11:57.587+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW4 Answer/","noteIcon":"default","created":"2026-03-27T23:31:18.902+08:00","updated":"2026-05-10T19:02:34.507+08:00","dg-note-properties":{}}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW5 Answer\|HW5 Answer]]  
@@ -15,7 +15,7 @@
 已知能量和动量密度满足   
 $$
 \begin{align} 
-w&= \frac{1}{2}\left( \epsilon_0E^2 + \frac{B^2}{\mu_0} \right) \geq \sqrt{\frac{\epsilon_0}{\mu_0}} EB, \quad{仅当\epsilon_0E^2 + \frac{B^2}{\mu_0}时取等号}
+w&= \frac{1}{2}\left( \epsilon_0E^2 + \frac{B^2}{\mu_0} \right) \geq \sqrt{\frac{\epsilon_0}{\mu_0}} EB, \quad{仅当\epsilon_0E^2 = \frac{B^2}{\mu_0}时取等号}
 \\[4pt]
 cg&= \frac{P}{c} = \sqrt{\frac{\epsilon_0}{\mu_0}} |\boldsymbol{E} \times \boldsymbol{B} | \leq  \sqrt{\frac{\epsilon_0}{\mu_0}} EB, \quad{仅当\boldsymbol{E} \perp \boldsymbol{B}时取等号}
 \end{align}

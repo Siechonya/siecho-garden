@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-10T13:45:49.678+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-10T22:44:19.732+08:00","dg-note-properties":{}}
 ---
 
 
@@ -102,7 +102,7 @@ $$
 \boldsymbol{a} \cdot \mathsf{T} \times \boldsymbol{b} = (\boldsymbol{a} \cdot \mathsf{T}) \times \boldsymbol{b} = \boldsymbol{a} \cdot (\mathsf{T} \times \boldsymbol{b})
 $$
 $$
-\boldsymbol{a} \times \mathsf{T} \times \boldsymbol{b} = (\boldsymbol{a} \times \mathsf{T}) \times \boldsymbol{b} = \boldsymbol{a} \times (\mathsf{T} \times \boldsymbol{b}), \quad \mathsf{T} \in \mathbb{R}^n \otimes \mathbb{R}^n \cdots \otimes \mathbb{R}^n
+\boldsymbol{a} \times \mathsf{T} \times \boldsymbol{b} = (\boldsymbol{a} \times \mathsf{T}) \times \boldsymbol{b} = \boldsymbol{a} \times (\mathsf{T} \times \boldsymbol{b})
 $$
 - Cross $\to$ Dot
 $$
