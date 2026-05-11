@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-10T22:44:19.732+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-11T15:07:41.623+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1327,7 +1327,7 @@ $$
 ## 4.3 Covariant single particle motion equation   
 
 
-## 4.4 Noether's theorem of field  
+## 4.4 Noether's theorem of field *  
 
 
 # 5 Static Electric Field

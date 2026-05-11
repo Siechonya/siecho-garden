@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW7 Answer/","noteIcon":"default","created":"2026-04-24T17:44:57.258+08:00","updated":"2026-05-10T15:49:47.872+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW7 Answer/","noteIcon":"default","created":"2026-04-24T17:44:57.258+08:00","updated":"2026-05-11T19:25:09.869+08:00","dg-note-properties":{}}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW8 Answer\|HW8 Answer]]  
@@ -102,7 +102,7 @@ $$
 ## 5.2 
 Use the Legendre Transformation and $\boldsymbol{p}=\gamma m \boldsymbol{v} = \boldsymbol{P} - e\boldsymbol{A}, \boldsymbol{P} = \frac{ \partial L }{ \partial \boldsymbol{v} }$, the Hamiltonian can be calculated as
 $$
-H = \boldsymbol{p} \cdot \boldsymbol{v} - L = \sqrt{c^2(\boldsymbol{P} - e\boldsymbol{A})^2 + (mc^2)^2} + e\varphi
+H = \boldsymbol{P} \cdot \boldsymbol{v} - L = \sqrt{c^2(\boldsymbol{P} - e\boldsymbol{A})^2 + (mc^2)^2} + e\varphi
 $$
 ## 5.3 
 For Non-relativistic approximation ($\beta \ll 1$), we also have $\gamma \beta \ll 1$. Thus
