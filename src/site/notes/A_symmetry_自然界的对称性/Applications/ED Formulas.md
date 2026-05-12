@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-12T18:38:16.373+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-12T20:18:23.576+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1464,12 +1464,12 @@ $$
 y = -ct
 $$
 namely it's a particle propagating in the $\boldsymbol{E}\times \boldsymbol{B}$-direction at the speed of light as $u^1(0)=0$.
-#### 4.3.4 Non-parallel field  
-If $\boldsymbol{E}\cdot \boldsymbol{B}\neq 0$, one can find a inertial frame with the speed satisfying $\frac{\boldsymbol{\beta}}{1+\beta^2}  = \frac {{\boldsymbol{E\times \boldsymbol{cB}} }}{E^2+c^2 B^2}$ where $\boldsymbol{E'}\cdot \boldsymbol{B'}=0$. Therefore, Assuming $\boldsymbol{E}\parallel\boldsymbol{B}$ with $\boldsymbol{B}\equiv B\hat{e}_z$, $\boldsymbol{E}\equiv E\hat{e}_z$, 
-
-
+#### Non-Perpendicular field  
+If $\boldsymbol{E}\cdot \boldsymbol{B}\neq 0$, one can find a inertial frame with the speed satisfying $\frac{\boldsymbol{\beta}}{1+\beta^2}  = \frac {{\boldsymbol{E\times \boldsymbol{cB}} }}{E^2+c^2 B^2}$ where $\boldsymbol{E'}\cdot \boldsymbol{B'}=0$. Therefore, Assuming $\boldsymbol{E}\parallel\boldsymbol{B}$ with $\boldsymbol{B}\equiv B\hat{e}_z$, $\boldsymbol{E}\equiv E\hat{e}_z$, the solution is a spiral motion that undergoes hyperbolic acceleration in the $z$ direction.
 ## 4.4 Noether's theorem of field *  
-# 5 Static Electric Field
+# 5 Static Electric Field    
+## 5.1 Multipole expansion  
+
 # 6 Static Magnetic Field  
 # 7 EM Wave
 
