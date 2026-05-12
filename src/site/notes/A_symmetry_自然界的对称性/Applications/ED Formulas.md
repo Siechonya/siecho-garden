@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-11T15:07:41.623+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-12T11:20:38.131+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1172,18 +1172,24 @@ $$
 \omega_{obs} = \omega_0\sqrt{\frac{1+\beta}{1-\beta}} 
 $$
 ### 4.1.4 Conservation / Continuity equation  
-#### 4-current & charge conservation
+#### 4-current & charge conservation  
+Define the 4-current,
 $$
-j^\alpha = \rho_0 u^\alpha = (\rho c , \boldsymbol{j}),\quad
+j^\alpha = \rho_{e0} u^\alpha = (\rho_e c , \boldsymbol{j}),\quad
 \text{with}~
-\rho = \gamma \rho_0, \
-\boldsymbol{j} = \rho \boldsymbol{v} = \gamma\rho_0 \boldsymbol{v} 
+\rho_e = \gamma \rho_{e0}, \
+\boldsymbol{j} = \rho_e \boldsymbol{v} = \gamma\rho_{e0} \boldsymbol{v} 
 $$
+> Note: Since the total charge $Q$ is a Lorentz invariant but the volume $V$ undergoes length contraction ($V = V_0/\gamma$), the charge density must increase by the same factor, $\rho = Q/V = \gamma \rho_0$.  
+> 
+> Furthermore, while the time interval dilates ($\mathrm{d}t = \gamma \mathrm{d}\tau$) and the spatial volume element contracts ($\mathrm{d}^3x = \mathrm{d}^3x_0/\gamma$), these two $\gamma$ factors exactly cancel each other out. This ensures that the four-dimensional spacetime volume $\mathrm{d}^4x = c\,\mathrm{d}t\,\mathrm{d}^3x$ is a Lorentz invariant (scalar).
+
+The current's 4-divergence is zero:
 $$
-\partial_\alpha j^\alpha = 
-\nabla \cdot \boldsymbol{j} + \frac{\partial \rho}{\partial t} = 0
+\partial_\alpha j_e^\alpha = 
+\nabla \cdot \boldsymbol{j}_e + \frac{\partial \rho_e}{\partial t} = 0
 $$
-A 4-vector $J^\alpha$ is referred to as a conserved current if $\partial_\alpha J^\alpha = 0$. The corresponding conserved charge, defined as $Q = \frac{1}{c} \iiint_{\mathbb{R}^3} J^0 \, \mathrm{d}^3x$, is a Lorentz invariant.  
+A 4-vector $J^\alpha$ is referred to as a <font color="#ff0000">conserved current</font> if $\partial_\alpha J^\alpha = 0$. The corresponding conserved charge, defined as $Q = \frac{1}{c} \iiint_{\mathbb{R}^3} J^0 \, \mathrm{d}^3x$, is a Lorentz invariant.  
 #### Mass conservation  
 $$
 j_m^\alpha = \rho_{m0} u^\alpha = (\rho_m c , \boldsymbol{j}_m),\quad
@@ -1198,7 +1204,11 @@ $$
 #### Energy-momentum tensor conservation  
 - 4-Lorentz force
 $$
-f^\alpha = F^{\alpha\beta}J_\beta = (f^0,\boldsymbol{f}) = \left( \frac{1}{c} \boldsymbol{E}\cdot\boldsymbol{J}, ~~\rho_e \boldsymbol{E}+\boldsymbol{J}\times\boldsymbol{E} \right)
+f^\alpha = F^{\alpha\beta}J_\beta = (f^0,\boldsymbol{f}) = \left( \frac{1}{c} \boldsymbol{E}\cdot\boldsymbol{J}, ~~\rho_e \boldsymbol{E}+\boldsymbol{J}\times\boldsymbol{B} \right)
+$$
+for single particle with charge $+e$, $J_\beta = eu_\beta = \gamma e(c,\boldsymbol{v}), \rho_e = \gamma e$. thus,  
+$$
+f^\alpha = eF^{\alpha\beta}u_\beta = \gamma (\boldsymbol{F}\cdot \boldsymbol{\beta}, \boldsymbol{F}) = \gamma (e\boldsymbol{E}\cdot \boldsymbol{\beta}, e\boldsymbol{E}+e\boldsymbol{v}\times \boldsymbol{B})
 $$
 - Energy-momentum tensor of EM field
 $$
@@ -1208,7 +1218,7 @@ T^{\mu\nu}_f \triangleq -\frac{1}{4\mu_0}g^{\mu\nu} F^{\alpha\beta}F_{\alpha\bet
 $$
 - Energy-momentum tensor of particles
 $$
-T^{\mu\nu}_p = \rho_{m0} u^\mu u^\nu 
+T^{\mu\nu}_p \triangleq \rho_{m0} u^\mu u^\nu 
 =
 \gamma\rho_m\begin{pmatrix} c^2 & c\boldsymbol{v} \\  c\boldsymbol{v} & \boldsymbol{v}\boldsymbol{v} \end{pmatrix}
 \implies
@@ -1283,7 +1293,7 @@ Gauge transformation is $\Delta \mathcal{L}  = \partial_\alpha C^\alpha (\varphi
 #### Lagrange equation for Vector Field
 For the action $S = \int_{\Omega} \mathcal{L}(A^\alpha(x^\mu), \partial_\mu A^\alpha(x^\mu), x^\mu) \, \mathrm{d}^4x$, provided that the boundary of the spacetime region $\Omega$ is fixed and $\delta A^\alpha = 0$ on the boundary, then
 $$
-\frac{\delta \mathcal{L}}{\delta A^\alpha} \triangleq \frac{\partial \mathcal{L}}{\partial A^\alpha} - \partial_\mu \left( \frac{\partial \mathcal{L}}{\partial (\partial_\mu A^\alpha)} \right) = 0
+\frac{\delta \mathcal{L}}{\delta A^\alpha} \triangleq \frac{\partial \mathcal{L}}{\partial A^\alpha} - \partial^\mu \left( \frac{\partial \mathcal{L}}{\partial (\partial^\mu A^\alpha)} \right) = 0
 $$
 Gauge transformation is $\Delta \mathcal{L} = \partial_\alpha C^\alpha (A^\mu, x^\mu)$.
 ### 4.2.2 Particles' motion 
@@ -1320,11 +1330,19 @@ $$
 \equiv
 \frac{1}{2}\left( \epsilon_0 E^2 - \frac{1}{\mu_0} B^2 \right) - (\rho \varphi - \boldsymbol{J}\cdot\boldsymbol{A})
 $$
+$$
+\text{with}\ F^{\alpha\beta} = \partial^\alpha A^\beta - \partial^\beta A^\alpha
+$$
 Substituting into the Lagrange equation yields the covariant Maxwell's equations with a source term,
 $$
 \partial_\alpha F^{\alpha\beta} = -\mu_0J^\beta
 $$
 ## 4.3 Covariant single particle motion equation   
+### 4.3.1 Single particle in uniform electric field  
+Assuming $\boldsymbol{E}\equiv E\hat{e}_x$. Refer to 4-Lorentz force $f^\alpha = eF^{\alpha\beta}u_\beta = \gamma (e\boldsymbol{E}\cdot \boldsymbol{\beta}, e\boldsymbol{E}+e\boldsymbol{v}\times \boldsymbol{B})$ and Lorentz equation $\frac{ \mathrm{d} p^\alpha }{ \mathrm{d} \tau} = f^\alpha$, one finds  
+$$
+
+$$
 
 
 ## 4.4 Noether's theorem of field *  
