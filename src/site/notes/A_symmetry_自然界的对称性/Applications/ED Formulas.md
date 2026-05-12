@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-12T11:20:38.131+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-12T18:38:16.373+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1306,7 +1306,7 @@ p^\alpha = \frac{ \partial L }{ \partial u_\alpha } = mu^\alpha + eA^\alpha
 $$
 Substituting into the Lagrange equation yields $\frac{ \mathrm{d} \boldsymbol{p} }{ \mathrm{d} t} = e\boldsymbol{E}+e\boldsymbol{v}\times \boldsymbol{B}$ and $\frac{ \mathrm{d} p^\alpha }{ \mathrm{d} \tau} = eF^{\alpha\beta}u_\beta$, respectively.
 ### 4.2.3 Field equation 
-- Klein-Gordon field *
+#### Klein-Gordon field *
 $$
 \mathcal{L} = -\frac{1}{2}(\partial^\mu\varphi \partial_\mu\varphi + \kappa^2\varphi^2) + \rho(x^\mu)\varphi(x^\mu)
 $$
@@ -1324,7 +1324,7 @@ For a static, spherically symmetric source, the field equation reduces to $\frac
 $$
 \varphi(r) \propto \frac{1}{r} e^{- \kappa r}
 $$
-- EM field
+#### EM field
 $$
 \mathcal{L} = \mathcal{L}_f + \mathcal{L}_p = -\frac{1}{4\mu_0} F_{\alpha\beta}F^{\alpha\beta} + A^\alpha J_\alpha
 \equiv
@@ -1339,15 +1339,136 @@ $$
 $$
 ## 4.3 Covariant single particle motion equation   
 ### 4.3.1 Single particle in uniform electric field  
-Assuming $\boldsymbol{E}\equiv E\hat{e}_x$. Refer to 4-Lorentz force $f^\alpha = eF^{\alpha\beta}u_\beta = \gamma (e\boldsymbol{E}\cdot \boldsymbol{\beta}, e\boldsymbol{E}+e\boldsymbol{v}\times \boldsymbol{B})$ and Lorentz equation $\frac{ \mathrm{d} p^\alpha }{ \mathrm{d} \tau} = f^\alpha$, one finds  
+Assuming $\boldsymbol{E}\equiv E\hat{e}_x$ and the particle is at rest and $\boldsymbol{x}=0$ at time $t = 0$ (at every subsequent moment $t>0$, $\boldsymbol{a}$, $\boldsymbol{v}$ and $\boldsymbol{x}$ are parallel to $\boldsymbol{E}$) . One finds  
 $$
-
+\quad \frac{ \mathrm{d} p }{ \mathrm{d}t} = e E, \quad \boldsymbol{p}=p\hat{e}_x=\gamma m v \hat{e}_x
 $$
+thus $eE\mathrm{d}t = \mathrm{d}(\gamma m v)$,   
+$$
+eEx = \frac{mv}{\sqrt{1-\frac{v^2}{c^2}}}  \implies 
+v(t) = \frac{\omega_E t \cdot c}{\sqrt{1 + \left(\omega_E t\right)^2}}, \quad \boldsymbol{\omega}_E = \frac{e\boldsymbol{E}}{mc}
+$$
+$$
+\implies
+x(t) = \frac{c}{\omega_E} \left[ \sqrt{1+(\omega_E t)^2}  -1 \right] 
+\implies
+\left( \frac{x}{c/\omega_E} +1 \right)^2 - \omega_E^2 t^2 = 1
+$$
+This is a hyperbola, which can also be expressed in the form with the parameter $\tau$. First above,
+$$
+\gamma (t) = \frac{1}{\sqrt{1+\frac{v^2}{c^2}}} \implies \gamma(t) = \sqrt{1+\omega_E^2 t^2}
+$$
+Since $\frac{\mathrm{d}t}{\mathrm{d} \tau} = \gamma$,  
+$$
+\implies c\,t(\tau) = \frac{c}{\omega_E} \sinh(\omega_E \tau)
+$$
+and substituting into $x(t) = \frac{c}{\omega_E} \left[ \sqrt{1+(\omega_E t)^2}  -1 \right]$ yields,  
+$$
+x(\tau) = \frac{c}{\omega_E}\left[ \cosh(\omega_E \tau) - 1 \right]
+$$
+### 4.3.2 Single particle in uniform magnetic field  
+Assuming $\boldsymbol{B}\equiv B\hat{e}_z$ and the particle satisfies $\boldsymbol{x}=0$, $p_x=0$, $p_y = p_\perp = \gamma m v_\perp$ and $p_z=p_\parallel = \gamma m v_\parallel$ at time $t = 0$. One finds 
+$$
+\frac{ \mathrm{d} \mathcal{E} }{ \mathrm{d} t} = 0 \implies \gamma = \text{const},\quad
+\frac{ \mathrm{d} p_x }{ \mathrm{d} t} = ev_y B, \quad
+\frac{ \mathrm{d} p_y }{ \mathrm{d} t} = -ev_x B,\quad
+\frac{ \mathrm{d} p_z }{ \mathrm{d} t} = 0
+$$
+$$
+\implies\gamma m \frac{\mathrm{d} v_x}{\mathrm{d} t} = e B v_y,\quad  \gamma m \frac{\mathrm{d} v_y}{\mathrm{d} t} = -e B v_x
+$$
+$$
+\implies v_x(t) = v_\perp \sin(\omega_c t),\quad v_y(t) = v_\perp \cos(\omega_c t) ,\quad v_z(t) \equiv v_\parallel
+$$
+with relativistic cyclotron frequency $\omega_c = \frac{eB}{\gamma m}$, then integral 
+$$
+\implies
+x(t) = \frac{v_\perp}{\omega_c} \left[ 1 - \cos(\omega_c t) \right],\quad
+y(t) = \frac{v_\perp}{\omega_c} \sin(\omega_c t),\quad
+z(t) = v_\parallel t 
+$$
+This depicts a spiral line moving along the $z$ axis. Since $\gamma \equiv \frac{t}{\tau}$,  
+$$
+x(\tau) = R \left[ 1 - \cos\left(\omega_B \tau\right) \right] ,
+\quad y(\tau) = R \sin\left(\omega_B \tau\right),
+\quad z(\tau) = \gamma v_\parallel \tau,
+$$
+with cyclotron radius $R = \frac{v_\perp}{\omega_c}$ and classic gyro-frequency $\omega_B=\gamma \omega_c = \frac{eB}{m}$.  
+### 4.3.3 Single particle in uniform electromagnetic field *  
+#### Perpendicular field
+Assuming $\boldsymbol{E}\perp \boldsymbol{B}$ with $\boldsymbol{B}\equiv B\hat{e}_z$, $\boldsymbol{E}\equiv E\hat{e}_x$. Refer to 4-Lorentz force $f^\alpha = eF^{\alpha\beta}u_\beta = \gamma (e\boldsymbol{E}\cdot \boldsymbol{\beta}, e\boldsymbol{E}+e\boldsymbol{v}\times \boldsymbol{B})$ and Lorentz equation $\frac{ \mathrm{d} p^\alpha }{ \mathrm{d} \tau} = f^\alpha$, One finds  
+$$
+mc \frac{ \mathrm{d} u^0 }{ \mathrm{d} \tau} = eE u^1,\quad
+m \frac{ \mathrm{d} u^1 }{ \mathrm{d}   \tau} = \frac{eE}{c} u^0 + e u^2B,\quad 
+m \frac{ \mathrm{d} u^2 }{ \mathrm{d}   \tau} = - e u^1 B, \quad
+m \frac{ \mathrm{d} u^3 }{ \mathrm{d}   \tau} = 0
+$$
+Take the derivative of the second expression above with respect to the proper time $\tau$,  
+$$
+\frac{\mathrm{d}^2 u^1}{\mathrm{d} \tau^2} = \omega_E \frac{\mathrm{d} u^0}{\mathrm{d} \tau} + \omega_B \frac{\mathrm{d} u^2}{\mathrm{d} \tau}
+$$
+Substitute the 1-st and 3-rd equation into the above equation:
+$$
+\frac{\mathrm{d}^2 u^1}{\mathrm{d} \tau^2} = \left( \omega_E^2 - \omega_B^2 \right) u^1 = \frac{e^2 \mathrm{I}}{m^2} u^1
+$$
+$\mathrm{I}=\frac{E^2}{c^2} - B^2$ is a Lorentz invariant that we are all familiar with. Define $\Omega = | \omega_E^2 - \omega_B^2|^{\frac{1}{2}}$, then the solutions fall into three categories:  
+##### Magnetic dominance  
+If $\omega_B > \omega_E$, namely $cB>E$, the equation becomes the harmonic oscillator equation $\ddot{u}^1 = -\Omega^2 u^1$. However, it's complex to write out the parametric equations for the particle's motion in full. We adopt to a boost with $\boldsymbol{v}_B = \frac{{\boldsymbol{E\times \boldsymbol{cB}}}}{(cB)^2}c$ since $\boldsymbol{E}' = 0$ in the new inertial frame, with $B' = \sqrt{-I} = \frac{m}{e} \Omega$. 4-velocity component equation is simplified to
+$$
+\frac{\mathrm{d} u'^0}{\mathrm{d} \tau} = 0, \quad \frac{\mathrm{d} u'^1}{\mathrm{d} \tau} = \Omega u'^2, \quad \frac{\mathrm{d} u'^2}{\mathrm{d} \tau} = -\Omega u'^1, \quad \frac{\mathrm{d} u'^3}{\mathrm{d} \tau} = 0
+$$
+Surely it's a cyclotron motion like previous section [[A_symmetry_自然界的对称性/Applications/ED Formulas#4.3.2 Single particle in uniform magnetic field\|#4.3.2 Single particle in uniform magnetic field]]. Using $\gamma_B = \frac{1}{\sqrt{1 - (v_B/c)^2}} = \frac{cB}{\sqrt{c^2B^2 - E^2}}$, we can reversely transform to the lab frame,
+$$
+\begin{align} u^0 &= \gamma_B (u'^0 - \beta_B u'^2) \\ u^1 &= u'^1 \\ u^2 &= \gamma_B (u'^2 - \beta_B u'^0) \\ u^3 &= u'^3 \end{align}
+$$
+##### Electric dominance  
+If $\omega_B < \omega_E$, namely $cB<E$, the equation becomes the hyperbolic equation $\ddot{u}^1 = \Omega^2 u^1$. Adopt to a boost with $\boldsymbol{v}_E = \frac {{\boldsymbol{E\times \boldsymbol{cB}} }}{E^2} c$ since $\boldsymbol{B}' = 0$ in the new inertial frame, with $E' = \sqrt{I} = \frac{m}{e} \Omega$. 4-velocity component equation is simplified to
+$$
+\frac{\mathrm{d} u'^0}{\mathrm{d} \tau} = \frac{\Omega}{c} u'^1, \quad
+\frac{\mathrm{d} u'^1}{\mathrm{d} \tau} = \frac{\Omega}{c} u'^0,\quad
+u'^2, u'^3 = \text{const}
+$$
+Surely it's is a hyperbola like previous section [[A_symmetry_自然界的对称性/Applications/ED Formulas#4.3.1 Single particle in uniform electric field\|#4.3.1 Single particle in uniform electric field]].  
+##### Light case  
+If $\omega = \omega_B = \omega_E$, namely $cB=E$, the equation becomes the light equation $\ddot{u}^1 = 0$. 4-velocity component equation is simplified to
+$$
+\frac{ \mathrm{d} u^0 }{ \mathrm{d} \tau} = \omega u^1,\quad
+\frac{ \mathrm{d} u^1 }{ \mathrm{d}   \tau} =  \omega(u^0 +  u^2),\quad 
+\frac{ \mathrm{d} u^2 }{ \mathrm{d}   \tau} = - \omega u^1 , \quad
+\frac{ \mathrm{d} u^3 }{ \mathrm{d}   \tau} = 0
+$$
+Thus  
+$$
+u^1(\tau) = \alpha \tau + u^1(0) ,\quad \text{with}~  \alpha = \dot{u}^1(0) = \omega (u^0(0) + u^2(0))
+$$
+$$
+u^0(\tau) = \frac{1}{2}\omega\alpha \tau^2 + \omega u^1(0) \tau + u^0(0)
+,\quad
+u^2(\tau) = -\frac{1}{2}\omega\alpha \tau^2 - \omega u^1(0) \tau + u^2(0)
+$$
+Then integral
+$$
+\begin{align} 
+x(\tau) &= \int u^1 \mathrm{d}\tau = \frac{1}{2}\alpha \tau^2 + u^1(0)\tau \\[4pt]
+y(\tau) &= \int u^2 \mathrm{d}\tau = -\frac{1}{6}\omega\alpha \tau^3 - \frac{1}{2}\omega u^1(0) \tau^2 + u^2(0)\tau \\[4pt]
+ct(\tau) &= \int u^0 \mathrm{d}\tau = \frac{1}{6}\omega\alpha \tau^3 + \frac{1}{2}\omega u^1(0) \tau^2 + u^0(0)\tau
+\end{align}
+$$
+$$
+\implies y=-ct + \frac{\alpha}{\omega}\tau
+$$
+Since  
+$$
+\alpha \propto (u^0 + u^2) = \lim_{ v_y \to -c } \frac {{c+v_y}} {\sqrt{1-\frac{v_y^2}{c^2}}} = c\cdot \lim_{ v_y \to -c } \sqrt{\frac {{c+v_y}} {c-v_y}} = 0
+\implies
+y = -ct
+$$
+namely it's a particle propagating in the $\boldsymbol{E}\times \boldsymbol{B}$-direction at the speed of light as $u^1(0)=0$.
+#### 4.3.4 Non-parallel field  
+If $\boldsymbol{E}\cdot \boldsymbol{B}\neq 0$, one can find a inertial frame with the speed satisfying $\frac{\boldsymbol{\beta}}{1+\beta^2}  = \frac {{\boldsymbol{E\times \boldsymbol{cB}} }}{E^2+c^2 B^2}$ where $\boldsymbol{E'}\cdot \boldsymbol{B'}=0$. Therefore, Assuming $\boldsymbol{E}\parallel\boldsymbol{B}$ with $\boldsymbol{B}\equiv B\hat{e}_z$, $\boldsymbol{E}\equiv E\hat{e}_z$, 
 
 
 ## 4.4 Noether's theorem of field *  
-
-
 # 5 Static Electric Field
 # 6 Static Magnetic Field  
 # 7 EM Wave
