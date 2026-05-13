@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-13T21:11:32.170+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-13T21:48:11.961+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1485,7 +1485,7 @@ $$
 \delta \mathcal{L}(\varphi(x^\mu), \partial^\alpha(x^\mu),x^\mu) = \partial^\alpha (\Pi_\alpha \delta \varphi)  + \underset{\text{Lagrange equation =0}}{\underbrace{\left( \frac{ \partial \mathcal{L} }{ \partial \varphi } - \partial^\alpha \Pi_\alpha \right)}} \delta \varphi, \quad\text{with}~ 
 \Pi_\alpha = \frac{ \partial \mathcal{L} }{ \partial (\partial^\alpha \varphi) }
 $$
-Since the field equation wouldn't change under the gauge $\delta \mathcal{L} = \partial^\alpha C_\alpha$, one find a conserved current density,  
+Since the field equation wouldn't change under the gauge $\delta \mathcal{L} = \partial^\alpha C_\alpha$, one find a conserved current / Noether current,  
 $$
 \mathcal{J}^\alpha(x^\mu) = \Pi^\alpha\delta \varphi - C^\alpha,\quad
 \text{with}~ 
@@ -1503,39 +1503,34 @@ $$
 $$
 where the conserved current density is  
 $$
-\mathcal{J}^\alpha = \Pi^\alpha \bar{\delta} \varphi - \underbrace{(\Pi^\alpha \partial_\beta \varphi - \delta^\alpha_\beta \mathcal{L})}_{T^\alpha_{\;\;\beta}} \bar{\delta} x^\beta
+\mathcal{J}^\alpha = \Pi^\alpha \bar{\delta} \varphi + \underbrace{(\Pi^\alpha \partial_\beta \varphi - \delta^\alpha_\beta \mathcal{L})}_{T^\alpha_{\;\;\beta}} \bar{\delta} x^\beta
 $$
 or
 $$
-\mathcal{J}^\alpha = -T^{\alpha\beta}\bar{\delta} x_\beta + \Pi^\alpha \bar{\delta} \varphi,\quad
-\text{with}~ T^{\alpha\beta} = \Pi^\alpha \partial^\beta \varphi - g^{\alpha\beta}\mathcal{L}
+\mathcal{J}^\alpha = T^{\alpha\beta}\bar{\delta} x_\beta + \Pi^\alpha \bar{\delta} \varphi,\quad
+\text{with}~ T^{\alpha\beta} = -\Pi^\alpha \partial^\beta \varphi + g^{\alpha\beta}\mathcal{L}
 $$
-This definition is a little different from the form presented by Mr. Pan in class, but it's more commonly used in the mainstream textbooks.  
-
 > Warning: the regular energy-momentum tensor $T^{\alpha\beta}$ is not symmetric generally not symmetric for fields with spin (such as the electromagnetic field with spin-1). An additional divergence term $\frac{1}{\mu_0} \partial_\lambda (F^{\mu\lambda} A^\nu)$ needs to be introduced to ensure symmetry (refer to [[A_symmetry_自然界的对称性/Applications/Electrodynamics#3 $Symmetric correction$ 对称性修正\|Electrodynamics: 3. Symmetric correction]]).  
 ### 4.4.4 Noether's theorem of field  
 - Noether's theorem: If $\bar{\delta}\mathcal{L}=\partial_\alpha C^\alpha$ under the transformation $x^\alpha  \to x'^\alpha + \bar{\delta}x^\alpha$, then $\mathcal{J}^\alpha$ is the conserved current satisfying $\partial_\alpha \mathcal{J}^\alpha=0$
 #### Space-time Translation  
-Consider a global infinitesimal translation $x'^\mu = x^\mu + \epsilon^\mu$, where $\epsilon^\mu$ is a arbitrary constant 4-vector. The field transforms as a scalar: $\varphi'(x') = \varphi(x)$, hence $\bar{\delta} \varphi = 0$,
+Consider a global infinitesimal translation $x'^\mu = x^\mu + \epsilon^\mu$. The field transforms as a scalar, hence $\bar{\delta} \varphi = 0$. The Noether current is:
 $$
 \mathcal{J}^\alpha = -T^{\alpha\beta} \epsilon_\beta
 \implies
 \partial_\alpha T^{\alpha\beta} = 0 
 $$
+The conserved 4-momentum $P^\beta$ is,
 $$
-\implies
-P^\beta = \frac{1}{c}\int T^{0\beta} \,\mathrm{d}^3 x = \left( \frac{\mathcal{E}}{c}, \boldsymbol{P}\right) \ \ \text{is conserved with}
-\begin{cases} 
+P^\beta = \frac{1}{c}\int T^{0\beta} \,\mathrm{d}^3 x = \left( \frac{\mathcal{E}}{c}, \boldsymbol{P}\right) \ \ \text{is conserved with}~~
 \mathcal{E} = \iiint(\frac{ \partial \mathcal{L} }{ \partial (\partial^t\varphi)}\partial^t\varphi - \mathcal{L})\,\mathrm{d}^3x
-\\[5pt]
-P^i  = \iiint\frac{ \partial \mathcal{L} }{ \partial (\partial^t\varphi)}\partial^i\varphi\,\mathrm{d}^3x
-\end{cases}
 $$
+> $T^{\alpha\beta}$ needs to be corrected before we can obtain the physically meaningful expression of $P^i$ as well.
 #### Rotations and Boosts  
 Consider an infinitesimal Lorentz transformation: $x'^\mu = \Lambda^\mu_{\;\nu} x^\nu \approx (\delta^\mu_{\nu} + \omega^\mu_{\;\nu}) x^\nu$, hence $\bar{\delta} x^\mu =\omega^\mu_{\;\nu}x^\nu$ and $\bar{\delta} A^\mu =\omega^\mu_{\;\nu}A^\nu$,
 $$
-\mathcal{J}^\alpha = -T^{\alpha\beta}\bar{\delta} x_\beta + \Pi^{\alpha\beta} \bar{\delta} A_\beta,\quad
-\text{with}~~ T^{\alpha\beta} = \Pi^{\alpha\mu} \partial^\beta A_\mu - g^{\alpha\beta}\mathcal{L},\ 
+\mathcal{J}^\alpha = T^{\alpha\beta}\bar{\delta} x_\beta + \Pi^{\alpha\beta} \bar{\delta} A_\beta,\quad
+\text{with}~~ T^{\alpha\beta} = -\Pi^{\alpha\mu} \partial^\beta A_\mu + g^{\alpha\beta}\mathcal{L},\ 
 \Pi_{\alpha\beta} = \frac{ \partial \mathcal{L} }{ \partial (\partial_\alpha A_\beta) }
 $$
 $$
@@ -1543,10 +1538,10 @@ $$
 \implies
 \mathcal{J}^\alpha 
 &= 
--T^{\alpha\beta}\omega_{\beta\gamma}x^\gamma + \Pi^{\alpha\beta}\omega_{\beta\gamma}A^\gamma \\[5pt]
+T^{\alpha\beta}\omega_{\beta\gamma}x^\gamma + \Pi^{\alpha\beta}\omega_{\beta\gamma}A^\gamma \\[5pt]
 {\color{gray}\small \omega_{\beta\gamma} = - \omega_{\gamma\beta}\to}
 &=
-\frac{1}{2}\omega_{\beta\gamma} \underset{M^{\alpha\beta\gamma}}{\underbrace{\left[ \left( x^\beta T^{\alpha\gamma} - x^\gamma T^{\alpha\beta} \right) + \left( A^\gamma \Pi^{\alpha\beta} - A^\beta\Pi^{\alpha\gamma} \right) \right]}}
+\frac{1}{2}\omega_{\beta\gamma} \underset{M^{\alpha\beta\gamma}}{\underbrace{\left[ \left(x^\gamma T^{\alpha\beta} -x^\beta T^{\alpha\gamma} \right) + \left( A^\gamma \Pi^{\alpha\beta} - A^\beta\Pi^{\alpha\gamma} \right) \right]}}
 \end{align}
 $$
 Thus, $\partial_\alpha M^{\alpha\beta\gamma}=0$, the conserved charges are  

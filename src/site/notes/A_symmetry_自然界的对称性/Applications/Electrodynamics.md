@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Electrodynamics/","noteIcon":"default","created":"2025-03-12T22:33:45.968+08:00","updated":"2026-05-13T19:25:41.992+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Electrodynamics/","noteIcon":"default","created":"2025-03-12T22:33:45.968+08:00","updated":"2026-05-13T21:53:26.994+08:00","dg-note-properties":{}}
 ---
 
 
@@ -117,7 +117,7 @@ $$
 $$
 T^{\mu\nu} = -\frac{1}{\mu_0}F^{\mu\lambda}\partial^\nu A_\lambda + \frac{1}{4\mu_0}g^{\mu\nu}F^{\alpha\beta}F_{\alpha\beta}
 $$
-遗憾的是, 这个形式并不对称, 因而不能让诺特流满足 $\partial_\nu (J^\nu)^{\mu\sigma} = 0$ (参见 [[A_symmetry_自然界的对称性/Tools/Noether's Theorem and Symmetry#诺特流\|Noether's Theorem and Symmetry]]), 需要对其加以修正.
+遗憾的是, 这个形式并不对称, 需要对其加以修正.
 # 3 $Symmetric\ correction$ 
 注意到 $\partial_\mu T^{\mu\nu}=0$, 而由于 $F^{\mu\lambda}$ 是反对称张量, 使得 $\partial_\lambda (F^{\mu\lambda} A^\nu)$ 恰好也满足 $\partial_\mu\partial_\lambda (F^{\mu\lambda} A^\nu)=0$.
 
@@ -127,7 +127,7 @@ T^{\mu\nu} = \frac{1}{\mu_0} \left( F^{\mu\lambda}F_\lambda^{~\nu} + \frac{1}{4}
 $$
 两项都是两个反对称张量的缩并, 结果自然对称(度规对称时). 在闵氏度规 $(+,-,-,-)$ 下展开得到具体形式:
 $$
-T^{\mu\nu} = \begin{bmatrix}   能量 & 能流\left( {动量}\cdot{c^2} \right)\\  能流 \left( {动量}\cdot{c^2} \right) & (电磁应力)_{3\times 3} \\   \end{bmatrix}
+T^{\mu\nu} = \begin{bmatrix}   能量 & \frac{能流}{c}\left( {动量}\cdot{c} \right)\\  \frac{能流}{c} \left( {动量}\cdot{c} \right) & (电磁应力)_{3\times 3} \\   \end{bmatrix}
 \quad\longleftrightarrow\quad
 \left\{
 \begin{array}{l} 
