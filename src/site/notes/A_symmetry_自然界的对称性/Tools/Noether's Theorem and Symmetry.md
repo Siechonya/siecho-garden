@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Noether's Theorem and Symmetry/","noteIcon":"default","created":"2025-01-28T14:11:05.348+08:00","updated":"2025-10-25T23:16:57.364+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Tools/Noether's Theorem and Symmetry/","noteIcon":"default","created":"2025-01-28T14:11:05.348+08:00","updated":"2026-05-13T19:52:28.027+08:00","dg-note-properties":{}}
 ---
 
 
@@ -259,7 +259,7 @@ $$
 \\&= - \partial_\nu \left(  \frac{ \partial \mathcal{L} }{ \partial (\partial_\nu \Phi) } \partial_\mu{\Phi}  - \delta_\mu^\nu \mathcal{L}  \right) ~\delta x^\mu
 \end{array}
 $$
-定义能动张量(混合指标形式) $T_\mu^\nu := \frac{ \partial \mathcal{L} }{ \partial (\partial_\nu \Phi) } \partial_\mu{\Phi}  - \delta_\mu^\nu \mathcal{L}$, 于是,
+定义能动张量(混合指标形式) $T_\mu^\nu := \frac{ \partial \mathcal{L} }{ \partial (\partial_\nu \Phi) } \partial_\mu{\Phi}  - \delta_\mu^\nu \mathcal{L}$, 于是, 
 $$
 \color {red} {\partial_\nu T_\mu^\nu = \partial_t T^0_\mu + \partial_i T^i_\mu = 0}
 $$

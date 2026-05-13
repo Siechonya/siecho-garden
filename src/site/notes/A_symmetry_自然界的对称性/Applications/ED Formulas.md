@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-12T20:18:23.576+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-13T21:11:32.170+08:00","dg-note-properties":{}}
 ---
 
 
@@ -282,8 +282,8 @@ for static electric field, Coulomb's Law
 $$
 \implies
 \boldsymbol{E}(\boldsymbol{x}) 
-= -\frac{1}{4\pi} \nabla \int \frac{\rho(\boldsymbol{x}')/\varepsilon_0}{|\boldsymbol{x}-\boldsymbol{x}'|} \,\mathrm{d}V' 
-= \frac{1}{4\pi\varepsilon_0} \int \frac{\rho(\boldsymbol{x}') (\boldsymbol{x}-\boldsymbol{x}')}{|\boldsymbol{x}-\boldsymbol{x}'|^3} \,\mathrm{d}V' 
+= -\frac{1}{4\pi} \nabla \int \frac{\rho(\boldsymbol{x}')/\epsilon_0}{|\boldsymbol{x}-\boldsymbol{x}'|} \,\mathrm{d}V' 
+= \frac{1}{4\pi\epsilon_0} \int \frac{\rho(\boldsymbol{x}') (\boldsymbol{x}-\boldsymbol{x}')}{|\boldsymbol{x}-\boldsymbol{x}'|^3} \,\mathrm{d}V' 
 $$
 ### 1.1.4 Cases  
 - Determinant
@@ -728,11 +728,11 @@ $$
 $$
 #### Energy conservation
 $$
--\frac{ \partial \varepsilon }{ \partial t } = \nabla \cdot \boldsymbol{S} + \boldsymbol{f} \cdot \boldsymbol{v}
+-\frac{ \partial w }{ \partial t } = \nabla \cdot \boldsymbol{S} + \boldsymbol{f} \cdot \boldsymbol{v}
 $$
 with EMF (electromagnetic field) energy, Poynting vector and Lorentz force
 $$
-\varepsilon = \frac{1}{2}\epsilon_0 E^2 + \frac{B^2}{2\mu_0},~~
+w = \frac{1}{2}\epsilon_0 E^2 + \frac{B^2}{2\mu_0},~~
 \boldsymbol{S} = \frac{1}{\mu_0} \boldsymbol{E} \times \boldsymbol{B},~~
 \boldsymbol{f} = \rho_e \boldsymbol{E} + \boldsymbol{J} \times \boldsymbol{B}
 $$
@@ -743,7 +743,7 @@ $$
 with EMF momentum and Maxwell stress tensor
 $$
 \boldsymbol{g} = \epsilon_0 \boldsymbol{E} \times \boldsymbol{B} = \boldsymbol{S}/c^2,\quad
-\mathsf{T}_M  = -\mathsf{T} = -\varepsilon \mathsf{I} + \left( \epsilon_0 \boldsymbol{E}\boldsymbol{E} + \frac{\boldsymbol{B}\boldsymbol{B}}{\mu_0} \right)
+\mathsf{T}_M  = -\mathsf{T} = -w \mathsf{I} + \left( \epsilon_0 \boldsymbol{E}\boldsymbol{E} + \frac{\boldsymbol{B}\boldsymbol{B}}{\mu_0} \right)
 $$
 In a steady state where the electromagnetic momentum is constant over time, the total force acting on the particles within volume $V$ can be expressed as
 $$
@@ -762,11 +762,11 @@ $$
 $$
 - Energy conservation (Poynting's Theorem in Media)
 $$
-\frac{ \partial \varepsilon }{ \partial t } = \nabla \cdot \boldsymbol{S} + \boldsymbol{j}_f \cdot \boldsymbol{E}
+\frac{ \partial w }{ \partial t } = \nabla \cdot \boldsymbol{S} + \boldsymbol{j}_f \cdot \boldsymbol{E}
 $$
 with EMF energy and Poynting vector and Lorentz force
 $$
-\varepsilon = \frac{1}{2}(\boldsymbol{E} \cdot \boldsymbol{D} + \boldsymbol{B} \cdot \boldsymbol{H}),~~
+w = \frac{1}{2}(\boldsymbol{E} \cdot \boldsymbol{D} + \boldsymbol{B} \cdot \boldsymbol{H}),~~
 \boldsymbol{S} = \boldsymbol{E} \times \boldsymbol{H}
 $$
 - Momentum conservation  
@@ -776,7 +776,7 @@ $$
 with EMF momentum (Minkowski form), Maxwell stress tensor and Lorentz force acting on <font color="#ff0000">free</font> particles
 $$
 \boldsymbol{g} = \boldsymbol{D} \times \boldsymbol{B}, \quad
-\mathsf{T}_M = -\mathsf{T} = -\varepsilon \mathsf{I} + (\boldsymbol{E}\boldsymbol{D} + \boldsymbol{H}\boldsymbol{B}),\quad
+\mathsf{T}_M = -\mathsf{T} = -w \mathsf{I} + (\boldsymbol{E}\boldsymbol{D} + \boldsymbol{H}\boldsymbol{B}),\quad
 \boldsymbol{f}_f = \rho_f \boldsymbol{E} + \boldsymbol{J}_f \times \boldsymbol{B}
 $$
 In a steady state where the electromagnetic momentum is constant over time, the total force on <font color="#ff0000">free</font> particles within volume V is  
@@ -1467,6 +1467,92 @@ namely it's a particle propagating in the $\boldsymbol{E}\times \boldsymbol{B}$-
 #### Non-Perpendicular field  
 If $\boldsymbol{E}\cdot \boldsymbol{B}\neq 0$, one can find a inertial frame with the speed satisfying $\frac{\boldsymbol{\beta}}{1+\beta^2}  = \frac {{\boldsymbol{E\times \boldsymbol{cB}} }}{E^2+c^2 B^2}$ where $\boldsymbol{E'}\cdot \boldsymbol{B'}=0$. Therefore, Assuming $\boldsymbol{E}\parallel\boldsymbol{B}$ with $\boldsymbol{B}\equiv B\hat{e}_z$, $\boldsymbol{E}\equiv E\hat{e}_z$, the solution is a spiral motion that undergoes hyperbolic acceleration in the $z$ direction.
 ## 4.4 Noether's theorem of field *  
+### 4.4.1 Variation of field  
+- Formal variation
+$$
+\delta \varphi \triangleq \varphi'(x^\mu) - \varphi(x^\mu)
+$$
+- Total variation
+$$
+\bar{\delta} \varphi \triangleq \varphi'(x'^\mu) - \varphi(x^\mu), \quad \text{with}~ x'^\mu = x^\mu + \bar{\delta} x^\mu
+$$
+- Relation of the two variation
+$$
+\bar{\delta}\varphi = \delta \varphi + (\partial_\mu \varphi) \bar{\delta} x^\mu
+$$
+### 4.4.2 Formal variation of Lagrangian
+$$
+\delta \mathcal{L}(\varphi(x^\mu), \partial^\alpha(x^\mu),x^\mu) = \partial^\alpha (\Pi_\alpha \delta \varphi)  + \underset{\text{Lagrange equation =0}}{\underbrace{\left( \frac{ \partial \mathcal{L} }{ \partial \varphi } - \partial^\alpha \Pi_\alpha \right)}} \delta \varphi, \quad\text{with}~ 
+\Pi_\alpha = \frac{ \partial \mathcal{L} }{ \partial (\partial^\alpha \varphi) }
+$$
+Since the field equation wouldn't change under the gauge $\delta \mathcal{L} = \partial^\alpha C_\alpha$, one find a conserved current density,  
+$$
+\mathcal{J}^\alpha(x^\mu) = \Pi^\alpha\delta \varphi - C^\alpha,\quad
+\text{with}~ 
+\partial_\alpha \mathcal{J}^\alpha = 0
+$$
+### 4.4.3 Total variation of Lagrangian
+$$
+\begin{align} 
+\bar{\delta} \mathcal{L}(\varphi(x^\mu), \partial^\alpha \varphi(x^\mu),x^\mu) 
+&= \delta \mathcal{L} + (\partial_\alpha \mathcal{L}) \bar{\delta} x^\alpha \\[6pt]
+{\color{gray}\small \text{for infinitesimal Poincare transformation: } \partial_\alpha \bar{\delta}x^\alpha=0\to}
+&= \partial_\alpha \left[ \mathcal{L} \bar{\delta} x^\alpha +\Pi^\alpha \delta \varphi \right] \\[6pt]
+&= \partial_\alpha \mathcal{J}^\alpha
+\end{align}
+$$
+where the conserved current density is  
+$$
+\mathcal{J}^\alpha = \Pi^\alpha \bar{\delta} \varphi - \underbrace{(\Pi^\alpha \partial_\beta \varphi - \delta^\alpha_\beta \mathcal{L})}_{T^\alpha_{\;\;\beta}} \bar{\delta} x^\beta
+$$
+or
+$$
+\mathcal{J}^\alpha = -T^{\alpha\beta}\bar{\delta} x_\beta + \Pi^\alpha \bar{\delta} \varphi,\quad
+\text{with}~ T^{\alpha\beta} = \Pi^\alpha \partial^\beta \varphi - g^{\alpha\beta}\mathcal{L}
+$$
+This definition is a little different from the form presented by Mr. Pan in class, but it's more commonly used in the mainstream textbooks.  
+
+> Warning: the regular energy-momentum tensor $T^{\alpha\beta}$ is not symmetric generally not symmetric for fields with spin (such as the electromagnetic field with spin-1). An additional divergence term $\frac{1}{\mu_0} \partial_\lambda (F^{\mu\lambda} A^\nu)$ needs to be introduced to ensure symmetry (refer to [[A_symmetry_自然界的对称性/Applications/Electrodynamics#3 $Symmetric correction$ 对称性修正\|Electrodynamics: 3. Symmetric correction]]).  
+### 4.4.4 Noether's theorem of field  
+- Noether's theorem: If $\bar{\delta}\mathcal{L}=\partial_\alpha C^\alpha$ under the transformation $x^\alpha  \to x'^\alpha + \bar{\delta}x^\alpha$, then $\mathcal{J}^\alpha$ is the conserved current satisfying $\partial_\alpha \mathcal{J}^\alpha=0$
+#### Space-time Translation  
+Consider a global infinitesimal translation $x'^\mu = x^\mu + \epsilon^\mu$, where $\epsilon^\mu$ is a arbitrary constant 4-vector. The field transforms as a scalar: $\varphi'(x') = \varphi(x)$, hence $\bar{\delta} \varphi = 0$,
+$$
+\mathcal{J}^\alpha = -T^{\alpha\beta} \epsilon_\beta
+\implies
+\partial_\alpha T^{\alpha\beta} = 0 
+$$
+$$
+\implies
+P^\beta = \frac{1}{c}\int T^{0\beta} \,\mathrm{d}^3 x = \left( \frac{\mathcal{E}}{c}, \boldsymbol{P}\right) \ \ \text{is conserved with}
+\begin{cases} 
+\mathcal{E} = \iiint(\frac{ \partial \mathcal{L} }{ \partial (\partial^t\varphi)}\partial^t\varphi - \mathcal{L})\,\mathrm{d}^3x
+\\[5pt]
+P^i  = \iiint\frac{ \partial \mathcal{L} }{ \partial (\partial^t\varphi)}\partial^i\varphi\,\mathrm{d}^3x
+\end{cases}
+$$
+#### Rotations and Boosts  
+Consider an infinitesimal Lorentz transformation: $x'^\mu = \Lambda^\mu_{\;\nu} x^\nu \approx (\delta^\mu_{\nu} + \omega^\mu_{\;\nu}) x^\nu$, hence $\bar{\delta} x^\mu =\omega^\mu_{\;\nu}x^\nu$ and $\bar{\delta} A^\mu =\omega^\mu_{\;\nu}A^\nu$,
+$$
+\mathcal{J}^\alpha = -T^{\alpha\beta}\bar{\delta} x_\beta + \Pi^{\alpha\beta} \bar{\delta} A_\beta,\quad
+\text{with}~~ T^{\alpha\beta} = \Pi^{\alpha\mu} \partial^\beta A_\mu - g^{\alpha\beta}\mathcal{L},\ 
+\Pi_{\alpha\beta} = \frac{ \partial \mathcal{L} }{ \partial (\partial_\alpha A_\beta) }
+$$
+$$
+\begin{align} 
+\implies
+\mathcal{J}^\alpha 
+&= 
+-T^{\alpha\beta}\omega_{\beta\gamma}x^\gamma + \Pi^{\alpha\beta}\omega_{\beta\gamma}A^\gamma \\[5pt]
+{\color{gray}\small \omega_{\beta\gamma} = - \omega_{\gamma\beta}\to}
+&=
+\frac{1}{2}\omega_{\beta\gamma} \underset{M^{\alpha\beta\gamma}}{\underbrace{\left[ \left( x^\beta T^{\alpha\gamma} - x^\gamma T^{\alpha\beta} \right) + \left( A^\gamma \Pi^{\alpha\beta} - A^\beta\Pi^{\alpha\gamma} \right) \right]}}
+\end{align}
+$$
+Thus, $\partial_\alpha M^{\alpha\beta\gamma}=0$, the conserved charges are  
+$$
+L^{\alpha\beta} = \frac{1}{c}\iiint M^{0\alpha\beta}\,\mathrm{d}^3x
+$$
 # 5 Static Electric Field    
 ## 5.1 Multipole expansion  
 
