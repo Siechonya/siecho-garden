@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-13T21:48:11.961+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-22T12:03:01.079+08:00","dg-note-properties":{}}
 ---
 
 
@@ -10,12 +10,12 @@
 	- Second-order tensors are represented by boldface sans-serif type ($\mathsf{T}, \mathsf{I}$).
 	- Operators & Constants: Roman (upright) type is used for fixed mathematical constants (e.g., Pi $\mathrm{\pi}$, the imaginary unit $\mathrm{i}$) and differential operators (e.g., the differential $\mathrm{d}$ in $\mathrm{d}x$).
 	- Calculus Notation: For integrals, a thin space (`\,`) is used to separate the integrand from the differential operator, e.g., $\int f(x) \, \mathrm{d}x$.
-
+ 
 - Minkowski Metric: The Minkowski metric tensor $\eta_{\mu\nu}$ is defined using the _mostly-plus_ signature convention:
 $$
 \eta_{\mu\nu} = \operatorname{diag}(-1, +1, +1, +1)
 $$
-Consequently, the invariant spacetime interval is given by $\mathrm{d}s^2 = -c^2\mathrm{d}t^2 + \mathrm{d}x^2 + \mathrm{d}y^2 + \mathrm{d}z^2$.  
+Consequently, the invariant spacetime interval is given by $\mathrm{d}s^2 = -c^2\mathrm{d}t^2 + \mathrm{d}x^2 + \mathrm{d}y^2 + \mathrm{d}z^2=-\mathrm{d}\tau^2$.  
 - Lorentz transformation
 $$
 K'\to K:\quad
@@ -473,15 +473,14 @@ $$
 \delta^3(\boldsymbol{x}-\boldsymbol{x}') = \frac{1}{H} \delta^3(\boldsymbol{u} - \boldsymbol{u}')
 $$
 ### 1.2.3 Cases  
-- the point dipole (Electric dipole or magnetic dipole)  
-Let the point dipole be at the origin, and its charge density distribution is: 
+- the point dipole. Let the point dipole be at the origin, and its charge density distribution is: 
 $$
 \rho(\boldsymbol{x}) = -\boldsymbol{p} \cdot \nabla \delta^3(\boldsymbol{x})
 $$
 Because the total charge is zero,  
 $$
 Q = \int_{\mathbb{R}^3} \rho(\boldsymbol{x}) \, \mathrm{d}^3x = \int_{\mathbb{R}^3} [-\boldsymbol{p} \cdot \nabla \delta^3(\boldsymbol{x})] \, \mathrm{d}^3x
-= - \left( -\boldsymbol{p} \cdot \int_{\mathbb{R}^3} \delta^3(\boldsymbol{x}) \nabla(1) \, \mathrm{d}^3x \right) 
+= -  \nabla \left( -\boldsymbol{p} \cdot \int_{\mathbb{R}^3} \delta^3(\boldsymbol{x}) \, \mathrm{d}^3x \right) 
 =0
 $$
 and the first-order moment (dipole moment) is $\boldsymbol{p}$,  
@@ -1467,6 +1466,7 @@ namely it's a particle propagating in the $\boldsymbol{E}\times \boldsymbol{B}$-
 #### Non-Perpendicular field  
 If $\boldsymbol{E}\cdot \boldsymbol{B}\neq 0$, one can find a inertial frame with the speed satisfying $\frac{\boldsymbol{\beta}}{1+\beta^2}  = \frac {{\boldsymbol{E\times \boldsymbol{cB}} }}{E^2+c^2 B^2}$ where $\boldsymbol{E'}\cdot \boldsymbol{B'}=0$. Therefore, Assuming $\boldsymbol{E}\parallel\boldsymbol{B}$ with $\boldsymbol{B}\equiv B\hat{e}_z$, $\boldsymbol{E}\equiv E\hat{e}_z$, the solution is a spiral motion that undergoes hyperbolic acceleration in the $z$ direction.
 ## 4.4 Noether's theorem of field *  
+In this section, $\varphi_I$ ($I = 1, \ldots, N$) denotes the components of a multicomponent field, but $\varphi_I$ will be abbreviated as $\varphi$. When $\varphi$ appears twice, it implies summation over $I$.
 ### 4.4.1 Variation of field  
 - Formal variation
 $$
@@ -1510,7 +1510,10 @@ $$
 \mathcal{J}^\alpha = T^{\alpha\beta}\bar{\delta} x_\beta + \Pi^\alpha \bar{\delta} \varphi,\quad
 \text{with}~ T^{\alpha\beta} = -\Pi^\alpha \partial^\beta \varphi + g^{\alpha\beta}\mathcal{L}
 $$
-> Warning: the regular energy-momentum tensor $T^{\alpha\beta}$ is not symmetric generally not symmetric for fields with spin (such as the electromagnetic field with spin-1). An additional divergence term $\frac{1}{\mu_0} \partial_\lambda (F^{\mu\lambda} A^\nu)$ needs to be introduced to ensure symmetry (refer to [[A_symmetry_自然界的对称性/Applications/Electrodynamics#3 $Symmetric correction$ 对称性修正\|Electrodynamics: 3. Symmetric correction]]).  
+> * Warning: the regular energy-momentum tensor $T^{\alpha\beta}$ is not symmetric generally not symmetric for fields with spin (such as the electromagnetic field with spin-1). An additional divergence term $\frac{1}{\mu_0} \partial_\lambda (F^{\mu\lambda} A^\nu)$ needs to be introduced to ensure symmetry (refer to [[A_symmetry_自然界的对称性/Applications/Electrodynamics#3 $Symmetric correction$ 对称性修正\|Electrodynamics: 3. Symmetric correction]]).  
+
+> * Addition: Under the $(-, +, +, +)$ metric, conventionally $T^{\alpha\beta} = -\Pi^\alpha \partial^\beta \varphi + g^{\alpha\beta}\mathcal{L}$, whereas for the $(+, -, -, -)$, it's $T^{\alpha\beta} = \Pi^\alpha \partial^\beta \varphi - g^{\alpha\beta}\mathcal{L}$. This convention ensures that the energy density always satisfies the standard relation $T^{00} \equiv \frac{ \partial \mathcal{L} }{ \partial (\partial^0 \varphi) }\partial^0 \varphi - \mathcal{L}$. Furthermore, the distinction between $T^{\alpha\beta}$ and its transposed counterpart $T'^{\alpha\beta} = -\Pi^\beta \partial^\alpha \varphi + g^{\alpha\beta}\mathcal{L}$ amounts to a total divergence term (i.e., $T^{\alpha\beta} - T'^{\alpha\beta} = \partial_\mu \Psi^{\mu\alpha\beta}$). Consequently, $T'^{\alpha\beta}$ serves as an equally valid alternative for describing the conserved currents. 
+
 ### 4.4.4 Noether's theorem of field  
 - Noether's theorem: If $\bar{\delta}\mathcal{L}=\partial_\alpha C^\alpha$ under the transformation $x^\alpha  \to x'^\alpha + \bar{\delta}x^\alpha$, then $\mathcal{J}^\alpha$ is the conserved current satisfying $\partial_\alpha \mathcal{J}^\alpha=0$
 #### Space-time Translation  
@@ -1548,16 +1551,9 @@ Thus, $\partial_\alpha M^{\alpha\beta\gamma}=0$, the conserved charges are
 $$
 L^{\alpha\beta} = \frac{1}{c}\iiint M^{0\alpha\beta}\,\mathrm{d}^3x
 $$
-# 5 Static Electric Field    
-## 5.1 Multipole expansion  
-
-# 6 Static Magnetic Field  
-# 7 EM Wave
-
-# 8 Electromagnetic Radiation
-## 8.1 Fields of a moving point charge
 
 
+> The latter section is available at [[A_symmetry_自然界的对称性/Applications/ED formulas 2\|ED formulas 2]].
 
 
 

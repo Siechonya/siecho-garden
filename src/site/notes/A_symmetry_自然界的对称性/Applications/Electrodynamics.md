@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Electrodynamics/","noteIcon":"default","created":"2025-03-12T22:33:45.968+08:00","updated":"2026-05-13T21:53:26.994+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Electrodynamics/","noteIcon":"default","created":"2025-03-12T22:33:45.968+08:00","updated":"2026-05-20T13:10:13.178+08:00","dg-note-properties":{}}
 ---
 
 
@@ -98,7 +98,7 @@ F_{\mu\nu} \to \partial_\mu (A_\nu + \partial_\nu \lambda) - \partial_\nu (A_\mu
 $$
 保持不变, 因此拉格朗日量 $\mathcal{L}_{\text{em}}$ 也不变.
 # 2 $T^{\mu\nu}\ of\ Vacuum\ Free\ EMF$ 真空自由场的能动张量
-电磁张量可以写作:
+电磁张量可以写作:  
 $$
 F_{\mu\nu}= \partial_\mu A_\nu-\partial_\nu A_\mu
 = \begin{bmatrix}   0 & \frac{E_x}{c} & \frac{E_y}{c} & \frac{E_z}{c}\\   -\frac{E_x}{c} & 0 & -B_z & B_y\\   -\frac{E_y}{c} & -\frac{E_z}{c} & 0 & -B_x \\    -B_y & B_z & B_x & 0 \end{bmatrix} 

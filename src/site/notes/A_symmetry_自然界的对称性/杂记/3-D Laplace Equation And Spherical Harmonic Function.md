@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2026-03-28T23:49:04.290+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2026-05-22T09:17:21.538+08:00","dg-note-properties":{}}
 ---
 
 
@@ -96,21 +96,31 @@ $$
 $$
 这恰好和式(5)的形式一致, 也就是说方程(5)的解是  
 $$
-y_l^m = \frac{ d^m }{ d x^m} P_l(x), \quad |m| \leq l
+y_l^m = \frac{ d^m }{ d x^m} P_l(x), \quad 0\leq m \leq l
 $$
 那么连带勒让德方程(3)的解记为连带勒让德函数 $P_l^m(x)$, 回忆前面做过换元 $y(x) = \Theta(x) (1-x^2)^{-\frac{m}{2}}$, 那么
 $$
 \boxed{
-P_l^m(x) = (1-x^2)^{\frac{m}{2}} \frac{ d^m }{ d x^m} P_l(x), \quad |m| \leq l
+P_l^m(x) = (1-x^2)^{\frac{m}{2}} \frac{ d^m }{ d x^m} P_l(x), \quad 0\leq m \leq l
 }
 $$
-所以, 最后的球谐函数就是
+在量子力学中，经常在这个函数前面加上系数 $(-1)^m$ 变成：  
+$$
+\boxed{
+P_l^m(x) = (-1)^m(1-x^2)^{\frac{m}{2}} \frac{ d^m }{ d x^m} P_l(x), \quad 0\leq m \leq l
+}
+$$
+最后你会发现这个新的系数实际上不影响连带函数的正交完备性，而完全只是量子力学的一个相位规定。所以, 最后的球谐函数就是
 $$
 Y_l^m (\theta, \varphi) = P_l^m(\cos\theta)\Phi_m(\varphi)
 $$
 如果要归一化 $Y$, 也就是令 $\int_0^{2\pi} \mathrm{d}\varphi \int_0^{\pi} Y_l^m (\theta, \varphi) \sin\theta \mathrm{d}\theta = 1$, 则可以得到归一化的球谐函数:
 $$
 Y_l^m (\theta, \varphi) = \sqrt{\frac{1}{2\pi} \frac{2l+1}{2} \frac{(l-m)!}{(l+m)!}} ~P_l^m(\cos\theta) e^{\boldsymbol{i}m\varphi}
+$$
+同时也能够给出 $-l\leq m <0$ 的项满足，
+$$
+P_l^{-m}(x) = (-1)^m \frac{(l-m)!}{(l+m)!} P_l^m(x)\quad Y_l^{-m}(\theta, \varphi) = (-1)^m Y_l^{m*}(\theta, \varphi)
 $$
 于是 $\nabla^2 u = 0$ 的通解表示为
 $$
