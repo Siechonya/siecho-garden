@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-22T12:45:23.341+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-22T17:02:38.563+08:00","dg-note-properties":{}}
 ---
 
 
@@ -46,7 +46,7 @@ $$
 
 # 1 Static Electric Field    
 ## 1.1 Multipole expansion  
-- Electrostatic potential expansion ($\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}, r=|\boldsymbol{x}|(field), r'=|\boldsymbol{x'}|(source)$)
+- Consider electrostatic potential expansion at an external observation point $\boldsymbol{x}$, with localized charge source $\rho(\boldsymbol{x'})$ confined within a volume $V'$, and $\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}, r=|\boldsymbol{x}|(field), r'=|\boldsymbol{x'}|(source)$, then
 $$
 \begin{align} 
 \frac{1}{R}=\frac{1}{|\boldsymbol{x}-\boldsymbol{x}'|} = e^{-\boldsymbol{x'}\cdot \nabla} \frac{1}{r} 
@@ -69,7 +69,7 @@ $$
 \frac{Q}{4\mathrm{\pi} \epsilon_0 r} + \frac{{\boldsymbol{p}\cdot \hat{r}}}{4\mathrm{\pi} \epsilon_0 r^2} + \frac{{\mathsf{D}:\hat{r}\hat{r}}}{8\mathrm{\pi} \epsilon_0 r^3} + \cdots
 \end{align}
 $$
-Where $Q=\int \mathrm{d}q = \int \rho(\boldsymbol{x'})\,\mathrm{d} V$ is total charge, $\boldsymbol{p}=\int \boldsymbol{x'}\,\mathrm{d}q$ is electric dipole moment, $\mathsf{D} = \int (3\boldsymbol{x'}\boldsymbol{x'} - r'^2\mathsf{I})\,\mathrm{d}q$ is electric quadrupole moment.  
+Where $Q=\int \mathrm{d}q = \int \rho(\boldsymbol{x'})\,\mathrm{d} V'$ is total charge, $\boldsymbol{p}=\int \boldsymbol{x'}\,\mathrm{d}q$ is electric dipole moment, $\mathsf{D} = \int (3\boldsymbol{x'}\boldsymbol{x'} - r'^2\mathsf{I})\,\mathrm{d}q$ is electric quadrupole moment.  
 - Electrostatic intensity expansion
 $$
 \boldsymbol{E} = -\nabla \varphi
@@ -86,12 +86,12 @@ Q\varphi|_\boldsymbol{x}+ \boldsymbol{p}\cdot \nabla \varphi|_\boldsymbol{x} + \
 $$
 Note that $Q=\int \mathrm{d}q = \int \rho(\boldsymbol{\xi})\,\mathrm{d} V$, $\boldsymbol{p}=\int \boldsymbol{\xi}\,\mathrm{d}q$, $\mathsf{D} = \int(3\boldsymbol{\xi}\boldsymbol{\xi} - \xi^2\mathsf{I})\,\mathrm{d}q$ are intrinsic properties of the small charged body itself, not the external source.  
 
-Furthermore, The total electrostatic force $\boldsymbol{F}$ acting on the small charged body is 
+Furthermore, The total electrostatic force $\boldsymbol{F}$ acting on the small charged body is, 
 $$
 \boldsymbol{F} = -\nabla  U
 = Q\boldsymbol{E}_{\text{ext}}\Big|_\boldsymbol{x} + (\boldsymbol{p}\cdot\nabla)\boldsymbol{E}_{\text{ext}}\Big|_\boldsymbol{x} + \frac{1}{6}(\mathsf{D}:\nabla\nabla)\boldsymbol{E}_{\text{ext}}\Big|_\boldsymbol{x} + \cdots 
 $$
-The total electrostatic torque $\boldsymbol{N}$ acting on the small charged body about its center $\boldsymbol{x}$ is,  
+The total force moment $\boldsymbol{N}$ acting on the small charged body about its center $\boldsymbol{x}$ is,  
 $$
 \boldsymbol{N} = \int \boldsymbol{\xi} \times \boldsymbol{E}_{\text{ext}}(\boldsymbol{x}+\boldsymbol{\xi})\,\mathrm{d}q 
 =
@@ -168,11 +168,89 @@ $$
 $$
 \sum_{l=0}^{+\infty}\sum_{m=-l}^{l} Y_{l}^{m}(\Omega') Y_l^m(\Omega) = \delta(\Omega-\Omega') = \delta(\cos\theta - \cos\theta')\delta(\varphi-\varphi')
 $$
-#### Multipole expansion using basic functions *
+### 1.3.2 Multipole expansion *
+By using the Legendre generating function, one finds
+$$
+\frac{1}{R} = \frac{1}{|\boldsymbol{x}-\boldsymbol{x'}|} = \sum_{l=0}^\infty  \frac{r_<^l}{r^{l+1}_>} P_l(\cos\gamma), \quad \gamma=\arccos\frac{\boldsymbol{x}\cdot\boldsymbol{x'}}{|\boldsymbol{x}\cdot\boldsymbol{x'}|},\  \quad r_< = \min(x,x'), \ r_> = \max(x,x')
+$$
+$$
+P_l(\cos\gamma) = 2\pi \cdot \frac{2}{2l+1} \cdot \sum_{m=-l}^l Y_{l}^{m*}(\theta',\varphi') Y_{l}^m(\theta, \varphi)
+$$
+Consider a localized charge distribution $\rho(\boldsymbol{x'})$ confined within a volume $V'$. The exact electrostatic potential $\Phi(\boldsymbol{x})$ at an external observation point $\boldsymbol{x}$ (where $r = |\boldsymbol{x}| > r' = |\boldsymbol{x'}|$, hence $r_< = r'$ and $r_> = r$) is given by,
+$$
+\Phi(\boldsymbol{x}) 
+= \frac{1}{4\pi\varepsilon_0} \int_{V'} \frac{\rho(\boldsymbol{x'})}{|\boldsymbol{x}-\boldsymbol{x'}|} \,\mathrm{d}^3x' 
+= \frac{1}{4\pi\varepsilon_0} \sum_{l=0}^\infty \frac{1}{r^{l+1}} \int_{V'} \rho(\boldsymbol{x'}) (r')^l P_l(\cos\gamma) \,\mathrm{d}^3x'
+$$
+- <font color="#ff0000">Monopole Term (Point Charge)</font>. For $l=0$, since $P_0(\cos\gamma) = 1$, the first term simplifies to:
+$$
+\Phi^{(0)}(\boldsymbol{x}) = \frac{1}{4\pi\varepsilon_0 r} \int_{V'} \rho(\boldsymbol{x'}) \,\mathrm{d}^3x'
+= \frac{1}{4\pi\varepsilon_0} \frac{q}{r},
+\quad
+\text{with }q = \int_{V'} \rho(\boldsymbol{x'}) \,\mathrm{d}^3x'
+$$
 
+- <font color="#ff0000">Dipole Term</font>. For $l=1$, since $P_1(\cos\gamma) = \cos\gamma = \frac{\boldsymbol{x}\cdot\boldsymbol{x'}}{r r'}$, the second term becomes:
+$$
+\Phi^{(1)}(\boldsymbol{x}) 
+= \frac{1}{4\pi\varepsilon_0 r^2} \int_{V'} \rho(\boldsymbol{x'}) r' \left( \frac{\boldsymbol{x}\cdot\boldsymbol{x'}}{r r'} \right) \,\mathrm{d}^3x'
+= \frac{1}{4\pi\varepsilon_0} \frac{\boldsymbol{p}\cdot\hat{\boldsymbol{r}}}{r^2}
+$$
+$$
+\text{with }
+\boldsymbol{p} = \int_{V'} \rho(\boldsymbol{x'}) \boldsymbol{x'} \,\mathrm{d}^3x'
+$$
+- <font color="#ff0000">Quadrupole Term</font>. For $l=2$, since $P_2(\cos\gamma) = \frac{1}{2}(3\cos^2\gamma - 1)$, substituting $\cos\gamma$ into the expression yields:
+$$
+\begin{align} 
+\Phi^{(2)}(\boldsymbol{x}) 
+&= \frac{1}{4\pi\varepsilon_0 r^3} \int_{V'} \rho(\boldsymbol{x'}) (r')^2 \cdot \frac{1}{2}\left[ 3\frac{(\boldsymbol{x}\cdot\boldsymbol{x'})^2}{r^2(r')^2} - 1 \right] \,\mathrm{d}^3x' 
+\\[8pt]
+&= \frac{1}{8\pi\varepsilon_0 r^5} x_i x_j \int_{V'} \rho(\boldsymbol{x'}) \left[ 3x'_i x'_j - \delta_{ij}(r')^2 \right] \,\mathrm{d}^3x'
+\\[8pt]
+&= \frac{1}{4\pi\varepsilon_0} \frac{1}{2r^5} \sum_{i,j} D_{ij} x_i x_j
+\\[8pt]
+&=\frac{{\mathsf{D}:\hat{r}\hat{r}}}{8\mathrm{\pi} \epsilon_0 r^3} 
+\end{align}
+$$
+$$
+\text{with }
+D_{ij} = \int_{V'} \rho(\boldsymbol{x'}) \left[ 3x'_i x'_j - \delta_{ij}(r')^2 \right] \,\mathrm{d}^3x'
+$$
+And extending to $l=3, 4, \dots$  yields the octupole ($l=3$), hexadecapole ($l=4$), and more high $2^l$-pole moments $\ldots$
+### 1.3.3 Wigner $D$-Matrices *
+Spherical harmonics $Y_l^m(\theta, \varphi)$ form a $(2l+1)$-dimensional irreducible representation of $SO(3)$. Under a coordinate rotation $\mathcal{R}$ parameterized by the Euler angles $(\alpha, \beta, \gamma)$, the total angular momentum quantum number $l$ remains invariant because the rotation operator commutes with the total angular momentum squared: $[\mathcal{R}, \boldsymbol{L}^2] = 0$. However, the azimuthal projection $m$ undergoes a linear transformation.
 
+The transformed spherical harmonic in the rotated frame can be expressed as a linear combination of the original basis functions,
+$$
+Y_l^m(\theta', \varphi') = \sum_{m'=-l}^l D_{m'm}^l(\alpha, \beta, \gamma) Y_l^{m'}(\theta, \varphi)
+$$
+where $D_{m'm}^l(\alpha, \beta, \gamma)$ are the elements of the Wigner $D$-matrix. We find that the entire rotation operator can be directly written as $\mathcal{R}(\alpha, \beta, \gamma) = e^{-\mathrm{i}\alpha L_z} e^{-\mathrm{i}\beta L_y} e^{-\mathrm{i}\gamma L_z}$. Thus, Wigner $D$-matrix can be factorized into a product of exponentials and Wigner's small $d$-matrix,
+$$
+D_{m'm}^l(\alpha, \beta, \gamma) = e^{-\mathrm{i}m'\alpha} d_{m'm}^l(\beta) e^{-\mathrm{i}m\gamma}
+$$
+Here, Wigner's small $d$-matrix $d_{m'm}^l(\beta)$ describes the rotation around the $y$-axis,
+$$
+d_{m'm}^l(\beta) = \langle l, m' | e^{-\mathrm{i}\beta L_y} | l, m \rangle
+$$
+Since spatial rotations preserve the norm of the state space, the Wigner $D$-matrix is strictly unitary, satisfying,
+$$
+\sum_{m=-l}^l D_{m k}^{l*}(\alpha, \beta, \gamma) D_{m n}^l(\alpha, \beta, \gamma) = \delta_{kn}
+$$
+Specially, when the second projection index is set to zero ($m=0$), the Wigner $D$-matrix simplifies directly to a spherical harmonic,
+$$
+D_{m'0}^l(\alpha, \beta, 0) = \sqrt{\frac{4\pi}{2l+1}} Y_l^{m'*}(\beta, \alpha)
+$$
+One can computes analytically the Wigner $D$-matrix and small $d$-matrix elements using the built-in `WignerD` function with the following syntax in Wolfram Mathematica (MMA),
+$$
+\begin{aligned}
+D_{m'm}^l(\alpha, \beta, \gamma) &\implies \texttt{WignerD[\{l, m', m\}, }\alpha\texttt{, }\beta\texttt{, }\gamma\texttt{]} \\[5pt]
+d_{m'm}^l(\beta) &\implies \texttt{WignerD[\{l, m', m\}, }\beta\texttt{]}
+\end{aligned}
+$$
+## 1.4 Method: separation of variables  
 
-## 1.4 Cases
+## 1.5 Cases
 - If all charges are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas]])
 $$
 \iiint_V \boldsymbol{E}(\boldsymbol{x}) \,\mathrm{d}^3x = -\frac{\boldsymbol{p}}{3\epsilon_0}
