@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-22T17:02:38.563+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-22T17:08:47.625+08:00","dg-note-properties":{}}
 ---
 
 
@@ -217,7 +217,7 @@ $$
 \text{with }
 D_{ij} = \int_{V'} \rho(\boldsymbol{x'}) \left[ 3x'_i x'_j - \delta_{ij}(r')^2 \right] \,\mathrm{d}^3x'
 $$
-And extending to $l=3, 4, \dots$  yields the octupole ($l=3$), hexadecapole ($l=4$), and more high $2^l$-pole moments $\ldots$
+And extending to $l=3, 4, \dots$  yields the octupole ($l=3$), hexadecapole ($l=4$), and more high $2^l$-pole moments $\ldots$  
 ### 1.3.3 Wigner $D$-Matrices *
 Spherical harmonics $Y_l^m(\theta, \varphi)$ form a $(2l+1)$-dimensional irreducible representation of $SO(3)$. Under a coordinate rotation $\mathcal{R}$ parameterized by the Euler angles $(\alpha, \beta, \gamma)$, the total angular momentum quantum number $l$ remains invariant because the rotation operator commutes with the total angular momentum squared: $[\mathcal{R}, \boldsymbol{L}^2] = 0$. However, the azimuthal projection $m$ undergoes a linear transformation.
 
@@ -249,7 +249,11 @@ d_{m'm}^l(\beta) &\implies \texttt{WignerD[\{l, m', m\}, }\beta\texttt{]}
 \end{aligned}
 $$
 ## 1.4 Method: separation of variables  
+### 1.4.1 Cartesian coordinate system  
 
+### 1.4.2 Cylindrical coordinate system
+### 1.4.3 Spherical coordinate system  
+### 1.4.4 Green function *
 ## 1.5 Cases
 - If all charges are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas]])
 $$
