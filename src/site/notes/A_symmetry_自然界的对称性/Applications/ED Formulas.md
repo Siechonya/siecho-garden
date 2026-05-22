@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-22T12:03:01.079+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-22T12:42:58.844+08:00","dg-note-properties":{}}
 ---
 
 
@@ -25,6 +25,8 @@ For $x$-axis boost (where $K'$ moves with velocity $v\hat{e}_x$ relative to $K$)
 $$
 \Lambda^\alpha_{~~\beta} = \begin{bmatrix} \gamma & \gamma\beta &  &  \\  \gamma\beta & \gamma &  &  \\  &  &  1 &  \\  &  &  & 1 \end{bmatrix}
 $$
+
+---  
 
 # 1 Preparatory Math.   
 ## 1.1 Vector and tensor analysis (Euclidean geometry)  
@@ -1553,7 +1555,7 @@ L^{\alpha\beta} = \frac{1}{c}\iiint M^{0\alpha\beta}\,\mathrm{d}^3x
 $$
 
 
-> The latter section is available at [[A_symmetry_自然界的对称性/Applications/ED formulas 2\|ED formulas 2]].
+> The latter section is available at [[A_symmetry_自然界的对称性/Applications/ED formulas (2)\|ED formulas (2)]].
 
 
 
