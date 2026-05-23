@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-22T17:08:47.625+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-23T11:16:15.359+08:00","dg-note-properties":{}}
 ---
 
 
@@ -241,7 +241,7 @@ Specially, when the second projection index is set to zero ($m=0$), the Wigner $
 $$
 D_{m'0}^l(\alpha, \beta, 0) = \sqrt{\frac{4\pi}{2l+1}} Y_l^{m'*}(\beta, \alpha)
 $$
-One can computes analytically the Wigner $D$-matrix and small $d$-matrix elements using the built-in `WignerD` function with the following syntax in Wolfram Mathematica (MMA),
+You can computes the Wigner $D$-matrix and small $d$-matrix elements analytically by using the built-in `WignerD` function with the following syntax in Wolfram Mathematica (MMA),
 $$
 \begin{aligned}
 D_{m'm}^l(\alpha, \beta, \gamma) &\implies \texttt{WignerD[\{l, m', m\}, }\alpha\texttt{, }\beta\texttt{, }\gamma\texttt{]} \\[5pt]
