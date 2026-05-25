@@ -1,69 +1,131 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-05-25T19:43:34.496+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-05-25T21:31:28.679+08:00","dg-note-properties":{}}
 ---
 
 > This document supplements some rather complex proof processes within [[A_symmetry_自然界的对称性/Applications/ED Formulas\|ED Formulas]] and [[A_symmetry_自然界的对称性/Applications/ED formulas (2)\|ED formulas (2)]] 
 
 # 1 $\iiint_V \boldsymbol{E}(\boldsymbol{x}) \,\mathrm{d}^3x = -\frac{\boldsymbol{p}}{3\epsilon_0}$  
-Let $V$ be a spherical volume of radius $R$ that completely encloses all charges, meaning the charge density $\rho(\boldsymbol{x}')$ vanishes for all $r' > R$. Without loss of generality, we place the coordinate origin at the center of the sphere $V$. According to Coulomb's law, the electric field $\boldsymbol{E}(\boldsymbol{x})$ at any field point $\boldsymbol{x}$ inside the sphere is given by the volume integral over the source coordinates $\boldsymbol{x}'$:
+Let $V$ be a spherical volume of radius $R$ that completely encloses all charges, meaning the charge density $\rho(\boldsymbol{x}')$ vanishes for all $r' > R$. Without loss of generality, we place the coordinate origin at the center of the sphere $V$. According to Coulomb's law, the electric field $\boldsymbol{E}(\boldsymbol{x})$ at any field point $\boldsymbol{x}$ inside the sphere is given by the volume integral over the source coordinates $\boldsymbol{x}'$,
 $$
 \boldsymbol{E}(\boldsymbol{x}) = \frac{1}{4\pi\varepsilon_0} \int_{V} \rho(\boldsymbol{x}') \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x'
 $$
-We want to evaluate the volume integral of $\boldsymbol{E}(\boldsymbol{x})$ over the entire sphere $V$:
+We want to evaluate the volume integral of $\boldsymbol{E}(\boldsymbol{x})$ over the entire sphere $V$,
 $$
 \int_V \boldsymbol{E}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{1}{4\pi\varepsilon_0} \int_V \left[ \int_{V} \rho(\boldsymbol{x}') \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x' \right] \mathrm{d}^3x
 $$
-Since the region of integration is bounded and the charge distribution is well-behaved, we can apply Fubini's theorem to switch the order of the volume integrals over $\mathrm{d}^3x$ and $\mathrm{d}^3x'$:
+Since the region of integration is bounded and the charge distribution is well-behaved, we can apply Fubini's theorem to switch the order of the volume integrals over $\mathrm{d}^3x$ and $\mathrm{d}^3x'$,
 $$
 \int_V \boldsymbol{E}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{1}{4\pi\varepsilon_0} \int_{V} \rho(\boldsymbol{x}') \left[ \int_V \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x \right] \mathrm{d}^3x'
 $$
-Let us denote the inner vector integral as $\boldsymbol{I}(\boldsymbol{x}')$:
+Let us denote the inner vector integral as $\boldsymbol{I}(\boldsymbol{x}')$,
 $$
 \boldsymbol{I}(\boldsymbol{x}') = \int_V \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x
 $$
-We recognize that the integrand can be expressed as the negative gradient with respect to the field point $\boldsymbol{x}$: 
+We recognize that the integrand can be expressed as the negative gradient with respect to the field point $\boldsymbol{x}$,
 $$
 \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} = -\nabla \left( \frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} \right)
 $$
-Substituting this identity into $\boldsymbol{I}(\boldsymbol{x}')$ and applying a corollary of the divergence theorem (converting a volume integral of a gradient into a closed surface integral), we obtain:
+Substituting this identity into $\boldsymbol{I}(\boldsymbol{x}')$ and applying a corollary of the divergence theorem (converting a volume integral of a gradient into a closed surface integral), we obtain,
 $$\boldsymbol{I}(\boldsymbol{x}') = -\int_V \nabla \left( \frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} \right) \mathrm{d}^3x = -\oint_{\partial V} \frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} \hat{\boldsymbol{n}} \, \mathrm{d}A$$
-where $\partial V$ represents the bounding spherical surface at $r = R$, and $\hat{\boldsymbol{n}}$ is the outward unit normal vector. On this spherical surface, the field point is $\boldsymbol{x} = R\hat{\boldsymbol{x}}$ (where $\hat{\boldsymbol{x}}$ is the radial unit vector $\hat{\boldsymbol{r}}$), and the area element is $\mathrm{d}A = R^2 \, \mathrm{d}\Omega$. Thus, the integral becomes
+where $\partial V$ represents the bounding spherical surface at $r = R$, and $\hat{\boldsymbol{n}}$ is the outward unit normal vector. On this spherical surface, the field point is $\boldsymbol{x} = R\hat{\boldsymbol{x}}$ (where $\hat{\boldsymbol{x}}$ is the radial unit vector $\hat{\boldsymbol{r}}$), and the area element is $\mathrm{d}A = R^2 \, \mathrm{d}\Omega$. Thus, the integral becomes,
 $$\boldsymbol{I}(\boldsymbol{x}') = -R^2 \oint_{r=R} \frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} \hat{\boldsymbol{x}} \, \mathrm{d}\Omega$$
-Because all charges are enclosed within the sphere, the source point always lies inside ($r' < R$), while the field point in the surface integral lies exactly on the boundary ($r = R$). Since $r' < r$, we can expand the reciprocal distance $1/|\boldsymbol{x} - \boldsymbol{x}'|$ into a series of Legendre polynomials:
+Because all charges are enclosed within the sphere, the source point always lies inside ($r' < R$), while the field point in the surface integral lies exactly on the boundary ($r = R$). Since $r' < r$, we can expand the reciprocal distance $1/|\boldsymbol{x} - \boldsymbol{x}'|$ into a series of Legendre polynomials,
 $$\frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} = \sum_{l=0}^{\infty} \frac{(r')^l}{R^{l+1}} P_l(\cos\gamma)$$
 where $\gamma$ is the angle between $\boldsymbol{x}$ and $\boldsymbol{x}'$.
 
-To evaluate the solid angle integral, we temporarily align the $z$-axis along the direction of $\boldsymbol{x}'$, making $\gamma = \theta$ (the standard polar angle). The unit vector $\hat{\boldsymbol{x}}$ expands in Cartesian components as:
+To evaluate the solid angle integral, we temporarily align the $z$-axis along the direction of $\boldsymbol{x}'$, making $\gamma = \theta$ (the standard polar angle). The unit vector $\hat{\boldsymbol{x}}$ expands in Cartesian components as,
 $$
 \hat{\boldsymbol{x}} = \sin\theta\cos\phi \hat{\boldsymbol{i}} + \sin\theta\sin\phi \hat{\boldsymbol{j}} + \cos\theta \hat{\boldsymbol{k}}
 $$
-Integrating over the azimuthal angle $\phi$ from $0$ to $2\pi$, the terms containing $\cos\phi$ and $\sin\phi$ vanish identically due to periodicity. The only surviving component is along the $\hat{\boldsymbol{k}}$ direction (which is the direction of $\hat{\boldsymbol{x}}'$):
+Integrating over the azimuthal angle $\phi$ from $0$ to $2\pi$, the terms containing $\cos\phi$ and $\sin\phi$ vanish identically due to periodicity. The only surviving component is along the $\hat{\boldsymbol{k}}$ direction (which is the direction of $\hat{\boldsymbol{x}}'$),
 $$
 \oint_{r=R} \frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} \hat{\boldsymbol{x}} \, \mathrm{d}\Omega = \hat{\boldsymbol{x}}' \int_0^{2\pi} \mathrm{d}\phi \int_0^\pi \left[ \sum_{l=0}^{\infty} \frac{(r')^l}{R^{l+1}} P_l(\cos\theta) \right] \cos\theta \sin\theta \, \mathrm{d}\theta
 $$
-Noting that $\cos\theta = P_1(\cos\theta)$, we invoke the orthogonality condition for Legendre polynomials:
+Noting that $\cos\theta = P_1(\cos\theta)$, we invoke the orthogonality condition for Legendre polynomials,
 $$
 \int_0^\pi P_l(\cos\theta) P_1(\cos\theta) \sin\theta \, \mathrm{d}\theta = \frac{2}{2(1)+1}\delta_{l,1} = \frac{2}{3}\delta_{l,1}
 $$
-Hence, only the $l = 1$ term yields a non-zero contribution to the infinite series:
+Hence, only the $l = 1$ term yields a non-zero contribution to the infinite series,
 $$
 \oint_{r=R} \frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} \hat{\boldsymbol{x}} \, \mathrm{d}\Omega = \hat{\boldsymbol{x}}' \cdot 2\pi \cdot \frac{r'}{R^2} \cdot \frac{2}{3} = \frac{4\pi}{3R^2} (r'\hat{\boldsymbol{x}}') = \frac{4\pi}{3R^2} \boldsymbol{x}'
 $$
-Substituting this result back into the expression for $\boldsymbol{I}(\boldsymbol{x}')$, the radius $R^2$ cancels out smoothly:
+Substituting this result back into the expression for $\boldsymbol{I}(\boldsymbol{x}')$, the radius $R^2$ cancels out smoothly,
 $$
 \boldsymbol{I}(\boldsymbol{x}') = -R^2 \left( \frac{4\pi}{3R^2} \boldsymbol{x}' \right) = -\frac{4\pi}{3} \boldsymbol{x}'
 $$
-We now feed $\boldsymbol{I}(\boldsymbol{x}')$ back into our original total electric field volume integral:
+We now feed $\boldsymbol{I}(\boldsymbol{x}')$ back into our original total electric field volume integral,
 $$
 \int_V \boldsymbol{E}(\boldsymbol{x}) \, \mathrm{d}^3x = -\frac{1}{3\varepsilon_0} \int_{V} \rho(\boldsymbol{x}') \boldsymbol{x}' \, \mathrm{d}^3x'
 $$
-By definition, the total electric dipole moment $\boldsymbol{p}$ of the localized charge distribution with respect to our chosen origin is:
+By definition, the total electric dipole moment $\boldsymbol{p}$ of the localized charge distribution with respect to our chosen origin is,
 $$
 \boldsymbol{p} = \int_{V} \rho(\boldsymbol{x}') \boldsymbol{x}' \, \mathrm{d}^3x'
 $$
-Replacing the integral with $\boldsymbol{p}$, we arrive at:
+Replacing the integral with $\boldsymbol{p}$, we arrive at,
 $$
 \int_V \boldsymbol{E}(\boldsymbol{x}) \, \mathrm{d}^3x = -\frac{\boldsymbol{p}}{3\varepsilon_0}
+$$
+Next, we consider the alternative case where all charges lie entirely outside the spherical volume $V$, meaning the charge density $\rho(\boldsymbol{x}')$ vanishes for all $r' \le R$. According to Coulomb's law, the electric field $\boldsymbol{E}(\boldsymbol{x})$ at any field point $\boldsymbol{x}$ inside the sphere is given by the volume integral over the external source coordinates $\boldsymbol{x}'$,
+$$
+\boldsymbol{E}(\boldsymbol{x}) = \frac{1}{4\pi\varepsilon_0} \int_{V_{\text{ext}}} \rho(\boldsymbol{x}') \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x'
+$$
+We want to evaluate the volume integral of $\boldsymbol{E}(\boldsymbol{x})$ over the entire sphere $V$,
+$$
+\int_V \boldsymbol{E}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{1}{4\pi\varepsilon_0} \int_V \left[ \int_{V_{\text{ext}}} \rho(\boldsymbol{x}') \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x' \right] \mathrm{d}^3x
+$$
+Since the region of integration is bounded and the charge distribution is well-behaved, we can apply Fubini's theorem to switch the order of the volume integrals over $\mathrm{d}^3x$ and $\mathrm{d}^3x'$ again,
+$$
+\int_V \boldsymbol{E}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{1}{4\pi\varepsilon_0} \int_{V_{\text{ext}}} \rho(\boldsymbol{x}') \left[ \int_V \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x \right] \mathrm{d}^3x'
+$$
+Let us also denote the inner vector integral as $\boldsymbol{I}(\boldsymbol{x}')$,
+$$
+\boldsymbol{I}(\boldsymbol{x}') = \int_V \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x
+$$
+We recognize that the integrand can be expressed as the negative gradient with respect to the field point $\boldsymbol{x}$,
+$$
+\frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} = -\nabla \left( \frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} \right)
+$$
+Substituting this identity into $\boldsymbol{I}(\boldsymbol{x}')$ and applying a corollary of the divergence theorem (converting a volume integral of a gradient into a closed surface integral), we obtain,
+$$\boldsymbol{I}(\boldsymbol{x}') = -\int_V \nabla \left( \frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} \right) \mathrm{d}^3x = -\oint_{\partial V} \frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} \hat{\boldsymbol{n}} \, \mathrm{d}A$$
+where $\partial V$ represents the bounding spherical surface at $r = R$, and $\hat{\boldsymbol{n}}$ is the outward unit normal vector. On this spherical surface, the field point is $\boldsymbol{x} = R\hat{\boldsymbol{x}}$ (where $\hat{\boldsymbol{x}}$ is the radial unit vector $\hat{\boldsymbol{r}}$), and the area element is $\mathrm{d}A = R^2 \, \mathrm{d}\Omega$. Thus, the integral becomes,
+$$
+\boldsymbol{I}(\boldsymbol{x}') = -R^2 \oint_{r=R} \frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} \hat{\boldsymbol{x}} \, \mathrm{d}\Omega
+$$
+Because all charges lie outside the sphere, the source point always lies exterior ($r' > R$), while the field point in the surface integral lies exactly on the boundary ($r = R$). Since $r < r'$, we can expand the reciprocal distance $1/|\boldsymbol{x} - \boldsymbol{x}'|$ into a series of Legendre polynomials,
+$$
+\frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} = \sum_{l=0}^{\infty} \frac{R^l}{(r')^{l+1}} P_l(\cos\gamma)
+$$
+where $\gamma$ is the angle between $\boldsymbol{x}$ and $\boldsymbol{x}'$.
+
+To evaluate the solid angle integral, we temporarily align the $z$-axis along the direction of $\boldsymbol{x}'$, making $\gamma = \theta$ (the standard polar angle). The unit vector $\hat{\boldsymbol{x}}$ expands in Cartesian components as,
+$$
+\hat{\boldsymbol{x}} = \sin\theta\cos\phi \hat{\boldsymbol{i}} + \sin\theta\sin\phi \hat{\boldsymbol{j}} + \cos\theta \hat{\boldsymbol{k}}
+$$
+Integrating over the azimuthal angle $\phi$ from $0$ to $2\pi$, the terms containing $\cos\phi$ and $\sin\phi$ vanish identically due to periodicity. The only surviving component is along the $\hat{\boldsymbol{k}}$ direction (which is the direction of $\hat{\boldsymbol{x}}'$),
+$$
+\oint_{r=R} \frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} \hat{\boldsymbol{x}} \, \mathrm{d}\Omega = \hat{\boldsymbol{x}}' \int_0^{2\pi} \mathrm{d}\phi \int_0^\pi \left[ \sum_{l=0}^{\infty} \frac{R^l}{(r')^{l+1}} P_l(\cos\theta) \right] \cos\theta \sin\theta \, \mathrm{d}\theta
+$$
+Noting that $\cos\theta = P_1(\cos\theta)$, we invoke the orthogonality condition for Legendre polynomials:
+$$\int_0^\pi P_l(\cos\theta) P_1(\cos\theta) \sin\theta \, \mathrm{d}\theta = \frac{2}{2(1)+1}\delta_{l,1} = \frac{2}{3}\delta_{l,1}$$
+Hence, only the $l = 1$ term yields a non-zero contribution to the infinite series,
+$$
+\oint_{r=R} \frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} \hat{\boldsymbol{x}} \, \mathrm{d}\Omega = \hat{\boldsymbol{x}}' \cdot 2\pi \cdot \frac{R}{(r')^2} \cdot \frac{2}{3} = \frac{4\pi R}{3(r')^2} \hat{\boldsymbol{x}}' = \frac{4\pi R}{3(r')^3} \boldsymbol{x}'
+$$
+Substituting this result back into the expression for $\boldsymbol{I}(\boldsymbol{x}')$, the variable factors yield,
+$$
+\boldsymbol{I}(\boldsymbol{x}') = -R^2 \left( \frac{4\pi R}{3(r')^3} \boldsymbol{x}' \right) = -\frac{4\pi R^3}{3(r')^3} \boldsymbol{x}'
+$$
+We now feed $\boldsymbol{I}(\boldsymbol{x}')$ back into our original total electric field volume integral,
+$$
+\int_V \boldsymbol{E}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{1}{4\pi\varepsilon_0} \int_{V_{\text{ext}}} \rho(\boldsymbol{x}') \left[ -\frac{4\pi R^3}{3(r')^3} \boldsymbol{x}' \right] \mathrm{d}^3x' = \frac{4\pi R^3}{3} \left[ \frac{1}{4\pi\varepsilon_0} \int_{V_{\text{ext}}} \rho(\boldsymbol{x}') \frac{-\boldsymbol{x}'}{(r')^3} \, \mathrm{d}^3x' \right]
+$$
+By definition, the electric field $\boldsymbol{E}(0)$ evaluated at the origin (the center of the sphere) produced by the external charge distribution is given by,
+$$
+\boldsymbol{E}(0) = \frac{1}{4\pi\varepsilon_0} \int_{V_{\text{ext}}} \rho(\boldsymbol{x}') \frac{\mathbf{0} - \boldsymbol{x}'}{|\mathbf{0} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x' = \frac{1}{4\pi\varepsilon_0} \int_{V_{\text{ext}}} \rho(\boldsymbol{x}') \frac{-\boldsymbol{x}'}{(r')^3} \, \mathrm{d}^3x'
+$$
+Replacing the integral with $\boldsymbol{E}(0)$, we arrive at,
+$$
+\int_V \boldsymbol{E}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{4\pi R^3}{3} \boldsymbol{E}(0) = V \boldsymbol{E}(0)
 $$
 # 2 Rotation of harmonics & Wigner $D$-Matrices *
 Spherical harmonics $Y_l^m(\theta, \varphi)$ form a $(2l+1)$-dimensional irreducible representation of $\mathrm{SO}(3)$. Under a coordinate rotation $\mathcal{R}$ parameterized by the Euler angles $(\alpha, \beta, \gamma)$, the total angular momentum quantum number $l$ remains invariant because the rotation operator commutes with the total angular momentum squared: $[\mathcal{R}, \boldsymbol{L}^2] = 0$. However, the azimuthal projection undergoes a linear transformation.
@@ -115,13 +177,47 @@ d_{m'm}^l(\beta) &\implies \texttt{WignerD[\{l, mp, m\}, }\beta\texttt{]}
 \end{aligned}
 $$
 Btw, the result from MMA differs by a transpose from the discussion above, but we still follow the same convention as Wikipedia and most textbooks.
+# 3 Example: 2D Laplace Equation in a Rectangular Pipe
+An infinitely long rectangular conducting pipe is formed by four mutually insulated plates. Three of the plates are maintained at zero potential, while the fourth is kept at a constant potential $V_0$. Find the electrostatic potential inside the pipe?
 
+Let the cross-section of the pipe have a width $a$ along the $x$-axis and a height $b$ along the $y$-axis. Due to translational symmetry along the infinite length ($z$-axis), $\frac{\partial \varphi}{\partial z} = 0$. The problem reduces to a 2D domain: $x \in [0, a]$ and $y \in [0, b]$. The boundary conditions are:
+$$
+\varphi(0, y) = 0,\quad\varphi(a, y) = 0,\quad\varphi(x, 0) = 0,\quad\varphi(x, b) = V_0
+$$
+The potential inside the charge-free pipe satisfies the 2D Laplace equation, Substituting $\varphi(x, y) = X(x)Y(y)$ and dividing by $\varphi$ yields,
+$$
+\frac{\partial^2 \varphi}{\partial x^2} + \frac{\partial^2 \varphi}{\partial y^2} = 0
+\implies
+\frac{1}{X}\frac{\mathrm{d}^2 X}{\mathrm{d}x^2} + \frac{1}{Y}\frac{\mathrm{d}^2 Y}{\mathrm{d}y^2} = 0
+$$
+Since the $x$-direction is bounded on both ends and requires zero potential at the boundaries, it must yield an oscillatory (trigonometric) solution. Thus, we assign a negative separation constant $-k^2$ to the $x$-term:
+$$X''(x) + k^2 X(x) = 0,\quad Y''(y) - k^2 Y(y) = 0$$
+The general solution for $X(x)$ is $X(x) = A \sin(kx) + B \cos(kx)$. Applying the boundary conditions yields the discrete eigenvalues,
+$$
+k_n = \frac{n\pi}{a}, \quad (n = 1, 2, 3, \ldots)
+\implies
+X_n(x) = \sin\left(\frac{n\pi x}{a}\right)
+$$
+For the $y$-direction, the general solution to $Y''(y) - k_n^2 Y(y) = 0$ is expressed via hyperbolic functions as $Y(y) = C \sinh(k_n y) + D \cosh(k_n y)$. Imposing the base boundary condition $Y(0) = 0 \implies D = 0$, leaving $Y_n(y) = \sinh\left(\frac{n\pi y}{a}\right)$.
 
-
-
-
-
-
+Invoking the principle of linear superposition, the total potential inside the pipe is represented as the infinite series:
+$$
+\varphi(x, y) = \sum_{n=1}^{\infty} A_n \sin\left(\frac{n\pi x}{a}\right) \sinh\left(\frac{n\pi y}{a}\right)
+$$
+To determine the remaining coefficients $A_n$, we apply the final inhomogeneous boundary condition at the top plate $y = b$,
+$$\varphi(x, b) = \sum_{n=1}^{\infty} A_n \sinh\left(\frac{n\pi b}{a}\right) \sin\left(\frac{n\pi x}{a}\right) = V_0$$
+Exploiting the orthogonality of the sine functions over the interval $[0, a]$, we project the constant potential $V_0$ into its Fourier components,
+$$
+A_n \sinh\left(\frac{n\pi b}{a}\right) = \frac{2}{a} \int_0^a V_0 \sin\left(\frac{n\pi x}{a}\right) \,\mathrm{d}x = \frac{2V_0}{n\pi} \left[1 - (-1)^n\right]
+$$
+This integral vanishes for all even integers $n$. For odd integers, letting $n = 2m+1$ (where $m = 0, 1, 2, \dots$), the non-zero coefficients are isolated as,
+$$
+A_{2m+1} = \frac{4V_0}{(2m+1)\pi \sinh\left(\frac{(2m+1)\pi b}{a}\right)}
+$$
+Substituting $A_{2m+1}$ back into the generalized series provides the final analytical solution for the potential distribution inside the rectangular pipe,
+$$
+\varphi(x, y) = \frac{4V_0}{\pi} \sum_{m=0}^{\infty} \frac{1}{2m+1} \frac{\sinh\left(\frac{(2m+1)\pi y}{a}\right)}{\sinh\left(\frac{(2m+1)\pi b}{a}\right)} \sin\left(\frac{(2m+1)\pi x}{a}\right)
+$$
 
 
 

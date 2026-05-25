@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-25T19:44:04.180+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-25T22:59:20.222+08:00","dg-note-properties":{}}
 ---
 
 
@@ -230,13 +230,127 @@ D_{ij} = \int_{V'} \rho(\boldsymbol{x'}) \left[ 3x'_i x'_j - \delta_{ij}(r')^2 \
 $$
 And extending to $l=3, 4, \dots$  yields the octupole ($l=3$), hexadecapole ($l=4$), and more high $2^l$-pole moments $\ldots$  
 ### 1.3.3 Rotation of harmonics & Wigner $D$-Matrices *
-Refer to [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#2 Rotation of harmonics & Wigner $D$-Matrices *\|Appendix for ED formulas]].
+Refer to [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#2 Rotation of harmonics & Wigner $D$-Matrices *\|Appendix for ED formulas #2 Rotation of harmonics & Wigner $D$-Matrices *]].
 ## 1.4 Method: separation of variables  
-### 1.4.1 Cartesian coordinate system  
+<span style="color:#ff0000; font-size: 1.2em;">For this section, everyone is advised to review more example problems.</span>
+### 1.4.1 Cartesian coordinate system
+- The fundamental solution of Laplace's equation $\nabla^2 \varphi = 0$
+$$
+\frac{{\nabla^2 \varphi}}{\varphi} = \frac{1}{X}\frac{ \mathrm{d}^2 X }{ \mathrm{d} x^2} + \frac{1}{Y}\frac{ \mathrm{d}^2 Y }{ \mathrm{d} y^2} + \frac{1}{Z}\frac{ \mathrm{d}^2 Z }{ \mathrm{d} z^2} = 0
+$$
+Let:
+$$
+\frac{1}{X}\frac{ \mathrm{d}^2 X }{ \mathrm{d} x^2} = -k_x^2, \quad \frac{1}{Y}\frac{ \mathrm{d}^2 Y }{ \mathrm{d} y^2} = -k_y^2, \quad \frac{1}{Z}\frac{ \mathrm{d}^2 Z }{ \mathrm{d} z^2} = k_z^2
+,\quad
+k_z^2 = k_x^2 + k_y^2
+$$
+> Note: The sign of the separation constant is entirely determined by the boundary conditions: directions bounded in space require a negative sign to yield trigonometric functions that can zero out at both boundaries, while directions extending to infinity require a positive sign to yield exponential functions (such as the wave propagating in the z-direction).  
+
+In directions where the separation constant is negative (e.g., $x, y$),
+$$  
+X(x) = A \cos(k_x x) + B \sin(k_x x)
+$$
+In the direction where the separation constant is positive (e.g., $z$),
+$$
+Z(z) = C \cosh(k_z z) + D \sinh(k_z z)
+$$
+See the thought from ppt int [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#3 Example 2D Laplace Equation in a Rectangular Pipe\|Appendix for ED formulas #3 Example 2D Laplace Equation in a Rectangular Pipe]].
 
 ### 1.4.2 Cylindrical coordinate system
-### 1.4.3 Spherical coordinate system  
-### 1.4.4 Green function *
+- The fundamental solution of Laplace's equation $\nabla^2 \varphi = 0$
+$$
+\frac{1}{s R}\frac{\mathrm{d}}{\mathrm{d}s}\left(s \frac{\mathrm{d}R}{\mathrm{d}s}\right) + \frac{1}{s^2 \Phi}\frac{\mathrm{d}^2 \Phi}{\mathrm{d}\phi^2} + \frac{1}{Z}\frac{\mathrm{d}^2 Z}{\mathrm{d}z^2} = 0
+$$
+- $z$-direction equation: $\frac{1}{Z}\frac{\mathrm{d}^2 Z}{\mathrm{d}z^2} = k^2 \implies Z(z) = e^{\pm kz}$ (or monotonic hyperbolic functions)
+-  $\phi$-direction equation: $\frac{1}{\Phi}\frac{\mathrm{d}^2 \Phi}{\mathrm{d}\phi^2} = -\nu^2 \implies \Phi(\phi) = A\cos(\nu \phi) + B\sin(\nu \phi)$
+
+> Note: Since $\phi$ possesses a $2\pi$ periodicity in physical space (i.e., $\Phi(\phi) = \Phi(\phi + 2\pi)$), the separation constant $\nu$ must be an integer.
+
+-  $s$-direction equation (Bessel Equation): $\frac{\mathrm{d}^2R}{\mathrm{d}s^2} + \frac{1}{s}\frac{\mathrm{d}R}{\mathrm{d}s} + \left(k^2 - \frac{\nu^2}{s^2}\right)R = 0$
+
+The solutions to this equation are the Bessel functions of the first kind $J_\nu(ks)$  and the Bessel functions of the second kind (Neumann functions) $N_\nu(ks)$ . If the physical domain includes the origin ($s = 0$), the coefficient of $N_\nu(ks)$ must be 0 because $N_\nu(ks) \to -\infty$ as $s \to 0$.  
+
+- Axisymmetric & $z$-Independent Case ($\nu = 0, k = 0$)
+
+The Laplace equation collapses to a 1D ODE:   
+$$  
+\frac{\mathrm{d}}{\mathrm{d}s}\left(s \frac{\mathrm{d}\varphi}{\mathrm{d}s}\right) = 0 \implies \frac{\mathrm{d}^2 \varphi}{\mathrm{d}s^2} + \frac{1}{s}\frac{\mathrm{d}\varphi}{\mathrm{d}s} = 0   
+$$
+- $z$-Independent Case (General Solution for $k = 0$): 
+
+The problem reduces to a 2D Laplace equation in polar coordinates, where the radial equation transitions from a Bessel equation to an Euler-Cauchy equation:   
+$$   
+s^2 \frac{\mathrm{d}^2R}{\mathrm{d}s^2} + s \frac{\mathrm{d}R}{\mathrm{d}s} - \nu^2 R = 0   
+$$
+the general solution for $k=0$ is obtained by superimposing all possible harmonic components:   
+$$  
+\varphi(s, \phi) = \underset{\text{as }\nu=0}{\underbrace{A_0 + B_0 \ln s} } + \sum_{\nu=1}^{\infty} \left(A_\nu s^\nu + B_\nu s^{-\nu}\right) \cos(\nu\phi) + \sum_{\nu=1}^{\infty} \left(C_\nu s^\nu + D_\nu s^{-\nu}\right) \sin(\nu\phi)   
+$$
+### 1.4.3 Spherical coordinate system
+In the spherical coordinate system $(r, \theta, \phi)$, Laplace's equation is given by:
+$$
+\nabla^2 \varphi = \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2 \frac{\partial \varphi}{\partial r}\right) + \frac{1}{r^2\sin\theta}\frac{\partial}{\partial \theta}\left(\sin\theta \frac{\partial \varphi}{\partial \theta}\right) + \frac{1}{r^2\sin^2\theta}\frac{\partial^2 \varphi}{\partial \phi^2} = 0
+$$
+Let the solution be $\varphi(r, \theta, \phi) = R(r)\Theta(\theta)\Phi(\phi)$. Usually, the angular parts are combined and expressed in terms of spherical harmonics (See [[A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function\|3-D Laplace Equation And Spherical Harmonic Function]]).
+
+- Radial Equation
+$$
+\frac{\mathrm{d}}{\mathrm{d}r}\left(r^2 \frac{\mathrm{d}R}{\mathrm{d}r}\right) = l(l+1)R \implies R(r) = A r^l + B r^{-(l+1)}
+$$
+  where $l$ is a non-negative integer.
+
+- Angular Equation
+    - Azimuthal angle $\phi$ direction: Similar to the cylindrical system, the solution is $e^{\pm im\phi}$ (where $m$ is an integer, and $|m| \le l$).
+    - Polar angle $\theta$ direction: Corresponds to the associated Legendre equation, whose solutions are the associated Legendre polynomials $P_l^m(\cos\theta)$.
+
+- Axisymmetric Systems ($\partial / \partial \phi = 0 \implies m=0$)
+$$
+\varphi(r, \theta) = \sum_{l=0}^{\infty} \left( A_l r^l + \frac{B_l}{r^{l+1}} \right) P_l(\cos\theta)
+$$
+- General Case Solution
+$$ 
+\varphi(r, \theta, \phi) = \sum_{l=0}^{\infty} \sum_{m=-l}^{l} \left( A_{lm} r^l + \frac{B_{lm}}{r^{l+1}} \right) Y_l^m(\theta, \phi)
+$$
+$$
+\left[ \frac{1}{\sin\theta}\frac{\partial}{\partial \theta}\left(\sin\theta \frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2\theta}\frac{\partial^2 }{\partial \phi^2} \right] Y_l^m = -l(l+1)Y_l^m
+,\quad
+\frac{\partial^2 }{\partial \phi^2} Y_l^m = -m^2 Y_l^m
+$$
+### 1.4.4 Green function *  
+- Main function
+$$
+\nabla^2 \varphi(\boldsymbol{r}) = -\frac{\rho(\boldsymbol{r})}{\epsilon_0}
+$$
+$$
+\nabla^2 G(\boldsymbol{r}, \boldsymbol{r}') = -\frac{\delta(\boldsymbol{r} - \boldsymbol{r}')}{\epsilon_0}
+$$
+- Fundamental solution in infinite space,
+$$ G_0(\boldsymbol{r}, \boldsymbol{r}') = \frac{1}{4\pi\epsilon_0|\boldsymbol{r} - \boldsymbol{r}'|}$$
+$$
+\varphi(\boldsymbol{r}) = \int \rho(\boldsymbol{r}')G(\boldsymbol{r},\boldsymbol{r}')\,\mathrm{d}^3r'
+$$
+- With boundaries (Dirichlet condition):
+
+When $\varphi|_S = \varphi_0(\boldsymbol{r})$, and the Green's function satisfies
+$$
+\nabla^2 G(\boldsymbol{r},\boldsymbol{r}') = -\frac{\delta(\boldsymbol{r}-\boldsymbol{r}')}{\epsilon_0}, \qquad G(\boldsymbol{r},\boldsymbol{r}')|_{\boldsymbol{r}\in S} = 0
+$$
+then the solution for any volume charge density $\rho$ is,
+$$ 
+\varphi(\boldsymbol{r}) = \int_V \rho(\boldsymbol{r}') G(\boldsymbol{r},\boldsymbol{r}') \, \mathrm{d}^3r' - \epsilon_0 \oint_S \varphi_0(\boldsymbol{r}') \frac{\partial G(\boldsymbol{r},\boldsymbol{r}')}{\partial n'} \, \mathrm{d}S' 
+$$
+
+- With boundaries (Neumann condition):
+
+When $\frac{\partial\varphi}{\partial n}|_S = g(\boldsymbol{r})$, the Neumann Green's function $G_N$ satisfies
+$$
+\nabla^2 G_N(\boldsymbol{r},\boldsymbol{r}') = -\frac{\delta(\boldsymbol{r}-\boldsymbol{r}')}{\epsilon_0}, \qquad \left.\frac{\partial G_N}{\partial n}\right|_{\boldsymbol{r}\in S} = -\frac{1}{\epsilon_0 S}
+$$
+the potential is,
+$$
+\varphi(\boldsymbol{r}) = \int_V \rho(\boldsymbol{r}') G_N(\boldsymbol{r},\boldsymbol{r}') \, \mathrm{d}^3r' + \epsilon_0 \oint_S g(\boldsymbol{r}') G_N(\boldsymbol{r},\boldsymbol{r}') \, \mathrm{d}S' + \langle\varphi\rangle_S
+$$
+where $\langle\varphi\rangle_S$ is the average potential on the boundary.
 ## 1.5 Cases
 - If all charges are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas]] or T 2.3 in the textbook)
 $$
@@ -246,7 +360,6 @@ $$
 $$
 D_{11} = \frac{Q}{5}(2a_1^2 - a_2^2 - a_3^2), \quad D_{22} = \cdots, \quad D_{i\neq j} = 0
 $$
-
 
 # 2 Static Magnetic Field  
 # 3 EM Wave
