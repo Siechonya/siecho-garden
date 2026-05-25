@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-05-22T12:42:31.377+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-05-25T19:43:34.496+08:00","dg-note-properties":{}}
 ---
 
 > This document supplements some rather complex proof processes within [[A_symmetry_自然界的对称性/Applications/ED Formulas\|ED Formulas]] and [[A_symmetry_自然界的对称性/Applications/ED formulas (2)\|ED formulas (2)]] 
@@ -21,7 +21,7 @@ Let us denote the inner vector integral as $\boldsymbol{I}(\boldsymbol{x}')$:
 $$
 \boldsymbol{I}(\boldsymbol{x}') = \int_V \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x
 $$
-We recognize that the integrand can be expressed as the negative gradient with respect to the field point $\boldsymbol{x}$:
+We recognize that the integrand can be expressed as the negative gradient with respect to the field point $\boldsymbol{x}$: 
 $$
 \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} = -\nabla \left( \frac{1}{|\boldsymbol{x} - \boldsymbol{x}'|} \right)
 $$
@@ -65,7 +65,56 @@ Replacing the integral with $\boldsymbol{p}$, we arrive at:
 $$
 \int_V \boldsymbol{E}(\boldsymbol{x}) \, \mathrm{d}^3x = -\frac{\boldsymbol{p}}{3\varepsilon_0}
 $$
+# 2 Rotation of harmonics & Wigner $D$-Matrices *
+Spherical harmonics $Y_l^m(\theta, \varphi)$ form a $(2l+1)$-dimensional irreducible representation of $\mathrm{SO}(3)$. Under a coordinate rotation $\mathcal{R}$ parameterized by the Euler angles $(\alpha, \beta, \gamma)$, the total angular momentum quantum number $l$ remains invariant because the rotation operator commutes with the total angular momentum squared: $[\mathcal{R}, \boldsymbol{L}^2] = 0$. However, the azimuthal projection undergoes a linear transformation.
 
+The transformed spherical harmonic in the rotated frame can be expressed as a linear combination of the original basis functions,
+$$
+Y_l^{m}(\theta', \varphi') = \sum_{m'=-l}^l D_{m'm}^l(\alpha, \beta, \gamma) Y_l^{m'}(\theta, \varphi)
+$$
+where $D_{m'm}^l(\alpha, \beta, \gamma)$ are the elements of the Wigner $D$-matrix. We find that the entire rotation operator can be directly written as $\mathcal{R}(\alpha, \beta, \gamma) = e^{-\mathrm{i}\alpha L_z} e^{-\mathrm{i}\beta L_y} e^{-\mathrm{i}\gamma L_z}$. Thus, Wigner $D$-matrix can be factorized into a product of exponentials and Wigner's small $d$-matrix,
+$$
+D_{m'm}^l(\alpha, \beta, \gamma) =  \langle l, m' | e^{-\mathrm{i}\alpha L_z} \, e^{-\mathrm{i}\beta L_y} \, e^{-\mathrm{i}\gamma L_z} | l, m \rangle = e^{-\mathrm{i}m'\alpha} d_{m'm}^l(\beta) e^{-\mathrm{i}m\gamma}
+$$
+Here, Wigner's small $d$-matrix $d_{m'm}^l(\beta)$ describes the rotation around the $y$-axis,
+$$
+d_{m'm}^l(\beta) = \langle l, m' | e^{-\mathrm{i}\beta L_y} | l, m \rangle
+$$
+Since spatial rotations preserve the norm of the state space, the Wigner $D$-matrix is strictly unitary,
+$$
+\sum_{m=-l}^l D_{m k}^{l*}(\alpha, \beta, \gamma) D_{m n}^l(\alpha, \beta, \gamma) = \delta_{kn}
+$$
+In particular, when the second projection index is set to zero ($m=0$), the Wigner $D$-matrix simplifies directly to a spherical harmonic,  
+$$
+D_{m'0}^l(\alpha, \beta, 0) = \sqrt{\frac{4\pi}{2l+1}} Y_l^{m'*}(\beta, \alpha)
+$$
+Let $\gamma$ denote the angle between the points $(\theta',\varphi')$ and $(\theta,\varphi)$ on the spherical surface. By first rotating the coordinate system anticlockwise by an angle of $\varphi'$ about the $z$-axis and then by an angle of $\theta'$ about the $y$-axis, one find,
+$$
+P_l(\cos\gamma) 
+= \sqrt{\frac{4\pi}{2l+1}} Y_l^0 (\gamma, 0) 
+= \sqrt{\frac{4\pi}{2l+1}} \sum_{m'=-l}^{l} D_{m'0}^l(\varphi', \theta', 0)Y_l^{m'}(\theta, \varphi)
+= \frac{4\pi}{2l+1} \sum_{m=-l}^l Y_{l}^{m*}(\theta',\varphi') Y_{l}^m(\theta, \varphi)
+$$
+For ex., consider a frame's anticlockwise $90^\circ$ rotation around the $y$-axis ($\alpha = 0, \beta = \pi/2, \gamma = 0$) within the $l=1$ subspace. The Wigner small $d$-matrix evaluates to,
+$$
+d^1_{m'm}\left(\frac{\pi}{2}\right)
+= \begin{pmatrix} \cos^2\frac{\beta}{2} & -\frac{\sin\beta}{\sqrt{2}} & \sin^2\frac{\beta}{2} \\[5pt] \frac{\sin\beta}{\sqrt{2}} & \cos\beta & -\frac{\sin\beta}{\sqrt{2}} \\[5pt] \sin^2\frac{\beta}{2} & \frac{\sin\beta}{\sqrt{2}} & \cos^2\frac{\beta}{2} \end{pmatrix}_{\beta=\frac{\pi}{2}}
+= \begin{pmatrix} \frac{1}{2} & -\frac{1}{\sqrt{2}} & \frac{1}{2} \\[5pt] \frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}} \\[5pt] \frac{1}{2} & \frac{1}{\sqrt{2}} & \frac{1}{2} \end{pmatrix}
+$$
+where rows and columns map to $m', m = 1, 0, -1$ respectively. We construct the linear combination $Y_1^{x}(\theta, \varphi) \equiv \frac{-Y_1^{1} + Y_1^{-1}}{\sqrt{2}}\propto \sin\theta\cos\varphi\propto \frac{x}{r}$. The rotation gives,
+$$
+Y_1^{0}(\theta', \varphi') = \sum_{m'=-1}^1 d^1_{m'0} Y_1^{m'}(\theta,\varphi)= Y_1^{x}(\theta, \varphi)  \propto \cos\theta' = \frac{z'}{r}
+$$
+Consequently, an anticlockwise rotation of the frame by $\beta = \pi/2$ around the $+y$-axis maps the old $x$-axis onto the new $z'$-axis ($x \to z'$). This means the original $x$-oriented dipole $Y_1^{x}(\theta, \varphi)$ transforms directly into a $z'$-oriented dipole $Y_1^{0}(\theta', \varphi')$.
+
+Finally, the Wigner $D$-matrix and small $d$-matrix elements can be computed analytically using the built-in `WignerD` function in Wolfram Mathematica (MMA), with the following syntax,
+$$
+\begin{aligned}
+D_{m'm}^l(\alpha, \beta, \gamma) &\implies \texttt{WignerD[\{l, mp, m\}, }\alpha\texttt, \beta\texttt, \gamma\texttt{]} \\[5pt]
+d_{m'm}^l(\beta) &\implies \texttt{WignerD[\{l, mp, m\}, }\beta\texttt{]}
+\end{aligned}
+$$
+Btw, the result from MMA differs by a transpose from the discussion above, but we still follow the same convention as Wikipedia and most textbooks.
 
 
 

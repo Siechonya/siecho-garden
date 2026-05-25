@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-22T12:42:58.844+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-23T13:46:41.580+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1514,7 +1514,7 @@ $$
 $$
 > * Warning: the regular energy-momentum tensor $T^{\alpha\beta}$ is not symmetric generally not symmetric for fields with spin (such as the electromagnetic field with spin-1). An additional divergence term $\frac{1}{\mu_0} \partial_\lambda (F^{\mu\lambda} A^\nu)$ needs to be introduced to ensure symmetry (refer to [[A_symmetry_自然界的对称性/Applications/Electrodynamics#3 $Symmetric correction$ 对称性修正\|Electrodynamics: 3. Symmetric correction]]).  
 
-> * Addition: Under the $(-, +, +, +)$ metric, conventionally $T^{\alpha\beta} = -\Pi^\alpha \partial^\beta \varphi + g^{\alpha\beta}\mathcal{L}$, whereas for the $(+, -, -, -)$, it's $T^{\alpha\beta} = \Pi^\alpha \partial^\beta \varphi - g^{\alpha\beta}\mathcal{L}$. This convention ensures that the energy density always satisfies the standard relation $T^{00} \equiv \frac{ \partial \mathcal{L} }{ \partial (\partial^0 \varphi) }\partial^0 \varphi - \mathcal{L}$. Furthermore, the distinction between $T^{\alpha\beta}$ and its transposed counterpart $T'^{\alpha\beta} = -\Pi^\beta \partial^\alpha \varphi + g^{\alpha\beta}\mathcal{L}$ amounts to a total divergence term (i.e., $T^{\alpha\beta} - T'^{\alpha\beta} = \partial_\mu \Psi^{\mu\alpha\beta}$). Consequently, $T'^{\alpha\beta}$ serves as an equally valid alternative for describing the conserved currents. 
+> * Addition: Under the $(-, +, +, +)$ metric, conventionally $T^{\alpha\beta} = -\Pi^\alpha \partial^\beta \varphi + g^{\alpha\beta}\mathcal{L}$, whereas for the $(+, -, -, -)$, it's $T^{\alpha\beta} = \Pi^\alpha \partial^\beta \varphi - g^{\alpha\beta}\mathcal{L}$. This convention ensures that the energy density always satisfies the standard relation $T^{00} \equiv \frac{ \partial \mathcal{L} }{ \partial (\partial^0 \varphi) }\partial^0 \varphi - \mathcal{L}$. Furthermore, the distinction between $T^{\alpha\beta}$ and its transposed counterpart $T'^{\alpha\beta} = -\Pi^\beta \partial^\alpha \varphi + g^{\alpha\beta}\mathcal{L}=T^{\beta\alpha}$ amounts to a total divergence term (i.e., $T^{\alpha\beta} - T'^{\alpha\beta} = \partial_\mu \Psi^{\mu\alpha\beta}$). Consequently, $T'^{\alpha\beta}$ serves as an equally valid alternative for describing the conserved currents. 
 
 ### 4.4.4 Noether's theorem of field  
 - Noether's theorem: If $\bar{\delta}\mathcal{L}=\partial_\alpha C^\alpha$ under the transformation $x^\alpha  \to x'^\alpha + \bar{\delta}x^\alpha$, then $\mathcal{J}^\alpha$ is the conserved current satisfying $\partial_\alpha \mathcal{J}^\alpha=0$

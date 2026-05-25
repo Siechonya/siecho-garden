@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2026-05-22T09:17:21.538+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2026-05-25T16:31:02.862+08:00","dg-note-properties":{}}
 ---
 
 
@@ -104,13 +104,7 @@ $$
 P_l^m(x) = (1-x^2)^{\frac{m}{2}} \frac{ d^m }{ d x^m} P_l(x), \quad 0\leq m \leq l
 }
 $$
-在量子力学中，经常在这个函数前面加上系数 $(-1)^m$ 变成：  
-$$
-\boxed{
-P_l^m(x) = (-1)^m(1-x^2)^{\frac{m}{2}} \frac{ d^m }{ d x^m} P_l(x), \quad 0\leq m \leq l
-}
-$$
-最后你会发现这个新的系数实际上不影响连带函数的正交完备性，而完全只是量子力学的一个相位规定。所以, 最后的球谐函数就是
+所以, 最后的球谐函数就是
 $$
 Y_l^m (\theta, \varphi) = P_l^m(\cos\theta)\Phi_m(\varphi)
 $$
@@ -120,7 +114,7 @@ Y_l^m (\theta, \varphi) = \sqrt{\frac{1}{2\pi} \frac{2l+1}{2} \frac{(l-m)!}{(l+m
 $$
 同时也能够给出 $-l\leq m <0$ 的项满足，
 $$
-P_l^{-m}(x) = (-1)^m \frac{(l-m)!}{(l+m)!} P_l^m(x)\quad Y_l^{-m}(\theta, \varphi) = (-1)^m Y_l^{m*}(\theta, \varphi)
+P_l^{-m}(x) = \frac{(l-m)!}{(l+m)!} P_l^m(x)\quad Y_l^{-m}(\theta, \varphi) = Y_l^{m*}(\theta, \varphi)
 $$
 于是 $\nabla^2 u = 0$ 的通解表示为
 $$
@@ -134,12 +128,16 @@ $$
 $$
 \begin{aligned}
 P_0^0(x) &= 1, \\[3pt]
-P_1^0(x) &= x, \quad P_1^1(x) = -\sqrt{1 - x^2}, \\[3pt]
-P_2^0(x) &= \frac{1}{2}(3 x^2 - 1), \quad P_2^1(x) = -3 x\sqrt{1 - x^2}, \quad P_2^2(x) = 3(1 - x^2), \\[2pt]
-P_3^0(x) &= \frac{1}{2}(5 x^3 - 3 x), \quad P_3^1(x) = -\frac{3}{2}(5 x^2 - 1)\sqrt{1 - x^2}, \quad
-P_3^2(x) = 15 x(1 - x^2), \quad P_3^3(x) = -15(1 - x^2)^{3/2}.
+P_1^0(x) &= x, \quad P_1^1(x) = \sqrt{1 - x^2}, \\[3pt]
+P_2^0(x) &= \frac{1}{2}(3 x^2 - 1), \quad P_2^1(x) = 3 x\sqrt{1 - x^2}, \quad P_2^2(x) = 3(1 - x^2), \\[2pt]
+P_3^0(x) &= \frac{1}{2}(5 x^3 - 3 x), \quad P_3^1(x) = \frac{3}{2}(5 x^2 - 1)\sqrt{1 - x^2}, \quad
+P_3^2(x) = 15 x(1 - x^2), \quad P_3^3(x) = 15(1 - x^2)^{3/2}.
 \end{aligned}
 $$
+
+> 在量子力学中，经常在连带勒让德函数前面加上系数 $(-1)^m$ 变成：  
+> $$\boxed{P_l^m(x) = (-1)^m(1-x^2)^{\frac{m}{2}} \frac{ d^m }{ d x^m} P_l(x), \quad 0\leq m \leq l}$$  
+>  你会发现这个新的系数实际上不影响连带函数的正交完备性，而完全只是量子力学的一个相位规定。
 
 ## 3.2 $Y_1^m$ 和偶极场
 在静磁学中, 如果场点不存在电流($\nabla \times \vec B = 0$), 那么磁感应强度 $\vec B$ 可以表示成磁标势 $\Phi_m$ 的梯度 $\vec B = -\nabla \Phi_m$, 并且由于 $\nabla \cdot \vec B=0$, 所以磁标势自动满足拉普拉斯方程 $\nabla^2 \Phi_m = 0$. 在其通解形式中, 前几项球谐函数有显著的物理意义.
@@ -259,10 +257,11 @@ $$
 $$
 \frac{1}{|\boldsymbol{r}-\boldsymbol{a}|} = \sum_{l=0}^\infty  \frac{r_<^l}{r^{l+1}_>} P_l(\cos\theta)
 $$
-现在旋转得到 $\boldsymbol{a} = (a,\theta',\varphi')$，由于 $|\boldsymbol{r}-\boldsymbol{a}|$ 只取决于两个矢量之间的相对夹角 $\gamma=\arccos\frac{\boldsymbol{r}\cdot\boldsymbol{a}}{|\boldsymbol{r}\cdot\boldsymbol{a}|}$，所以对于一般情形，有  
+现在旋转得到 $\boldsymbol{a} = (a,\theta',\varphi')$，由于 $|\boldsymbol{r}-\boldsymbol{a}|$ 只取决于两个矢量之间的相对夹角 $\gamma=\arccos\frac{\boldsymbol{r}\cdot\boldsymbol{a}}{|\boldsymbol{r}\cdot\boldsymbol{a}|}$，所以对于一般情形，有 
 $$
 \frac{1}{|\boldsymbol{r}-\boldsymbol{a}|} = \sum_{l=0}^\infty  \frac{r_<^l}{r^{l+1}_>} P_l(\cos\gamma), \quad \gamma=\arccos\frac{\boldsymbol{r}\cdot\boldsymbol{a}}{|\boldsymbol{r}\cdot\boldsymbol{a}|},\  \quad r_< = \min(r,a), \ r_> = \max(r,a)
 $$
+或者，也可以从勒让德多项式的母函数表示来证明上述结果。
 ## 4.2 已知球对称边界条件
 现在需要确定系数 $B_{lm}$, 假设 $A=0$, 通解写成:
 $$

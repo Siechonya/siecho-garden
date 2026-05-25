@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-23T11:16:15.359+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-25T19:44:04.180+08:00","dg-note-properties":{}}
 ---
 
 
@@ -160,6 +160,16 @@ P_3^2(x) = 15 x(1 - x^2), \quad P_3^3(x) = -15(1 - x^2)^{3/2}  \\[2pt]
 \cdots
 \end{aligned}
 $$
+And the first few spherical harmonics are,  
+$$
+\begin{aligned} 
+Y_0^0(\theta, \varphi) &= \sqrt{\frac{1}{4\pi}}, \\[6pt] Y_1^0(\theta, \varphi) &= \sqrt{\frac{3}{4\pi}} \cos\theta, \quad Y_1^1(\theta, \varphi) = -\sqrt{\frac{3}{8\pi}} \sin\theta \,\mathrm{e}^{\mathrm{i}\varphi}, 
+\\[6pt] Y_2^0(\theta, \varphi) &= \sqrt{\frac{5}{16\pi}} (3\cos^2\theta - 1), \quad Y_2^1(\theta, \varphi) = -\sqrt{\frac{15}{8\pi}} \sin\theta\cos\theta \,\mathrm{e}^{\mathrm{i}\varphi}, \quad Y_2^2(\theta, \varphi) = \sqrt{\frac{15}{32\pi}} \sin^2\theta \,\mathrm{e}^{2\mathrm{i}\varphi}, 
+\\[6pt] Y_3^0(\theta, \varphi) &= \sqrt{\frac{7}{16\pi}} (5\cos^3\theta - 3\cos\theta), \quad Y_3^1(\theta, \varphi) = -\sqrt{\frac{21}{64\pi}} (5\cos^2\theta - 1)\sin\theta \,\mathrm{e}^{\mathrm{i}\varphi}, 
+\\[3pt] Y_3^2(\theta, \varphi) &= \sqrt{\frac{105}{32\pi}} \cos\theta\sin^2\theta \,\mathrm{e}^{2\mathrm{i}\varphi}, \quad Y_3^3(\theta, \varphi) = -\sqrt{\frac{35}{64\pi}} \sin^3\theta \,\mathrm{e}^{3\mathrm{i}\varphi} 
+\\[3pt] \cdots 
+\end{aligned}
+$$
 - Orthonormality
 $$ 
 \oint Y_{l'}^{m'*}(\Omega) Y_l^m(\Omega) \,\mathrm{d}\Omega = \delta_{ll'}\delta_{mm'}
@@ -168,6 +178,7 @@ $$
 $$
 \sum_{l=0}^{+\infty}\sum_{m=-l}^{l} Y_{l}^{m}(\Omega') Y_l^m(\Omega) = \delta(\Omega-\Omega') = \delta(\cos\theta - \cos\theta')\delta(\varphi-\varphi')
 $$
+
 ### 1.3.2 Multipole expansion *
 By using the Legendre generating function, one finds
 $$
@@ -218,36 +229,8 @@ $$
 D_{ij} = \int_{V'} \rho(\boldsymbol{x'}) \left[ 3x'_i x'_j - \delta_{ij}(r')^2 \right] \,\mathrm{d}^3x'
 $$
 And extending to $l=3, 4, \dots$  yields the octupole ($l=3$), hexadecapole ($l=4$), and more high $2^l$-pole moments $\ldots$  
-### 1.3.3 Wigner $D$-Matrices *
-Spherical harmonics $Y_l^m(\theta, \varphi)$ form a $(2l+1)$-dimensional irreducible representation of $SO(3)$. Under a coordinate rotation $\mathcal{R}$ parameterized by the Euler angles $(\alpha, \beta, \gamma)$, the total angular momentum quantum number $l$ remains invariant because the rotation operator commutes with the total angular momentum squared: $[\mathcal{R}, \boldsymbol{L}^2] = 0$. However, the azimuthal projection $m$ undergoes a linear transformation.
-
-The transformed spherical harmonic in the rotated frame can be expressed as a linear combination of the original basis functions,
-$$
-Y_l^m(\theta', \varphi') = \sum_{m'=-l}^l D_{m'm}^l(\alpha, \beta, \gamma) Y_l^{m'}(\theta, \varphi)
-$$
-where $D_{m'm}^l(\alpha, \beta, \gamma)$ are the elements of the Wigner $D$-matrix. We find that the entire rotation operator can be directly written as $\mathcal{R}(\alpha, \beta, \gamma) = e^{-\mathrm{i}\alpha L_z} e^{-\mathrm{i}\beta L_y} e^{-\mathrm{i}\gamma L_z}$. Thus, Wigner $D$-matrix can be factorized into a product of exponentials and Wigner's small $d$-matrix,
-$$
-D_{m'm}^l(\alpha, \beta, \gamma) = e^{-\mathrm{i}m'\alpha} d_{m'm}^l(\beta) e^{-\mathrm{i}m\gamma}
-$$
-Here, Wigner's small $d$-matrix $d_{m'm}^l(\beta)$ describes the rotation around the $y$-axis,
-$$
-d_{m'm}^l(\beta) = \langle l, m' | e^{-\mathrm{i}\beta L_y} | l, m \rangle
-$$
-Since spatial rotations preserve the norm of the state space, the Wigner $D$-matrix is strictly unitary, satisfying,
-$$
-\sum_{m=-l}^l D_{m k}^{l*}(\alpha, \beta, \gamma) D_{m n}^l(\alpha, \beta, \gamma) = \delta_{kn}
-$$
-Specially, when the second projection index is set to zero ($m=0$), the Wigner $D$-matrix simplifies directly to a spherical harmonic,
-$$
-D_{m'0}^l(\alpha, \beta, 0) = \sqrt{\frac{4\pi}{2l+1}} Y_l^{m'*}(\beta, \alpha)
-$$
-You can computes the Wigner $D$-matrix and small $d$-matrix elements analytically by using the built-in `WignerD` function with the following syntax in Wolfram Mathematica (MMA),
-$$
-\begin{aligned}
-D_{m'm}^l(\alpha, \beta, \gamma) &\implies \texttt{WignerD[\{l, m', m\}, }\alpha\texttt{, }\beta\texttt{, }\gamma\texttt{]} \\[5pt]
-d_{m'm}^l(\beta) &\implies \texttt{WignerD[\{l, m', m\}, }\beta\texttt{]}
-\end{aligned}
-$$
+### 1.3.3 Rotation of harmonics & Wigner $D$-Matrices *
+Refer to [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#2 Rotation of harmonics & Wigner $D$-Matrices *\|Appendix for ED formulas]].
 ## 1.4 Method: separation of variables  
 ### 1.4.1 Cartesian coordinate system  
 
@@ -255,7 +238,7 @@ $$
 ### 1.4.3 Spherical coordinate system  
 ### 1.4.4 Green function *
 ## 1.5 Cases
-- If all charges are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas]])
+- If all charges are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas]] or T 2.3 in the textbook)
 $$
 \iiint_V \boldsymbol{E}(\boldsymbol{x}) \,\mathrm{d}^3x = -\frac{\boldsymbol{p}}{3\epsilon_0}
 $$
