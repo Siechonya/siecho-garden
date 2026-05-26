@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-05-26T17:46:13.893+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-05-26T19:40:00.896+08:00","dg-note-properties":{}}
 ---
 
 > This document supplements some rather complex proof processes within [[A_symmetry_自然界的对称性/Applications/ED Formulas\|ED Formulas]] and [[A_symmetry_自然界的对称性/Applications/ED formulas (2)\|ED formulas (2)]] 
@@ -277,6 +277,44 @@ $$
 Substituting $A_{2m+1}$ back into the generalized series provides the final analytical solution for the potential distribution inside the rectangular pipe,
 $$
 \varphi(x, y) = \frac{4V_0}{\pi} \sum_{m=0}^{\infty} \frac{1}{2m+1} \frac{\sinh\left(\frac{(2m+1)\pi y}{a}\right)}{\sinh\left(\frac{(2m+1)\pi b}{a}\right)} \sin\left(\frac{(2m+1)\pi x}{a}\right)
+$$
+# 4 Physical Interpretation of the Sign and Energy Definitions *  
+The choice of a positive sign in the generalized force relation $\boldsymbol{F} = +\nabla U$ arises from the thermodynamics of systems with <font color="#ff0000">constant</font> currents, which differs fundamentally from electrostatic systems. Two distinct definitions of magnetic interaction energy exist depending on the physical constraints of the system,
+
+- Passive Mechanical Potential Energy ($U_{\text{mech}} = -\boldsymbol{m}\cdot\boldsymbol{B}$)
+	- This definition treats the magnetic dipole as a rigid, isolated system with fixed currents where no external energy exchange occurs during displacement. In this case, the mechanical work is done entirely at the expense of this potential energy, preserving the classical relation $\boldsymbol{F} = -\nabla U_{\text{mech}}$.
+
+- Field Interaction Energy ($U_{\text{field}} = +\boldsymbol{m}\cdot\boldsymbol{B}$)
+	- This is derived directly from the macroscopic field energy expression $\int \boldsymbol{J}\cdot\boldsymbol{A}\,\mathrm{d}V$. Here, the currents $\boldsymbol{J}$ are held strictly constant during any displacement. To maintain constant currents against the back-EMF induced by the motion, external power supplies must perform work on the system.
+
+A more explicit comparison is presented here. In an electric field with fixed charges, when an electric dipole is displaced, <font color="#245bdb">the charge distribution remains naturally invariant</font>, and no external energy is required to maintain the charges. Consequently, the mechanical work is done entirely at the expense of the electrostatic potential energy, satisfying the classical mechanical relation $\boldsymbol{F} = -\nabla U_{\text{e,field}}$, where $U_{\text{e,field}} = -\boldsymbol{p}\cdot\boldsymbol{E}$.
+  
+But in a magnetic field with fixed currents, when a loop (magnetic dipole) undergoes displacement, <font color="#245bdb">the variation in magnetic flux induces an electromotive force within the circuit which tends to change the current inrensity</font>. To maintain a constant current $\boldsymbol{J}$ within the loop, the external power supplies maintaining the current must perform work against this induced EMF. The work done by the sources $\mathrm{d}W_{\text{source}}$ is precisely twice the mechanical work performed $\mathrm{d}W_{\text{mech}}$ ($\mathrm{d}W_{\text{source}} = 2\mathrm{d}W_{\text{mech}}$), which leads to $\boldsymbol{F} = +\nabla U_{\text{m,field}}$.
+
+To prove the relation $\boldsymbol{F} = +\nabla U_{\text{field}}$ and demonstrate the mechanism of the external sources, consider a system of two circuits with constant currents $I_1$ and $I_2$, self-inductances $L_1$ and $L_2$, and mutual inductance $M$. The total magnetic energy of the system is,
+$$
+W = \frac{1}{2}L_1 I_1^2 + \frac{1}{2}L_2 I_2^2 + M I_1 I_2
+$$
+When circuit $I$ undergoes a virtual displacement $\mathrm{d}\boldsymbol{x}$, the mutual inductance changes by $\mathrm{d}M$. The mechanical work done by the magnetic force is,
+$$
+\mathrm{d}W_{\text{mech}} = \boldsymbol{F}\cdot\mathrm{d}\boldsymbol{x} = I_1 I_2 \mathrm{d}M
+$$
+Concurrently, the changing magnetic flux induces electromotive forces in both circuits due to Faraday's law,
+$$
+\mathcal{E} = -\frac{ \mathrm{d} \Phi }{ \mathrm{d} t} \implies
+\mathcal{E}_{1,\text{ind}} = -I_2 \frac{\mathrm{d}M}{\mathrm{d}t}, \quad \mathcal{E}_{2,\text{ind}} = -I_1 \frac{\mathrm{d}M}{\mathrm{d}t}
+$$
+To maintain constant currents, the external power sources must counteract these induced EMFs, performing work equal to,
+$$
+\mathrm{d}W_{\text{source}} = \left(-\mathcal{E}_{1,\text{ind}} I_1 - \mathcal{E}_{2,\text{ind}} I_2\right)\mathrm{d}t = 2 I_1 I_2 \mathrm{d}M = 2 \mathrm{d}W_{\text{mech}}
+$$
+The change in the stored field energy $\mathrm{d}U_{\text{field}}$ is the difference between the energy supplied by the sources and the mechanical work performed,
+$$
+\mathrm{d}U_{\text{field}} = \mathrm{d}W_{\text{source}} - \mathrm{d}W_{\text{mech}} = 2\mathrm{d}W_{\text{mech}} - \mathrm{d}W_{\text{mech}} = +\mathrm{d}W_{\text{mech}}
+$$
+Since $\mathrm{d}U_{\text{field}} = \nabla U_{\text{field}}\cdot\mathrm{d}\boldsymbol{x}$ and $-\mathrm{d}U_{\text{mech}} = \mathrm{d}W_{\text{mech}} = \boldsymbol{F}\cdot\mathrm{d}\boldsymbol{x}$, it follows that,
+$$
+\boldsymbol{F} = +\nabla U_{\text{field}}
 $$
 
 

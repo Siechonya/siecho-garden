@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-26T17:51:26.770+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-26T19:00:03.284+08:00","dg-note-properties":{}}
 ---
 
 
@@ -44,7 +44,7 @@ $$
 
 ---
 
-# 1 Static Electric Field    
+# 1 Electrostatic Field    
 ## 1.1 Multipole expansion  
 - Consider electrostatic potential expansion at an external observation point $\boldsymbol{x}$, with localized charge source $\rho(\boldsymbol{x'})$ confined within a volume $V'$, and $\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}, r=|\boldsymbol{x}|(field), r'=|\boldsymbol{x'}|(source)$, then
 $$
@@ -80,9 +80,9 @@ $$
 Assuming the charge of charged bodies $\boldsymbol{x}$ is so small compared with the source $\boldsymbol{x'}$ which generates the electric field that $\nabla^2\varphi(\boldsymbol{x})=0$. Let $\boldsymbol{\xi}$ be the relative coordinate of a charge element $\mathrm{d}q$ from the body's center $\boldsymbol{x}$. The potential energy $U=\int \varphi(\boldsymbol{x}+\boldsymbol{\xi}) \,\mathrm{d} q$ of the small body is,
 $$
 U \approx
-Q\varphi|_\boldsymbol{x}+ \boldsymbol{p}\cdot \nabla \varphi|_\boldsymbol{x} + \frac{1}{6}\mathsf{D}:\nabla\nabla \varphi|_{\boldsymbol{x}}
+Q\varphi\Big|_\boldsymbol{x}+ \boldsymbol{p}\cdot \nabla \varphi\Big|_\boldsymbol{x} + \frac{1}{6}\mathsf{D}:\nabla\nabla \varphi\Big|_{\boldsymbol{x}}
 =
-(Q\varphi)|_\boldsymbol{x}- (\boldsymbol{p}\cdot \boldsymbol{E})|_\boldsymbol{x} - \frac{1}{6}(\mathsf{D}:\nabla\boldsymbol{E})|_{\boldsymbol{x}}
+(Q\varphi)\Big|_\boldsymbol{x}- (\boldsymbol{p}\cdot \boldsymbol{E})\Big|_\boldsymbol{x} - \frac{1}{6}(\mathsf{D}:\nabla\boldsymbol{E})\Big|_{\boldsymbol{x}}
 $$
 Note that $Q=\int \mathrm{d}q = \int \rho(\boldsymbol{\xi})\,\mathrm{d} V$, $\boldsymbol{p}=\int \boldsymbol{\xi}\,\mathrm{d}q$, $\mathsf{D} = \int(3\boldsymbol{\xi}\boldsymbol{\xi} - \xi^2\mathsf{I})\,\mathrm{d}q$ are intrinsic properties of the small charged body itself, not the external source.  
 
@@ -361,11 +361,11 @@ $$
 $$
 D_{11} = \frac{Q}{5}(2a_1^2 - a_2^2 - a_3^2), \quad D_{22} = \cdots, \quad D_{i\neq j} = 0
 $$
-# 2 Static Magnetic Field  
+# 2 Magnetostatic Field  
 ## 2.1 magnetic energy
 #todo
 ## 2.2 Multipole expansion  
-### 2.2.1 Moment equation for localized current 
+### 2.2.1 Moment equation for localized current *
 Using $\nabla \cdot (\boldsymbol{J}\boldsymbol{r}) = (-\partial_t \rho)\boldsymbol{r} + \boldsymbol{J}$,  
 $$
 \iiint_V \boldsymbol{J}\,\mathrm{d}V = \dot{\boldsymbol{p}},\quad \boldsymbol{p} = \iiint_V \boldsymbol{r}\,\mathrm{d}q
@@ -383,7 +383,41 @@ $$
 $$
 \iiint_V \boldsymbol{J}\boldsymbol{r}\,\mathrm{d}V = \boldsymbol{m}\times \mathsf{I} \quad \implies \quad \iiint_V J_i r_j \,\mathrm{d}V = -\epsilon_{ijk}m_k
 $$
-### 2.2.2 Cases  
+### 2.2.2 Multipole expansion  
+- Consider magnetostatic potential expansion at an external observation point $\boldsymbol{x}$, with localized current source $\boldsymbol{J}(\boldsymbol{x'})$ confined within a volume $V'$, and $\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}, r=|\boldsymbol{x}|(field), r'=|\boldsymbol{x'}|(source)$, then
+$$
+\begin{align} 
+\frac{1}{R}=\frac{1}{|\boldsymbol{x}-\boldsymbol{x}'|} = e^{-\boldsymbol{x'}\cdot \nabla} \frac{1}{r} 
+&= 
+\left[ 1 - \boldsymbol{x'}\cdot \nabla + \frac{1}{2!}(\boldsymbol{x'}\boldsymbol{x'}:\nabla\nabla) + \cdots \right] \frac{1}{r} \\[8pt]
+{\color{gray}{\small \mathsf{I}: \nabla\nabla \frac{1}{r}=0} \implies}&=
+\frac{1}{r} - \boldsymbol{x'}\cdot \nabla \frac{1}{r} + \frac{1}{6} (3\boldsymbol{x'}\boldsymbol{x'}-r'^2 \mathsf{I}): \nabla\nabla \frac{1}{r} + \cdots
+\end{align}
+$$
+$$
+\Downarrow
+$$
+$$
+\begin{align} 
+\boldsymbol{A}(\boldsymbol{x}) = \frac{\mu_0}{4\mathrm{\pi}}\int_{V'}  \frac{\boldsymbol{J}(\boldsymbol{x'})}{R} \,\mathrm{d}V'
+&=
+\frac{\mu_0}{4\mathrm{\pi}}\left[  \frac{1}{r}\int_{V'} \boldsymbol{J}(\boldsymbol{x'})\,\mathrm{d}V' + \frac{1}{r^3} \int_{V'} \boldsymbol{J}(\boldsymbol{x'})\boldsymbol{x'}\,\mathrm{d}V'  \cdot \boldsymbol{x} + \frac{1}{6} \int_{V'} \boldsymbol{J}(\boldsymbol{x'}) (3\boldsymbol{x'}\boldsymbol{x'}-r'^2 \mathsf{I}): \nabla\nabla \frac{1}{r} \,\mathrm{d}V' + \cdots\right] 
+\\[8pt]
+&=
+\frac{\mu_0}{4\pi r^3} (\boldsymbol{m}\times\mathsf{I})\cdot \boldsymbol{x} - \frac{\mu_0}{12\pi r^5} \boldsymbol{x} \times (\mathsf{M}\cdot\boldsymbol{x}) + \cdots
+\ \\[8pt]
+&=
+\frac{\mu_0}{4\pi r^3} (\boldsymbol{m}\times\boldsymbol{x}) - \frac{\mu_0}{12\pi r^5} \boldsymbol{x} \times (\mathsf{M}\cdot\boldsymbol{x}) + \cdots
+\end{align}
+$$
+Where $\boldsymbol{m} = \frac{1}{2}\int_{V'} (\boldsymbol{x'} \times \boldsymbol{J}(\boldsymbol{x'}))\,\mathrm{d}V'$ is the magnetic dipole moment, and $\mathsf{M} = \frac{2}{3}\int_{V'} (\boldsymbol{x'} \times \boldsymbol{J}(\boldsymbol{x'}))\boldsymbol{x'}\,\mathrm{d}V'$ is the magnetic quadrupole moment tensor.  
+
+- Magnetostatic intensity expansion
+$$
+\boldsymbol{B}(\boldsymbol{x}) = \nabla \times \boldsymbol{A}
+=\frac{\mu_0}{4\pi r^3} \left[ 3(\boldsymbol{m}\cdot\hat{r})\hat{r} - \boldsymbol{m} \right] + \frac{\mu_0}{12\pi r^4} \left[ 5(\hat{r}\cdot\mathsf{M}\cdot\hat{r})\hat{r} - 2\mathsf{M}\cdot\hat{r} \right] + \cdots
+$$
+### 2.2.3 Cases  
 - Ring current
 $$
 \boldsymbol{m} = I \boldsymbol{S}
@@ -411,40 +445,26 @@ $$
 \boldsymbol{m} = \frac{1}{2}\oint(\boldsymbol{r}\times\boldsymbol{K})\,\mathrm{d}\sigma
 = \frac{1}{3} Qa^2\boldsymbol{\omega}
 $$
-### 2.2.3 Multipole expansion  
-- Consider magnetostatic potential expansion at an external observation point $\boldsymbol{x}$, with localized current source $\boldsymbol{J}(\boldsymbol{x'})$ confined within a volume $V'$, and $\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}, r=|\boldsymbol{x}|(field), r'=|\boldsymbol{x'}|(source)$, then
-$$
-\begin{align} 
-\frac{1}{R}=\frac{1}{|\boldsymbol{x}-\boldsymbol{x}'|} = e^{-\boldsymbol{x'}\cdot \nabla} \frac{1}{r} 
-&= 
-\left[ 1 - \boldsymbol{x'}\cdot \nabla + \frac{1}{2!}(\boldsymbol{x'}\boldsymbol{x'}:\nabla\nabla) + \cdots \right] \frac{1}{r} \\[8pt]
-{\color{gray}{\small \mathsf{I}: \nabla\nabla \frac{1}{r}=0} \implies}&=
-\frac{1}{r} - \boldsymbol{x'}\cdot \nabla \frac{1}{r} + \frac{1}{6} (3\boldsymbol{x'}\boldsymbol{x'}-r'^2 \mathsf{I}): \nabla\nabla \frac{1}{r} + \cdots
-\end{align}
-$$
-$$
-\Downarrow
-$$
-$$
-\begin{align} 
-\boldsymbol{A}(\boldsymbol{x}) = \frac{\mu_0}{4\mathrm{\pi}}\int_{V'}  \frac{\boldsymbol{J}(\boldsymbol{x'})}{R} \,\mathrm{d}V'
-&=
-\frac{\mu_0}{4\mathrm{\pi}}\left[  \frac{1}{r}\int_{V'} \boldsymbol{J}(\boldsymbol{x'})\,\mathrm{d}V' + \frac{1}{r^3} \int_{V'} \boldsymbol{J}(\boldsymbol{x'})\boldsymbol{x'}\,\mathrm{d}V'  \cdot \boldsymbol{x}+ \cdots\right] 
-\\[8pt]
-&=
-\frac{\mu_0}{4\pi r^3} (\boldsymbol{m}\times\mathsf{I})\cdot \boldsymbol{x}+ \cdots
-\\[8pt]
-&=
-\frac{\mu_0}{4\pi r^3} (\boldsymbol{m}\times\boldsymbol{x})+ \cdots
-\end{align}
-$$
-- Magnetostatic intensity expansion
-$$
-\boldsymbol{B}(\boldsymbol{x}) = \nabla \times \boldsymbol{A}
-=\frac{\mu_0}{4\pi r^3} \left[ 3\boldsymbol{m}\cdot\hat{r}\hat{r} - \boldsymbol{m} \right] + \cdots
-$$
 ## 2.3 Small current-carrying conductor in magnetic field  
+### 2.3.1 Small current-carrying conductor in magnetic field  
+Assuming the spatial size of the current-carrying body $\boldsymbol{x}$ is so small compared with the distance to the source $\boldsymbol{x'}$ which generates the magnetic field that $\nabla \times \boldsymbol{B}(\boldsymbol{x})=0$ and $\nabla \cdot \boldsymbol{B}(\boldsymbol{x})=0$ within the body. Let $\boldsymbol{\xi}$ be the relative coordinate of a current element $\boldsymbol{J}(\boldsymbol{\xi})\,\mathrm{d}V$ from the body's center $\boldsymbol{x}$. The interaction magnetic energy $U=\int \boldsymbol{J}(\boldsymbol{\xi})\cdot\boldsymbol{A}(\boldsymbol{x}+\boldsymbol{\xi})\,\mathrm{d}V$ of the small body is,
+$$
+U \approx
+(\boldsymbol{m}\cdot \boldsymbol{B})\Big|_\boldsymbol{x} + \frac{1}{6}(\mathsf{M}:\nabla\boldsymbol{B}) \Big|_\boldsymbol{x} + \cdots
+$$
+Note that $\boldsymbol{m}=\frac{1}{2}\int (\boldsymbol{\xi}\times\boldsymbol{J}(\boldsymbol{\xi}))\,\mathrm{d}V$ and $\mathsf{M}$ are the magnetic dipole and quadrupole moment tensor, which are intrinsic properties of the small current-carrying body itself, not the external source.  
 
+Furthermore, for a system with constant currents, the total magnetostatic force $\boldsymbol{F}$ acting on the small current-carrying body is given by the generalized force relation $\boldsymbol{F} = +\nabla U$ (why use "+"? see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#4 Physical Interpretation of the Sign and Energy Definitions *\|Appendix for ED formulas #4 Physical Interpretation of the Sign and Energy Definitions *]]),
+$$
+\boldsymbol{F} = +\nabla U
+= (\boldsymbol{m}\cdot\nabla)\boldsymbol{B}_{\text{ext}}\Big|_\boldsymbol{x} + \frac{1}{6}(\mathsf{M}:\nabla\nabla)\boldsymbol{B}_{\text{ext}}\Big|_\boldsymbol{x} + \cdots 
+$$
+The total force moment $\boldsymbol{N}$ acting on the small current-carrying body about its center $\boldsymbol{x}$ is,  
+$$
+\boldsymbol{N} = \int \boldsymbol{\xi} \times \left(\boldsymbol{J}(\boldsymbol{\xi}) \times \boldsymbol{B}_{\text{ext}}(\boldsymbol{x}+\boldsymbol{\xi})\right)\,\mathrm{d}V 
+=
+\boldsymbol{m} \times \boldsymbol{B}_{\text{ext}} + \cdots
+$$
 ## 2.4 Multipole expansion using spherical harmonics
 ### 2.4.1 magnetic scalar potential
 ## 2.5 Cases  
