@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-26T19:00:03.284+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-26T22:58:51.844+08:00","dg-note-properties":{}}
 ---
 
 
@@ -229,7 +229,7 @@ D_{ij} = \int_{V'} \rho(\boldsymbol{x'}) \left[ 3x'_i x'_j - \delta_{ij}(r')^2 \
 $$
 And extending to $l=3, 4, \dots$  yields the octupole ($l=3$), hexadecapole ($l=4$), and more high $2^l$-pole moments $\ldots$  
 ### 1.3.3 Rotation of harmonics & Wigner $D$-Matrices *
-Refer to [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#2 Rotation of harmonics & Wigner $D$-Matrices *\|Appendix for ED formulas #2 Rotation of harmonics & Wigner $D$-Matrices *]].
+Refer to [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#2 Rotation of harmonics & Wigner $D$-Matrices *\|Appendix for ED formulas#2 Rotation of harmonics & Wigner $D$-Matrices *]].
 ## 1.4 Method: separation of variables  
 <span style="color:#ff0000; font-size: 1.2em;">For this section, everyone is advised to review more example problems.</span>
 ### 1.4.1 Cartesian coordinate system
@@ -253,7 +253,7 @@ In the direction where the separation constant is positive (e.g., $z$),
 $$
 Z(z) = C \cosh(k_z z) + D \sinh(k_z z)
 $$
-See the thought from ppt int [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#3 Example 2D Laplace Equation in a Rectangular Pipe\|Appendix for ED formulas #3 Example 2D Laplace Equation in a Rectangular Pipe]].
+See the thought from ppt int [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#3 Example 2D Laplace Equation in a Rectangular Pipe\|Appendix for ED formulas#3 Example 2D Laplace Equation in a Rectangular Pipe]].
 
 ### 1.4.2 Cylindrical coordinate system
 - The fundamental solution of Laplace's equation $\nabla^2 \varphi = 0$
@@ -353,7 +353,7 @@ where $\langle\varphi\rangle_S$ is the average potential on the boundary.
 
 > Refer to [[A_symmetry_自然界的对称性/杂记/Green Function\|Green Function]] for several basic examples in infinite space.
 ## 1.5 Cases
-- If all charges are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas #1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$]] or T 2.3 in the textbook)
+- If all charges are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$]] or T 2.3 in the textbook)
 $$
 \iiint_V \boldsymbol{E}(\boldsymbol{x}) \,\mathrm{d}^3x = -\frac{\boldsymbol{p}}{3\epsilon_0}
 $$
@@ -454,7 +454,7 @@ U \approx
 $$
 Note that $\boldsymbol{m}=\frac{1}{2}\int (\boldsymbol{\xi}\times\boldsymbol{J}(\boldsymbol{\xi}))\,\mathrm{d}V$ and $\mathsf{M}$ are the magnetic dipole and quadrupole moment tensor, which are intrinsic properties of the small current-carrying body itself, not the external source.  
 
-Furthermore, for a system with constant currents, the total magnetostatic force $\boldsymbol{F}$ acting on the small current-carrying body is given by the generalized force relation $\boldsymbol{F} = +\nabla U$ (why use "+"? see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#4 Physical Interpretation of the Sign and Energy Definitions *\|Appendix for ED formulas #4 Physical Interpretation of the Sign and Energy Definitions *]]),
+Furthermore, for a system with constant currents, the total magnetostatic force $\boldsymbol{F}$ acting on the small current-carrying body is given by the generalized force relation $\boldsymbol{F} = +\nabla U$ (why use "+"? see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#4 Physical Interpretation of the Sign and Energy Definitions *\|Appendix for ED formulas#4 Physical Interpretation of the Sign and Energy Definitions *]]),
 $$
 \boldsymbol{F} = +\nabla U
 = (\boldsymbol{m}\cdot\nabla)\boldsymbol{B}_{\text{ext}}\Big|_\boldsymbol{x} + \frac{1}{6}(\mathsf{M}:\nabla\nabla)\boldsymbol{B}_{\text{ext}}\Big|_\boldsymbol{x} + \cdots 
