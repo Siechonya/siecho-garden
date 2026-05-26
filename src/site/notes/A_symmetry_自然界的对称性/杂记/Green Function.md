@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Green Function/","noteIcon":"default","created":"2025-11-19T12:10:15.473+08:00","updated":"2025-12-01T14:36:37.324+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Green Function/","noteIcon":"default","created":"2025-11-19T12:10:15.473+08:00","updated":"2026-05-26T11:30:32.585+08:00","dg-note-properties":{}}
 ---
 
 格林函数是场论中点源产生的基本解，这篇文章简单写一下它的应用。
@@ -313,7 +313,7 @@ $$
 $$
 \square^2 \varphi_1 = \frac{\rho}{\epsilon_0}, \quad \square^2 \varphi_0 = 0
 $$
-$\varphi_0$ 显然是真空电磁波解，但格林函数解并不能退化为该电磁波解。这是因为式 (1) 实际上忽略了边界项，相当于认为边界趋于 $\infty$，且 $\lim_{ r \to \infty } \varphi=0$，该条件使得电磁波解不能存在。如果非要使用格林函数的解法还原 $\varphi_0$，则需要在(1)式中加入复杂的边界项，该边界项还和微分算符 $\mathbf{L}$ 有关。
+$\varphi_0$ 显然是真空电磁波解，但格林函数解并不能退化为该电磁波解。这是因为式 (1) 实际上忽略了边界项，相当于认为边界趋于 $\infty$，且 $\lim_{ r \to \infty } \varphi=0$，该条件使得电磁波解不能存在。如果非要使用格林函数的解法还原 $\varphi_0$，则需要在(1)式中加入较为复杂的边界项。
 ## 3.2 Yukawa 势 
 在 2.4 节中，如果场是非时变、球对称、且无源的，则克莱因-戈登方程退化为亥姆霍兹方程，即  
 $$

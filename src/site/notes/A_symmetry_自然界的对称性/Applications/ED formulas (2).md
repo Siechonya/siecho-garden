@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-25T22:59:20.222+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-26T11:29:15.090+08:00","dg-note-properties":{}}
 ---
 
 
@@ -200,7 +200,6 @@ $$
 \quad
 \text{with }q = \int_{V'} \rho(\boldsymbol{x'}) \,\mathrm{d}^3x'
 $$
-
 - <font color="#ff0000">Dipole Term</font>. For $l=1$, since $P_1(\cos\gamma) = \cos\gamma = \frac{\boldsymbol{x}\cdot\boldsymbol{x'}}{r r'}$, the second term becomes:
 $$
 \Phi^{(1)}(\boldsymbol{x}) 
@@ -350,7 +349,9 @@ the potential is,
 $$
 \varphi(\boldsymbol{r}) = \int_V \rho(\boldsymbol{r}') G_N(\boldsymbol{r},\boldsymbol{r}') \, \mathrm{d}^3r' + \epsilon_0 \oint_S g(\boldsymbol{r}') G_N(\boldsymbol{r},\boldsymbol{r}') \, \mathrm{d}S' + \langle\varphi\rangle_S
 $$
-where $\langle\varphi\rangle_S$ is the average potential on the boundary.
+where $\langle\varphi\rangle_S$ is the average potential on the boundary.  
+
+> Refer to [[A_symmetry_自然界的对称性/杂记/Green Function\|Green Function]] for several basic examples in infinite space.
 ## 1.5 Cases
 - If all charges are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas]] or T 2.3 in the textbook)
 $$
@@ -360,8 +361,12 @@ $$
 $$
 D_{11} = \frac{Q}{5}(2a_1^2 - a_2^2 - a_3^2), \quad D_{22} = \cdots, \quad D_{i\neq j} = 0
 $$
-
 # 2 Static Magnetic Field  
+## 2.1 Multipole expansion  
+
+## 2.2 Multipole expansion using spherical harmonics
+### 2.2.1 magnetic scalar potential
+
 # 3 EM Wave
 
 # 4 Electromagnetic Radiation
