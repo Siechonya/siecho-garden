@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-23T13:46:41.580+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-26T17:52:59.203+08:00","dg-note-properties":{}}
 ---
 
 
@@ -497,7 +497,7 @@ $$
 \end{align}
 $$
 # 2 Fundamentals of Electromagnetism  
-## 2.1 Maxwell's equation (in cosmos)  
+## 2.1 Maxwell's equation
 - In cosmos
 $$
 \left\{
@@ -575,10 +575,10 @@ $$
 ## 2.3 Boundary conditions  
 - In cosmos ($\hat{n} = \hat{n}_{1\to 2}$) 
 $$
-\epsilon_0 (\boldsymbol{E}_2 - \boldsymbol{E}_1) \cdot \hat{\boldsymbol{n}} = \sigma,\quad
-(\boldsymbol{B}_2 - \boldsymbol{B}_1) \cdot \hat{\boldsymbol{n}} = 0,\quad
-\hat{\boldsymbol{n}} \times (\boldsymbol{E}_2 - \boldsymbol{E}_1) = 0,\quad
-\frac{1}{\mu_0} \hat{\boldsymbol{n}} \times (\boldsymbol{B}_2 - \boldsymbol{B}_1) = \boldsymbol{K}
+\hat{{n}}  \cdot  \epsilon_0 (\boldsymbol{E}_2 - \boldsymbol{E}_1) = \sigma,\quad
+\hat{{n}}  \cdot  (\boldsymbol{B}_2 - \boldsymbol{B}_1) = 0,\quad
+\hat{{n}} \times (\boldsymbol{E}_2 - \boldsymbol{E}_1) = 0,\quad
+\hat{{n}} \times \frac{1}{\mu_0} (\boldsymbol{B}_2 - \boldsymbol{B}_1) = \boldsymbol{K}
 $$
 or simply  
 $$
@@ -587,17 +587,17 @@ $$
 $$
 - In media
 $$
-(\boldsymbol{D}_2 - \boldsymbol{D}_1) \cdot \hat{\boldsymbol{n}} = \sigma_f,\quad
-(\boldsymbol{B}_2 - \boldsymbol{B}_1) \cdot \hat{\boldsymbol{n}} = 0,\quad
-\hat{\boldsymbol{n}} \times (\boldsymbol{E}_2 - \boldsymbol{E}_1) = 0,\quad
-\hat{\boldsymbol{n}} \times (\boldsymbol{H}_2 - \boldsymbol{H}_1) = \boldsymbol{K}_f
+\hat{{n}}  \cdot  (\boldsymbol{D}_2 - \boldsymbol{D}_1) = \sigma_f,\quad
+\hat{{n}}  \cdot  (\boldsymbol{B}_2 - \boldsymbol{B}_1)  = 0,\quad
+\hat{{n}} \times (\boldsymbol{E}_2 - \boldsymbol{E}_1) = 0,\quad
+\hat{{n}} \times (\boldsymbol{H}_2 - \boldsymbol{H}_1) = \boldsymbol{K}_f
 $$
 or  
 $$
-\epsilon_0 (\boldsymbol{E}_2 - \boldsymbol{E}_1) \cdot \hat{\boldsymbol{n}} = \sigma_f + \sigma_p,\quad
-(\boldsymbol{B}_2 - \boldsymbol{B}_1) \cdot \hat{\boldsymbol{n}} = 0,\quad
-\hat{\boldsymbol{n}} \times (\boldsymbol{E}_2 - \boldsymbol{E}_1) = 0,\quad
-\frac{1}{\mu_0} \hat{\boldsymbol{n}} \times (\boldsymbol{B}_2 - \boldsymbol{B}_1) = \boldsymbol{K}_f + \boldsymbol{K}_M
+\hat{{n}}  \cdot  \epsilon_0 (\boldsymbol{E}_2 - \boldsymbol{E}_1) = \sigma_f + \sigma_p,\quad
+\hat{{n}}  \cdot  (\boldsymbol{B}_2 - \boldsymbol{B}_1) = 0,\quad
+\hat{{n}} \times (\boldsymbol{E}_2 - \boldsymbol{E}_1) = 0,\quad
+\frac{1}{\mu_0} \hat{{n}} \times (\boldsymbol{B}_2 - \boldsymbol{B}_1) = \boldsymbol{K}_f + \boldsymbol{K}_M
 $$
 with $\boldsymbol{J}_P = \frac{ \partial \boldsymbol{P} }{ \partial t }=0$.  
 

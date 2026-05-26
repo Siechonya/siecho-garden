@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-26T11:29:15.090+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-26T17:51:26.770+08:00","dg-note-properties":{}}
 ---
 
 
@@ -353,20 +353,109 @@ where $\langle\varphi\rangle_S$ is the average potential on the boundary.
 
 > Refer to [[A_symmetry_自然界的对称性/杂记/Green Function\|Green Function]] for several basic examples in infinite space.
 ## 1.5 Cases
-- If all charges are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas]] or T 2.3 in the textbook)
+- If all charges are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas #1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$]] or T 2.3 in the textbook)
 $$
 \iiint_V \boldsymbol{E}(\boldsymbol{x}) \,\mathrm{d}^3x = -\frac{\boldsymbol{p}}{3\epsilon_0}
 $$
-- An ellipsoid uniformly charged with Q (in the principal inertia axis frame)
+- An ellipsoid uniformly charged with Q (in the principal inertia axis frame)  
 $$
 D_{11} = \frac{Q}{5}(2a_1^2 - a_2^2 - a_3^2), \quad D_{22} = \cdots, \quad D_{i\neq j} = 0
 $$
 # 2 Static Magnetic Field  
-## 2.1 Multipole expansion  
+## 2.1 magnetic energy
+#todo
+## 2.2 Multipole expansion  
+### 2.2.1 Moment equation for localized current 
+Using $\nabla \cdot (\boldsymbol{J}\boldsymbol{r}) = (-\partial_t \rho)\boldsymbol{r} + \boldsymbol{J}$,  
+$$
+\iiint_V \boldsymbol{J}\,\mathrm{d}V = \dot{\boldsymbol{p}},\quad \boldsymbol{p} = \iiint_V \boldsymbol{r}\,\mathrm{d}q
+$$
+Using $\nabla \cdot (\boldsymbol{J}\boldsymbol{r}\boldsymbol{r}) = (-\partial_t\rho) \boldsymbol{r}\boldsymbol{r} + \boldsymbol{J}\boldsymbol{r}+\boldsymbol{r}\boldsymbol{J}$,  
+$$
+\iiint_V \boldsymbol{J}\boldsymbol{r} = \boldsymbol{m}\times \mathsf{I} + \frac{1}{6}\dot{\mathsf{D}} + \frac{1}{6}\dot{g}\mathsf{I}
+$$
+where $\boldsymbol{m} = \frac{1}{2}\iiint_V (\boldsymbol{r}\times \boldsymbol{J})\,\mathrm{d}V$ is magnetic dipole moment, $\mathsf{D} = \int (3\boldsymbol{r}\boldsymbol{r} - r^2\mathsf{I})\,\mathrm{d}q$ is electric quadrupole moment, and $\boldsymbol{g} = \iiint r^2\,\mathrm{d}q$ is is the trace of the second spatial moment of the charge distribution.
 
-## 2.2 Multipole expansion using spherical harmonics
-### 2.2.1 magnetic scalar potential
+for steady current, using $\partial_t \rho = 0$,  
+$$
+\iiint_V \boldsymbol{J}\,\mathrm{d}V = 0
+$$
+$$
+\iiint_V \boldsymbol{J}\boldsymbol{r}\,\mathrm{d}V = \boldsymbol{m}\times \mathsf{I} \quad \implies \quad \iiint_V J_i r_j \,\mathrm{d}V = -\epsilon_{ijk}m_k
+$$
+### 2.2.2 Cases  
+- Ring current
+$$
+\boldsymbol{m} = I \boldsymbol{S}
+$$
+where $\boldsymbol{S} = \frac{1}{2} \oint_C \boldsymbol{r} \times \mathrm{d}\boldsymbol{l}$ is the geometric vector area enclosed by the current loop.
 
+- Moving point charge, using $\boldsymbol{J}(\boldsymbol{r}) = q \boldsymbol{v} \delta(\boldsymbol{r} - \boldsymbol{r}_e)$,
+$$
+\boldsymbol{m} = \frac{q}{2m_p} \boldsymbol{L}
+$$
+where $\boldsymbol{L} = m_p (\boldsymbol{r} \times \boldsymbol{v})$ is the orbital angular momentum.  
+
+- Rotating charged body, using $\boldsymbol{J} = \rho_e (\boldsymbol{\omega} \times \boldsymbol{r})$, and for any rigid body with $\frac{\rho_e}{\rho_m} \equiv \frac{Q}{M}$,
+$$
+\boldsymbol{m} = \frac{Q}{2M} \boldsymbol{L}
+,\quad
+\boldsymbol{L} = \int \rho_m(\boldsymbol{r} \times \boldsymbol{v}) \,\mathrm{d}V = I_m \boldsymbol{\omega}
+$$
+where $I_m$ is the moment of inertia tensor. For a sphere with constant $\rho_e=\frac{Q}{4\pi a^3/3}$, $I_m = \frac{2}{5}M a^2$, thus
+$$
+\boldsymbol{m}= \frac{1}{5} Qa^2\boldsymbol{\omega}
+$$
+for a spherical shell with constant $\sigma_e=\frac{Q}{4\pi a^2}$, $I_m = \frac{2}{3}M a^2$, thus
+$$
+\boldsymbol{m} = \frac{1}{2}\oint(\boldsymbol{r}\times\boldsymbol{K})\,\mathrm{d}\sigma
+= \frac{1}{3} Qa^2\boldsymbol{\omega}
+$$
+### 2.2.3 Multipole expansion  
+- Consider magnetostatic potential expansion at an external observation point $\boldsymbol{x}$, with localized current source $\boldsymbol{J}(\boldsymbol{x'})$ confined within a volume $V'$, and $\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}, r=|\boldsymbol{x}|(field), r'=|\boldsymbol{x'}|(source)$, then
+$$
+\begin{align} 
+\frac{1}{R}=\frac{1}{|\boldsymbol{x}-\boldsymbol{x}'|} = e^{-\boldsymbol{x'}\cdot \nabla} \frac{1}{r} 
+&= 
+\left[ 1 - \boldsymbol{x'}\cdot \nabla + \frac{1}{2!}(\boldsymbol{x'}\boldsymbol{x'}:\nabla\nabla) + \cdots \right] \frac{1}{r} \\[8pt]
+{\color{gray}{\small \mathsf{I}: \nabla\nabla \frac{1}{r}=0} \implies}&=
+\frac{1}{r} - \boldsymbol{x'}\cdot \nabla \frac{1}{r} + \frac{1}{6} (3\boldsymbol{x'}\boldsymbol{x'}-r'^2 \mathsf{I}): \nabla\nabla \frac{1}{r} + \cdots
+\end{align}
+$$
+$$
+\Downarrow
+$$
+$$
+\begin{align} 
+\boldsymbol{A}(\boldsymbol{x}) = \frac{\mu_0}{4\mathrm{\pi}}\int_{V'}  \frac{\boldsymbol{J}(\boldsymbol{x'})}{R} \,\mathrm{d}V'
+&=
+\frac{\mu_0}{4\mathrm{\pi}}\left[  \frac{1}{r}\int_{V'} \boldsymbol{J}(\boldsymbol{x'})\,\mathrm{d}V' + \frac{1}{r^3} \int_{V'} \boldsymbol{J}(\boldsymbol{x'})\boldsymbol{x'}\,\mathrm{d}V'  \cdot \boldsymbol{x}+ \cdots\right] 
+\\[8pt]
+&=
+\frac{\mu_0}{4\pi r^3} (\boldsymbol{m}\times\mathsf{I})\cdot \boldsymbol{x}+ \cdots
+\\[8pt]
+&=
+\frac{\mu_0}{4\pi r^3} (\boldsymbol{m}\times\boldsymbol{x})+ \cdots
+\end{align}
+$$
+- Magnetostatic intensity expansion
+$$
+\boldsymbol{B}(\boldsymbol{x}) = \nabla \times \boldsymbol{A}
+=\frac{\mu_0}{4\pi r^3} \left[ 3\boldsymbol{m}\cdot\hat{r}\hat{r} - \boldsymbol{m} \right] + \cdots
+$$
+## 2.3 Small current-carrying conductor in magnetic field  
+
+## 2.4 Multipole expansion using spherical harmonics
+### 2.4.1 magnetic scalar potential
+## 2.5 Cases  
+- If all currents are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas #1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$]])
+$$
+\iiint_V \boldsymbol{B}(\boldsymbol{x}) \,\mathrm{d}^3x = \frac{2\mu_0}{3}\boldsymbol{m}
+$$
+- An ellipsoid uniformly charged with Q (in the principal inertia axis frame)  
+$$
+D_{11} = \frac{Q}{5}(2a_1^2 - a_2^2 - a_3^2), \quad D_{22} = \cdots, \quad D_{i\neq j} = 0
+$$
 # 3 EM Wave
 
 # 4 Electromagnetic Radiation

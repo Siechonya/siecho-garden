@@ -1,11 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-05-25T21:31:28.679+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-05-26T17:46:13.893+08:00","dg-note-properties":{}}
 ---
 
 > This document supplements some rather complex proof processes within [[A_symmetry_自然界的对称性/Applications/ED Formulas\|ED Formulas]] and [[A_symmetry_自然界的对称性/Applications/ED formulas (2)\|ED formulas (2)]] 
 
 # 1 $\iiint_V \boldsymbol{E}(\boldsymbol{x}) \,\mathrm{d}^3x = -\frac{\boldsymbol{p}}{3\epsilon_0}$  
-Let $V$ be a spherical volume of radius $R$ that completely encloses all charges, meaning the charge density $\rho(\boldsymbol{x}')$ vanishes for all $r' > R$. Without loss of generality, we place the coordinate origin at the center of the sphere $V$. According to Coulomb's law, the electric field $\boldsymbol{E}(\boldsymbol{x})$ at any field point $\boldsymbol{x}$ inside the sphere is given by the volume integral over the source coordinates $\boldsymbol{x}'$,
+<font color="#ff0000">Let</font> $V$ be a spherical volume of radius $R$ that completely encloses all charges, meaning the charge density $\rho(\boldsymbol{x}')$ vanishes for all $r' > R$. Without loss of generality, we place the coordinate origin at the center of the sphere $V$. According to Coulomb's law, the electric field $\boldsymbol{E}(\boldsymbol{x})$ at any field point $\boldsymbol{x}$ inside the sphere is given by the volume integral over the source coordinates $\boldsymbol{x}'$,
 $$
 \boldsymbol{E}(\boldsymbol{x}) = \frac{1}{4\pi\varepsilon_0} \int_{V} \rho(\boldsymbol{x}') \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x'
 $$
@@ -65,7 +65,7 @@ Replacing the integral with $\boldsymbol{p}$, we arrive at,
 $$
 \int_V \boldsymbol{E}(\boldsymbol{x}) \, \mathrm{d}^3x = -\frac{\boldsymbol{p}}{3\varepsilon_0}
 $$
-Next, we consider the alternative case where all charges lie entirely outside the spherical volume $V$, meaning the charge density $\rho(\boldsymbol{x}')$ vanishes for all $r' \le R$. According to Coulomb's law, the electric field $\boldsymbol{E}(\boldsymbol{x})$ at any field point $\boldsymbol{x}$ inside the sphere is given by the volume integral over the external source coordinates $\boldsymbol{x}'$,
+<font color="#ff0000">Next</font>, we consider the alternative case where all charges lie entirely outside the spherical volume $V$, meaning the charge density $\rho(\boldsymbol{x}')$ vanishes for all $r' \le R$. According to Coulomb's law, the electric field $\boldsymbol{E}(\boldsymbol{x})$ at any field point $\boldsymbol{x}$ inside the sphere is given by the volume integral over the external source coordinates $\boldsymbol{x}'$,
 $$
 \boldsymbol{E}(\boldsymbol{x}) = \frac{1}{4\pi\varepsilon_0} \int_{V_{\text{ext}}} \rho(\boldsymbol{x}') \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x'
 $$
@@ -126,6 +126,66 @@ $$
 Replacing the integral with $\boldsymbol{E}(0)$, we arrive at,
 $$
 \int_V \boldsymbol{E}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{4\pi R^3}{3} \boldsymbol{E}(0) = V \boldsymbol{E}(0)
+$$
+<font color="#ff0000">Now</font>, If all currents are contained within the sphere $V$, according to the Biot-Savart law, the magnetic field $\boldsymbol{B}(\boldsymbol{x})$ at any field point $\boldsymbol{x}$ inside the sphere is given by the volume integral over the localized current density $\boldsymbol{J}(\boldsymbol{x}')$,
+$$
+\boldsymbol{B}(\boldsymbol{x}) = \frac{\mu_0}{4\pi} \int_{V} \boldsymbol{J}(\boldsymbol{x}') \times \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x'
+$$
+We want to evaluate the volume integral of $\boldsymbol{B}(\boldsymbol{x})$ over the entire sphere $V$,
+$$
+\int_V \boldsymbol{B}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{\mu_0}{4\pi} \int_V \left[ \int_{V} \boldsymbol{J}(\boldsymbol{x}') \times \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x' \right] \mathrm{d}^3x
+$$
+Since the region of integration is bounded and the current distribution is well-behaved, we can apply Fubini's theorem to switch the order of the volume integrals over $\mathrm{d}^3x$ and $\mathrm{d}^3x'$,
+$$
+\int_V \boldsymbol{B}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{\mu_0}{4\pi} \int_{V} \left[ \int_V \boldsymbol{J}(\boldsymbol{x}') \times \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x \right] \mathrm{d}^3x'
+$$
+Because the inner integral is performed with respect to the field coordinates $\boldsymbol{x}$, the current density $\boldsymbol{J}(\boldsymbol{x}')$ treats it as a constant vector factor. Thus, we can pull $\boldsymbol{J}(\boldsymbol{x}')$ out of the inner integration while carefully maintaining the vector cross product structure,
+$$
+\int_V \boldsymbol{B}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{\mu_0}{4\pi} \int_{V} \boldsymbol{J}(\boldsymbol{x}') \times \left[ \int_V \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x \right] \mathrm{d}^3x'
+$$
+We immediately recognize that the vector integral inside the brackets is identical to the inner integral $\boldsymbol{I}(\boldsymbol{x}')$ defined in the electrostatic case,
+$$
+\boldsymbol{I}(\boldsymbol{x}') = \int_V \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x
+$$
+Since all currents are enclosed within the sphere, the source point always lies inside ($r' < R$). We can directly substitute our previously derived result for $\boldsymbol{I}(\boldsymbol{x}')$ when $r' < R$, which is $\boldsymbol{I}(\boldsymbol{x}') = -\frac{4\pi}{3} \boldsymbol{x}'$,
+$$
+\int_V \boldsymbol{B}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{\mu_0}{4\pi} \int_{V} \boldsymbol{J}(\boldsymbol{x}') \times \left( -\frac{4\pi}{3} \boldsymbol{x}' \right) \mathrm{d}^3x'
+$$
+Using the anticommutativity of the cross product ($\boldsymbol{A} \times (-\boldsymbol{B}) = \boldsymbol{B} \times \boldsymbol{A}$), the negative sign is smoothly absorbed by reversing the order of the vectors,
+$$
+\int_V \boldsymbol{B}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{\mu_0}{3} \int_{V} \boldsymbol{x}' \times \boldsymbol{J}(\boldsymbol{x}') \, \mathrm{d}^3x'
+$$
+By definition, the total magnetic dipole moment $\boldsymbol{m}$ of the localized current distribution is given by,
+$$
+\boldsymbol{m} = \frac{1}{2} \int_{V} \boldsymbol{x}' \times \boldsymbol{J}(\boldsymbol{x}') \, \mathrm{d}^3x'
+$$
+Replacing the integral with $2\boldsymbol{m}$, we arrive at the final result,
+$$
+\int_V \boldsymbol{B}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{2\mu_0}{3}\boldsymbol{m}
+$$
+<font color="#ff0000">Next</font>, we consider the alternative case where all currents lie entirely outside the spherical volume $V$, meaning the current density $\boldsymbol{J}(\boldsymbol{x}')$ vanishes for all $r' \le R$. According to the Biot-Savart law, the magnetic field $\boldsymbol{B}(\boldsymbol{x})$ at any field point $\boldsymbol{x}$ inside the sphere is given by the volume integral over the external source coordinates $\boldsymbol{x}'$,
+$$
+\boldsymbol{B}(\boldsymbol{x}) = \frac{\mu_0}{4\pi} \int_{V_{\text{ext}}} \boldsymbol{J}(\boldsymbol{x}') \times \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x'
+$$
+We evaluate the volume integral of $\boldsymbol{B}(\boldsymbol{x})$ over the entire sphere $V$, and switch the order of integration via Fubini's theorem,
+$$
+\int_V \boldsymbol{B}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{\mu_0}{4\pi} \int_{V_{\text{ext}}} \boldsymbol{J}(\boldsymbol{x}') \times \left[ \int_V \frac{\boldsymbol{x} - \boldsymbol{x}'}{|\boldsymbol{x} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x \right] \mathrm{d}^3x'
+$$
+Because all currents lie outside the sphere, the source point always satisfies $r' > R$. Utilizing the corresponding external result for the inner integral $\boldsymbol{I}(\boldsymbol{x}') = -\frac{4\pi R^3}{3(r')^3} \boldsymbol{x}'$, we substitute it back into the equation,
+$$
+\int_V \boldsymbol{B}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{\mu_0}{4\pi} \int_{V_{\text{ext}}} \boldsymbol{J}(\boldsymbol{x}') \times \left[ -\frac{4\pi R^3}{3(r')^3} \boldsymbol{x}' \right] \mathrm{d}^3x'
+$$
+Applying the anticommutativity of the cross product to eliminate the negative sign yields,
+$$
+\int_V \boldsymbol{B}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{4\pi R^3}{3} \left[ \frac{\mu_0}{4\pi} \int_{V_{\text{ext}}} \frac{\boldsymbol{x}' \times \boldsymbol{J}(\boldsymbol{x}')}{(r')^3} \, \mathrm{d}^3x' \right]
+$$
+By definition, the magnetic field $\boldsymbol{B}(0)$ evaluated at the center of the sphere produced by the external current distribution is given by,
+$$
+\boldsymbol{B}(0) = \frac{\mu_0}{4\pi} \int_{V_{\text{ext}}} \boldsymbol{J}(\boldsymbol{x}') \times \frac{\mathbf{0} - \boldsymbol{x}'}{|\mathbf{0} - \boldsymbol{x}'|^3} \, \mathrm{d}^3x' = \frac{\mu_0}{4\pi} \int_{V_{\text{ext}}} \frac{\boldsymbol{x}' \times \boldsymbol{J}(\boldsymbol{x}')}{(r')^3} \, \mathrm{d}^3x'
+$$
+Replacing the bracketed integral with $\boldsymbol{B}(0)$, we arrive at,
+$$
+\int_V \boldsymbol{B}(\boldsymbol{x}) \, \mathrm{d}^3x = \frac{4\pi R^3}{3} \boldsymbol{B}(0) = V \boldsymbol{B}(0)
 $$
 # 2 Rotation of harmonics & Wigner $D$-Matrices *
 Spherical harmonics $Y_l^m(\theta, \varphi)$ form a $(2l+1)$-dimensional irreducible representation of $\mathrm{SO}(3)$. Under a coordinate rotation $\mathcal{R}$ parameterized by the Euler angles $(\alpha, \beta, \gamma)$, the total angular momentum quantum number $l$ remains invariant because the rotation operator commutes with the total angular momentum squared: $[\mathcal{R}, \boldsymbol{L}^2] = 0$. However, the azimuthal projection undergoes a linear transformation.
