@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-27T15:13:53.274+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-27T18:22:15.454+08:00","dg-note-properties":{}}
 ---
 
 
@@ -97,7 +97,7 @@ $$
 =
 \boldsymbol{p} \times \boldsymbol{E}_{\text{ext}} + \frac{1}{3} \nabla \cdot (\mathsf{D}\times \boldsymbol{E}_{\text{ext}}) + \cdots
 $$
-## 1.3 Spherical harmonic expansion  
+## 1.3 Spherical harmonic expansion 
 ### 1.3.1 Orthonormal Complete Set of Functions
 #### Definition
 - Orthonormality
@@ -179,7 +179,7 @@ $$
 \sum_{l=0}^{+\infty}\sum_{m=-l}^{l} Y_{l}^{m}(\Omega') Y_l^m(\Omega) = \delta(\Omega-\Omega') = \delta(\cos\theta - \cos\theta')\delta(\varphi-\varphi')
 $$
 
-### 1.3.2 Multipole expansion *
+### 1.3.2 Multipole expansion (Legendre function) *
 By using the Legendre generating function, one finds
 $$
 \frac{1}{R} = \frac{1}{|\boldsymbol{x}-\boldsymbol{x'}|} = \sum_{l=0}^\infty  \frac{r_<^l}{r^{l+1}_>} P_l(\cos\gamma), \quad \gamma=\arccos\frac{\boldsymbol{x}\cdot\boldsymbol{x'}}{|\boldsymbol{x}\cdot\boldsymbol{x'}|},\  \quad r_< = \min(x,x'), \ r_> = \max(x,x')
@@ -229,7 +229,7 @@ D_{ij} = \int_{V'} \rho(\boldsymbol{x'}) \left[ 3x'_i x'_j - \delta_{ij}(r')^2 \
 $$
 And extending to $l=3, 4, \dots$  yields the octupole ($l=3$), hexadecapole ($l=4$), and more high $2^l$-pole moments $\ldots$  
 ### 1.3.3 Rotation of harmonics & Wigner $D$-Matrices *
-Refer to [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#2 Rotation of harmonics & Wigner $D$-Matrices *\|Appendix for ED formulas#2 Rotation of harmonics & Wigner $D$-Matrices *]].
+See [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#2 Rotation of harmonics & Wigner $D$-Matrices *\|Appendix for ED formulas#2 Rotation of harmonics & Wigner $D$-Matrices *]].
 ## 1.4 Method: separation of variables  
 <span style="color:#ff0000; font-size: 1.2em;">For this section, everyone is advised to review more example problems.</span>
 ### 1.4.1 Cartesian coordinate system
@@ -448,7 +448,9 @@ $$
 $$
 $$
 \begin{align} 
-\boldsymbol{A}(\boldsymbol{x}) = \frac{\mu_0}{4\mathrm{\pi}}\int_{V'}  \frac{\boldsymbol{J}(\boldsymbol{x'})}{R} \,\mathrm{d}V'
+\boldsymbol{A}(\boldsymbol{x}) 
+&= \frac{\mu_0}{4\mathrm{\pi}}\int_{V'}  \frac{\boldsymbol{J}(\boldsymbol{x'})}{R} \,\mathrm{d}V'
+\\[8pt]
 &=
 \frac{\mu_0}{4\mathrm{\pi}}\left\{  \frac{1}{r}\int_{V'} \boldsymbol{J}(\boldsymbol{x'})\,\mathrm{d}V' + \frac{1}{r^3} \int_{V'} \boldsymbol{J}(\boldsymbol{x'})\boldsymbol{x'}\,\mathrm{d}V'  \cdot \boldsymbol{x} 
 +\frac{1}{6} \int_{V'} \boldsymbol{J}(\boldsymbol{x'}) \left[ (3\boldsymbol{x'}\boldsymbol{x'}-r'^2 \mathsf{I}): \nabla\nabla \frac{1}{r}\right] \,\mathrm{d}V' + \cdots\right\}
@@ -525,6 +527,7 @@ $$
 \boldsymbol{m} \times \boldsymbol{B}_{\text{ext}} + \cdots
 $$
 # 3 EM Wave  
+## 3.1 retarded potential  
 
 
 # 4 Electromagnetic Radiation
