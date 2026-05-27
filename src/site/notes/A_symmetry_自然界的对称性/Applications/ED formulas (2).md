@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-26T22:58:51.844+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-27T15:13:53.274+08:00","dg-note-properties":{}}
 ---
 
 
@@ -316,7 +316,7 @@ $$
 \frac{\partial^2 }{\partial \phi^2} Y_l^m = -m^2 Y_l^m
 $$
 ### 1.4.4 Green function *  
-- Main function
+- Main equation
 $$
 \nabla^2 \varphi(\boldsymbol{r}) = -\frac{\rho(\boldsymbol{r})}{\epsilon_0}
 $$
@@ -364,8 +364,57 @@ $$
 # 2 Magnetostatic Field  
 ## 2.1 magnetic energy
 #todo
-## 2.2 Multipole expansion  
-### 2.2.1 Moment equation for localized current *
+## 2.2 Multipole expansion (scalar potential)
+### 2.2.1 magnetic scalar potential *
+- Without free/conductive current
+$$
+\nabla \times \boldsymbol{H} = \boldsymbol{J}_f \implies
+\nabla \times \boldsymbol{H} = 0, \quad \boldsymbol{H} = -\nabla \psi
+$$
+then for linear media $\boldsymbol{B} = \mu \boldsymbol{H}$,
+$$
+\nabla \cdot \boldsymbol{H}=0
+\implies
+\nabla^2 \psi = 0
+$$
+Consequently, the multipole expansion can be applied to magnetic scalar potential $\psi$ to derive $\boldsymbol{H}$ as well.  
+
+For a current-carrying coil,  
+$$
+\psi(\boldsymbol{x}) = -\frac{I}{4\pi} \Omega, \quad \Omega= - \iint_S \frac{{\hat{R}\cdot\mathrm{d}\sigma'}}{R^2}
+$$
+where $\boldsymbol{S} = \frac{1}{2} \oint_C \boldsymbol{x'} \times \mathrm{d}\boldsymbol{l'}$ is the arbitrary geometric vector area enclosed by the current loop, and $\Omega$ is the solid angle of the surface $S$ with respect to field point $\boldsymbol{x}$.
+### 2.2.2 Multipole expansion
+- Consider magnetostatic potential expansion at an external observation point $\boldsymbol{x}$, with localized current coil/source $\boldsymbol{J}(\boldsymbol{x'})$ confined within a volume $V'$, and $\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}, r=|\boldsymbol{x}|(field), r'=|\boldsymbol{x'}|(source)$, then
+$$
+\begin{align} 
+\frac{1}{R}=\frac{1}{|\boldsymbol{x}-\boldsymbol{x}'|} = e^{-\boldsymbol{x'}\cdot \nabla} \frac{1}{r} 
+&= 
+\left[ 1 - \boldsymbol{x'}\cdot \nabla + \cdots \right] \frac{1}{r} 
+=\frac{1}{r} - \boldsymbol{x'}\cdot \nabla \frac{1}{r} + \cdots
+\end{align}
+$$
+$$
+\Downarrow
+$$
+$$
+\begin{align} 
+\psi(\boldsymbol{x}) 
+= \frac{I}{4\pi} \iint_S \frac {{\hat{R}\cdot\mathrm{d}\boldsymbol{\sigma}'}} {R^2} 
+&= -\frac{I}{4\pi} \iint_S \mathrm{d}\boldsymbol{\sigma}' \cdot \nabla \left( \frac{1}{R} \right) \\[8 pt] 
+&= -\frac{I}{4\pi} \left[ \left(\iint_S \mathrm{d}\boldsymbol{\sigma}'\right)\cdot\nabla - \left(\iint_S \mathrm{d}\boldsymbol{\sigma}'\boldsymbol{x}'\right):\nabla\nabla + \cdots \right] \frac{1}{r} \\[8 pt] 
+&= \frac {{\boldsymbol{m}\cdot \hat{r}} }{4\mathrm{\pi} r^2} + \frac {{\mathsf{D}_m:\hat{r}\hat{r}} }{8\mathrm{\pi} r^3} + \cdots 
+\end{align}
+$$
+Where there is no magnetic monopole term ($1/r$). $\boldsymbol{m}=I\iint_S \mathrm{d}\boldsymbol{\sigma}'$ is the magnetic dipole moment of the shell (area vector), and $\mathsf{D}_m = I\iint_S \left[ 3(\mathrm{d}\boldsymbol{\sigma}' \boldsymbol{x}' + \boldsymbol{x}' \mathrm{d}\boldsymbol{\sigma}') - 2(\boldsymbol{x}'\cdot\mathrm{d}\boldsymbol{\sigma}')\mathsf{I} \right]$ is the trace-free magnetic quadrupole moment tensor.
+
+- Magnetostatic intensity expansion ($\boldsymbol{H} = -\nabla \psi$)
+$$
+\boldsymbol{H} = \frac{3(\boldsymbol{m}\cdot\hat{r})\hat{r} - \boldsymbol{m}}{4\mathrm{\pi} r^3} + \frac{{5(\mathsf{D}_m:\hat{r}\hat{r})\hat{r} - 2\mathsf{D}_m\cdot\hat{r}}}{8\mathrm{\pi} r^4} + \cdots
+$$
+## 2.3 Multipole expansion (vector potential)   
+The quadrupole moment of the magnetic field is relatively difficult to calculate and can be skipped. However, the dipole moment needs to be understood.
+### 2.3.1 Moment equation for localized current *
 Using $\nabla \cdot (\boldsymbol{J}\boldsymbol{r}) = (-\partial_t \rho)\boldsymbol{r} + \boldsymbol{J}$,  
 $$
 \iiint_V \boldsymbol{J}\,\mathrm{d}V = \dot{\boldsymbol{p}},\quad \boldsymbol{p} = \iiint_V \boldsymbol{r}\,\mathrm{d}q
@@ -374,7 +423,7 @@ Using $\nabla \cdot (\boldsymbol{J}\boldsymbol{r}\boldsymbol{r}) = (-\partial_t\
 $$
 \iiint_V \boldsymbol{J}\boldsymbol{r} = \boldsymbol{m}\times \mathsf{I} + \frac{1}{6}\dot{\mathsf{D}} + \frac{1}{6}\dot{g}\mathsf{I}
 $$
-where $\boldsymbol{m} = \frac{1}{2}\iiint_V (\boldsymbol{r}\times \boldsymbol{J})\,\mathrm{d}V$ is magnetic dipole moment, $\mathsf{D} = \int (3\boldsymbol{r}\boldsymbol{r} - r^2\mathsf{I})\,\mathrm{d}q$ is electric quadrupole moment, and $\boldsymbol{g} = \iiint r^2\,\mathrm{d}q$ is is the trace of the second spatial moment of the charge distribution.
+where $\boldsymbol{m} = \frac{1}{2}\iiint_V (\boldsymbol{r}\times \boldsymbol{J})\,\mathrm{d}V$ is magnetic dipole moment, $\mathsf{D} = \int (3\boldsymbol{r}\boldsymbol{r} - r^2\mathsf{I})\,\mathrm{d}q$ is electric quadrupole moment, and $g = \iiint r^2\,\mathrm{d}q$ is the trace of the second spatial moment of the charge distribution.
 
 for steady current, using $\partial_t \rho = 0$,  
 $$
@@ -383,7 +432,7 @@ $$
 $$
 \iiint_V \boldsymbol{J}\boldsymbol{r}\,\mathrm{d}V = \boldsymbol{m}\times \mathsf{I} \quad \implies \quad \iiint_V J_i r_j \,\mathrm{d}V = -\epsilon_{ijk}m_k
 $$
-### 2.2.2 Multipole expansion  
+### 2.3.2 Multipole expansion *
 - Consider magnetostatic potential expansion at an external observation point $\boldsymbol{x}$, with localized current source $\boldsymbol{J}(\boldsymbol{x'})$ confined within a volume $V'$, and $\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}, r=|\boldsymbol{x}|(field), r'=|\boldsymbol{x'}|(source)$, then
 $$
 \begin{align} 
@@ -401,23 +450,24 @@ $$
 \begin{align} 
 \boldsymbol{A}(\boldsymbol{x}) = \frac{\mu_0}{4\mathrm{\pi}}\int_{V'}  \frac{\boldsymbol{J}(\boldsymbol{x'})}{R} \,\mathrm{d}V'
 &=
-\frac{\mu_0}{4\mathrm{\pi}}\left[  \frac{1}{r}\int_{V'} \boldsymbol{J}(\boldsymbol{x'})\,\mathrm{d}V' + \frac{1}{r^3} \int_{V'} \boldsymbol{J}(\boldsymbol{x'})\boldsymbol{x'}\,\mathrm{d}V'  \cdot \boldsymbol{x} + \frac{1}{6} \int_{V'} \boldsymbol{J}(\boldsymbol{x'}) (3\boldsymbol{x'}\boldsymbol{x'}-r'^2 \mathsf{I}): \nabla\nabla \frac{1}{r} \,\mathrm{d}V' + \cdots\right] 
+\frac{\mu_0}{4\mathrm{\pi}}\left\{  \frac{1}{r}\int_{V'} \boldsymbol{J}(\boldsymbol{x'})\,\mathrm{d}V' + \frac{1}{r^3} \int_{V'} \boldsymbol{J}(\boldsymbol{x'})\boldsymbol{x'}\,\mathrm{d}V'  \cdot \boldsymbol{x} 
++\frac{1}{6} \int_{V'} \boldsymbol{J}(\boldsymbol{x'}) \left[ (3\boldsymbol{x'}\boldsymbol{x'}-r'^2 \mathsf{I}): \nabla\nabla \frac{1}{r}\right] \,\mathrm{d}V' + \cdots\right\}
+\\[8pt]
+{\small\color{gray}\text{using Coulomb Gauge}\to}&=
+\frac{\mu_0}{4\pi r^3} (\boldsymbol{m}\times\mathsf{I})\cdot \boldsymbol{x} + \frac{\mu_0}{24\pi} \nabla \times \frac{\mathsf{D}_m\cdot\boldsymbol{x}}{r^3} + \cdots
 \\[8pt]
 &=
-\frac{\mu_0}{4\pi r^3} (\boldsymbol{m}\times\mathsf{I})\cdot \boldsymbol{x} - \frac{\mu_0}{12\pi r^5} \boldsymbol{x} \times (\mathsf{M}\cdot\boldsymbol{x}) + \cdots
-\ \\[8pt]
-&=
-\frac{\mu_0}{4\pi r^3} (\boldsymbol{m}\times\boldsymbol{x}) - \frac{\mu_0}{12\pi r^5} \boldsymbol{x} \times (\mathsf{M}\cdot\boldsymbol{x}) + \cdots
+\frac{\mu_0}{4\pi r^2} (\boldsymbol{m}\times\hat{r}) - \frac{\mu_0}{8\pi r^3} \hat{r}\times (\mathsf{D}_m\cdot\hat{r}) + \cdots
 \end{align}
 $$
-Where $\boldsymbol{m} = \frac{1}{2}\int_{V'} (\boldsymbol{x'} \times \boldsymbol{J}(\boldsymbol{x'}))\,\mathrm{d}V'$ is the magnetic dipole moment, and $\mathsf{M} = \frac{2}{3}\int_{V'} (\boldsymbol{x'} \times \boldsymbol{J}(\boldsymbol{x'}))\boldsymbol{x'}\,\mathrm{d}V'$ is the magnetic quadrupole moment tensor.  
+Where $\boldsymbol{m} = \frac{1}{2}\int_{V'} (\boldsymbol{x'} \times \boldsymbol{J}(\boldsymbol{x'}))\,\mathrm{d}V'$ is the magnetic dipole moment, and $\mathsf{D}_m = \int_{V'} \bigl[(\boldsymbol{x}'\times\boldsymbol{J})\boldsymbol{x}' +\boldsymbol{x}'(\boldsymbol{x}'\times\boldsymbol{J})\bigr]\,\mathrm{d}V'$ is the trace-free magnetic quadrupole moment tensor.
 
 - Magnetostatic intensity expansion
 $$
 \boldsymbol{B}(\boldsymbol{x}) = \nabla \times \boldsymbol{A}
-=\frac{\mu_0}{4\pi r^3} \left[ 3(\boldsymbol{m}\cdot\hat{r})\hat{r} - \boldsymbol{m} \right] + \frac{\mu_0}{12\pi r^4} \left[ 5(\hat{r}\cdot\mathsf{M}\cdot\hat{r})\hat{r} - 2\mathsf{M}\cdot\hat{r} \right] + \cdots
+=\frac{\mu_0}{4\pi r^3} \left[ 3(\boldsymbol{m}\cdot\hat{r})\hat{r} - \boldsymbol{m} \right] + \frac{\mu_0}{8\pi r^4} \left[ {5(\mathsf{D}_m:\hat{r}\hat{r})\hat{r} - 2\mathsf{D}_m\cdot\hat{r}} \right] + \cdots
 $$
-### 2.2.3 Cases  
+### 2.3.3 Cases  
 - Ring current
 $$
 \boldsymbol{m} = I \boldsymbol{S}
@@ -445,19 +495,28 @@ $$
 \boldsymbol{m} = \frac{1}{2}\oint(\boldsymbol{r}\times\boldsymbol{K})\,\mathrm{d}\sigma
 = \frac{1}{3} Qa^2\boldsymbol{\omega}
 $$
-## 2.3 Small current-carrying conductor in magnetic field  
-### 2.3.1 Small current-carrying conductor in magnetic field  
-Assuming the spatial size of the current-carrying body $\boldsymbol{x}$ is so small compared with the distance to the source $\boldsymbol{x'}$ which generates the magnetic field that $\nabla \times \boldsymbol{B}(\boldsymbol{x})=0$ and $\nabla \cdot \boldsymbol{B}(\boldsymbol{x})=0$ within the body. Let $\boldsymbol{\xi}$ be the relative coordinate of a current element $\boldsymbol{J}(\boldsymbol{\xi})\,\mathrm{d}V$ from the body's center $\boldsymbol{x}$. The interaction magnetic energy $U=\int \boldsymbol{J}(\boldsymbol{\xi})\cdot\boldsymbol{A}(\boldsymbol{x}+\boldsymbol{\xi})\,\mathrm{d}V$ of the small body is,
+- If all currents are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas #1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$]])
+$$
+\iiint_V \boldsymbol{B}(\boldsymbol{x}) \,\mathrm{d}^3x = \frac{2\mu_0}{3}\boldsymbol{m}
+$$
+## 2.4 Small current-carrying conductor in magnetic field  
+Assuming the spatial size of the current-carrying body $\boldsymbol{x}$ is so small compared with the distance to the source $\boldsymbol{x'}$ which generates the magnetic field that $\nabla\times\boldsymbol{B}_{\text{ext}} = 0$ and $\nabla\cdot\boldsymbol{B}_{\text{ext}}=0$ within the body. Let $\boldsymbol{\xi}$ be the relative coordinate of a current element $\boldsymbol{J}(\boldsymbol{\xi})\,\mathrm{d}V$ from the body's center $\boldsymbol{x}$. The interaction magnetic energy $U=\int \boldsymbol{J}(\boldsymbol{\xi})\cdot\boldsymbol{A}(\boldsymbol{x}+\boldsymbol{\xi})\,\mathrm{d}V$ of the small body is,
 $$
 U \approx
-(\boldsymbol{m}\cdot \boldsymbol{B})\Big|_\boldsymbol{x} + \frac{1}{6}(\mathsf{M}:\nabla\boldsymbol{B}) \Big|_\boldsymbol{x} + \cdots
+\boldsymbol{m}\cdot\boldsymbol{B}_{\text{ext}}\Big|_{\boldsymbol{x}} 
++ \frac{1}{6}\,\mathsf{D}_m : \nabla\boldsymbol{B}_{\text{ext}}\Big|_{\boldsymbol{x}} 
++ \cdots
 $$
-Note that $\boldsymbol{m}=\frac{1}{2}\int (\boldsymbol{\xi}\times\boldsymbol{J}(\boldsymbol{\xi}))\,\mathrm{d}V$ and $\mathsf{M}$ are the magnetic dipole and quadrupole moment tensor, which are intrinsic properties of the small current-carrying body itself, not the external source.  
+Note that $\boldsymbol{m}=\frac{1}{2}\int (\boldsymbol{\xi}\times\boldsymbol{J}(\boldsymbol{\xi}))\,\mathrm{d}V$ and $\mathsf{D}_m$ are the magnetic dipole and quadrupole moment tensor, which are intrinsic properties of the small current-carrying body itself, not the external source.  
 
 Furthermore, for a system with constant currents, the total magnetostatic force $\boldsymbol{F}$ acting on the small current-carrying body is given by the generalized force relation $\boldsymbol{F} = +\nabla U$ (why use "+"? see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#4 Physical Interpretation of the Sign and Energy Definitions *\|Appendix for ED formulas#4 Physical Interpretation of the Sign and Energy Definitions *]]),
 $$
 \boldsymbol{F} = +\nabla U
-= (\boldsymbol{m}\cdot\nabla)\boldsymbol{B}_{\text{ext}}\Big|_\boldsymbol{x} + \frac{1}{6}(\mathsf{M}:\nabla\nabla)\boldsymbol{B}_{\text{ext}}\Big|_\boldsymbol{x} + \cdots 
+= (\boldsymbol{m}\cdot\nabla)\boldsymbol{B}_{\text{ext}}\Big|_\boldsymbol{x} + \frac{1}{6}(\mathsf{D}_m:\nabla\nabla)\boldsymbol{B}_{\text{ext}}\Big|_\boldsymbol{x} + \cdots 
+$$
+For a current loop/coil $\boldsymbol{m}=I\boldsymbol{S}$,  
+$$
+\boldsymbol{m}\cdot\nabla\boldsymbol{B} = I\nabla (\boldsymbol{B}\cdot\boldsymbol{S}) = I\nabla \Phi 
 $$
 The total force moment $\boldsymbol{N}$ acting on the small current-carrying body about its center $\boldsymbol{x}$ is,  
 $$
@@ -465,18 +524,8 @@ $$
 =
 \boldsymbol{m} \times \boldsymbol{B}_{\text{ext}} + \cdots
 $$
-## 2.4 Multipole expansion using spherical harmonics
-### 2.4.1 magnetic scalar potential
-## 2.5 Cases  
-- If all currents are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas #1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$]])
-$$
-\iiint_V \boldsymbol{B}(\boldsymbol{x}) \,\mathrm{d}^3x = \frac{2\mu_0}{3}\boldsymbol{m}
-$$
-- An ellipsoid uniformly charged with Q (in the principal inertia axis frame)  
-$$
-D_{11} = \frac{Q}{5}(2a_1^2 - a_2^2 - a_3^2), \quad D_{22} = \cdots, \quad D_{i\neq j} = 0
-$$
-# 3 EM Wave
+# 3 EM Wave  
+
 
 # 4 Electromagnetic Radiation
 ## 4.1 Fields of a moving point charge

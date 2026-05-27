@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Green Function/","noteIcon":"default","created":"2025-11-19T12:10:15.473+08:00","updated":"2026-05-26T11:30:32.585+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Green Function/","noteIcon":"default","created":"2025-11-19T12:10:15.473+08:00","updated":"2026-05-27T11:57:58.810+08:00","dg-note-properties":{}}
 ---
 
 格林函数是场论中点源产生的基本解，这篇文章简单写一下它的应用。
@@ -20,6 +20,8 @@ $$
 为原方程的解。
 # 2 实例  
 ## 2.1 真空静电场  
+> refer to: 陶鑫《电动力学》讲义
+
 静电场满足的泊松方程  
 $$
 \nabla^2 \varphi(\boldsymbol{x}) = - \frac{\rho(\boldsymbol{x})}{\epsilon_0}
@@ -76,6 +78,8 @@ $$
 正是熟悉的电磁势。
 
 ## 2.2 运动电荷的推迟势  
+> refer to: 陶鑫《电动力学》讲义
+
 本节采用国际单位制，以及(+---)闵可夫斯基度规  
 $$
 \eta^{\mu\nu} = diag(1, -1,-1,-1)
@@ -187,7 +191,9 @@ $$
 $$
 \boldsymbol{A}(\boldsymbol{x}, t) = \frac{\mu_0}{4\pi } \int \frac{\boldsymbol{j}(\boldsymbol{x'}, t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
 $$
-## 2.3 弱引力波
+## 2.3 弱引力波  
+> refer to: 赵文研课《广义相对论》讲义
+
 与前面不同，采用自然单位制，以及(-+++)闵可夫斯基度规  
 $$
 \eta^{\mu\nu} = diag(-1, 1,1,1)
@@ -209,10 +215,12 @@ $$
 \bar{h}_{\mu\nu}(t, \boldsymbol{x} ) = 4G \int \frac{T_{\mu\nu}(t_r,\boldsymbol{x'})}{|\boldsymbol{x}- \boldsymbol{x'}|} \mathrm{d}^3x'
 $$
 
-## 2.4 Klein-Gorden 方程
-本节采用单位制和度规与 2.3 节相同。
+## 2.4 Klein-Gordon 方程  
+> refer to: Claude Itzykson & Jean-Bernard Zuber -《Quantum Field Theory》
 
-Klein-Gorden 方程用于描述自旋为 $0$ 的标量场，对于有源的 Klein-Gorden 方程：  
+本节采用单位制和度规与 2.3 节相同。  
+
+Klein-Gordon 方程用于描述自旋为 $0$ 的标量场，对于有源的 Klein-Gordon 方程：  
 $$
 (\square^2 - m^2) \psi(x^\mu) = \rho(x^\mu)
 $$
@@ -220,7 +228,7 @@ $$
 $$
 (\partial^\mu \partial_\mu - m^2)G = \delta^4(x^\mu - x'^\mu)
 $$
-对上式做 FT：$\tilde{G}(p)=\int G(x) e^{-ip_\mu\bar{x}^\mu}\mathrm{d}^4\bar{x}, \ p_\mu = (-\omega, \boldsymbol{p})$ 得到：  
+对上式做 FT：$\tilde{G}(p)=\int G(\bar{x}) e^{-ip_\mu\bar{x}^\mu}\mathrm{d}^4\bar{x}, \ p_\mu = (-\omega, \boldsymbol{p})$ 得到：  
 $$ 
 ( -p^\mu p_\mu - m^2 ) \tilde{G} = 1
 \quad \Rightarrow \quad
@@ -230,47 +238,44 @@ $$
 $$
 G(\bar{\boldsymbol{x}}, \bar t) = \frac{1}{(2\pi)^4}\int \frac{e^{i(\boldsymbol{p}\cdot \bar{\boldsymbol{x}} - \omega \bar t)}}{\omega^2-p^2-m^2} \mathrm{d}^3p\mathrm{d}\omega
 $$
-因为上述被积函数的奇点位于实轴，所以直接积分是发散的。常用的处理方式是费曼方法，它把积分变成：  
+因为上述被积函数的奇点位于实轴，所以直接积分是发散的。常用的处理方式是费曼 $+i\epsilon$ 处方（即令 $m^2 \rightarrow m^2 - i\epsilon$），它把积分变成：  
 $$
-G(\bar{\boldsymbol{x}}, \bar t) = \frac{1}{(2\pi)^4}\int \frac{e^{i(\boldsymbol{p}\cdot \boldsymbol{x} - \omega t)}}{\omega^2-p^2-m^2 - i\epsilon\omega} \mathrm{d}^3p\mathrm{d}\omega
+G(\bar{\boldsymbol{x}}, \bar t) = \frac{1}{(2\pi)^4}\int \frac{e^{i(\boldsymbol{p}\cdot \bar{\boldsymbol{x}} - \omega \bar t)}}{\omega^2-p^2-m^2 + i\epsilon} \mathrm{d}^3p\mathrm{d}\omega
 $$
-在上式中，$\epsilon$ 为小量，这使得奇点略微偏离实轴。这个积分依旧有些难处理，一个技巧是采用所谓的施温格参数化：  
+在上式中，$\epsilon$ 为正的无穷小量，这使得奇点略微偏离实轴，并保证了后续参数化积分的收敛性。一个技巧是采用所谓的施温格参数化，
 $$
 \frac{1}{A^n} = \frac{1}{\Gamma(n)} \int_0^{+\infty} s^{n-1} e^{-As} \mathrm{d}s
 $$
-选取 $iA=\omega^2-p^2-m^2 - i\epsilon\omega ,\  n=1$ 就得到：
+选取 $A=i(\omega^2-p^2-m^2+i\epsilon) , \ n=1$ 就得到，
 $$
-\frac{1}{\omega^2-p^2-m^2 - i\epsilon\omega} = -i\int_0^{+\infty} \mathrm{d}s ~ e^{is(\omega^2-p^2-m^2 - i\epsilon\omega)}
+\frac{1}{\omega^2-p^2-m^2 + i\epsilon} = -i\int_0^{+\infty} \mathrm{d}s ~ e^{is(\omega^2-p^2-m^2 + i\epsilon)}
 $$
 于是格林函数变为：  
 $$
 \begin{aligned} 
 G(\bar{\boldsymbol{x}}, \bar t)
 &= 
--\frac{i}{(2\pi)^4}\int_0^{+\infty} e^{-im^2s}\mathrm{d}s \int e^{is(\omega^2-p^2)  + i(\boldsymbol{p}\cdot \bar{\boldsymbol{x} }- \omega \bar t) + \epsilon s \omega } {\mathrm{d}^3p\mathrm{d}\omega} \\[6pt]
+-\frac{i}{(2\pi)^4}\int_0^{+\infty} e^{-im^2s - \epsilon s}\mathrm{d}s \int e^{is(\omega^2-p^2)  + i(\boldsymbol{p}\cdot \bar{\boldsymbol{x} }- \omega \bar t)} {\mathrm{d}^3p\mathrm{d}\omega} \\[6pt]
 &=
--i \int_0^{+\infty} e^{-im^2s}\mathrm{d}s \int e^{
-i\left[  s\left( \omega - \frac{{\bar t+i\epsilon s}}{2s}  \right)^2 - \frac{(\bar t+i\epsilon s)^2}{4s} \right] -i\left[ s\left( \boldsymbol{p}-\frac{\bar{\boldsymbol{x}}}{2s} \right)^2 - \frac{\bar{\boldsymbol{x}}^2}{4s} \right] 
+-i \int_0^{+\infty} e^{-im^2s - \epsilon s}\mathrm{d}s \int e^{
+is\left( \omega - \frac{\bar t}{2s} \right)^2 - i\frac{\bar t^2}{4s} -is\left( \boldsymbol{p}-\frac{\bar{\boldsymbol{x}}}{2s} \right)^2 + i\frac{\bar{\boldsymbol{x}}^2}{4s}
 } {\frac{\mathrm{d}^3p}{(2\pi)^3} \frac{\mathrm{d}\omega}{2\pi}} \\[6pt]
 &=
--i \int_0^{+\infty} e^{-im^2s}  \frac{1}{(4\pi i s)^2}e^{- i \frac{(\bar t+i\epsilon s)^2 - \bar{\boldsymbol{x}}^2}{4s}
-} \mathrm{d}s \\[6pt]
+-i \int_0^{+\infty} e^{-im^2s - \epsilon s} \left( \frac{-i}{16\pi^2 s^2} \right) e^{- i \frac{\bar t^2 - \bar{\boldsymbol{x}}^2}{4s}} \mathrm{d}s \\[6pt]
 &=
-\frac{i}{16\pi^2} \int_0^{+\infty}  e^{- i \left(\frac{(\bar t+i\epsilon s)^2 - \bar{\boldsymbol{x}}^2}{4s} + m^2s \right)  
-} \frac{\mathrm{d}s}{s^2}
+-\frac{1}{16\pi^2} \int_0^{+\infty}  e^{- i \left(\frac{\bar t^2 - \bar{\boldsymbol{x}}^2}{4s} + m^2s \right) - \epsilon s} \frac{\mathrm{d}s}{s^2}
 \end{aligned} 
 $$
-记固有时  
+记固有时（在类时区间内 $\bar{t}^2 > \bar{\boldsymbol{x}}^2$）：  
 $$
--\tau^2 = -\bar {t}^2 + \bar x^2
+\tau^2 = \bar {t}^2 - \bar{\boldsymbol{x}}^2
 $$
-舍去高阶小量 $\epsilon^2$，积分变为：  
+积分变为：  
 $$
 \begin{aligned} 
 G(\bar{\boldsymbol{x}}, \bar t)
 &=
-\frac{i}{16\pi^2} \int_0^{+\infty}  e^{- i \left(\frac{\tau^2 }{4s} + m^2s \right) +\epsilon\bar t
-} \frac{\mathrm{d}s}{s^2}  \\[6pt]
+-\frac{1}{16\pi^2} \int_0^{+\infty}  e^{- i \left(\frac{\tau^2 }{4s} + m^2s \right) - \epsilon s} \frac{\mathrm{d}s}{s^2}  \\[6pt]
 \end{aligned} 
 $$
 留意到这个积分和第二类修正贝塞尔函数的积分形式很类似，第二类修正贝塞尔函数是  
@@ -280,25 +285,25 @@ K_\alpha(2\sqrt{pq})
 &= \frac{1}{2} \left( \frac{q}{p} \right)^{\alpha/2} \int_0^{+\infty} e^{-(ps+q/s)} s^{-\alpha -1} \mathrm{d}s
 \end{aligned}
 $$
-选取 $\alpha = 1,\ p=im^2,\ q=i\frac{\tau^2}{4}$，得到  
+选取 $\alpha = 1, \ p=im^2, \ q=i\frac{\tau^2}{4}$，得到  
 $$
-K_1(m\tau) = \frac{\tau}{4m} \int_0^{+\infty} e^{- i \left(\frac{\tau^2 }{4s} + m^2s \right)} \frac{\mathrm{d}s}{s^2}
+K_1(im\tau) = \frac{\tau}{4m} \int_0^{+\infty} e^{- i \left(\frac{\tau^2 }{4s} + m^2s \right) - \epsilon s} \frac{\mathrm{d}s}{s^2}
 $$
 $$
 \Rightarrow \quad
 G(\bar{\boldsymbol{x}}, \bar t)
 =
-\frac{ime^{\epsilon \bar t}}{4\pi^2 \tau} K_1(im\tau)  \\[6pt]
+-\frac{m}{4\pi^2 \tau} K_1(im\tau)  \\[6pt]
 $$
-根据解析延拓  
+根据修正贝塞尔函数在虚轴上的解析延拓公式：  
 $$
-K_1​(iz)= \frac{\pi}{2}[J_1​(z)+iN_1​(z)]
+K_1(iz) = -\frac{\pi}{2} H_1^{(2)}(z) = -\frac{\pi}{2} [J_1(z) - i N_1(z)] 
 $$
-最后忽略小量 $\epsilon$ 得到  
+最后代入得到：  
 $$
-G(\bar{\boldsymbol{x}}, \bar t) = i \frac{m}{8 \pi \tau } J_1(m\tau) - \frac{m}{8 \pi \tau } N_1(m\tau)
+G(\bar{\boldsymbol{x}}, \bar t) = \frac{m}{8 \pi \tau } J_1(m\tau) - i\frac{m}{8 \pi \tau } N_1(m\tau) = \frac{m}{8\pi\tau} H_1^{(2)}(m\tau)
 $$
-该解作为费曼传播子。最终的 $\psi(x)$ 依照(1)式即可。  
+该解作为费曼传播子。最终的 $\psi(x)$ 依照相应积分式即可。
 # 3 补充  
 ## 3.1 通解和特解  
 以上使用格林函数所得到的都是非齐次方程组的特解，比如对于 2.2 节的推迟势，  
