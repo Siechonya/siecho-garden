@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-27T18:22:15.454+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-29T08:23:54.375+08:00","dg-note-properties":{}}
 ---
 
 
@@ -528,7 +528,31 @@ $$
 $$
 # 3 EM Wave  
 ## 3.1 retarded potential  
-
+- Green function for Wave in infinite space
+$$
+\partial_\beta\partial^\beta A^\alpha = -\mu_0 J^\alpha,\quad  
+\text{under gauge }\partial_\alpha = A^\alpha = 0
+$$
+$$
+\implies
+\begin{cases} 
+\square G(\bar{x}^\mu) = -\delta^4(\bar{x}^\mu)
+\\[10pt]
+G(\bar{x}^\mu)\large|_{|\bar{x}^{\mu}| \to \infty} = 0
+\end{cases}
+$$
+where $\bar{x^\mu} = x^\mu - x'^\mu$. For the derivation process, refer to [[A_symmetry_自然界的对称性/杂记/Green Function#2.2 运动电荷的推迟势\|Green Function]] or ppt.  
+- retarded potential
+$$
+A^\mu(\boldsymbol{x}, t) = \frac{\mu_0}{4\pi } \int \frac{J^\mu(\boldsymbol{x'}, t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
+$$
+or,
+$$
+\varphi (\boldsymbol{x} , t) = \frac{1}{4\pi \epsilon_0} \int \frac{\rho(\boldsymbol{x'}, t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
+,\quad
+\boldsymbol{A}(\boldsymbol{x}, t) = \frac{\mu_0}{4\pi } \int \frac{\boldsymbol{j}(\boldsymbol{x'}, t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
+$$
+where $t_r = t - \frac{R}{c}$ is the retarded time, and $\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}$. These formulas indicate that the potentials at the field point $x^\mu$ are determined by the source distribution $\boldsymbol{J}^\mu$ at an earlier time $t_r$, accounting for the time $\frac{R}{c}$ required for the electromagnetic signal to travel from the source to the field point.
 
 # 4 Electromagnetic Radiation
 ## 4.1 Fields of a moving point charge

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-26T17:52:59.203+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-29T08:22:24.751+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1176,24 +1176,24 @@ $$
 #### 4-current & charge conservation  
 Define the 4-current,
 $$
-j^\alpha = \rho_{e0} u^\alpha = (\rho_e c , \boldsymbol{j}),\quad
+J^\alpha = \rho_{e0} u^\alpha = (\rho_e c , \boldsymbol{j}),\quad
 \text{with}~
 \rho_e = \gamma \rho_{e0}, \
 \boldsymbol{j} = \rho_e \boldsymbol{v} = \gamma\rho_{e0} \boldsymbol{v} 
 $$
-> Note: Since the total charge $Q$ is a Lorentz invariant but the volume $V$ undergoes length contraction ($V = V_0/\gamma$), the charge density must increase by the same factor, $\rho = Q/V = \gamma \rho_0$.  
+> Note: Since the total charge $Q$ is a Lorentz invariant but the volume $V$ undergoes length contraction ($V = V_0/\gamma$), the charge density must increase by the same factor, $\rho_e = Q/V = \gamma \rho_{e0}$.  
 > 
 > Furthermore, while the time interval dilates ($\mathrm{d}t = \gamma \mathrm{d}\tau$) and the spatial volume element contracts ($\mathrm{d}^3x = \mathrm{d}^3x_0/\gamma$), these two $\gamma$ factors exactly cancel each other out. This ensures that the four-dimensional spacetime volume $\mathrm{d}^4x = c\,\mathrm{d}t\,\mathrm{d}^3x$ is a Lorentz invariant (scalar).
 
 The current's 4-divergence is zero:
 $$
-\partial_\alpha j_e^\alpha = 
+\partial_\alpha J_e^\alpha = 
 \nabla \cdot \boldsymbol{j}_e + \frac{\partial \rho_e}{\partial t} = 0
 $$
 A 4-vector $J^\alpha$ is referred to as a <font color="#ff0000">conserved current</font> if $\partial_\alpha J^\alpha = 0$. The corresponding conserved charge, defined as $Q = \frac{1}{c} \iiint_{\mathbb{R}^3} J^0 \, \mathrm{d}^3x$, is a Lorentz invariant.  
 #### Mass conservation  
 $$
-j_m^\alpha = \rho_{m0} u^\alpha = (\rho_m c , \boldsymbol{j}_m),\quad
+J_m^\alpha = \rho_{m0} u^\alpha = (\rho_m c , \boldsymbol{j}_m),\quad
 \text{with}~
 \rho_m = \gamma \rho_{m0}, \
 \boldsymbol{j}_m = \rho_m \boldsymbol{v} = \gamma\rho_{m0} \boldsymbol{v} 
