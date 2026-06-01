@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-29T08:23:54.375+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-29T09:23:33.127+08:00","dg-note-properties":{}}
 ---
 
 
@@ -542,7 +542,8 @@ G(\bar{x}^\mu)\large|_{|\bar{x}^{\mu}| \to \infty} = 0
 \end{cases}
 $$
 where $\bar{x^\mu} = x^\mu - x'^\mu$. For the derivation process, refer to [[A_symmetry_自然界的对称性/杂记/Green Function#2.2 运动电荷的推迟势\|Green Function]] or ppt.  
-- retarded potential
+
+- Retarded potential
 $$
 A^\mu(\boldsymbol{x}, t) = \frac{\mu_0}{4\pi } \int \frac{J^\mu(\boldsymbol{x'}, t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
 $$
@@ -552,7 +553,26 @@ $$
 ,\quad
 \boldsymbol{A}(\boldsymbol{x}, t) = \frac{\mu_0}{4\pi } \int \frac{\boldsymbol{j}(\boldsymbol{x'}, t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
 $$
-where $t_r = t - \frac{R}{c}$ is the retarded time, and $\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}$. These formulas indicate that the potentials at the field point $x^\mu$ are determined by the source distribution $\boldsymbol{J}^\mu$ at an earlier time $t_r$, accounting for the time $\frac{R}{c}$ required for the electromagnetic signal to travel from the source to the field point.
+where $t_r = t - \frac{R}{c}$ is the retarded time, and $\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}$. These formulas indicate that the potentials at the field point $x^\mu$ are determined by the source distribution $\boldsymbol{J}^\mu$ at an earlier time $t_r$, accounting for the time $\frac{R}{c}$ required for the electromagnetic signal to travel from the source to the field point.  
+
+- Retarded EMF (Jefimenko formulas)
+$$
+\boldsymbol{E}(\boldsymbol{x},t) = -\nabla \varphi(\boldsymbol{x}, t) - \frac{ \partial \boldsymbol{A}(\boldsymbol{x},t) }{ \partial t }
+=
+\frac{1}{4\pi\epsilon_0}\iiint\left( \underset{\text{coulomb}}{\underbrace{\rho_r \frac{\hat{R}}{R^2}} } + \underset{radiation field}{\underbrace{\dot{\rho}_r \frac{\hat{R}}{cR}-\frac{\dot{\boldsymbol{J}_r}}{R}}} \right)\,\mathrm{d} V
+$$
+$$
+\boldsymbol{B}(\boldsymbol{x},t) = \nabla \times \boldsymbol{A}(\boldsymbol{x},t)
+= \frac{\mu_0}{4\pi} \iiint \left( \underset{\text{Biot-Savart}}{\underbrace{ \frac{\boldsymbol{J}_r}{R^2} } }+\underset{\text{radiation field}}{\underbrace{\frac{\dot{\boldsymbol{J}_r}}{cR}} }  \right)\times \hat{R} \,\mathrm{d} V
+$$
+## 3.2 Time-varying dipole  
+- Density
+$$
+\rho(\boldsymbol{x},t) = -\boldsymbol{p}(t)\cdot\nabla\delta^3(\boldsymbol{x}),
+\quad 
+
+$$
+
 
 # 4 Electromagnetic Radiation
 ## 4.1 Fields of a moving point charge

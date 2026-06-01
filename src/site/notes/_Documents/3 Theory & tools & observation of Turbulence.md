@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2026-04-11T17:01:27.810+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2025-10-23T14:37:03.120+08:00","updated":"2026-05-30T18:02:49.594+08:00","dg-note-properties":{}}
 ---
 
 
@@ -152,11 +152,10 @@ $\theta=\langle B,X_{MSE} \rangle$, When $B_{XMSE} > 0$ or when $0^\circ < θ < 
 本地 [3.3 Ruhunusiri et al_2017_Characterization of turbulence in the Mars plasma environment with MAVEN](/img/user/_Documents/docs/3.3%20Ruhunusiri%20et%20al_2017_Characterization%20of%20turbulence%20in%20the%20Mars%20plasma%20environment%20with%20MAVEN.pdf)  
 
 # 4 The solar wind interaction with Mars  Locations and shapes of the bow shock  
-Vigne. D., et al. (2017), The solar wind interaction with Mars  Locations and shapes of the bow shock, _GEOPHYSICAL RESEARCH LETTERS_, 27(1), 49-52.
+Vigne. D., et al. (2017), The solar wind interaction with Mars  Locations and shapes of the bow shock, _GEOPHYSICAL RESEARCH LETTERS_, 27(1), 49-52.  
 
-# 5 The solar wind interaction with Mars: Locations and shapes of the bow shock and the magnetic pile-up boundary from the observations of the MAG/ER Experiment onboard Mars Global Surveyor  
-给出了火星磁层的两个边界的model  
+[[_Documents/docs/mineru_output/3.4 Geophysical Research Letters - 2000 - Vignes - The solar wind interaction with Mars  Locations and shapes of the bow shock/3.4 Geophysical Research Letters - 2000 - Vignes - The solar wind interaction with Mars  Locations and shapes of the bow shock\|3.4 Geophysical Research Letters - 2000 - Vignes - The solar wind interaction with Mars  Locations and shapes of the bow shock]]
 
-[3.5 Geophysical Research Letters - 2000 - Vignes - The solar wind interaction with Mars  Locations and shapes of the bow shock](/img/user/_Documents/docs/3.5%20Geophysical%20Research%20Letters%20-%202000%20-%20Vignes%20-%20The%20solar%20wind%20interaction%20with%20Mars%20%20Locations%20and%20shapes%20of%20the%20bow%20shock.pdf)  
+
 
 
