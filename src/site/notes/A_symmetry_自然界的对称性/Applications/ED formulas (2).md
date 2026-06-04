@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-05-29T09:23:33.127+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-04T16:41:55.889+08:00","dg-note-properties":{}}
 ---
 
 
@@ -315,7 +315,7 @@ $$
 ,\quad
 \frac{\partial^2 }{\partial \phi^2} Y_l^m = -m^2 Y_l^m
 $$
-### 1.4.4 Green function *  
+### 1.4.4 Green function 
 - Main equation
 $$
 \nabla^2 \varphi(\boldsymbol{r}) = -\frac{\rho(\boldsymbol{r})}{\epsilon_0}
@@ -338,6 +338,10 @@ then the solution for any volume charge density $\rho$ is,
 $$ 
 \varphi(\boldsymbol{r}) = \int_V \rho(\boldsymbol{r}') G(\boldsymbol{r},\boldsymbol{r}') \, \mathrm{d}^3r' - \epsilon_0 \oint_S \varphi_0(\boldsymbol{r}') \frac{\partial G(\boldsymbol{r},\boldsymbol{r}')}{\partial n'} \, \mathrm{d}S' 
 $$
+the green function above is so-called 1-st Green function, which satisfies symmetric condition,  
+$$
+G(\boldsymbol{r}, \boldsymbol{r'}) = G(\boldsymbol{r'}, \boldsymbol{r})
+$$
 
 - With boundaries (Neumann condition):
 
@@ -351,7 +355,8 @@ $$
 $$
 where $\langle\varphi\rangle_S$ is the average potential on the boundary.  
 
-> Refer to [[A_symmetry_自然界的对称性/杂记/Green Function\|Green Function]] for several basic examples in infinite space.
+> Refer to [[A_symmetry_自然界的对称性/杂记/Green Function\|Green Function]] for several basic examples in infinite space.   
+> Refer to ppt for several basic examples with boundary.   
 ## 1.5 Cases
 - If all charges are contained within the sphere $V$ (see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$\|Appendix for ED formulas#1 $ iiint_V boldsymbol{E}( boldsymbol{x}) , mathrm{d} 3x = - frac{ boldsymbol{p}}{3 epsilon_0}$]] or T 2.3 in the textbook)
 $$
@@ -526,7 +531,7 @@ $$
 =
 \boldsymbol{m} \times \boldsymbol{B}_{\text{ext}} + \cdots
 $$
-# 3 EM Wave  
+# 3 Electromagnetic Radiation  
 ## 3.1 retarded potential  
 - Green function for Wave in infinite space
 $$
@@ -545,7 +550,7 @@ where $\bar{x^\mu} = x^\mu - x'^\mu$. For the derivation process, refer to [[A_s
 
 - Retarded potential
 $$
-A^\mu(\boldsymbol{x}, t) = \frac{\mu_0}{4\pi } \int \frac{J^\mu(\boldsymbol{x'}, t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
+A^\mu(\boldsymbol{x}, t) = \frac{\mu_0}{4\pi } \int \frac{J^\mu(\boldsymbol{x'}, {\color{red}t_r})}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
 $$
 or,
 $$
@@ -554,6 +559,8 @@ $$
 \boldsymbol{A}(\boldsymbol{x}, t) = \frac{\mu_0}{4\pi } \int \frac{\boldsymbol{j}(\boldsymbol{x'}, t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
 $$
 where $t_r = t - \frac{R}{c}$ is the retarded time, and $\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}$. These formulas indicate that the potentials at the field point $x^\mu$ are determined by the source distribution $\boldsymbol{J}^\mu$ at an earlier time $t_r$, accounting for the time $\frac{R}{c}$ required for the electromagnetic signal to travel from the source to the field point.  
+
+Note: retarded potential satisfied Lorenz gauge.
 
 - Retarded EMF (Jefimenko formulas)
 $$
@@ -565,14 +572,112 @@ $$
 \boldsymbol{B}(\boldsymbol{x},t) = \nabla \times \boldsymbol{A}(\boldsymbol{x},t)
 = \frac{\mu_0}{4\pi} \iiint \left( \underset{\text{Biot-Savart}}{\underbrace{ \frac{\boldsymbol{J}_r}{R^2} } }+\underset{\text{radiation field}}{\underbrace{\frac{\dot{\boldsymbol{J}_r}}{cR}} }  \right)\times \hat{R} \,\mathrm{d} V
 $$
-## 3.2 Time-varying dipole  
+## 3.2 Time-varying dipole
 - Density
 $$
 \rho(\boldsymbol{x},t) = -\boldsymbol{p}(t)\cdot\nabla\delta^3(\boldsymbol{x}),
 \quad 
-
+\boldsymbol{J}(\boldsymbol{x},t) = \dot{\boldsymbol{p}}(t) \delta^3(\boldsymbol{x})
+$$
+- Potential
+$$
+\boldsymbol{A}(\boldsymbol{x},t) = \frac{\mu_0}{4\pi} \iiint \frac{{\dot{\boldsymbol{p}}(t-R/c) \delta^3(\boldsymbol{x'})}}{R}\,\mathrm{d}V' = \frac{\mu_0}{4\pi} \frac{\dot{\boldsymbol{p}}_r}{r},
+\quad
+\boldsymbol{p}_r =\boldsymbol{p}(t-r/c)
+$$
+$$
+\varphi(\boldsymbol{x},t) = - \frac{1}{4\pi\epsilon_0} \nabla \cdot \frac{\boldsymbol{p}_r}{r} = \frac{1}{4\pi\epsilon_0} \left( 
+\frac{{\boldsymbol{p}_r \cdot \hat{r}}}{r^2} + \frac{\dot{\boldsymbol{p}}_r\cdot\hat{r}}{cr} 
+\right)
+$$
+- EMF ($r>0$)
+$$
+\left\{
+\begin{align} 
+\boldsymbol{E} 
+&=
+\frac{1}{4\pi\epsilon_0}\left[ 
+\frac{3(\boldsymbol{p}_r\cdot\hat{r})\hat{r} - \boldsymbol{p}_r}{r^3} + \frac{3(\dot{\boldsymbol{p}}_r\cdot\hat{r})\hat{r} - \dot{\boldsymbol{p}}_r}{cr^2} + \frac{(\ddot{\boldsymbol{p}}_r\cdot\hat{r})\hat{r} - \ddot{\boldsymbol{p}}_r}{c^2r}
+\right]
+\\[8pt]
+\boldsymbol{B}
+&=
+\frac{\mu_0}{4\pi} \left( 
+\frac{\dot{\boldsymbol{p}}_r}{r^2} + \frac{\ddot{\boldsymbol{p}}_r}{cr}
+\right) \times \hat{r}
+\end{align}
+\right.
+$$
+- Poynting vector (for $\boldsymbol{p}(t)=p(t)\hat{z}$) *
+$$
+\boldsymbol{S} = \frac{1}{\mu_0} \boldsymbol{E}\times\boldsymbol{B} \implies
+\left\{
+\begin{align} 
+S_r
+&=
+\frac{1}{16\pi^2\epsilon_0}\left[ 
+\frac{ \mathrm{d}  }{ \mathrm{d} t} \left( 
+\frac{p_r^2}{2r^3} + \frac{p_r\dot{p}_r}{cr^2} + \frac{\dot{p}_r^2}{c^2r}
+\right) + \frac{\ddot{p}_r^2}{c^3}
+\right] \frac{\sin^2\theta}{r^2}
+\\[8pt]
+S_\theta
+&=
+-\frac{1}{32\pi^2\epsilon_0} \frac{ \mathrm{d} }{ \mathrm{d} t}\left[\left(
+\frac{p_r}{r} + \frac{\dot{p}_r}{c}
+\right)^2\right] \frac{\sin2\theta}{r^3}
+\\[8pt]
+S_\phi
+&= 0
+\end{align}
+\right.
+$$
+If $p(t) = p_0 \cos(\omega t)$, after long-time averaging, the result is simple,  
+$$
+\langle S_\theta \rangle = 0,\quad
+\langle S_r \rangle = \frac{p_0^2 \omega^4}{32\pi^2 \epsilon_0 c^3} \frac{\sin^2\theta}{r^2}
+$$
+$$
+\left\langle  \frac{ \mathrm{d} P }{ \mathrm{d} \Omega}  \right\rangle  = r^2\langle S_r \rangle = \frac{p_0^2 \omega^4}{32\pi^2 \epsilon_0 c^3} {\sin^2\theta}
+$$
+## 3.3 Resonant current  
+### 3.3.1 Basic concepts  
+#### Radiation power
+- Angular radiation power
+$$
+\frac{ \mathrm{d} P }{ \mathrm{d} \Omega} = r^2S_r = r^2 \cdot\frac{1}{\mu_0} (\boldsymbol{E}_{\text{rad}}\times \boldsymbol{B}_{\text{rad}}) \cdot \hat{r}
+$$
+- Total radiation power
+$$
+P = \oint_{\partial V} \frac{ \mathrm{d} P }{ \mathrm{d} \Omega} \,\mathrm{d}\Omega
+$$
+#### Far field approximation
+For infinitely small source or infinitely far field $r'\ll r$, one finds
+$$
+t_R = t - \frac{R}{c} \approx t-\frac{r}{c} + \frac{r'}{c}(\hat{r}' \cdot \hat{r}) = t_r + \frac{r'}{c}(\hat{r}' \cdot \hat{r})
+\triangleq t^*
+$$
+$$
+\frac{ \partial t^* }{ \partial t }=1,\quad \nabla t^* = - \frac{\hat{r}}{c} + \frac{1}{c} \mathcal{O}\left( \frac{r'}{r} \right)
+$$
+Consequently, for any field function in the radiation zone of the form $f(\boldsymbol{x}, t) \approx \frac{1}{r} g(t^*)$, where the leading-order term is $\mathcal{O}(1/r)$, its gradient can be expanded as,
+$$
+\nabla f = \nabla \left( \frac{1}{r} \right) g(t^*) + \frac{1}{r} g'(t^*) \nabla t^* = -\frac{\hat{r}}{r^2} g(t^*) + (\nabla t^*) \partial_t f
+$$
+By retaining only the dominant $\mathcal{O}(1/r)$ term, we arrive at the operator equivalence,
+$$
+\nabla \longleftrightarrow -\frac{\hat{r}}{c}\partial_t
+$$
+$$
+\implies
+c\boldsymbol{B} = (\partial_t \boldsymbol{A}) \times \hat{r},\quad
+\boldsymbol{E} = c\boldsymbol{B} \times \hat{r}
+$$
+Ponyting vector can be calculated as, 
+$$
+\boldsymbol{S} = \frac{c}{\mu_0} B^2 \hat{r} = \epsilon_0 c E^2 \hat{r}
 $$
 
+## 3.4 Moving point charge
 
-# 4 Electromagnetic Radiation
-## 4.1 Fields of a moving point charge
+# 4 EM wave
