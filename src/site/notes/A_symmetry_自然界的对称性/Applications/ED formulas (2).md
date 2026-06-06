@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-06T14:00:48.725+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-06T16:12:51.350+08:00","dg-note-properties":{}}
 ---
 
 
@@ -745,7 +745,7 @@ $$
 \boldsymbol{m}=\frac{1}{2}\oint \boldsymbol{x'}\times\,\mathrm{d}\boldsymbol{I}, \quad
 \mathsf{D} = \int (3\boldsymbol{x'}\boldsymbol{x'} - r'^2\mathsf{I})\,\mathrm{d}q
 $$
-#### electric dipole radiation  
+#### Electric dipole radiation  
 - Potential and EMF
 $$
 \boldsymbol{A}(\boldsymbol{x},t) = \frac{\mu_0e^{\mathrm{i} kr}}{4\pi r} \dot{\boldsymbol{p}}(t)
@@ -776,14 +776,14 @@ $$
 ,\quad
 \langle P\rangle = \frac{\mu_0}{12\pi c}  p_0^2 \omega^4
 $$
-#### magnetic dipole radiation  
+#### Magnetic dipole radiation  
 - Potential and EMF
 $$
-\boldsymbol{A}(\boldsymbol{x},t) = \frac{\mu_0e^{\mathrm{i} kr}}{4\pi c r} \dot{\boldsymbol{m}}(t_r) \times \hat{r}
+\boldsymbol{A}(\boldsymbol{x},t) = \frac{\mu_0e^{\mathrm{i} kr}}{4\pi c r} \dot{\boldsymbol{m}}(t) \times \hat{r}
 \implies
 \left\{
 \begin{align} 
-\boldsymbol{E} &= -\frac{\mu_0e^{\mathrm{i} kr}}{4\pi c r} \ddot{\boldsymbol{m}}(t_r) \times \hat{r}
+\boldsymbol{E} &= -\frac{\mu_0e^{\mathrm{i} kr}}{4\pi c r} \ddot{\boldsymbol{m}}(t) \times \hat{r}
 \\[8pt]
 c\boldsymbol{B} &= \hat{r} \times \boldsymbol{E}
 \end{align}
@@ -807,9 +807,23 @@ $$
 ,\quad
 \langle P\rangle = \frac{\mu_0}{12\pi c^3}  m_0^2 \omega^4
 $$
-
-#### 3.3 electric quadruple radiation  
-
+#### Electric quadruple radiation  
+- Potential and EMF
+$$
+\boldsymbol{A}(\boldsymbol{x},t) 
+=
+\frac{\mu_0 e^{\mathrm{i} k r}}{24\pi c r} \hat{r}\cdot\ddot{\mathsf{D}}(t)
+\implies
+\left\{
+\begin{align} 
+c\boldsymbol{B} &= 
+\\[8pt]
+\boldsymbol{E} &= 
+\end{align}
+\right.
+$$
+#### The radiation resistance of antenna  
+#todo
 ## 3.3 Moving point charge
 
 # 4 EM wave
