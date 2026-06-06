@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-04T16:41:55.889+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-06T11:04:15.179+08:00","dg-note-properties":{}}
 ---
 
 
@@ -411,7 +411,7 @@ $$
 &= \frac {{\boldsymbol{m}\cdot \hat{r}} }{4\mathrm{\pi} r^2} + \frac {{\mathsf{D}_m:\hat{r}\hat{r}} }{8\mathrm{\pi} r^3} + \cdots 
 \end{align}
 $$
-Where there is no magnetic monopole term ($1/r$). $\boldsymbol{m}=I\iint_S \mathrm{d}\boldsymbol{\sigma}'$ is the magnetic dipole moment of the shell (area vector), and $\mathsf{D}_m = I\iint_S \left[ 3(\mathrm{d}\boldsymbol{\sigma}' \boldsymbol{x}' + \boldsymbol{x}' \mathrm{d}\boldsymbol{\sigma}') - 2(\boldsymbol{x}'\cdot\mathrm{d}\boldsymbol{\sigma}')\mathsf{I} \right]$ is the trace-free magnetic quadrupole moment tensor.
+Where there is no magnetic monopole term ($1/r$). $\boldsymbol{m}=\frac{1}{2}\oint \boldsymbol{x'}\times\,\mathrm{d}\boldsymbol{I}=I\iint_S \mathrm{d}\boldsymbol{\sigma}'$ is the magnetic dipole moment of the shell (area vector), and $\mathsf{D}_m = I\iint_S \left[ 3(\mathrm{d}\boldsymbol{\sigma}' \boldsymbol{x}' + \boldsymbol{x}' \mathrm{d}\boldsymbol{\sigma}') - 2(\boldsymbol{x}'\cdot\mathrm{d}\boldsymbol{\sigma}')\mathsf{I} \right]$ is the trace-free magnetic quadrupole moment tensor.
 
 - Magnetostatic intensity expansion ($\boldsymbol{H} = -\nabla \psi$)
 $$
@@ -419,7 +419,7 @@ $$
 $$
 ## 2.3 Multipole expansion (vector potential)   
 The quadrupole moment of the magnetic field is relatively difficult to calculate and can be skipped. However, the dipole moment needs to be understood.
-### 2.3.1 Moment equation for localized current *
+### 2.3.1 Moment equation for localized current
 Using $\nabla \cdot (\boldsymbol{J}\boldsymbol{r}) = (-\partial_t \rho)\boldsymbol{r} + \boldsymbol{J}$,  
 $$
 \iiint_V \boldsymbol{J}\,\mathrm{d}V = \dot{\boldsymbol{p}},\quad \boldsymbol{p} = \iiint_V \boldsymbol{r}\,\mathrm{d}q
@@ -572,7 +572,7 @@ $$
 \boldsymbol{B}(\boldsymbol{x},t) = \nabla \times \boldsymbol{A}(\boldsymbol{x},t)
 = \frac{\mu_0}{4\pi} \iiint \left( \underset{\text{Biot-Savart}}{\underbrace{ \frac{\boldsymbol{J}_r}{R^2} } }+\underset{\text{radiation field}}{\underbrace{\frac{\dot{\boldsymbol{J}_r}}{cR}} }  \right)\times \hat{R} \,\mathrm{d} V
 $$
-## 3.2 Time-varying dipole
+### 3.1.1 Time-varying dipole
 - Density
 $$
 \rho(\boldsymbol{x},t) = -\boldsymbol{p}(t)\cdot\nabla\delta^3(\boldsymbol{x}),
@@ -608,7 +608,7 @@ $$
 \end{align}
 \right.
 $$
-- Poynting vector (for $\boldsymbol{p}(t)=p(t)\hat{z}$) *
+- Poynting vector (for $\boldsymbol{p}(t)=p(t)\hat{z}$)
 $$
 \boldsymbol{S} = \frac{1}{\mu_0} \boldsymbol{E}\times\boldsymbol{B} \implies
 \left\{
@@ -640,9 +640,8 @@ $$
 $$
 \left\langle  \frac{ \mathrm{d} P }{ \mathrm{d} \Omega}  \right\rangle  = r^2\langle S_r \rangle = \frac{p_0^2 \omega^4}{32\pi^2 \epsilon_0 c^3} {\sin^2\theta}
 $$
-## 3.3 Resonant current  
-### 3.3.1 Basic concepts  
-#### Radiation power
+## 3.2 Resonant radiation  
+### 3.2.1 Radiation power
 - Angular radiation power
 $$
 \frac{ \mathrm{d} P }{ \mathrm{d} \Omega} = r^2S_r = r^2 \cdot\frac{1}{\mu_0} (\boldsymbol{E}_{\text{rad}}\times \boldsymbol{B}_{\text{rad}}) \cdot \hat{r}
@@ -651,8 +650,8 @@ $$
 $$
 P = \oint_{\partial V} \frac{ \mathrm{d} P }{ \mathrm{d} \Omega} \,\mathrm{d}\Omega
 $$
-#### Far field approximation
-For infinitely small source or infinitely far field $r'\ll r$, one finds
+### 3.2.2 Far field approximation
+For infinitely far field $\color{red}r'(source)\ll r(field)$, one finds
 $$
 t_R = t - \frac{R}{c} \approx t-\frac{r}{c} + \frac{r'}{c}(\hat{r}' \cdot \hat{r}) = t_r + \frac{r'}{c}(\hat{r}' \cdot \hat{r})
 \triangleq t^*
@@ -670,14 +669,72 @@ $$
 $$
 $$
 \implies
+\boxed{
 c\boldsymbol{B} = (\partial_t \boldsymbol{A}) \times \hat{r},\quad
 \boldsymbol{E} = c\boldsymbol{B} \times \hat{r}
+}
 $$
 Ponyting vector can be calculated as, 
 $$
 \boldsymbol{S} = \frac{c}{\mu_0} B^2 \hat{r} = \epsilon_0 c E^2 \hat{r}
 $$
+### 3.2.3 Resonant radiation  
+For resonant radiation  
+$$
+\boldsymbol{J}(\boldsymbol{x'},t) = \boldsymbol{J}_0(\boldsymbol{x'}) e^{-\mathrm{i} \omega t}
+$$
+$$
+\implies
+\boldsymbol{J}(\boldsymbol{x'}, t^*) 
+= \boldsymbol{J}_0(\boldsymbol{x'}) e^{\mathrm{i}(kr - \omega t)  -\mathrm{i}\boldsymbol{k}\cdot\boldsymbol{x'}} 
+= \boldsymbol{J}(\boldsymbol{x'},t)  e^{\mathrm{i}(kr - \boldsymbol{k}\cdot\boldsymbol{x'})}
+,\quad
+\frac{\boldsymbol{k}}{\omega} = \frac{\hat{r}}{c}
+$$
+Vector potential and EMF (by retaining only the dominant $\mathcal{O}(1/r)$ term),
+$$
+\boldsymbol{A}(\boldsymbol{x},t) = \frac{\mu_0e^{\mathrm{i} k r}}{4\pi r}\iiint \boldsymbol{J}(\boldsymbol{x'},t)e^{-\mathrm{i} \boldsymbol{k}\cdot\boldsymbol{x'}} \,\mathrm{d}^3x'
+$$
+$$
+\langle \boldsymbol{S} \rangle = \frac{1}{2\mu_0} \Re(\boldsymbol{E}^*\times \boldsymbol{B}) =  \frac{c}{2\mu_0} B^2 \hat{r} = \frac{\epsilon_0c}{2} E^2 \hat{r}
+$$
+where $E$ and $B$ denote the field amplitudes with the factor $e^{\mathrm{i}(kr-\omega t)}$ omitted.
+#### Aerial radiation  
+For a thin antenna of length $l$, the current distribution forms a standing wave given by,
+$$
+I(t,z) = I_0 \sin(m\pi - k|z|) e^{-\mathrm{i} \omega t},\quad z\in\left[ -\frac{l}{2}, \frac{l}{2} \right], \ m\triangleq \frac{l}{2\pi/k} = \frac{l}{\lambda}
+$$
+Vector potential and EMF (by retaining only the dominant $\mathcal{O}(1/r)$ term),  
+$$
+\boldsymbol{A}(\boldsymbol{x},t) = \frac{\mu_0e^{\mathrm{i} k r}}{4\pi r}\int_{-l/2}^{l/2}\hat{z} I(t,z')e^{-\mathrm{i} kz'\cos\theta} \,\mathrm{d}z'
+= \frac{\mu_0I_0e^{\mathrm{i}(kr-\omega t)}}{2\pi kr} \frac{g(\theta)}{\sin\theta} \hat{z},
+\quad g(\theta) = \frac{{\cos(m\pi\cos\theta) - \cos (m\pi)}}{\sin\theta}
+$$
+$$
+\boldsymbol{E} = -\mathrm{i} \frac{\mu_0cI_0}{2\pi } \frac{e^{\mathrm{i}(kr-\omega t)}}{r}g(\theta)\hat{\theta},\quad
+c\boldsymbol{B} = E\hat{\phi},\quad
+\text{linear polarization}
+$$
+$$
+\langle \boldsymbol{S} \rangle =   \frac{\epsilon_0c}{2} E^2 \hat{r} = \frac{\mu_0cI_0^2}{8\pi^2} \frac{g^2(\theta)}{r^2}\hat{r}
+$$
+### 3.2.4 Small source approximation  
+Approximation Regime: localized, long-wavelength source in the radiation zone $\color{red}r'(source)\ll\lambda\ll r(field)$ with $\lambda=\frac{2\pi}{k}$ is the wavelength of the radiation. This implies that $\boldsymbol{k}\cdot \boldsymbol{x'}\sim \frac{x'}{\lambda} \ll 1$ and we can taylor-expand $e^{-\mathrm{i} \boldsymbol{k}\cdot\boldsymbol{x'}}$ to obtain,
+$$
+\begin{align} 
+\boldsymbol{A}(\boldsymbol{x},t) 
+&= \frac{\mu_0e^{\mathrm{i} k r}}{4\pi r}\iiint \boldsymbol{J}(\boldsymbol{x'},t)e^{-\mathrm{i} \boldsymbol{k}\cdot\boldsymbol{x'}} \,\mathrm{d}^3x'
+\\[8pt]
+&=
+\frac{\mu_0}{4\pi r} \left.\left[ \dot{\boldsymbol{p}} + \frac{1}{c}\dot{\boldsymbol{m}}\times \hat{r} + \frac{1}{6c}\hat{r}\cdot\ddot{\mathsf{D}} + \cdots \right]\right|_{\Large\color{red}t_r}
+\end{align}
+$$
+$$
+\boldsymbol{p} = \int \boldsymbol{x'}\,\mathrm{d}q,\quad 
+\boldsymbol{m}=\frac{1}{2}\oint \boldsymbol{x'}\times\,\mathrm{d}\boldsymbol{I}, \quad
+\mathsf{D} = \int (3\boldsymbol{x'}\boldsymbol{x'} - r'^2\mathsf{I})\,\mathrm{d}q
+$$
 
-## 3.4 Moving point charge
+## 3.3 Moving point charge
 
 # 4 EM wave
