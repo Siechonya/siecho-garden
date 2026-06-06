@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-06T11:04:15.179+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-06T14:00:48.725+08:00","dg-note-properties":{}}
 ---
 
 
@@ -556,7 +556,7 @@ or,
 $$
 \varphi (\boldsymbol{x} , t) = \frac{1}{4\pi \epsilon_0} \int \frac{\rho(\boldsymbol{x'}, t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
 ,\quad
-\boldsymbol{A}(\boldsymbol{x}, t) = \frac{\mu_0}{4\pi } \int \frac{\boldsymbol{j}(\boldsymbol{x'}, t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
+\boldsymbol{A}(\boldsymbol{x}, t) = \frac{\mu_0}{4\pi } \int \frac{\boldsymbol{J}(\boldsymbol{x'}, t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
 $$
 where $t_r = t - \frac{R}{c}$ is the retarded time, and $\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}$. These formulas indicate that the potentials at the field point $x^\mu$ are determined by the source distribution $\boldsymbol{J}^\mu$ at an earlier time $t_r$, accounting for the time $\frac{R}{c}$ required for the electromagnetic signal to travel from the source to the field point.  
 
@@ -572,12 +572,21 @@ $$
 \boldsymbol{B}(\boldsymbol{x},t) = \nabla \times \boldsymbol{A}(\boldsymbol{x},t)
 = \frac{\mu_0}{4\pi} \iiint \left( \underset{\text{Biot-Savart}}{\underbrace{ \frac{\boldsymbol{J}_r}{R^2} } }+\underset{\text{radiation field}}{\underbrace{\frac{\dot{\boldsymbol{J}_r}}{cR}} }  \right)\times \hat{R} \,\mathrm{d} V
 $$
-### 3.1.1 Time-varying dipole
+### 3.1.1 Radiation power definition
+- Angular radiation power
+$$
+\frac{ \mathrm{d} P }{ \mathrm{d} \Omega} = r^2S_r = r^2 \cdot\frac{1}{\mu_0} (\boldsymbol{E}_{\text{rad}}\times \boldsymbol{B}_{\text{rad}}) \cdot \hat{r}
+$$
+- Total radiation power
+$$
+P = \oint_{\partial V} \frac{ \mathrm{d} P }{ \mathrm{d} \Omega} \,\mathrm{d}\Omega
+$$
+### 3.1.2 Time-varying dipole
 - Density
 $$
-\rho(\boldsymbol{x},t) = -\boldsymbol{p}(t)\cdot\nabla\delta^3(\boldsymbol{x}),
+\rho(\boldsymbol{x'},t) = -\boldsymbol{p}(t)\cdot\nabla\delta^3(\boldsymbol{x'}),
 \quad 
-\boldsymbol{J}(\boldsymbol{x},t) = \dot{\boldsymbol{p}}(t) \delta^3(\boldsymbol{x})
+\boldsymbol{J}(\boldsymbol{x'},t) = \dot{\boldsymbol{p}}(t) \delta^3(\boldsymbol{x'})
 $$
 - Potential
 $$
@@ -640,17 +649,16 @@ $$
 $$
 \left\langle  \frac{ \mathrm{d} P }{ \mathrm{d} \Omega}  \right\rangle  = r^2\langle S_r \rangle = \frac{p_0^2 \omega^4}{32\pi^2 \epsilon_0 c^3} {\sin^2\theta}
 $$
+- Complex form of resonant dipole
+$$
+\boldsymbol{p}(t) = \boldsymbol{p}_0 e^{-\mathrm{i}\omega t},\quad \boldsymbol{p}_0=\boldsymbol{p}_{0R}+\mathrm{i}\boldsymbol{p}_{0L}
+$$
+For example, consider a charge pair $\pm e$ separated by distance $2 a$, rotating anticlockwise around the origin in the $xy$-plane with constant angular frequency $\omega$ so that the positive and negative charges are $\boldsymbol{r}_\pm(t) = \pm a\cos(\omega t)\hat{x} \pm a\sin(\omega t)\hat{y}$, thus  
+$$
+\boldsymbol{p}(t) = 2ea(\hat{x} + \mathrm{i}\hat{y}) e^{-\mathrm{i}\omega t}
+$$
 ## 3.2 Resonant radiation  
-### 3.2.1 Radiation power
-- Angular radiation power
-$$
-\frac{ \mathrm{d} P }{ \mathrm{d} \Omega} = r^2S_r = r^2 \cdot\frac{1}{\mu_0} (\boldsymbol{E}_{\text{rad}}\times \boldsymbol{B}_{\text{rad}}) \cdot \hat{r}
-$$
-- Total radiation power
-$$
-P = \oint_{\partial V} \frac{ \mathrm{d} P }{ \mathrm{d} \Omega} \,\mathrm{d}\Omega
-$$
-### 3.2.2 Far field approximation
+### 3.2.1 Far field approximation
 For infinitely far field $\color{red}r'(source)\ll r(field)$, one finds
 $$
 t_R = t - \frac{R}{c} \approx t-\frac{r}{c} + \frac{r'}{c}(\hat{r}' \cdot \hat{r}) = t_r + \frac{r'}{c}(\hat{r}' \cdot \hat{r})
@@ -678,7 +686,7 @@ Ponyting vector can be calculated as,
 $$
 \boldsymbol{S} = \frac{c}{\mu_0} B^2 \hat{r} = \epsilon_0 c E^2 \hat{r}
 $$
-### 3.2.3 Resonant radiation  
+### 3.2.2 Resonant radiation  
 For resonant radiation  
 $$
 \boldsymbol{J}(\boldsymbol{x'},t) = \boldsymbol{J}_0(\boldsymbol{x'}) e^{-\mathrm{i} \omega t}
@@ -690,6 +698,12 @@ $$
 = \boldsymbol{J}(\boldsymbol{x'},t)  e^{\mathrm{i}(kr - \boldsymbol{k}\cdot\boldsymbol{x'})}
 ,\quad
 \frac{\boldsymbol{k}}{\omega} = \frac{\hat{r}}{c}
+$$
+$$
+\boxed{
+\nabla \longleftrightarrow \mathrm{i}\boldsymbol{k} \longleftrightarrow -\frac{\hat{r}}{c}\partial_t,\quad 
+\partial_t \longleftrightarrow -\mathrm{i}\omega
+}
 $$
 Vector potential and EMF (by retaining only the dominant $\mathcal{O}(1/r)$ term),
 $$
@@ -718,22 +732,83 @@ $$
 $$
 \langle \boldsymbol{S} \rangle =   \frac{\epsilon_0c}{2} E^2 \hat{r} = \frac{\mu_0cI_0^2}{8\pi^2} \frac{g^2(\theta)}{r^2}\hat{r}
 $$
-### 3.2.4 Small source approximation  
+### 3.2.3 Small source approximation  
 Approximation Regime: localized, long-wavelength source in the radiation zone $\color{red}r'(source)\ll\lambda\ll r(field)$ with $\lambda=\frac{2\pi}{k}$ is the wavelength of the radiation. This implies that $\boldsymbol{k}\cdot \boldsymbol{x'}\sim \frac{x'}{\lambda} \ll 1$ and we can taylor-expand $e^{-\mathrm{i} \boldsymbol{k}\cdot\boldsymbol{x'}}$ to obtain,
 $$
-\begin{align} 
 \boldsymbol{A}(\boldsymbol{x},t) 
-&= \frac{\mu_0e^{\mathrm{i} k r}}{4\pi r}\iiint \boldsymbol{J}(\boldsymbol{x'},t)e^{-\mathrm{i} \boldsymbol{k}\cdot\boldsymbol{x'}} \,\mathrm{d}^3x'
-\\[8pt]
-&=
-\frac{\mu_0}{4\pi r} \left.\left[ \dot{\boldsymbol{p}} + \frac{1}{c}\dot{\boldsymbol{m}}\times \hat{r} + \frac{1}{6c}\hat{r}\cdot\ddot{\mathsf{D}} + \cdots \right]\right|_{\Large\color{red}t_r}
-\end{align}
+= \frac{\mu_0e^{\mathrm{i} k r}}{4\pi r}\iiint \boldsymbol{J}(\boldsymbol{x'},t)e^{-\mathrm{i} \boldsymbol{k}\cdot\boldsymbol{x'}} \,\mathrm{d}^3x'
+=
+\frac{\mu_0 e^{\mathrm{i} k r}}{4\pi r} \left[ \dot{\boldsymbol{p}}(t) + \frac{1}{c}\dot{\boldsymbol{m}}(t) \times \hat{r} + \frac{1}{6c}\hat{r}\cdot\ddot{\mathsf{D}}(t) + \cdots \right]
 $$
 $$
 \boldsymbol{p} = \int \boldsymbol{x'}\,\mathrm{d}q,\quad 
 \boldsymbol{m}=\frac{1}{2}\oint \boldsymbol{x'}\times\,\mathrm{d}\boldsymbol{I}, \quad
 \mathsf{D} = \int (3\boldsymbol{x'}\boldsymbol{x'} - r'^2\mathsf{I})\,\mathrm{d}q
 $$
+#### electric dipole radiation  
+- Potential and EMF
+$$
+\boldsymbol{A}(\boldsymbol{x},t) = \frac{\mu_0e^{\mathrm{i} kr}}{4\pi r} \dot{\boldsymbol{p}}(t)
+\implies
+\left\{
+\begin{align} 
+c\boldsymbol{B} &= \frac{\mu_0e^{\mathrm{i} kr}}{4\pi r} \ddot{\boldsymbol{p}}(t) \times \hat{r}
+\\[8pt]
+\boldsymbol{E} &= c\boldsymbol{B} \times \hat{r}
+\end{align}
+\right.
+$$
+- Radiation
+$$
+\langle \boldsymbol{S} \rangle =  \frac{c}{2\mu_0} B^2 \hat{r} = \frac{\mu_0}{32\pi^2c} \frac{|\ddot{\boldsymbol{p}} \times \hat{r}|^2}{ r^2}
+,\quad
+\langle P\rangle = \frac{\mu_0}{12\pi c} |\ddot{\boldsymbol{p}}|^2
+$$
+where $|\ddot{\boldsymbol{p}} \times \hat{r}|$ and $|\ddot{\boldsymbol{p}}|$ denote the amplitudes with the factor $e^{-\mathrm{i}\omega t}$ omitted.  
+
+For example, a directional dipole $\boldsymbol{p}(t) = p_0 e^{-\mathrm{i} \omega t} \hat{z}$ 
+$$
+c\boldsymbol{B} = -\frac{\mu_0\omega^2p_0}{4\pi r}\sin\theta e^{\mathrm{i}(kr-\omega t)} \hat{\phi},\quad
+\boldsymbol{E} = cB \hat{\theta}
+$$
+$$
+\langle \boldsymbol{S} \rangle = \frac{\mu_0 p_0^2 \omega^4}{32\pi^2 c} \frac{\sin^2\theta}{r^2} \hat{r}
+,\quad
+\langle P\rangle = \frac{\mu_0}{12\pi c}  p_0^2 \omega^4
+$$
+#### magnetic dipole radiation  
+- Potential and EMF
+$$
+\boldsymbol{A}(\boldsymbol{x},t) = \frac{\mu_0e^{\mathrm{i} kr}}{4\pi c r} \dot{\boldsymbol{m}}(t_r) \times \hat{r}
+\implies
+\left\{
+\begin{align} 
+\boldsymbol{E} &= -\frac{\mu_0e^{\mathrm{i} kr}}{4\pi c r} \ddot{\boldsymbol{m}}(t_r) \times \hat{r}
+\\[8pt]
+c\boldsymbol{B} &= \hat{r} \times \boldsymbol{E}
+\end{align}
+\right.
+$$
+- Radiation
+$$
+\langle \boldsymbol{S} \rangle =  \frac{c}{2\mu_0} B^2 \hat{r} = \frac{\mu_0}{32\pi^2c^3} \frac{|\ddot{\boldsymbol{m}} \times \hat{r}|^2}{ r^2}
+,\quad
+\langle P\rangle = \frac{\mu_0}{12\pi c^3} |\ddot{\boldsymbol{m}}|^2
+$$
+where $|\ddot{\boldsymbol{m}} \times \hat{r}|$ and $|\ddot{\boldsymbol{m}}|$ denote the amplitudes with the factor $e^{-\mathrm{i}\omega t}$ omitted.  
+
+For example, a directional dipole $\boldsymbol{m}(t) = m_0 e^{-\mathrm{i} \omega t} \hat{z}$ 
+$$
+\boldsymbol{E} = \frac{\mu_0\omega^2m_0}{4\pi c r}\sin\theta e^{\mathrm{i}(kr-\omega t)} \hat{\phi},\quad
+c\boldsymbol{B} = E \hat{\theta}
+$$
+$$
+\langle \boldsymbol{S} \rangle = \frac{\mu_0 m_0^2 \omega^4}{32\pi^2 c^3} \frac{\sin^2\theta}{r^2} \hat{r}
+,\quad
+\langle P\rangle = \frac{\mu_0}{12\pi c^3}  m_0^2 \omega^4
+$$
+
+#### 3.3 electric quadruple radiation  
 
 ## 3.3 Moving point charge
 
