@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/ppt_doc/","noteIcon":"default","created":"2026-03-27T23:31:16.278+08:00","updated":"2026-06-07T10:49:40.810+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/ppt_doc/","noteIcon":"default","created":"2026-03-27T23:31:16.278+08:00","updated":"2026-06-07T10:57:48.132+08:00","dg-note-properties":{}}
 ---
 
 # 1 
@@ -36,7 +36,7 @@
 
 ## 3.3 
 
-<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/ppt/CH3%E7%8B%AD%E7%9B%B8/ED03C.pdf" width="100%" height="900px" title="ED03C" style="border:1px solid #ccc;"></iframe>
+<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/ppt/CH3%E7%8B%AD%E7%9B%B8/ED03C(1).pdf" width="100%" height="900px" title="ED03C" style="border:1px solid #ccc;"></iframe>
 
 # 4 
 ## 4.1 
@@ -51,11 +51,11 @@
 
 ## 4.4 
 
-<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/ppt/CH4%E7%94%B5%E7%A3%81%E8%A7%84%E5%BE%8B%E7%9A%84%E5%8D%8F%E5%8F%98%E6%80%A7/ED04D(1).pdf" width="100%" height="900px" title="ED04D(1)" style="border:1px solid #ccc;"></iframe>  
+<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/ppt/CH4%E7%94%B5%E7%A3%81%E8%A7%84%E5%BE%8B%E7%9A%84%E5%8D%8F%E5%8F%98%E6%80%A7/ED04D.pdf" width="100%" height="900px" title="ED04D(1)" style="border:1px solid #ccc;"></iframe>  
 
 ## 4.5 
 
-<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/ppt/CH4%E7%94%B5%E7%A3%81%E8%A7%84%E5%BE%8B%E7%9A%84%E5%8D%8F%E5%8F%98%E6%80%A7/ED04E(1).pdf" width="100%" height="900px" title="ED04E(1)" style="border:1px solid #ccc;"></iframe>
+<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/ppt/CH4%E7%94%B5%E7%A3%81%E8%A7%84%E5%BE%8B%E7%9A%84%E5%8D%8F%E5%8F%98%E6%80%A7/ED04E.pdf" width="100%" height="900px" title="ED04E(1)" style="border:1px solid #ccc;"></iframe>
 
 
 # 5 
