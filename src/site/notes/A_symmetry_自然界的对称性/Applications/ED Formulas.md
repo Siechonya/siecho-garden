@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-05-29T08:22:24.751+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-06-07T10:39:08.759+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1296,7 +1296,13 @@ For the action $S = \int_{\Omega} \mathcal{L}(A^\alpha(x^\mu), \partial_\mu A^\a
 $$
 \frac{\delta \mathcal{L}}{\delta A^\alpha} \triangleq \frac{\partial \mathcal{L}}{\partial A^\alpha} - \partial^\mu \left( \frac{\partial \mathcal{L}}{\partial (\partial^\mu A^\alpha)} \right) = 0
 $$
-Gauge transformation is $\Delta \mathcal{L} = \partial_\alpha C^\alpha (A^\mu, x^\mu)$.
+Gauge transformation is $\Delta \mathcal{L} = \partial_\alpha C^\alpha (A^\mu, x^\mu)$.  
+#### Generalized Lagrange equation for Vector Field  
+For the action $S = \int_{\Omega} \mathcal{L}(A^\alpha, \partial_{\mu_1} A^\alpha, \partial_{\mu_1\mu_2} A^\alpha, \ldots, \partial_{\mu_1\mu_2\mu_3\ldots\mu_s} A^\alpha, ;x^\mu) \, \mathrm{d}^4x$, provided that the boundary of the spacetime region $\Omega$ is fixed and $\delta A^\alpha = 0$ on the boundary, then
+$$
+\frac{\delta \mathcal{L}}{\delta A^\alpha} \triangleq \frac{\partial \mathcal{L}}{\partial A^\alpha} + \sum_{k=1}^{s} (-1)^k \partial^{\mu_1}\partial^{\mu_2}\cdots \partial^{\mu_k} \left( \frac{\partial^k \mathcal{L}}{\partial (\partial^{\mu_1}\partial^{\mu_2}\cdots \partial^{\mu_k}A^\alpha)} \right) = 0
+$$
+Gauge transformation is $\Delta \mathcal{L} = \partial_\alpha C^\alpha (A^\alpha, \partial_{\mu_1} A^\alpha, \partial_{\mu_1\mu_2} A^\alpha, \ldots, \partial_{\mu_1\mu_2\mu_3\ldots\mu_{s-1}} A^\alpha, ;x^\mu)$.  
 ### 4.2.2 Particles' motion 
 $$
 L(\boldsymbol{x}, \boldsymbol{v}) = -mc^2 \sqrt{1-\frac{v^2}{c^2}} - e\varphi + e\boldsymbol{v}\cdot \boldsymbol{A} ,\quad \boldsymbol{p} = \frac{ \partial L }{ \partial \boldsymbol{v} } = \gamma m \boldsymbol{v} + e\boldsymbol{A}

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-06T16:12:51.350+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-07T10:24:41.381+08:00","dg-note-properties":{}}
 ---
 
 
@@ -579,7 +579,23 @@ $$
 $$
 - Total radiation power
 $$
-P = \oint_{\partial V} \frac{ \mathrm{d} P }{ \mathrm{d} \Omega} \,\mathrm{d}\Omega
+P = \oint_{\Omega} \frac{ \mathrm{d} P }{ \mathrm{d} \Omega} \,\mathrm{d}\Omega
+$$
+- Spherical shell integral (useful when calculating $P$). For $\hat{r}=n_i\hat{e}_i$,  
+$$
+\oint f(n)\,\mathrm{d}\Omega = 
+\left\{
+\begin{aligned} 
+& 4\pi, & f &= 1 \\[6pt]
+& 0, & f &= n_i \\[6pt]
+& \frac{4\pi}{3}\delta_{ij}, & f &= n_i n_j \\[6pt]
+& 0, & f &= n_i n_j n_k \\[6pt]
+& \frac{4\pi}{5} \delta_{(ij}\delta_{kl)}, & f &= n_i n_j n_k n_l \quad \left(\text{where } \delta_{(ij}\delta_{kl)} = \frac{1}{3} (\delta_{ij}\delta_{kl} + \delta_{ik}\delta_{jl} + \delta_{il}\delta_{jk})\right) \\[6pt]
+& \vdots & & \vdots \\[6pt]
+& 0, & f &= n_{i_1} n_{i_2} \dots n_{i_{2m+1}} \\[6pt]
+& \frac{4\pi}{2m+1} \delta_{(i_1 i_2} \delta_{i_3i_4} \dots \delta_{i_{2m-1} i_{2m})}, & f &= n_{i_1} n_{i_2} \dots n_{i_{2m}} \\[6pt]
+\end{aligned}
+\right.
 $$
 ### 3.1.2 Time-varying dipole
 - Density
@@ -682,6 +698,7 @@ c\boldsymbol{B} = (\partial_t \boldsymbol{A}) \times \hat{r},\quad
 \boldsymbol{E} = c\boldsymbol{B} \times \hat{r}
 }
 $$
+![zz_figure/Pasted image 20260607102427.png](/img/user/zz_figure/Pasted%20image%2020260607102427.png)
 Ponyting vector can be calculated as, 
 $$
 \boldsymbol{S} = \frac{c}{\mu_0} B^2 \hat{r} = \epsilon_0 c E^2 \hat{r}
@@ -762,7 +779,8 @@ $$
 $$
 \langle \boldsymbol{S} \rangle =  \frac{c}{2\mu_0} B^2 \hat{r} = \frac{\mu_0}{32\pi^2c} \frac{|\ddot{\boldsymbol{p}} \times \hat{r}|^2}{ r^2}
 ,\quad
-\langle P\rangle = \frac{\mu_0}{12\pi c} |\ddot{\boldsymbol{p}}|^2
+\langle P\rangle = \oint |\langle\boldsymbol{S}\rangle|r^2\,\mathrm{d}\Omega
+=\frac{\mu_0}{12\pi c} |\ddot{\boldsymbol{p}}|^2
 $$
 where $|\ddot{\boldsymbol{p}} \times \hat{r}|$ and $|\ddot{\boldsymbol{p}}|$ denote the amplitudes with the factor $e^{-\mathrm{i}\omega t}$ omitted.  
 
@@ -791,7 +809,7 @@ c\boldsymbol{B} &= \hat{r} \times \boldsymbol{E}
 $$
 - Radiation
 $$
-\langle \boldsymbol{S} \rangle =  \frac{c}{2\mu_0} B^2 \hat{r} = \frac{\mu_0}{32\pi^2c^3} \frac{|\ddot{\boldsymbol{m}} \times \hat{r}|^2}{ r^2}
+\langle \boldsymbol{S} \rangle =  \frac{c}{2\mu_0} B^2 \hat{r} = \frac{\mu_0}{32\pi^2c^3} \frac{|\ddot{\boldsymbol{m}} \times \hat{r}|^2}{ r^2} \hat{r}
 ,\quad
 \langle P\rangle = \frac{\mu_0}{12\pi c^3} |\ddot{\boldsymbol{m}}|^2
 $$
@@ -807,7 +825,7 @@ $$
 ,\quad
 \langle P\rangle = \frac{\mu_0}{12\pi c^3}  m_0^2 \omega^4
 $$
-#### Electric quadruple radiation  
+#### Electric quadruple radiation *
 - Potential and EMF
 $$
 \boldsymbol{A}(\boldsymbol{x},t) 
@@ -817,12 +835,21 @@ $$
 \left\{
 \begin{align} 
 c\boldsymbol{B} &= 
+\frac{\mu_0e^{\mathrm{i} kr}}{24\pi c r} \hat{r} \cdot \dddot{\mathsf{D}} \times \hat{r}
 \\[8pt]
-\boldsymbol{E} &= 
+\boldsymbol{E} &= c\boldsymbol{B} \times \hat{r}
 \end{align}
 \right.
 $$
-#### The radiation resistance of antenna  
+- Radiation
+
+$$
+\langle \boldsymbol{S} \rangle =  \frac{c}{2\mu_0} B^2 \hat{r} = \frac{\mu_0}{1152\pi^2c^3} \frac{|\hat{r} \cdot \dddot{\mathsf{D}} \times \hat{r}|^2}{ r^2} \hat{r}
+,\quad
+\langle P\rangle = \frac{\mu_0}{1440\pi c^3} |\dddot{\mathsf{D}}|^2
+$$
+where $|\hat{r} \cdot \dddot{\mathsf{D}} \times \hat{r}|$ and $|\dddot{\mathsf{D}} |$ denote the amplitudes with the factor $e^{-\mathrm{i}\omega t}$ omitted.  
+#### Resistance of antenna *
 #todo
 ## 3.3 Moving point charge
 

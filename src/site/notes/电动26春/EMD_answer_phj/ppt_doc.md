@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/ppt_doc/","noteIcon":"default","created":"2026-03-27T23:31:16.278+08:00","updated":"2026-05-29T08:57:49.974+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/ppt_doc/","noteIcon":"default","created":"2026-03-27T23:31:16.278+08:00","updated":"2026-06-07T10:49:40.810+08:00","dg-note-properties":{}}
 ---
 
 # 1 
@@ -86,7 +86,7 @@
 
 ## 7.2 
 
-<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/ppt/CH7%E7%94%B5%E7%A3%81%E8%BE%90%E5%B0%84/ED07B.pdf" width="100%" height="900px" title="ED07B" style="border:1px solid #ccc;"></iframe>
+<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/ppt/CH7%E7%94%B5%E7%A3%81%E8%BE%90%E5%B0%84/ED07B(1).pdf" width="100%" height="900px" title="ED07B" style="border:1px solid #ccc;"></iframe>
 
 
 # 8 
