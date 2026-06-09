@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-07T10:24:41.381+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-08T20:28:39.898+08:00","dg-note-properties":{}}
 ---
 
 
@@ -633,7 +633,7 @@ $$
 \end{align}
 \right.
 $$
-- Poynting vector (for $\boldsymbol{p}(t)=p(t)\hat{z}$)
+- Poynting vector (for directional dipole $\boldsymbol{p}(t)=p(t)\hat{z}$)
 $$
 \boldsymbol{S} = \frac{1}{\mu_0} \boldsymbol{E}\times\boldsymbol{B} \implies
 \left\{
@@ -727,7 +727,9 @@ $$
 \boldsymbol{A}(\boldsymbol{x},t) = \frac{\mu_0e^{\mathrm{i} k r}}{4\pi r}\iiint \boldsymbol{J}(\boldsymbol{x'},t)e^{-\mathrm{i} \boldsymbol{k}\cdot\boldsymbol{x'}} \,\mathrm{d}^3x'
 $$
 $$
+\boxed{
 \langle \boldsymbol{S} \rangle = \frac{1}{2\mu_0} \Re(\boldsymbol{E}^*\times \boldsymbol{B}) =  \frac{c}{2\mu_0} B^2 \hat{r} = \frac{\epsilon_0c}{2} E^2 \hat{r}
+}
 $$
 where $E$ and $B$ denote the field amplitudes with the factor $e^{\mathrm{i}(kr-\omega t)}$ omitted.
 #### Aerial radiation  
@@ -752,10 +754,14 @@ $$
 ### 3.2.3 Small source approximation  
 Approximation Regime: localized, long-wavelength source in the radiation zone $\color{red}r'(source)\ll\lambda\ll r(field)$ with $\lambda=\frac{2\pi}{k}$ is the wavelength of the radiation. This implies that $\boldsymbol{k}\cdot \boldsymbol{x'}\sim \frac{x'}{\lambda} \ll 1$ and we can taylor-expand $e^{-\mathrm{i} \boldsymbol{k}\cdot\boldsymbol{x'}}$ to obtain,
 $$
+\begin{align} 
 \boldsymbol{A}(\boldsymbol{x},t) 
-= \frac{\mu_0e^{\mathrm{i} k r}}{4\pi r}\iiint \boldsymbol{J}(\boldsymbol{x'},t)e^{-\mathrm{i} \boldsymbol{k}\cdot\boldsymbol{x'}} \,\mathrm{d}^3x'
-=
+&= \frac{\mu_0e^{\mathrm{i} k r}}{4\pi r}\iiint \boldsymbol{J}(\boldsymbol{x'},t)e^{-\mathrm{i} \boldsymbol{k}\cdot\boldsymbol{x'}} \,\mathrm{d}^3x'
+\\[8pt]&=
 \frac{\mu_0 e^{\mathrm{i} k r}}{4\pi r} \left[ \dot{\boldsymbol{p}}(t) + \frac{1}{c}\dot{\boldsymbol{m}}(t) \times \hat{r} + \frac{1}{6c}\hat{r}\cdot\ddot{\mathsf{D}}(t) + \cdots \right]
+\\[8pt]&\approx
+\frac{\mu_0}{4\pi r} \left[ \partial_t{\boldsymbol{p}}(t_r) + \frac{1}{c}\partial_t{\boldsymbol{m}}(t_r) \times \hat{r} + \frac{1}{6c}\hat{r}\cdot\partial_t^2{\mathsf{D}}(t_r) + \cdots \right]
+\end{align}
 $$
 $$
 \boldsymbol{p} = \int \boldsymbol{x'}\,\mathrm{d}q,\quad 
@@ -849,8 +855,17 @@ $$
 \langle P\rangle = \frac{\mu_0}{1440\pi c^3} |\dddot{\mathsf{D}}|^2
 $$
 where $|\hat{r} \cdot \dddot{\mathsf{D}} \times \hat{r}|$ and $|\dddot{\mathsf{D}} |$ denote the amplitudes with the factor $e^{-\mathrm{i}\omega t}$ omitted.  
+
+For example, a planar quadrupole in the $xy$-plane with $\mathsf{D}(t) = \mathsf{D}_0 e^{-\mathrm{i} \omega t}$, where the only non-zero components are $D_{xx} = -D_{yy} = Q_0$,
+$$
+c\boldsymbol{B} = -\frac{\mathrm{i}\mu_0\omega^3Q_0}{24\pi c r}\sin\theta \left[ \sin(2\phi) \hat{\theta} + \cos\theta \cos(2\phi) \hat{\phi} \right] e^{\mathrm{i}(kr-\omega t)},\quad 
+\boldsymbol{E} = -\frac{\mathrm{i}\mu_0\omega^3Q_0}{24\pi c r}\sin\theta \left[ \cos\theta \cos(2\phi) \hat{\theta} - \sin(2\phi) \hat{\phi} \right] e^{\mathrm{i}(kr-\omega t)}
+$$
+$$
+\langle \boldsymbol{S} \rangle = \frac{\mu_0 Q_0^2 \omega^6}{1152\pi^2 c^3} \frac{\sin^2\theta \left[1 - \sin^2\theta\cos^2(2\phi)\right]}{r^2} \hat{r} ,\quad \langle P\rangle = \frac{\mu_0}{720\pi c^3} Q_0^2 \omega^6
+$$
 #### Resistance of antenna *
 #todo
 ## 3.3 Moving point charge
-
 # 4 EM wave
+## 4.1 EM wave in the media
