@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-06-07T11:07:01.631+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-06-10T23:25:04.133+08:00","dg-note-properties":{}}
 ---
 
 
@@ -397,6 +397,13 @@ $$
 &\nabla^2 v= \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial v}{\partial r} \right) + \frac{1}{r^2} \frac{\partial^2 v}{\partial \theta^2} + \frac{\partial^2 v}{\partial z^2} 
 \end{aligned}
 $$
+and there are more formulas which may be useful in your further study,   
+$$
+\nabla^2 \boldsymbol{v} = \left( \nabla^2 v_r - \frac{v_r}{r^2} - \frac{2}{r^2}\frac{ \partial v_\theta }{ \partial \theta } \right)\hat{e}_r + \left( \nabla^2 v_\theta - \frac{v_\theta}{r^2} + \frac{2}{r^2}\frac{ \partial v_r }{ \partial \theta } \right)\hat{e}_\theta + \left( \nabla^2 v_z \right)\hat{e}_z 
+$$
+$$
+\boldsymbol{v}\cdot\nabla\boldsymbol{b} = \left( \boldsymbol{v}\cdot\nabla b_r - \frac{v_\theta b_\theta}{r} \right) \hat{e}_r       + \left( \boldsymbol{v}\cdot\nabla b_\theta + \frac{v_\theta b_r}{r} \right) \hat{e}_\theta    + \left( \boldsymbol{v}\cdot\nabla b_z + v_z \frac{\partial b_z}{\partial z} \right) \hat{e}_z
+$$
 - For Spherical coordinates, $\boldsymbol{r} = (r \sin\theta \cos\varphi, r \sin\theta \sin\varphi, r \cos\theta)$
 $$
 \begin{aligned} 
@@ -405,6 +412,18 @@ $$
 &\nabla \times \boldsymbol{v} = \frac{1}{r^2 \sin \theta} \begin{vmatrix} \boldsymbol{e}_r & r \boldsymbol{e}_\theta & r \sin \theta \boldsymbol{e}_\varphi \\ \frac{\partial}{\partial r} & \frac{\partial}{\partial \theta} & \frac{\partial}{\partial \varphi} \\v_r & r v_\theta & r \sin \theta v_\varphi \end{vmatrix}  \\[6pt]
 &\nabla^2 v = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial v}{\partial r} \right) + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial v}{\partial \theta} \right) + \frac{1}{r^2 \sin^2 \theta} \frac{\partial^2 v}{\partial \varphi^2} 
 \end{aligned}
+$$
+and there are more formulas as well,  
+$$
+\begin{aligned} \nabla^2 \boldsymbol{v} = &\left[ \nabla^2 v_r - \frac{2}{r^2} \left(  v_r + \frac{1}{\sin\theta}\frac{ \partial \sin \theta \ v_\theta }{ \partial \theta } + \frac{1}{\sin\theta}\frac{\partial v_\varphi}{\partial \varphi} \right) \right] \hat{e}_r 
+\\ + &\left[ \nabla^2 v_\theta + \frac{1}{r^2} \left( 2\frac{\partial v_r}{\partial \theta} - \frac{v_\theta}{\sin^2\theta} - \frac{2\cos\theta}{\sin^2\theta}\frac{\partial v_\varphi}{\partial \varphi} \right) \right] \hat{e}_\theta 
+\\ + &\left[ \nabla^2 v_\varphi + \frac{1}{r^2} \left( \frac{2}{\sin\theta}\frac{\partial v_r}{\partial \varphi} + \frac{2\cos\theta}{\sin^2\theta}\frac{\partial v_\theta}{\partial \varphi} - \frac{v_\varphi}{\sin^2\theta} \right) \right] \hat{e}_\varphi \end{aligned}
+$$
+$$
+\begin{aligned} \boldsymbol{v}\cdot\nabla\boldsymbol{b} = &\left(  \boldsymbol{v}\cdot\nabla b_r - \frac{v_\theta b_\theta + v_\varphi b_\varphi}{r} \right) \hat{e}_r 
+\\ + &\left(  \boldsymbol{v}\cdot\nabla b_\theta + \frac{v_\theta b_r - v_\varphi b_\varphi \cot\theta}{r} \right) \hat{e}_\theta 
+\\ + &\left(  \boldsymbol{v}\cdot\nabla b_\varphi + \frac{v_\varphi b_r + v_\varphi b_\theta \cot\theta}{r} \right) \hat{e}_\varphi 
+\end{aligned} 
 $$
 ## 1.2 Dirac $\delta$ function  
 ### 1.2.1 Definition
@@ -1185,7 +1204,7 @@ $$
 > 
 > Furthermore, while the time interval dilates ($\mathrm{d}t = \gamma \mathrm{d}\tau$) and the spatial volume element contracts ($\mathrm{d}^3x = \mathrm{d}^3x_0/\gamma$), these two $\gamma$ factors exactly cancel each other out. This ensures that the four-dimensional spacetime volume $\mathrm{d}^4x = c\,\mathrm{d}t\,\mathrm{d}^3x$ is a Lorentz invariant (scalar).
 
-The current's 4-divergence is zero:
+The current's 4-divergence is zero,
 $$
 \partial_\alpha J_e^\alpha = 
 \nabla \cdot \boldsymbol{j}_e + \frac{\partial \rho_e}{\partial t} = 0

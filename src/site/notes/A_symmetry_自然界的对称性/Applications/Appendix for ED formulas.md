@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-05-26T19:40:00.896+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-06-10T12:23:28.660+08:00","dg-note-properties":{}}
 ---
 
 > This document supplements some rather complex proof processes within [[A_symmetry_自然界的对称性/Applications/ED Formulas\|ED Formulas]] and [[A_symmetry_自然界的对称性/Applications/ED formulas (2)\|ED formulas (2)]] 
@@ -316,8 +316,37 @@ Since $\mathrm{d}U_{\text{field}} = \nabla U_{\text{field}}\cdot\mathrm{d}\bolds
 $$
 \boldsymbol{F} = +\nabla U_{\text{field}}
 $$
-
-
+# 5 Liénard-Wiechert potential  
+Here $t_r=t-\frac{|\boldsymbol{x}-\boldsymbol{x'}|}{c}$, thus
+$$
+\begin{align} 
+\varphi (\boldsymbol{x} , t) 
+&=
+\frac{1}{4\pi \epsilon_0} \int \frac{\rho(\boldsymbol{x}', t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
+\\[8pt]&=
+\frac{e}{4 \pi \epsilon_{0}} \int d^{3} x^{\prime} \frac{\delta^{3}\left(\boldsymbol{x}^{\prime}-\boldsymbol{x}_{e}\left(t-\frac{\left|\boldsymbol{x}-\boldsymbol{x}^{\prime}\right|}{c}\right)\right)}{\left|\boldsymbol{x}-\boldsymbol{x}^{\prime}\right|}
+\\[8pt]&=
+\frac{e}{4\pi \epsilon_0} \int  \mathrm{d}^3x' \int \frac{   \delta^{3}\left(\boldsymbol{x}^{\prime}-\boldsymbol{x}_{e}(s)\right)    }{|\boldsymbol{x}-\boldsymbol{x'}|} \delta\left( s-\left( t-\frac{|\boldsymbol{x}-\boldsymbol{x'}|}{c} \right) \right)  \,\mathrm{d}s
+\\[8pt]&=
+\frac{e}{4\pi \epsilon_0} \int \frac{  \delta\left( s-\left( t-\frac{|\boldsymbol{x}-\boldsymbol{x}_e(s)|}{c} \right) \right)  }{|\boldsymbol{x}-\boldsymbol{x}_e(s)|}\,\mathrm{d}s,
+\quad \boldsymbol{R}(s,\boldsymbol{x}) \triangleq \boldsymbol{x} - \boldsymbol{x}_e(s)
+\\[8pt]&=
+\frac{e}{4\pi \epsilon_0} \int \frac{  \delta\left( s-t^* \right)  }{|\boldsymbol{x}-\boldsymbol{x}_e(s)| \cdot \left| {\partial\left( s-\left( t-\frac{|\boldsymbol{x}-\boldsymbol{x}_e(s)|}{c} \right) \right)}/{\partial s} \right|_{t^*} }  \,\mathrm{d}s,\quad
+\left[ s-\left( t-\frac{|\boldsymbol{x}-\boldsymbol{x}_e(s)|}{c} \right) \right]_{t^*}=0
+\\[8pt]&=
+\frac{e}{4\pi \epsilon_0} \int \frac{  \delta\left( s-t^* \right)  }{|\boldsymbol{x}-\boldsymbol{x}_e(s)|  \left( 1-\hat{R}(t^*)\cdot\boldsymbol{\beta}(t^*) \right) }  \,\mathrm{d}s
+\\[8pt]&=
+\frac{e}{4\pi \epsilon_0}  \frac{ 1 }{  {R}(t^*) -\boldsymbol{R}(t^*)\cdot\boldsymbol{\beta}(t^*) }
+\end{align}
+$$
+To understand the additional factor $1-\hat{R}(t^*)\cdot\boldsymbol{\beta}(t^*)$ compared with the electrostatic potential of stationary charge point $e$, differentiating $t^* = t-\frac{|\boldsymbol{x}-\boldsymbol{x}_e(t^*)|}{c}$ leads to,
+$$
+\mathrm{d} t=\mathrm{d} t^*+\frac{1}{c} \frac{\partial R(\boldsymbol{x},t^*)}{\partial t^*} \mathrm{~d} t^*=(1-\hat{R} \cdot \boldsymbol{\beta})|_{t^*} \,\mathrm{d} t^*
+$$
+$$
+\implies
+\mathrm{d} t^*= \left.\frac{\mathrm{d} t}{1-\hat{R} \cdot \boldsymbol{\beta}}\right|_{t^*}
+$$
 
 
 

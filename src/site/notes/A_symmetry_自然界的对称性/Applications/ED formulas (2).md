@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-08T20:28:39.898+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-10T12:26:07.150+08:00","dg-note-properties":{}}
 ---
 
 
@@ -367,7 +367,7 @@ $$
 D_{11} = \frac{Q}{5}(2a_1^2 - a_2^2 - a_3^2), \quad D_{22} = \cdots, \quad D_{i\neq j} = 0
 $$
 # 2 Magnetostatic Field  
-## 2.1 magnetic energy
+## 2.1 Magnetic energy
 #todo
 ## 2.2 Multipole expansion (scalar potential)
 ### 2.2.1 magnetic scalar potential *
@@ -677,12 +677,15 @@ $$
 ### 3.2.1 Far field approximation
 For infinitely far field $\color{red}r'(source)\ll r(field)$, one finds
 $$
-t_R = t - \frac{R}{c} \approx t-\frac{r}{c} + \frac{r'}{c}(\hat{r}' \cdot \hat{r}) = t_r + \frac{r'}{c}(\hat{r}' \cdot \hat{r})
-\triangleq t^*
+t_r = t - \frac{R}{c} \approx t-\frac{r}{c} + \frac{r'}{c}(\hat{r}' \cdot \hat{r}) = \tilde{t}_r + \frac{r'}{c}(\hat{r}' \cdot \hat{r})
+\triangleq
+t^*
 $$
 $$
-\frac{ \partial t^* }{ \partial t }=1,\quad \nabla t^* = - \frac{\hat{r}}{c} + \frac{1}{c} \mathcal{O}\left( \frac{r'}{r} \right)
+\frac{ \partial t_r }{ \partial t }=1,\quad \nabla t_r = - \frac{\hat{r}}{c} + \frac{1}{c} \mathcal{O}\left( \frac{r'}{r} \right)
 $$
+> Note: In order to  to maintain consistency with the previous sections and avoid confusion, I consistently use $t_r=t-\frac{R}{c}\approx t^*$ to denote the real retarded time and $\tilde{t}_r=t-\frac{r}{c}$ for its leading-order approximation,  rather than $t_r=t-\frac{R}{c}$ before and $t_r=t-\frac{r}{c}$ here in the class.
+
 Consequently, for any field function in the radiation zone of the form $f(\boldsymbol{x}, t) \approx \frac{1}{r} g(t^*)$, where the leading-order term is $\mathcal{O}(1/r)$, its gradient can be expanded as,
 $$
 \nabla f = \nabla \left( \frac{1}{r} \right) g(t^*) + \frac{1}{r} g'(t^*) \nabla t^* = -\frac{\hat{r}}{r^2} g(t^*) + (\nabla t^*) \partial_t f
@@ -713,6 +716,7 @@ $$
 \boldsymbol{J}(\boldsymbol{x'}, t^*) 
 = \boldsymbol{J}_0(\boldsymbol{x'}) e^{\mathrm{i}(kr - \omega t)  -\mathrm{i}\boldsymbol{k}\cdot\boldsymbol{x'}} 
 = \boldsymbol{J}(\boldsymbol{x'},t)  e^{\mathrm{i}(kr - \boldsymbol{k}\cdot\boldsymbol{x'})}
+= \boldsymbol{J}(\boldsymbol{x'},\tilde{t}_r)  e^{-\mathrm{i}\boldsymbol{k}\cdot\boldsymbol{x'}}
 ,\quad
 \frac{\boldsymbol{k}}{\omega} = \frac{\hat{r}}{c}
 $$
@@ -759,8 +763,8 @@ $$
 &= \frac{\mu_0e^{\mathrm{i} k r}}{4\pi r}\iiint \boldsymbol{J}(\boldsymbol{x'},t)e^{-\mathrm{i} \boldsymbol{k}\cdot\boldsymbol{x'}} \,\mathrm{d}^3x'
 \\[8pt]&=
 \frac{\mu_0 e^{\mathrm{i} k r}}{4\pi r} \left[ \dot{\boldsymbol{p}}(t) + \frac{1}{c}\dot{\boldsymbol{m}}(t) \times \hat{r} + \frac{1}{6c}\hat{r}\cdot\ddot{\mathsf{D}}(t) + \cdots \right]
-\\[8pt]&\approx
-\frac{\mu_0}{4\pi r} \left[ \partial_t{\boldsymbol{p}}(t_r) + \frac{1}{c}\partial_t{\boldsymbol{m}}(t_r) \times \hat{r} + \frac{1}{6c}\hat{r}\cdot\partial_t^2{\mathsf{D}}(t_r) + \cdots \right]
+\\[8pt]&=
+\frac{\mu_0}{4\pi r} \left[ \partial_t{\boldsymbol{p}}(\tilde{t}_r) + \frac{1}{c}\partial_t{\boldsymbol{m}}(\tilde{t}_r) \times \hat{r} + \frac{1}{6c}\hat{r}\cdot\partial_t^2{\mathsf{D}}(\tilde{t}_r) + \cdots \right]
 \end{align}
 $$
 $$
@@ -866,6 +870,34 @@ $$
 $$
 #### Resistance of antenna *
 #todo
-## 3.3 Moving point charge
+## 3.3 Moving point charge  
+### 3.3.1 Radiation of moving point charge  
+- Intensity
+$$
+J^{\alpha}(x^\mu)= ec \int u^{\alpha}(\tau) \delta^{4}(x^\mu-x^\mu_e(\tau)) \,\mathrm{d} \tau = (\rho c, \boldsymbol{J})
+$$
+$$
+\rho(\boldsymbol{x}, t) = e\delta^3(\boldsymbol{x}-\boldsymbol{x}_e(t)),\quad
+\boldsymbol{J}(\boldsymbol{x}, t) = e\boldsymbol{v}(t) \delta^3(\boldsymbol{x}-\boldsymbol{x}_e(t))
+$$
+- Liénard-Wiechert potential
+$$
+\varphi (\boldsymbol{x} , t) 
+=
+\frac{1}{4\pi \epsilon_0} \int \frac{\rho(\boldsymbol{x}', t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
+=
+\frac{e}{4\pi \epsilon_0} \left. \frac{ 1 }{ R \left( 1 -\hat{R}\cdot\boldsymbol{\beta} \right) }\right|_{t_r},
+\quad
+\text{where } t_r = t-\frac{|\boldsymbol{x}-\boldsymbol{x}_e(t_r)|}{c}
+$$
+$$
+\boldsymbol{A}(\boldsymbol{x}, t) = \frac{\mu_0}{4\pi } \int \frac{\boldsymbol{J}(\boldsymbol{x'}, t_r)}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
+=\frac{\boldsymbol{\beta}(t_r)}{c} \varphi(\boldsymbol{x},t)
+$$
+> proof ? see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#5 Liénard-Wiechert potential\|Appendix for ED formulas#5 Liénard-Wiechert potential]] 
+
+- Liénard-Wiechert EMF
+
+
 # 4 EM wave
 ## 4.1 EM wave in the media
