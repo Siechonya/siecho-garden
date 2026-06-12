@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T13:36:45.900+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T14:08:32.677+08:00","dg-note-properties":{}}
 ---
 
 
@@ -701,7 +701,7 @@ c\boldsymbol{B} = (\partial_t \boldsymbol{A}) \times \hat{r},\quad
 \boldsymbol{E} = c\boldsymbol{B} \times \hat{r}
 }
 $$
-![zz_figure/Pasted image 20260607102427.png](/img/user/zz_figure/Pasted%20image%2020260607102427.png)
+![[zz_figure/Pasted image 20260607102427.png#pic_center|260]]
 Ponyting vector can be calculated as, 
 $$
 \boxed{
@@ -1007,7 +1007,7 @@ $$
 
 > Note: This result is consistent with the instantaneous electric-dipole radiation formula for a single charge. By identifying the dipole moment as $\boldsymbol{p}=e\boldsymbol{x}_e$ (hence $\ddot{\boldsymbol{p}}=e\boldsymbol{a}$), the total power $P=\frac{\mu_0}{6\pi c} |\ddot{\boldsymbol{p}}|^2$ yields identical results. 
 
-#### $\beta \to 1$
+#### $\beta \in (0,1)$
 The fully relativistic generalization (Liénard's formula), is given by  
 $$
 P = \frac{\mu_0 e^2}{6\pi c} \gamma^6\left[ a^2 - \left| {\boldsymbol{\beta} \times \boldsymbol{a}}\right|^2 \right] = \frac{\mu_0 e^2}{6\pi c} \gamma^4\left[ a^2_\perp + \gamma^2 a^2_\parallel \right] 
@@ -1088,10 +1088,139 @@ P_\perp = \frac{\mu_0 e^2}{6\pi c} \gamma^4 a_\perp^2
 $$
 where $\phi$ is the azimuthal angle. In the ultrarelativistic limit $\beta\to 1$, this expression describes the synchrotron radiation.  
 
-
-```desmos-graph
-y=x
+```easy-tikz
+{
+  "dimension": false,
+  "documentSetup": true,
+  "title": "\\beta=0.3,\\ \\phi=0: Radiation angular distribution",
+  "size_x_cm": 8,
+  "size_y_cm": 8,
+  "show_axis_label": true,
+  "axis_label_x": "x",
+  "axis_label_y": "y",
+  "documentClose": true,
+  "showAxis": true,
+  "showLargeGrid": true,
+  "showSmallGrid": false,
+  "gridSize": 5,
+  "xmin": "-1",
+  "xmax": "4",
+  "ymin": "-2.5",
+  "ymax": "2.5",
+  "axis_style": "middle",
+  "functions": [
+    {
+      "expression": "(1/(1 - 0.3*cos(x))^3) * (1 - (sin(x)^2) / (1.0989 * (1 - 0.3*cos(x))^2))",
+      "domain": "0:2*PI",
+      "showLegend": false,
+      "fill": false,
+      "fillOpacity": 0.2,
+      "fillPattern": "solid",
+      "tangent": false,
+      "dashed": false,
+      "tangentPoint": "",
+      "extrema": false,
+      "color": "red",
+      "thickness": "thin",
+      "parametric": false,
+      "expressionY": "",
+      "name": "radiation"
+    },
+    {
+      "expression": "(1/(1 - 0.2*cos(x))^3) * (1 - (sin(x)^2) / (1.0417 * (1 - 0.2*cos(x))^2))",
+      "domain": "-10:10",
+      "showLegend": false,
+      "fill": false,
+      "fillOpacity": 0.2,
+      "fillPattern": "solid",
+      "tangent": false,
+      "dashed": false,
+      "tangentPoint": "",
+      "extrema": false,
+      "color": "blue",
+      "thickness": "thin",
+      "parametric": false,
+      "expressionY": "",
+      "name": "f2"
+    },
+    {
+      "expression": "(1/(1 - 0.1*cos(x))^3) * (1 - (sin(x)^2) / (1.0101 * (1 - 0.1*cos(x))^2))",
+      "domain": "-10:10",
+      "showLegend": false,
+      "fill": false,
+      "fillOpacity": 0.2,
+      "fillPattern": "solid",
+      "tangent": false,
+      "dashed": false,
+      "tangentPoint": "",
+      "extrema": false,
+      "color": "teal",
+      "thickness": "thin",
+      "parametric": false,
+      "expressionY": "",
+      "name": "f3"
+    }
+  ],
+  "zmin": "-5",
+  "zmax": "5",
+  "axis_label_z": "z",
+  "rotationX": 30,
+  "rotationZ": 45,
+  "zoom3D": 1,
+  "boxAspect": "true",
+  "functions3D": [],
+  "majorTickNum": 5,
+  "previewSize": 640,
+  "annotations": [
+    {
+      "x": "0.5",
+      "y": "0",
+      "text": "v",
+      "color": "red",
+      "size": "large",
+      "anchor": "above"
+    },
+    {
+      "x": "0",
+      "y": "-0.5",
+      "text": "a",
+      "color": "green",
+      "size": "large",
+      "anchor": "left"
+    }
+  ],
+  "tools": [
+    {
+      "type": "segment",
+      "x1": "0",
+      "y1": "0",
+      "x2": "0",
+      "y2": "-0.8",
+      "color": "green",
+      "thickness": "thin",
+      "dashed": false,
+      "arrow": "forward"
+    },
+    {
+      "type": "segment",
+      "x1": "0",
+      "y1": "0",
+      "x2": "0.8",
+      "y2": "0",
+      "color": "red",
+      "thickness": "thin",
+      "dashed": false,
+      "arrow": "forward"
+    }
+  ],
+  "coordinateSystem": "polar",
+  "axis_label_x_polar": "",
+  "axis_label_y_polar": "",
+  "displayWidth": 520,
+  "displayAlign": "center"
+}
 ```
+
 #### Radiation damping
 
 
