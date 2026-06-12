@@ -1,4 +1,4 @@
-<!-- ========== 右侧标题目录折叠按钮 ========== -->
+<!-- ========== 右侧标题目录折叠按钮（图标风格） ========== -->
 <style>
   body.hide-right-toc .toc-container,
   body.hide-right-toc .toc {
@@ -8,19 +8,23 @@
   #toggle-right-toc-btn {
     position: fixed;
     right: 20px;
-    top: 80px;               /* ← 调整这个值可以上下移动 */
+    top: 80px;
     z-index: 10000;
-    background: #f0f0f0;
+    background: transparent;      /* 默认完全透明 */
     border: none;
     font-size: 20px;
     cursor: pointer;
     padding: 6px 10px;
     border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: background 0.2s;
+    color: #888;                  /* 浅灰色图标，不刺眼 */
+    transition: all 0.2s ease;
   }
+  
+  /* 鼠标悬停时显现按钮形状 */
   #toggle-right-toc-btn:hover {
-    background: #e0e0e0;
+    background: rgba(0, 0, 0, 0.08);  /* 浅灰色半透明背景 */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    color: #333;                       /* 图标颜色加深 */
   }
 </style>
 
