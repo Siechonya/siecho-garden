@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T14:08:32.677+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T16:07:39.990+08:00","dg-note-properties":{}}
 ---
 
 
@@ -701,7 +701,7 @@ c\boldsymbol{B} = (\partial_t \boldsymbol{A}) \times \hat{r},\quad
 \boldsymbol{E} = c\boldsymbol{B} \times \hat{r}
 }
 $$
-![[zz_figure/Pasted image 20260607102427.png#pic_center|260]]
+![[zz_figure/Pasted image 20260607102427.png#pic_center]]
 Ponyting vector can be calculated as, 
 $$
 \boxed{
@@ -940,79 +940,20 @@ $$
 =
 SR^2(t_r)(1-\hat{R}(t_r)\cdot\boldsymbol{\beta})
 $$
-#### $\beta \ll 1$
+#### Non-Relativistic Limit $\beta \ll 1$
 For the non-relativistic limit ($\beta \ll 1$), $1-\hat{R}(t_r)\cdot\boldsymbol{\beta}\approx 1$ and $\left|\hat{R} \times \left( (\hat{R} - \boldsymbol{\beta}) \times \dot{\boldsymbol{\beta}} \right)| \approx \frac{1}{c}|\hat{R}\times \boldsymbol{a}\right| = \frac{a}{c}\sin\theta$, $\theta=\left\langle \hat{R}(t_r), \boldsymbol{\beta}\right\rangle \approx \left\langle \hat{R}(t), \boldsymbol{\beta}\right\rangle$. This reduces directly to Larmor's formula,
 $$
 \frac{ \mathrm{d} P }{ \mathrm{d} \Omega} = \frac{\mu_0e^2}{16\pi^2c} a^2\sin^2\theta,\quad
 P = \oint \frac{ \mathrm{d} P }{ \mathrm{d} \Omega}\,\mathrm{d}\Omega = \frac{\mu_0 e^2 }{6\pi c} a^2
 $$
-```easy-tikz
-{
-  "dimension": false,
-  "documentSetup": true,
-  "title": "\\beta << 1:  Radiation angular distribution",
-  "size_x_cm": 4,
-  "size_y_cm": 4,
-  "show_axis_label": true,
-  "axis_label_x": "x",
-  "axis_label_y": "y",
-  "documentClose": true,
-  "showAxis": true,
-  "showLargeGrid": true,
-  "showSmallGrid": false,
-  "gridSize": 5,
-  "xmin": "-1.2",
-  "xmax": "1.2",
-  "ymin": "-1.2",
-  "ymax": "1.2",
-  "axis_style": "middle",
-  "functions": [
-    {
-      "expression": "cos(x)^2",
-      "domain": "0:2*PI",
-      "showLegend": false,
-      "fill": false,
-      "fillOpacity": 0.2,
-      "fillPattern": "solid",
-      "tangent": false,
-      "dashed": false,
-      "tangentPoint": "",
-      "extrema": false,
-      "color": "teal",
-      "thickness": "thick",
-      "parametric": false,
-      "expressionY": "",
-      "name": "f1"
-    }
-  ],
-  "zmin": "-5",
-  "zmax": "5",
-  "axis_label_z": "z",
-  "rotationX": 30,
-  "rotationZ": 45,
-  "zoom3D": 1,
-  "boxAspect": "true",
-  "functions3D": [],
-  "majorTickNum": 5,
-  "previewSize": 640,
-  "annotations": [],
-  "tools": [],
-  "coordinateSystem": "polar",
-  "axis_label_x_polar": "",
-  "axis_label_y_polar": "",
-  "displayWidth": 520,
-  "displayAlign": "center"
-}
-```
-
 > Note: This result is consistent with the instantaneous electric-dipole radiation formula for a single charge. By identifying the dipole moment as $\boldsymbol{p}=e\boldsymbol{x}_e$ (hence $\ddot{\boldsymbol{p}}=e\boldsymbol{a}$), the total power $P=\frac{\mu_0}{6\pi c} |\ddot{\boldsymbol{p}}|^2$ yields identical results. 
 
-#### $\beta \in (0,1)$
+#### Relativistic Case $\beta \in (0,1)$
 The fully relativistic generalization (Liénard's formula), is given by  
 $$
 P = \frac{\mu_0 e^2}{6\pi c} \gamma^6\left[ a^2 - \left| {\boldsymbol{\beta} \times \boldsymbol{a}}\right|^2 \right] = \frac{\mu_0 e^2}{6\pi c} \gamma^4\left[ a^2_\perp + \gamma^2 a^2_\parallel \right] 
 $$
-For $\boldsymbol{\beta}\parallel\boldsymbol{a}$ ($\boldsymbol{a}=a_\parallel \hat{a}$), and $\theta=\left\langle \hat{R}(t_r), \boldsymbol{\beta}\right\rangle$. The angular radiation distribution becomes,
+For $\boldsymbol{\beta}\parallel\boldsymbol{a}$ ($\boldsymbol{a}=a_\parallel \hat{a}$), let $\theta=\left\langle \hat{R}(t_r), \boldsymbol{\beta}\right\rangle$. The angular radiation distribution becomes,
 $$
 \frac{ \mathrm{d} P_\parallel }{ \mathrm{d} \Omega} = 
 \frac{\mu_0 e^2 a_\parallel^2}{16\pi^2 c} \frac{\sin^2\theta}{(1 - \beta \cos\theta)^5}
@@ -1020,67 +961,8 @@ $$
 P_\parallel = \frac{\mu_0 e^2}{6\pi c} \gamma^6 a_\parallel^2
 $$
 As $\beta \to 1$ (a bit like $\theta\to 0$), the denominator concentrates the radiation into a sharp forward cone with a characteristic opening angle of $\theta_{\max} \approx \frac{1}{2\gamma}$.   
-```easy-tikz
-{
-  "dimension": false,
-  "documentSetup": true,
-  "title": "\\beta = 0.5: \\frac{\\cos^2\\theta}{(1-\\beta\\sin\\theta)^5}",
-  "size_x_cm": 4,
-  "size_y_cm": 4,
-  "show_axis_label": true,
-  "axis_label_x": "x",
-  "axis_label_y": "y",
-  "documentClose": true,
-  "showAxis": true,
-  "showLargeGrid": true,
-  "showSmallGrid": false,
-  "gridSize": 5,
-  "xmin": "-4",
-  "xmax": "4",
-  "ymin": "-2",
-  "ymax": "6",
-  "axis_style": "middle",
-  "functions": [
-    {
-      "expression": "(cos(x)^2)/(1 - 0.5*sin(x))^5",
-      "domain": "0:2*PI",
-      "showLegend": false,
-      "fill": false,
-      "fillOpacity": 0.2,
-      "fillPattern": "solid",
-      "tangent": false,
-      "dashed": false,
-      "tangentPoint": "",
-      "extrema": false,
-      "color": "teal",
-      "thickness": "thick",
-      "parametric": false,
-      "expressionY": "",
-      "name": "f 1"
-    }
-  ],
-  "zmin": "-5",
-  "zmax": "5",
-  "axis_label_z": "z",
-  "rotationX": 30,
-  "rotationZ": 45,
-  "zoom3D": 1,
-  "boxAspect": "true",
-  "functions3D": [],
-  "majorTickNum": 5,
-  "previewSize": 640,
-  "annotations": [],
-  "tools": [],
-  "coordinateSystem": "polar",
-  "axis_label_x_polar": "",
-  "axis_label_y_polar": "",
-  "zoom 3 D": 1,
-  "functions 3 D": [],
-  "displayWidth": 520,
-  "displayAlign": "center"
-}
-```
-For $\boldsymbol{\beta} \perp \boldsymbol{a}$ ($\boldsymbol{a}=a_\perp \hat{e}_x,\, \boldsymbol{\beta}=\beta \hat{e}_z$), and $\theta=\left\langle \hat{R}(t_r), \boldsymbol{\beta}\right\rangle$,
+
+For $\boldsymbol{\beta} \perp \boldsymbol{a}$ ($\boldsymbol{a}=a_\perp \hat{e}_x,\, \boldsymbol{\beta}=\beta \hat{e}_z$),
 $$
 \frac{ \mathrm{d} P_\perp }{ \mathrm{d} \Omega} = \frac{\mu_0 e^2 a_\perp^2}{16\pi^2 c} \frac{1}{(1 - \beta \cos\theta)^3} \left[ 1 - \frac{\sin^2\theta \cos^2\phi}{\gamma^2 (1 - \beta \cos\theta)^2} \right]
 ,\quad
@@ -1088,138 +970,8 @@ P_\perp = \frac{\mu_0 e^2}{6\pi c} \gamma^4 a_\perp^2
 $$
 where $\phi$ is the azimuthal angle. In the ultrarelativistic limit $\beta\to 1$, this expression describes the synchrotron radiation.  
 
-```easy-tikz
-{
-  "dimension": false,
-  "documentSetup": true,
-  "title": "\\beta=0.3,\\ \\phi=0: Radiation angular distribution",
-  "size_x_cm": 8,
-  "size_y_cm": 8,
-  "show_axis_label": true,
-  "axis_label_x": "x",
-  "axis_label_y": "y",
-  "documentClose": true,
-  "showAxis": true,
-  "showLargeGrid": true,
-  "showSmallGrid": false,
-  "gridSize": 5,
-  "xmin": "-1",
-  "xmax": "4",
-  "ymin": "-2.5",
-  "ymax": "2.5",
-  "axis_style": "middle",
-  "functions": [
-    {
-      "expression": "(1/(1 - 0.3*cos(x))^3) * (1 - (sin(x)^2) / (1.0989 * (1 - 0.3*cos(x))^2))",
-      "domain": "0:2*PI",
-      "showLegend": false,
-      "fill": false,
-      "fillOpacity": 0.2,
-      "fillPattern": "solid",
-      "tangent": false,
-      "dashed": false,
-      "tangentPoint": "",
-      "extrema": false,
-      "color": "red",
-      "thickness": "thin",
-      "parametric": false,
-      "expressionY": "",
-      "name": "radiation"
-    },
-    {
-      "expression": "(1/(1 - 0.2*cos(x))^3) * (1 - (sin(x)^2) / (1.0417 * (1 - 0.2*cos(x))^2))",
-      "domain": "-10:10",
-      "showLegend": false,
-      "fill": false,
-      "fillOpacity": 0.2,
-      "fillPattern": "solid",
-      "tangent": false,
-      "dashed": false,
-      "tangentPoint": "",
-      "extrema": false,
-      "color": "blue",
-      "thickness": "thin",
-      "parametric": false,
-      "expressionY": "",
-      "name": "f2"
-    },
-    {
-      "expression": "(1/(1 - 0.1*cos(x))^3) * (1 - (sin(x)^2) / (1.0101 * (1 - 0.1*cos(x))^2))",
-      "domain": "-10:10",
-      "showLegend": false,
-      "fill": false,
-      "fillOpacity": 0.2,
-      "fillPattern": "solid",
-      "tangent": false,
-      "dashed": false,
-      "tangentPoint": "",
-      "extrema": false,
-      "color": "teal",
-      "thickness": "thin",
-      "parametric": false,
-      "expressionY": "",
-      "name": "f3"
-    }
-  ],
-  "zmin": "-5",
-  "zmax": "5",
-  "axis_label_z": "z",
-  "rotationX": 30,
-  "rotationZ": 45,
-  "zoom3D": 1,
-  "boxAspect": "true",
-  "functions3D": [],
-  "majorTickNum": 5,
-  "previewSize": 640,
-  "annotations": [
-    {
-      "x": "0.5",
-      "y": "0",
-      "text": "v",
-      "color": "red",
-      "size": "large",
-      "anchor": "above"
-    },
-    {
-      "x": "0",
-      "y": "-0.5",
-      "text": "a",
-      "color": "green",
-      "size": "large",
-      "anchor": "left"
-    }
-  ],
-  "tools": [
-    {
-      "type": "segment",
-      "x1": "0",
-      "y1": "0",
-      "x2": "0",
-      "y2": "-0.8",
-      "color": "green",
-      "thickness": "thin",
-      "dashed": false,
-      "arrow": "forward"
-    },
-    {
-      "type": "segment",
-      "x1": "0",
-      "y1": "0",
-      "x2": "0.8",
-      "y2": "0",
-      "color": "red",
-      "thickness": "thin",
-      "dashed": false,
-      "arrow": "forward"
-    }
-  ],
-  "coordinateSystem": "polar",
-  "axis_label_x_polar": "",
-  "axis_label_y_polar": "",
-  "displayWidth": 520,
-  "displayAlign": "center"
-}
-```
+The angular radiation distributions for the three conditions discussed above are illustrated below,
+![[Pasted image 20260612160253.png#pic_center]]  
 
 #### Radiation damping
 
