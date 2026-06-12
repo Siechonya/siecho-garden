@@ -1,25 +1,11 @@
 body {
-    // 方案1：直接作用于所有笔记正文中的图片容器
-    .markdown-preview-view .image-embed,
-    .markdown-preview-view img {
-        display: flex !important;
-        justify-content: center !important;
-    }
-
-    // 方案2：针对带 alt="center" 的容器（保留灵活性）
+    // 让 ![[xxx.png|center]] 语法生效
     .image-embed[alt*="center"] {
-        display: flex !important;
-        justify-content: center !important;
+        display: flex;
+        justify-content: center;
         
         img {
-            margin: 0 auto !important;
+            display: block;
         }
-    }
-
-    // 方案3：保底 – 所有图片强制居中（如果上面都失效）
-    img {
-        display: block !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
     }
 }
