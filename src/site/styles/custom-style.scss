@@ -1,13 +1,11 @@
 body {
-    /***
-      ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-   ***/
-    //  background-color: white;
-    //  .content {
-    //   font-size: 14px;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+    // 让 ![[xxx.png|center]] 语法生效
+    .image-embed[alt*="center"] {
+        display: flex;
+        justify-content: center;
+        
+        img {
+            display: block;
+        }
+    }
 }
