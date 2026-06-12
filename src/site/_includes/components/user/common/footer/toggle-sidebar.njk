@@ -1,0 +1,51 @@
+<!-- ========== 右侧标题目录折叠按钮（图标风格） ========== -->
+<style>
+  body.hide-right-toc .toc-container,
+  body.hide-right-toc .toc {
+    display: none !important;
+  }
+  
+  #toggle-right-toc-btn {
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    z-index: 10000;
+    background: transparent;      /* 默认完全透明 */
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: #888;                  /* 浅灰色图标，不刺眼 */
+    transition: all 0.2s ease;
+  }
+  
+  /* 鼠标悬停时显现按钮形状 */
+  #toggle-right-toc-btn:hover {
+    background: rgba(0, 0, 0, 0.08);  /* 浅灰色半透明背景 */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    color: #333;                       /* 图标颜色加深 */
+  }
+</style>
+
+<button id="toggle-right-toc-btn">▶</button>
+
+<script>
+  (function() {
+    const btn = document.getElementById('toggle-right-toc-btn');
+    if (!btn) return;
+    let tocVisible = true;
+    btn.onclick = () => {
+      tocVisible = !tocVisible;
+      if (!tocVisible) {
+        document.body.classList.add('hide-right-toc');
+        btn.innerHTML = '▶';
+        btn.title = '打开右侧目录';
+      } else {
+        document.body.classList.remove('hide-right-toc');
+        btn.innerHTML = '◀';
+        btn.title = '关闭右侧目录';
+      }
+    };
+  })();
+</script>
