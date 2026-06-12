@@ -1,0 +1,48 @@
+<script>
+  (function() {
+    if (document.getElementById('sidebar-toggle-btn')) return;
+
+    // 创建折叠按钮
+    const btn = document.createElement('button');
+    btn.id = 'sidebar-toggle-btn';
+    btn.innerHTML = '☰';
+    btn.title = '折叠侧边栏';
+    btn.setAttribute('aria-label', 'Toggle Sidebar');
+
+    btn.style.cssText = `
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      background: var(--background-modifier-border, #f0f0f0);
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 5px 12px;
+      border-radius: 4px;
+      color: var(--text-normal, #333);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    `;
+
+    // 根据 sidebar.njk 确定最精确的选择器
+    let sidebar = document.querySelector('aside');      // 最外层
+    if (!sidebar) sidebar = document.querySelector('.sidebar');
+    if (!sidebar) sidebar = document.querySelector('.sidebar-container');
+    
+    if (!sidebar) {
+      console.warn('未找到侧边栏，请检查页面结构');
+      btn.style.backgroundColor = 'red';
+      btn.title = '未找到侧边栏';
+    } else {
+      // 初始状态：侧边栏默认显示（不做任何隐藏）
+      btn.onclick = () => {
+        const isHidden = sidebar.style.display === 'none';
+        sidebar.style.display = isHidden ? '' : 'none';
+        btn.innerHTML = isHidden ? '☰' : '✕';
+        btn.title = isHidden ? '折叠侧边栏' : '展开侧边栏';
+      };
+    }
+
+    document.body.appendChild(btn);
+  })();
+</script>
