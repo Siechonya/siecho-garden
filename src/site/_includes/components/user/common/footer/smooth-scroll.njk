@@ -1,28 +1,57 @@
 <script>
   (function() {
-    // 1. 检测浏览器是否原生支持 scroll-behavior: smooth
-    const supportsNativeSmooth = 'scrollBehavior' in document.documentElement.style;
-    // 如果原生支持，就直接退出，不需要使用这个脚本了
-    if (supportsNativeSmooth) return;
+    // 自定义缓动滚动函数
+    function smoothScrollTo(targetY, duration = 500) {
+      const startY = window.scrollY;
+      const distance = targetY - startY;
+      const startTime = performance.now();
 
-    // 2. 获取所有右侧目录中的锚点链接
-    const tocLinks = document.querySelectorAll('.toc a, .on-this-page a');
+      function step(now) {
+        const elapsed = now - startTime;
+        const t = Math.min(1, elapsed / duration);
+        // 缓动函数 easeInOutCubic
+        const ease = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        window.scrollTo(0, startY + distance * ease);
+        if (t < 1) requestAnimationFrame(step);
+      }
 
-    tocLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        // 3. 获取链接目标的 ID
-        const hash = this.getAttribute('href');
-        if (!hash || hash === '#') return;
+      requestAnimationFrame(step);
+    }
 
-        const targetElement = document.querySelector(hash);
-        if (targetElement) {
-          e.preventDefault(); // 4. 阻止默认跳转行为
-          // 5. 使用 JavaScript 实现平滑滚动
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-          // 6. 更新浏览器地址栏的 URL，保持页面状态
-          history.pushState(null, null, hash);
-        }
+    // 获取 TOC 所有链接
+    function initSmoothScroll() {
+      const tocLinks = document.querySelectorAll('.toc a, .toc-container a, nav.toc a');
+      if (!tocLinks.length) {
+        console.warn('未找到 TOC 链接');
+        return;
+      }
+
+      tocLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const hash = this.getAttribute('href');
+          if (!hash || hash === '#') return;
+
+          const targetElement = document.querySelector(hash);
+          if (targetElement) {
+            e.preventDefault();
+            const targetRect = targetElement.getBoundingClientRect();
+            const absoluteTargetTop = targetRect.top + window.scrollY;
+            // 可在此添加偏移量，例如减去固定头部高度（如果有）
+            // const offset = 80; // 根据你的固定头部高度调整
+            // smoothScrollTo(absoluteTargetTop - offset, 500);
+            smoothScrollTo(absoluteTargetTop, 500);
+            // 更新 URL 历史
+            history.pushState(null, null, hash);
+          }
+        });
       });
-    });
+      console.log(`✅ 自定义平滑滚动已绑定，共 ${tocLinks.length} 个链接`);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initSmoothScroll);
+    } else {
+      initSmoothScroll();
+    }
   })();
 </script>
