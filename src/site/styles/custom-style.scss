@@ -10,6 +10,11 @@
   }
 }
 
+/* 平滑滚动动画 */
+html {
+    scroll-behavior: smooth !important;
+}
+
 body {
   /* 页面加载动画 */
   animation: fadeIn 0.5s ease-out;
