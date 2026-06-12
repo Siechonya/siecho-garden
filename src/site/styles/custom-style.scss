@@ -1,14 +1,19 @@
 body {
   // 调整右侧目录容器的高度为 60%
-.sidebar .on-this-page,
-.toc-container {
-    height: 60vh !important;       // 固定占浏览器可视窗口的60%
-    max-height: 60vh !important;
-}
+  .sidebar .on-this-page,
+  .toc-container {
+      height: 60vh !important;       // 固定占浏览器可视窗口的60%
+      max-height: 60vh !important;
+  }
   
   // 解除正文内容的宽度限制
   body .content,
   body .markdown-preview-view {
       max-width: 100% !important;
   }
+
+  // 当 body 有 hide-sidebar 类时，隐藏左侧文件目录
+  body.hide-sidebar nav.filetree-sidebar {
+    display: none !important;
+}
 }
