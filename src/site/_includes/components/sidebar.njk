@@ -67,3 +67,43 @@
             </div>
       </div>
 </aside>
+<!-- ========== 左侧文件目录折叠功能 ========== -->
+<style>
+  /* 当 body 有 hide-left-sidebar 类时，隐藏左侧文件目录 */
+  body.hide-left-sidebar nav.filetree-sidebar {
+    display: none !important;
+  }
+  
+  /* 可选：隐藏侧边栏后，让正文内容占满全宽（根据你的主题可能需要调整选择器） */
+  body.hide-left-sidebar main,
+  body.hide-left-sidebar .content,
+  body.hide-left-sidebar .page-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 20px !important; /* 保留一点内边距，美观 */
+  }
+</style>
+
+<button id="toggle-left-sidebar-btn" 
+        style="position: fixed; top: 20px; left: 20px; z-index: 10000; 
+               background: #f0f0f0; border: none; font-size: 24px; 
+               cursor: pointer; padding: 5px 12px; border-radius: 4px;
+               box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+  ☰
+</button>
+
+<script>
+  (function() {
+    const btn = document.getElementById('toggle-left-sidebar-btn');
+    if (!btn) return;
+    
+    btn.onclick = () => {
+      // 切换 body 上的类名
+      document.body.classList.toggle('hide-left-sidebar');
+      const isHidden = document.body.classList.contains('hide-left-sidebar');
+      btn.innerHTML = isHidden ? '✕' : '☰';
+      btn.title = isHidden ? '显示左侧目录' : '隐藏左侧目录';
+    };
+  })();
+</script>
