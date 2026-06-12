@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T17:09:17.209+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T17:10:55.563+08:00","dg-note-properties":{}}
 ---
 
 
@@ -974,7 +974,7 @@ $$
 where $\phi$ is the azimuthal angle. In the ultrarelativistic limit $\beta\to 1$, this expression describes the synchrotron radiation.  
 
 The angular radiation distributions for the three conditions discussed above are illustrated below,
-![Pasted image 20260612160253.png\|center\|831](/img/user/Pasted%20image%2020260612160253.png)  
+![zz_figure/Pasted image 20260612160253.png\|center\|831](/img/user/zz_figure/Pasted%20image%2020260612160253.png)  
 ##### Lorentz Transformation of $\frac{ \mathrm{d} P }{ \mathrm{d} \Omega}$ *
 Let $K$ be the laboratory frame and $K'$ be the instantaneous rest frame of the moving particle. Let $\frac{\mathrm{d}P}{\mathrm{d}\Omega}$ denote the angular radiation power emitted per retarded time in $K$, and $\frac{\mathrm{d}P'}{\mathrm{d}\Omega'}$ in $K'$. The angular distribution transforms as,
 $$
