@@ -33,6 +33,7 @@
 <script>
   (function() {
     const btn = document.getElementById('toggle-right-toc-btn');
+    btn.title = 'Hide right TOC';
     if (!btn) return;
     let tocVisible = true;
     btn.onclick = () => {
