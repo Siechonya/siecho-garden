@@ -1,14 +1,3 @@
 body {
-    // 只让带 |center| 标记的图片容器居中
-    .image-embed[alt*="center"] {
-        display: flex !important;
-        justify-content: center !important;
-        
-        img {
-            // 确保图片本身不干扰居中
-            display: block !important;
-            // 清除可能继承的 margin
-            margin: 0 auto !important;
-        }
-    }
+
 }
