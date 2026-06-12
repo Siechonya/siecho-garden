@@ -1,1 +1,47 @@
+<!-- 侧边栏折叠功能 start -->
+<script>
+  (function() {
+    // 防止重复创建按钮
+    if (document.getElementById('sidebar-toggle-btn')) return;
 
+    // 创建折叠按钮
+    const btn = document.createElement('button');
+    btn.id = 'sidebar-toggle-btn';
+    btn.innerHTML = '☰';
+    btn.title = '折叠侧边栏';
+    btn.setAttribute('aria-label', 'Toggle Sidebar');
+
+    // 设置按钮样式，并适应深/浅色主题
+    btn.style.cssText = `
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      background: var(--background-modifier-border);
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 5px 12px;
+      border-radius: 4px;
+      color: var(--text-normal);
+    `;
+
+    // 获取侧边栏元素
+    const sidebar = document.querySelector('.sidebar-left-container');
+    if (!sidebar) {
+      console.warn('侧边栏元素未找到，请检查选择器是否正确');
+      return;
+    }
+
+    // 切换侧边栏的显示/隐藏，并改变按钮图标
+    btn.onclick = () => {
+      const isHidden = sidebar.style.display === 'none';
+      sidebar.style.display = isHidden ? '' : 'none';
+      btn.innerHTML = isHidden ? '☰' : '✕';
+      btn.title = isHidden ? '折叠侧边栏' : '展开侧边栏';
+    };
+
+    document.body.appendChild(btn);
+  })();
+</script>
+<!-- 侧边栏折叠功能 end -->
