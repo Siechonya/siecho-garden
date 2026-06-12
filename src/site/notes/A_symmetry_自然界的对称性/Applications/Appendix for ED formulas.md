@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-06-10T12:23:28.660+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-06-12T16:49:29.098+08:00","dg-note-properties":{}}
 ---
 
 > This document supplements some rather complex proof processes within [[A_symmetry_自然界的对称性/Applications/ED Formulas\|ED Formulas]] and [[A_symmetry_自然界的对称性/Applications/ED formulas (2)\|ED formulas (2)]] 
@@ -347,8 +347,52 @@ $$
 \implies
 \mathrm{d} t^*= \left.\frac{\mathrm{d} t}{1-\hat{R} \cdot \boldsymbol{\beta}}\right|_{t^*}
 $$
+# 6 Lorentz Transformation of the Angular Distribution of Emitted Radiation Power
+Let $K$ be the laboratory frame and $K'$ be the instantaneous rest frame of the moving particle. Let $\frac{\mathrm{d}P}{\mathrm{d}\Omega}$ denote the angular radiation power emitted per retarded time in $K$, and $\frac{\mathrm{d}P'}{\mathrm{d}\Omega'}$ in $K'$. The angular distribution transforms as,
+$$
+\frac{\mathrm{d}P}{\mathrm{d}\Omega} = \frac{1}{\gamma^4 (1 - \beta \cos\theta)^3} \frac{\mathrm{d}P'}{\mathrm{d}\Omega'} = \gamma^2 (1 - \beta \cos\theta')^3 \frac{\mathrm{d}P'}{\mathrm{d}\Omega'}
+$$
+where $\theta$ (or $\theta'$) is the angle between the velocity $\boldsymbol{\beta}$ and the direction of observation in $K$ (or $K'$).   
 
-
+The emitted radiation energy $\mathrm{d}W$ and its momentum $\mathrm{d}\boldsymbol{p}$ form a four-momentum vector $\mathrm{d}p^\mu = (\mathrm{d}W/c, \mathrm{d}\boldsymbol{p})$ for the radiation field. Since the radiation propagates at the speed of light, the momentum magnitude satisfies $|\mathrm{d}\boldsymbol{p}| = \mathrm{d}W/c$, and its component along the direction of motion is $\mathrm{d}p_\parallel = (\mathrm{d}W/c)\cos\theta$. Under the Lorentz transformation from $K$ to $K'$, the energy transforms as,
+$$
+\mathrm{d}W' = \gamma (\mathrm{d}W - v \mathrm{d}p_\parallel) = \gamma \mathrm{d}W (1 - \beta \cos\theta)
+$$
+Inverting this relation yields the radiation energy expressed in the laboratory frame,
+$$
+\mathrm{d}W = \frac{\mathrm{d}W'}{\gamma (1 - \beta \cos\theta)}
+$$
+Meanwhile, the retarded time interval $\mathrm{d}t_r$ represents the time duration of the emission process measured in the laboratory frame $K$. Because the particle is instantaneously at rest in $K'$, the time interval $\mathrm{d}t_r'$ is identical to the particle's proper time interval $\mathrm{d}\tau$. According to time dilation, the time intervals in the two frames are related by,
+$$
+\mathrm{d}t_r = \gamma \mathrm{d}\tau = \gamma \mathrm{d}t_r'
+$$
+From the relativistic aberration of light, the relationship between $\theta'$ and $\theta$ is given by,
+$$
+\cos\theta' = \frac{\cos\theta - \beta}{1 - \beta \cos\theta}
+$$
+We have proved the formula in the homework. Differentiating both sides yields,
+$$
+-\sin\theta' \mathrm{d}\theta' = \frac{-\sin\theta (1 - \beta \cos\theta) - (\cos\theta - \beta)(\beta \sin\theta)}{(1 - \beta \cos\theta)^2} \mathrm{d}\theta = -\frac{\sin\theta (1 - \beta^2)}{(1 - \beta \cos\theta)^2} \mathrm{d}\theta
+= -\frac{\sin\theta \mathrm{d}\theta}{\gamma^2 (1 - \beta \cos\theta)^2}
+$$
+Since the system possesses azimuthal symmetry around the axis of motion, the azimuthal angle is invariant under the Lorentz boost ($\mathrm{d}\phi = \mathrm{d}\phi'$). Consequently, the differential solid angle $\mathrm{d}\Omega = \sin\theta \mathrm{d}\theta \mathrm{d}\phi$ transforms as,
+$$
+\mathrm{d}\Omega' = \frac{\mathrm{d}\Omega}{\gamma^2 (1 - \beta \cos\theta)^2} \implies \mathrm{d}\Omega = \gamma^2 (1 - \beta \cos\theta)^2 \mathrm{d}\Omega'
+$$
+Substituting the three transformation relations obtained above into the definition of angular radiation power gives,
+$$
+\frac{\mathrm{d}P}{\mathrm{d}\Omega} = \frac{\mathrm{d}W}{\mathrm{d}t_r \mathrm{d}\Omega} = \frac{\frac{\mathrm{d}W'}{\gamma (1 - \beta \cos\theta)}}{\left( \gamma \mathrm{d}t_r' \right) \left( \gamma^2 (1 - \beta \cos\theta)^2 \mathrm{d}\Omega' \right)}
+$$
+Combining the identical algebraic factors in the denominator yields,
+$$
+\frac{\mathrm{d}P}{\mathrm{d}\Omega} = \frac{1}{\gamma^4 (1 - \beta \cos\theta)^3} \frac{\mathrm{d}W'}{\mathrm{d}t_r' \mathrm{d}\Omega'} = \frac{1}{\gamma^4 (1 - \beta \cos\theta)^3} \frac{\mathrm{d}P'}{\mathrm{d}\Omega'}
+$$
+The relationship between $\theta'$ and $\theta$ can also be written as $\cos\theta = \frac{\cos\theta' + \beta}{1 + \beta \cos\theta'}$, substituting this into the tracking factor yields,
+$$1 - \beta \cos\theta = 1 - \beta \left( \frac{\cos\theta' + \beta}{1 + \beta \cos\theta'} \right) = \frac{1 + \beta \cos\theta' - \beta \cos\theta' - \beta^2}{1 + \beta \cos\theta'} = \frac{1 - \beta^2}{1 + \beta \cos\theta'} = \frac{1}{\gamma^2 (1 + \beta \cos\theta')}$$
+Plugging this expression back into the denominator of the power transformation formula gives,
+$$
+\frac{\mathrm{d}P}{\mathrm{d}\Omega} = \gamma^2 (1 + \beta \cos\theta')^3 \frac{\mathrm{d}P'}{\mathrm{d}\Omega'}
+$$
 
 
 

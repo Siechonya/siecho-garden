@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T16:07:39.990+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T16:35:07.683+08:00","dg-note-properties":{}}
 ---
 
 
@@ -951,6 +951,9 @@ $$
 #### Relativistic Case $\beta \in (0,1)$
 The fully relativistic generalization (Liénard's formula), is given by  
 $$
+\frac{ \mathrm{d} P }{ \mathrm{d} \Omega} = \frac{ \mathrm{d} P_\parallel }{ \mathrm{d} \Omega} + \frac{ \mathrm{d} P_\perp }{ \mathrm{d} \Omega} + \frac{\mu_0 e^2 a_\parallel a_\perp}{8\pi^2 c} \frac{(\beta-\cos\theta)\sin\theta\cos\phi}{(1-\beta\cos\theta)^5}
+$$
+$$
 P = \frac{\mu_0 e^2}{6\pi c} \gamma^6\left[ a^2 - \left| {\boldsymbol{\beta} \times \boldsymbol{a}}\right|^2 \right] = \frac{\mu_0 e^2}{6\pi c} \gamma^4\left[ a^2_\perp + \gamma^2 a^2_\parallel \right] 
 $$
 For $\boldsymbol{\beta}\parallel\boldsymbol{a}$ ($\boldsymbol{a}=a_\parallel \hat{a}$), let $\theta=\left\langle \hat{R}(t_r), \boldsymbol{\beta}\right\rangle$. The angular radiation distribution becomes,
@@ -972,6 +975,14 @@ where $\phi$ is the azimuthal angle. In the ultrarelativistic limit $\beta\to 1$
 
 The angular radiation distributions for the three conditions discussed above are illustrated below,
 ![[Pasted image 20260612160253.png#pic_center]]  
+##### Lorentz Transformation of $\frac{ \mathrm{d} P }{ \mathrm{d} \Omega}$ *
+Let $K$ be the laboratory frame and $K'$ be the instantaneous rest frame of the moving particle. Let $\frac{\mathrm{d}P}{\mathrm{d}\Omega}$ denote the angular radiation power emitted per retarded time in $K$, and $\frac{\mathrm{d}P'}{\mathrm{d}\Omega'}$ in $K'$. The angular distribution transforms as,
+$$
+\frac{\mathrm{d}P}{\mathrm{d}\Omega} = \frac{1}{\gamma^4 (1 - \beta \cos\theta)^3} \frac{\mathrm{d}P'}{\mathrm{d}\Omega'} = \gamma^2 (1 - \beta \cos\theta')^3 \frac{\mathrm{d}P'}{\mathrm{d}\Omega'}
+$$
+where $\theta$ (or $\theta'$) is the angle between the velocity $\boldsymbol{\beta}$ and the direction of observation in $K$ (or $K'$).   
+
+> proof ? see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#6 Lorentz Transformation of the Angular Distribution of Emitted Radiation Power\|Appendix for ED formulas#6 Lorentz Transformation of the Angular Distribution of Emitted Radiation Power]]
 
 #### Radiation damping
 
