@@ -1,8 +1,23 @@
 <!-- ========== 右侧标题目录折叠按钮（图标风格） ========== -->
 <style>
+  /* 右侧目录容器默认可见，设置过渡属性 */
+  .toc-container,
+  .toc {
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+    /* 可选：如果目录有滚动条，保留宽度避免布局抖动 */
+    /* overflow: hidden; 不推荐，会影响内部滚动 */
+  }
+  
+  /* 隐藏状态：淡出 + 轻微缩小 + 不可见 */
   body.hide-right-toc .toc-container,
   body.hide-right-toc .toc {
-    display: none !important;
+    opacity: 0;
+    transform: scale(0.97);
+    visibility: hidden;
+    /* 注意：元素仍占据空间，但不可见 */
   }
   
   #toggle-right-toc-btn {
