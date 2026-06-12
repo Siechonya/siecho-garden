@@ -1,3 +1,13 @@
 body {
-
+  // 调整右侧目录容器的高度为 60%
+  .toc-container {
+      height: 60% !important;
+      max-height: 60% !important;
+  }
+  
+  // 解除正文内容的宽度限制
+  body .content,
+  body .markdown-preview-view {
+      max-width: 100% !important;
+  }
 }
