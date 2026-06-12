@@ -1,4 +1,19 @@
+/* 定义关键帧动画（放在 body 外部，全局） */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 body {
+  /* 页面加载动画 */
+  animation: fadeIn 0.5s ease-out;
+  
   // 调整右侧目录容器的高度为 60%
   .sidebar .on-this-page,
   .toc-container {
@@ -6,14 +21,8 @@ body {
       max-height: 60vh !important;
   }
   
-  // 解除正文内容的宽度限制
-  body .content,
-  body .markdown-preview-view {
-      max-width: 100% !important;
-  }
-
   // 当 body 有 hide-sidebar 类时，隐藏左侧文件目录
   body.hide-sidebar nav.filetree-sidebar {
     display: none !important;
-}
+  }
 }
