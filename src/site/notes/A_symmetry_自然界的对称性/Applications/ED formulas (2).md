@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-10T12:26:07.150+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T11:06:00.223+08:00","dg-note-properties":{}}
 ---
 
 
@@ -704,7 +704,9 @@ $$
 ![zz_figure/Pasted image 20260607102427.png](/img/user/zz_figure/Pasted%20image%2020260607102427.png)
 Ponyting vector can be calculated as, 
 $$
+\boxed{
 \boldsymbol{S} = \frac{c}{\mu_0} B^2 \hat{r} = \epsilon_0 c E^2 \hat{r}
+}
 $$
 ### 3.2.2 Resonant radiation  
 For resonant radiation  
@@ -754,6 +756,15 @@ c\boldsymbol{B} = E\hat{\phi},\quad
 $$
 $$
 \langle \boldsymbol{S} \rangle =   \frac{\epsilon_0c}{2} E^2 \hat{r} = \frac{\mu_0cI_0^2}{8\pi^2} \frac{g^2(\theta)}{r^2}\hat{r}
+$$
+##### Resistance of antenna  
+- Definition
+$$
+\langle P\rangle = \frac{1}{2} I_{\max}^2 R_{\text{rad}}
+$$
+- Short antenna $m\ll 1$
+$$
+R_{\text{rad}} \approx 20\pi^2 m^2
 $$
 ### 3.2.3 Small source approximation  
 Approximation Regime: localized, long-wavelength source in the radiation zone $\color{red}r'(source)\ll\lambda\ll r(field)$ with $\lambda=\frac{2\pi}{k}$ is the wavelength of the radiation. This implies that $\boldsymbol{k}\cdot \boldsymbol{x'}\sim \frac{x'}{\lambda} \ll 1$ and we can taylor-expand $e^{-\mathrm{i} \boldsymbol{k}\cdot\boldsymbol{x'}}$ to obtain,
@@ -868,10 +879,7 @@ $$
 $$
 \langle \boldsymbol{S} \rangle = \frac{\mu_0 Q_0^2 \omega^6}{1152\pi^2 c^3} \frac{\sin^2\theta \left[1 - \sin^2\theta\cos^2(2\phi)\right]}{r^2} \hat{r} ,\quad \langle P\rangle = \frac{\mu_0}{720\pi c^3} Q_0^2 \omega^6
 $$
-#### Resistance of antenna *
-#todo
 ## 3.3 Moving point charge  
-### 3.3.1 Radiation of moving point charge  
 - Intensity
 $$
 J^{\alpha}(x^\mu)= ec \int u^{\alpha}(\tau) \delta^{4}(x^\mu-x^\mu_e(\tau)) \,\mathrm{d} \tau = (\rho c, \boldsymbol{J})
@@ -880,7 +888,8 @@ $$
 \rho(\boldsymbol{x}, t) = e\delta^3(\boldsymbol{x}-\boldsymbol{x}_e(t)),\quad
 \boldsymbol{J}(\boldsymbol{x}, t) = e\boldsymbol{v}(t) \delta^3(\boldsymbol{x}-\boldsymbol{x}_e(t))
 $$
-- Liénard-Wiechert potential
+### 3.3.1 Liénard-Wiechert formulas  
+- Liénard-Wiechert potential  
 $$
 \varphi (\boldsymbol{x} , t) 
 =
@@ -896,7 +905,71 @@ $$
 $$
 > proof ? see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#5 Liénard-Wiechert potential\|Appendix for ED formulas#5 Liénard-Wiechert potential]] 
 
-- Liénard-Wiechert EMF
+- Liénard-Wiechert EMF 
+$$
+\begin{align} 
+\boldsymbol{E}(\boldsymbol{x}, t) 
+&= \frac{e}{4\pi \epsilon_0 (1 -\hat{R}\cdot\boldsymbol{\beta} )^3 } 
+\left[ \frac{\hat{R} - \boldsymbol{\beta}}{\gamma^2 R^2 } + \frac{\hat{R} \times \left( (\hat{R} - \boldsymbol{\beta}) \times \dot{\boldsymbol{\beta}} \right)}{c R } \right]_{t_r}
+\\[8pt]
+c\boldsymbol{B}(\boldsymbol{x}, t) 
+&= \hat{R} \times \boldsymbol{E}(\boldsymbol{x}, t)
+\end{align}
+$$
+where $R = |\boldsymbol{x} - \boldsymbol{x}_e(t_r)|$. The first term scales as $\mathcal{O}(1/R^2)$ (velocity field $\boldsymbol{E}_v$), while the second term scales as $\mathcal{O}(1/R)$ (acceleration/radiation field $\boldsymbol{E}_{rad}$).
+### 3.3.2 EMF of uniformly moving point charge  
+$$
+\begin{aligned}
+\boldsymbol{E}(\boldsymbol{x}, t) 
+&= \frac{e}{4\pi\epsilon_0}
+\frac{1-\beta^2}{\bigl(1-\beta^2\sin^2\theta\bigr)^{3/2}}
+\frac{\hat{R}(t)}{R^2} 
+\\[8pt]
+c\boldsymbol{B}(\boldsymbol{x}, t)
+&= \boldsymbol{\beta}\times\boldsymbol{E}
+\end{aligned}
+$$
+where $\theta=\left\langle \boldsymbol{R}(t),\boldsymbol{\beta}\right\rangle = \left\langle \hat{R}(t_r)-\boldsymbol{\beta}, \boldsymbol{\beta} \right\rangle$ is the angle between present position $\boldsymbol{R}(t)$ and the velocity. However, this form is seldom used in practical radiation problems as the total radiated power of the field is zero.
+### 3.3.3 Radiation of moving point charge  
+Radiation field  $\boldsymbol{E}_{rad}, \boldsymbol{B}_{rad}, \hat{R}(t_r)$ form a right-handed orthogonal triad, thus
+$$
+\boldsymbol{S}(\boldsymbol{x}, t) = \frac{1}{\mu_0} \boldsymbol{E}_{rad} \times \boldsymbol{B}_{rad} = \epsilon_0 c E_{rad}^2 \hat{R}(t_r)
+$$
+$$
+\frac{ \mathrm{d} P }{ \mathrm{d} \Omega} = \frac{ \mathrm{d} W_{rad} }{ \mathrm{d} t_r \mathrm{d}\Omega} = \frac{ \mathrm{d} W_{rad} }{ \mathrm{d} t \mathrm{d}\Omega} \frac{ \partial t }{ \partial t_r }
+=
+SR^2(t_r)(1-\hat{R}(t_r)\cdot\boldsymbol{\beta})
+$$
+#### $\beta \ll 1$
+For the non-relativistic limit ($\beta \ll 1$), $1-\hat{R}(t_r)\cdot\boldsymbol{\beta}\approx 1$ and $\left|\hat{R} \times \left( (\hat{R} - \boldsymbol{\beta}) \times \dot{\boldsymbol{\beta}} \right)| \approx \frac{1}{c}|\hat{R}\times \boldsymbol{a}\right| = \frac{a}{c}\sin\theta$. This reduces directly to Larmor's formula
+$$
+\frac{ \mathrm{d} P }{ \mathrm{d} \Omega} = \frac{\mu_0e^2}{16\pi^2c} a^2\sin^2\theta,\quad
+P = \oint \frac{ \mathrm{d} P }{ \mathrm{d} \Omega}\,\mathrm{d}\Omega = \frac{\mu_0 e^2 }{6\pi c} a^2
+$$
+> Note: This result is consistent with the instantaneous electric-dipole radiation formula for a single charge. By identifying the dipole moment as $\boldsymbol{p}=e\boldsymbol{x}_e$ (hence $\ddot{\boldsymbol{p}}=e\boldsymbol{a}$), the total power $P=\frac{\mu_0}{6\pi c} |\ddot{\boldsymbol{p}}|^2$ yields identical results. 
+
+#### $\beta \to 1$
+The fully relativistic generalization (Liénard's formula), is given by  
+$$
+P = \frac{\mu_0 e^2}{6\pi c} \gamma^6\left[ a^2 - \left| {\boldsymbol{\beta} \times \boldsymbol{a}}\right|^2 \right] = \frac{\mu_0 e^2}{6\pi c} \gamma^4\left[ a^2_\perp + \gamma^2 a^2_\parallel \right] 
+$$
+For $\boldsymbol{\beta}\parallel\boldsymbol{a}$ ($\boldsymbol{a}=a_\parallel \hat{a}$), and $\theta=\left\langle \hat{R}(t_r), \boldsymbol{\beta}\right\rangle$. The angular radiation distribution becomes,
+$$
+\frac{ \mathrm{d} P_\parallel }{ \mathrm{d} \Omega} = 
+\frac{\mu_0 e^2 a_\parallel^2}{16\pi^2 c} \frac{\sin^2\theta}{(1 - \beta \cos\theta)^5}
+,\quad
+P_\parallel = \frac{\mu_0 e^2}{6\pi c} \gamma^6 a_\parallel^2
+$$
+As $\beta \to 1$ (the same as $\theta\to 0$), the denominator concentrates the radiation into a sharp forward cone with a characteristic opening angle of $\theta_{\max} \approx \frac{1}{2\gamma}$. 
+
+For $\boldsymbol{\beta} \perp \boldsymbol{a}$ ($\boldsymbol{a}=a_\perp \hat{e}_x,\, \boldsymbol{\beta}=\beta \hat{e}_z$), and $\theta=\left\langle \hat{R}(t_r), \boldsymbol{\beta}\right\rangle$,
+$$
+\frac{ \mathrm{d} P_\perp }{ \mathrm{d} \Omega} = \frac{\mu_0 e^2 a_\perp^2}{16\pi^2 c} \frac{1}{(1 - \beta \cos\theta)^3} \left[ 1 - \frac{\sin^2\theta \cos^2\phi}{\gamma^2 (1 - \beta \cos\theta)^2} \right]
+,\quad
+P_\perp = \frac{\mu_0 e^2}{6\pi c} \gamma^4 a_\perp^2 
+$$
+where $\phi$ is the azimuthal angle. In the ultrarelativistic limit $\beta\to 1$, this expression describes the synchrotron radiation.  
+#### Radiation damping
 
 
 # 4 EM wave
