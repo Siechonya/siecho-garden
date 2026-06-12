@@ -1,3 +1,18 @@
+<!-- 折叠按钮 start -->
+<button id="local-sidebar-toggle" style="position: fixed; top: 20px; left: 20px; z-index: 1000; background: #f0f0f0; border: none; font-size: 24px; cursor: pointer; padding: 5px 12px; border-radius: 4px;">☰</button>
+<script>
+  (function() {
+    const btn = document.getElementById('local-sidebar-toggle');
+    const sidebar = document.querySelector('aside');
+    if (!sidebar || !btn) return;
+    btn.onclick = () => {
+      const isHidden = sidebar.style.display === 'none';
+      sidebar.style.display = isHidden ? '' : 'none';
+      btn.innerHTML = isHidden ? '☰' : '✕';
+    };
+  })();
+</script>
+<!-- 折叠按钮 end -->
 <aside>
       <div class="sidebar">
             <div class="sidebar-container">
