@@ -1,9 +1,10 @@
 body {
   // 调整右侧目录容器的高度为 60%
-  .toc-container {
-      height: 60% !important;
-      max-height: 60% !important;
-  }
+.sidebar .on-this-page,
+.toc-container {
+    height: 60vh !important;       // 固定占浏览器可视窗口的60%
+    max-height: 60vh !important;
+}
   
   // 解除正文内容的宽度限制
   body .content,
