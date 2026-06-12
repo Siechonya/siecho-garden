@@ -1,7 +1,8 @@
+<!-- 自定义平滑滚动（修复特殊字符错误） -->
 <script>
   (function() {
     // 自定义缓动滚动函数
-    function smoothScrollTo(targetY, duration = 500) {
+    function smoothScrollTo(targetY, duration = 200) {
       const startY = window.scrollY;
       const distance = targetY - startY;
       const startTime = performance.now();
@@ -18,8 +19,9 @@
       requestAnimationFrame(step);
     }
 
-    // 获取 TOC 所有链接
+    // 绑定所有 TOC 链接
     function initSmoothScroll() {
+      // 根据你的 HTML 结构选择器
       const tocLinks = document.querySelectorAll('.toc a, .toc-container a, nav.toc a');
       if (!tocLinks.length) {
         console.warn('未找到 TOC 链接');
@@ -31,17 +33,22 @@
           const hash = this.getAttribute('href');
           if (!hash || hash === '#') return;
 
-          const targetElement = document.querySelector(hash);
+          // 使用 getElementById 避免特殊字符错误
+          const targetElement = document.getElementById(hash.substring(1));
           if (targetElement) {
             e.preventDefault();
             const targetRect = targetElement.getBoundingClientRect();
             const absoluteTargetTop = targetRect.top + window.scrollY;
-            // 可在此添加偏移量，例如减去固定头部高度（如果有）
-            // const offset = 80; // 根据你的固定头部高度调整
+
+            // 如果你的页面有固定头部，可以设置偏移量，例如 80px
+            // const offset = 80;
             // smoothScrollTo(absoluteTargetTop - offset, 500);
             smoothScrollTo(absoluteTargetTop, 500);
-            // 更新 URL 历史
+            
+            // 更新地址栏 hash（不触发跳转）
             history.pushState(null, null, hash);
+          } else {
+            console.warn('未找到目标元素:', hash);
           }
         });
       });
