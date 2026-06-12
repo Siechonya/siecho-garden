@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T17:10:55.563+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T17:18:25.160+08:00","dg-note-properties":{}}
 ---
 
 
@@ -701,7 +701,7 @@ c\boldsymbol{B} = (\partial_t \boldsymbol{A}) \times \hat{r},\quad
 \boldsymbol{E} = c\boldsymbol{B} \times \hat{r}
 }
 $$
-![zz_figure/Pasted image 20260607102427.png\|center\|400](/img/user/zz_figure/Pasted%20image%2020260607102427.png)
+![Pasted image 20260612171813.png\|center\|289](/img/user/Pasted%20image%2020260612171813.png)
 Ponyting vector can be calculated as, 
 $$
 \boxed{

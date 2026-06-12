@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-06-10T23:25:04.133+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-06-12T17:17:13.523+08:00","dg-note-properties":{}}
 ---
 
 
@@ -919,7 +919,7 @@ $$
 & & & ~1 \end{bmatrix}, &\text{x-axis boost} ,\text{ with }\tanh \phi = \beta
 \end{cases}
 $$
-![zz_figure/Pasted image 20260506122206.png](/img/user/zz_figure/Pasted%20image%2020260506122206.png)
+![zz_figure/Pasted image 20260506122206.png\|center\|548](/img/user/zz_figure/Pasted%20image%2020260506122206.png)
 ## 3.3 Tensor analysis (Minkowski spacetime)   
 ### 3.3.1 4-description of vector / tensor
 #### Primary 4-vector / tensor   
