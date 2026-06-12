@@ -1,0 +1,28 @@
+<script>
+  (function() {
+    // 1. 检测浏览器是否原生支持 scroll-behavior: smooth
+    const supportsNativeSmooth = 'scrollBehavior' in document.documentElement.style;
+    // 如果原生支持，就直接退出，不需要使用这个脚本了
+    if (supportsNativeSmooth) return;
+
+    // 2. 获取所有右侧目录中的锚点链接
+    const tocLinks = document.querySelectorAll('.toc a, .on-this-page a');
+
+    tocLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        // 3. 获取链接目标的 ID
+        const hash = this.getAttribute('href');
+        if (!hash || hash === '#') return;
+
+        const targetElement = document.querySelector(hash);
+        if (targetElement) {
+          e.preventDefault(); // 4. 阻止默认跳转行为
+          // 5. 使用 JavaScript 实现平滑滚动
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+          // 6. 更新浏览器地址栏的 URL，保持页面状态
+          history.pushState(null, null, hash);
+        }
+      });
+    });
+  })();
+</script>
