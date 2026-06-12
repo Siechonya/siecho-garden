@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T11:25:41.395+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T13:36:45.900+08:00","dg-note-properties":{}}
 ---
 
 
@@ -941,7 +941,7 @@ $$
 SR^2(t_r)(1-\hat{R}(t_r)\cdot\boldsymbol{\beta})
 $$
 #### $\beta \ll 1$
-For the non-relativistic limit ($\beta \ll 1$), $1-\hat{R}(t_r)\cdot\boldsymbol{\beta}\approx 1$ and $\left|\hat{R} \times \left( (\hat{R} - \boldsymbol{\beta}) \times \dot{\boldsymbol{\beta}} \right)| \approx \frac{1}{c}|\hat{R}\times \boldsymbol{a}\right| = \frac{a}{c}\sin\theta$, $\theta=\left\langle \hat{R}(t_r), \boldsymbol{\beta}\right\rangle \approx \left\langle \hat{R}(t), \boldsymbol{\beta}\right\rangle$. This reduces directly to Larmor's formula
+For the non-relativistic limit ($\beta \ll 1$), $1-\hat{R}(t_r)\cdot\boldsymbol{\beta}\approx 1$ and $\left|\hat{R} \times \left( (\hat{R} - \boldsymbol{\beta}) \times \dot{\boldsymbol{\beta}} \right)| \approx \frac{1}{c}|\hat{R}\times \boldsymbol{a}\right| = \frac{a}{c}\sin\theta$, $\theta=\left\langle \hat{R}(t_r), \boldsymbol{\beta}\right\rangle \approx \left\langle \hat{R}(t), \boldsymbol{\beta}\right\rangle$. This reduces directly to Larmor's formula,
 $$
 \frac{ \mathrm{d} P }{ \mathrm{d} \Omega} = \frac{\mu_0e^2}{16\pi^2c} a^2\sin^2\theta,\quad
 P = \oint \frac{ \mathrm{d} P }{ \mathrm{d} \Omega}\,\mathrm{d}\Omega = \frac{\mu_0 e^2 }{6\pi c} a^2
@@ -958,17 +958,17 @@ $$
   "axis_label_y": "y",
   "documentClose": true,
   "showAxis": true,
-  "showLargeGrid": false,
+  "showLargeGrid": true,
   "showSmallGrid": false,
   "gridSize": 5,
-  "xmin": "-2",
-  "xmax": "2",
-  "ymin": "-2",
-  "ymax": "2",
+  "xmin": "-1.2",
+  "xmax": "1.2",
+  "ymin": "-1.2",
+  "ymax": "1.2",
   "axis_style": "middle",
   "functions": [
     {
-      "expression": "sin(x)^2",
+      "expression": "cos(x)^2",
       "domain": "0:2*PI",
       "showLegend": false,
       "fill": false,
@@ -978,8 +978,8 @@ $$
       "dashed": false,
       "tangentPoint": "",
       "extrema": false,
-      "color": "blue",
-      "thickness": "thin",
+      "color": "teal",
+      "thickness": "thick",
       "parametric": false,
       "expressionY": "",
       "name": "f1"
@@ -993,7 +993,7 @@ $$
   "zoom3D": 1,
   "boxAspect": "true",
   "functions3D": [],
-  "majorTickNum": 8,
+  "majorTickNum": 5,
   "previewSize": 640,
   "annotations": [],
   "tools": [],
@@ -1019,8 +1019,67 @@ $$
 ,\quad
 P_\parallel = \frac{\mu_0 e^2}{6\pi c} \gamma^6 a_\parallel^2
 $$
-As $\beta \to 1$ (a bit like $\theta\to 0$), the denominator concentrates the radiation into a sharp forward cone with a characteristic opening angle of $\theta_{\max} \approx \frac{1}{2\gamma}$. 
-
+As $\beta \to 1$ (a bit like $\theta\to 0$), the denominator concentrates the radiation into a sharp forward cone with a characteristic opening angle of $\theta_{\max} \approx \frac{1}{2\gamma}$.   
+```easy-tikz
+{
+  "dimension": false,
+  "documentSetup": true,
+  "title": "\\beta = 0.5: \\frac{\\cos^2\\theta}{(1-\\beta\\sin\\theta)^5}",
+  "size_x_cm": 4,
+  "size_y_cm": 4,
+  "show_axis_label": true,
+  "axis_label_x": "x",
+  "axis_label_y": "y",
+  "documentClose": true,
+  "showAxis": true,
+  "showLargeGrid": true,
+  "showSmallGrid": false,
+  "gridSize": 5,
+  "xmin": "-4",
+  "xmax": "4",
+  "ymin": "-2",
+  "ymax": "6",
+  "axis_style": "middle",
+  "functions": [
+    {
+      "expression": "(cos(x)^2)/(1 - 0.5*sin(x))^5",
+      "domain": "0:2*PI",
+      "showLegend": false,
+      "fill": false,
+      "fillOpacity": 0.2,
+      "fillPattern": "solid",
+      "tangent": false,
+      "dashed": false,
+      "tangentPoint": "",
+      "extrema": false,
+      "color": "teal",
+      "thickness": "thick",
+      "parametric": false,
+      "expressionY": "",
+      "name": "f 1"
+    }
+  ],
+  "zmin": "-5",
+  "zmax": "5",
+  "axis_label_z": "z",
+  "rotationX": 30,
+  "rotationZ": 45,
+  "zoom3D": 1,
+  "boxAspect": "true",
+  "functions3D": [],
+  "majorTickNum": 5,
+  "previewSize": 640,
+  "annotations": [],
+  "tools": [],
+  "coordinateSystem": "polar",
+  "axis_label_x_polar": "",
+  "axis_label_y_polar": "",
+  "zoom 3 D": 1,
+  "functions 3 D": [],
+  "displayWidth": 520,
+  "displayAlign": "center"
+}
+```
 For $\boldsymbol{\beta} \perp \boldsymbol{a}$ ($\boldsymbol{a}=a_\perp \hat{e}_x,\, \boldsymbol{\beta}=\beta \hat{e}_z$), and $\theta=\left\langle \hat{R}(t_r), \boldsymbol{\beta}\right\rangle$,
 $$
 \frac{ \mathrm{d} P_\perp }{ \mathrm{d} \Omega} = \frac{\mu_0 e^2 a_\perp^2}{16\pi^2 c} \frac{1}{(1 - \beta \cos\theta)^3} \left[ 1 - \frac{\sin^2\theta \cos^2\phi}{\gamma^2 (1 - \beta \cos\theta)^2} \right]
@@ -1030,7 +1089,9 @@ $$
 where $\phi$ is the azimuthal angle. In the ultrarelativistic limit $\beta\to 1$, this expression describes the synchrotron radiation.  
 
 
-
+```desmos-graph
+y=x
+```
 #### Radiation damping
 
 
