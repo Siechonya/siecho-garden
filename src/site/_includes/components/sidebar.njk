@@ -1,29 +1,30 @@
 <button id="local-sidebar-toggle" style="position: fixed; top: 20px; left: 20px; z-index: 1000; background: #f0f0f0; border: none; font-size: 24px; cursor: pointer; padding: 5px 12px; border-radius: 4px;">☰</button>
+
 <style>
-  /* 定义侧边栏隐藏类 */
-  body.sidebar-collapsed aside {
+  /* 只隐藏左侧文件目录 */
+  body.sidebar-collapsed #file-tree-sidebar {
     display: none !important;
   }
-  /* 可选：当侧边栏隐藏时，让主体内容占满全宽 */
-  body.sidebar-collapsed .main-content {
+  /* 可选：让正文内容占满全宽 */
+  body.sidebar-collapsed .main-content,
+  body.sidebar-collapsed .content {
     width: 100% !important;
     max-width: 100% !important;
   }
 </style>
+
 <script>
   (function() {
     const btn = document.getElementById('local-sidebar-toggle');
     const body = document.body;
     if (!btn) return;
     btn.onclick = () => {
-      // 切换 body 上的类名
       body.classList.toggle('sidebar-collapsed');
-      // 改变按钮图标
       btn.innerHTML = body.classList.contains('sidebar-collapsed') ? '✕' : '☰';
     };
   })();
 </script>
-<aside>
+<aside id="file-tree-sidebar">
       <div class="sidebar">
             <div class="sidebar-container">
                   {% for imp in dynamics.sidebar.top %}
