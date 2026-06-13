@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-12T17:18:25.160+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-13T20:30:53.487+08:00","dg-note-properties":{}}
 ---
 
 
@@ -701,7 +701,7 @@ c\boldsymbol{B} = (\partial_t \boldsymbol{A}) \times \hat{r},\quad
 \boldsymbol{E} = c\boldsymbol{B} \times \hat{r}
 }
 $$
-![Pasted image 20260612171813.png\|center\|289](/img/user/Pasted%20image%2020260612171813.png)
+![zz_figure/Pasted image 20260612171813.png\|center\|289](/img/user/zz_figure/Pasted%20image%2020260612171813.png)
 Ponyting vector can be calculated as, 
 $$
 \boxed{
@@ -757,12 +757,12 @@ $$
 $$
 \langle \boldsymbol{S} \rangle =   \frac{\epsilon_0c}{2} E^2 \hat{r} = \frac{\mu_0cI_0^2}{8\pi^2} \frac{g^2(\theta)}{r^2}\hat{r}
 $$
-##### Resistance of antenna  
-- Definition
+ 
+- Definition: resistance of antenna ($R_\text{rad}$)
 $$
 \langle P\rangle = \frac{1}{2} I_{\max}^2 R_{\text{rad}}
 $$
-- Short antenna $m\ll 1$
+for short antenna discussed above with $m\ll 1$,
 $$
 R_{\text{rad}} \approx 20\pi^2 m^2
 $$
@@ -941,7 +941,7 @@ $$
 SR^2(t_r)(1-\hat{R}(t_r)\cdot\boldsymbol{\beta})
 $$
 #### Non-Relativistic Limit $\beta \ll 1$
-For the non-relativistic limit ($\beta \ll 1$), $1-\hat{R}(t_r)\cdot\boldsymbol{\beta}\approx 1$ and $\left|\hat{R} \times \left( (\hat{R} - \boldsymbol{\beta}) \times \dot{\boldsymbol{\beta}} \right)| \approx \frac{1}{c}|\hat{R}\times \boldsymbol{a}\right| = \frac{a}{c}\sin\theta$, $\theta=\left\langle \hat{R}(t_r), \boldsymbol{\beta}\right\rangle \approx \left\langle \hat{R}(t), \boldsymbol{\beta}\right\rangle$. This reduces directly to Larmor's formula,
+For the non-relativistic limit ($\beta \ll 1$), $1-\hat{R}(t_r)\cdot\boldsymbol{\beta}\approx 1$ and $\left|\hat{R} \times \left( (\hat{R} - \boldsymbol{\beta}) \times \dot{\boldsymbol{\beta}} \right)| \approx \frac{1}{c}|\hat{R}\times \boldsymbol{a}\right| = \frac{a}{c}\sin\theta$, $\theta=\left\langle \hat{R}(t_r), \boldsymbol{\beta}\right\rangle \approx \left\langle \hat{R}(t), \boldsymbol{\beta}\right\rangle$. This reduces directly to <font color="#245bdb">Larmor's formula</font>,
 $$
 \frac{ \mathrm{d} P }{ \mathrm{d} \Omega} = \frac{\mu_0e^2}{16\pi^2c} a^2\sin^2\theta,\quad
 P = \oint \frac{ \mathrm{d} P }{ \mathrm{d} \Omega}\,\mathrm{d}\Omega = \frac{\mu_0 e^2 }{6\pi c} a^2
@@ -949,13 +949,6 @@ $$
 > Note: This result is consistent with the instantaneous electric-dipole radiation formula for a single charge. By identifying the dipole moment as $\boldsymbol{p}=e\boldsymbol{x}_e$ (hence $\ddot{\boldsymbol{p}}=e\boldsymbol{a}$), the total power $P=\frac{\mu_0}{6\pi c} |\ddot{\boldsymbol{p}}|^2$ yields identical results. 
 
 #### Relativistic Case $\beta \in (0,1)$
-The fully relativistic generalization (Liénard's formula), is given by  
-$$
-\frac{ \mathrm{d} P }{ \mathrm{d} \Omega} = \frac{ \mathrm{d} P_\parallel }{ \mathrm{d} \Omega} + \frac{ \mathrm{d} P_\perp }{ \mathrm{d} \Omega} + \frac{\mu_0 e^2 a_\parallel a_\perp}{8\pi^2 c} \frac{(\beta-\cos\theta)\sin\theta\cos\phi}{(1-\beta\cos\theta)^5}
-$$
-$$
-P = \frac{\mu_0 e^2}{6\pi c} \gamma^6\left[ a^2 - \left| {\boldsymbol{\beta} \times \boldsymbol{a}}\right|^2 \right] = \frac{\mu_0 e^2}{6\pi c} \gamma^4\left[ a^2_\perp + \gamma^2 a^2_\parallel \right] 
-$$
 For $\boldsymbol{\beta}\parallel\boldsymbol{a}$ ($\boldsymbol{a}=a_\parallel \hat{a}$), let $\theta=\left\langle \hat{R}(t_r), \boldsymbol{\beta}\right\rangle$. The angular radiation distribution becomes,
 $$
 \frac{ \mathrm{d} P_\parallel }{ \mathrm{d} \Omega} = 
@@ -971,10 +964,37 @@ $$
 ,\quad
 P_\perp = \frac{\mu_0 e^2}{6\pi c} \gamma^4 a_\perp^2 
 $$
-where $\phi$ is the azimuthal angle. In the ultrarelativistic limit $\beta\to 1$, this expression describes the synchrotron radiation.  
+where $\phi$ is the azimuthal angle. In the ultrarelativistic limit $\beta\to 1$, this expression describes the <font color="#245bdb">synchrotron radiation</font>.  
 
 The angular radiation distributions for the three conditions discussed above are illustrated below,
 ![zz_figure/Pasted image 20260612160253.png\|center\|831](/img/user/zz_figure/Pasted%20image%2020260612160253.png)  
+
+The fully relativistic generalization (Liénard's formula), is given by  
+$$
+\frac{ \mathrm{d} P }{ \mathrm{d} \Omega} = \frac{ \mathrm{d} P_\parallel }{ \mathrm{d} \Omega} + \frac{ \mathrm{d} P_\perp }{ \mathrm{d} \Omega} + \frac{\mu_0 e^2 a_\parallel a_\perp}{8\pi^2 c} \frac{(\beta-\cos\theta)\sin\theta\cos\phi}{(1-\beta\cos\theta)^5}
+$$
+$$
+P = P_\parallel +P_\perp 
+= \frac{\mu_0 e^2}{6\pi c} \gamma^4\left[ a^2_\perp + \gamma^2 a^2_\parallel \right] 
+= \frac{\mu_0 e^2}{6\pi c} \gamma^6\left[ a^2 - \left| {\boldsymbol{\beta} \times \boldsymbol{a}}\right|^2 \right] 
+$$
+##### 4-radiation momentum *
+Refer to [[A_symmetry_自然界的对称性/Applications/ED Formulas#Primary 4-vector / tensor\|ED Formulas#Primary 4-vector]], you could find $P=\frac{\mu_0 e^2}{6\pi c} a^\mu a_\mu$, which is a Lorentz invariant.  
+
+In the particle's instantaneous rest frame, the radiation is angularly symmetric. It carries away net energy $\mathrm{d}E_{\text{rad}} = P \mathrm{d}\tau$ but zero net 3-momentum ($\mathrm{d}\boldsymbol{P}_{\text{rad}} = 0$). Thus, the 4-momentum rate of the radiation in the instantaneous rest frame is simply $\frac{\mathrm{d}P^\alpha_{\text{rad}}}{\mathrm{d}\tau} = (P/c, 0)$.
+
+Covariantly generalizing this rest-frame result to an arbitrary Lorentz frame yields the rate of 4-momentum carried away by radiation (i.e., the loss rate of the particle's 4-momentum),
+$$
+\frac{\mathrm{d} P^\alpha_{\text{rad}} }{\mathrm{d} \tau} 
+= 
+\begin{pmatrix} 
+\gamma & \gamma \boldsymbol{\beta} \\ \gamma \boldsymbol{\beta} & \mathsf{I} + (\gamma-1) \hat{\beta}\hat{{\beta}}
+\end{pmatrix}
+\begin{pmatrix} 
+{P}/{c}  \\[3pt] 0
+\end{pmatrix}
+= \frac{P}{c^2} u^\alpha = \frac{\mu_0 e^2}{6\pi c^3} (a^\mu a_\mu) u^\alpha
+$$
 ##### Lorentz Transformation of $\frac{ \mathrm{d} P }{ \mathrm{d} \Omega}$ *
 Let $K$ be the laboratory frame and $K'$ be the instantaneous rest frame of the moving particle. Let $\frac{\mathrm{d}P}{\mathrm{d}\Omega}$ denote the angular radiation power emitted per retarded time in $K$, and $\frac{\mathrm{d}P'}{\mathrm{d}\Omega'}$ in $K'$. The angular distribution transforms as,
 $$
@@ -985,6 +1005,29 @@ where $\theta$ (or $\theta'$) is the angle between the velocity $\boldsymbol{\be
 > proof ? see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#6 Lorentz Transformation of the Angular Distribution of Emitted Radiation Power\|Appendix for ED formulas#6 Lorentz Transformation of the Angular Distribution of Emitted Radiation Power]]
 
 #### Radiation damping
+- EM mass of particles
+
+An accelerating charged particle interacts with its own self-field. In the non-relativistic limit, this defines the electromagnetic mass in terms of the electrostatic self-energy $W_0$ of the charge distribution:
+$$
+m_{\text{em}} = \frac{4}{3}\frac{W_0}{c^2}
+$$
+where the factor of $4/3$ highlights the classic model-dependent relation between field momentum and self-energy (applicable to both the surface charge shell and the uniformly charged sphere). Hence, the observed physical mass $m$ becomes:
+$$
+m = m_0 + m_{\text{em}}
+$$
+leaving the bare mass $m_0$ as an unobservable parameter.
+
+- Radiation damping
+  
+To account for the continuous radiation of 4-momentum, a self-force term $F^\mu_{\text{rad}}$ must be incorporated into the particle's relativistic equation of motion. This yields the Abraham-Lorentz-Dirac (ALD) equation under the $(-+++)$ metric signature:
+$$
+m \frac{\mathrm{d}U^\mu}{\mathrm{d}\tau} = F^\mu_{\text{ext}} + F^\mu_{\text{rad}}
+$$
+By demanding the kinematic consistency condition $U_\mu F^\mu_{\text{rad}} = 0$ and ensuring that the force correctly balances the energy-momentum loss, the covariant radiation reaction force is uniquely determined as:
+$$
+F^\mu_{\text{rad}} = \frac{\mu_0 e^2}{6\pi c} \left( \frac{\mathrm{d}a^\mu}{\mathrm{d}\tau} - \frac{1}{c^2} (a^\nu a_\nu) U^\mu \right)
+$$
+The first term (the Schott term) represents a reversible intra-system energy exchange stored in the particle's near-zone induction fields, while the second term represents the irreversible, velocity-dependent 4-momentum loss carried away to the far-zone radiation field.
 
 
 # 4 EM wave

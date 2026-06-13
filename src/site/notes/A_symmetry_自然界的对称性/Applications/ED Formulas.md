@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-06-12T17:17:13.523+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-06-13T18:39:36.014+08:00","dg-note-properties":{}}
 ---
 
 
@@ -853,7 +853,9 @@ $$
 K'\to K:\quad
 x^\alpha = \Lambda^{\alpha}_{~~\beta} x'^\beta + a^\alpha
 $$
-the inverse of the matrix $\Lambda^\alpha_{~~\beta}$ is $\Lambda_{\beta}^{~~\alpha}$:  
+Where $K$ is the laboratory frame and $K'$ is the moving frame with speed $\boldsymbol{v}=v\hat{e}_x$.
+
+- The inverse of the matrix $\Lambda^\alpha_{~~\beta}$ is $\Lambda_{\beta}^{~~\alpha}$:  
 $$
 (\Lambda^{-1})^\mu_{~~\alpha} = g_{\alpha\beta} \Lambda^\beta_{~~\nu}g^{\nu\mu} = \Lambda_\alpha^{~~\mu}
 $$
@@ -870,8 +872,11 @@ $$
 \Lambda^\alpha_{~~\beta} = \begin{pmatrix} 
 \gamma & \gamma \boldsymbol{\beta} \\ \gamma \boldsymbol{\beta} & \mathsf{I} + (\gamma-1) \hat{\beta}\hat{{\beta}}
 \end{pmatrix}
+,\quad
+\boldsymbol{\beta}=\frac{\boldsymbol{v}}{c}, \ \hat{\beta}=\frac{\boldsymbol{v}}{|\boldsymbol{v}|}
 $$
-Velocity transformation: Suppose frame $K'$ moves with velocity $\mathbf{v}=v\hat{e}_x$ relative to frame $K$ along the positive x-axis. An object has velocity $\boldsymbol{u} = (u_x, u_y, u_z)$ in frame $K$ and $\boldsymbol{u}' = (u'_x, u'_y, u'_z)$ in frame $K'$, then the velocity $\boldsymbol{u}$ transforms as: 
+### 3.2.1 Velocity transformation   
+Suppose frame $K'$ moves with velocity $\mathbf{v}=v\hat{e}_x$ relative to frame $K$ along the positive x-axis. An object has velocity $\boldsymbol{u} = (u_x, u_y, u_z)$ in frame $K$ and $\boldsymbol{u}' = (u'_x, u'_y, u'_z)$ in frame $K'$, then the velocity $\boldsymbol{u}$ transforms as: 
 $$
 u_x = \frac{u'_x + v}{1 + \frac{v u'_x}{c^2}},\quad
 u_y = \frac{u'_y}{\gamma \left( 1 + \frac{v u'_x}{c^2} \right)},\quad
@@ -888,8 +893,7 @@ $$
 \tan\theta = \frac{\sin\theta'}{\gamma_{\mathbf{v}} (\cos\theta' + \beta_{\mathbf{v}})}
 \quad\text{(Aberration of Light Formula)}
 $$
-- The Proper Orthochronous Lorentz Group*
-
+### 3.2.2 The Proper Orthochronous Lorentz Group*
 The Full Lorentz Group $O(1,3)$ consists of all transformations that preserve the Minkowski metric. From the property $\Lambda^T \eta \Lambda = \eta$ above, it follows that $|\det(\Lambda)|=1, |\Lambda^0_{~~0}|\geq 1$.  $O(1,3)$ is a Lie group that possesses four disjoint, connected components. It can be expressed as the union of the Proper Orthochronous Lorentz Group $SO(1,3)^\uparrow$ (the identity component) and its cosets:
 $$
 \mathcal{P} = diag(1,-1,-1,-1),~~\mathcal{T}=diag(-1,1,1,1)
@@ -924,6 +928,8 @@ $$
 ### 3.3.1 4-description of vector / tensor
 #### Primary 4-vector / tensor   
 - 4-velocity / accelerated velocity
+
+Let $\boldsymbol{a}_{in}$ to be the accelerated speed in the instantaneous co-moving frame and $\boldsymbol{a}$ in the lab frame, one finds
 $$
 u^\alpha = \frac{ \mathrm{d} x^\alpha }{ \mathrm{d} \tau} = \gamma (c, \boldsymbol{v}),\quad 
 a^\alpha = \frac{ \mathrm{d} u^\alpha }{ \mathrm{d} \tau} 
@@ -932,7 +938,6 @@ $$
 $$
 u^\alpha u_\alpha = -c^2,\quad a^\mu u_\mu =0
 $$
-The accelerated speed in the instantaneous co-moving frame is $\boldsymbol{a}_{in}$, 
 $$
 a^\mu a_\mu = |\boldsymbol{a}_{in}|^2 = \gamma^4 \left[ |\boldsymbol{a}|^2 + \gamma^2 (\boldsymbol{\beta} \cdot \boldsymbol{a})^2\right]
 \implies
@@ -1037,7 +1042,6 @@ I_2 = \boldsymbol{p}\cdot\boldsymbol{a} = -\frac{1}{4}\mathcal{A}^{\alpha\beta}A
 $$
 # 4 Lagrangian Formulation of the EM Field  
 ## 4.1 Covariant EM equation
-
 ### 4.1.1 Maxwell's equation  
 #### Electromagnetic Field Tensor
 $$
