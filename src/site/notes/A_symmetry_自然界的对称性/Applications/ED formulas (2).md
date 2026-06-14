@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-14T22:47:59.609+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-14T22:51:00.672+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1043,7 +1043,7 @@ $$
 The time component $F^0_{\text{rad}}$ gives the irreversible radiated power $cF^0_{\text{rad}} = -\frac{\mu_0 e^2}{6\pi c}|\boldsymbol{a}|^2$, reproducing the Larmor formula. The spatial component is precisely the Schott term, which has no time component in this frame and hence does no work. It encodes a reversible energy exchange with the near-zone induction fields, which can return energy to the particle when the acceleration $\boldsymbol{a}$ changes.
 # 4 Electromagnetic waves
 ## 4.1 EM waves in the medium  
-### 4.1.1 EM waves
+### 4.1.1 Waves equation
 
 ### 4.1.2 Scattering and absorption of waves
 ## 4.2 EM waves on the surface of the medium  
