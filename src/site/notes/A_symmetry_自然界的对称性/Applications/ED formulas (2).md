@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-14T22:46:12.839+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-14T22:47:59.609+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1022,7 +1022,7 @@ $$
 r_e \sim \frac{e^2}{4\pi\epsilon_0 m c^2} \approx 2.818 \times 10^{-15} \,\text{m}\quad
 \text{namely } \frac{e^2}{4\pi\epsilon_0r_0} \approx m c^2
 $$
-> Why not $W_0=mc^2$? see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#The $4/3$ paradox and Poincaré stresses\|Appendix for ED formulas#The $4/3$ paradox and Poincaré stresses]]
+> Why not $W_0=mc^2$? see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#7 The $4/3$ paradox and Poincaré stresses\|Appendix for ED formulas#7The $4/3$ paradox and Poincaré stresses]]
 
 
 - Radiation damping
