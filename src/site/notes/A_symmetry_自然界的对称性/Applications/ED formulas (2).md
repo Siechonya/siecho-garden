@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-14T21:36:36.352+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-14T22:16:48.843+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1006,8 +1006,8 @@ where $\theta$ (or $\theta'$) is the angle between the velocity $\boldsymbol{\be
 
 > proof ? see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#6 Lorentz Transformation of the Angular Distribution of Emitted Radiation Power\|Appendix for ED formulas#6 Lorentz Transformation of the Angular Distribution of Emitted Radiation Power]]
 
-#### Radiation damping
-- EM mass of particles *
+#### Radiation damping *
+- EM mass of particles
 
 An accelerating charged particle interacts with its own self-field. In the non-relativistic limit, this defines the electromagnetic mass in terms of the electrostatic self-energy $W_0$ of the charge distribution,
 $$
@@ -1027,16 +1027,19 @@ $$
 
 - Radiation damping
   
-To account for the continuous radiation of 4-momentum, a self-force term $F^\mu_{\text{rad}}$ must be incorporated into the particle's relativistic equation of motion. This yields the Abraham-Lorentz-Dirac (ALD) equation under the $(-+++)$ metric signature:
+To account for the continuous radiation of 4-momentum, a self-force term $F^\mu_{\text{rad}}$ must be incorporated into the particle's relativistic equation of motion. This yields the Abraham-Lorentz equation, 
 $$
-m \frac{\mathrm{d}U^\mu}{\mathrm{d}\tau} = F^\mu_{\text{ext}} + F^\mu_{\text{rad}}
+m \frac{\mathrm{d}u^\alpha}{\mathrm{d}\tau} = F^\alpha_{\text{ext}} + F^\alpha_{\text{rad}}
 $$
-By demanding the kinematic consistency condition $U_\mu F^\mu_{\text{rad}} = 0$ and ensuring that the force correctly balances the energy-momentum loss, the covariant radiation reaction force is uniquely determined as:
+By demanding the kinematic consistency condition $u_\alpha F^\alpha_{\text{rad}} = 0$, the covariant radiation reaction force is derived as,
 $$
-F^\mu_{\text{rad}} = \frac{\mu_0 e^2}{6\pi c} \left( \frac{\mathrm{d}a^\mu}{\mathrm{d}\tau} - \frac{1}{c^2} (a^\nu a_\nu) U^\mu \right)
+F^\alpha_{\text{rad}} = \frac{\mu_0 e^2}{6\pi c} \left( \frac{\mathrm{d}a^\alpha}{\mathrm{d}\tau} - \frac{1}{c^2} (a^\mu a_\mu) u^\alpha \right)
 $$
-The first term (the Schott term) represents a reversible intra-system energy exchange stored in the particle's near-zone induction fields, while the second term represents the irreversible, velocity-dependent 4-momentum loss carried away to the far-zone radiation field.
-
-
+In the instantaneous rest frame of the particle (or, approximately, for non-relativistic particles as seen in the lab frame), where $u^\alpha = (c,0)$, $a^\alpha = (0,\boldsymbol{a})$, and $\frac{\mathrm{d}a^\alpha}{\mathrm{d}\tau} = (0,\dot{\boldsymbol{a}})$, the radiation reaction force decomposes into the time and spatial components,
+$$
+F^0_{\text{rad}} = -\frac{\mu_0 e^2}{6\pi c^2}\,|\boldsymbol{a}|^2, \qquad
+\boldsymbol{F}_{\text{rad}} = \frac{\mu_0 e^2}{6\pi c}\,\dot{\boldsymbol{a}} .
+$$
+The time component $F^0_{\text{rad}}$ gives the irreversible radiated power $cF^0_{\text{rad}} = -\frac{\mu_0 e^2}{6\pi c}|\boldsymbol{a}|^2$, reproducing the Larmor formula. The spatial component is precisely the Schott term, which has no time component in this frame and hence does no work. It encodes a reversible energy exchange with the near-zone induction fields, which can return energy to the particle when the acceleration $\boldsymbol{a}$ changes.
 # 4 EM wave
 ## 4.1 EM wave in the media
