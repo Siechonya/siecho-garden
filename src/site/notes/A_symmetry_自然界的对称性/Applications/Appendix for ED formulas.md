@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-06-12T16:49:29.098+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-05-20T11:12:27.839+08:00","updated":"2026-06-14T21:35:27.140+08:00","dg-note-properties":{}}
 ---
 
 > This document supplements some rather complex proof processes within [[A_symmetry_自然界的对称性/Applications/ED Formulas\|ED Formulas]] and [[A_symmetry_自然界的对称性/Applications/ED formulas (2)\|ED formulas (2)]] 
@@ -393,11 +393,60 @@ Plugging this expression back into the denominator of the power transformation f
 $$
 \frac{\mathrm{d}P}{\mathrm{d}\Omega} = \gamma^2 (1 + \beta \cos\theta')^3 \frac{\mathrm{d}P'}{\mathrm{d}\Omega'}
 $$
+# 7 The $4/3$ paradox and Poincaré stresses
+The relation $m_{\text{em}} = \frac{4}{3}\frac{W_0}{c^2}$ is odds with Einstein's mass-energy equivalence $E=mc^2$. This discrepancy arises because the electromagnetic energy-momentum tensor alone cannot describe a closed, conserved system: a static charge distribution would fly apart under Coulomb repulsion, and the integrated four‑momentum fails to be a Lorentz four‑vector.
 
+To stabilize the classical electron, non‑electromagnetic binding forces must exist. Henri Poincaré introduced these as Poincaré stresses, which contribute additional mechanical energy and stress. The mechanical work required to hold the charge together supplies an energy $W_{\text{mech}} = \frac{1}{3}W_0$. Summing the electromagnetic and mechanical parts, the total rest energy $W_{\text{tot}}$ and the observed mass $m$ perfectly restore the covariant relation
+$$
+W_{\text{tot}} = W_0 + W_{\text{mech}} = \frac{4}{3}W_0 = m c^2
+$$
+Thus the $4/3$ factor is an artifact of neglecting the Poincaré stresses necessary for structural stability. We now derive the precise contribution $W_{\text{mech}} = \frac{1}{3}W_0$ from the local conservation of the total energy-momentum tensor.
 
-
-
-
+In the electron’s rest frame the system is static and stable. The total tensor $T^{\mu\nu} = T_{\text{em}}^{\mu\nu} + T_{\text{mech}}^{\mu\nu}$ must satisfy $\partial_\mu T^{\mu\nu}=0$. For the spatial components ($\nu=j=1,2,3$) this gives,
+$$
+\partial_i T^{ij} = \partial_i (T_{\text{em}}^{ij} + T_{\text{mech}}^{ij}) = 0
+$$
+Using the identity $T^{ij} = \partial_k (T^{ik} x^j) - (\partial_k T^{ik}) x^j$ together with the symmetry and static conservation $\partial_k T^{ik}=0$ ($\because \partial_0 =0$), we obtain,
+$$
+\int_{\mathbb{R}^3} T^{ij} d^3x = \int_{\mathbb{R}^3} \partial_k (T^{ik} x^j) d^3x = 0
+$$
+where the second equality follows from Gauss’s theorem and the localized nature of the fields $\partial_0=0$. Taking the trace of this spatial tensor equation yields,
+$$
+\int_{\mathbb{R}^3} \sum_{i=1}^3 T_{\text{em}}^{ii} d^3x + \int_{\mathbb{R}^3} \sum_{i=1}^3 T_{\text{mech}}^{ii} d^3x = 0
+$$
+For a static electric field the Maxwell stress tensor is,
+$$
+T_{\text{em}}^{ij} = -\epsilon_0 \left( E^i E^j - \frac{1}{2}\delta^{ij} E^2 \right)
+$$
+so that its spatial trace becomes,
+$$
+\sum_{i=1}^3 T_{\text{em}}^{ii} = -\epsilon_0 \left( E^2 - \frac{3}{2}E^2 \right) = \frac{1}{2}\epsilon_0 E^2 = w_0 
+$$
+where $w_0$ is the electrostatic energy density. Integrating over all space gives the total electrostatic self‑energy,
+$$
+W_0 = \int_{\mathbb{R}^3} \sum_{i=1}^3 T_{\text{em}}^{ii} d^3x = \int_{\mathbb{R}^3} w_0 d^3x 
+$$
+Poincaré modelled the stabilizing force as a Lorentz‑invariant scalar pressure $P$, described by the covariant tensor,
+$$
+T_{\text{mech}}^{\mu\nu} = P g^{\mu\nu} 
+$$
+In the rest frame this yields $T_{\text{mech}}^{00} = -P$ and $\sum_{i=1}^3 T_{\text{mech}}^{ii} = 3P$. Substituting the electromagnetic and mechanical traces into the vanishing trace condition gives,
+$$
+W_0 + \int_{\mathbb{R}^3} 3P d^3x = 0 \quad\Longrightarrow\quad \int_{\mathbb{R}^3} P d^3x = -\frac{1}{3}W_0 
+$$
+The total rest mechanical energy is the volume integral of the mechanical energy density,
+$$
+W_{\text{mech}} = \int_{\mathbb{R}^3} T_{\text{mech}}^{00} d^3x = \int_{\mathbb{R}^3} (-P) d^3x = \frac{1}{3}W_0 
+$$
+Combining the electromagnetic and mechanical contributions, the total rest energy of the stabilized electron becomes,
+$$
+W_{\text{tot}} = W_0 + W_{\text{mech}} = W_0 + \frac{1}{3}W_0 = \frac{4}{3}W_0 
+$$
+Recalling that $m_{\text{em}} = \frac{4}{3}\frac{W_0}{c^2}$, we obtain,
+$$
+W_{\text{tot}} = m_{\text{em}} c^2
+$$
+Once the Poincaré stresses required for mechanical stability are properly included, the total energy and momentum transform together as a genuine Lorentz four‑vector $P^\mu = (W_{\text{tot}}/c, \mathbf{P}_{\text{tot}})$, completely resolving the classical $4/3$ paradox.
 
 
 

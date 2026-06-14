@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-14T12:47:14.704+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-14T21:36:36.352+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1007,17 +1007,23 @@ where $\theta$ (or $\theta'$) is the angle between the velocity $\boldsymbol{\be
 > proof ? see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#6 Lorentz Transformation of the Angular Distribution of Emitted Radiation Power\|Appendix for ED formulas#6 Lorentz Transformation of the Angular Distribution of Emitted Radiation Power]]
 
 #### Radiation damping
-- EM mass of particles
+- EM mass of particles *
 
-An accelerating charged particle interacts with its own self-field. In the non-relativistic limit, this defines the electromagnetic mass in terms of the electrostatic self-energy $W_0$ of the charge distribution:
+An accelerating charged particle interacts with its own self-field. In the non-relativistic limit, this defines the electromagnetic mass in terms of the electrostatic self-energy $W_0$ of the charge distribution,
 $$
 m_{\text{em}} = \frac{4}{3}\frac{W_0}{c^2}
 $$
-where the factor of $4/3$ highlights the classic model-dependent relation between field momentum and self-energy (applicable to both the surface charge shell and the uniformly charged sphere). Hence, the observed physical mass $m$ becomes:
+The rest energy of electron is $W_0=\frac{1}{2} \frac{e^2}{4\pi\epsilon_0r_0}$ for the surface charge shell model, and $W_0=\frac{3}{5} \frac{e^2}{4\pi\epsilon _0 r_ 0}$ for the uniformly charged sphere model. Hence, the observed physical mass $m$ becomes,
 $$
 m = m_0 + m_{\text{em}}
 $$
-leaving the bare mass $m_0$ as an unobservable parameter.
+If we assume that the observed mass of electron is entirely electromagnetic (setting $m_0 = 0$), we could define the classical electron radius $r_0$ after ignoring model-dependent geometric factors of order unity,
+$$
+r_e \sim \frac{e^2}{4\pi\epsilon_0 m c^2} \approx 2.818 \times 10^{-15} \,\text{m}\quad
+\text{namely } \frac{e^2}{4\pi\epsilon_0r_0} \approx m c^2
+$$
+> Why not $W_0=mc^2$? see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#The $4/3$ paradox and Poincaré stresses\|Appendix for ED formulas#The $4/3$ paradox and Poincaré stresses]]
+
 
 - Radiation damping
   
