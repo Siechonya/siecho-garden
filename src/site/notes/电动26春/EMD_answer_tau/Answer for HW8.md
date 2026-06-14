@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_tau/Answer for HW8/","noteIcon":"default","created":"2026-03-09T12:46:52.025+08:00","updated":"2025-11-01T11:57:00.461+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_tau/Answer for HW8/","noteIcon":"default","created":"2026-03-09T12:46:52.025+08:00","updated":"2026-06-14T22:27:17.672+08:00","dg-note-properties":{}}
 ---
 
 
@@ -204,7 +204,7 @@ $$
 # 5 磁偶极辐射和电四极辐射  
 ![zz_figure/Pasted image 20250612114005.png](/img/user/zz_figure/Pasted%20image%2020250612114005.png)
 见讲义 9.4 节.  
-# 6 辐射阻尼  
+# 6 自加速问题
 ![zz_figure/Pasted image 20250612114020.png](/img/user/zz_figure/Pasted%20image%2020250612114020.png)
 ##### (a)  
 <font color="#ff0000">对</font>运动方程积分:  

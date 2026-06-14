@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-06-13T18:39:36.014+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-05-04T11:54:51.340+08:00","updated":"2026-06-14T22:44:13.843+08:00","dg-note-properties":{}}
 ---
 
 
@@ -517,7 +517,7 @@ $$
 $$
 # 2 Fundamentals of Electromagnetism  
 ## 2.1 Maxwell's equation
-- In cosmos
+- In the cosmos
 $$
 \left\{
 \begin{aligned} 
@@ -532,8 +532,9 @@ $$
 \end{aligned}
 \right.
 $$
-with $c=\frac{1}{\sqrt{\mu_0\epsilon_0}}$.
-- In media
+with $c=\frac{1}{\sqrt{\mu_0\epsilon_0}}$.  
+
+- In the medium
 $$
 \left\{ \begin{aligned} 
 \nabla \cdot \boldsymbol{D} &= \rho_f && (\text{Gauss's Law}) 
@@ -668,7 +669,8 @@ $$
 v_g = \frac{ \mathrm{d} \omega }{ \mathrm{d} k} = c
 $$
 ### 2.5.2 Polarization  
-#### Real description
+#### Real description  
+For the monochromatic planar electromagnetic wave in a vacuum,
 $$
 E_1 = A_1 \cos\phi,\quad E_2 = A_2 \cos(\phi + \delta)
 $$
