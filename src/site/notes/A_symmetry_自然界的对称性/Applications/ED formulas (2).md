@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-13T20:30:53.487+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-05-20T09:48:38.906+08:00","updated":"2026-06-14T12:47:14.704+08:00","dg-note-properties":{}}
 ---
 
 
@@ -978,12 +978,14 @@ P = P_\parallel +P_\perp
 = \frac{\mu_0 e^2}{6\pi c} \gamma^4\left[ a^2_\perp + \gamma^2 a^2_\parallel \right] 
 = \frac{\mu_0 e^2}{6\pi c} \gamma^6\left[ a^2 - \left| {\boldsymbol{\beta} \times \boldsymbol{a}}\right|^2 \right] 
 $$
-##### 4-radiation momentum *
+#### 4-radiation momentum *
 Refer to [[A_symmetry_自然界的对称性/Applications/ED Formulas#Primary 4-vector / tensor\|ED Formulas#Primary 4-vector]], you could find $P=\frac{\mu_0 e^2}{6\pi c} a^\mu a_\mu$, which is a Lorentz invariant.  
 
-In the particle's instantaneous rest frame, the radiation is angularly symmetric. It carries away net energy $\mathrm{d}E_{\text{rad}} = P \mathrm{d}\tau$ but zero net 3-momentum ($\mathrm{d}\boldsymbol{P}_{\text{rad}} = 0$). Thus, the 4-momentum rate of the radiation in the instantaneous rest frame is simply $\frac{\mathrm{d}P^\alpha_{\text{rad}}}{\mathrm{d}\tau} = (P/c, 0)$.
-
-Covariantly generalizing this rest-frame result to an arbitrary Lorentz frame yields the rate of 4-momentum carried away by radiation (i.e., the loss rate of the particle's 4-momentum),
+In the particle's instantaneous rest frame, the radiation carries away non-zero energy ($\mathrm{d}E_{\text{rad}} = P \mathrm{d}\tau$) but zero 3-momentum ($\mathrm{d}\boldsymbol{P}_{\text{rad}} = 0$). Thus,  
+$$
+\left.\frac{\mathrm{d}P^\alpha_{\text{rad}}}{\mathrm{d}\tau}\right|_{rest} = (P/c, 0)  
+$$
+Covariantly transfer to the laboratory frame yields,
 $$
 \frac{\mathrm{d} P^\alpha_{\text{rad}} }{\mathrm{d} \tau} 
 = 
@@ -995,7 +997,7 @@ $$
 \end{pmatrix}
 = \frac{P}{c^2} u^\alpha = \frac{\mu_0 e^2}{6\pi c^3} (a^\mu a_\mu) u^\alpha
 $$
-##### Lorentz Transformation of $\frac{ \mathrm{d} P }{ \mathrm{d} \Omega}$ *
+#### Lorentz Transformation of $\frac{ \mathrm{d} P }{ \mathrm{d} \Omega}$ *
 Let $K$ be the laboratory frame and $K'$ be the instantaneous rest frame of the moving particle. Let $\frac{\mathrm{d}P}{\mathrm{d}\Omega}$ denote the angular radiation power emitted per retarded time in $K$, and $\frac{\mathrm{d}P'}{\mathrm{d}\Omega'}$ in $K'$. The angular distribution transforms as,
 $$
 \frac{\mathrm{d}P}{\mathrm{d}\Omega} = \frac{1}{\gamma^4 (1 - \beta \cos\theta)^3} \frac{\mathrm{d}P'}{\mathrm{d}\Omega'} = \gamma^2 (1 - \beta \cos\theta')^3 \frac{\mathrm{d}P'}{\mathrm{d}\Omega'}
