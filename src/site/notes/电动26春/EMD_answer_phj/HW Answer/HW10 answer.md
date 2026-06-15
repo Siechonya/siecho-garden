@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW10 answer/","noteIcon":"default","created":"2026-06-15T09:49:24.713+08:00","updated":"2026-06-15T16:14:02.000+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/HW Answer/HW10 answer/","noteIcon":"default","created":"2026-06-15T09:49:24.713+08:00","updated":"2026-06-15T16:20:22.000+08:00","dg-note-properties":{}}
 ---
 
 [[电动26春/EMD_answer_phj/HW Answer/HW11 Answer\|HW11 Answer]]
@@ -54,3 +54,6 @@ $$
 $$
 t \ln\left( \frac{ct + \sqrt{(ct)^2-s^2}}{ct - \sqrt{(ct)^2-s^2}} \right) - 2\frac{\sqrt{(ct)^2 - s^2}}{c}
 $$
+
+
+
