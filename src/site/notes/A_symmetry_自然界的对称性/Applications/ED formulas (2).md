@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-15T21:24:57.582+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-15T23:22:09.521+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1075,6 +1075,8 @@ $$
 \boldsymbol{H}(\boldsymbol{r}, t) &= \frac{1}{\omega\mu} \boldsymbol{k}\times\boldsymbol{E},\quad k^2 = \mu\epsilon \, \omega^2
 \end{align}
 $$
+define the intrinsic impedance $Z = \frac{{\omega \mu}}{k} = \sqrt{\frac{\mu}{\epsilon}}$, so $\boldsymbol{H} = \frac{\hat{k}\times\boldsymbol{E}}{Z}$.
+
 - The invariant square of the wave vector $k^\mu = (\omega/c, \boldsymbol{k})$ 
 $$
 k^\mu k_\mu = \frac{\omega^2}{c^2}\bigl(n^2 - 1\bigr)
@@ -1089,7 +1091,7 @@ w &= \frac{1}{2}\epsilon\,|\Re(\boldsymbol{E})|^2 + \frac{1}{2}\mu\,|\Re(\boldsy
 \boldsymbol{S} &= \Re(\boldsymbol{E})\times\Re(\boldsymbol{H}) = \sqrt{\frac{\epsilon}{\mu}} |\Re(\boldsymbol{E})|^2 = wv_\text{p}\hat{k}
 \end{align}
 $$
-The energy transport velocity $\boldsymbol{v} \equiv |\boldsymbol{S}|/ w$ equals the phase velocity $v_\text{p} = c/n$, which means the energy flows with the wave.
+The energy transport velocity $\boldsymbol{v} \triangleq |\boldsymbol{S}|/ w$ equals the phase velocity $v_\text{p} = c/n$, which means the energy flows with the wave.
 
 - Average energy and energy flow  
 $$
@@ -1099,8 +1101,9 @@ $$
 $$
 ### 4.1.3 Scattering and absorption of waves
 ## 4.2 EM waves on the surface of the medium  
-Let medium 1 ($z<0$) and medium 2 ($z>0$) be homogeneous, isotropic, lossless linear dielectrics with parameters $\epsilon_1,\mu_1$ and $\epsilon_2,\mu_2$. The planar interface is the $z=0$ plane, with unit normal $\hat{\boldsymbol{n}}=\hat{\boldsymbol{z}}$ pointing into medium 2. A monochromatic plane wave of angular frequency $\omega$ is incident from medium 1. The plane of incidence is taken as the $xz$-plane.
+Let medium 1 ($z<0$) and medium 2 ($z>0$) be homogeneous, isotropic, lossless linear dielectrics with parameters $\epsilon_1,\mu_1$ and $\epsilon_2,\mu_2$. The planar interface is the $z=0$ plane, with unit normal $\hat{n}=\hat{z}$ pointing into medium 2. A monochromatic plane wave of angular frequency $\omega$ is incident from medium 1.
 
+### 4.2.1 Laws of reflection and refraction 
 - Incident, reflected, and transmitted waves  
 $$
 \begin{align}
@@ -1109,51 +1112,65 @@ $$
 \boldsymbol{E}_t(\boldsymbol{r},t) &= \boldsymbol{E}_{0t}\, e^{\mathrm{i}(\boldsymbol{k}_t\cdot\boldsymbol{r} - \omega t)}
 \end{align}
 $$
-with $|\boldsymbol{k}_i| = |\boldsymbol{k}_r| = k_1 = n_1\omega/c$, $|\boldsymbol{k}_t| = k_2 = n_2\omega/c$, and $n_j = \sqrt{\mu_j\epsilon_j/\mu_0\epsilon_0}$. The corresponding magnetic fields are $\boldsymbol{H}_j = (\omega\mu_j)^{-1}\boldsymbol{k}_j\times\boldsymbol{E}_j$ ($j=i,r,t$). The angles of incidence $\theta_i$, reflection $\theta_r$, and transmission $\theta_t$ are measured from the $z$-axis.
+with $|\boldsymbol{k}_i| = |\boldsymbol{k}_r| = k_1 = n_1\omega/c$, $|\boldsymbol{k}_t| = k_2 = n_2\omega/c$, and $n_j = \sqrt{\mu_j\epsilon_j/\mu_0\epsilon_0}$. The corresponding magnetic fields are $\boldsymbol{H}_j = (\omega\mu_j)^{-1}\boldsymbol{k}_j\times\boldsymbol{E}_j$ ($j=i,r,t$).
 
-- Phase matching and kinematic laws  
-Continuity of the tangential fields at $z=0$ for all $x,t$ requires the phase factors to match:
+- Boundary condition
+$$
+\hat{{n}} \times (\boldsymbol{E}_2 - \boldsymbol{E}_1) = 0,\quad
+\hat{{n}} \times (\boldsymbol{H}_2 - \boldsymbol{H}_1) = 0
+$$
+$$
+\implies
+(\boldsymbol{E}_i + \boldsymbol{E}_r)_{x,y} = (\boldsymbol{E}_t)_{x,y}
+\quad
+\text{and}
+\quad
+(\boldsymbol{H}_i + \boldsymbol{H}_r)_{x,y} = (\boldsymbol{H}_t)_{x,y}
+$$
+
+- Laws of reflection and refraction
+
+Continuity of the tangential fields at $z=0$ for all $x,t$ requires the phase factors to match,
 $$
 k_{ix} = k_{rx} = k_{tx},\quad \omega_i=\omega_r=\omega_t=\omega
 $$
-Since $k_{ix} = k_1\sin\theta_i$, $k_{rx} = k_1\sin\theta_r$, this gives the law of reflection
+Assuming the plane of incidence is the $xz$-plane. Since $k_{ix} = k_1\sin\theta_i$, $k_{rx} = k_1\sin\theta_r$, this gives the law of reflection,
 $$
 \theta_i = \theta_r
 $$
-With $k_{tx} = k_2\sin\theta_t$ one obtains Snell's law
+With $k_{tx} = k_2\sin\theta_t$ one obtains Snell's law,
 $$
 n_1\sin\theta_i = n_2\sin\theta_t
 $$
-
-- Boundary conditions and Fresnel equations  
-The tangential components of $\boldsymbol{E}$ and $\boldsymbol{H}$ are continuous in the absence of free surface charges and currents. We treat two independent polarizations.
-
-<font color="#245bdb">S‑polarization</font> ($\boldsymbol{E}$ perpendicular to the plane of incidence, i.e. along $\hat{\boldsymbol{y}}$)  
-Write $\boldsymbol{E}_{0j} = E_{0j}\hat{\boldsymbol{y}}$. Tangential $\boldsymbol{E}$ continuity gives $E_{0i} + E_{0r} = E_{0t}$. Tangential $\boldsymbol{H}$ continuity, using $\boldsymbol{H}_0 = (\omega\mu)^{-1}\boldsymbol{k}\times\boldsymbol{E}_0$, yields
+### 4.2.2 Fresnel equations *
+#### S‑polarization ($\boldsymbol{E}$ perpendicular to the plane of incidence)  
+Let $\boldsymbol{E}_{0j} = E_{0j}\hat{y}$. Tangential $\boldsymbol{E}$ and $\boldsymbol{H}$ (using $\boldsymbol{H}_0 = (\omega\mu)^{-1}\boldsymbol{k}\times\boldsymbol{E}_0$) continuity gives,  
 $$
+E_{0i} + E_{0r} = E_{0t},\quad
 \frac{k_1}{\mu_1}(E_{0i} - E_{0r})\cos\theta_i = \frac{k_2}{\mu_2}E_{0t}\cos\theta_t
 $$
-Solving for $r_s \equiv E_{0r}/E_{0i}$ and $t_s \equiv E_{0t}/E_{0i}$ gives
+For simplicity, Let $\alpha\triangleq \frac{\cos\theta_t}{\cos\theta_i}$, $\beta\triangleq\frac{k_2/\mu_2}{k_1/\mu_1}=\frac{Z_1}{Z_2}$. Solving for $r_s \triangleq E_{0r}/E_{0i}$ and $t_s \triangleq E_{0t}/E_{0i}$ gives,
 $$
-r_s = \frac{ \dfrac{\mu_2}{k_2} k_1\cos\theta_i - \dfrac{\mu_1}{k_1} k_2\cos\theta_t }{ \dfrac{\mu_2}{k_2} k_1\cos\theta_i + \dfrac{\mu_1}{k_1} k_2\cos\theta_t },\quad
-t_s = 1 + r_s
+r_s = \frac{{1-\alpha\beta}}{1+\alpha\beta},\quad
+t_s = \frac{2}{1+\alpha\beta} = 1 + r_s
 $$
-For non‑magnetic media ($\mu_1\approx\mu_2\approx\mu_0$) this reduces to
+#### P‑polarization ($\boldsymbol{E}$ parallel to the plane of incidence)  
+Now $\boldsymbol{H}_{0j} = H_{0j}\hat{y}$, with $\boldsymbol{E}_{0j} = -(\omega\epsilon_j)^{-1}\boldsymbol{k}_j\times\boldsymbol{H}_{0j}$,   
 $$
-r_s = \frac{n_1\cos\theta_i - n_2\cos\theta_t}{n_1\cos\theta_i + n_2\cos\theta_t},\quad
-t_s = \frac{2n_1\cos\theta_i}{n_1\cos\theta_i + n_2\cos\theta_t}
+E_{0i}\cos\theta_i - E_{0r}\cos\theta_i = E_{0t}\cos\theta_t,\quad
+\frac{E_{0i}}{Z_1} + \frac{E_{0r}}{Z_1} = \frac{E_{0t}}{Z_2}
 $$
-
-<font color="#245bdb">P‑polarization</font> ($\boldsymbol{E}$ parallel to the plane of incidence)  
-Now $\boldsymbol{H}_{0j} = H_{0j}\hat{\boldsymbol{y}}$, with $\boldsymbol{E}_{0j} = -(\omega\epsilon_j)^{-1}\boldsymbol{k}_j\times\boldsymbol{H}_{0j}$. Tangential $\boldsymbol{H}$ continuity gives $H_{0i} + H_{0r} = H_{0t}$. Tangential $\boldsymbol{E}$ continuity gives $(E_{0i}+E_{0r})\cos\theta_i = E_{0t}\cos\theta_t$, which leads to
+which become
 $$
-\frac{k_1}{\epsilon_1}(H_{0i} - H_{0r})\cos\theta_i = \frac{k_2}{\epsilon_2}H_{0t}\cos\theta_t
+E_{0i} - E_{0r} = \alpha E_{0t},\quad
+E_{0i} + E_{0r} = \beta E_{0t}
 $$
-Defining $r_p \equiv E_{0r}/E_{0i}$ and $t_p \equiv E_{0t}/E_{0i}$, and using $H_{0j} \propto (k_j/\omega\mu_j)E_{0j}$, one finds for non‑magnetic media
+Solving for $r_p \triangleq E_{0r}/E_{0i}$ and $t_p \triangleq E_{0t}/E_{0i}$ gives
 $$
-r_p = \frac{n_2\cos\theta_i - n_1\cos\theta_t}{n_2\cos\theta_i + n_1\cos\theta_t},\quad
-t_p = \frac{2n_1\cos\theta_i}{n_2\cos\theta_i + n_1\cos\theta_t}
+r_p = \frac{\beta-\alpha}{\beta+\alpha},\quad
+t_p = \frac{2}{\beta+\alpha}
 $$
+For non‑magnetic media ($\mu_1\approx\mu_2\approx\mu_0$), $\beta = n_2/n_1$, and these reduce to the standard Fresnel formulas.
 
 - Reflectance and transmittance  
 The power normal to the interface (time‑averaged) defines
@@ -1178,10 +1195,10 @@ $$
 \theta_c = \arcsin\!\left(\frac{n_2}{n_1}\right)
 $$
 $\sin\theta_t > 1$ and $\cos\theta_t = \mathrm{i}\sqrt{\sin^2\theta_t-1}$ becomes purely imaginary. The transmitted wave decays exponentially away from the interface (evanescent wave), $|r_s|=|r_p|=1$, and all power is reflected.
-## 4.4 EM waves in the conductors    
-### 4.4.1 Resonator  
+## 4.3 EM waves in the conductors    
+### 4.3.1 Resonator  
 
-### 4.4.2 Waveguide tube
-## 4.5 Lorentz model
+### 4.3.2 Waveguide tube
+## 4.4 Lorentz model
 
 
