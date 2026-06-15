@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/references/AGU引用格式/","noteIcon":"default","created":"2025-10-23T14:26:12.006+08:00","updated":"2026-05-06T13:47:33.413+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/_Documents/references/AGU引用格式/","noteIcon":"default","created":"2026-06-15T09:49:45.719+08:00","updated":"2026-05-06T13:47:33.413+08:00","dg-note-properties":{}}
 ---
 
 # AGU 期刊引用格式指南 %

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_tau/Answer for HW6/","noteIcon":"default","created":"2026-03-09T12:46:52.361+08:00","updated":"2025-11-24T15:33:32.943+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_tau/Answer for HW6/","noteIcon":"default","created":"2026-06-15T09:49:24.868+08:00","updated":"2025-11-24T15:33:32.943+08:00","dg-note-properties":{}}
 ---
 
 

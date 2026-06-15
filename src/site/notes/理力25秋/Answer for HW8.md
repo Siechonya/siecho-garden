@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW8/","noteIcon":"default","created":"2025-11-13T21:08:53.865+08:00","updated":"2025-11-27T18:20:56.775+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW8/","noteIcon":"default","created":"2026-06-15T09:49:26.548+08:00","updated":"2025-11-27T18:20:56.775+08:00","dg-note-properties":{}}
 ---
 
 # 1 双摆  

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2025-03-23T22:36:48.350+08:00","updated":"2026-05-25T16:31:02.862+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/3-D Laplace Equation And Spherical Harmonic Function/","noteIcon":"default","created":"2026-06-15T09:49:53.476+08:00","updated":"2026-05-25T16:31:02.862+08:00","dg-note-properties":{}}
 ---
 
 

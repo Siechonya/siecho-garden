@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/references/1-3 Appendix A/","noteIcon":"default","created":"2025-08-08T00:16:24.374+08:00","updated":"2025-08-14T21:49:14.055+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/_Documents/references/1-3 Appendix A/","noteIcon":"default","created":"2026-06-15T09:49:45.705+08:00","updated":"2025-08-14T21:49:14.055+08:00","dg-note-properties":{}}
 ---
 
 The elements of the diffusion matrix, $D$, are given by  

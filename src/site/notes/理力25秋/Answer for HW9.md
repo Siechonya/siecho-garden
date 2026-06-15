@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/理力25秋/Answer for HW9/","noteIcon":"default","created":"2025-11-22T14:34:14.410+08:00","updated":"2025-12-04T10:13:01.388+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/理力25秋/Answer for HW9/","noteIcon":"default","created":"2026-06-15T09:49:26.552+08:00","updated":"2025-12-04T10:13:01.388+08:00","dg-note-properties":{}}
 ---
 
 # 1 阻尼振动  

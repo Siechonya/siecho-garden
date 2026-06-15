@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Green Function/","noteIcon":"default","created":"2025-11-19T12:10:15.473+08:00","updated":"2026-05-29T08:25:26.866+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/杂记/Green Function/","noteIcon":"default","created":"2026-06-15T09:49:53.484+08:00","updated":"2026-05-29T08:25:26.866+08:00","dg-note-properties":{}}
 ---
 
 格林函数是场论中点源产生的基本解，这篇文章简单写一下它的应用。
