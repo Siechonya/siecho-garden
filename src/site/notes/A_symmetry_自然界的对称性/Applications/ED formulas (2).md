@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-15T23:22:09.521+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-16T00:53:59.000+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1138,29 +1138,19 @@ Assuming the plane of incidence is the $xz$-plane. Since $k_{ix} = k_1\sin\theta
 $$
 \theta_i = \theta_r
 $$
-With $k_{tx} = k_2\sin\theta_t$ one obtains Snell's law,
+With $k_{tx} = k_2\sin\theta_t$ one obtains <font color="#245bdb">Snell's law</font>,
 $$
 n_1\sin\theta_i = n_2\sin\theta_t
 $$
-### 4.2.2 Fresnel equations *
-#### S‑polarization ($\boldsymbol{E}$ perpendicular to the plane of incidence)  
-Let $\boldsymbol{E}_{0j} = E_{0j}\hat{y}$. Tangential $\boldsymbol{E}$ and $\boldsymbol{H}$ (using $\boldsymbol{H}_0 = (\omega\mu)^{-1}\boldsymbol{k}\times\boldsymbol{E}_0$) continuity gives,  
-$$
-E_{0i} + E_{0r} = E_{0t},\quad
-\frac{k_1}{\mu_1}(E_{0i} - E_{0r})\cos\theta_i = \frac{k_2}{\mu_2}E_{0t}\cos\theta_t
-$$
-For simplicity, Let $\alpha\triangleq \frac{\cos\theta_t}{\cos\theta_i}$, $\beta\triangleq\frac{k_2/\mu_2}{k_1/\mu_1}=\frac{Z_1}{Z_2}$. Solving for $r_s \triangleq E_{0r}/E_{0i}$ and $t_s \triangleq E_{0t}/E_{0i}$ gives,
-$$
-r_s = \frac{{1-\alpha\beta}}{1+\alpha\beta},\quad
-t_s = \frac{2}{1+\alpha\beta} = 1 + r_s
-$$
+### 4.2.2 Fresnel equations *  
+In this section, we follow the standard convention that reflection reverses the sign of the tangential field parallel to the plane of incidence, while preserving the perpendicular tangential field.
 #### P‑polarization ($\boldsymbol{E}$ parallel to the plane of incidence)  
-Now $\boldsymbol{H}_{0j} = H_{0j}\hat{y}$, with $\boldsymbol{E}_{0j} = -(\omega\epsilon_j)^{-1}\boldsymbol{k}_j\times\boldsymbol{H}_{0j}$,   
+Let $\boldsymbol{H}_{0j} = H_{0j}\hat{y}$. Tangential $\boldsymbol{E}$ and $\boldsymbol{H}$ (using $\boldsymbol{H}_0 = (\omega\mu)^{-1}\boldsymbol{k}\times\boldsymbol{E}_0$) continuity gives,  
 $$
 E_{0i}\cos\theta_i - E_{0r}\cos\theta_i = E_{0t}\cos\theta_t,\quad
 \frac{E_{0i}}{Z_1} + \frac{E_{0r}}{Z_1} = \frac{E_{0t}}{Z_2}
 $$
-which become
+For simplicity, Let $\alpha\triangleq \frac{\cos\theta_t}{\cos\theta_i}$, $\beta\triangleq\frac{k_2/\mu_2}{k_1/\mu_1}=\frac{Z_1}{Z_2}$. Solving for $r_s \triangleq E_{0r}/E_{0i}$ and $t_s \triangleq E_{0t}/E_{0i}$ gives,
 $$
 E_{0i} - E_{0r} = \alpha E_{0t},\quad
 E_{0i} + E_{0r} = \beta E_{0t}
@@ -1171,32 +1161,45 @@ r_p = \frac{\beta-\alpha}{\beta+\alpha},\quad
 t_p = \frac{2}{\beta+\alpha}
 $$
 For non‑magnetic media ($\mu_1\approx\mu_2\approx\mu_0$), $\beta = n_2/n_1$, and these reduce to the standard Fresnel formulas.
-
-- Reflectance and transmittance  
+#### S‑polarization ($\boldsymbol{E}$ perpendicular to the plane of incidence)  
+Let $\boldsymbol{E}_{0j} = E_{0j}\hat{y}$. Tangential continuity gives,  
+$$
+E_{0i} + E_{0r} = E_{0t},\quad
+\frac{E_{0i} - E_{0r}}{Z_1}\cos\theta_i = \frac{E_{0t}}{Z_2}\cos\theta_t
+$$
+which become, 
+$$
+r_s = \frac{{1-\alpha\beta}}{1+\alpha\beta},\quad
+t_s = \frac{2}{1+\alpha\beta}
+$$
+#### Reflectance and transmittance  
 The power normal to the interface (time‑averaged) defines
 $$
-R = |r|^2,\quad T = \frac{n_2\cos\theta_t}{n_1\cos\theta_i}\,|t|^2
+R =\frac{{\langle S\rangle_{r,z}}}{\langle S\rangle_{i,z}} = |r|^2,\quad T = \frac{{\langle S\rangle_{t,z}}}{\langle S\rangle_{i,z}} =  \frac{Z_1\cos\theta_t}{Z_2\cos\theta_i}\,|t|^2
 $$
-Energy conservation for lossless media ensures $R + T = 1$. At normal incidence ($\theta_i=\theta_t=0$) both polarizations yield
+Energy conservation for lossless media ensures $R + T = 1$. For P or S-polarization,  
 $$
-R = \left|\frac{n_1 - n_2}{n_1 + n_2}\right|^2,\quad T = \frac{4n_1 n_2}{(n_1 + n_2)^2}
+R_p = \left(  \frac{\beta-\alpha}{\beta+\alpha} \right)^2
+,\quad
+R_s = \left( \frac{{1-\alpha\beta}}{1+\alpha\beta} \right)^2
+,\qquad
+T_p = T_s = \frac{4\alpha^2\beta^2}{(1+\alpha\beta)^2}
 $$
-
-- Brewster angle  
-For P‑polarization, $r_p = 0$ when $n_2\cos\theta_i = n_1\cos\theta_t$. Together with Snell's law this gives
+#### Brewster angle  
+For P‑polarization, $r_p = 0$ when $\alpha=\beta$ (in non‑magnetic media). Together with Snell's law this gives
 $$
 \tan\theta_B = \frac{n_2}{n_1}
 $$
 At this angle the reflected wave is purely S‑polarized.
-
-- Total internal reflection  
+#### Total internal reflection  
 If $n_1 > n_2$, Snell's law gives $\sin\theta_t = (n_1/n_2)\sin\theta_i$. When $\theta_i$ exceeds the critical angle
 $$
 \theta_c = \arcsin\!\left(\frac{n_2}{n_1}\right)
 $$
-$\sin\theta_t > 1$ and $\cos\theta_t = \mathrm{i}\sqrt{\sin^2\theta_t-1}$ becomes purely imaginary. The transmitted wave decays exponentially away from the interface (evanescent wave), $|r_s|=|r_p|=1$, and all power is reflected.
+$\sin\theta_t > 1$ and $\cos\theta_t = \mathrm{i}\sqrt{\sin^2\theta_t-1}$ becomes purely imaginary. Then $r_s=r_p=1$, the transmitted wave becomes evanescent, and total internal reflection occurs.
 ## 4.3 EM waves in the conductors    
 ### 4.3.1 Resonator  
+
 
 ### 4.3.2 Waveguide tube
 ## 4.4 Lorentz model
