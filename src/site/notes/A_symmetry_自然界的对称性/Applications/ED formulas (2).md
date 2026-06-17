@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-16T00:53:59.000+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-16T14:15:01.000+08:00","dg-note-properties":{}}
 ---
 
 
@@ -548,7 +548,7 @@ G(\bar{x}^\mu)\large|_{|\bar{x}^{\mu}| \to \infty} = 0
 $$
 where $\bar{x^\mu} = x^\mu - x'^\mu$. For the derivation process, refer to [[A_symmetry_自然界的对称性/杂记/Green Function#2.2 运动电荷的推迟势\|Green Function]] or ppt.  
 
-- Retarded potential
+- Retarded potential (using Lorenz gauge)
 $$
 A^\mu(\boldsymbol{x}, t) = \frac{\mu_0}{4\pi } \int \frac{J^\mu(\boldsymbol{x'}, {\color{red}t_r})}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}^3x'
 $$
@@ -606,12 +606,14 @@ $$
 $$
 - Potential
 $$
-\boldsymbol{A}(\boldsymbol{x},t) = \frac{\mu_0}{4\pi} \iiint \frac{{\dot{\boldsymbol{p}}(t-R/c) \delta^3(\boldsymbol{x'})}}{R}\,\mathrm{d}V' = \frac{\mu_0}{4\pi} \frac{\dot{\boldsymbol{p}}_r}{r},
+\boldsymbol{A}(\boldsymbol{x},t) = \frac{\mu_0}{4\pi} \iiint \frac{{\dot{\boldsymbol{p}}(t-R/c) \delta^3(\boldsymbol{x'})}}{|\boldsymbol{x}-\boldsymbol{x'}|}\,\mathrm{d}V' = \frac{\mu_0}{4\pi} \frac{\dot{\boldsymbol{p}}_r}{r},
 \quad
 \boldsymbol{p}_r =\boldsymbol{p}(t-r/c)
 $$
 $$
-\varphi(\boldsymbol{x},t) = - \frac{1}{4\pi\epsilon_0} \nabla \cdot \frac{\boldsymbol{p}_r}{r} = \frac{1}{4\pi\epsilon_0} \left( 
+\varphi(\boldsymbol{x},t) 
+=  \frac{1}{4\pi \epsilon_0} \iiint \frac{-\boldsymbol{p}_r\cdot\nabla\delta^3(\boldsymbol{x'})}{|\boldsymbol{x}-\boldsymbol{x'}|} \mathrm{d}V'
+= - \frac{1}{4\pi\epsilon_0} \nabla \cdot \frac{\boldsymbol{p}_r}{r} = \frac{1}{4\pi\epsilon_0} \left( 
 \frac{{\boldsymbol{p}_r \cdot \hat{r}}}{r^2} + \frac{\dot{\boldsymbol{p}}_r\cdot\hat{r}}{cr} 
 \right)
 $$
@@ -684,7 +686,7 @@ $$
 $$
 \frac{ \partial t_r }{ \partial t }=1,\quad \nabla t_r = - \frac{\hat{r}}{c} + \frac{1}{c} \mathcal{O}\left( \frac{r'}{r} \right)
 $$
-> Note: In order to  to maintain consistency with the previous sections and avoid confusion, I consistently use $t_r=t-\frac{R}{c}\approx t^*$ to denote the real retarded time and $\tilde{t}_r=t-\frac{r}{c}$ for its leading-order approximation,  rather than $t_r=t-\frac{R}{c}$ before and $t_r=t-\frac{r}{c}$ here in the class.
+> Note: In order to  to maintain consistency with the previous sections and avoid confusion, I consistently use $t_r=t-\frac{R}{c}\approx t^*$ to denote the real retarded time and $\tilde{t}_r=t-\frac{r}{c}$ for its leading-order approximation,  rather than $t_r=t-\frac{R}{c}$ before but $t_r=t-\frac{r}{c}$ here in the class.
 
 Consequently, for any field function in the radiation zone of the form $f(\boldsymbol{x}, t) \approx \frac{1}{r} g(t^*)$, where the leading-order term is $\mathcal{O}(1/r)$, its gradient can be expanded as,
 $$
@@ -737,7 +739,7 @@ $$
 \langle \boldsymbol{S} \rangle = \frac{1}{2\mu_0} \Re(\boldsymbol{E}^*\times \boldsymbol{B}) =  \frac{c}{2\mu_0} B^2 \hat{r} = \frac{\epsilon_0c}{2} E^2 \hat{r}
 }
 $$
-where $E$ and $B$ denote the field amplitudes with the factor $e^{\mathrm{i}(kr-\omega t)}$ omitted.
+where $E$ and $B$ denote the field <font color="#ff0000">amplitudes</font> with the factor $e^{\mathrm{i}(kr-\omega t)}$ omitted.
 #### Aerial radiation  
 For a thin antenna of length $l$, the current distribution forms a standing wave given by,
 $$
@@ -803,7 +805,7 @@ $$
 \langle P\rangle = \oint |\langle\boldsymbol{S}\rangle|r^2\,\mathrm{d}\Omega
 =\frac{\mu_0}{12\pi c} |\ddot{\boldsymbol{p}}|^2
 $$
-where $|\ddot{\boldsymbol{p}} \times \hat{r}|$ and $|\ddot{\boldsymbol{p}}|$ denote the amplitudes with the factor $e^{-\mathrm{i}\omega t}$ omitted.  
+where $|\ddot{\boldsymbol{p}} \times \hat{r}|$ and $|\ddot{\boldsymbol{p}}|$ denote the <font color="#ff0000">amplitudes</font> with the factor $e^{-\mathrm{i}\omega t}$ omitted.  
 
 For example, a directional dipole $\boldsymbol{p}(t) = p_0 e^{-\mathrm{i} \omega t} \hat{z}$ 
 $$
@@ -814,6 +816,17 @@ $$
 \langle \boldsymbol{S} \rangle = \frac{\mu_0 p_0^2 \omega^4}{32\pi^2 c} \frac{\sin^2\theta}{r^2} \hat{r}
 ,\quad
 \langle P\rangle = \frac{\mu_0}{12\pi c}  p_0^2 \omega^4
+$$
+Another example, if $\boldsymbol{p}(t) = p_0 (\hat{e}_x + \mathrm{i}\hat{e}_y)e^{\mathrm{i}\omega t},\ p_0 = ea$ (electron in uniform circular motion),  
+$$
+c\boldsymbol{B} = \frac{\mu_0\omega^2p_0}{4\pi r} \left( -\mathrm{i}\hat{\theta} + \cos\theta\,\hat{\phi} \right) e^{\mathrm{i}(kr-\omega t)}
+,\quad
+\boldsymbol{E} = \frac{\mu_0\omega^2p_0}{4\pi r} \left( \cos\theta\,\hat{\theta} + \mathrm{i}\hat{\phi} \right) e^{\mathrm{i}(kr-\omega t)}
+$$
+$$
+\langle \boldsymbol{S} \rangle = \frac{\mu_0 p_0^2 \omega^4}{32\pi^2 c} \frac{1+\cos^2\theta}{r^2} \hat{r}
+,\quad
+\langle P\rangle = \frac{\mu_0}{12\pi c}  |ea (\hat{e}_x + \mathrm{i}\hat{e}_y)|^2 \omega^4 = \frac{\mu_0p_0^2\omega^4}{6\pi c}
 $$
 #### Magnetic dipole radiation  
 - Potential and EMF

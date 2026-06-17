@@ -94,11 +94,11 @@
 ## 8.1 
 
 
-<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/ppt/CH8%E7%82%B9%E7%94%B5%E8%8D%B7%E7%9A%84%E8%BE%90%E5%B0%84/ED08A.pdf" width="100%" height="900px" title="ED08A" style="border:1px solid #ccc;"></iframe>  
+[[电动26春/ppt/CH8点电荷的辐射/ED08A.pdf\|ED08A]]  
 
 ## 8.2 
 
-<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/ppt/CH8%E7%82%B9%E7%94%B5%E8%8D%B7%E7%9A%84%E8%BE%90%E5%B0%84/ED08B(2).pdf" width="100%" height="900px" title="ED08B(2)" style="border:1px solid #ccc;"></iframe>
+[[电动26春/ppt/CH8点电荷的辐射/ED08B(2).pdf\|ED08B(2)]]
 
 # 9 
 ## 9.1 

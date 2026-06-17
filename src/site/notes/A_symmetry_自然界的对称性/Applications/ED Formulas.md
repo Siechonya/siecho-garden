@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-06-15T09:49:53.234+08:00","updated":"2026-06-14T22:44:13.843+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED Formulas/","noteIcon":"default","created":"2026-06-15T09:49:53.234+08:00","updated":"2026-06-16T16:13:40.000+08:00","dg-note-properties":{}}
 ---
 
 
@@ -397,7 +397,7 @@ $$
 &\nabla^2 v= \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial v}{\partial r} \right) + \frac{1}{r^2} \frac{\partial^2 v}{\partial \theta^2} + \frac{\partial^2 v}{\partial z^2} 
 \end{aligned}
 $$
-and there are more formulas which may be useful in your further study,   
+and there are more formulas which may be useful in your further study, * 
 $$
 \nabla^2 \boldsymbol{v} = \left( \nabla^2 v_r - \frac{v_r}{r^2} - \frac{2}{r^2}\frac{ \partial v_\theta }{ \partial \theta } \right)\hat{e}_r + \left( \nabla^2 v_\theta - \frac{v_\theta}{r^2} + \frac{2}{r^2}\frac{ \partial v_r }{ \partial \theta } \right)\hat{e}_\theta + \left( \nabla^2 v_z \right)\hat{e}_z 
 $$
@@ -413,7 +413,7 @@ $$
 &\nabla^2 v = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial v}{\partial r} \right) + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial v}{\partial \theta} \right) + \frac{1}{r^2 \sin^2 \theta} \frac{\partial^2 v}{\partial \varphi^2} 
 \end{aligned}
 $$
-and there are more formulas as well,  
+and there are more formulas as well, *
 $$
 \begin{aligned} \nabla^2 \boldsymbol{v} = &\left[ \nabla^2 v_r - \frac{2}{r^2} \left(  v_r + \frac{1}{\sin\theta}\frac{ \partial \sin \theta \ v_\theta }{ \partial \theta } + \frac{1}{\sin\theta}\frac{\partial v_\varphi}{\partial \varphi} \right) \right] \hat{e}_r 
 \\ + &\left[ \nabla^2 v_\theta + \frac{1}{r^2} \left( 2\frac{\partial v_r}{\partial \theta} - \frac{v_\theta}{\sin^2\theta} - \frac{2\cos\theta}{\sin^2\theta}\frac{\partial v_\varphi}{\partial \varphi} \right) \right] \hat{e}_\theta 
@@ -762,7 +762,7 @@ $$
 $$
 -\frac{ \partial \boldsymbol{g} }{ \partial t } = \nabla \cdot \mathsf{T} + \boldsymbol{f}
 $$
-with EMF momentum and Maxwell stress tensor
+with EMF momentum and Maxwell stress tensor $T_M$:
 $$
 \boldsymbol{g} = \epsilon_0 \boldsymbol{E} \times \boldsymbol{B} = \boldsymbol{S}/c^2,\quad
 \mathsf{T}_M  = -\mathsf{T} = -w \mathsf{I} + \left( \epsilon_0 \boldsymbol{E}\boldsymbol{E} + \frac{\boldsymbol{B}\boldsymbol{B}}{\mu_0} \right)
