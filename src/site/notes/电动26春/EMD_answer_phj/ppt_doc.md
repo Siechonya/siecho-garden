@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/ppt_doc/","noteIcon":"default","created":"2026-06-15T09:49:24.109+08:00","updated":"2026-06-07T10:57:48.132+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/电动26春/EMD_answer_phj/ppt_doc/","noteIcon":"default","created":"2026-06-15T09:49:24.109+08:00","updated":"2026-06-17T09:48:28.723+08:00","dg-note-properties":{}}
 ---
 
 # 1 
@@ -94,11 +94,11 @@
 ## 8.1 
 
 
-[[电动26春/ppt/CH8点电荷的辐射/ED08A.pdf\|ED08A]]  
+<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/ppt/CH8%E7%82%B9%E7%94%B5%E8%8D%B7%E7%9A%84%E8%BE%90%E5%B0%84/ED08A(2).pdf" width="100%" height="900px" title="ED08A" style="border:1px solid #ccc;"></iframe>  
 
 ## 8.2 
 
-[[电动26春/ppt/CH8点电荷的辐射/ED08B(2).pdf\|ED08B(2)]]
+<iframe src="/img/user/%E7%94%B5%E5%8A%A826%E6%98%A5/ppt/CH8%E7%82%B9%E7%94%B5%E8%8D%B7%E7%9A%84%E8%BE%90%E5%B0%84/ED08B(2).pdf" width="100%" height="900px" title="ED08B(2)" style="border:1px solid #ccc;"></iframe>
 
 # 9 
 ## 9.1 
