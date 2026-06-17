@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-16T14:15:01.000+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-17T12:22:31.000+08:00","dg-note-properties":{}}
 ---
 
 
@@ -942,7 +942,13 @@ c\boldsymbol{B}(\boldsymbol{x}, t)
 &= \boldsymbol{\beta}\times\boldsymbol{E}
 \end{aligned}
 $$
-where $\theta=\left\langle \boldsymbol{R}(t),\boldsymbol{\beta}\right\rangle = \left\langle \hat{R}(t_r)-\boldsymbol{\beta}, \boldsymbol{\beta} \right\rangle$ is the angle between present position $\boldsymbol{R}(t)$ and the velocity. However, this form is seldom used in practical radiation problems as the total radiated power of the field is zero.
+where $\theta=\left\langle \boldsymbol{R}(t),\boldsymbol{\beta}\right\rangle$ is the angle between present position and the velocity, the former satisfies,
+$$
+\boldsymbol{R}(t_r) - \boldsymbol{R}(t) = \boldsymbol{\beta} c(t-t_r), \ \  R(t_r) = c(t-t_r)
+\implies
+\boldsymbol{R}(t)=\boldsymbol{R}(t_r)-R(t_r)\boldsymbol{\beta}
+$$
+However, this form is seldom used in practical radiation problems as the total radiated power of the field is zero.
 ### 3.3.3 Radiation of moving point charge  
 Radiation field  $\boldsymbol{E}_{rad}, \boldsymbol{B}_{rad}, \hat{R}(t_r)$ form a right-handed orthogonal triad, thus
 $$
@@ -1114,8 +1120,8 @@ $$
 $$
 ### 4.1.3 Scattering and absorption of waves
 ## 4.2 EM waves on the surface of the medium  
-Let medium 1 ($z<0$) and medium 2 ($z>0$) be homogeneous, isotropic, lossless linear dielectrics with parameters $\epsilon_1,\mu_1$ and $\epsilon_2,\mu_2$. The planar interface is the $z=0$ plane, with unit normal $\hat{n}=\hat{z}$ pointing into medium 2. A monochromatic plane wave of angular frequency $\omega$ is incident from medium 1.
-
+Let medium 1 ($z<0$) and medium 2 ($z>0$) be homogeneous, isotropic, lossless linear dielectrics with parameters $\epsilon_1,\mu_1$ and $\epsilon_2,\mu_2$. The planar interface is the $z=0$ plane, with unit normal $\hat{n}=\hat{z}$ pointing into medium 2. A monochromatic plane wave of angular frequency $\omega$ is incident from medium 1.  
+![Pasted image 20260617122216.png\|center\|780](/img/user/Pasted%20image%2020260617122216.png)
 ### 4.2.1 Laws of reflection and refraction 
 - Incident, reflected, and transmitted waves  
 $$
@@ -1156,7 +1162,7 @@ $$
 n_1\sin\theta_i = n_2\sin\theta_t
 $$
 ### 4.2.2 Fresnel equations *  
-In this section, we follow the standard convention that reflection reverses the sign of the tangential field parallel to the plane of incidence, while preserving the perpendicular tangential field.
+In this section, we follow the reflected convention that reflection reverses the sign of the tangential field parallel to the plane of incidence, while preserving the perpendicular tangential field.
 #### P‑polarization ($\boldsymbol{E}$ parallel to the plane of incidence)  
 Let $\boldsymbol{H}_{0j} = H_{0j}\hat{y}$. Tangential $\boldsymbol{E}$ and $\boldsymbol{H}$ (using $\boldsymbol{H}_0 = (\omega\mu)^{-1}\boldsymbol{k}\times\boldsymbol{E}_0$) continuity gives,  
 $$
@@ -1168,7 +1174,7 @@ $$
 E_{0i} - E_{0r} = \alpha E_{0t},\quad
 E_{0i} + E_{0r} = \beta E_{0t}
 $$
-Solving for $r_p \triangleq E_{0r}/E_{0i}$ and $t_p \triangleq E_{0t}/E_{0i}$ gives
+Solving for $r_p \triangleq E_{0r}/E_{0i}$ and $t_p \triangleq E_{0t}/E_{0i}$ gives,
 $$
 r_p = \frac{\beta-\alpha}{\beta+\alpha},\quad
 t_p = \frac{2}{\beta+\alpha}
@@ -1199,11 +1205,23 @@ R_s = \left( \frac{{1-\alpha\beta}}{1+\alpha\beta} \right)^2
 T_p = T_s = \frac{4\alpha^2\beta^2}{(1+\alpha\beta)^2}
 $$
 #### Brewster angle  
-For P‑polarization, $r_p = 0$ when $\alpha=\beta$ (in non‑magnetic media). Together with Snell's law this gives
+For P‑polarization, if $\theta_i+\theta_t = \frac{\pi}{2}$ (the same as $r_p = 0$ when $\alpha=\beta$) in non‑magnetic media. Together with Snell's law this gives
 $$
-\tan\theta_B = \frac{n_2}{n_1}
+\tan\theta_B = \frac{n_2}{n_1} = \beta
 $$
-At this angle the reflected wave is purely S‑polarized.
+At this angle the reflected wave is purely S‑polarized.   
+
+- Assuming $n_2>n_1$ ($\beta>1$). For $\theta_i<\theta_B$,
+$$
+\alpha = \frac{\cos\theta_t}{\cos\theta_i} = \sqrt{1+\tan^2\theta_i-\left( \frac{\tan\theta_i}{\beta} \right)^2} \in (1,\beta)
+$$
+$$
+\implies
+r_p>0,\quad r_s<0
+$$
+The $s$ component is reversed (phase diff $\pi$) while the $p$ component, referred to the reflected convention, appears unflipped. However, the relative phase between the $p$ and $s$ components changes by $\pi$. Hence, the handedness (the sense of rotation from $p$ toward $s$ with thumb along $\boldsymbol{k}$) is reversed: an incident left‑handed ellipse becomes right‑handed upon reflection, and vice versa.
+
+For $\theta_i>\theta_B$, $r_p < 0,\ r_s < 0$, both components are $\pi$ ‑shifted, their relative phase is unchanged, and the handedness remains the same as the incident wave.
 #### Total internal reflection  
 If $n_1 > n_2$, Snell's law gives $\sin\theta_t = (n_1/n_2)\sin\theta_i$. When $\theta_i$ exceeds the critical angle
 $$
