@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-17T12:22:31.000+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-17T22:48:27.468+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1062,7 +1062,7 @@ $$
 The time component $F^0_{\text{rad}}$ gives the irreversible radiated power $cF^0_{\text{rad}} = -\frac{\mu_0 e^2}{6\pi c}|\boldsymbol{a}|^2$, reproducing the Larmor formula. The spatial component is precisely the Schott term, which has no time component in this frame and hence does no work. It encodes a reversible energy exchange with the near-zone induction fields, which can return energy to the particle when the acceleration $\boldsymbol{a}$ changes.
 # 4 Electromagnetic waves
 ## 4.1 EM waves in the medium  
-### 4.1.1 Waves equation
+### 4.1.1 Wave equation
 - The constitutive relations for a homogeneous, isotropic, lossless linear medium, are  
 $$
 \boldsymbol{D} = \epsilon \boldsymbol{E}, \quad \boldsymbol{B} = \mu \boldsymbol{H}
@@ -1075,7 +1075,7 @@ $$
 $$
 - The wave equation
 $$
-\left( \nabla^2 - \mu\epsilon \, \frac{\partial^2}{\partial t^2} \right) \left\{\begin{matrix} \boldsymbol{E} \\ \boldsymbol{B}\end{matrix}\right\}= 0
+\left( \nabla^2 - \mu\epsilon \, \frac{\partial^2}{\partial t^2} \right) \left\{\begin{matrix} \boldsymbol{E} \\ \boldsymbol{H}\end{matrix}\right\}= 0
 $$
 The phase and group velocity are,  
 $$
@@ -1169,9 +1169,9 @@ $$
 E_{0i}\cos\theta_i - E_{0r}\cos\theta_i = E_{0t}\cos\theta_t,\quad
 \frac{E_{0i}}{Z_1} + \frac{E_{0r}}{Z_1} = \frac{E_{0t}}{Z_2}
 $$
-For simplicity, Let $\alpha\triangleq \frac{\cos\theta_t}{\cos\theta_i}$, $\beta\triangleq\frac{k_2/\mu_2}{k_1/\mu_1}=\frac{Z_1}{Z_2}$. Solving for $r_s \triangleq E_{0r}/E_{0i}$ and $t_s \triangleq E_{0t}/E_{0i}$ gives,
+For simplicity, here define the parameters $\alpha\triangleq \frac{\cos\theta_t}{\cos\theta_i}$, $\beta \triangleq\frac{k_2/\mu_2}{k_1/\mu_1}=\frac{Z_1}{Z_2}$. Solving for $r_s \triangleq E_{0r}/E_{0i}$ and $t_s \triangleq E_{0t}/E_{0i}$ gives,
 $$
-E_{0i} - E_{0r} = \alpha E_{0t},\quad
+E_{0i} - E_{0r} = \alpha_w E_{0t},\quad
 E_{0i} + E_{0r} = \beta E_{0t}
 $$
 Solving for $r_p \triangleq E_{0r}/E_{0i}$ and $t_p \triangleq E_{0t}/E_{0i}$ gives,
@@ -1227,12 +1227,272 @@ If $n_1 > n_2$, Snell's law gives $\sin\theta_t = (n_1/n_2)\sin\theta_i$. When $
 $$
 \theta_c = \arcsin\!\left(\frac{n_2}{n_1}\right)
 $$
-$\sin\theta_t > 1$ and $\cos\theta_t = \mathrm{i}\sqrt{\sin^2\theta_t-1}$ becomes purely imaginary. Then $r_s=r_p=1$, the transmitted wave becomes evanescent, and total internal reflection occurs.
-## 4.3 EM waves in the conductors    
-### 4.3.1 Resonator  
+$\sin\theta_t > 1$ and $\cos\theta_t = \mathrm{i}\sqrt{\sin^2\theta_t-1}$ becomes purely imaginary. Then $r_s=r_p=1$, the transmitted wave becomes evanescent, and total internal reflection occurs. More about this phenomenon, see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#8 The evanescent wave\|Appendix for ED formulas#8 The evanescent wave]].
+## 4.3 EM waves in the conductors   
+### 4.3.1 Wave equation
+- The constitutive relations for a homogeneous, isotropic, linear conductor,
+$$
+\boldsymbol{J} = \sigma \boldsymbol{E}, \quad \boldsymbol{D} = \epsilon \boldsymbol{E}, \quad \boldsymbol{B} = \mu \boldsymbol{H}
+$$
+Also, inside a homogeneous conductor, any initial free charge accumulation decays exponentially to zero on a timescale of $\tau = \epsilon/\sigma$ ($\sim 10^{-19}\,\text{s}$ for copper). We can safely assume $\rho_f \approx 0$.
 
+- Maxwell equations (assuming $e^{-\mathrm{i}\omega t}$ time-dependence)
+$$
+\nabla \cdot \boldsymbol{E} = 0, \quad \nabla \cdot \boldsymbol{B} = 0
+$$
+$$
+\nabla \times \boldsymbol{E} = \mathrm{i} \omega \mu\boldsymbol{H}, \quad 
+\nabla \times \boldsymbol{H} = (\sigma - \mathrm{i} \omega \epsilon)\boldsymbol{E} = -\mathrm{i}\omega\tilde{\epsilon}\boldsymbol{E},\quad
+\tilde{\epsilon} = \epsilon + \mathrm{i} \frac{\sigma}{\omega}
+$$
+- The wave equation
+$$
+\left( \nabla^2 + \tilde{k}^2 \right) \left\{\begin{matrix} \boldsymbol{E} \\ \boldsymbol{H}\end{matrix}\right\}= 0
+,\quad
+\tilde{k}^2 = \omega^2\mu\tilde{\epsilon} = \omega^2\mu\epsilon + \mathrm{i}\omega\mu\sigma
+$$
+To look for plane-wave solutions propagating along the $z$-direction, we write $\tilde{k}$ in terms of its real and imaginary components,
+$$
+\tilde{k} = \beta_k + \mathrm{i}\alpha_k
+$$
+$$
+\text{with }
+\beta_k = \omega \sqrt{\frac{\mu\epsilon}{2}} \left[ \sqrt{1 + \left(\frac{\sigma}{\omega\epsilon}\right)^2} + 1 \right]^{1/2}
+,\quad
+\alpha_k = \omega \sqrt{\frac{\mu\epsilon}{2}} \left[ \sqrt{1 + \left(\frac{\sigma}{\omega\epsilon}\right)^2} - 1 \right]^{1/2},\quad
+( \beta_k^2 - \alpha_k^2 = \omega^2\mu\epsilon, \ 2\alpha_k\beta_k = \omega\mu\sigma )
+$$
+The plane wave solution propagating along $\hat{z}$ becomes $\boldsymbol{E}(z,t) = \boldsymbol{E}_0 \, e^{-\alpha_k z} \, e^{\mathrm{i}(\beta_k z - \omega t)}$.  
+### 4.3.2 Good conductor
+- The good conductor limit
 
-### 4.3.2 Waveguide tube
-## 4.4 Lorentz model
+A medium behaves as a good conductor when the conduction current heavily dominates over the displacement current, i.e.,
+$$
+\frac{\sigma\boldsymbol{E}}{{ \partial \boldsymbol{D} }/{ \partial t }} \sim \frac{\sigma}{\omega\epsilon} = (\omega\tau)^{-1} \gg 1
+$$
+Under this approximation, the expressions for $\beta$ and $\alpha$ converge to the same value, 
+$$
+\beta_k \approx \alpha_k \approx \sqrt{\frac{\omega\mu\sigma}{2}}
+$$
+The skin depth (The characteristic distance over which the wave's amplitude $\boldsymbol{E}_0 \, e^{-\alpha_k z}$ attenuates by a factor of $1/e$) is 
+$$
+\delta \triangleq \frac{1}{\alpha_k} \approx \sqrt{\frac{2}{\omega\mu\sigma}}
+$$
+> Inside a good conductor, the wave field dies out almost entirely within a few skin depths. For high frequencies, $\delta$ is on the order of micrometers, restricting the fields and currents to the very outer edge of the material.  
+
+- Complex intrinsic impedance
+$$
+\tilde{Z} = \frac{\omega\mu}{\tilde{k}} = \frac{\omega\mu}{\beta_k + \mathrm{i}\alpha_k}
+$$
+For a good conductor,
+$$
+\tilde{Z} \approx \sqrt{\frac{\omega\mu}{\sigma}} \, e^{-\mathrm{i}\pi/4} = \frac{1}{\sigma\delta}(1 - \mathrm{i})
+$$
+Hence, for the plane wave solution propagating along $\hat{z}$ : $\boldsymbol{E}(z,t) = \boldsymbol{E}_0 \, e^{-\alpha_k z} \, e^{\mathrm{i}(\beta_k z - \omega t)}$,
+$$
+\boldsymbol{H}(z,t) = \frac{\hat{z}\times\boldsymbol{E}(z,t)}{\tilde{Z}} = E_0\sqrt{\frac{\sigma}{\omega\mu}} \, e^{-\alpha z}\,e^{\mathrm{i}(\beta z - \omega t + \pi/4)}\,\hat{z}\times\boldsymbol{E}_0
+$$
+Which means: Firstly, $\boldsymbol{H}$ lags behind $\boldsymbol{E}$ by a temporal phase angle of $\pi/4$; Secondly, The magnetic energy density ($\frac{1}{2}\mu|\boldsymbol{H}|^2$) is vastly larger than the electric energy density ($\frac{1}{2}\epsilon|\boldsymbol{E}|^2$) by a factor of $\frac{\sigma}{\omega\epsilon}$, meaning the wave becomes almost purely magnetic.
+
+- Good Conductors is Good Reflectors
+
+Consider an electromagnetic wave in a lossless Medium 1 (air with $n_1 \approx 1$) is incident upon a good conductor (Medium 2, with finite but large $\sigma$). The wave vector $\boldsymbol{k}_t$ in Medium 2 becomes complex,
+$$
+\tilde{k}_2 =\beta_k + \mathrm{i}\alpha_k \approx \frac{{1+\mathrm{i}}}{\delta}
+$$
+here $\delta$ is incredibly small, meaning $|k_2| \gg k_1$. As [[A_symmetry_自然界的对称性/Applications/ED formulas (2)#P‑polarization ($ boldsymbol{E}$ parallel to the plane of incidence)\|#P‑polarization ($ boldsymbol{E}$ parallel to the plane of incidence)]], define the complex parameter $\beta$ and $\alpha$,
+$$
+\tilde{\beta} \triangleq \frac{k _2/\mu _2}{k_ 1/\mu_ 1} \approx \frac{k _2}{k_ 1} = \frac{1+\mathrm{i}}{k_1\delta} ,\quad|\tilde{\beta}|\gg 1
+$$
+$$
+\sin\theta_t = (k_1/k_2)\sin\theta_i\ll1 \implies \theta_t\approx 0
+\implies
+\alpha \triangleq \frac{\cos\theta_t}{\cos\theta_i} \approx \frac{1}{\cos\theta_i} 
+$$
+For infinite $\theta_i$: $|\beta| \gg \alpha$. Therefore,
+$$
+\tilde{r}_p = \frac{\tilde{\beta} - \alpha}{\tilde{\beta} + \alpha} \to 1,\quad
+\tilde{r}_s = \frac{1 - \alpha\tilde{\beta}}{1 + \alpha\tilde{\beta}} \to -1
+$$
+Which means the good conductor reflects nearly all of the incident field back into Medium 1.  
+
+- Boundary condition for good conductor ($\hat{n}$ is pointed to conductor (Medium 2))
+$$
+\begin{align} \hat{{n}} \times \boldsymbol{E} &= 0 \overset{\nabla \cdot \boldsymbol{E}=0}{\implies} \frac{ \partial E_n }{ \partial n } = 0
+\\[3pt]
+\hat{{n}} \times \boldsymbol{H} &= -\boldsymbol{K}_f
+\\[4pt] 
+\hat{{n}} \cdot \boldsymbol{D} &= -\sigma_f
+,\quad 
+\hat{{n}} \cdot \boldsymbol{H} = 0 \end{align}
+$$
+### 4.3.3 Resonator  
+Consider a hollow rectangular cavity with dimensions $0 \le x \le a$, $0 \le y \le b$, and $0 \le z \le d$. The fields inside must satisfy the time-harmonic Helmholtz equation $\left(\nabla^2 + k^2\right) \boldsymbol{E} = 0$, where $k = \omega\sqrt{\mu\epsilon}$.  
+
+Applying the separation of variables under the boundary conditions $\hat {{n}} \times \boldsymbol{E} = 0, \ \frac{ \partial E_n }{ \partial n } = 0$ restricts $\boldsymbol{k}$ to discrete values,  
+$$
+k_x = \frac{l\pi}{a}, \quad k_y = \frac{m\pi}{b}, \quad k_z = \frac{n\pi}{d} \qquad (l, m, n \in \mathbb{N})
+$$
+where at most one of the integers can be zero for a given mode. This yields the discrete resonant frequencies of the resonator,  
+$$
+\omega_{lmn} = \frac{\pi}{\sqrt{\mu\epsilon}} \sqrt{\left(\frac{l}{a}\right)^2 + \left(\frac{m}{b}\right)^2 + \left(\frac{n}{d}\right)^2}
+$$
+### 4.3.4 Waveguide tube  
+#### The Rectangular Waveguide
+Consider a hollow waveguide with a rectangular cross-section of width $a$ along the $x$-axis and height $b$ along the $y$-axis, with $a > b$. The inner PEC (perfect electric conductor) walls are located at $x=0, a$ and $y=0, b$. We look for harmonic waves propagating down the tube,
+$$
+\boldsymbol{E}(\boldsymbol{r},t) = \boldsymbol{E}_0(x,y) \, e^{\mathrm{i}(k_z z - \omega t)}, \quad \boldsymbol{H}(\boldsymbol{r},t) = \boldsymbol{H}_0(x,y) \, e^{\mathrm{i}(k_z z - \omega t)}
+$$
+which satisfy,  
+$$
+\left( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} - k_z^2 + k^2 \right) \left\{\begin{matrix} \boldsymbol{E}_0 \\ \boldsymbol{H}_0\end{matrix}\right\}  = 0
+$$
+- <font color="#ff0000">TM Modes (Transverse Magnetic)</font>
+
+For TM waves, the longitudinal magnetic field vanishes ($H_z = 0$), and we solve for $\boldsymbol{E}_0(x,y)$. The boundary conditions are,
+$$
+\begin{align} 
+&\text{at }~ x=0,a:\quad
+E_z = E_y = \frac{ \partial E_x }{ \partial x } =0
+\\[4pt]
+&\text{at }~ y=0,b:\quad
+E_z = E_x = \frac{ \partial E_y }{ \partial y } = 0
+\end{align}
+$$
+Applying the separation of variables yields,
+$$
+\begin{align} 
+E_{0z}(x,y) &= A_z \sin\left(\frac{m\pi x}{a}\right) \sin\left(\frac{n\pi y}{b}\right)
+\\[8pt]
+E_{0x}(x,y) &= A_x \cos\left(\frac{m\pi x}{a}\right) \sin\left(\frac{n\pi y}{b}\right)
+\\[8pt]
+E_{0y}(x,y) &= A_y \sin\left(\frac{m\pi x}{a}\right) \cos\left(\frac{n\pi y}{b}\right) 
+\end{align} 
+\qquad (m, n \in \mathbb{N}^+)
+$$
+Plunging this back into the Helmholtz equation yields the discrete cutoff wavenumber $k_c$,
+$$
+k_c^2 = \left(\frac{m\pi}{a}\right)^2 + \left(\frac{n\pi}{b}\right)^2 = k^2 - k_z^2
+$$
+> Crucial Note: If either $m=0$ or $n=0$, the entire field $E_z$ collapses to zero. Thus, the lowest-order TM mode is the $\text{TM}_{11}$ mode.
+
+- <font color="#ff0000">TE Modes (Transverse Electric)</font>
+
+For TE waves, the longitudinal electric field vanishes ($E_z = 0$), and we solve for $\boldsymbol{H}_0(x,y)$. The boundary condition $\boldsymbol{E}_{\text{tangential}} = 0$ translates via Maxwell's equations into a Neumann boundary condition for $H_z$ (its normal derivative must vanish at the walls),
+$$
+\begin{align} 
+&\text{at }~ x=0,a:\quad
+E_y = H_x =0 \implies \frac{\partial H_z}{\partial x} = \frac{ \partial H_y }{ \partial x } =0
+\\[4pt]
+&\text{at }~ y=0,b:\quad
+E_x = H_y = 0 \implies \frac{\partial H_z}{\partial y} = \frac{ \partial H_x }{ \partial y } = 0
+\end{align}
+$$
+This restricts the solutions to,
+$$
+\begin{align} 
+H_{0z}(x,y) &= A'_z \cos\left(\frac{m\pi x}{a}\right) \cos\left(\frac{n\pi y}{b}\right)
+\\[8pt]
+H_{0x}(x,y) &= A'_x \sin\left(\frac{m\pi x}{a}\right) \cos\left(\frac{n\pi y}{b}\right)
+\\[8pt]
+H_{0y}(x,y) &= A'_y \cos\left(\frac{m\pi x}{a}\right) \sin\left(\frac{n\pi y}{b}\right) 
+\end{align} 
+\qquad (m, n \in \mathbb{N}^+)
+$$
+The cutoff wavenumber $k_c$ shares the exact same algebraic form as the TM modes. However, because cosines do not vanish when their arguments are zero, one of the indices ($m$ or $n$) can safely be zero. Thus, the lowest-order TE mode is the $\text{TE}_{10}$ or $TE_{01}$ mode.
+
+- The Dominant Mode: $\text{TE}_{10}$ 
+
+If $a > b$, the lowest-order TE mode is the $\text{TE}_{10}$ mode,
+$$
+k_{c,10} = \frac{\pi}{a} \implies \omega_{c,10} = \frac{\pi}{a\sqrt{\mu\epsilon}} < \omega_{c,01}
+$$
+#### The Transverse-Longitudinal Bridge *  
+This is a powerful tool when you deal with the boundary condition or derive all components of $\boldsymbol{E}$ or $\boldsymbol{B}$ after you have only solved one of the components.  
+
+Using,  
+$$
+\nabla \times \boldsymbol{E} = \mathrm{i}\omega\mu\boldsymbol{H}
+, \quad 
+\nabla \times \boldsymbol{H} = -\mathrm{i}\omega\epsilon\boldsymbol{E}
+$$
+Expanding these equations into Cartesian components (replacing $\partial/\partial z$ with $\mathrm{i}k_z$) yields,  
+$$
+\begin{align} 
+\frac{\partial E_z}{\partial y} - \mathrm{i}k_z E_y &= \mathrm{i}\omega\mu H_x
+\\ 
+\mathrm{i}k_z E_x - \frac{\partial E_z}{\partial x} &= \mathrm{i}\omega\mu H_y
+\\
+\frac{\partial E_y}{\partial x} - \frac{\partial E_x}{\partial y} &= \mathrm{i}\omega\mu H_z
+\\
+\frac{\partial H_z}{\partial y} - \mathrm{i}k_z H_y &= -\mathrm{i}\omega\epsilon E_x
+\\
+\mathrm{i}k_z H_x - \frac{\partial H_z}{\partial x} &= -\mathrm{i}\omega\epsilon E_y
+\\
+\frac{\partial H_y}{\partial x} - \frac{\partial H_x}{\partial y} &= -\mathrm{i}\omega\epsilon E_z
+\end{align}
+$$
+By solving the simultaneous pairs (1)-(5) and (2)-(4), we form the algebraic bridge that explicitly expresses the transverse field components $(E_x, E_y, H_x, H_y)$ in terms of the longitudinal components $(E_z, H_z)$,  
+$$
+\begin{align} 
+E_x &= \frac{\mathrm{i}}{k_c^2} \left( k_z \frac{\partial E_z}{\partial x} + \omega\mu \frac{\partial H_z}{\partial y} \right) \quad 
+\\[4pt] 
+E_y &= \frac{\mathrm{i}}{k_c^2} \left( k_z \frac{\partial E_z}{\partial y} - \omega\mu \frac{\partial H_z}{\partial x} \right) \quad 
+\\[4pt] 
+H_x &= \frac{\mathrm{i}}{k_c^2} \left( k_z \frac{\partial H_z}{\partial x} - \omega\epsilon \frac{\partial E_z}{\partial y} \right) \quad
+\\[4pt]
+H_y &= \frac{\mathrm{i}}{k_c^2} \left( k_z \frac{\partial H_z}{\partial y} + \omega\epsilon \frac{\partial E_z}{\partial x} \right)
+\end{align}
+$$
+#### General Formulation *
+Now we take a hollow tube of any arbitrary cross-section shape into account.   
+
+To do this efficiently without solving all 6 components of $\boldsymbol{E}$ and $\boldsymbol{H}$ simultaneously, we split the del operator and the fields into transverse ($t$) and longitudinal ($z$) components,
+$$
+\nabla = \nabla_t + \hat{z}\frac{\partial}{\partial z} = \nabla_t + \mathrm{i}k_z\hat{z}
+$$
+$$
+\boldsymbol{E} = \boldsymbol{E}_t + E_z\hat{z},\quad \boldsymbol{H} = \boldsymbol{H}_t + H_z\hat{z}
+$$
+By substituting these split forms back into Maxwell's curl equations ($\nabla \times \boldsymbol{E} = \mathrm{i}\omega\mu\boldsymbol{H}$ and $\nabla \times \boldsymbol{H} = -\mathrm{i}\omega\epsilon\boldsymbol{E}$) and separating the components orthogonal to $\hat{z}$, one obtains,
+$$
+\begin{align} \boldsymbol{E}_t &= \frac{\mathrm{i}}{k_c^2} \left( k_z \nabla_t E_z - \omega\mu \, \hat{z} \times \nabla_t H_z \right) 
+\\[4pt] 
+\boldsymbol{H}_t &= \frac{\mathrm{i}}{k_c^2} \left( k_z \nabla_t H_z + \omega\epsilon \, \hat{z} \times \nabla_t E_z \right) \end{align}
+$$
+where $k_c^2 \triangleq k^2 - k_z^2 = \mu\epsilon\omega^2 - k_z^2$.
+
+Thus, once you solve the 2D scalar Helmholtz equation $\left(\nabla_t^2 + k_c^2\right) \left\{\begin{matrix} \boldsymbol{E}_0 \\ \boldsymbol{H}_0\end{matrix}\right\} = 0$ for a given boundary, taking spatial derivatives ($\nabla_t$) instantly yields the entire transverse field structure.
+
+- The Impossibility of TEM Modes in Hollow Tubes
+
+A TEM (Transverse Electromagnetic) wave requires both $E_z = 0$ and $H_z = 0$. Looking at the general decomposition formulas above, if $E_z=H_z=0$, then $\boldsymbol{E}_t$ and $\boldsymbol{H}_t$ would instantly become zero unless $k_c^2 = 0$.
+
+If $k_c^2 = 0$, the transverse electric field reduces to a static-like potential problem: $\nabla_t^2 \Phi = 0$ with $\boldsymbol{E}_t = -\nabla_t \Phi$. For a hollow, single-conductor tube, the entire bounding perimeter forms a single, continuous equipotential surface. By the uniqueness theorem of electrostatics, $\Phi = \text{constant}$ everywhere inside, meaning $\boldsymbol{E}_t = 0$.
+
+Thus, TEM waves cannot exist inside a hollow, single-conductor waveguide.
+#### Dispersion Characteristics
+For any chosen mode with a cutoff wavenumber $k_c$, the longitudinal propagation constant is,
+$$
+k_z = \sqrt{k^2 - k_c^2} = \sqrt{\mu\epsilon}\sqrt{\omega^2 - \omega_c^2},\quad
+\omega_c = \frac{k_c}{\sqrt{\mu\epsilon}}
+$$
+If $\omega > \omega_c$, $k_z$ is real. The wave propagates freely. while $\omega < \omega_c$, $k_z = \mathrm{i}\alpha$ becomes purely imaginary. The fields decay exponentially as $e^{-\alpha z}$.
+
+Because the wave bounces off the walls rather than traveling in a straight line, the phase fronts and the energy transport move along the axis at different speeds:
+
+- Phase Velocity
+$$
+v_p \triangleq \frac{\omega}{k_z} = \frac{c_m}{\sqrt{1 - (\omega_c/\omega)^2}} > c_m, \quad c_m = \frac{1}{\sqrt{\mu\epsilon}}
+$$
+- Group Velocity
+$$
+v_g \triangleq \frac{\mathrm{d}\omega}{\,\,\mathrm{d}k_z} = c_m \sqrt{1 - \left(\frac{\omega_c}{\omega}\right)^2} < c_m
+$$
+and 
+$$
+v_p \cdot v_g = c_m^2
+$$
+## 4.4 Lorentz model *
 
 

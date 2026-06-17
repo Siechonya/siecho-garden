@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-06-15T09:49:53.224+08:00","updated":"2026-06-14T21:35:27.140+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-06-15T09:49:53.224+08:00","updated":"2026-06-17T14:09:43.217+08:00","dg-note-properties":{}}
 ---
 
 > This document supplements some rather complex proof processes within [[A_symmetry_自然界的对称性/Applications/ED Formulas\|ED Formulas]] and [[A_symmetry_自然界的对称性/Applications/ED formulas (2)\|ED formulas (2)]] 
@@ -448,5 +448,51 @@ W_{\text{tot}} = m_{\text{em}} c^2
 $$
 Once the Poincaré stresses required for mechanical stability are properly included, the total energy and momentum transform together as a genuine Lorentz four‑vector $P^\mu = (W_{\text{tot}}/c, \mathbf{P}_{\text{tot}})$, completely resolving the classical $4/3$ paradox.
 
+# 8 The evanescent wave  
+Let $\kappa \triangleq \sqrt{(n_1/n_2)^2\sin^2\theta_i - 1} > 0$ for $\theta_i > \theta_c$. The transmitted wave vector $\boldsymbol{k}_t$ in medium 2 becomes complex,
+$$
+\boldsymbol{k}_t = k_{tx}\hat{x} + k_{tz}\hat{z} = k_1\sin\theta_i\hat{x} + \mathrm{i}k_2\kappa\hat{z}
+$$
+Substituting $\boldsymbol{k}_t$ into the expression for the transmitted electric field $\boldsymbol{E}_t(\boldsymbol{r},t)$ yields,
+$$\boldsymbol{E}_t(\boldsymbol{r},t) = \boldsymbol{E}_{0t}\, e^{-\gamma z}\, e^{\mathrm{i}(k_x x - \omega t)}$$
+where $k_x = k_1\sin\theta_i$ represents the propagation constant along the interface, and
+$$
+\gamma \triangleq k_2\kappa = \frac{\omega}{c}\sqrt{n_1^2\sin^2\theta_i - n_2^2}
+$$
+is the attenuation coefficient along the $z$-direction. Thus, the field amplitude decays exponentially with distance from the interface. This surface-bound, non-propagating disturbance in medium 2 is known as an evanescent wave. As $\theta_i \to \theta_c$, the decay $\gamma\to 0$, and the wave behaves like a conventional refracted plane wave.
+#### Reflection phase shifts
+Since $|r_s| = |r_p| = 1$, we can express the reflection coefficients as pure phase factors: $r_s = e^{\mathrm{i}\delta_s}$ and $r_p = e^{\mathrm{i}\delta_p}$. Assuming non-magnetic media ($\mu_1 \approx \mu_2 \approx \mu_0$), we substitute $\cos\theta_t = \mathrm{i}\kappa$ into the Fresnel formulas to obtain,
+$$
+r_s = \frac{\cos\theta_i - \mathrm{i}\sqrt{\sin^2\theta_i - n_{21}^2}}{\cos\theta_i + \mathrm{i}\sqrt{\sin^2\theta_i - n_{21}^2}} = e^{\mathrm{i}\delta_s}
+$$
+$$
+r_p = \frac{n_{21}^2\cos\theta_i - \mathrm{i}\sqrt{\sin^2\theta_i - n_{21}^2}}{n_{21}^2\cos\theta_i + \mathrm{i}\sqrt{\sin^2\theta_i - n_{21}^2}} = e^{\mathrm{i}\delta_p}
+$$
+where $n_{21} = n_2/n_1 < 1$. Using the complex identity $\tan(\delta/2) = \mathrm{Im}(B)/\mathrm{Re}(A)$ for $r = \frac{A - \mathrm{i}B}{A + \mathrm{i}B}=\frac{z^*}{z}$, the phase shifts upon reflection are given by,
+$$
+\tan\left(\frac{\delta_s}{2}\right) = -\frac{\sqrt{\sin^2\theta_i - n_{21}^2}}{\cos\theta_i}
+,\quad
+\tan\left(\frac{\delta_p}{2}\right) = -\frac{\sqrt{\sin^2\theta_i - n_{21}^2}}{n_{21}^2\cos\theta_i}
+$$
+Because $\delta_s \neq \delta_p$, a relative phase difference $\Delta \delta = \delta_p - \delta_s$ is introduced between the two components upon reflection. Consequently, an incident linearly polarized wave containing both P and S components will generally become elliptically polarized after total internal reflection. This property is exploited in optical components like the Fresnel rhomb to introduce precise phase delays.
+#### Energy flow
+The fact that a non-zero field exists in medium 2. To clarify the mechanism of energy transport, we compute the time-averaged Poynting vector $\langle \boldsymbol{S}_t \rangle = \frac{1}{2}\mathrm{Re}(\boldsymbol{E}_t \times \boldsymbol{H}_t^*)$ in medium 2.
+
+For S-polarization, the electric field is $\boldsymbol{E}_t = E_{0t} e^{-\gamma z} e^{\mathrm{i}(k_x x - \omega t)}\hat{y}$. The associated magnetic field is determined via,
+$$
+\boldsymbol{H}_t = \frac{1}{\omega\mu_2}\boldsymbol{k}_t \times \boldsymbol{E}_t = \frac{E_{0t} e^{-\gamma z} e^{\mathrm{i}(k_x x - \omega t)}}{\omega\mu_2} \left( -\mathrm{i}\gamma\hat{x} + k_x\hat{z} \right)
+$$
+Taking the cross product with the complex conjugate $\boldsymbol{H}_t^*$,
+$$
+\boldsymbol{E}_t \times \boldsymbol{H}_t^* = \frac{|E_{0t}|^2 e^{-2\gamma z}}{\omega\mu_2} \left( k_x\hat{x} - \mathrm{i}\gamma\hat{z} \right)
+$$
+Taking half the real part yields the time-averaged power flow,
+$$
+\langle \boldsymbol{S}_t \rangle = \frac{k_x |E_{0t}|^2}{2\omega\mu_2} e^{-2\gamma z} \hat{x}
+$$
+Which means Zero Transverse Flux ($\langle S_{tz} \rangle = 0$): There is no net power transmitted across the interface into the bulk of medium 2. Energy dynamically flows back and forth across the boundary within a single optical cycle, but the net time-averaged transmission is zero.   
+
+However, Non-zero Longitudinal Flux ($\langle S_{tx} \rangle \neq 0$) implies there are energy streaming continuously parallel to the interface within the narrow surface layer defined by the penetration depth $d\sim\frac{1}{\gamma}$.
+  
 
 
