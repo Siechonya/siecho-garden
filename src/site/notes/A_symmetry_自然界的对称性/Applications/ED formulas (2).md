@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-17T22:54:54.649+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-17T22:59:27.966+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1118,7 +1118,6 @@ $$
 ,\quad 
 \langle \boldsymbol{S} \rangle = \frac{1}{2}\sqrt{\frac{\epsilon}{\mu}} |\boldsymbol{E}_0|^2 \hat{k} = \langle w\rangle v_\text{p}\hat{k}
 $$
-### 4.1.3 Scattering and absorption of waves
 ## 4.2 EM waves on the surface of the medium  
 Let medium 1 ($z<0$) and medium 2 ($z>0$) be homogeneous, isotropic, lossless linear dielectrics with parameters $\epsilon_1,\mu_1$ and $\epsilon_2,\mu_2$. The planar interface is the $z=0$ plane, with unit normal $\hat{n}=\hat{z}$ pointing into medium 2. A monochromatic plane wave of angular frequency $\omega$ is incident from medium 1.  
 ![Pasted image 20260617122216.png\|center\|780](/img/user/Pasted%20image%2020260617122216.png)
@@ -1494,5 +1493,7 @@ $$
 v_p \cdot v_g = c_m^2
 $$
 ## 4.4 Lorentz model *
+#todo
 
-
+## 4.5 Scattering and absorption of waves *  
+#todo
