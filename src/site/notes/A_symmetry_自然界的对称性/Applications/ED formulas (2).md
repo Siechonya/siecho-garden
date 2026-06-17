@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-17T22:48:27.468+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-17T22:54:54.649+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1368,7 +1368,7 @@ E_{0x}(x,y) &= A_x \cos\left(\frac{m\pi x}{a}\right) \sin\left(\frac{n\pi y}{b}\
 \\[8pt]
 E_{0y}(x,y) &= A_y \sin\left(\frac{m\pi x}{a}\right) \cos\left(\frac{n\pi y}{b}\right) 
 \end{align} 
-\qquad (m, n \in \mathbb{N}^+)
+\qquad (m, n \in \mathbb{N}_0, \text{ and } m+n > 0)
 $$
 Plunging this back into the Helmholtz equation yields the discrete cutoff wavenumber $k_c$,
 $$
@@ -1408,7 +1408,7 @@ $$
 k_{c,10} = \frac{\pi}{a} \implies \omega_{c,10} = \frac{\pi}{a\sqrt{\mu\epsilon}} < \omega_{c,01}
 $$
 #### The Transverse-Longitudinal Bridge *  
-This is a powerful tool when you deal with the boundary condition or derive all components of $\boldsymbol{E}$ or $\boldsymbol{B}$ after you have only solved one of the components.  
+This formulation serves as a powerful tool for applying boundary conditions, as well as for deriving all remaining field components once a single longitudinal component is determined. 
 
 Using,  
 $$
@@ -1462,7 +1462,7 @@ $$
 $$
 where $k_c^2 \triangleq k^2 - k_z^2 = \mu\epsilon\omega^2 - k_z^2$.
 
-Thus, once you solve the 2D scalar Helmholtz equation $\left(\nabla_t^2 + k_c^2\right) \left\{\begin{matrix} \boldsymbol{E}_0 \\ \boldsymbol{H}_0\end{matrix}\right\} = 0$ for a given boundary, taking spatial derivatives ($\nabla_t$) instantly yields the entire transverse field structure.
+Thus, once you solve the 2D scalar Helmholtz equation $\left(\nabla_t^2 + k_c^2\right) \left\{\begin{matrix} E_{0z} \\ H_{0z}\end{matrix}\right\} = 0$ for a given boundary, taking spatial derivatives ($\nabla_t$) instantly yields the entire transverse field structure.
 
 - The Impossibility of TEM Modes in Hollow Tubes
 
@@ -1477,7 +1477,7 @@ $$
 k_z = \sqrt{k^2 - k_c^2} = \sqrt{\mu\epsilon}\sqrt{\omega^2 - \omega_c^2},\quad
 \omega_c = \frac{k_c}{\sqrt{\mu\epsilon}}
 $$
-If $\omega > \omega_c$, $k_z$ is real. The wave propagates freely. while $\omega < \omega_c$, $k_z = \mathrm{i}\alpha$ becomes purely imaginary. The fields decay exponentially as $e^{-\alpha z}$.
+If $\omega > \omega_c$, $k_z$ is real. The wave propagates freely, while for $\omega < \omega_c$, $k_z = \mathrm{i}\alpha$ becomes purely imaginary. The fields decay exponentially as $e^{-\alpha z}$.
 
 Because the wave bounces off the walls rather than traveling in a straight line, the phase fronts and the energy transport move along the axis at different speeds:
 
