@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/2 Coherent structures/","noteIcon":"default","created":"2026-06-18T16:07:01.236+08:00","updated":"2026-06-19T15:19:22.921+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/_Documents/2 Coherent structures/","noteIcon":"default","created":"2026-06-18T16:07:01.236+08:00","updated":"2026-06-19T15:31:47.651+08:00","dg-note-properties":{}}
 ---
 
 
@@ -147,22 +147,6 @@ $\vec v_{sw}$ 是 solar wind 的局地平均速度。
 
 
 # 2 Coherent Structures at Ion Scales in Fast Solar Wind: Cluster Observations (partially)  
-```bib
-@article{Perrone2017,
-doi = {10.3847/1538-4357/aa9022},
-url = {https://doi.org/10.3847/1538-4357/aa9022},
-year = {2017},
-month = {oct},
-publisher = {The American Astronomical Society},
-volume = {849},
-number = {1},
-pages = {49},
-author = {Perrone, D. and Alexandrova, O. and Roberts, O.~`W. and Lion, S. and Lacombe, C. and Walsh, A. and Maksimovic, M. and Zouganelis, I.},
-title = {Coherent Structures at Ion Scales in Fast Solar Wind: Cluster Observations},
-journal = {The Astrophysical Journal}
-}
-```
-
 Perrone, D., Alexandrava, O., Roberts, O. W., Lion, S., Lacombe, C., Walsh, A., Maksimovic, M., & Zouganelis, I. (2017). Coherent structures at ion scales in fast solar wind: Cluster observations. _The Astrophysical Journal_ , 849(1), 49. https://doi.org/10.3847/1538-4357/aa9022
 ## 2.1 主要内容  
 > [!info] 摘要
@@ -414,7 +398,6 @@ $$
 ## 10.2 链接
 - 本地 PDF：[2.10 Wu_2021_ApJ_Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath](/img/user/_Documents/docs/2%20Coherent%20structures/2.10%20Wu_2021_ApJ_Statistical%20Properties%20of%20Small-scale%20Linear%20Magnetic%20Holes%20in%20the%20Martian%20Magnetosheath.pdf)
 - MinerU 输出：[[_Documents/docs/mineru_output/2.10 Wu_2021_ApJ_Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath/2.10 Wu_2021_ApJ_Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath\|MinerU markdown]]
-
 # 11 On a Plasma Sheath Separating Regions of Oppositely Directed Magnetic Field.  
 [2.11 E. G. Harris 1961 - CS](/img/user/_Documents/docs/2%20Coherent%20structures/2.11%20E.%20G.%20Harris%201961%20-%20CS.pdf)  
 

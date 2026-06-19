@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-19T15:29:13.131+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-19T17:06:34.083+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1293,7 +1293,7 @@ $$
 $$
 Which means: Firstly, $\boldsymbol{H}$ lags behind $\boldsymbol{E}$ by a temporal phase angle of $\pi/4$; Secondly, The magnetic energy density ($\frac{1}{2}\mu|\boldsymbol{H}|^2$) is vastly larger than the electric energy density ($\frac{1}{2}\epsilon|\boldsymbol{E}|^2$) by a factor of $\frac{\sigma}{\omega\epsilon}$, meaning the wave becomes almost purely magnetic.
 
-- Good Conductors is Good Reflectors
+- Good conductors is good reflectors
 
 Consider an electromagnetic wave in a lossless Medium 1 (air with $n_1 \approx 1$) is incident upon a good conductor (Medium 2, with finite but large $\sigma$). The wave vector $\boldsymbol{k}_t$ in Medium 2 becomes complex,
 $$
@@ -1317,13 +1317,16 @@ Which means the good conductor reflects nearly all of the incident field back in
 
 - Boundary condition for good conductor ($\hat{n}$ is pointed to conductor (Medium 2))
 $$
-\begin{align} \hat{{n}} \times \boldsymbol{E} &= 0 \overset{\nabla \cdot \boldsymbol{E}=0}{\implies} \frac{ \partial E_n }{ \partial n } = 0
-\\[3pt]
+\begin{align} 
+\hat{{n}} \times \boldsymbol{E} &= 0 \overset{\nabla \cdot \boldsymbol{E}=0}{\implies} \frac{ \partial E_n }{ \partial n } = 0
+\\[10pt]
 \hat{{n}} \times \boldsymbol{H} &= -\boldsymbol{K}_f
-\\[4pt] 
-\hat{{n}} \cdot \boldsymbol{D} &= -\sigma_f
-,\quad 
-\hat{{n}} \cdot \boldsymbol{H} = 0 \end{align}
+,\quad
+\hat{{n}} \cdot \boldsymbol{D} = -\sigma_f
+\\[10pt] 
+\hat{{n}} \cdot \boldsymbol{H} &= 0 
+\overset{\nabla \cdot \boldsymbol{B}=0}{\implies} \frac{ \partial H_{\perp,1} }{ \partial x_{\perp,1} } + \frac{ \partial H_{\perp,2} }{ \partial x_{\perp,2} } = 0
+\end{align}
 $$
 ### 4.3.3 Resonator  
 Consider a hollow rectangular cavity with dimensions $0 \le x \le a$, $0 \le y \le b$, and $0 \le z \le d$. The fields inside must satisfy the time-harmonic Helmholtz equation $\left(\nabla^2 + k^2\right) \boldsymbol{E} = 0$, where $k = \omega\sqrt{\mu\epsilon}$.  
@@ -1337,7 +1340,7 @@ $$
 \omega_{lmn} = \frac{\pi}{\sqrt{\mu\epsilon}} \sqrt{\left(\frac{l}{a}\right)^2 + \left(\frac{m}{b}\right)^2 + \left(\frac{n}{d}\right)^2}
 $$
 ### 4.3.4 Waveguide tube  
-#### The Rectangular Waveguide
+#### The rectangular waveguide
 Consider a hollow waveguide with a rectangular cross-section of width $a$ along the $x$-axis and height $b$ along the $y$-axis, with $a > b$. The inner PEC (perfect electric conductor) walls are located at $x=0, a$ and $y=0, b$. We look for harmonic waves propagating down the tube,
 $$
 \boldsymbol{E}(\boldsymbol{r},t) = \boldsymbol{E}_0(x,y) \, e^{\mathrm{i}(k_z z - \omega t)}, \quad \boldsymbol{H}(\boldsymbol{r},t) = \boldsymbol{H}_0(x,y) \, e^{\mathrm{i}(k_z z - \omega t)}
@@ -1406,7 +1409,7 @@ If $a > b$, the lowest-order TE mode is the $\text{TE}_{10}$ mode,
 $$
 k_{c,10} = \frac{\pi}{a} \implies \omega_{c,10} = \frac{\pi}{a\sqrt{\mu\epsilon}} < \omega_{c,01}
 $$
-#### The Transverse-Longitudinal Bridge *  
+#### The transverse-longitudinal bridge *  
 This formulation serves as a powerful tool for applying boundary conditions, as well as for deriving all remaining field components once a single longitudinal component is determined. 
 
 Using,  
@@ -1443,7 +1446,7 @@ H_x &= \frac{\mathrm{i}}{k_c^2} \left( k_z \frac{\partial H_z}{\partial x} - \om
 H_y &= \frac{\mathrm{i}}{k_c^2} \left( k_z \frac{\partial H_z}{\partial y} + \omega\epsilon \frac{\partial E_z}{\partial x} \right)
 \end{align}
 $$
-#### General Formulation *
+#### The general waveguide *
 Now we take a hollow tube of any arbitrary cross-section shape into account.   
 
 To do this efficiently without solving all 6 components of $\boldsymbol{E}$ and $\boldsymbol{H}$ simultaneously, we split the del operator and the fields into transverse ($t$) and longitudinal ($z$) components,
@@ -1470,7 +1473,7 @@ A TEM (Transverse Electromagnetic) wave requires both $E_z = 0$ and $H_z = 0$. L
 If $k_c^2 = 0$, the transverse electric field reduces to a static-like potential problem: $\nabla_t^2 \Phi = 0$ with $\boldsymbol{E}_t = -\nabla_t \Phi$. For a hollow, single-conductor tube, the entire bounding perimeter forms a single, continuous equipotential surface. By the uniqueness theorem of electrostatics, $\Phi = \text{constant}$ everywhere inside, meaning $\boldsymbol{E}_t = 0$.
 
 Thus, TEM waves cannot exist inside a hollow, single-conductor waveguide.
-#### Dispersion Characteristics
+#### Dispersion characteristics
 For any chosen mode with a cutoff wavenumber $k_c$, the longitudinal propagation constant is,
 $$
 k_z = \sqrt{k^2 - k_c^2} = \sqrt{\mu\epsilon}\sqrt{\omega^2 - \omega_c^2},\quad
