@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/1 Plasma Waves/","noteIcon":"default","created":"2026-06-15T09:49:36.645+08:00","updated":"2026-05-06T13:48:05.297+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/_Documents/1 Plasma Waves/","noteIcon":"default","created":"2026-06-15T09:49:36.645+08:00","updated":"2026-06-18T16:06:20.000+08:00","dg-note-properties":{}}
 ---
 
 # 总览%
@@ -18,14 +18,14 @@ debugInConsole: false # Print debug info in Obsidian console
 # 约定格式说明%
 本文件后续的文献整理满足以下格式, 以方便查阅/回忆:
 
-|           | 含义                            |
-| --------- | ----------------------------- |
-| 文件名       | 论文研究方向                        |
-| 一 级标题     | 论文索引和论文标题                     |
-| 一级标题后面直接跟 | 1. bibtex 引用格式<br>2. JGR 引用格式 |
-| 简述        | 论文的主要技术实现和结果.                 |
-| 链接        | 论文的本地链接                       |
-| 补充        | 其他说明, 包括生词本等等                 |
+|       | 含义            |
+| ----- | ------------- |
+| 文件名   | 论文研究方向        |
+| 一 级标题 | 论文索引和论文标题     |
+| 一级标题后 | JGR 引用格式      |
+| 简述    | 论文的主要技术实现和结果. |
+| 链接    | 论文的本地链接       |
+| 补充    | 其他说明, 包括生词本等等 |
 
 # 1 Analytical chorus wave model derived from Van Allen Probe  observations. (have read)
 Wang, D., Shprits, Y. Y., Zhelavskaya, I. S., Agapitov, O. V., Drozdov, A. Y., & Aseev, N. A. (2019). Analytical chorus wave model derived from Van Allen Probe  observations. _Journal of Geophysical Research: Space Physics_, 124, 1063–1084. https://doi.org/10.1029/2018JA026183
@@ -84,7 +84,7 @@ rus waves are basically the same on the dayside and nightside. However, the main
 upper-band chorus waves on the nightside is narrower than that on the dayside.
 
 ## 1.2 链接
-本地 [1.1 Wang et al. - 2019 - Analytical chorus wave model derived from Van Allen Probe  observations.pdf](/img/user/_Documents/docs/1.1%20Wang%20et%20al.%20-%202019%20-%20Analytical%20chorus%20wave%20model%20derived%20from%20Van%20Allen%20Probe%20%20observations.pdf)
+本地 [1.1 Wang et al. - 2019 - Analytical chorus wave model derived from Van Allen Probe  observations.pdf](/img/user/_Documents/docs/1%20Plasma%20Waves/1.1%20Wang%20et%20al.%20-%202019%20-%20Analytical%20chorus%20wave%20model%20derived%20from%20Van%20Allen%20Probe%20%20observations.pdf)
 ## 1.3 补充
 文章阅读中遇到的生词和略缩词在: [[_Documents/words/qld words- Analytical chorus wave model derived from Van Allen Probe  observations\|qld words- Analytical chorus wave model derived from Van Allen Probe  observations]]
 
@@ -122,7 +122,7 @@ $$
 **相对论性电子种子群**. 低能电子的动力学主要受对流和注入而不是扩散控制, 因此原模型无法重现 MeV 电子的增强, 即便存在强合唱波. 选取下边界 $\boldsymbol{E_{\text{min}} = 100 \, \text{keV}}$ 处的低能边界条件(文章称其为电子种子群 electron seed population).
 
 ## 2.2 链接
-本地 [1.2 Tu et al. - 2014 - Event-specific chorus wave and electron seed population models in DREAM 3D using the Van Allen Probes.pdf](/img/user/_Documents/docs/1.2%20Tu%20et%20al.%20-%202014%20-%20Event-specific%20chorus%20wave%20and%20electron%20seed%20population%20models%20in%20DREAM%203D%20using%20the%20Van%20Allen%20Probes.pdf)
+本地 [1.2 Tu et al. - 2014 - Event-specific chorus wave and electron seed population models in DREAM 3D using the Van Allen Probes.pdf](/img/user/_Documents/docs/1%20Plasma%20Waves/1.2%20Tu%20et%20al.%20-%202014%20-%20Event-specific%20chorus%20wave%20and%20electron%20seed%20population%20models%20in%20DREAM%203D%20using%20the%20Van%20Allen%20Probes.pdf)
 ## 2.3 补充
 文章阅读中遇到的生词以及**一些关键概念**在: [[_Documents/words/qld words- Event-specific chorus wave and electron seed population models in DREAM3D using the Van Allen Probes\|qld words- Event-specific chorus wave and electron seed population models in DREAM3D using the Van Allen Probes]]  
 
@@ -358,7 +358,7 @@ $$
 > 
 >  4. Diffusion in energy and mixed pitch angle energy are comparable for whistler mode waves in low densities and Z mode waves. This suggests that the mixed diffusion rate could make a significant contribution to the timescale for electron acceleration and loss and should be included into global radiation belt models such as Salammbô [Beutier and Bosher, 1995].
 ## 3.2 链接
-本地 [Glauert & Horne - 2005 - Calculation of pitch angle and energy diffusion coefficients with the PADIE code](/img/user/_Documents/docs/1.3%20Glauert%20&%20Horne%20-%202005%20-%20Calculation%20of%20pitch%20angle%20and%20energy%20diffusion%20coefficients%20with%20the%20PADIE%20code.pdf)
+本地 [Glauert & Horne - 2005 - Calculation of pitch angle and energy diffusion coefficients with the PADIE code](/img/user/_Documents/docs/1%20Plasma%20Waves/1.3%20Glauert%20&%20Horne%20-%202005%20-%20Calculation%20of%20pitch%20angle%20and%20energy%20diffusion%20coefficients%20with%20the%20PADIE%20code.pdf)
 ## 3.3 补充
  文章阅读中遇到的生词以及**一些关键概念**在在: [[_Documents/words/qld words- Calculation of pitch angle and energy diffusion coefficients with the PADIE code\|qld words- Calculation of pitch angle and energy diffusion coefficients with the PADIE code]]  
 

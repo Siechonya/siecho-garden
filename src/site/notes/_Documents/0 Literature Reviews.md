@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/0 Literature Reviews/","noteIcon":"default","created":"2026-06-15T09:49:36.641+08:00","updated":"2026-06-14T11:48:48.107+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/_Documents/0 Literature Reviews/","noteIcon":"default","created":"2026-06-15T09:49:36.641+08:00","updated":"2026-06-18T16:05:35.000+08:00","dg-note-properties":{}}
 ---
 
 
 # 1 The Solar Wind as a Turbulence Laboratory  
-[0.1 The Solar Wind as a Turbulence Laboratory lrsp-2013-2](/img/user/_Documents/docs/0.1%20The%20Solar%20Wind%20as%20a%20Turbulence%20Laboratory%20lrsp-2013-2.pdf)  
+[0.1 The Solar Wind as a Turbulence Laboratory lrsp-2013-2](/img/user/_Documents/docs/0%20Literature%20Reviews/0.1%20The%20Solar%20Wind%20as%20a%20Turbulence%20Laboratory%20lrsp-2013-2.pdf)  
 
 
 

@@ -1,12 +1,12 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2026-06-15T09:49:36.656+08:00","updated":"2026-05-30T18:02:49.594+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2026-06-15T09:49:36.656+08:00","updated":"2026-06-18T17:21:46.967+08:00","dg-note-properties":{}}
 ---
 
 
 # 1 Turbulence: The legacy of A.N. Kolmogorov
 Frisch, U. (1995). _Turbulence: The legacy of A.N. Kolmogorov_. Cambridge University Press. [https://doi.org/10.1017/CBO9780511623343](https://doi.org/10.1017/CBO9780511623343)  
 
-[3.1 Turbulence, the legacy of A.N. Kolmogorov (Uriel Frisch)](/img/user/_Documents/docs/3.1%20Turbulence,%20the%20legacy%20of%20A.N.%20Kolmogorov%20(Uriel%20Frisch).pdf)
+[3.1 Turbulence, the legacy of A.N. Kolmogorov (Uriel Frisch)](/img/user/_Documents/docs/3%20Theory%20&%20tools%20&%20observation%20of%20Turbulence/3.1%20Turbulence,%20the%20legacy%20of%20A.N.%20Kolmogorov%20(Uriel%20Frisch).pdf)
 
 # 2 A Practical Guide to Wavelet Analysis (read partially)  
 Torrence, C., & Compo, G. P. (1998). A practical guide to wavelet analysis. _Bulletin of the American Meteorological Society_, 79(1), 61-78. [A Practical Guide to Wavelet Analysis in: Bulletin of the American Meteorological Society Volume 79 Issue 1 (1998)](https://journals.ametsoc.org/view/journals/bams/79/1/1520-0477_1998_079_0061_apgtwa_2_0_co_2.xml)
@@ -72,7 +72,7 @@ lag-2 红噪同理。若上述噪声回归方程是全局的，则是傅里叶�
 
 
 ## 2.2 链接
-本地 [2.2 A Practical Guide to Wavelet Analysis](/img/user/_Documents/docs/3.2%20A%20Practical%20Guide%20to%20Wavelet%20Analysis.pdf)
+本地 [2.2 A Practical Guide to Wavelet Analysis](/img/user/_Documents/docs/3%20Theory%20&%20tools%20&%20observation%20of%20Turbulence/3.2%20A%20Practical%20Guide%20to%20Wavelet%20Analysis.pdf)
 ## 2.3 补充
 词汇 [[_Documents/words/Part.3 words#2 A practical guide to wavelet analysis\|_Documents/words/Part.3 words#2 A practical guide to wavelet analysis]]
 
@@ -149,13 +149,20 @@ $\theta=\langle B,X_{MSE} \rangle$, When $B_{XMSE} > 0$ or when $0^\circ < θ < 
 ## 3.2 补充  
 词汇 [[_Documents/words/Part.3 words#3 Characterization of turbulence in the Mars plasma environment with MAVEN observations\|Part.3 words]]
 ## 3.3 链接
-本地 [3.3 Ruhunusiri et al_2017_Characterization of turbulence in the Mars plasma environment with MAVEN](/img/user/_Documents/docs/3.3%20Ruhunusiri%20et%20al_2017_Characterization%20of%20turbulence%20in%20the%20Mars%20plasma%20environment%20with%20MAVEN.pdf)  
+本地 [3.3 Ruhunusiri et al_2017_Characterization of turbulence in the Mars plasma environment with MAVEN](/img/user/_Documents/docs/3%20Theory%20&%20tools%20&%20observation%20of%20Turbulence/3.3%20Ruhunusiri%20et%20al_2017_Characterization%20of%20turbulence%20in%20the%20Mars%20plasma%20environment%20with%20MAVEN.pdf)  
 
 # 4 The solar wind interaction with Mars  Locations and shapes of the bow shock  
 Vigne. D., et al. (2017), The solar wind interaction with Mars  Locations and shapes of the bow shock, _GEOPHYSICAL RESEARCH LETTERS_, 27(1), 49-52.  
 
 [[_Documents/docs/mineru_output/3.4 Geophysical Research Letters - 2000 - Vignes - The solar wind interaction with Mars  Locations and shapes of the bow shock/3.4 Geophysical Research Letters - 2000 - Vignes - The solar wind interaction with Mars  Locations and shapes of the bow shock\|3.4 Geophysical Research Letters - 2000 - Vignes - The solar wind interaction with Mars  Locations and shapes of the bow shock]]
 
+# 5 A New Tool for Understanding the Solar Wind–Venus Interaction: Three-dimensional  Multifluid MHD Model  
+[3.5 Dang-2023-A New Tool for Understanding the Sol](/img/user/_Documents/docs/3%20Theory%20&%20tools%20&%20observation%20of%20Turbulence/3.5%20Dang-2023-A%20New%20Tool%20for%20Understanding%20the%20Sol.pdf)  
+
+
+
+# 6 Introduction to Modern Magnetohydrodynamics  
+[3.6 ModernMHD (Galtier)_withBookmarks](/img/user/_Documents/docs/3%20Theory%20&%20tools%20&%20observation%20of%20Turbulence/3.6%20ModernMHD%20(Galtier)_withBookmarks.pdf)  
 
 
 
