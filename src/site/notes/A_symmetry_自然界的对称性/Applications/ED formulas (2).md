@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-19T17:06:34.083+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-24T21:37:17.824+08:00","dg-note-properties":{}}
 ---
 
 
@@ -277,7 +277,7 @@ $$
 $$
 - $z$-Independent Case (General Solution for $k = 0$): 
 
-The problem reduces to a 2D Laplace equation in polar coordinates, where the radial equation transitions from a Bessel equation to an Euler-Cauchy equation:   
+The problem reduces to a 2D Laplace equation in polar coordinates, where the radial equation transitions from a Bessel equation to an Euler-Cauchy equation,   
 $$   
 s^2 \frac{\mathrm{d}^2R}{\mathrm{d}s^2} + s \frac{\mathrm{d}R}{\mathrm{d}s} - \nu^2 R = 0   
 $$
@@ -286,7 +286,7 @@ $$
 \varphi(s, \phi) = \underset{\text{as }\nu=0}{\underbrace{A_0 + B_0 \ln s} } + \sum_{\nu=1}^{\infty} \left(A_\nu s^\nu + B_\nu s^{-\nu}\right) \cos(\nu\phi) + \sum_{\nu=1}^{\infty} \left(C_\nu s^\nu + D_\nu s^{-\nu}\right) \sin(\nu\phi)   
 $$
 ### 1.4.3 Spherical coordinate system
-In the spherical coordinate system $(r, \theta, \phi)$, Laplace's equation is given by:
+In the spherical coordinate system $(r, \theta, \phi)$, Laplace's equation is given by,
 $$
 \nabla^2 \varphi = \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2 \frac{\partial \varphi}{\partial r}\right) + \frac{1}{r^2\sin\theta}\frac{\partial}{\partial \theta}\left(\sin\theta \frac{\partial \varphi}{\partial \theta}\right) + \frac{1}{r^2\sin^2\theta}\frac{\partial^2 \varphi}{\partial \phi^2} = 0
 $$
@@ -304,7 +304,9 @@ $$
 
 - Axisymmetric Systems ($\partial / \partial \phi = 0 \implies m=0$)
 $$
+\boxed{
 \varphi(r, \theta) = \sum_{l=0}^{\infty} \left( A_l r^l + \frac{B_l}{r^{l+1}} \right) P_l(\cos\theta)
+}
 $$
 - General Case Solution
 $$ 
@@ -323,7 +325,7 @@ $$
 $$
 \nabla^2 G(\boldsymbol{r}, \boldsymbol{r}') = -\frac{\delta(\boldsymbol{r} - \boldsymbol{r}')}{\epsilon_0}
 $$
-- Fundamental solution in infinite space,
+- Fundamental solution in infinite space,  
 $$ G_0(\boldsymbol{r}, \boldsymbol{r}') = \frac{1}{4\pi\epsilon_0|\boldsymbol{r} - \boldsymbol{r}'|}$$
 $$
 \varphi(\boldsymbol{r}) = \int \rho(\boldsymbol{r}')G(\boldsymbol{r},\boldsymbol{r}')\,\mathrm{d}^3r'
@@ -342,6 +344,7 @@ the green function above is so-called 1-st Green function, which satisfies symme
 $$
 G(\boldsymbol{r}, \boldsymbol{r'}) = G(\boldsymbol{r'}, \boldsymbol{r})
 $$
+> Note: The Green's function defined in the region $V$ can be understood as the electric potential generated jointly by a point charge placed anywhere inside $V$ and the image charges that satisfy the corresponding boundary conditions.
 
 - With boundaries (Neumann condition):
 
@@ -1017,7 +1020,7 @@ $$
 = \frac{P}{c^2} u^\alpha = \frac{\mu_0 e^2}{6\pi c^3} (a^\mu a_\mu) u^\alpha
 $$
 #### Lorentz Transformation of $\frac{ \mathrm{d} P }{ \mathrm{d} \Omega}$ *
-Let $K$ be the laboratory frame and $K'$ be the instantaneous rest frame of the moving particle. Let $\frac{\mathrm{d}P}{\mathrm{d}\Omega}$ denote the angular radiation power emitted per retarded time in $K$, and $\frac{\mathrm{d}P'}{\mathrm{d}\Omega'}$ in $K'$. The angular distribution transforms as,
+Let $K$ be the laboratory frame and $K'$ be the instantaneous rest frame of the moving particle. Let $\frac{\mathrm{d}P}{\mathrm{d}\Omega}$ denote the angular radiation power emitted per retarded time in $K$, and $\frac{\mathrm{d}P'}{\mathrm{d}\Omega'}$ in $K'$. The angular distribution transforms as,  
 $$
 \frac{\mathrm{d}P}{\mathrm{d}\Omega} = \frac{1}{\gamma^4 (1 - \beta \cos\theta)^3} \frac{\mathrm{d}P'}{\mathrm{d}\Omega'} = \gamma^2 (1 - \beta \cos\theta')^3 \frac{\mathrm{d}P'}{\mathrm{d}\Omega'}
 $$
@@ -1287,9 +1290,9 @@ For a good conductor,
 $$
 \tilde{Z} \approx \sqrt{\frac{\omega\mu}{\sigma}} \, e^{-\mathrm{i}\pi/4} = \frac{1}{\sigma\delta}(1 - \mathrm{i})
 $$
-Hence, for the plane wave solution propagating along $\hat{z}$ : $\boldsymbol{E}(z,t) = \boldsymbol{E}_0 \, e^{-\alpha_k z} \, e^{\mathrm{i}(\beta_k z - \omega t)}$,
+Hence, for the plane wave solution propagating along $\hat{z}$ : $\boldsymbol{E}(z,t) = \boldsymbol{E}_0 \, e^{-\alpha_k z} \, e^{\mathrm{i}(\beta_k z - \omega t)}$,  
 $$
-\boldsymbol{H}(z,t) = \frac{\hat{z}\times\boldsymbol{E}(z,t)}{\tilde{Z}} = E_0\sqrt{\frac{\sigma}{\omega\mu}} \, e^{-\alpha z}\,e^{\mathrm{i}(\beta z - \omega t + \pi/4)}\,\hat{z}\times\boldsymbol{E}_0
+\boldsymbol{H}(z,t) = \frac{\hat{z}\times\boldsymbol{E}(z,t)}{\tilde{Z}} = E_0\sqrt{\frac{\sigma}{\omega\mu}} \, e^{-\alpha_k z}\,e^{\mathrm{i}(\beta_k z - \omega t + \pi/4)}\,\hat{z}\times\boldsymbol{E}_0
 $$
 Which means: Firstly, $\boldsymbol{H}$ lags behind $\boldsymbol{E}$ by a temporal phase angle of $\pi/4$; Secondly, The magnetic energy density ($\frac{1}{2}\mu|\boldsymbol{H}|^2$) is vastly larger than the electric energy density ($\frac{1}{2}\epsilon|\boldsymbol{E}|^2$) by a factor of $\frac{\sigma}{\omega\epsilon}$, meaning the wave becomes almost purely magnetic.
 
@@ -1299,7 +1302,7 @@ Consider an electromagnetic wave in a lossless Medium 1 (air with $n_1 \approx 1
 $$
 \tilde{k}_2 =\beta_k + \mathrm{i}\alpha_k \approx \frac{{1+\mathrm{i}}}{\delta}
 $$
-here $\delta$ is incredibly small, meaning $|k_2| \gg k_1$. As [[A_symmetry_自然界的对称性/Applications/ED formulas (2)#P‑polarization ($ boldsymbol{E}$ parallel to the plane of incidence)\|#P‑polarization ($ boldsymbol{E}$ parallel to the plane of incidence)]], define the complex parameter $\beta$ and $\alpha$,
+here $\delta$ is incredibly small, meaning $|k_2| \gg k_1$. As [[A_symmetry_自然界的对称性/Applications/ED formulas (2)#P‑polarization ($ boldsymbol{E}$ parallel to the plane of incidence)\|#P‑polarization ($ boldsymbol{E}$ parallel to the plane of incidence)]], define the complex parameter $\beta$ and $\alpha$,  
 $$
 \tilde{\beta} \triangleq \frac{k _2/\mu _2}{k_ 1/\mu_ 1} \approx \frac{k _2}{k_ 1} = \frac{1+\mathrm{i}}{k_1\delta} ,\quad|\tilde{\beta}|\gg 1
 $$
@@ -1313,7 +1316,7 @@ $$
 \tilde{r}_p = \frac{\tilde{\beta} - \alpha}{\tilde{\beta} + \alpha} \to 1,\quad
 \tilde{r}_s = \frac{1 - \alpha\tilde{\beta}}{1 + \alpha\tilde{\beta}} \to -1
 $$
-Which means the good conductor reflects nearly all of the incident field back into Medium 1.  
+Which means the good conductor reflects nearly all of the incident field back into Medium 1, and the tangential components of the incident and reflected waves vanish at the interface, also leaving no transmitted wave emerging into the conductor: $\hat{{n}} \times \boldsymbol{E} = 0$.
 
 - Boundary condition for good conductor ($\hat{n}$ is pointed to conductor (Medium 2))
 $$
@@ -1325,7 +1328,6 @@ $$
 \hat{{n}} \cdot \boldsymbol{D} = -\sigma_f
 \\[10pt] 
 \hat{{n}} \cdot \boldsymbol{H} &= 0 
-\overset{\nabla \cdot \boldsymbol{B}=0}{\implies} \frac{ \partial H_{\perp,1} }{ \partial x_{\perp,1} } + \frac{ \partial H_{\perp,2} }{ \partial x_{\perp,2} } = 0
 \end{align}
 $$
 ### 4.3.3 Resonator  
