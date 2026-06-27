@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-06-15T09:49:53.224+08:00","updated":"2026-06-17T14:09:43.217+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/Appendix for ED formulas/","noteIcon":"default","created":"2026-06-15T09:49:53.224+08:00","updated":"2026-06-27T22:19:49.550+08:00","dg-note-properties":{}}
 ---
 
 > This document supplements some rather complex proof processes within [[A_symmetry_自然界的对称性/Applications/ED Formulas\|ED Formulas]] and [[A_symmetry_自然界的对称性/Applications/ED formulas (2)\|ED formulas (2)]] 
@@ -449,13 +449,13 @@ $$
 Once the Poincaré stresses required for mechanical stability are properly included, the total energy and momentum transform together as a genuine Lorentz four‑vector $P^\mu = (W_{\text{tot}}/c, \mathbf{P}_{\text{tot}})$, completely resolving the classical $4/3$ paradox.
 
 # 8 The evanescent wave  
-Let $\kappa \triangleq \sqrt{(n_1/n_2)^2\sin^2\theta_i - 1} > 0$ for $\theta_i > \theta_c$. The transmitted wave vector $\boldsymbol{k}_t$ in medium 2 becomes complex,
+Let $\kappa = \sqrt{-\cos\theta_t^2} \triangleq \sqrt{(n_1/n_2)^2\sin^2\theta_i - 1} > 0$ for $\theta_i > \theta_c$. The transmitted wave vector $\boldsymbol{k}_t$ in medium 2 becomes complex, 
 $$
 \boldsymbol{k}_t = k_{tx}\hat{x} + k_{tz}\hat{z} = k_1\sin\theta_i\hat{x} + \mathrm{i}k_2\kappa\hat{z}
 $$
 Substituting $\boldsymbol{k}_t$ into the expression for the transmitted electric field $\boldsymbol{E}_t(\boldsymbol{r},t)$ yields,
-$$\boldsymbol{E}_t(\boldsymbol{r},t) = \boldsymbol{E}_{0t}\, e^{-\gamma z}\, e^{\mathrm{i}(k_x x - \omega t)}$$
-where $k_x = k_1\sin\theta_i$ represents the propagation constant along the interface, and
+$$\boldsymbol{E}_t(\boldsymbol{r},t) = \boldsymbol{E}_{0t}\, e^{-\gamma z}\, e^{\mathrm{i}(k_{tx} x - \omega t)}$$
+where $k_{tx} = k_1\sin\theta_i$ represents the propagation constant along the interface, and
 $$
 \gamma \triangleq k_2\kappa = \frac{\omega}{c}\sqrt{n_1^2\sin^2\theta_i - n_2^2}
 $$

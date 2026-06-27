@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-24T21:37:17.824+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-27T22:18:58.146+08:00","dg-note-properties":{}}
 ---
 
 
@@ -1164,7 +1164,7 @@ $$
 n_1\sin\theta_i = n_2\sin\theta_t
 $$
 ### 4.2.2 Fresnel equations *  
-In this section, we follow the reflected convention that reflection reverses the sign of the tangential field parallel to the plane of incidence, while preserving the perpendicular tangential field.
+In this section, we follow the reflected convention that reflection reverses the sign of the tangential field parallel to the plane of incidence, while preserving the perpendicular tangential field as [[A_symmetry_自然界的对称性/Applications/ED formulas (2)#4.2 EM waves on the surface of the medium\|the diagram]] displayed above.
 #### P‑polarization ($\boldsymbol{E}$ parallel to the plane of incidence)  
 Let $\boldsymbol{H}_{0j} = H_{0j}\hat{y}$. Tangential $\boldsymbol{E}$ and $\boldsymbol{H}$ (using $\boldsymbol{H}_0 = (\omega\mu)^{-1}\boldsymbol{k}\times\boldsymbol{E}_0$) continuity gives,  
 $$
@@ -1229,7 +1229,9 @@ If $n_1 > n_2$, Snell's law gives $\sin\theta_t = (n_1/n_2)\sin\theta_i$. When $
 $$
 \theta_c = \arcsin\!\left(\frac{n_2}{n_1}\right)
 $$
-$\sin\theta_t > 1$ and $\cos\theta_t = \mathrm{i}\sqrt{\sin^2\theta_t-1}$ becomes purely imaginary. Then $r_s=r_p=1$, the transmitted wave becomes evanescent, and total internal reflection occurs. More about this phenomenon, see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#8 The evanescent wave\|Appendix for ED formulas#8 The evanescent wave]].
+$\sin\theta_t > 1$ and $\cos\theta_t = \mathrm{i}\sqrt{\sin^2\theta_t-1}$ becomes purely imaginary. Then $r_s=r_p=1$, the transmitted wave becomes evanescent, and total internal reflection occurs.   
+
+> More about this phenomenon, see [[A_symmetry_自然界的对称性/Applications/Appendix for ED formulas#8 The evanescent wave\|Appendix for ED formulas#8 The evanescent wave]].
 ## 4.3 EM waves in the conductors   
 ### 4.3.1 Wave equation
 - The constitutive relations for a homogeneous, isotropic, linear conductor,
@@ -1316,7 +1318,7 @@ $$
 \tilde{r}_p = \frac{\tilde{\beta} - \alpha}{\tilde{\beta} + \alpha} \to 1,\quad
 \tilde{r}_s = \frac{1 - \alpha\tilde{\beta}}{1 + \alpha\tilde{\beta}} \to -1
 $$
-Which means the good conductor reflects nearly all of the incident field back into Medium 1, and the tangential components of the incident and reflected waves vanish at the interface, also leaving no transmitted wave emerging into the conductor: $\hat{{n}} \times \boldsymbol{E} = 0$.
+Which means the good conductor reflects nearly all of the incident field back into Medium 1, and the tangential components of the incident and reflected waves vanish at the interface, also leaving no transmitted wave emerging into the conductor: $\hat{{n}} \times \boldsymbol{E}_1 = \hat{{n}} \times \boldsymbol{E}_2 = 0$. Thus, $\boldsymbol{E}$ is normal to the conductor surface, while $\boldsymbol{H}\propto \boldsymbol{k}\times\boldsymbol{E}$ is tangential.
 
 - Boundary condition for good conductor ($\hat{n}$ is pointed to conductor (Medium 2))
 $$
