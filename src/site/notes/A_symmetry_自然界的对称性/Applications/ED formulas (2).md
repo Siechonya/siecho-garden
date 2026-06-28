@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-27T22:18:58.146+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/A_symmetry_自然界的对称性/Applications/ED formulas (2)/","noteIcon":"default","created":"2026-06-15T09:49:53.230+08:00","updated":"2026-06-27T23:30:59.515+08:00","dg-note-properties":{}}
 ---
 
 
@@ -371,9 +371,9 @@ D_{11} = \frac{Q}{5}(2a_1^2 - a_2^2 - a_3^2), \quad D_{22} = \cdots, \quad D_{i\
 $$
 # 2 Magnetostatic Field  
 ## 2.1 Magnetic energy
-#todo
+#todo -
 ## 2.2 Multipole expansion (scalar potential)
-### 2.2.1 magnetic scalar potential *
+### 2.2.1 magnetic scalar potential
 - Without free/conductive current
 $$
 \nabla \times \boldsymbol{H} = \boldsymbol{J}_f \implies
@@ -440,7 +440,7 @@ $$
 $$
 \iiint_V \boldsymbol{J}\boldsymbol{r}\,\mathrm{d}V = \boldsymbol{m}\times \mathsf{I} \quad \implies \quad \iiint_V J_i r_j \,\mathrm{d}V = -\epsilon_{ijk}m_k
 $$
-### 2.3.2 Multipole expansion *
+### 2.3.2 Multipole expansion
 - Consider magnetostatic potential expansion at an external observation point $\boldsymbol{x}$, with localized current source $\boldsymbol{J}(\boldsymbol{x'})$ confined within a volume $V'$, and $\boldsymbol{R}=\boldsymbol{x}-\boldsymbol{x'}, r=|\boldsymbol{x}|(field), r'=|\boldsymbol{x'}|(source)$, then
 $$
 \begin{align} 
