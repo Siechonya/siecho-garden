@@ -1,67 +1,37 @@
-<!-- ========== 右侧标题目录折叠按钮（图标风格） ========== -->
-<style>
-  /* 右侧目录容器默认可见，设置过渡属性 */
-  .toc-container,
-  .toc {
-    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
-    opacity: 1;
-    transform: scale(1);
-    visibility: visible;
-    /* 可选：如果目录有滚动条，保留宽度避免布局抖动 */
-    /* overflow: hidden; 不推荐，会影响内部滚动 */
-  }
-  
-  /* 隐藏状态：淡出 + 轻微缩小 + 不可见 */
-  body.hide-right-toc .toc-container,
-  body.hide-right-toc .toc {
-    opacity: 0;
-    transform: scale(0.97);
-    visibility: hidden;
-    /* 注意：元素仍占据空间，但不可见 */
-  }
-  
-  #toggle-right-toc-btn {
-    position: fixed;
-    right: 20px;
-    top: 80px;
-    z-index: 10000;
-    background: transparent;      /* 默认完全透明 */
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 6px 10px;
-    border-radius: 6px;
-    color: #888;                  /* 浅灰色图标，不刺眼 */
-    transition: all 0.2s ease;
-  }
-  
-  /* 鼠标悬停时显现按钮形状 */
-  #toggle-right-toc-btn:hover {
-    background: rgba(0, 0, 0, 0.08);  /* 浅灰色半透明背景 */
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    color: #333;                       /* 图标颜色加深 */
-  }
-</style>
-
-<button id="toggle-right-toc-btn">◀</button>
+<!-- A monochrome outline icon; SVG avoids emoji rendering on Windows. -->
+<button type="button" id="toggle-right-toc-btn" class="sidebar-control"
+        aria-label="收起标题目录" title="收起标题目录" aria-expanded="true">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+       stroke-linejoin="round" aria-hidden="true">
+    <path d="M3 6h10M3 12h7M3 18h10"></path>
+    <path class="toc-toggle-chevron" d="m17 8 4 4-4 4"></path>
+  </svg>
+</button>
 
 <script>
   (function() {
     const btn = document.getElementById('toggle-right-toc-btn');
-    btn.title = 'Hide right TOC';
+    const toc = document.querySelector('.sidebar .sidebar-container > .toc');
     if (!btn) return;
-    let tocVisible = true;
-    btn.onclick = () => {
-      tocVisible = !tocVisible;
-      if (!tocVisible) {
-        document.body.classList.add('hide-right-toc');
-        btn.innerHTML = '▶';
-        btn.title = 'Show right TOC';
-      } else {
-        document.body.classList.remove('hide-right-toc');
-        btn.innerHTML = '◀';
-        btn.title = 'Hide right TOC';
-      }
-    };
+    if (!toc) {
+      btn.remove();
+      return;
+    }
+    if (!toc.id) toc.id = 'right-toc-panel';
+    btn.setAttribute('aria-controls', toc.id);
+    const chevron = btn.querySelector('.toc-toggle-chevron');
+    function sync() {
+      const visible = !document.body.classList.contains('hide-right-toc');
+      btn.setAttribute('aria-expanded', String(visible));
+      btn.setAttribute('aria-label', visible ? '收起标题目录' : '展开标题目录');
+      btn.title = visible ? '收起标题目录' : '展开标题目录';
+      chevron.setAttribute('d', visible ? 'm17 8 4 4-4 4' : 'm21 8-4 4 4 4');
+    }
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('hide-right-toc');
+      sync();
+    });
+    sync();
   })();
 </script>
