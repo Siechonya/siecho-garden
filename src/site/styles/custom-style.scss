@@ -22,7 +22,7 @@ body {
   }
   
   // 当 body 有 hide-sidebar 类时，隐藏左侧文件目录
-  body.hide-sidebar nav.filetree-sidebar {
+  &.hide-sidebar nav.filetree-sidebar {
     display: none !important;
   }
 }
