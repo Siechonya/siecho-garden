@@ -22,17 +22,74 @@
         {%endif%}
     {% endmacro %}
     
-    <div x-init="isDesktop = (window.innerWidth>=1400) ? true: false;" 
-            x-on:resize.window="isDesktop = (window.innerWidth>=1400) ? true : false;" 
-            x-data="{isDesktop: true, showFilesMobile: false}">
+    <div class="filetree-shell"
+            x-data="{
+                isDesktop: window.innerWidth >= 1400,
+                desktopOpen: true,
+                showFilesMobile: false,
+                init() {
+                    try {
+                        this.desktopOpen = localStorage.getItem('siecho:filetree:desktop-open') !== 'false';
+                    } catch (error) { /* Storage may be unavailable; keep the default. */ }
+                },
+                get filesVisible() {
+                    return this.isDesktop ? this.desktopOpen : this.showFilesMobile;
+                },
+                toggleDesktop() {
+                    this.desktopOpen = !this.desktopOpen;
+                    try {
+                        localStorage.setItem('siecho:filetree:desktop-open', String(this.desktopOpen));
+                    } catch (error) { /* Toggling still works without storage. */ }
+                },
+                closeFiles() {
+                    if (!this.filesVisible) return;
+                    if (this.isDesktop) {
+                        this.toggleDesktop();
+                        this.$nextTick(() => this.$refs.desktopToggle.focus());
+                    } else {
+                        this.showFilesMobile = false;
+                        this.$nextTick(() => this.$refs.mobileToggle.focus());
+                    }
+                },
+                resize() {
+                    const desktop = window.innerWidth >= 1400;
+                    if (desktop !== this.isDesktop) this.showFilesMobile = false;
+                    this.isDesktop = desktop;
+                }
+            }"
+            x-on:resize.window="resize()"
+            @keydown.escape.stop="closeFiles()">
+
+        <button type="button" class="filetree-toggle sidebar-control"
+                :class="{ 'is-open': desktopOpen }"
+                x-ref="desktopToggle" x-show.important="isDesktop" style="display: none;"
+                @click="toggleDesktop()" aria-controls="filetree-panel"
+                :aria-expanded="String(desktopOpen)"
+                :aria-label="desktopOpen ? '收起文件树' : '展开文件树'"
+                :title="desktopOpen ? '收起文件树' : '展开文件树'">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                <path d="M9 3v18"></path>
+                <path :d="desktopOpen ? 'm16 9-3 3 3 3' : 'm13 9 3 3-3 3'"></path>
+            </svg>
+        </button>
 
         <div x-show.important="!isDesktop" style="display: none;">
             {%include "components/filetreeNavbar.njk"%}
         </div>
-        
-        <div x-show="showFilesMobile && !isDesktop" @click="showFilesMobile = false" style="display:none;" class="fullpage-overlay"></div>
 
-      <nav class="filetree-sidebar"  x-show.important="isDesktop || showFilesMobile" style="display: none;">
+        <div x-show="showFilesMobile && !isDesktop" @click="closeFiles()"
+             style="display:none;" class="fullpage-overlay" aria-hidden="true"></div>
+
+      <nav id="filetree-panel" aria-label="文件树" class="filetree-sidebar"
+           x-show.important="filesVisible" style="display: none;">
+        <button type="button" class="filetree-close sidebar-control"
+                x-show.important="!isDesktop" style="display: none;"
+                @click="closeFiles()" aria-label="关闭文件树" title="关闭文件树">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+                <path d="m6 6 12 12M18 6 6 18"></path>
+            </svg>
+        </button>
         {% for imp in dynamics.filetree.beforeTitle %}
             {% include imp %}
         {% endfor %}
