@@ -205,3 +205,29 @@ body {
     .toc-container { transition: none; }
   }
 }
+
+/* Reading width: change this single value to tune line wrapping, not font size. */
+body main.content {
+  --file-line-width: 860px;
+  --content-left-gap: 16px;
+  --content-right-gap: 16px;
+  box-sizing: border-box;
+  width: calc(100% - var(--content-left-gap) - var(--content-right-gap));
+  max-width: var(--file-line-width);
+  margin-inline-start: max(
+    var(--content-left-gap),
+    calc((100% - var(--file-line-width) + var(--content-left-gap) - var(--content-right-gap)) / 2)
+  );
+  margin-inline-end: auto;
+}
+
+/* Match the existing fixed sidebars; keep room even while they are collapsed
+   so toggling a sidebar does not reflow the paragraph being read. */
+@media screen and (min-width: 1401px) {
+  body:has(.filetree-sidebar) main.content {
+    --content-left-gap: 274px; // 250px filetree + 24px breathing room
+  }
+  body:has(.sidebar) main.content {
+    --content-right-gap: 391px; // 350px sidebar + 17px edge + 24px gap
+  }
+}
