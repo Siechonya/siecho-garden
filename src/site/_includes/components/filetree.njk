@@ -82,7 +82,13 @@
              style="display:none;" class="fullpage-overlay" aria-hidden="true"></div>
 
       <nav id="filetree-panel" aria-label="文件树" class="filetree-sidebar"
-           x-show.important="filesVisible" style="display: none;">
+           x-show.important="filesVisible" style="display: none;"
+           x-transition:enter="filetree-motion"
+           x-transition:enter-start="filetree-motion-hidden"
+           x-transition:enter-end="filetree-motion-visible"
+           x-transition:leave="filetree-motion"
+           x-transition:leave-start="filetree-motion-visible"
+           x-transition:leave-end="filetree-motion-hidden">
         <button type="button" class="filetree-close sidebar-control"
                 x-show.important="!isDesktop" style="display: none;"
                 @click="closeFiles()" aria-label="关闭文件树" title="关闭文件树">
