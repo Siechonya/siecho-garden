@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/2 Coherent structures/","noteIcon":"default","created":"2026-06-18T16:07:01.236+08:00","updated":"2026-06-19T15:31:47.651+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/_Documents/2 Coherent structures/","noteIcon":"default","created":"2026-06-18T16:07:01.236+08:00","updated":"2026-09-07T20:37:11.952+08:00","dg-note-properties":{}}
 ---
 
 
@@ -200,7 +200,7 @@ Wang, T., Alexandrova, O., Perrone, D., Dunlop, M., Dong, X., Bingham, R., Khoty
 [2.3 Magnetospheric Multiscale Observation of Kinetic Signatures in the Alfvén Vortex](/img/user/_Documents/docs/2%20Coherent%20structures/2.3%20Magnetospheric%20Multiscale%20Observation%20of%20Kinetic%20Signatures%20in%20the%20Alfv%C3%A9n%20Vortex.pdf)
 # 4 Soliton approach to magnetic holes
 Baumgärtel, K. (1999), Soliton approach to magnetic holes, _J. Geophys. Res._, 104(A12), 28295–28308, doi:[10.1029/1999JA900393](https://doi.org/10.1029/1999JA900393 "Link to external resource: 10.1029/1999JA900393").
-# 5 Magnetic Holes in the Solar Wind
+# 5 Magnetic Holes in the Solar Wind (have read)
 Turner, J. M., Burlaga, L. F., Ness, N. F., & Lemaire, J. F. (1977). Magnetic holes in the solar wind. _Journal of Geophysical Research_, 82(13), 1921–1924. doi:[10.1029/JA082i013p01921](https://doi.org/10.1029/JA082i013p01921)
 ## 5.1 主要内容
 > [!摘要]
@@ -230,7 +230,7 @@ Turner, J. M., Burlaga, L. F., Ness, N. F., & Lemaire, J. F. (1977). Magnetic ho
 高分辨率事件图使用的是逐事件定义的局地坐标系：y 方向沿事件前约 2 s 的平均磁场，z 方向由过渡区最小方差方向给出，x 方向补成右手系。若在此坐标系中 $B_z\approx0$，将其视为 tangential discontinuity 的特征。
 #### 5.1.3 Magnetic merging：D-sheet-like holes  
 
-| ![[_Documents/docs/mineru_output/2.5 Journal of Geophysical Research  1896-1977 - 1 May 1977 - Turner - Magnetic holes in the solar wind/images/730ec028d6752a028d6e778beaab8c8f82f91d3f2672036e83851b6385254c72.jpg\|center\]] | ![[_Documents/docs/mineru_output/2.5 Journal of Geophysical Research  1896-1977 - 1 May 1977 - Turner - Magnetic holes in the solar wind/images/2bfc1042fcb7550742ad649d874219a61784da18fc353919863df357e070992c.jpg\|center\]] |
+| ![_Documents/docs/mineru_output/2.5 Journal of Geophysical Research  1896-1977 - 1 May 1977 - Turner - Magnetic holes in the solar wind/images/a15d4727ba196137a3d070ef59db6289ff29d6e3ea54538d69ca5cf67e70237d.jpg\|center\|287](/img/user/_Documents/docs/mineru_output/2.5%20Journal%20of%20Geophysical%20Research%20%201896-1977%20-%201%20May%201977%20-%20Turner%20-%20Magnetic%20holes%20in%20the%20solar%20wind/images/a15d4727ba196137a3d070ef59db6289ff29d6e3ea54538d69ca5cf67e70237d.jpg) | ![_Documents/docs/mineru_output/2.5 Journal of Geophysical Research  1896-1977 - 1 May 1977 - Turner - Magnetic holes in the solar wind/images/5a2339c166198bc359e6959af21cde623d4e923d8eb5d28a27952ecb6e94d222.jpg\|center\|337](/img/user/_Documents/docs/mineru_output/2.5%20Journal%20of%20Geophysical%20Research%20%201896-1977%20-%201%20May%201977%20-%20Turner%20-%20Magnetic%20holes%20in%20the%20solar%20wind/images/5a2339c166198bc359e6959af21cde623d4e923d8eb5d28a27952ecb6e94d222.jpg) |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 如图 (Fig.3) 的 March 27 0440 UT 事件中，磁场方向旋转约 $180^\circ$，且磁场强度几乎降到零；$B_z\approx0$ 表明其类似 tangential discontinuity，might be the site of magnetic merging。该事件宽度约 $8\ \mathrm{s}$，与太阳风中的 directional discontinuity 典型宽度相近。若用 magnetic annihilation / Sweet's mechanism 估计，预测 $B_{min}\approx0.15\gamma$，观测值约 $0.12\gamma$，两者很接近。
 
@@ -242,7 +242,7 @@ Turner, J. M., Burlaga, L. F., Ness, N. F., & Lemaire, J. F. (1977). Magnetic ho
 | April 1, 1025            |                              131 |                            7.1 |                 4 | 与 Fig. 4 对应；薄 D sheet-like 结构，但观测最小磁场远低于 merging 预测                                                                                                                                                   |
 这里需要注意：这些 holes 与 Burlaga 早期讨论的 D-sheets 不完全相同。本文中的 magnetic holes 里，$|B|$ 凹陷的空间范围大致与磁场方向变化范围相当；而传统 D sheets 中，$|B|$ 凹陷通常比方向变化层宽得多。另外，本文的 holes 发生更频繁。
 #### 5.1.3 Linear holes
-![[_Documents/docs/mineru_output/2.5 Journal of Geophysical Research  1896-1977 - 1 May 1977 - Turner - Magnetic holes in the solar wind/images/f0b178230fcd4a795b2779b4b2b066ea1119e6fe48e1d7203fc6092887435c57.jpg\|center]]
+![_Documents/docs/mineru_output/2.5 Journal of Geophysical Research  1896-1977 - 1 May 1977 - Turner - Magnetic holes in the solar wind/images/0e208b7d13e328e3670ff9941475a1361a571cb844c451819cfe17f6c7a42c88.jpg\|center\|429](/img/user/_Documents/docs/mineru_output/2.5%20Journal%20of%20Geophysical%20Research%20%201896-1977%20-%201%20May%201977%20-%20Turner%20-%20Magnetic%20holes%20in%20the%20solar%20wind/images/0e208b7d13e328e3670ff9941475a1361a571cb844c451819cfe17f6c7a42c88.jpg)
 Fig. 5 展示了一个典型 linear magnetic hole：磁场强度出现平滑、近对称的凹陷，但磁场方向几乎不变。图中变化主要出现在沿平均磁场方向的分量和 $|B|$ 上，因此该类事件不可能由 magnetic merging 直接产生，因为 merging 的必要观测特征之一是磁场方向改变。
 
 | Event date and time (UT) | $n_1/n_2$ | $T_1/T_2$ | $V_1/V_2$ | $\beta_1$ | $\beta_2$ | $\omega$ (deg) |
@@ -268,9 +268,8 @@ $$
 | 第一层 | 从背景值下降到 $B_{min}$ | 进入局地高等离子体压力区域，磁场被部分排出 |
 | 第二层 | 从 $B_{min}$ 恢复到背景值 | 离开该等离子体不均匀区域 |
 | 维持电流 | 由沿边界法向的电场漂移和 $\nabla B$ 相关漂移提供 | 形成维持该磁场凹陷的电流结构 |
-该模型也允许出现 magnetic enhancement：如果局地等离子体压力降低，则磁场可能增强。Fig. 6 就是作者称作 magnetic hole “antithesis”的例子，即磁场强度在约 $7\ \mathrm{s}$ 内增强而方向基本不变。
-![[_Documents/docs/mineru_output/2.5 Journal of Geophysical Research  1896-1977 - 1 May 1977 - Turner - Magnetic holes in the solar wind/images/f62cde1d5a34782f4ee2fe9c4d331f9f0b4c352bd15300007c6b1fed1216f620.jpg\|center]]
-
+该模型也允许出现 magnetic enhancement：如果局地等离子体压力降低，则磁场可能增强。Fig. 6 就是作者称作 magnetic hole “antithesis”的例子，即磁场强度在约 $7\ \mathrm{s}$ 内增强而方向基本不变。  
+![_Documents/docs/mineru_output/2.5 Journal of Geophysical Research  1896-1977 - 1 May 1977 - Turner - Magnetic holes in the solar wind/images/4a6ccae4655d8c71f15cd58d9fa77cb03efee45c2e79ace49eac52647fcab94c.jpg\|center\|203](/img/user/_Documents/docs/mineru_output/2.5%20Journal%20of%20Geophysical%20Research%20%201896-1977%20-%201%20May%201977%20-%20Turner%20-%20Magnetic%20holes%20in%20the%20solar%20wind/images/4a6ccae4655d8c71f15cd58d9fa77cb03efee45c2e79ace49eac52647fcab94c.jpg)
 ### 5.1.3 结论与局限
 | 结论                          | 说明                                                                                       |
 | --------------------------- | ---------------------------------------------------------------------------------------- |
@@ -298,7 +297,7 @@ Jovanović, D.,  O. Alexandrova, M. Maksimović, and M. Belić,  (2020). Fluid 
  
 
 
-# 10 Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath  
+# 10 Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath (have read)
 [2.10 Wu_2021_ApJ_Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath](/img/user/_Documents/docs/2%20Coherent%20structures/2.10%20Wu_2021_ApJ_Statistical%20Properties%20of%20Small-scale%20Linear%20Magnetic%20Holes%20in%20the%20Martian%20Magnetosheath.pdf)
 
 Wu, M., Chen, Y., Du, A., Wang, G., Xiao, S., Peng, E., Pan, Z., Chen, Y., & Zhang, T. (2021). Statistical properties of small-scale linear magnetic holes in the Martian magnetosheath. _The Astrophysical Journal_.
@@ -350,15 +349,15 @@ $$
 \ell\approx0.76\rho_i,
 $$
 属于 sub-proton gyroradius magnetic structure。
-### 10.1.4 统计结果
-![[_Documents/docs/mineru_output/2.10 Wu_2021_ApJ_Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath/images/e39cd8d24fd471e70e68b9f530869bb5aaff998a4457244e661779d48a84a9fb.jpg\|center]]
-
+### 10.1.4 统计结果    
+![_Documents/docs/mineru_output/2.10 Wu_2021_ApJ_Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath/images/89aef1fe54e41e794925495a322190bba49b04e33edef8bd3e52a739abcf084c.jpg\|center\|472](/img/user/_Documents/docs/mineru_output/2.10%20Wu_2021_ApJ_Statistical%20Properties%20of%20Small-scale%20Linear%20Magnetic%20Holes%20in%20the%20Martian%20Magnetosheath/images/89aef1fe54e41e794925495a322190bba49b04e33edef8bd3e52a739abcf084c.jpg)
 - 2016 年 2 月共获得 174 个 small-scale LMHs。
 - 火星磁鞘总穿越时长约 $6701\ \mathrm{min}$。若将 LMH train 作为一个事件计算，发生率约为 $1.5\ \mathrm{events/hour}.$
 - 图 3 中 nightside 事件较多，但作者认为这很可能与 MAVEN 在远拱点附近停留时间较长、轨道覆盖不均匀有关。
 #### Superposed epoch analysis
-![[_Documents/docs/mineru_output/2.10 Wu_2021_ApJ_Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath/images/7dc09f9588d80ca628d7a51eaec13aeed23fad6b493496e89e1933286a01059c.jpg\|center]]
 
+| ![_Documents/docs/mineru_output/2.10 Wu_2021_ApJ_Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath/images/1ee1d0cf8ac2109fb50784b1b3aaba53e26771501d4b4a89a9180cc961e36c24.jpg\|center\|456](/img/user/_Documents/docs/mineru_output/2.10%20Wu_2021_ApJ_Statistical%20Properties%20of%20Small-scale%20Linear%20Magnetic%20Holes%20in%20the%20Martian%20Magnetosheath/images/1ee1d0cf8ac2109fb50784b1b3aaba53e26771501d4b4a89a9180cc961e36c24.jpg) | ![_Documents/docs/mineru_output/2.10 Wu_2021_ApJ_Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath/images/5131a080170275c29b1ee8e015afdc18e6a997b1675fda15be95e0b0638a6f77.jpg\|center\|326](/img/user/_Documents/docs/mineru_output/2.10%20Wu_2021_ApJ_Statistical%20Properties%20of%20Small-scale%20Linear%20Magnetic%20Holes%20in%20the%20Martian%20Magnetosheath/images/5131a080170275c29b1ee8e015afdc18e6a997b1675fda15be95e0b0638a6f77.jpg) |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 - 对 170 个 isolated LMHs 做叠加分析，以每个事件的 $B_T$ 最小值时刻定义为 $t=0$。
 
 | 统计特征        | 数值                                              |
@@ -368,9 +367,8 @@ $$
 | 平均磁场下降相对大小  | $\left.\frac{B_T}{B}\right\|_{t=0}\approx0.53.$ |
 | 中位数最小磁场     | $B_T(t=0)\approx3.1\ \mathrm{nT}$               |
 | 中位数磁场下降相对大小 | $B_T/B\approx0.56$                              |
-
 #### Histogram distributions
-![[_Documents/docs/mineru_output/2.10 Wu_2021_ApJ_Statistical Properties of Small-scale Linear Magnetic Holes in the Martian Magnetosheath/images/1d776b00faf72fa8109d22a5c19a5854c6d42086acd5f0fc1b42393117ef0ee0.jpg\|center]]
+![zz_figure/Pasted image 20260907203500.png\|center\|403](/img/user/zz_figure/Pasted%20image%2020260907203500.png)
 
 - $B_{min}/B$：约 114 个事件（接近 $66\%$）位于 $(0.45,0.75)$；随着凹陷更深（$B_{min}/B$ 更小），事件数减少。
 - 旋转角 $\Delta\phi$：141 个事件满足 $\Delta\phi<15^\circ$，约占 $85\%$；随着 $\Delta\phi$ 增大，事件数明显减少。
