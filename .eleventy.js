@@ -501,7 +501,13 @@ module.exports = function (eleventyConfig) {
     return str && parsed.innerHTML;
   });
 
-  eleventyConfig.addTransform("htmlMinifier", (content, outputPath) => {
+  eleventyConfig.addTransform("htmlMinifier", function (content, outputPath) {
+    // Keep Cpp notes unminified, even when their permalinks change.
+    const inputPath = (this.page?.inputPath || "").replace(/\\/g, "/");
+    if (inputPath.replace(/^\.\//, "").startsWith("src/site/notes/Cpp/")) {
+      return content;
+    }
+
     if (
       (process.env.NODE_ENV === "production" || process.env.ELEVENTY_ENV === "prod") &&
       outputPath &&
