@@ -232,10 +232,10 @@ body main.content {
   }
 }
 
-/* Typography at 75% of the original size. Keep layout widths and SVG controls
+/* Typography at 83% of the original size. Keep layout widths and SVG controls
    unchanged; em/ex-based headings and MathJax formulas scale through inheritance. */
 html {
-  font-size: 75%;
+  font-size: 83%;
 }
 
 body {
@@ -247,7 +247,7 @@ body {
 }
 
 body main.content {
-  font-size: 1.125rem; // Previously 18px; now 13.5px at the default browser size.
+  font-size: 1.125rem; // Previously 18px; now 14.94px at the default browser size.
 }
 
 /* Replace remaining fixed-pixel text sizes; rem is already scaled at the root. */
