@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/2 Coherent structures/","noteIcon":"default","created":"2026-06-18T16:07:01.236+08:00","updated":"2026-09-07T20:37:11.952+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/_Documents/2 Coherent structures/","noteIcon":"default","created":"2026-06-18T16:07:01.236+08:00","updated":"2026-09-18T17:03:17.000+08:00","dg-note-properties":{}}
 ---
 
 
@@ -290,7 +290,7 @@ Soucek, J., E. Lucek, and I. Dandouras (2008), Properties of magnetosheath 
 Jovanović, D.,  O. Alexandrova, M. Maksimović, and M. Belić,  (2020). Fluid theory of coherent magnetic vortices in high-β. _space plasmas_. arXiv. [https://doi.org/10.48550/arXiv.1705.02913v5](https://doi.org/10.48550/arXiv.1705.02913v5)
 
 # 9 Alfven vortex filaments observed in magnetosheath downstream of a quasi-perpendicular bow shock  
-[2.9 Journal of Geophysical Research  Space Physics - 2006 - Alexandrova - Alfv n vortex filaments observed in magnetosheath](/img/user/_Documents/docs/2%20Coherent%20structures/2.9%20Journal%20of%20Geophysical%20Research%20%20Space%20Physics%20-%202006%20-%20Alexandrova%20-%20Alfv%20n%20vortex%20filaments%20observed%20in%20magnetosheath.pdf)  
+[2.9 Journal of Geophysical Research  Space Physics - 2006 - Alexandrova - Alfv n vortex filaments observed in magnetosheath](/img/user/_Documents/docs/2%20Coherent%20structures/2.9%20Journal%20of%20Geophysical%20Research%20%20Space%20Physics%20-%202006%20-%20Alexandrova%20-%20Alfv%20n%20vortex%20filaments%20observed%20in%20magnetosheath.pdf)   
 
 ## 9.1 Alfven vortex model [Petviashvili and Pokhotelov, 1992]  
 给出了Alfven vortex 的物理模型（理想，不可压缩 2D MHD）

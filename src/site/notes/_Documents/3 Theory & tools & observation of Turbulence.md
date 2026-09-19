@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2026-06-15T09:49:36.656+08:00","updated":"2026-09-16T18:35:19.450+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/_Documents/3 Theory & tools & observation of Turbulence/","noteIcon":"default","created":"2026-06-15T09:49:36.656+08:00","updated":"2026-09-20T00:35:03.249+08:00","dg-note-properties":{}}
 ---
 
 
@@ -150,7 +150,7 @@ $\theta=\langle B,X_{MSE} \rangle$, When $B_{XMSE} > 0$ or when $0^\circ < θ < 
 词汇 [[_Documents/words/Part.3 words#3 Characterization of turbulence in the Mars plasma environment with MAVEN observations\|Part.3 words]]
 ## 3.3 链接
 本地 [3.3 Ruhunusiri et al_2017_Characterization of turbulence in the Mars plasma environment with MAVEN](/img/user/_Documents/docs/3%20Theory%20&%20tools%20&%20observation%20of%20Turbulence/3.3%20Ruhunusiri%20et%20al_2017_Characterization%20of%20turbulence%20in%20the%20Mars%20plasma%20environment%20with%20MAVEN.pdf)  
-# 4 The solar wind interaction with Mars  Locations and shapes of the bow shock and the Magnetic Pile-up Boundary from the observations of the MAG/ER experiment onboard Mars Global Surveyor ()
+# 4 The solar wind interaction with Mars  Locations and shapes of the bow shock and the Magnetic Pile-up Boundary from the observations of the MAG/ER experiment onboard Mars Global Surveyor (have read)
 Vigne. D., et al. (2017), The solar wind interaction with Mars  Locations and shapes of the bow shock, _GEOPHYSICAL RESEARCH LETTERS_, 27(1), 49-52.  
 
 md: [[_Documents/docs/mineru_output/3.4 Geophysical Research Letters - 2000 - Vignes - The solar wind interaction with Mars  Locations and shapes of the bow shock/3.4 Geophysical Research Letters - 2000 - Vignes - The solar wind interaction with Mars  Locations and shapes of the bow shock\|3.4 Geophysical Research Letters - 2000 - Vignes - The solar wind interaction with Mars  Locations and shapes of the bow shock]]  
@@ -165,20 +165,40 @@ md: [[_Documents/docs/mineru_output/3.4 Geophysical Research Letters - 2000 - Vi
 
 The three simultaneous signatures of the MPB crossings: 1, A more or less sharp increase of the magnetic field magnitude; 2, A reducttion of the electron fluxes greater than 10 eV; 3, a decrease in the fluctuation of the magnetic field. 
 ### 4.1.2 Fitting   
- ![Pasted image 20260915180443.png\|829](/img/user/Pasted%20image%2020260915180443.png)
+ ![zz_figure/Pasted image 20260915180443.png\|829](/img/user/zz_figure/Pasted%20image%2020260915180443.png)
 Assume the shock surface is symmetric around the $X'$ axis. Using polar coordinates centered at the focus $(X_O, 0, 0)$, the shock shape is a conic section $r = \frac{L}{1 + \epsilon \cos\theta}$. Here, $L$ is the semi-latus rectum, and $\epsilon$ is the eccentricity. 
 
 $R_{SD}$ is the stand-off distance along the $X'$ axis (the nose), while $R_{TD}$ is the stand-off distance along the $Y'$ axis (the flank):
 $$
 R_{SD} = X_O + \frac{L}{1+\epsilon}, \quad R_{TD} = \frac{L \sin\varphi}{1+\epsilon\cos\varphi}
 $$
-where $\varphi$ is the polar angle (measured from the focus) to the terminator stand-off point relative to the $X'$ axis.
+where $\varphi$ is the polar angle (measured from the focus) to the terminator stand-off point (where the conic crosses the $Y'$ axis with $x'=X_0+r\cos\varphi=0$) relative to the $X'$ axis.
+
+![zz_figure/Pasted image 20260917165013.png\|844](/img/user/zz_figure/Pasted%20image%2020260917165013.png)
 
 
+### 4.1.3 Aberrated solar ecliptic system（太阳风行差坐标系）
+> the shock locations are expressed in an aberrated solar ecliptic system $(X', Y', Z')$, so that the $X'$ axis is opposite to the mean solar wind flow direction in the Mars frame of reference assuming a 4 degree aberration.
 
+- 命名：应为太阳风行差 (solar wind aberration)，由行星相对太阳风的运动引起（伽利略速度合成），非天文光行差。图注写的 aberrated MSO coordinate 即此。
+- 做法：MSO 绕 $Z$ 轴旋转
+$$
+\delta \approx \arctan\frac{V_{orb}}{V_{sw}} \approx \arctan\frac{24.1}{400} \approx 3.4^\circ \;\Rightarrow\; \text{取 } 4^\circ
+$$
+使 $X'$ 对齐平均来流，边界才近似柱对称于 $X'$，才能用 $r = L/(1+\varepsilon\cos\theta)$ 拟合。
 
-# 5 A New Tool for Understanding the Solar Wind–Venus Interaction: Three-dimensional  Multifluid MHD Model  
-[3.5 Dang-2023-A New Tool for Understanding the Sol](/img/user/_Documents/docs/3%20Theory%20&%20tools%20&%20observation%20of%20Turbulence/3.5%20Dang-2023-A%20New%20Tool%20for%20Understanding%20the%20Sol.pdf)  
+- 忽略的代价：横向错位 $\sim 0.07R$，轴向变化 $\sim 0.002R$。
+
+| 边界 | $R_{SD}$ | 横向错位 | 轴向变化 |
+| --- | --- | --- | --- |
+| Bow Shock | $1.64\ R_M$ | ~390 km | ~13 km |
+| MPB | $1.29\ R_M$ | ~300 km | ~11 km |
+
+- 结论：仅看柱对称剖面可忽略；涉及方位不对称（quasi-parallel/perpendicular、晨昏）则必须旋转。横向偏差 ~300–400 km 与文献/仪器间差异同量级。逐事件比对宜用瞬时 $\delta$，而非固定 $4^\circ$。
+
+# 5 A New Tool for Understanding the Solar Wind–Venus Interaction: Three-dimensional Multifluid MHD Model  
+
+[3.5 Dang-2023-A New Tool for Understanding the Solar Wind–Venus Interaction: Three-dimensional  Multifluid MHD Model](/img/user/_Documents/docs/3%20Theory%20&%20tools%20&%20observation%20of%20Turbulence/3.5%20Dang-2023-A%20New%20Tool%20for%20Understanding%20the%20Sol.pdf)  
 
 
 
