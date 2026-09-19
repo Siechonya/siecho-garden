@@ -231,3 +231,37 @@ body main.content {
     --content-right-gap: 391px; // 350px sidebar + 17px edge + 24px gap
   }
 }
+
+/* Typography at 75% of the original size. Keep layout widths and SVG controls
+   unchanged; em/ex-based headings and MathJax formulas scale through inheritance. */
+html {
+  font-size: 75%;
+}
+
+body {
+  --font-text-size: 1rem;
+  --font-ui-smaller: 0.75rem;
+  --font-ui-small: 0.8125rem;
+  --font-ui-medium: 0.9375rem;
+  --font-ui-large: 1.25rem;
+}
+
+body main.content {
+  font-size: 1.125rem; // Previously 18px; now 13.5px at the default browser size.
+}
+
+/* Replace remaining fixed-pixel text sizes; rem is already scaled at the root. */
+body .filetree-sidebar h1 {
+  font-size: 2rem !important;
+}
+body .backlinks .backlink-title {
+  font-size: 1.125rem !important;
+}
+body #toggle-right-toc-btn {
+  font-size: 1rem;
+}
+@media (max-width: 800px) {
+  body .navbar h1 {
+    font-size: 1.125rem !important;
+  }
+}
